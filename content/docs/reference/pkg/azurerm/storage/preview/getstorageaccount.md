@@ -1483,6 +1483,4350 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="activedirectorypropertiesresponse">Active<wbr>Directory<wbr>Properties<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ActiveDirectoryPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#ActiveDirectoryPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.ActiveDirectoryPropertiesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="azurestoragesid_csharp">
+<a href="#azurestoragesid_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Storage<wbr>Sid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security identifier (SID) for Azure Storage.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="domainguid_csharp">
+<a href="#domainguid_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Guid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the domain GUID.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="domainname_csharp">
+<a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary domain that the AD DNS server is authoritative for.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="domainsid_csharp">
+<a href="#domainsid_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Sid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security identifier (SID).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="forestname_csharp">
+<a href="#forestname_csharp" style="color: inherit; text-decoration: inherit;">Forest<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Active Directory forest to get.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="netbiosdomainname_csharp">
+<a href="#netbiosdomainname_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Bios<wbr>Domain<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the NetBIOS domain name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="azurestoragesid_go">
+<a href="#azurestoragesid_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Storage<wbr>Sid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security identifier (SID) for Azure Storage.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="domainguid_go">
+<a href="#domainguid_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Guid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the domain GUID.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="domainname_go">
+<a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary domain that the AD DNS server is authoritative for.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="domainsid_go">
+<a href="#domainsid_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Sid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security identifier (SID).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="forestname_go">
+<a href="#forestname_go" style="color: inherit; text-decoration: inherit;">Forest<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Active Directory forest to get.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="netbiosdomainname_go">
+<a href="#netbiosdomainname_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Bios<wbr>Domain<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the NetBIOS domain name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="azurestoragesid_nodejs">
+<a href="#azurestoragesid_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Storage<wbr>Sid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security identifier (SID) for Azure Storage.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="domainguid_nodejs">
+<a href="#domainguid_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Guid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the domain GUID.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="domainname_nodejs">
+<a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary domain that the AD DNS server is authoritative for.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="domainsid_nodejs">
+<a href="#domainsid_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Sid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security identifier (SID).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="forestname_nodejs">
+<a href="#forestname_nodejs" style="color: inherit; text-decoration: inherit;">forest<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Active Directory forest to get.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="netbiosdomainname_nodejs">
+<a href="#netbiosdomainname_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Bios<wbr>Domain<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the NetBIOS domain name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="azure_storage_sid_python">
+<a href="#azure_storage_sid_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>storage_<wbr>sid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security identifier (SID) for Azure Storage.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="domain_guid_python">
+<a href="#domain_guid_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>guid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the domain GUID.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="domain_name_python">
+<a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the primary domain that the AD DNS server is authoritative for.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="domain_sid_python">
+<a href="#domain_sid_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>sid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security identifier (SID).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="forest_name_python">
+<a href="#forest_name_python" style="color: inherit; text-decoration: inherit;">forest_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Active Directory forest to get.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="net_bios_domain_name_python">
+<a href="#net_bios_domain_name_python" style="color: inherit; text-decoration: inherit;">net_<wbr>bios_<wbr>domain_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the NetBIOS domain name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="azurefilesidentitybasedauthenticationresponse">Azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AzureFilesIdentityBasedAuthenticationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#AzureFilesIdentityBasedAuthenticationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.AzureFilesIdentityBasedAuthenticationResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="directoryserviceoptions_csharp">
+<a href="#directoryserviceoptions_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Service<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the directory service used.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectoryproperties_csharp">
+<a href="#activedirectoryproperties_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activedirectorypropertiesresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Storage.<wbr>Preview.<wbr>Inputs.<wbr>Active<wbr>Directory<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="directoryserviceoptions_go">
+<a href="#directoryserviceoptions_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Service<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the directory service used.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectoryproperties_go">
+<a href="#activedirectoryproperties_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activedirectorypropertiesresponse">Active<wbr>Directory<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="directoryserviceoptions_nodejs">
+<a href="#directoryserviceoptions_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Service<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the directory service used.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectoryproperties_nodejs">
+<a href="#activedirectoryproperties_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activedirectorypropertiesresponse">Active<wbr>Directory<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="directory_service_options_python">
+<a href="#directory_service_options_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>service_<wbr>options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the directory service used.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="active_directory_properties_python">
+<a href="#active_directory_properties_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activedirectorypropertiesresponse">Dict[Active<wbr>Directory<wbr>Properties<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="blobrestoreparametersresponse">Blob<wbr>Restore<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#BlobRestoreParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#BlobRestoreParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.BlobRestoreParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="blobranges_csharp">
+<a href="#blobranges_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#blobrestorerangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Storage.<wbr>Preview.<wbr>Inputs.<wbr>Blob<wbr>Restore<wbr>Range<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Blob ranges to restore.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timetorestore_csharp">
+<a href="#timetorestore_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Restore</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Restore blob to the specified time.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="blobranges_go">
+<a href="#blobranges_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#blobrestorerangeresponse">[]Blob<wbr>Restore<wbr>Range<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Blob ranges to restore.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timetorestore_go">
+<a href="#timetorestore_go" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Restore</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Restore blob to the specified time.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="blobranges_nodejs">
+<a href="#blobranges_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#blobrestorerangeresponse">Blob<wbr>Restore<wbr>Range<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Blob ranges to restore.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timetorestore_nodejs">
+<a href="#timetorestore_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Restore</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Restore blob to the specified time.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="blob_ranges_python">
+<a href="#blob_ranges_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#blobrestorerangeresponse">List[Blob<wbr>Restore<wbr>Range<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Blob ranges to restore.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="time_to_restore_python">
+<a href="#time_to_restore_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>restore</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Restore blob to the specified time.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="blobrestorerangeresponse">Blob<wbr>Restore<wbr>Range<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#BlobRestoreRangeResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#BlobRestoreRangeResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.BlobRestoreRangeResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endrange_csharp">
+<a href="#endrange_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Blob end range. This is exclusive. Empty means account end.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="startrange_csharp">
+<a href="#startrange_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Blob start range. This is inclusive. Empty means account start.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endrange_go">
+<a href="#endrange_go" style="color: inherit; text-decoration: inherit;">End<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Blob end range. This is exclusive. Empty means account end.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="startrange_go">
+<a href="#startrange_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Blob start range. This is inclusive. Empty means account start.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endrange_nodejs">
+<a href="#endrange_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Blob end range. This is exclusive. Empty means account end.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="startrange_nodejs">
+<a href="#startrange_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Blob start range. This is inclusive. Empty means account start.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endrange_python">
+<a href="#endrange_python" style="color: inherit; text-decoration: inherit;">end<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Blob end range. This is exclusive. Empty means account end.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="startrange_python">
+<a href="#startrange_python" style="color: inherit; text-decoration: inherit;">start<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Blob start range. This is inclusive. Empty means account start.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="blobrestorestatusresponse">Blob<wbr>Restore<wbr>Status<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#BlobRestoreStatusResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#BlobRestoreStatusResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.BlobRestoreStatusResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="failurereason_csharp">
+<a href="#failurereason_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Reason</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Failure reason when blob restore is failed.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#blobrestoreparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Storage.<wbr>Preview.<wbr>Inputs.<wbr>Blob<wbr>Restore<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Blob restore request parameters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="restoreid_csharp">
+<a href="#restoreid_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id for tracking blob restore request.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of blob restore progress. Possible values are: - InProgress: Indicates that blob restore is ongoing. - Complete: Indicates that blob restore has been completed successfully. - Failed: Indicates that blob restore is failed.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="failurereason_go">
+<a href="#failurereason_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Reason</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Failure reason when blob restore is failed.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#blobrestoreparametersresponse">Blob<wbr>Restore<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Blob restore request parameters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="restoreid_go">
+<a href="#restoreid_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id for tracking blob restore request.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of blob restore progress. Possible values are: - InProgress: Indicates that blob restore is ongoing. - Complete: Indicates that blob restore has been completed successfully. - Failed: Indicates that blob restore is failed.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="failurereason_nodejs">
+<a href="#failurereason_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Reason</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Failure reason when blob restore is failed.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#blobrestoreparametersresponse">Blob<wbr>Restore<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Blob restore request parameters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="restoreid_nodejs">
+<a href="#restoreid_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id for tracking blob restore request.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of blob restore progress. Possible values are: - InProgress: Indicates that blob restore is ongoing. - Complete: Indicates that blob restore has been completed successfully. - Failed: Indicates that blob restore is failed.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="failure_reason_python">
+<a href="#failure_reason_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>reason</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Failure reason when blob restore is failed.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#blobrestoreparametersresponse">Dict[Blob<wbr>Restore<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Blob restore request parameters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="restore_id_python">
+<a href="#restore_id_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Id for tracking blob restore request.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The status of blob restore progress. Possible values are: - InProgress: Indicates that blob restore is ongoing. - Complete: Indicates that blob restore has been completed successfully. - Failed: Indicates that blob restore is failed.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="customdomainresponse">Custom<wbr>Domain<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#CustomDomainResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#CustomDomainResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.CustomDomainResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the custom domain name assigned to the storage account. Name is the CNAME source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usesubdomainname_csharp">
+<a href="#usesubdomainname_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Sub<wbr>Domain<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether indirect CName validation is enabled. Default value is false. This should only be set on updates.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the custom domain name assigned to the storage account. Name is the CNAME source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usesubdomainname_go">
+<a href="#usesubdomainname_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Sub<wbr>Domain<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether indirect CName validation is enabled. Default value is false. This should only be set on updates.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the custom domain name assigned to the storage account. Name is the CNAME source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usesubdomainname_nodejs">
+<a href="#usesubdomainname_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Sub<wbr>Domain<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether indirect CName validation is enabled. Default value is false. This should only be set on updates.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the custom domain name assigned to the storage account. Name is the CNAME source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="use_sub_domain_name_python">
+<a href="#use_sub_domain_name_python" style="color: inherit; text-decoration: inherit;">use_<wbr>sub_<wbr>domain_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether indirect CName validation is enabled. Default value is false. This should only be set on updates.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="encryptionresponse">Encryption<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#EncryptionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#EncryptionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.EncryptionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keysource_csharp">
+<a href="#keysource_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultproperties_csharp">
+<a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Storage.<wbr>Preview.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requireinfrastructureencryption_csharp">
+<a href="#requireinfrastructureencryption_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Infrastructure<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="services_csharp">
+<a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionservicesresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Storage.<wbr>Preview.<wbr>Inputs.<wbr>Encryption<wbr>Services<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keysource_go">
+<a href="#keysource_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultproperties_go">
+<a href="#keyvaultproperties_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requireinfrastructureencryption_go">
+<a href="#requireinfrastructureencryption_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Infrastructure<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="services_go">
+<a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionservicesresponse">Encryption<wbr>Services<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keysource_nodejs">
+<a href="#keysource_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultproperties_nodejs">
+<a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requireinfrastructureencryption_nodejs">
+<a href="#requireinfrastructureencryption_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Infrastructure<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="services_nodejs">
+<a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionservicesresponse">Encryption<wbr>Services<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_source_python">
+<a href="#key_source_python" style="color: inherit; text-decoration: inherit;">key_<wbr>source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_vault_properties_python">
+<a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Dict[Key<wbr>Vault<wbr>Properties<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="require_infrastructure_encryption_python">
+<a href="#require_infrastructure_encryption_python" style="color: inherit; text-decoration: inherit;">require_<wbr>infrastructure_<wbr>encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="services_python">
+<a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionservicesresponse">Dict[Encryption<wbr>Services<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#EncryptionServiceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#EncryptionServiceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.EncryptionServiceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastenabledtime_csharp">
+<a href="#lastenabledtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Enabled<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets a rough estimate of the date/time when the encryption was last enabled by the user. Only returned when encryption is enabled. There might be some unencrypted blobs which were written after this time, as it is just a rough estimate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether or not the service encrypts the data as it is stored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keytype_csharp">
+<a href="#keytype_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastenabledtime_go">
+<a href="#lastenabledtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Enabled<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets a rough estimate of the date/time when the encryption was last enabled by the user. Only returned when encryption is enabled. There might be some unencrypted blobs which were written after this time, as it is just a rough estimate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether or not the service encrypts the data as it is stored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keytype_go">
+<a href="#keytype_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastenabledtime_nodejs">
+<a href="#lastenabledtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Enabled<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets a rough estimate of the date/time when the encryption was last enabled by the user. Only returned when encryption is enabled. There might be some unencrypted blobs which were written after this time, as it is just a rough estimate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether or not the service encrypts the data as it is stored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keytype_nodejs">
+<a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="last_enabled_time_python">
+<a href="#last_enabled_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>enabled_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets a rough estimate of the date/time when the encryption was last enabled by the user. Only returned when encryption is enabled. There might be some unencrypted blobs which were written after this time, as it is just a rough estimate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether or not the service encrypts the data as it is stored.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_type_python">
+<a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="encryptionservicesresponse">Encryption<wbr>Services<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#EncryptionServicesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#EncryptionServicesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.EncryptionServicesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blob_csharp">
+<a href="#blob_csharp" style="color: inherit; text-decoration: inherit;">Blob</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Storage.<wbr>Preview.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_csharp">
+<a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Storage.<wbr>Preview.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="queue_csharp">
+<a href="#queue_csharp" style="color: inherit; text-decoration: inherit;">Queue</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Storage.<wbr>Preview.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="table_csharp">
+<a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Storage.<wbr>Preview.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blob_go">
+<a href="#blob_go" style="color: inherit; text-decoration: inherit;">Blob</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_go">
+<a href="#file_go" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="queue_go">
+<a href="#queue_go" style="color: inherit; text-decoration: inherit;">Queue</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="table_go">
+<a href="#table_go" style="color: inherit; text-decoration: inherit;">Table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blob_nodejs">
+<a href="#blob_nodejs" style="color: inherit; text-decoration: inherit;">blob</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_nodejs">
+<a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="queue_nodejs">
+<a href="#queue_nodejs" style="color: inherit; text-decoration: inherit;">queue</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="table_nodejs">
+<a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blob_python">
+<a href="#blob_python" style="color: inherit; text-decoration: inherit;">blob</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Dict[Encryption<wbr>Service<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_python">
+<a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Dict[Encryption<wbr>Service<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="queue_python">
+<a href="#queue_python" style="color: inherit; text-decoration: inherit;">queue</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Dict[Encryption<wbr>Service<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="table_python">
+<a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Dict[Encryption<wbr>Service<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="endpointsresponse">Endpoints<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#EndpointsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#EndpointsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.EndpointsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="blob_csharp">
+<a href="#blob_csharp" style="color: inherit; text-decoration: inherit;">Blob</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the blob endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dfs_csharp">
+<a href="#dfs_csharp" style="color: inherit; text-decoration: inherit;">Dfs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the dfs endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="file_csharp">
+<a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the file endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="queue_csharp">
+<a href="#queue_csharp" style="color: inherit; text-decoration: inherit;">Queue</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the queue endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="table_csharp">
+<a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the table endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="web_csharp">
+<a href="#web_csharp" style="color: inherit; text-decoration: inherit;">Web</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the web endpoint.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internetendpoints_csharp">
+<a href="#internetendpoints_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Endpoints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Storage.<wbr>Preview.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the internet routing storage endpoints{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="microsoftendpoints_csharp">
+<a href="#microsoftendpoints_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Endpoints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Storage.<wbr>Preview.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the microsoft routing storage endpoints.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="blob_go">
+<a href="#blob_go" style="color: inherit; text-decoration: inherit;">Blob</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the blob endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dfs_go">
+<a href="#dfs_go" style="color: inherit; text-decoration: inherit;">Dfs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the dfs endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="file_go">
+<a href="#file_go" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the file endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="queue_go">
+<a href="#queue_go" style="color: inherit; text-decoration: inherit;">Queue</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the queue endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="table_go">
+<a href="#table_go" style="color: inherit; text-decoration: inherit;">Table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the table endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="web_go">
+<a href="#web_go" style="color: inherit; text-decoration: inherit;">Web</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the web endpoint.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internetendpoints_go">
+<a href="#internetendpoints_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Endpoints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the internet routing storage endpoints{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="microsoftendpoints_go">
+<a href="#microsoftendpoints_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Endpoints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the microsoft routing storage endpoints.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="blob_nodejs">
+<a href="#blob_nodejs" style="color: inherit; text-decoration: inherit;">blob</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the blob endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dfs_nodejs">
+<a href="#dfs_nodejs" style="color: inherit; text-decoration: inherit;">dfs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the dfs endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="file_nodejs">
+<a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the file endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="queue_nodejs">
+<a href="#queue_nodejs" style="color: inherit; text-decoration: inherit;">queue</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the queue endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="table_nodejs">
+<a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the table endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="web_nodejs">
+<a href="#web_nodejs" style="color: inherit; text-decoration: inherit;">web</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the web endpoint.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internetendpoints_nodejs">
+<a href="#internetendpoints_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Endpoints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the internet routing storage endpoints{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="microsoftendpoints_nodejs">
+<a href="#microsoftendpoints_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Endpoints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the microsoft routing storage endpoints.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="blob_python">
+<a href="#blob_python" style="color: inherit; text-decoration: inherit;">blob</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the blob endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dfs_python">
+<a href="#dfs_python" style="color: inherit; text-decoration: inherit;">dfs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the dfs endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="file_python">
+<a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the file endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="queue_python">
+<a href="#queue_python" style="color: inherit; text-decoration: inherit;">queue</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the queue endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="table_python">
+<a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the table endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="web_python">
+<a href="#web_python" style="color: inherit; text-decoration: inherit;">web</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the web endpoint.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internet_endpoints_python">
+<a href="#internet_endpoints_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>endpoints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Dict[Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the internet routing storage endpoints{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="microsoft_endpoints_python">
+<a href="#microsoft_endpoints_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>endpoints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Dict[Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the microsoft routing storage endpoints.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="georeplicationstatsresponse">Geo<wbr>Replication<wbr>Stats<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#GeoReplicationStatsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#GeoReplicationStatsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.GeoReplicationStatsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="canfailover_csharp">
+<a href="#canfailover_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Failover</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean flag which indicates whether or not account failover is supported for the account.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastsynctime_csharp">
+<a href="#lastsynctime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}All primary writes preceding this UTC date/time value are guaranteed to be available for read operations. Primary writes following this point in time may or may not be available for reads. Element may be default value if value of LastSyncTime is not available, this can happen if secondary is offline or we are in bootstrap.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the secondary location. Possible values are: - Live: Indicates that the secondary location is active and operational. - Bootstrap: Indicates initial synchronization from the primary location to the secondary location is in progress.This typically occurs when replication is first enabled. - Unavailable: Indicates that the secondary location is temporarily unavailable.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="canfailover_go">
+<a href="#canfailover_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Failover</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean flag which indicates whether or not account failover is supported for the account.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastsynctime_go">
+<a href="#lastsynctime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}All primary writes preceding this UTC date/time value are guaranteed to be available for read operations. Primary writes following this point in time may or may not be available for reads. Element may be default value if value of LastSyncTime is not available, this can happen if secondary is offline or we are in bootstrap.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the secondary location. Possible values are: - Live: Indicates that the secondary location is active and operational. - Bootstrap: Indicates initial synchronization from the primary location to the secondary location is in progress.This typically occurs when replication is first enabled. - Unavailable: Indicates that the secondary location is temporarily unavailable.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="canfailover_nodejs">
+<a href="#canfailover_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Failover</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean flag which indicates whether or not account failover is supported for the account.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastsynctime_nodejs">
+<a href="#lastsynctime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Sync<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}All primary writes preceding this UTC date/time value are guaranteed to be available for read operations. Primary writes following this point in time may or may not be available for reads. Element may be default value if value of LastSyncTime is not available, this can happen if secondary is offline or we are in bootstrap.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the secondary location. Possible values are: - Live: Indicates that the secondary location is active and operational. - Bootstrap: Indicates initial synchronization from the primary location to the secondary location is in progress.This typically occurs when replication is first enabled. - Unavailable: Indicates that the secondary location is temporarily unavailable.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="can_failover_python">
+<a href="#can_failover_python" style="color: inherit; text-decoration: inherit;">can_<wbr>failover</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean flag which indicates whether or not account failover is supported for the account.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="last_sync_time_python">
+<a href="#last_sync_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sync_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}All primary writes preceding this UTC date/time value are guaranteed to be available for read operations. Primary writes following this point in time may or may not be available for reads. Element may be default value if value of LastSyncTime is not available, this can happen if secondary is offline or we are in bootstrap.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the secondary location. Possible values are: - Live: Indicates that the secondary location is active and operational. - Bootstrap: Indicates initial synchronization from the primary location to the secondary location is in progress.This typically occurs when replication is first enabled. - Unavailable: Indicates that the secondary location is temporarily unavailable.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="ipruleresponse">IPRule<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#IPRuleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#IPRuleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.IPRuleResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipaddressorrange_csharp">
+<a href="#ipaddressorrange_csharp" style="color: inherit; text-decoration: inherit;">IPAddress<wbr>Or<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The action of IP ACL rule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipaddressorrange_go">
+<a href="#ipaddressorrange_go" style="color: inherit; text-decoration: inherit;">IPAddress<wbr>Or<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The action of IP ACL rule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipaddressorrange_nodejs">
+<a href="#ipaddressorrange_nodejs" style="color: inherit; text-decoration: inherit;">i<wbr>PAddress<wbr>Or<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The action of IP ACL rule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipaddressorrange_python">
+<a href="#ipaddressorrange_python" style="color: inherit; text-decoration: inherit;">i<wbr>PAddress<wbr>Or<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The action of IP ACL rule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="identityresponse">Identity<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#IdentityResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#IdentityResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.IdentityResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#KeyVaultPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#KeyVaultPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.KeyVaultPropertiesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="currentversionedkeyidentifier_csharp">
+<a href="#currentversionedkeyidentifier_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Versioned<wbr>Key<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The object identifier of the current versioned Key Vault Key in use.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastkeyrotationtimestamp_csharp">
+<a href="#lastkeyrotationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Key<wbr>Rotation<wbr>Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Timestamp of last rotation of the Key Vault Key.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyname_csharp">
+<a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of KeyVault key.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaulturi_csharp">
+<a href="#keyvaulturi_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Uri of KeyVault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyversion_csharp">
+<a href="#keyversion_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The version of KeyVault key.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="currentversionedkeyidentifier_go">
+<a href="#currentversionedkeyidentifier_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Versioned<wbr>Key<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The object identifier of the current versioned Key Vault Key in use.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastkeyrotationtimestamp_go">
+<a href="#lastkeyrotationtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Key<wbr>Rotation<wbr>Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Timestamp of last rotation of the Key Vault Key.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyname_go">
+<a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of KeyVault key.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaulturi_go">
+<a href="#keyvaulturi_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Uri of KeyVault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyversion_go">
+<a href="#keyversion_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The version of KeyVault key.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="currentversionedkeyidentifier_nodejs">
+<a href="#currentversionedkeyidentifier_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Versioned<wbr>Key<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The object identifier of the current versioned Key Vault Key in use.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastkeyrotationtimestamp_nodejs">
+<a href="#lastkeyrotationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Key<wbr>Rotation<wbr>Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Timestamp of last rotation of the Key Vault Key.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyname_nodejs">
+<a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of KeyVault key.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaulturi_nodejs">
+<a href="#keyvaulturi_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Uri of KeyVault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyversion_nodejs">
+<a href="#keyversion_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The version of KeyVault key.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="current_versioned_key_identifier_python">
+<a href="#current_versioned_key_identifier_python" style="color: inherit; text-decoration: inherit;">current_<wbr>versioned_<wbr>key_<wbr>identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The object identifier of the current versioned Key Vault Key in use.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="last_key_rotation_timestamp_python">
+<a href="#last_key_rotation_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>key_<wbr>rotation_<wbr>timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Timestamp of last rotation of the Key Vault Key.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_name_python">
+<a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of KeyVault key.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_vault_uri_python">
+<a href="#key_vault_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Uri of KeyVault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_version_python">
+<a href="#key_version_python" style="color: inherit; text-decoration: inherit;">key_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The version of KeyVault key.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#NetworkRuleSetResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#NetworkRuleSetResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.NetworkRuleSetResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="defaultaction_csharp">
+<a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default action of allow or deny when no other rules match.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bypass_csharp">
+<a href="#bypass_csharp" style="color: inherit; text-decoration: inherit;">Bypass</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iprules_csharp">
+<a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Storage.<wbr>Preview.<wbr>Inputs.<wbr>IPRule<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualnetworkrules_csharp">
+<a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Storage.<wbr>Preview.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="defaultaction_go">
+<a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default action of allow or deny when no other rules match.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bypass_go">
+<a href="#bypass_go" style="color: inherit; text-decoration: inherit;">Bypass</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iprules_go">
+<a href="#iprules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipruleresponse">[]IPRule<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualnetworkrules_go">
+<a href="#virtualnetworkrules_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">[]Virtual<wbr>Network<wbr>Rule<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="defaultaction_nodejs">
+<a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default action of allow or deny when no other rules match.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bypass_nodejs">
+<a href="#bypass_nodejs" style="color: inherit; text-decoration: inherit;">bypass</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iprules_nodejs">
+<a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipruleresponse">IPRule<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualnetworkrules_nodejs">
+<a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="default_action_python">
+<a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default action of allow or deny when no other rules match.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bypass_python">
+<a href="#bypass_python" style="color: inherit; text-decoration: inherit;">bypass</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_rules_python">
+<a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipruleresponse">List[IPRule<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtual_network_rules_python">
+<a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">List[Virtual<wbr>Network<wbr>Rule<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#PrivateEndpointConnectionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#PrivateEndpointConnectionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.PrivateEndpointConnectionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="privatelinkserviceconnectionstate_csharp">
+<a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Storage.<wbr>Preview.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateendpoint_csharp">
+<a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Storage.<wbr>Preview.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="privatelinkserviceconnectionstate_go">
+<a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateendpoint_go">
+<a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="privatelinkserviceconnectionstate_nodejs">
+<a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateendpoint_nodejs">
+<a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="private_link_service_connection_state_python">
+<a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Dict[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_endpoint_python">
+<a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Dict[Private<wbr>Endpoint<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="privateendpointresponse">Private<wbr>Endpoint<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#PrivateEndpointResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#PrivateEndpointResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.PrivateEndpointResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#PrivateLinkServiceConnectionStateResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#PrivateLinkServiceConnectionStateResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.PrivateLinkServiceConnectionStateResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="actionrequired_csharp">
+<a href="#actionrequired_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="actionrequired_go">
+<a href="#actionrequired_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="actionrequired_nodejs">
+<a href="#actionrequired_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_required_python">
+<a href="#action_required_python" style="color: inherit; text-decoration: inherit;">action_<wbr>required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="routingpreferenceresponse">Routing<wbr>Preference<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RoutingPreferenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#RoutingPreferenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.RoutingPreferenceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publishinternetendpoints_csharp">
+<a href="#publishinternetendpoints_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Internet<wbr>Endpoints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean flag which indicates whether internet routing storage endpoints are to be published{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publishmicrosoftendpoints_csharp">
+<a href="#publishmicrosoftendpoints_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Microsoft<wbr>Endpoints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean flag which indicates whether microsoft routing storage endpoints are to be published{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="routingchoice_csharp">
+<a href="#routingchoice_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Choice</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Routing Choice defines the kind of network routing opted by the user.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publishinternetendpoints_go">
+<a href="#publishinternetendpoints_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Internet<wbr>Endpoints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean flag which indicates whether internet routing storage endpoints are to be published{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publishmicrosoftendpoints_go">
+<a href="#publishmicrosoftendpoints_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Microsoft<wbr>Endpoints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean flag which indicates whether microsoft routing storage endpoints are to be published{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="routingchoice_go">
+<a href="#routingchoice_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Choice</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Routing Choice defines the kind of network routing opted by the user.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publishinternetendpoints_nodejs">
+<a href="#publishinternetendpoints_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Internet<wbr>Endpoints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean flag which indicates whether internet routing storage endpoints are to be published{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publishmicrosoftendpoints_nodejs">
+<a href="#publishmicrosoftendpoints_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Microsoft<wbr>Endpoints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean flag which indicates whether microsoft routing storage endpoints are to be published{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="routingchoice_nodejs">
+<a href="#routingchoice_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Choice</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Routing Choice defines the kind of network routing opted by the user.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publish_internet_endpoints_python">
+<a href="#publish_internet_endpoints_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>internet_<wbr>endpoints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean flag which indicates whether internet routing storage endpoints are to be published{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publish_microsoft_endpoints_python">
+<a href="#publish_microsoft_endpoints_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>microsoft_<wbr>endpoints</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}A boolean flag which indicates whether microsoft routing storage endpoints are to be published{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="routing_choice_python">
+<a href="#routing_choice_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>choice</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Routing Choice defines the kind of network routing opted by the user.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="skuresponse">Sku<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SkuResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#SkuResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.SkuResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_csharp">
+<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_go">
+<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_nodejs">
+<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_python">
+<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="storageaccountinternetendpointsresponse">Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#StorageAccountInternetEndpointsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#StorageAccountInternetEndpointsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.StorageAccountInternetEndpointsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="blob_csharp">
+<a href="#blob_csharp" style="color: inherit; text-decoration: inherit;">Blob</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the blob endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dfs_csharp">
+<a href="#dfs_csharp" style="color: inherit; text-decoration: inherit;">Dfs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the dfs endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="file_csharp">
+<a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the file endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="web_csharp">
+<a href="#web_csharp" style="color: inherit; text-decoration: inherit;">Web</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the web endpoint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="blob_go">
+<a href="#blob_go" style="color: inherit; text-decoration: inherit;">Blob</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the blob endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dfs_go">
+<a href="#dfs_go" style="color: inherit; text-decoration: inherit;">Dfs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the dfs endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="file_go">
+<a href="#file_go" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the file endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="web_go">
+<a href="#web_go" style="color: inherit; text-decoration: inherit;">Web</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the web endpoint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="blob_nodejs">
+<a href="#blob_nodejs" style="color: inherit; text-decoration: inherit;">blob</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the blob endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dfs_nodejs">
+<a href="#dfs_nodejs" style="color: inherit; text-decoration: inherit;">dfs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the dfs endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="file_nodejs">
+<a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the file endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="web_nodejs">
+<a href="#web_nodejs" style="color: inherit; text-decoration: inherit;">web</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the web endpoint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="blob_python">
+<a href="#blob_python" style="color: inherit; text-decoration: inherit;">blob</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the blob endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dfs_python">
+<a href="#dfs_python" style="color: inherit; text-decoration: inherit;">dfs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the dfs endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="file_python">
+<a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the file endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="web_python">
+<a href="#web_python" style="color: inherit; text-decoration: inherit;">web</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the web endpoint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="storageaccountmicrosoftendpointsresponse">Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#StorageAccountMicrosoftEndpointsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#StorageAccountMicrosoftEndpointsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.StorageAccountMicrosoftEndpointsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="blob_csharp">
+<a href="#blob_csharp" style="color: inherit; text-decoration: inherit;">Blob</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the blob endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dfs_csharp">
+<a href="#dfs_csharp" style="color: inherit; text-decoration: inherit;">Dfs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the dfs endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="file_csharp">
+<a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the file endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="queue_csharp">
+<a href="#queue_csharp" style="color: inherit; text-decoration: inherit;">Queue</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the queue endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="table_csharp">
+<a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the table endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="web_csharp">
+<a href="#web_csharp" style="color: inherit; text-decoration: inherit;">Web</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the web endpoint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="blob_go">
+<a href="#blob_go" style="color: inherit; text-decoration: inherit;">Blob</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the blob endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dfs_go">
+<a href="#dfs_go" style="color: inherit; text-decoration: inherit;">Dfs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the dfs endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="file_go">
+<a href="#file_go" style="color: inherit; text-decoration: inherit;">File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the file endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="queue_go">
+<a href="#queue_go" style="color: inherit; text-decoration: inherit;">Queue</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the queue endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="table_go">
+<a href="#table_go" style="color: inherit; text-decoration: inherit;">Table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the table endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="web_go">
+<a href="#web_go" style="color: inherit; text-decoration: inherit;">Web</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the web endpoint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="blob_nodejs">
+<a href="#blob_nodejs" style="color: inherit; text-decoration: inherit;">blob</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the blob endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dfs_nodejs">
+<a href="#dfs_nodejs" style="color: inherit; text-decoration: inherit;">dfs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the dfs endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="file_nodejs">
+<a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the file endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="queue_nodejs">
+<a href="#queue_nodejs" style="color: inherit; text-decoration: inherit;">queue</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the queue endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="table_nodejs">
+<a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the table endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="web_nodejs">
+<a href="#web_nodejs" style="color: inherit; text-decoration: inherit;">web</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the web endpoint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="blob_python">
+<a href="#blob_python" style="color: inherit; text-decoration: inherit;">blob</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the blob endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dfs_python">
+<a href="#dfs_python" style="color: inherit; text-decoration: inherit;">dfs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the dfs endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="file_python">
+<a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the file endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="queue_python">
+<a href="#queue_python" style="color: inherit; text-decoration: inherit;">queue</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the queue endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="table_python">
+<a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the table endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="web_python">
+<a href="#web_python" style="color: inherit; text-decoration: inherit;">web</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the web endpoint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#VirtualNetworkRuleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#VirtualNetworkRuleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.VirtualNetworkRuleResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworkresourceid_csharp">
+<a href="#virtualnetworkresourceid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The action of virtual network rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the state of virtual network rule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworkresourceid_go">
+<a href="#virtualnetworkresourceid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The action of virtual network rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the state of virtual network rule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworkresourceid_nodejs">
+<a href="#virtualnetworkresourceid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The action of virtual network rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the state of virtual network rule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworkresourceid_python">
+<a href="#virtualnetworkresourceid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The action of virtual network rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the state of virtual network rule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

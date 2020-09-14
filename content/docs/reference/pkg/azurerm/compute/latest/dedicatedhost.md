@@ -951,6 +951,630 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+<h4 id="dedicatedhostallocatablevmresponse">Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DedicatedHostAllocatableVMResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest?tab=doc#DedicatedHostAllocatableVMResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Compute.Latest.Outputs.DedicatedHostAllocatableVMResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="count_csharp">
+<a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of VMs of size vmSize that can fit in the dedicated host's remaining capacity.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmsize_csharp">
+<a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}VM size in terms of which the unutilized capacity is represented.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="count_go">
+<a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of VMs of size vmSize that can fit in the dedicated host's remaining capacity.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmsize_go">
+<a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}VM size in terms of which the unutilized capacity is represented.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="count_nodejs">
+<a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of VMs of size vmSize that can fit in the dedicated host's remaining capacity.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmsize_nodejs">
+<a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}VM size in terms of which the unutilized capacity is represented.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="count_python">
+<a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of VMs of size vmSize that can fit in the dedicated host's remaining capacity.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vm_size_python">
+<a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}VM size in terms of which the unutilized capacity is represented.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="dedicatedhostavailablecapacityresponse">Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DedicatedHostAvailableCapacityResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest?tab=doc#DedicatedHostAvailableCapacityResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Compute.Latest.Outputs.DedicatedHostAvailableCapacityResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allocatablevms_csharp">
+<a href="#allocatablevms_csharp" style="color: inherit; text-decoration: inherit;">Allocatable<wbr>VMs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Compute.<wbr>Latest.<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allocatablevms_go">
+<a href="#allocatablevms_go" style="color: inherit; text-decoration: inherit;">Allocatable<wbr>VMs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">[]Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse</a></span>
+    </dt>
+    <dd>{{% md %}}The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allocatablevms_nodejs">
+<a href="#allocatablevms_nodejs" style="color: inherit; text-decoration: inherit;">allocatable<wbr>VMs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse[]</a></span>
+    </dt>
+    <dd>{{% md %}}The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allocatable_v_ms_python">
+<a href="#allocatable_v_ms_python" style="color: inherit; text-decoration: inherit;">allocatable_<wbr>v_<wbr>ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">List[Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse]</a></span>
+    </dt>
+    <dd>{{% md %}}The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="dedicatedhostinstanceviewresponse">Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DedicatedHostInstanceViewResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest?tab=doc#DedicatedHostInstanceViewResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Compute.Latest.Outputs.DedicatedHostInstanceViewResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="assetid_csharp">
+<a href="#assetid_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the unique id of the dedicated physical machine on which the dedicated host resides.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availablecapacity_csharp">
+<a href="#availablecapacity_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Compute.<wbr>Latest.<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Unutilized capacity of the dedicated host.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statuses_csharp">
+<a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Compute.<wbr>Latest.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="assetid_go">
+<a href="#assetid_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the unique id of the dedicated physical machine on which the dedicated host resides.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availablecapacity_go">
+<a href="#availablecapacity_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Unutilized capacity of the dedicated host.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statuses_go">
+<a href="#statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">[]Instance<wbr>View<wbr>Status<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="assetid_nodejs">
+<a href="#assetid_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the unique id of the dedicated physical machine on which the dedicated host resides.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availablecapacity_nodejs">
+<a href="#availablecapacity_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Unutilized capacity of the dedicated host.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statuses_nodejs">
+<a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="asset_id_python">
+<a href="#asset_id_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the unique id of the dedicated physical machine on which the dedicated host resides.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="available_capacity_python">
+<a href="#available_capacity_python" style="color: inherit; text-decoration: inherit;">available_<wbr>capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Dict[Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Unutilized capacity of the dedicated host.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statuses_python">
+<a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#InstanceViewStatusResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest?tab=doc#InstanceViewStatusResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Compute.Latest.Outputs.InstanceViewStatusResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="displaystatus_csharp">
+<a href="#displaystatus_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_csharp">
+<a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The level code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="time_csharp">
+<a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="displaystatus_go">
+<a href="#displaystatus_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_go">
+<a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The level code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="time_go">
+<a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="displaystatus_nodejs">
+<a href="#displaystatus_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_nodejs">
+<a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The level code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="time_nodejs">
+<a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The status code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="display_status_python">
+<a href="#display_status_python" style="color: inherit; text-decoration: inherit;">display_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_python">
+<a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The level code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="time_python">
+<a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="sku">Sku</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#Sku">input</a>   API doc for this type.
@@ -1109,6 +1733,258 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="skuresponse">Sku<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SkuResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest?tab=doc#SkuResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Compute.Latest.Outputs.SkuResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_csharp">
+<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of virtual machines in the scale set.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_csharp">
+<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_go">
+<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of virtual machines in the scale set.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_go">
+<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_nodejs">
+<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of virtual machines in the scale set.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_nodejs">
+<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_python">
+<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of virtual machines in the scale set.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_python">
+<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="subresourcereadonlyresponse">Sub<wbr>Resource<wbr>Read<wbr>Only<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SubResourceReadOnlyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest?tab=doc#SubResourceReadOnlyResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Compute.Latest.Outputs.SubResourceReadOnlyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -1077,6 +1077,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="actionresponse">Action<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ActionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/preview?tab=doc#ActionResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Preview.Outputs.ActionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="actiongroupid_csharp">
+<a href="#actiongroupid_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Action Group resource Id to invoke when the alert fires.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webhookproperties_csharp">
+<a href="#webhookproperties_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Hook<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="actiongroupid_go">
+<a href="#actiongroupid_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Action Group resource Id to invoke when the alert fires.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webhookproperties_go">
+<a href="#webhookproperties_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Hook<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="actiongroupid_nodejs">
+<a href="#actiongroupid_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Action Group resource Id to invoke when the alert fires.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webhookproperties_nodejs">
+<a href="#webhookproperties_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Hook<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="actiongroupid_python">
+<a href="#actiongroupid_python" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Action Group resource Id to invoke when the alert fires.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webhookproperties_python">
+<a href="#webhookproperties_python" style="color: inherit; text-decoration: inherit;">web<wbr>Hook<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="condition">Condition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#Condition">input</a>   API doc for this type.
@@ -1569,6 +1695,372 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="conditionresponse">Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/preview?tab=doc#ConditionResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Preview.Outputs.ConditionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria operator.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}the criteria threshold value that activates the alert.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeaggregation_csharp">
+<a href="#timeaggregation_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Aggregation type{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_csharp">
+<a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Insights.<wbr>Preview.<wbr>Inputs.<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of Dimensions conditions{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="failingperiods_csharp">
+<a href="#failingperiods_csharp" style="color: inherit; text-decoration: inherit;">Failing<wbr>Periods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#conditionresponsefailingperiods">Pulumi.<wbr>Azure<wbr>RM.<wbr>Insights.<wbr>Preview.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Failing<wbr>Periods<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum number of violations required within the selected lookback time window required to raise an alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricmeasurecolumn_csharp">
+<a href="#metricmeasurecolumn_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Measure<wbr>Column</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The column containing the metric measure number.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="query_csharp">
+<a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Log query alert{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceidcolumn_csharp">
+<a href="#resourceidcolumn_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id<wbr>Column</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The column containing the resource id. The content of the column must be a uri formatted as resource id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria operator.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}the criteria threshold value that activates the alert.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeaggregation_go">
+<a href="#timeaggregation_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Aggregation type{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_go">
+<a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dimensionresponse">[]Dimension<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of Dimensions conditions{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="failingperiods_go">
+<a href="#failingperiods_go" style="color: inherit; text-decoration: inherit;">Failing<wbr>Periods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#conditionresponsefailingperiods">Condition<wbr>Response<wbr>Failing<wbr>Periods</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum number of violations required within the selected lookback time window required to raise an alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricmeasurecolumn_go">
+<a href="#metricmeasurecolumn_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Measure<wbr>Column</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The column containing the metric measure number.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="query_go">
+<a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Log query alert{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceidcolumn_go">
+<a href="#resourceidcolumn_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id<wbr>Column</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The column containing the resource id. The content of the column must be a uri formatted as resource id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria operator.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}the criteria threshold value that activates the alert.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeaggregation_nodejs">
+<a href="#timeaggregation_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Aggregation type{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_nodejs">
+<a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dimensionresponse">Dimension<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Dimensions conditions{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="failingperiods_nodejs">
+<a href="#failingperiods_nodejs" style="color: inherit; text-decoration: inherit;">failing<wbr>Periods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#conditionresponsefailingperiods">Condition<wbr>Response<wbr>Failing<wbr>Periods</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum number of violations required within the selected lookback time window required to raise an alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricmeasurecolumn_nodejs">
+<a href="#metricmeasurecolumn_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Measure<wbr>Column</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The column containing the metric measure number.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="query_nodejs">
+<a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Log query alert{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceidcolumn_nodejs">
+<a href="#resourceidcolumn_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id<wbr>Column</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The column containing the resource id. The content of the column must be a uri formatted as resource id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria operator.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}the criteria threshold value that activates the alert.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeaggregation_python">
+<a href="#timeaggregation_python" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Aggregation type{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_python">
+<a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dimensionresponse">List[Dimension<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Dimensions conditions{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="failingperiods_python">
+<a href="#failingperiods_python" style="color: inherit; text-decoration: inherit;">failing<wbr>Periods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#conditionresponsefailingperiods">Dict[Condition<wbr>Response<wbr>Failing<wbr>Periods]</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum number of violations required within the selected lookback time window required to raise an alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricmeasurecolumn_python">
+<a href="#metricmeasurecolumn_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Measure<wbr>Column</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The column containing the metric measure number.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="query_python">
+<a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Log query alert{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceidcolumn_python">
+<a href="#resourceidcolumn_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Id<wbr>Column</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The column containing the resource id. The content of the column must be a uri formatted as resource id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="conditionresponsefailingperiods">Condition<wbr>Response<wbr>Failing<wbr>Periods</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ConditionResponseFailingPeriods">output</a> API doc for this type.
@@ -1861,6 +2353,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="dimensionresponse">Dimension<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DimensionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/preview?tab=doc#DimensionResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Preview.Outputs.DimensionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of dimension values{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of dimension values{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of dimension values{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of dimension values{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="scheduledqueryrulecriteria">Scheduled<wbr>Query<wbr>Rule<wbr>Criteria</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#ScheduledQueryRuleCriteria">input</a>   API doc for this type.
@@ -1937,6 +2595,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#condition">List[Condition]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of conditions to evaluate against the specified scopes{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="scheduledqueryrulecriteriaresponse">Scheduled<wbr>Query<wbr>Rule<wbr>Criteria<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ScheduledQueryRuleCriteriaResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/preview?tab=doc#ScheduledQueryRuleCriteriaResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Preview.Outputs.ScheduledQueryRuleCriteriaResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allof_csharp">
+<a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#conditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Insights.<wbr>Preview.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of conditions to evaluate against the specified scopes{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allof_go">
+<a href="#allof_go" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#conditionresponse">[]Condition<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A list of conditions to evaluate against the specified scopes{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allof_nodejs">
+<a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of conditions to evaluate against the specified scopes{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="all_of_python">
+<a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#conditionresponse">List[Condition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of conditions to evaluate against the specified scopes{{% /md %}}</dd>
 

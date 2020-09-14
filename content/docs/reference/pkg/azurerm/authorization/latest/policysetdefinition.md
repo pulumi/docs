@@ -1043,6 +1043,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="parameterdefinitionsvalueresponse">Parameter<wbr>Definitions<wbr>Value<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ParameterDefinitionsValueResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/authorization/latest?tab=doc#ParameterDefinitionsValueResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Authorization.Latest.Outputs.ParameterDefinitionsValueResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedvalues_csharp">
+<a href="#allowedvalues_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultvalue_csharp">
+<a href="#defaultvalue_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Pulumi.<wbr>Azure<wbr>RM.<wbr>Authorization.<wbr>Latest.<wbr>Inputs.<wbr>Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedvalues_go">
+<a href="#allowedvalues_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">[]map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultvalue_go">
+<a href="#defaultvalue_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata</a></span>
+    </dt>
+    <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedvalues_nodejs">
+<a href="#allowedvalues_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}[]</span>
+    </dt>
+    <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultvalue_nodejs">
+<a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata</a></span>
+    </dt>
+    <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedvalues_python">
+<a href="#allowedvalues_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">List[Any>]</span>
+    </dt>
+    <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_value_python">
+<a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Dict[Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata]</a></span>
+    </dt>
+    <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ParameterDefinitionsValueResponseMetadata">output</a> API doc for this type.
@@ -1255,6 +1461,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="parametervaluesvalueresponse">Parameter<wbr>Values<wbr>Value<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ParameterValuesValueResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/authorization/latest?tab=doc#ParameterValuesValueResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Authorization.Latest.Outputs.ParameterValuesValueResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="policydefinitiongroup">Policy<wbr>Definition<wbr>Group</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#PolicyDefinitionGroup">input</a>   API doc for this type.
@@ -1265,6 +1557,252 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Authorization.Latest.Inputs.PolicyDefinitionGroupArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the group.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalmetadataid_csharp">
+<a href="#additionalmetadataid_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Metadata<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A resource ID of a resource that contains additional metadata about the group.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="category_csharp">
+<a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The group's category.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The group's description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The group's display name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the group.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalmetadataid_go">
+<a href="#additionalmetadataid_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Metadata<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A resource ID of a resource that contains additional metadata about the group.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="category_go">
+<a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The group's category.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The group's description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The group's display name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the group.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalmetadataid_nodejs">
+<a href="#additionalmetadataid_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Metadata<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A resource ID of a resource that contains additional metadata about the group.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="category_nodejs">
+<a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The group's category.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The group's description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The group's display name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the group.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalmetadataid_python">
+<a href="#additionalmetadataid_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Metadata<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A resource ID of a resource that contains additional metadata about the group.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="category_python">
+<a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The group's category.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The group's description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The group's display name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="policydefinitiongroupresponse">Policy<wbr>Definition<wbr>Group<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#PolicyDefinitionGroupResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/authorization/latest?tab=doc#PolicyDefinitionGroupResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Authorization.Latest.Outputs.PolicyDefinitionGroupResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1687,6 +2225,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Parameter<wbr>Values<wbr>Value]</span>
+    </dt>
+    <dd>{{% md %}}The parameter values for the referenced policy rule. The keys are the parameter names.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_definition_reference_id_python">
+<a href="#policy_definition_reference_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>reference_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A unique id (within the policy set definition) for this policy definition reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="policydefinitionreferenceresponse">Policy<wbr>Definition<wbr>Reference<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#PolicyDefinitionReferenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/authorization/latest?tab=doc#PolicyDefinitionReferenceResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Authorization.Latest.Outputs.PolicyDefinitionReferenceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policydefinitionid_csharp">
+<a href="#policydefinitionid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the policy definition or policy set definition.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupnames_csharp">
+<a href="#groupnames_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the groups that this policy definition reference belongs to.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>RM.<wbr>Authorization.<wbr>Latest.<wbr>Inputs.<wbr>Parameter<wbr>Values<wbr>Value<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}The parameter values for the referenced policy rule. The keys are the parameter names.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policydefinitionreferenceid_csharp">
+<a href="#policydefinitionreferenceid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Reference<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique id (within the policy set definition) for this policy definition reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policydefinitionid_go">
+<a href="#policydefinitionid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the policy definition or policy set definition.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupnames_go">
+<a href="#groupnames_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the groups that this policy definition reference belongs to.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]Parameter<wbr>Values<wbr>Value<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}The parameter values for the referenced policy rule. The keys are the parameter names.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policydefinitionreferenceid_go">
+<a href="#policydefinitionreferenceid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Reference<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique id (within the policy set definition) for this policy definition reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policydefinitionid_nodejs">
+<a href="#policydefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the policy definition or policy set definition.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupnames_nodejs">
+<a href="#groupnames_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the groups that this policy definition reference belongs to.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Values<wbr>Value<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}The parameter values for the referenced policy rule. The keys are the parameter names.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policydefinitionreferenceid_nodejs">
+<a href="#policydefinitionreferenceid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Reference<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique id (within the policy set definition) for this policy definition reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policy_definition_id_python">
+<a href="#policy_definition_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the policy definition or policy set definition.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupnames_python">
+<a href="#groupnames_python" style="color: inherit; text-decoration: inherit;">group<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the groups that this policy definition reference belongs to.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Parameter<wbr>Values<wbr>Value<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The parameter values for the referenced policy rule. The keys are the parameter names.{{% /md %}}</dd>
 

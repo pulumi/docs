@@ -797,6 +797,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AutoscaleSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/documentdb/latest?tab=doc#AutoscaleSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DocumentDB.Latest.Outputs.AutoscaleSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxthroughput_csharp">
+<a href="#maxthroughput_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Throughput</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxthroughput_go">
+<a href="#maxthroughput_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Throughput</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxthroughput_nodejs">
+<a href="#maxthroughput_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Throughput</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_throughput_python">
+<a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="createupdateoptions">Create<wbr>Update<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#CreateUpdateOptions">input</a>   API doc for this type.
@@ -1793,6 +1879,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="mongoindexkeysresponse">Mongo<wbr>Index<wbr>Keys<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MongoIndexKeysResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/documentdb/latest?tab=doc#MongoIndexKeysResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DocumentDB.Latest.Outputs.MongoIndexKeysResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keys_csharp">
+<a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of keys for each MongoDB collection in the Azure Cosmos DB service{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keys_go">
+<a href="#keys_go" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of keys for each MongoDB collection in the Azure Cosmos DB service{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keys_nodejs">
+<a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of keys for each MongoDB collection in the Azure Cosmos DB service{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keys_python">
+<a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of keys for each MongoDB collection in the Azure Cosmos DB service{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="mongoindexoptions">Mongo<wbr>Index<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#MongoIndexOptions">input</a>   API doc for this type.
@@ -1911,6 +2083,258 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is unique or not{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="mongoindexoptionsresponse">Mongo<wbr>Index<wbr>Options<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MongoIndexOptionsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/documentdb/latest?tab=doc#MongoIndexOptionsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DocumentDB.Latest.Outputs.MongoIndexOptionsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expireafterseconds_csharp">
+<a href="#expireafterseconds_csharp" style="color: inherit; text-decoration: inherit;">Expire<wbr>After<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Expire after seconds{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unique_csharp">
+<a href="#unique_csharp" style="color: inherit; text-decoration: inherit;">Unique</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is unique or not{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expireafterseconds_go">
+<a href="#expireafterseconds_go" style="color: inherit; text-decoration: inherit;">Expire<wbr>After<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Expire after seconds{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unique_go">
+<a href="#unique_go" style="color: inherit; text-decoration: inherit;">Unique</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is unique or not{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expireafterseconds_nodejs">
+<a href="#expireafterseconds_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>After<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Expire after seconds{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unique_nodejs">
+<a href="#unique_nodejs" style="color: inherit; text-decoration: inherit;">unique</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Is unique or not{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expireafterseconds_python">
+<a href="#expireafterseconds_python" style="color: inherit; text-decoration: inherit;">expire<wbr>After<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Expire after seconds{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unique_python">
+<a href="#unique_python" style="color: inherit; text-decoration: inherit;">unique</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is unique or not{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="mongoindexresponse">Mongo<wbr>Index<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MongoIndexResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/documentdb/latest?tab=doc#MongoIndexResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DocumentDB.Latest.Outputs.MongoIndexResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongoindexkeysresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Document<wbr>DB.<wbr>Latest.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Keys<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Cosmos DB MongoDB collection index keys{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="options_csharp">
+<a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongoindexoptionsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Document<wbr>DB.<wbr>Latest.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Options<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Cosmos DB MongoDB collection index key options{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongoindexkeysresponse">Mongo<wbr>Index<wbr>Keys<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Cosmos DB MongoDB collection index keys{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="options_go">
+<a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongoindexoptionsresponse">Mongo<wbr>Index<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Cosmos DB MongoDB collection index key options{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongoindexkeysresponse">Mongo<wbr>Index<wbr>Keys<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Cosmos DB MongoDB collection index keys{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="options_nodejs">
+<a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongoindexoptionsresponse">Mongo<wbr>Index<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Cosmos DB MongoDB collection index key options{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongoindexkeysresponse">Dict[Mongo<wbr>Index<wbr>Keys<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Cosmos DB MongoDB collection index keys{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="options_python">
+<a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mongoindexoptionsresponse">Dict[Mongo<wbr>Index<wbr>Options<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Cosmos DB MongoDB collection index key options{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

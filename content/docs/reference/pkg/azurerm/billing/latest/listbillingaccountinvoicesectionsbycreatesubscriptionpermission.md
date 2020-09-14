@@ -241,6 +241,584 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="azureplanresponse">Azure<wbr>Plan<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AzurePlanResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/billing/latest?tab=doc#AzurePlanResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Billing.Latest.Outputs.AzurePlanResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="skudescription_csharp">
+<a href="#skudescription_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The sku description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skuid_csharp">
+<a href="#skuid_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The sku id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="skudescription_go">
+<a href="#skudescription_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The sku description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skuid_go">
+<a href="#skuid_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The sku id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="skudescription_nodejs">
+<a href="#skudescription_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The sku description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skuid_nodejs">
+<a href="#skuid_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The sku id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="skudescription_python">
+<a href="#skudescription_python" style="color: inherit; text-decoration: inherit;">sku<wbr>Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The sku description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skuid_python">
+<a href="#skuid_python" style="color: inherit; text-decoration: inherit;">sku<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The sku id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="invoicesectionwithcreatesubpermissionresponse">Invoice<wbr>Section<wbr>With<wbr>Create<wbr>Sub<wbr>Permission<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#InvoiceSectionWithCreateSubPermissionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/billing/latest?tab=doc#InvoiceSectionWithCreateSubPermissionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Billing.Latest.Outputs.InvoiceSectionWithCreateSubPermissionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofiledisplayname_csharp">
+<a href="#billingprofiledisplayname_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the billing profile for the invoice section.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofileid_csharp">
+<a href="#billingprofileid_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the billing profile for the invoice section.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofilespendinglimit_csharp">
+<a href="#billingprofilespendinglimit_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Spending<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The billing profile spending limit.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofilestatus_csharp">
+<a href="#billingprofilestatus_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the billing profile.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofilestatusreasoncode_csharp">
+<a href="#billingprofilestatusreasoncode_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Status<wbr>Reason<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Reason for the specified billing profile status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofilesystemid_csharp">
+<a href="#billingprofilesystemid_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>System<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The system generated unique identifier for a billing profile.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="invoicesectiondisplayname_csharp">
+<a href="#invoicesectiondisplayname_csharp" style="color: inherit; text-decoration: inherit;">Invoice<wbr>Section<wbr>Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the invoice section.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="invoicesectionid_csharp">
+<a href="#invoicesectionid_csharp" style="color: inherit; text-decoration: inherit;">Invoice<wbr>Section<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the invoice section.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="invoicesectionsystemid_csharp">
+<a href="#invoicesectionsystemid_csharp" style="color: inherit; text-decoration: inherit;">Invoice<wbr>Section<wbr>System<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The system generated unique identifier for an invoice section.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabledazureplans_csharp">
+<a href="#enabledazureplans_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Azure<wbr>Plans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureplanresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Billing.<wbr>Latest.<wbr>Inputs.<wbr>Azure<wbr>Plan<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Enabled azure plans for the associated billing profile.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofiledisplayname_go">
+<a href="#billingprofiledisplayname_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the billing profile for the invoice section.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofileid_go">
+<a href="#billingprofileid_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the billing profile for the invoice section.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofilespendinglimit_go">
+<a href="#billingprofilespendinglimit_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Spending<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The billing profile spending limit.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofilestatus_go">
+<a href="#billingprofilestatus_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the billing profile.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofilestatusreasoncode_go">
+<a href="#billingprofilestatusreasoncode_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Status<wbr>Reason<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Reason for the specified billing profile status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofilesystemid_go">
+<a href="#billingprofilesystemid_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>System<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The system generated unique identifier for a billing profile.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="invoicesectiondisplayname_go">
+<a href="#invoicesectiondisplayname_go" style="color: inherit; text-decoration: inherit;">Invoice<wbr>Section<wbr>Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the invoice section.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="invoicesectionid_go">
+<a href="#invoicesectionid_go" style="color: inherit; text-decoration: inherit;">Invoice<wbr>Section<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the invoice section.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="invoicesectionsystemid_go">
+<a href="#invoicesectionsystemid_go" style="color: inherit; text-decoration: inherit;">Invoice<wbr>Section<wbr>System<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The system generated unique identifier for an invoice section.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabledazureplans_go">
+<a href="#enabledazureplans_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Azure<wbr>Plans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureplanresponse">[]Azure<wbr>Plan<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Enabled azure plans for the associated billing profile.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofiledisplayname_nodejs">
+<a href="#billingprofiledisplayname_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the billing profile for the invoice section.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofileid_nodejs">
+<a href="#billingprofileid_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the billing profile for the invoice section.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofilespendinglimit_nodejs">
+<a href="#billingprofilespendinglimit_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Spending<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The billing profile spending limit.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofilestatus_nodejs">
+<a href="#billingprofilestatus_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the billing profile.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofilestatusreasoncode_nodejs">
+<a href="#billingprofilestatusreasoncode_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Status<wbr>Reason<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Reason for the specified billing profile status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofilesystemid_nodejs">
+<a href="#billingprofilesystemid_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>System<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The system generated unique identifier for a billing profile.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="invoicesectiondisplayname_nodejs">
+<a href="#invoicesectiondisplayname_nodejs" style="color: inherit; text-decoration: inherit;">invoice<wbr>Section<wbr>Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the invoice section.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="invoicesectionid_nodejs">
+<a href="#invoicesectionid_nodejs" style="color: inherit; text-decoration: inherit;">invoice<wbr>Section<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the invoice section.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="invoicesectionsystemid_nodejs">
+<a href="#invoicesectionsystemid_nodejs" style="color: inherit; text-decoration: inherit;">invoice<wbr>Section<wbr>System<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The system generated unique identifier for an invoice section.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabledazureplans_nodejs">
+<a href="#enabledazureplans_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Azure<wbr>Plans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureplanresponse">Azure<wbr>Plan<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Enabled azure plans for the associated billing profile.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofiledisplayname_python">
+<a href="#billingprofiledisplayname_python" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the billing profile for the invoice section.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofileid_python">
+<a href="#billingprofileid_python" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the billing profile for the invoice section.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofilespendinglimit_python">
+<a href="#billingprofilespendinglimit_python" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Spending<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The billing profile spending limit.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofilestatus_python">
+<a href="#billingprofilestatus_python" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the billing profile.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofilestatusreasoncode_python">
+<a href="#billingprofilestatusreasoncode_python" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Status<wbr>Reason<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Reason for the specified billing profile status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="billingprofilesystemid_python">
+<a href="#billingprofilesystemid_python" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>System<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The system generated unique identifier for a billing profile.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="invoicesectiondisplayname_python">
+<a href="#invoicesectiondisplayname_python" style="color: inherit; text-decoration: inherit;">invoice<wbr>Section<wbr>Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the invoice section.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="invoicesectionid_python">
+<a href="#invoicesectionid_python" style="color: inherit; text-decoration: inherit;">invoice<wbr>Section<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the invoice section.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="invoicesectionsystemid_python">
+<a href="#invoicesectionsystemid_python" style="color: inherit; text-decoration: inherit;">invoice<wbr>Section<wbr>System<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The system generated unique identifier for an invoice section.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabledazureplans_python">
+<a href="#enabledazureplans_python" style="color: inherit; text-decoration: inherit;">enabled<wbr>Azure<wbr>Plans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureplanresponse">List[Azure<wbr>Plan<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Enabled azure plans for the associated billing profile.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

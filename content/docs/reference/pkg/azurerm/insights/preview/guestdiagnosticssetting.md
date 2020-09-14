@@ -1003,6 +1003,338 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="datasourceconfigurationresponse">Data<wbr>Source<wbr>Configuration<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DataSourceConfigurationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/preview?tab=doc#DataSourceConfigurationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Preview.Outputs.DataSourceConfigurationResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventlogs_csharp">
+<a href="#eventlogs_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventlogconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Insights.<wbr>Preview.<wbr>Inputs.<wbr>Event<wbr>Log<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Windows event logs configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfcounters_csharp">
+<a href="#perfcounters_csharp" style="color: inherit; text-decoration: inherit;">Perf<wbr>Counters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#performancecounterconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Insights.<wbr>Preview.<wbr>Inputs.<wbr>Performance<wbr>Counter<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Performance counter configuration{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="providers_csharp">
+<a href="#providers_csharp" style="color: inherit; text-decoration: inherit;">Providers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#etwproviderconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Insights.<wbr>Preview.<wbr>Inputs.<wbr>Etw<wbr>Provider<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}ETW providers configuration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventlogs_go">
+<a href="#eventlogs_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventlogconfigurationresponse">[]Event<wbr>Log<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Windows event logs configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfcounters_go">
+<a href="#perfcounters_go" style="color: inherit; text-decoration: inherit;">Perf<wbr>Counters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#performancecounterconfigurationresponse">[]Performance<wbr>Counter<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Performance counter configuration{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="providers_go">
+<a href="#providers_go" style="color: inherit; text-decoration: inherit;">Providers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#etwproviderconfigurationresponse">[]Etw<wbr>Provider<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}ETW providers configuration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventlogs_nodejs">
+<a href="#eventlogs_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventlogconfigurationresponse">Event<wbr>Log<wbr>Configuration<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Windows event logs configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfcounters_nodejs">
+<a href="#perfcounters_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Counters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#performancecounterconfigurationresponse">Performance<wbr>Counter<wbr>Configuration<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Performance counter configuration{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="providers_nodejs">
+<a href="#providers_nodejs" style="color: inherit; text-decoration: inherit;">providers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#etwproviderconfigurationresponse">Etw<wbr>Provider<wbr>Configuration<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}ETW providers configuration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventlogs_python">
+<a href="#eventlogs_python" style="color: inherit; text-decoration: inherit;">event<wbr>Logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventlogconfigurationresponse">List[Event<wbr>Log<wbr>Configuration<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Windows event logs configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perfcounters_python">
+<a href="#perfcounters_python" style="color: inherit; text-decoration: inherit;">perf<wbr>Counters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#performancecounterconfigurationresponse">List[Performance<wbr>Counter<wbr>Configuration<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Performance counter configuration{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="providers_python">
+<a href="#providers_python" style="color: inherit; text-decoration: inherit;">providers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#etwproviderconfigurationresponse">List[Etw<wbr>Provider<wbr>Configuration<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}ETW providers configuration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="datasourceresponse">Data<wbr>Source<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DataSourceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/preview?tab=doc#DataSourceResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Preview.Outputs.DataSourceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="configuration_csharp">
+<a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceconfigurationresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Insights.<wbr>Preview.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Datasource kind{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sinks_csharp">
+<a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sinkconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Insights.<wbr>Preview.<wbr>Inputs.<wbr>Sink<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="configuration_go">
+<a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceconfigurationresponse">Data<wbr>Source<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Datasource kind{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sinks_go">
+<a href="#sinks_go" style="color: inherit; text-decoration: inherit;">Sinks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sinkconfigurationresponse">[]Sink<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="configuration_nodejs">
+<a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceconfigurationresponse">Data<wbr>Source<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Datasource kind{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sinks_nodejs">
+<a href="#sinks_nodejs" style="color: inherit; text-decoration: inherit;">sinks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sinkconfigurationresponse">Sink<wbr>Configuration<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="configuration_python">
+<a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasourceconfigurationresponse">Dict[Data<wbr>Source<wbr>Configuration<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Datasource kind{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sinks_python">
+<a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sinkconfigurationresponse">List[Sink<wbr>Configuration<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="etweventconfiguration">Etw<wbr>Event<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#EtwEventConfiguration">input</a>   API doc for this type.
@@ -1013,6 +1345,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Preview.Inputs.EtwEventConfigurationArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="etweventconfigurationresponse">Etw<wbr>Event<wbr>Configuration<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#EtwEventConfigurationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/preview?tab=doc#EtwEventConfigurationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Preview.Outputs.EtwEventConfigurationResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1295,6 +1793,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="etwproviderconfigurationresponse">Etw<wbr>Provider<wbr>Configuration<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#EtwProviderConfigurationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/preview?tab=doc#EtwProviderConfigurationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Preview.Outputs.EtwProviderConfigurationResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_csharp">
+<a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#etweventconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Insights.<wbr>Preview.<wbr>Inputs.<wbr>Etw<wbr>Event<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_go">
+<a href="#events_go" style="color: inherit; text-decoration: inherit;">Events</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#etweventconfigurationresponse">[]Etw<wbr>Event<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_nodejs">
+<a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#etweventconfigurationresponse">Etw<wbr>Event<wbr>Configuration<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_python">
+<a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#etweventconfigurationresponse">List[Etw<wbr>Event<wbr>Configuration<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="eventlogconfiguration">Event<wbr>Log<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#EventLogConfiguration">input</a>   API doc for this type.
@@ -1305,6 +1929,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Preview.Inputs.EventLogConfigurationArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="logname_csharp">
+<a href="#logname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="logname_go">
+<a href="#logname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="logname_nodejs">
+<a href="#logname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="logname_python">
+<a href="#logname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="eventlogconfigurationresponse">Event<wbr>Log<wbr>Configuration<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#EventLogConfigurationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/preview?tab=doc#EventLogConfigurationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Preview.Outputs.EventLogConfigurationResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1587,6 +2337,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="performancecounterconfigurationresponse">Performance<wbr>Counter<wbr>Configuration<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#PerformanceCounterConfigurationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/preview?tab=doc#PerformanceCounterConfigurationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Preview.Outputs.PerformanceCounterConfigurationResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="samplingperiod_csharp">
+<a href="#samplingperiod_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance_csharp">
+<a href="#instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="samplingperiod_go">
+<a href="#samplingperiod_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance_go">
+<a href="#instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="samplingperiod_nodejs">
+<a href="#samplingperiod_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance_nodejs">
+<a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="samplingperiod_python">
+<a href="#samplingperiod_python" style="color: inherit; text-decoration: inherit;">sampling<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance_python">
+<a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="sinkconfiguration">Sink<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#SinkConfiguration">input</a>   API doc for this type.
@@ -1597,6 +2513,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Preview.Inputs.SinkConfigurationArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="sinkconfigurationresponse">Sink<wbr>Configuration<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SinkConfigurationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/preview?tab=doc#SinkConfigurationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Preview.Outputs.SinkConfigurationResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

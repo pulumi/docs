@@ -717,6 +717,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="clusterresourcepropertiesresponse">Cluster<wbr>Resource<wbr>Properties<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ClusterResourcePropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/appplatform/latest?tab=doc#ClusterResourcePropertiesResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.AppPlatform.Latest.Outputs.ClusterResourcePropertiesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the Service{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serviceid_csharp">
+<a href="#serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}ServiceInstanceEntity GUID which uniquely identifies a created resource{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Version of the Service{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkprofile_csharp">
+<a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkprofileresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>App<wbr>Platform.<wbr>Latest.<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the Service{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serviceid_go">
+<a href="#serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ServiceInstanceEntity GUID which uniquely identifies a created resource{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Version of the Service{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkprofile_go">
+<a href="#networkprofile_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkprofileresponse">Network<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the Service{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serviceid_nodejs">
+<a href="#serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ServiceInstanceEntity GUID which uniquely identifies a created resource{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Version of the Service{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkprofile_nodejs">
+<a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkprofileresponse">Network<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the Service{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="service_id_python">
+<a href="#service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}ServiceInstanceEntity GUID which uniquely identifies a created resource{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Version of the Service{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="network_profile_python">
+<a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkprofileresponse">Dict[Network<wbr>Profile<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="networkprofile">Network<wbr>Profile</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#NetworkProfile">input</a>   API doc for this type.
@@ -963,6 +1169,292 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="networkprofileresponse">Network<wbr>Profile<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#NetworkProfileResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/appplatform/latest?tab=doc#NetworkProfileResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.AppPlatform.Latest.Outputs.NetworkProfileResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="outboundips_csharp">
+<a href="#outboundips_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkprofileresponseoutboundips">Pulumi.<wbr>Azure<wbr>RM.<wbr>App<wbr>Platform.<wbr>Latest.<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Desired outbound IP resources for Azure Spring Cloud instance.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="appnetworkresourcegroup_csharp">
+<a href="#appnetworkresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Network<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="appsubnetid_csharp">
+<a href="#appsubnetid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicecidr_csharp">
+<a href="#servicecidr_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceruntimenetworkresourcegroup_csharp">
+<a href="#serviceruntimenetworkresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Network<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceruntimesubnetid_csharp">
+<a href="#serviceruntimesubnetid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="outboundips_go">
+<a href="#outboundips_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkprofileresponseoutboundips">Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs</a></span>
+    </dt>
+    <dd>{{% md %}}Desired outbound IP resources for Azure Spring Cloud instance.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="appnetworkresourcegroup_go">
+<a href="#appnetworkresourcegroup_go" style="color: inherit; text-decoration: inherit;">App<wbr>Network<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="appsubnetid_go">
+<a href="#appsubnetid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicecidr_go">
+<a href="#servicecidr_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceruntimenetworkresourcegroup_go">
+<a href="#serviceruntimenetworkresourcegroup_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Network<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceruntimesubnetid_go">
+<a href="#serviceruntimesubnetid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="outboundips_nodejs">
+<a href="#outboundips_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>IPs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkprofileresponseoutboundips">Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs</a></span>
+    </dt>
+    <dd>{{% md %}}Desired outbound IP resources for Azure Spring Cloud instance.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="appnetworkresourcegroup_nodejs">
+<a href="#appnetworkresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Network<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="appsubnetid_nodejs">
+<a href="#appsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicecidr_nodejs">
+<a href="#servicecidr_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Cidr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceruntimenetworkresourcegroup_nodejs">
+<a href="#serviceruntimenetworkresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Runtime<wbr>Network<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceruntimesubnetid_nodejs">
+<a href="#serviceruntimesubnetid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Runtime<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="outbound_i_ps_python">
+<a href="#outbound_i_ps_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>i_<wbr>ps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkprofileresponseoutboundips">Dict[Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs]</a></span>
+    </dt>
+    <dd>{{% md %}}Desired outbound IP resources for Azure Spring Cloud instance.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="app_network_resource_group_python">
+<a href="#app_network_resource_group_python" style="color: inherit; text-decoration: inherit;">app_<wbr>network_<wbr>resource_<wbr>group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="app_subnet_id_python">
+<a href="#app_subnet_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>subnet_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_cidr_python">
+<a href="#service_cidr_python" style="color: inherit; text-decoration: inherit;">service_<wbr>cidr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_runtime_network_resource_group_python">
+<a href="#service_runtime_network_resource_group_python" style="color: inherit; text-decoration: inherit;">service_<wbr>runtime_<wbr>network_<wbr>resource_<wbr>group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_runtime_subnet_id_python">
+<a href="#service_runtime_subnet_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>runtime_<wbr>subnet_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="networkprofileresponseoutboundips">Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#NetworkProfileResponseOutboundIPs">output</a> API doc for this type.
@@ -1059,6 +1551,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.AppPlatform.Latest.Inputs.SkuArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_csharp">
+<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_csharp">
+<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_go">
+<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_go">
+<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_nodejs">
+<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_nodejs">
+<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_python">
+<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_python">
+<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="skuresponse">Sku<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SkuResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/appplatform/latest?tab=doc#SkuResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.AppPlatform.Latest.Outputs.SkuResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

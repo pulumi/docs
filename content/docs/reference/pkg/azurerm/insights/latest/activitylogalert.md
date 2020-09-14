@@ -877,6 +877,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="activitylogalertactiongroupresponse">Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Group<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ActivityLogAlertActionGroupResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/latest?tab=doc#ActivityLogAlertActionGroupResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Latest.Outputs.ActivityLogAlertActionGroupResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="actiongroupid_csharp">
+<a href="#actiongroupid_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resourceId of the action group. This cannot be null or empty.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webhookproperties_csharp">
+<a href="#webhookproperties_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="actiongroupid_go">
+<a href="#actiongroupid_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resourceId of the action group. This cannot be null or empty.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webhookproperties_go">
+<a href="#webhookproperties_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="actiongroupid_nodejs">
+<a href="#actiongroupid_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resourceId of the action group. This cannot be null or empty.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webhookproperties_nodejs">
+<a href="#webhookproperties_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="actiongroupid_python">
+<a href="#actiongroupid_python" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The resourceId of the action group. This cannot be null or empty.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="webhookproperties_python">
+<a href="#webhookproperties_python" style="color: inherit; text-decoration: inherit;">webhook<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="activitylogalertactionlist">Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>List</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#ActivityLogAlertActionList">input</a>   API doc for this type.
@@ -953,6 +1079,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#activitylogalertactiongroup">List[Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Group]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of activity log alerts.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="activitylogalertactionlistresponse">Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>List<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ActivityLogAlertActionListResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/latest?tab=doc#ActivityLogAlertActionListResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Latest.Outputs.ActivityLogAlertActionListResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="actiongroups_csharp">
+<a href="#actiongroups_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activitylogalertactiongroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Insights.<wbr>Latest.<wbr>Inputs.<wbr>Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of activity log alerts.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="actiongroups_go">
+<a href="#actiongroups_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activitylogalertactiongroupresponse">[]Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Group<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of activity log alerts.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="actiongroups_nodejs">
+<a href="#actiongroups_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activitylogalertactiongroupresponse">Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Group<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of activity log alerts.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_groups_python">
+<a href="#action_groups_python" style="color: inherit; text-decoration: inherit;">action_<wbr>groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activitylogalertactiongroupresponse">List[Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Group<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of activity log alerts.{{% /md %}}</dd>
 
@@ -1049,6 +1261,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="activitylogalertallofconditionresponse">Activity<wbr>Log<wbr>Alert<wbr>All<wbr>Of<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ActivityLogAlertAllOfConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/latest?tab=doc#ActivityLogAlertAllOfConditionResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Latest.Outputs.ActivityLogAlertAllOfConditionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allof_csharp">
+<a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activitylogalertleafconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Insights.<wbr>Latest.<wbr>Inputs.<wbr>Activity<wbr>Log<wbr>Alert<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of activity log alert conditions.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allof_go">
+<a href="#allof_go" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activitylogalertleafconditionresponse">[]Activity<wbr>Log<wbr>Alert<wbr>Leaf<wbr>Condition<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of activity log alert conditions.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allof_nodejs">
+<a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activitylogalertleafconditionresponse">Activity<wbr>Log<wbr>Alert<wbr>Leaf<wbr>Condition<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of activity log alert conditions.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="all_of_python">
+<a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activitylogalertleafconditionresponse">List[Activity<wbr>Log<wbr>Alert<wbr>Leaf<wbr>Condition<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of activity log alert conditions.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="activitylogalertleafcondition">Activity<wbr>Log<wbr>Alert<wbr>Leaf<wbr>Condition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#ActivityLogAlertLeafCondition">input</a>   API doc for this type.
@@ -1059,6 +1357,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Latest.Inputs.ActivityLogAlertLeafConditionArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="equals_csharp">
+<a href="#equals_csharp" style="color: inherit; text-decoration: inherit;">Equals</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field value will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="field_csharp">
+<a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the field that this condition will examine. The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties.'.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="equals_go">
+<a href="#equals_go" style="color: inherit; text-decoration: inherit;">Equals</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field value will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="field_go">
+<a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the field that this condition will examine. The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties.'.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="equals_nodejs">
+<a href="#equals_nodejs" style="color: inherit; text-decoration: inherit;">equals</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field value will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="field_nodejs">
+<a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the field that this condition will examine. The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties.'.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="equals_python">
+<a href="#equals_python" style="color: inherit; text-decoration: inherit;">equals</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The field value will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="field_python">
+<a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the field that this condition will examine. The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties.'.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="activitylogalertleafconditionresponse">Activity<wbr>Log<wbr>Alert<wbr>Leaf<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ActivityLogAlertLeafConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/latest?tab=doc#ActivityLogAlertLeafConditionResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Latest.Outputs.ActivityLogAlertLeafConditionResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

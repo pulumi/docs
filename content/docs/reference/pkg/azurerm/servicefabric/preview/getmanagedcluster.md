@@ -1187,6 +1187,2278 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="applicationdeltahealthpolicyresponse">Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ApplicationDeltaHealthPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicefabric/preview?tab=doc#ApplicationDeltaHealthPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ServiceFabric.Preview.Outputs.ApplicationDeltaHealthPolicyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultservicetypedeltahealthpolicy_csharp">
+<a href="#defaultservicetypedeltahealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Service<wbr>Fabric.<wbr>Preview.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetypedeltahealthpolicies_csharp">
+<a href="#servicetypedeltahealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>RM.<wbr>Service<wbr>Fabric.<wbr>Preview.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultservicetypedeltahealthpolicy_go">
+<a href="#defaultservicetypedeltahealthpolicy_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetypedeltahealthpolicies_go">
+<a href="#servicetypedeltahealthpolicies_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultservicetypedeltahealthpolicy_nodejs">
+<a href="#defaultservicetypedeltahealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetypedeltahealthpolicies_nodejs">
+<a href="#servicetypedeltahealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultservicetypedeltahealthpolicy_python">
+<a href="#defaultservicetypedeltahealthpolicy_python" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">Dict[Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetypedeltahealthpolicies_python">
+<a href="#servicetypedeltahealthpolicies_python" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="applicationhealthpolicyresponse">Application<wbr>Health<wbr>Policy<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ApplicationHealthPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicefabric/preview?tab=doc#ApplicationHealthPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ServiceFabric.Preview.Outputs.ApplicationHealthPolicyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultservicetypehealthpolicy_csharp">
+<a href="#defaultservicetypehealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetypehealthpolicyresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Service<wbr>Fabric.<wbr>Preview.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetypehealthpolicies_csharp">
+<a href="#servicetypehealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Health<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>RM.<wbr>Service<wbr>Fabric.<wbr>Preview.<wbr>Inputs.<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultservicetypehealthpolicy_go">
+<a href="#defaultservicetypehealthpolicy_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetypehealthpolicyresponse">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetypehealthpolicies_go">
+<a href="#servicetypehealthpolicies_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Health<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultservicetypehealthpolicy_nodejs">
+<a href="#defaultservicetypehealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetypehealthpolicyresponse">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetypehealthpolicies_nodejs">
+<a href="#servicetypehealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Health<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_service_type_health_policy_python">
+<a href="#default_service_type_health_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>type_<wbr>health_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetypehealthpolicyresponse">Dict[Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicetypehealthpolicies_python">
+<a href="#servicetypehealthpolicies_python" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Health<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="azureactivedirectoryresponse">Azure<wbr>Active<wbr>Directory<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AzureActiveDirectoryResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicefabric/preview?tab=doc#AzureActiveDirectoryResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ServiceFabric.Preview.Outputs.AzureActiveDirectoryResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientapplication_csharp">
+<a href="#clientapplication_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Application</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure active directory client application id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterapplication_csharp">
+<a href="#clusterapplication_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Application</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure active directory cluster application id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure active directory tenant id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientapplication_go">
+<a href="#clientapplication_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Application</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure active directory client application id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterapplication_go">
+<a href="#clusterapplication_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Application</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure active directory cluster application id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure active directory tenant id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientapplication_nodejs">
+<a href="#clientapplication_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Application</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure active directory client application id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterapplication_nodejs">
+<a href="#clusterapplication_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Application</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure active directory cluster application id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure active directory tenant id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_application_python">
+<a href="#client_application_python" style="color: inherit; text-decoration: inherit;">client_<wbr>application</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure active directory client application id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cluster_application_python">
+<a href="#cluster_application_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>application</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure active directory cluster application id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure active directory tenant id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clientcertificateresponse">Client<wbr>Certificate<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ClientCertificateResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicefabric/preview?tab=doc#ClientCertificateResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ServiceFabric.Preview.Outputs.ClientCertificateResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isadmin_csharp">
+<a href="#isadmin_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Admin</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the certificate is admin or not.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commonname_csharp">
+<a href="#commonname_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Certificate Common name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="issuerthumbprint_csharp">
+<a href="#issuerthumbprint_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Issuer thumbprint for the certificate. Its only use CommonName is used.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_csharp">
+<a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Certificate Thumbprint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isadmin_go">
+<a href="#isadmin_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Admin</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the certificate is admin or not.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commonname_go">
+<a href="#commonname_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Certificate Common name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="issuerthumbprint_go">
+<a href="#issuerthumbprint_go" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Issuer thumbprint for the certificate. Its only use CommonName is used.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_go">
+<a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Certificate Thumbprint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isadmin_nodejs">
+<a href="#isadmin_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Admin</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the certificate is admin or not.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commonname_nodejs">
+<a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Certificate Common name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="issuerthumbprint_nodejs">
+<a href="#issuerthumbprint_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Issuer thumbprint for the certificate. Its only use CommonName is used.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_nodejs">
+<a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Certificate Thumbprint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isadmin_python">
+<a href="#isadmin_python" style="color: inherit; text-decoration: inherit;">is<wbr>Admin</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the certificate is admin or not.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commonname_python">
+<a href="#commonname_python" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Certificate Common name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="issuerthumbprint_python">
+<a href="#issuerthumbprint_python" style="color: inherit; text-decoration: inherit;">issuer<wbr>Thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Issuer thumbprint for the certificate. Its only use CommonName is used.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_python">
+<a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Certificate Thumbprint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clusterhealthpolicyresponse">Cluster<wbr>Health<wbr>Policy<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ClusterHealthPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicefabric/preview?tab=doc#ClusterHealthPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ServiceFabric.Preview.Outputs.ClusterHealthPolicyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationhealthpolicies_csharp">
+<a href="#applicationhealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Health<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>RM.<wbr>Service<wbr>Fabric.<wbr>Preview.<wbr>Inputs.<wbr>Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxpercentunhealthyapplications_csharp">
+<a href="#maxpercentunhealthyapplications_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Unhealthy<wbr>Applications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
+
+The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.
+If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.
+This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.
+The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxpercentunhealthynodes_csharp">
+<a href="#maxpercentunhealthynodes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Unhealthy<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
+
+The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.
+If the percentage is respected but there is at least one unhealthy node, the health is evaluated as Warning.
+The percentage is calculated by dividing the number of unhealthy nodes over the total number of nodes in the cluster.
+The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
+
+In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationhealthpolicies_go">
+<a href="#applicationhealthpolicies_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Health<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]Application<wbr>Health<wbr>Policy<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxpercentunhealthyapplications_go">
+<a href="#maxpercentunhealthyapplications_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Unhealthy<wbr>Applications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
+
+The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.
+If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.
+This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.
+The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxpercentunhealthynodes_go">
+<a href="#maxpercentunhealthynodes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Unhealthy<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
+
+The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.
+If the percentage is respected but there is at least one unhealthy node, the health is evaluated as Warning.
+The percentage is calculated by dividing the number of unhealthy nodes over the total number of nodes in the cluster.
+The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
+
+In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationhealthpolicies_nodejs">
+<a href="#applicationhealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Health<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: Application<wbr>Health<wbr>Policy<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxpercentunhealthyapplications_nodejs">
+<a href="#maxpercentunhealthyapplications_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Applications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
+
+The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.
+If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.
+This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.
+The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxpercentunhealthynodes_nodejs">
+<a href="#maxpercentunhealthynodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
+
+The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.
+If the percentage is respected but there is at least one unhealthy node, the health is evaluated as Warning.
+The percentage is calculated by dividing the number of unhealthy nodes over the total number of nodes in the cluster.
+The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
+
+In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="application_health_policies_python">
+<a href="#application_health_policies_python" style="color: inherit; text-decoration: inherit;">application_<wbr>health_<wbr>policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Application<wbr>Health<wbr>Policy<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_percent_unhealthy_applications_python">
+<a href="#max_percent_unhealthy_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>applications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
+
+The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.
+If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.
+This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.
+The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_percent_unhealthy_nodes_python">
+<a href="#max_percent_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
+
+The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.
+If the percentage is respected but there is at least one unhealthy node, the health is evaluated as Warning.
+The percentage is calculated by dividing the number of unhealthy nodes over the total number of nodes in the cluster.
+The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
+
+In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clusterupgradedeltahealthpolicyresponse">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ClusterUpgradeDeltaHealthPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicefabric/preview?tab=doc#ClusterUpgradeDeltaHealthPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ServiceFabric.Preview.Outputs.ClusterUpgradeDeltaHealthPolicyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxpercentdeltaunhealthyapplications_csharp">
+<a href="#maxpercentdeltaunhealthyapplications_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Applications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
+The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxpercentdeltaunhealthynodes_csharp">
+<a href="#maxpercentdeltaunhealthynodes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
+The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxpercentupgradedomaindeltaunhealthynodes_csharp">
+<a href="#maxpercentupgradedomaindeltaunhealthynodes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Upgrade<wbr>Domain<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
+The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationdeltahealthpolicies_csharp">
+<a href="#applicationdeltahealthpolicies_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Delta<wbr>Health<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>RM.<wbr>Service<wbr>Fabric.<wbr>Preview.<wbr>Inputs.<wbr>Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxpercentdeltaunhealthyapplications_go">
+<a href="#maxpercentdeltaunhealthyapplications_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Applications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
+The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxpercentdeltaunhealthynodes_go">
+<a href="#maxpercentdeltaunhealthynodes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
+The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxpercentupgradedomaindeltaunhealthynodes_go">
+<a href="#maxpercentupgradedomaindeltaunhealthynodes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Upgrade<wbr>Domain<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
+The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationdeltahealthpolicies_go">
+<a href="#applicationdeltahealthpolicies_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Delta<wbr>Health<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxpercentdeltaunhealthyapplications_nodejs">
+<a href="#maxpercentdeltaunhealthyapplications_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Applications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
+The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxpercentdeltaunhealthynodes_nodejs">
+<a href="#maxpercentdeltaunhealthynodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
+The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxpercentupgradedomaindeltaunhealthynodes_nodejs">
+<a href="#maxpercentupgradedomaindeltaunhealthynodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Upgrade<wbr>Domain<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
+The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="applicationdeltahealthpolicies_nodejs">
+<a href="#applicationdeltahealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Delta<wbr>Health<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="max_percent_delta_unhealthy_applications_python">
+<a href="#max_percent_delta_unhealthy_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>applications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
+The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="max_percent_delta_unhealthy_nodes_python">
+<a href="#max_percent_delta_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
+The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="max_percent_upgrade_domain_delta_unhealthy_nodes_python">
+<a href="#max_percent_upgrade_domain_delta_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>upgrade_<wbr>domain_<wbr>delta_<wbr>unhealthy_<wbr>nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
+The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="application_delta_health_policies_python">
+<a href="#application_delta_health_policies_python" style="color: inherit; text-decoration: inherit;">application_<wbr>delta_<wbr>health_<wbr>policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clusterupgradepolicyresponse">Cluster<wbr>Upgrade<wbr>Policy<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ClusterUpgradePolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicefabric/preview?tab=doc#ClusterUpgradePolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ServiceFabric.Preview.Outputs.ClusterUpgradePolicyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthcheckretrytimeout_csharp">
+<a href="#healthcheckretrytimeout_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Retry<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthcheckstableduration_csharp">
+<a href="#healthcheckstableduration_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Stable<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthcheckwaitduration_csharp">
+<a href="#healthcheckwaitduration_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Wait<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthpolicy_csharp">
+<a href="#healthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterhealthpolicyresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Service<wbr>Fabric.<wbr>Preview.<wbr>Inputs.<wbr>Cluster<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upgradedomaintimeout_csharp">
+<a href="#upgradedomaintimeout_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Domain<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upgradereplicasetchecktimeout_csharp">
+<a href="#upgradereplicasetchecktimeout_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Replica<wbr>Set<wbr>Check<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upgradetimeout_csharp">
+<a href="#upgradetimeout_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deltahealthpolicy_csharp">
+<a href="#deltahealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Delta<wbr>Health<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Service<wbr>Fabric.<wbr>Preview.<wbr>Inputs.<wbr>Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forcerestart_csharp">
+<a href="#forcerestart_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Restart</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthcheckretrytimeout_go">
+<a href="#healthcheckretrytimeout_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Retry<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthcheckstableduration_go">
+<a href="#healthcheckstableduration_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Stable<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthcheckwaitduration_go">
+<a href="#healthcheckwaitduration_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Wait<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthpolicy_go">
+<a href="#healthpolicy_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterhealthpolicyresponse">Cluster<wbr>Health<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upgradedomaintimeout_go">
+<a href="#upgradedomaintimeout_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Domain<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upgradereplicasetchecktimeout_go">
+<a href="#upgradereplicasetchecktimeout_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Replica<wbr>Set<wbr>Check<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upgradetimeout_go">
+<a href="#upgradetimeout_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deltahealthpolicy_go">
+<a href="#deltahealthpolicy_go" style="color: inherit; text-decoration: inherit;">Delta<wbr>Health<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forcerestart_go">
+<a href="#forcerestart_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Restart</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthcheckretrytimeout_nodejs">
+<a href="#healthcheckretrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Retry<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthcheckstableduration_nodejs">
+<a href="#healthcheckstableduration_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Stable<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthcheckwaitduration_nodejs">
+<a href="#healthcheckwaitduration_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Wait<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthpolicy_nodejs">
+<a href="#healthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterhealthpolicyresponse">Cluster<wbr>Health<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upgradedomaintimeout_nodejs">
+<a href="#upgradedomaintimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Domain<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upgradereplicasetchecktimeout_nodejs">
+<a href="#upgradereplicasetchecktimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Replica<wbr>Set<wbr>Check<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upgradetimeout_nodejs">
+<a href="#upgradetimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deltahealthpolicy_nodejs">
+<a href="#deltahealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">delta<wbr>Health<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forcerestart_nodejs">
+<a href="#forcerestart_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Restart</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="health_check_retry_timeout_python">
+<a href="#health_check_retry_timeout_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>retry_<wbr>timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="health_check_stable_duration_python">
+<a href="#health_check_stable_duration_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>stable_<wbr>duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="health_check_wait_duration_python">
+<a href="#health_check_wait_duration_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>wait_<wbr>duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="health_policy_python">
+<a href="#health_policy_python" style="color: inherit; text-decoration: inherit;">health_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterhealthpolicyresponse">Dict[Cluster<wbr>Health<wbr>Policy<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upgrade_domain_timeout_python">
+<a href="#upgrade_domain_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>domain_<wbr>timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upgrade_replica_set_check_timeout_python">
+<a href="#upgrade_replica_set_check_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>replica_<wbr>set_<wbr>check_<wbr>timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upgrade_timeout_python">
+<a href="#upgrade_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delta_health_policy_python">
+<a href="#delta_health_policy_python" style="color: inherit; text-decoration: inherit;">delta_<wbr>health_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">Dict[Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="force_restart_python">
+<a href="#force_restart_python" style="color: inherit; text-decoration: inherit;">force_<wbr>restart</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="loadbalancingruleresponse">Load<wbr>Balancing<wbr>Rule<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#LoadBalancingRuleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicefabric/preview?tab=doc#LoadBalancingRuleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ServiceFabric.Preview.Outputs.LoadBalancingRuleResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backendport_csharp">
+<a href="#backendport_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="frontendport_csharp">
+<a href="#frontendport_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="probeprotocol_csharp">
+<a href="#probeprotocol_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}the reference to the load balancer probe used by the load balancing rule.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the transport protocol used by the load balancing rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proberequestpath_csharp">
+<a href="#proberequestpath_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Request<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The probe request path. Only supported for HTTP/HTTPS probes.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backendport_go">
+<a href="#backendport_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="frontendport_go">
+<a href="#frontendport_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="probeprotocol_go">
+<a href="#probeprotocol_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the reference to the load balancer probe used by the load balancing rule.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the transport protocol used by the load balancing rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proberequestpath_go">
+<a href="#proberequestpath_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Request<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The probe request path. Only supported for HTTP/HTTPS probes.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backendport_nodejs">
+<a href="#backendport_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="frontendport_nodejs">
+<a href="#frontendport_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="probeprotocol_nodejs">
+<a href="#probeprotocol_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the reference to the load balancer probe used by the load balancing rule.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the transport protocol used by the load balancing rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proberequestpath_nodejs">
+<a href="#proberequestpath_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Request<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The probe request path. Only supported for HTTP/HTTPS probes.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backend_port_python">
+<a href="#backend_port_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="frontend_port_python">
+<a href="#frontend_port_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="probe_protocol_python">
+<a href="#probe_protocol_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the reference to the load balancer probe used by the load balancing rule.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the transport protocol used by the load balancing rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proberequestpath_python">
+<a href="#proberequestpath_python" style="color: inherit; text-decoration: inherit;">probe<wbr>Request<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The probe request path. Only supported for HTTP/HTTPS probes.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="servicetypedeltahealthpolicyresponse">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ServiceTypeDeltaHealthPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicefabric/preview?tab=doc#ServiceTypeDeltaHealthPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ServiceFabric.Preview.Outputs.ServiceTypeDeltaHealthPolicyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxpercentdeltaunhealthyservices_csharp">
+<a href="#maxpercentdeltaunhealthyservices_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of services health degradation allowed during cluster upgrades.
+The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxpercentdeltaunhealthyservices_go">
+<a href="#maxpercentdeltaunhealthyservices_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of services health degradation allowed during cluster upgrades.
+The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxpercentdeltaunhealthyservices_nodejs">
+<a href="#maxpercentdeltaunhealthyservices_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of services health degradation allowed during cluster upgrades.
+The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxpercentdeltaunhealthyservices_python">
+<a href="#maxpercentdeltaunhealthyservices_python" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum allowed percentage of services health degradation allowed during cluster upgrades.
+The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="servicetypehealthpolicyresponse">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ServiceTypeHealthPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicefabric/preview?tab=doc#ServiceTypeHealthPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ServiceFabric.Preview.Outputs.ServiceTypeHealthPolicyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxpercentunhealthyservices_csharp">
+<a href="#maxpercentunhealthyservices_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Unhealthy<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxpercentunhealthyservices_go">
+<a href="#maxpercentunhealthyservices_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Percent<wbr>Unhealthy<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxpercentunhealthyservices_nodejs">
+<a href="#maxpercentunhealthyservices_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_percent_unhealthy_services_python">
+<a href="#max_percent_unhealthy_services_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="settingsparameterdescriptionresponse">Settings<wbr>Parameter<wbr>Description<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SettingsParameterDescriptionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicefabric/preview?tab=doc#SettingsParameterDescriptionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ServiceFabric.Preview.Outputs.SettingsParameterDescriptionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The parameter name of fabric setting.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The parameter value of fabric setting.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The parameter name of fabric setting.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The parameter value of fabric setting.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The parameter name of fabric setting.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The parameter value of fabric setting.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The parameter name of fabric setting.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The parameter value of fabric setting.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="settingssectiondescriptionresponse">Settings<wbr>Section<wbr>Description<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SettingsSectionDescriptionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicefabric/preview?tab=doc#SettingsSectionDescriptionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ServiceFabric.Preview.Outputs.SettingsSectionDescriptionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The section name of the fabric settings.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#settingsparameterdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Service<wbr>Fabric.<wbr>Preview.<wbr>Inputs.<wbr>Settings<wbr>Parameter<wbr>Description<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The section name of the fabric settings.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#settingsparameterdescriptionresponse">[]Settings<wbr>Parameter<wbr>Description<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The section name of the fabric settings.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#settingsparameterdescriptionresponse">Settings<wbr>Parameter<wbr>Description<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The section name of the fabric settings.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#settingsparameterdescriptionresponse">List[Settings<wbr>Parameter<wbr>Description<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="skuresponse">Sku<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SkuResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicefabric/preview?tab=doc#SkuResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ServiceFabric.Preview.Outputs.SkuResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sku Name. Basic will have a minimum of 3 seed nodes and Standard a minimum of 5. Basic only allows 1 node type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sku Name. Basic will have a minimum of 3 seed nodes and Standard a minimum of 5. Basic only allows 1 node type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sku Name. Basic will have a minimum of 3 seed nodes and Standard a minimum of 5. Basic only allows 1 node type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sku Name. Basic will have a minimum of 3 seed nodes and Standard a minimum of 5. Basic only allows 1 node type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

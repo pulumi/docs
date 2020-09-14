@@ -1828,6 +1828,2202 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+## Supporting Types
+
+
+<h4 id="operationimpactresponse">Operation<wbr>Impact<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#OperationImpactResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sql/latest?tab=doc#OperationImpactResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Sql.Latest.Outputs.OperationImpactResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="changevalueabsolute_csharp">
+<a href="#changevalueabsolute_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Value<wbr>Absolute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The absolute impact to dimension.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="changevaluerelative_csharp">
+<a href="#changevaluerelative_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Value<wbr>Relative</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The relative impact to dimension (null if not applicable){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the impact dimension.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit in which estimated impact to dimension is measured.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="changevalueabsolute_go">
+<a href="#changevalueabsolute_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Value<wbr>Absolute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The absolute impact to dimension.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="changevaluerelative_go">
+<a href="#changevaluerelative_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Value<wbr>Relative</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The relative impact to dimension (null if not applicable){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the impact dimension.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit in which estimated impact to dimension is measured.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="changevalueabsolute_nodejs">
+<a href="#changevalueabsolute_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Value<wbr>Absolute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The absolute impact to dimension.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="changevaluerelative_nodejs">
+<a href="#changevaluerelative_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Value<wbr>Relative</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The relative impact to dimension (null if not applicable){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the impact dimension.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit in which estimated impact to dimension is measured.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="changevalueabsolute_python">
+<a href="#changevalueabsolute_python" style="color: inherit; text-decoration: inherit;">change<wbr>Value<wbr>Absolute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The absolute impact to dimension.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="changevaluerelative_python">
+<a href="#changevaluerelative_python" style="color: inherit; text-decoration: inherit;">change<wbr>Value<wbr>Relative</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The relative impact to dimension (null if not applicable){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the impact dimension.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unit in which estimated impact to dimension is measured.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="recommendedindexresponse">Recommended<wbr>Index<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RecommendedIndexResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sql/latest?tab=doc#RecommendedIndexResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Sql.Latest.Outputs.RecommendedIndexResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The proposed index action. You can create a missing index, drop an unused index, or rebuild an existing index to improve its performance.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="columns_csharp">
+<a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Columns over which to build index{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="created_csharp">
+<a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The UTC datetime showing when this resource was created (ISO8601 format).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="estimatedimpact_csharp">
+<a href="#estimatedimpact_csharp" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationimpactresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Sql.<wbr>Latest.<wbr>Inputs.<wbr>Operation<wbr>Impact<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The estimated impact of doing recommended index action.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="includedcolumns_csharp">
+<a href="#includedcolumns_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Columns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of column names to be included in the index{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="indexscript_csharp">
+<a href="#indexscript_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Script</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full build index script{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="indextype_csharp">
+<a href="#indextype_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of index (CLUSTERED, NONCLUSTERED, COLUMNSTORE, CLUSTERED COLUMNSTORE){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastmodified_csharp">
+<a href="#lastmodified_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The UTC datetime of when was this resource last changed (ISO8601 format).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reportedimpact_csharp">
+<a href="#reportedimpact_csharp" style="color: inherit; text-decoration: inherit;">Reported<wbr>Impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationimpactresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Sql.<wbr>Latest.<wbr>Inputs.<wbr>Operation<wbr>Impact<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The values reported after index action is complete.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="schema_csharp">
+<a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The schema where table to build index over resides{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The current recommendation state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="table_csharp">
+<a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The table on which to build index.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The proposed index action. You can create a missing index, drop an unused index, or rebuild an existing index to improve its performance.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="columns_go">
+<a href="#columns_go" style="color: inherit; text-decoration: inherit;">Columns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Columns over which to build index{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="created_go">
+<a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The UTC datetime showing when this resource was created (ISO8601 format).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="estimatedimpact_go">
+<a href="#estimatedimpact_go" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationimpactresponse">[]Operation<wbr>Impact<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The estimated impact of doing recommended index action.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="includedcolumns_go">
+<a href="#includedcolumns_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Columns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of column names to be included in the index{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="indexscript_go">
+<a href="#indexscript_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Script</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full build index script{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="indextype_go">
+<a href="#indextype_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of index (CLUSTERED, NONCLUSTERED, COLUMNSTORE, CLUSTERED COLUMNSTORE){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastmodified_go">
+<a href="#lastmodified_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The UTC datetime of when was this resource last changed (ISO8601 format).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reportedimpact_go">
+<a href="#reportedimpact_go" style="color: inherit; text-decoration: inherit;">Reported<wbr>Impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationimpactresponse">[]Operation<wbr>Impact<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The values reported after index action is complete.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="schema_go">
+<a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The schema where table to build index over resides{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The current recommendation state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="table_go">
+<a href="#table_go" style="color: inherit; text-decoration: inherit;">Table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The table on which to build index.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The proposed index action. You can create a missing index, drop an unused index, or rebuild an existing index to improve its performance.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="columns_nodejs">
+<a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Columns over which to build index{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="created_nodejs">
+<a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The UTC datetime showing when this resource was created (ISO8601 format).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="estimatedimpact_nodejs">
+<a href="#estimatedimpact_nodejs" style="color: inherit; text-decoration: inherit;">estimated<wbr>Impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationimpactresponse">Operation<wbr>Impact<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The estimated impact of doing recommended index action.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="includedcolumns_nodejs">
+<a href="#includedcolumns_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Columns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of column names to be included in the index{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="indexscript_nodejs">
+<a href="#indexscript_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Script</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full build index script{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="indextype_nodejs">
+<a href="#indextype_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of index (CLUSTERED, NONCLUSTERED, COLUMNSTORE, CLUSTERED COLUMNSTORE){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastmodified_nodejs">
+<a href="#lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The UTC datetime of when was this resource last changed (ISO8601 format).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reportedimpact_nodejs">
+<a href="#reportedimpact_nodejs" style="color: inherit; text-decoration: inherit;">reported<wbr>Impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationimpactresponse">Operation<wbr>Impact<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The values reported after index action is complete.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="schema_nodejs">
+<a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The schema where table to build index over resides{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The current recommendation state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="table_nodejs">
+<a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The table on which to build index.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The proposed index action. You can create a missing index, drop an unused index, or rebuild an existing index to improve its performance.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="columns_python">
+<a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Columns over which to build index{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="created_python">
+<a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The UTC datetime showing when this resource was created (ISO8601 format).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="estimatedimpact_python">
+<a href="#estimatedimpact_python" style="color: inherit; text-decoration: inherit;">estimated<wbr>Impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationimpactresponse">List[Operation<wbr>Impact<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The estimated impact of doing recommended index action.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="includedcolumns_python">
+<a href="#includedcolumns_python" style="color: inherit; text-decoration: inherit;">included<wbr>Columns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of column names to be included in the index{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="indexscript_python">
+<a href="#indexscript_python" style="color: inherit; text-decoration: inherit;">index<wbr>Script</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The full build index script{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="indextype_python">
+<a href="#indextype_python" style="color: inherit; text-decoration: inherit;">index<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of index (CLUSTERED, NONCLUSTERED, COLUMNSTORE, CLUSTERED COLUMNSTORE){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="last_modified_python">
+<a href="#last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The UTC datetime of when was this resource last changed (ISO8601 format).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reportedimpact_python">
+<a href="#reportedimpact_python" style="color: inherit; text-decoration: inherit;">reported<wbr>Impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#operationimpactresponse">List[Operation<wbr>Impact<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The values reported after index action is complete.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="schema_python">
+<a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The schema where table to build index over resides{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The current recommendation state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="table_python">
+<a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The table on which to build index.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="servicetieradvisorresponse">Service<wbr>Tier<wbr>Advisor<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ServiceTierAdvisorResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sql/latest?tab=doc#ServiceTierAdvisorResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Sql.Latest.Outputs.ServiceTierAdvisorResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="activetimeratio_csharp">
+<a href="#activetimeratio_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Time<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The activeTimeRatio for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="avgdtu_csharp">
+<a href="#avgdtu_csharp" style="color: inherit; text-decoration: inherit;">Avg<wbr>Dtu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets avgDtu for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="confidence_csharp">
+<a href="#confidence_csharp" style="color: inherit; text-decoration: inherit;">Confidence</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets confidence for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="currentservicelevelobjective_csharp">
+<a href="#currentservicelevelobjective_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets currentServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="currentservicelevelobjectiveid_csharp">
+<a href="#currentservicelevelobjectiveid_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets currentServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasesizebasedrecommendationservicelevelobjective_csharp">
+<a href="#databasesizebasedrecommendationservicelevelobjective_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Size<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets databaseSizeBasedRecommendationServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasesizebasedrecommendationservicelevelobjectiveid_csharp">
+<a href="#databasesizebasedrecommendationservicelevelobjectiveid_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Size<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets databaseSizeBasedRecommendationServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disasterplanbasedrecommendationservicelevelobjective_csharp">
+<a href="#disasterplanbasedrecommendationservicelevelobjective_csharp" style="color: inherit; text-decoration: inherit;">Disaster<wbr>Plan<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets disasterPlanBasedRecommendationServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disasterplanbasedrecommendationservicelevelobjectiveid_csharp">
+<a href="#disasterplanbasedrecommendationservicelevelobjectiveid_csharp" style="color: inherit; text-decoration: inherit;">Disaster<wbr>Plan<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets disasterPlanBasedRecommendationServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxdtu_csharp">
+<a href="#maxdtu_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Dtu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets maxDtu for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxsizeingb_csharp">
+<a href="#maxsizeingb_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>In<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets maxSizeInGB for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mindtu_csharp">
+<a href="#mindtu_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Dtu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets minDtu for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="observationperiodend_csharp">
+<a href="#observationperiodend_csharp" style="color: inherit; text-decoration: inherit;">Observation<wbr>Period<wbr>End</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The observation period start (ISO8601 format).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="observationperiodstart_csharp">
+<a href="#observationperiodstart_csharp" style="color: inherit; text-decoration: inherit;">Observation<wbr>Period<wbr>Start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The observation period start (ISO8601 format).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="overallrecommendationservicelevelobjective_csharp">
+<a href="#overallrecommendationservicelevelobjective_csharp" style="color: inherit; text-decoration: inherit;">Overall<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets overallRecommendationServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="overallrecommendationservicelevelobjectiveid_csharp">
+<a href="#overallrecommendationservicelevelobjectiveid_csharp" style="color: inherit; text-decoration: inherit;">Overall<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets overallRecommendationServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="servicelevelobjectiveusagemetrics_csharp">
+<a href="#servicelevelobjectiveusagemetrics_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Level<wbr>Objective<wbr>Usage<wbr>Metrics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slousagemetricresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Sql.<wbr>Latest.<wbr>Inputs.<wbr>Slo<wbr>Usage<wbr>Metric<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets serviceLevelObjectiveUsageMetrics for the service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usagebasedrecommendationservicelevelobjective_csharp">
+<a href="#usagebasedrecommendationservicelevelobjective_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets usageBasedRecommendationServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usagebasedrecommendationservicelevelobjectiveid_csharp">
+<a href="#usagebasedrecommendationservicelevelobjectiveid_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets usageBasedRecommendationServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="activetimeratio_go">
+<a href="#activetimeratio_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Time<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The activeTimeRatio for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="avgdtu_go">
+<a href="#avgdtu_go" style="color: inherit; text-decoration: inherit;">Avg<wbr>Dtu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets avgDtu for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="confidence_go">
+<a href="#confidence_go" style="color: inherit; text-decoration: inherit;">Confidence</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets confidence for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="currentservicelevelobjective_go">
+<a href="#currentservicelevelobjective_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets currentServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="currentservicelevelobjectiveid_go">
+<a href="#currentservicelevelobjectiveid_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets currentServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasesizebasedrecommendationservicelevelobjective_go">
+<a href="#databasesizebasedrecommendationservicelevelobjective_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Size<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets databaseSizeBasedRecommendationServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasesizebasedrecommendationservicelevelobjectiveid_go">
+<a href="#databasesizebasedrecommendationservicelevelobjectiveid_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Size<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets databaseSizeBasedRecommendationServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disasterplanbasedrecommendationservicelevelobjective_go">
+<a href="#disasterplanbasedrecommendationservicelevelobjective_go" style="color: inherit; text-decoration: inherit;">Disaster<wbr>Plan<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets disasterPlanBasedRecommendationServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disasterplanbasedrecommendationservicelevelobjectiveid_go">
+<a href="#disasterplanbasedrecommendationservicelevelobjectiveid_go" style="color: inherit; text-decoration: inherit;">Disaster<wbr>Plan<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets disasterPlanBasedRecommendationServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxdtu_go">
+<a href="#maxdtu_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Dtu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets maxDtu for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxsizeingb_go">
+<a href="#maxsizeingb_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>In<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets maxSizeInGB for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mindtu_go">
+<a href="#mindtu_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Dtu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets minDtu for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="observationperiodend_go">
+<a href="#observationperiodend_go" style="color: inherit; text-decoration: inherit;">Observation<wbr>Period<wbr>End</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The observation period start (ISO8601 format).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="observationperiodstart_go">
+<a href="#observationperiodstart_go" style="color: inherit; text-decoration: inherit;">Observation<wbr>Period<wbr>Start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The observation period start (ISO8601 format).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="overallrecommendationservicelevelobjective_go">
+<a href="#overallrecommendationservicelevelobjective_go" style="color: inherit; text-decoration: inherit;">Overall<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets overallRecommendationServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="overallrecommendationservicelevelobjectiveid_go">
+<a href="#overallrecommendationservicelevelobjectiveid_go" style="color: inherit; text-decoration: inherit;">Overall<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets overallRecommendationServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="servicelevelobjectiveusagemetrics_go">
+<a href="#servicelevelobjectiveusagemetrics_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Level<wbr>Objective<wbr>Usage<wbr>Metrics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slousagemetricresponse">[]Slo<wbr>Usage<wbr>Metric<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets serviceLevelObjectiveUsageMetrics for the service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usagebasedrecommendationservicelevelobjective_go">
+<a href="#usagebasedrecommendationservicelevelobjective_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets usageBasedRecommendationServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usagebasedrecommendationservicelevelobjectiveid_go">
+<a href="#usagebasedrecommendationservicelevelobjectiveid_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets usageBasedRecommendationServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="activetimeratio_nodejs">
+<a href="#activetimeratio_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Time<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The activeTimeRatio for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="avgdtu_nodejs">
+<a href="#avgdtu_nodejs" style="color: inherit; text-decoration: inherit;">avg<wbr>Dtu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets avgDtu for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="confidence_nodejs">
+<a href="#confidence_nodejs" style="color: inherit; text-decoration: inherit;">confidence</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets confidence for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="currentservicelevelobjective_nodejs">
+<a href="#currentservicelevelobjective_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets currentServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="currentservicelevelobjectiveid_nodejs">
+<a href="#currentservicelevelobjectiveid_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets currentServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasesizebasedrecommendationservicelevelobjective_nodejs">
+<a href="#databasesizebasedrecommendationservicelevelobjective_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Size<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets databaseSizeBasedRecommendationServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasesizebasedrecommendationservicelevelobjectiveid_nodejs">
+<a href="#databasesizebasedrecommendationservicelevelobjectiveid_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Size<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets databaseSizeBasedRecommendationServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disasterplanbasedrecommendationservicelevelobjective_nodejs">
+<a href="#disasterplanbasedrecommendationservicelevelobjective_nodejs" style="color: inherit; text-decoration: inherit;">disaster<wbr>Plan<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets disasterPlanBasedRecommendationServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disasterplanbasedrecommendationservicelevelobjectiveid_nodejs">
+<a href="#disasterplanbasedrecommendationservicelevelobjectiveid_nodejs" style="color: inherit; text-decoration: inherit;">disaster<wbr>Plan<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets disasterPlanBasedRecommendationServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxdtu_nodejs">
+<a href="#maxdtu_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Dtu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets maxDtu for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxsizeingb_nodejs">
+<a href="#maxsizeingb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>In<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets maxSizeInGB for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mindtu_nodejs">
+<a href="#mindtu_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Dtu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets minDtu for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="observationperiodend_nodejs">
+<a href="#observationperiodend_nodejs" style="color: inherit; text-decoration: inherit;">observation<wbr>Period<wbr>End</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The observation period start (ISO8601 format).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="observationperiodstart_nodejs">
+<a href="#observationperiodstart_nodejs" style="color: inherit; text-decoration: inherit;">observation<wbr>Period<wbr>Start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The observation period start (ISO8601 format).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="overallrecommendationservicelevelobjective_nodejs">
+<a href="#overallrecommendationservicelevelobjective_nodejs" style="color: inherit; text-decoration: inherit;">overall<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets overallRecommendationServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="overallrecommendationservicelevelobjectiveid_nodejs">
+<a href="#overallrecommendationservicelevelobjectiveid_nodejs" style="color: inherit; text-decoration: inherit;">overall<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets overallRecommendationServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="servicelevelobjectiveusagemetrics_nodejs">
+<a href="#servicelevelobjectiveusagemetrics_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Level<wbr>Objective<wbr>Usage<wbr>Metrics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slousagemetricresponse">Slo<wbr>Usage<wbr>Metric<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets serviceLevelObjectiveUsageMetrics for the service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usagebasedrecommendationservicelevelobjective_nodejs">
+<a href="#usagebasedrecommendationservicelevelobjective_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets usageBasedRecommendationServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usagebasedrecommendationservicelevelobjectiveid_nodejs">
+<a href="#usagebasedrecommendationservicelevelobjectiveid_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets usageBasedRecommendationServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="activetimeratio_python">
+<a href="#activetimeratio_python" style="color: inherit; text-decoration: inherit;">active<wbr>Time<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The activeTimeRatio for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="avgdtu_python">
+<a href="#avgdtu_python" style="color: inherit; text-decoration: inherit;">avg<wbr>Dtu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets avgDtu for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="confidence_python">
+<a href="#confidence_python" style="color: inherit; text-decoration: inherit;">confidence</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets confidence for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="currentservicelevelobjective_python">
+<a href="#currentservicelevelobjective_python" style="color: inherit; text-decoration: inherit;">current<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets currentServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="currentservicelevelobjectiveid_python">
+<a href="#currentservicelevelobjectiveid_python" style="color: inherit; text-decoration: inherit;">current<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets currentServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasesizebasedrecommendationservicelevelobjective_python">
+<a href="#databasesizebasedrecommendationservicelevelobjective_python" style="color: inherit; text-decoration: inherit;">database<wbr>Size<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets databaseSizeBasedRecommendationServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasesizebasedrecommendationservicelevelobjectiveid_python">
+<a href="#databasesizebasedrecommendationservicelevelobjectiveid_python" style="color: inherit; text-decoration: inherit;">database<wbr>Size<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets databaseSizeBasedRecommendationServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disasterplanbasedrecommendationservicelevelobjective_python">
+<a href="#disasterplanbasedrecommendationservicelevelobjective_python" style="color: inherit; text-decoration: inherit;">disaster<wbr>Plan<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets disasterPlanBasedRecommendationServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disasterplanbasedrecommendationservicelevelobjectiveid_python">
+<a href="#disasterplanbasedrecommendationservicelevelobjectiveid_python" style="color: inherit; text-decoration: inherit;">disaster<wbr>Plan<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets disasterPlanBasedRecommendationServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxdtu_python">
+<a href="#maxdtu_python" style="color: inherit; text-decoration: inherit;">max<wbr>Dtu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets maxDtu for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxsizeingb_python">
+<a href="#maxsizeingb_python" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>In<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets maxSizeInGB for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mindtu_python">
+<a href="#mindtu_python" style="color: inherit; text-decoration: inherit;">min<wbr>Dtu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets minDtu for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="observationperiodend_python">
+<a href="#observationperiodend_python" style="color: inherit; text-decoration: inherit;">observation<wbr>Period<wbr>End</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The observation period start (ISO8601 format).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="observationperiodstart_python">
+<a href="#observationperiodstart_python" style="color: inherit; text-decoration: inherit;">observation<wbr>Period<wbr>Start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The observation period start (ISO8601 format).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="overallrecommendationservicelevelobjective_python">
+<a href="#overallrecommendationservicelevelobjective_python" style="color: inherit; text-decoration: inherit;">overall<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets overallRecommendationServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="overallrecommendationservicelevelobjectiveid_python">
+<a href="#overallrecommendationservicelevelobjectiveid_python" style="color: inherit; text-decoration: inherit;">overall<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets overallRecommendationServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="servicelevelobjectiveusagemetrics_python">
+<a href="#servicelevelobjectiveusagemetrics_python" style="color: inherit; text-decoration: inherit;">service<wbr>Level<wbr>Objective<wbr>Usage<wbr>Metrics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slousagemetricresponse">List[Slo<wbr>Usage<wbr>Metric<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets serviceLevelObjectiveUsageMetrics for the service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usagebasedrecommendationservicelevelobjective_python">
+<a href="#usagebasedrecommendationservicelevelobjective_python" style="color: inherit; text-decoration: inherit;">usage<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets usageBasedRecommendationServiceLevelObjective for service tier advisor.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usagebasedrecommendationservicelevelobjectiveid_python">
+<a href="#usagebasedrecommendationservicelevelobjectiveid_python" style="color: inherit; text-decoration: inherit;">usage<wbr>Based<wbr>Recommendation<wbr>Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets usageBasedRecommendationServiceLevelObjectiveId for service tier advisor.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="slousagemetricresponse">Slo<wbr>Usage<wbr>Metric<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SloUsageMetricResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sql/latest?tab=doc#SloUsageMetricResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Sql.Latest.Outputs.SloUsageMetricResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inrangetimeratio_csharp">
+<a href="#inrangetimeratio_csharp" style="color: inherit; text-decoration: inherit;">In<wbr>Range<wbr>Time<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets inRangeTimeRatio for SLO usage metric.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="servicelevelobjective_csharp">
+<a href="#servicelevelobjective_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The serviceLevelObjective for SLO usage metric.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="servicelevelobjectiveid_csharp">
+<a href="#servicelevelobjectiveid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The serviceLevelObjectiveId for SLO usage metric.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inrangetimeratio_go">
+<a href="#inrangetimeratio_go" style="color: inherit; text-decoration: inherit;">In<wbr>Range<wbr>Time<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets inRangeTimeRatio for SLO usage metric.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="servicelevelobjective_go">
+<a href="#servicelevelobjective_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The serviceLevelObjective for SLO usage metric.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="servicelevelobjectiveid_go">
+<a href="#servicelevelobjectiveid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The serviceLevelObjectiveId for SLO usage metric.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inrangetimeratio_nodejs">
+<a href="#inrangetimeratio_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Range<wbr>Time<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets inRangeTimeRatio for SLO usage metric.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="servicelevelobjective_nodejs">
+<a href="#servicelevelobjective_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Level<wbr>Objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The serviceLevelObjective for SLO usage metric.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="servicelevelobjectiveid_nodejs">
+<a href="#servicelevelobjectiveid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The serviceLevelObjectiveId for SLO usage metric.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inrangetimeratio_python">
+<a href="#inrangetimeratio_python" style="color: inherit; text-decoration: inherit;">in<wbr>Range<wbr>Time<wbr>Ratio</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets inRangeTimeRatio for SLO usage metric.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="servicelevelobjectiveid_python">
+<a href="#servicelevelobjectiveid_python" style="color: inherit; text-decoration: inherit;">service<wbr>Level<wbr>Objective<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The serviceLevelObjectiveId for SLO usage metric.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="service_level_objective_python">
+<a href="#service_level_objective_python" style="color: inherit; text-decoration: inherit;">service_<wbr>level_<wbr>objective</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The serviceLevelObjective for SLO usage metric.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="transparentdataencryptionresponse">Transparent<wbr>Data<wbr>Encryption<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#TransparentDataEncryptionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sql/latest?tab=doc#TransparentDataEncryptionResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Sql.Latest.Outputs.TransparentDataEncryptionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the database transparent data encryption.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the database transparent data encryption.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the database transparent data encryption.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the database transparent data encryption.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

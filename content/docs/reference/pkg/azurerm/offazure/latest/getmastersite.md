@@ -403,6 +403,178 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="mastersitepropertiesresponse">Master<wbr>Site<wbr>Properties<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MasterSitePropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/offazure/latest?tab=doc#MasterSitePropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.OffAzure.Latest.Outputs.MasterSitePropertiesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowmultiplesites_csharp">
+<a href="#allowmultiplesites_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Multiple<wbr>Sites</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Value indicating whether multiple sites per site type are allowed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicnetworkaccess_csharp">
+<a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}State of public network access.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sites_csharp">
+<a href="#sites_csharp" style="color: inherit; text-decoration: inherit;">Sites</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of sites that are a part of Master Site.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowmultiplesites_go">
+<a href="#allowmultiplesites_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Multiple<wbr>Sites</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Value indicating whether multiple sites per site type are allowed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicnetworkaccess_go">
+<a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}State of public network access.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sites_go">
+<a href="#sites_go" style="color: inherit; text-decoration: inherit;">Sites</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of sites that are a part of Master Site.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowmultiplesites_nodejs">
+<a href="#allowmultiplesites_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Multiple<wbr>Sites</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Value indicating whether multiple sites per site type are allowed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicnetworkaccess_nodejs">
+<a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}State of public network access.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sites_nodejs">
+<a href="#sites_nodejs" style="color: inherit; text-decoration: inherit;">sites</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sites that are a part of Master Site.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allow_multiple_sites_python">
+<a href="#allow_multiple_sites_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>multiple_<wbr>sites</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Value indicating whether multiple sites per site type are allowed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="public_network_access_python">
+<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}State of public network access.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sites_python">
+<a href="#sites_python" style="color: inherit; text-decoration: inherit;">sites</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sites that are a part of Master Site.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

@@ -911,6 +911,1012 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+<h4 id="aciserviceresponseresponse">ACIService<wbr>Response<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ACIServiceResponseResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/machinelearningservices/preview?tab=doc#ACIServiceResponseResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.MachineLearningServices.Preview.Outputs.ACIServiceResponseResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="error_csharp">
+<a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Pulumi.<wbr>Azure<wbr>RM.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Preview.<wbr>Inputs.<wbr>Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="modelconfigmap_csharp">
+<a href="#modelconfigmap_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Config<wbr>Map</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}Details on the models and configurations.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scoringuri_csharp">
+<a href="#scoringuri_csharp" style="color: inherit; text-decoration: inherit;">Scoring<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Uri for sending scoring requests.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The current state of the service.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="swaggeruri_csharp">
+<a href="#swaggeruri_csharp" style="color: inherit; text-decoration: inherit;">Swagger<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Uri for sending swagger requests.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="appinsightsenabled_csharp">
+<a href="#appinsightsenabled_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Insights<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not Application Insights is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authenabled_csharp">
+<a href="#authenabled_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not authentication is enabled on the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cname_csharp">
+<a href="#cname_csharp" style="color: inherit; text-decoration: inherit;">Cname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CName for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerresourcerequirements_csharp">
+<a href="#containerresourcerequirements_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource<wbr>Requirements</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Preview.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The container resource requirements.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datacollection_csharp">
+<a href="#datacollection_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Collection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aciserviceresponseresponsedatacollection">Pulumi.<wbr>Azure<wbr>RM.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Preview.<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details of the data collection options specified.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deploymenttype_csharp">
+<a href="#deploymenttype_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The deployment type for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionproperties_csharp">
+<a href="#encryptionproperties_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aciserviceresponseresponseencryptionproperties">Pulumi.<wbr>Azure<wbr>RM.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Preview.<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Encryption<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption properties.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environmentimagerequest_csharp">
+<a href="#environmentimagerequest_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Image<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aciserviceresponseresponseenvironmentimagerequest">Pulumi.<wbr>Azure<wbr>RM.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Preview.<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Environment, models and assets used for inferencing.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kvtags_csharp">
+<a href="#kvtags_csharp" style="color: inherit; text-decoration: inherit;">Kv<wbr>Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The service tag dictionary. Tags are mutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Azure location/region.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="models_csharp">
+<a href="#models_csharp" style="color: inherit; text-decoration: inherit;">Models</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Preview.<wbr>Inputs.<wbr>Model<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of models.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The service property dictionary. Properties are immutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicfqdn_csharp">
+<a href="#publicfqdn_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The public Fqdn for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicip_csharp">
+<a href="#publicip_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The public IP address for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslcertificate_csharp">
+<a href="#sslcertificate_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The public SSL certificate in PEM format to use if SSL is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslenabled_csharp">
+<a href="#sslenabled_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not SSL is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslkey_csharp">
+<a href="#sslkey_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The public SSL key in PEM format for the certificate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vnetconfiguration_csharp">
+<a href="#vnetconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aciserviceresponseresponsevnetconfiguration">Pulumi.<wbr>Azure<wbr>RM.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Preview.<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Vnet<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual network configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="error_go">
+<a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="modelconfigmap_go">
+<a href="#modelconfigmap_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Config<wbr>Map</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Details on the models and configurations.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scoringuri_go">
+<a href="#scoringuri_go" style="color: inherit; text-decoration: inherit;">Scoring<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Uri for sending scoring requests.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The current state of the service.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="swaggeruri_go">
+<a href="#swaggeruri_go" style="color: inherit; text-decoration: inherit;">Swagger<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Uri for sending swagger requests.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="appinsightsenabled_go">
+<a href="#appinsightsenabled_go" style="color: inherit; text-decoration: inherit;">App<wbr>Insights<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not Application Insights is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authenabled_go">
+<a href="#authenabled_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not authentication is enabled on the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cname_go">
+<a href="#cname_go" style="color: inherit; text-decoration: inherit;">Cname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CName for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerresourcerequirements_go">
+<a href="#containerresourcerequirements_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource<wbr>Requirements</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The container resource requirements.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datacollection_go">
+<a href="#datacollection_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Collection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aciserviceresponseresponsedatacollection">ACIService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection</a></span>
+    </dt>
+    <dd>{{% md %}}Details of the data collection options specified.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deploymenttype_go">
+<a href="#deploymenttype_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The deployment type for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionproperties_go">
+<a href="#encryptionproperties_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aciserviceresponseresponseencryptionproperties">ACIService<wbr>Response<wbr>Response<wbr>Encryption<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption properties.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environmentimagerequest_go">
+<a href="#environmentimagerequest_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Image<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aciserviceresponseresponseenvironmentimagerequest">ACIService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The Environment, models and assets used for inferencing.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kvtags_go">
+<a href="#kvtags_go" style="color: inherit; text-decoration: inherit;">Kv<wbr>Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The service tag dictionary. Tags are mutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Azure location/region.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="models_go">
+<a href="#models_go" style="color: inherit; text-decoration: inherit;">Models</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelresponse">[]Model<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of models.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The service property dictionary. Properties are immutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicfqdn_go">
+<a href="#publicfqdn_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The public Fqdn for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicip_go">
+<a href="#publicip_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The public IP address for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslcertificate_go">
+<a href="#sslcertificate_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The public SSL certificate in PEM format to use if SSL is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslenabled_go">
+<a href="#sslenabled_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not SSL is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslkey_go">
+<a href="#sslkey_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The public SSL key in PEM format for the certificate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vnetconfiguration_go">
+<a href="#vnetconfiguration_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aciserviceresponseresponsevnetconfiguration">ACIService<wbr>Response<wbr>Response<wbr>Vnet<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual network configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="error_nodejs">
+<a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="modelconfigmap_nodejs">
+<a href="#modelconfigmap_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Config<wbr>Map</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+    </dt>
+    <dd>{{% md %}}Details on the models and configurations.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scoringuri_nodejs">
+<a href="#scoringuri_nodejs" style="color: inherit; text-decoration: inherit;">scoring<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Uri for sending scoring requests.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The current state of the service.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="swaggeruri_nodejs">
+<a href="#swaggeruri_nodejs" style="color: inherit; text-decoration: inherit;">swagger<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Uri for sending swagger requests.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="appinsightsenabled_nodejs">
+<a href="#appinsightsenabled_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Insights<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not Application Insights is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authenabled_nodejs">
+<a href="#authenabled_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not authentication is enabled on the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cname_nodejs">
+<a href="#cname_nodejs" style="color: inherit; text-decoration: inherit;">cname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CName for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerresourcerequirements_nodejs">
+<a href="#containerresourcerequirements_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Resource<wbr>Requirements</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The container resource requirements.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datacollection_nodejs">
+<a href="#datacollection_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Collection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aciserviceresponseresponsedatacollection">ACIService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection</a></span>
+    </dt>
+    <dd>{{% md %}}Details of the data collection options specified.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deploymenttype_nodejs">
+<a href="#deploymenttype_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The deployment type for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionproperties_nodejs">
+<a href="#encryptionproperties_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aciserviceresponseresponseencryptionproperties">ACIService<wbr>Response<wbr>Response<wbr>Encryption<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption properties.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environmentimagerequest_nodejs">
+<a href="#environmentimagerequest_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Image<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aciserviceresponseresponseenvironmentimagerequest">ACIService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The Environment, models and assets used for inferencing.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kvtags_nodejs">
+<a href="#kvtags_nodejs" style="color: inherit; text-decoration: inherit;">kv<wbr>Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The service tag dictionary. Tags are mutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Azure location/region.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="models_nodejs">
+<a href="#models_nodejs" style="color: inherit; text-decoration: inherit;">models</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelresponse">Model<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of models.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The service property dictionary. Properties are immutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicfqdn_nodejs">
+<a href="#publicfqdn_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The public Fqdn for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicip_nodejs">
+<a href="#publicip_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The public IP address for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslcertificate_nodejs">
+<a href="#sslcertificate_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The public SSL certificate in PEM format to use if SSL is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslenabled_nodejs">
+<a href="#sslenabled_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not SSL is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslkey_nodejs">
+<a href="#sslkey_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The public SSL key in PEM format for the certificate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vnetconfiguration_nodejs">
+<a href="#vnetconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aciserviceresponseresponsevnetconfiguration">ACIService<wbr>Response<wbr>Response<wbr>Vnet<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual network configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="error_python">
+<a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Dict[Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error]</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="modelconfigmap_python">
+<a href="#modelconfigmap_python" style="color: inherit; text-decoration: inherit;">model<wbr>Config<wbr>Map</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any>]</span>
+    </dt>
+    <dd>{{% md %}}Details on the models and configurations.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scoringuri_python">
+<a href="#scoringuri_python" style="color: inherit; text-decoration: inherit;">scoring<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Uri for sending scoring requests.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The current state of the service.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="swaggeruri_python">
+<a href="#swaggeruri_python" style="color: inherit; text-decoration: inherit;">swagger<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Uri for sending swagger requests.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="appinsightsenabled_python">
+<a href="#appinsightsenabled_python" style="color: inherit; text-decoration: inherit;">app<wbr>Insights<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not Application Insights is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authenabled_python">
+<a href="#authenabled_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not authentication is enabled on the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cname_python">
+<a href="#cname_python" style="color: inherit; text-decoration: inherit;">cname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CName for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerresourcerequirements_python">
+<a href="#containerresourcerequirements_python" style="color: inherit; text-decoration: inherit;">container<wbr>Resource<wbr>Requirements</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Dict[Container<wbr>Resource<wbr>Requirements<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The container resource requirements.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datacollection_python">
+<a href="#datacollection_python" style="color: inherit; text-decoration: inherit;">data<wbr>Collection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aciserviceresponseresponsedatacollection">Dict[ACIService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection]</a></span>
+    </dt>
+    <dd>{{% md %}}Details of the data collection options specified.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deploymenttype_python">
+<a href="#deploymenttype_python" style="color: inherit; text-decoration: inherit;">deployment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The deployment type for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The service description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_properties_python">
+<a href="#encryption_properties_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aciserviceresponseresponseencryptionproperties">Dict[ACIService<wbr>Response<wbr>Response<wbr>Encryption<wbr>Properties]</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption properties.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environment_image_request_python">
+<a href="#environment_image_request_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>image_<wbr>request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aciserviceresponseresponseenvironmentimagerequest">Dict[ACIService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request]</a></span>
+    </dt>
+    <dd>{{% md %}}The Environment, models and assets used for inferencing.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kv_tags_python">
+<a href="#kv_tags_python" style="color: inherit; text-decoration: inherit;">kv_<wbr>tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The service tag dictionary. Tags are mutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Azure location/region.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="models_python">
+<a href="#models_python" style="color: inherit; text-decoration: inherit;">models</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelresponse">List[Model<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of models.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The service property dictionary. Properties are immutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicfqdn_python">
+<a href="#publicfqdn_python" style="color: inherit; text-decoration: inherit;">public<wbr>Fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The public Fqdn for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicip_python">
+<a href="#publicip_python" style="color: inherit; text-decoration: inherit;">public<wbr>IP</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The public IP address for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslcertificate_python">
+<a href="#sslcertificate_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The public SSL certificate in PEM format to use if SSL is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslenabled_python">
+<a href="#sslenabled_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether or not SSL is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslkey_python">
+<a href="#sslkey_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The public SSL key in PEM format for the certificate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vnetconfiguration_python">
+<a href="#vnetconfiguration_python" style="color: inherit; text-decoration: inherit;">vnet<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aciserviceresponseresponsevnetconfiguration">Dict[ACIService<wbr>Response<wbr>Response<wbr>Vnet<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual network configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="aciserviceresponseresponsedatacollection">ACIService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ACIServiceResponseResponseDataCollection">output</a> API doc for this type.
@@ -1615,6 +2621,412 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="aksvariantresponseresponse">AKSVariant<wbr>Response<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AKSVariantResponseResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/machinelearningservices/preview?tab=doc#AKSVariantResponseResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.MachineLearningServices.Preview.Outputs.AKSVariantResponseResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="error_csharp">
+<a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Pulumi.<wbr>Azure<wbr>RM.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Preview.<wbr>Inputs.<wbr>Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The current state of the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deploymenttype_csharp">
+<a href="#deploymenttype_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The deployment type for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdefault_csharp">
+<a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is this the default variant.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kvtags_csharp">
+<a href="#kvtags_csharp" style="color: inherit; text-decoration: inherit;">Kv<wbr>Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The service tag dictionary. Tags are mutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The service property dictionary. Properties are immutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trafficpercentile_csharp">
+<a href="#trafficpercentile_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Percentile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of traffic variant receives.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the variant.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="error_go">
+<a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The current state of the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deploymenttype_go">
+<a href="#deploymenttype_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The deployment type for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdefault_go">
+<a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is this the default variant.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kvtags_go">
+<a href="#kvtags_go" style="color: inherit; text-decoration: inherit;">Kv<wbr>Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The service tag dictionary. Tags are mutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The service property dictionary. Properties are immutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trafficpercentile_go">
+<a href="#trafficpercentile_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Percentile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of traffic variant receives.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the variant.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="error_nodejs">
+<a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The current state of the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deploymenttype_nodejs">
+<a href="#deploymenttype_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The deployment type for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdefault_nodejs">
+<a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Is this the default variant.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kvtags_nodejs">
+<a href="#kvtags_nodejs" style="color: inherit; text-decoration: inherit;">kv<wbr>Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The service tag dictionary. Tags are mutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The service property dictionary. Properties are immutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trafficpercentile_nodejs">
+<a href="#trafficpercentile_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Percentile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of traffic variant receives.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the variant.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="error_python">
+<a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Dict[Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error]</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The current state of the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deploymenttype_python">
+<a href="#deploymenttype_python" style="color: inherit; text-decoration: inherit;">deployment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The deployment type for the service.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The service description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_default_python">
+<a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is this the default variant.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kv_tags_python">
+<a href="#kv_tags_python" style="color: inherit; text-decoration: inherit;">kv_<wbr>tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The service tag dictionary. Tags are mutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The service property dictionary. Properties are immutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trafficpercentile_python">
+<a href="#trafficpercentile_python" style="color: inherit; text-decoration: inherit;">traffic<wbr>Percentile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of traffic variant receives.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the variant.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="containerresourcerequirements">Container<wbr>Resource<wbr>Requirements</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#ContainerResourceRequirements">input</a>   API doc for this type.
@@ -1625,6 +3037,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.MachineLearningServices.Preview.Inputs.ContainerResourceRequirementsArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpu_csharp">
+<a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The number of CPU cores on the container.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fpga_csharp">
+<a href="#fpga_csharp" style="color: inherit; text-decoration: inherit;">Fpga</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gpu_csharp">
+<a href="#gpu_csharp" style="color: inherit; text-decoration: inherit;">Gpu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of GPU cores in the container.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memoryingb_csharp">
+<a href="#memoryingb_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>In<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of memory on the container in GB.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpu_go">
+<a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The number of CPU cores on the container.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fpga_go">
+<a href="#fpga_go" style="color: inherit; text-decoration: inherit;">Fpga</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gpu_go">
+<a href="#gpu_go" style="color: inherit; text-decoration: inherit;">Gpu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of GPU cores in the container.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memoryingb_go">
+<a href="#memoryingb_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>In<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of memory on the container in GB.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpu_nodejs">
+<a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of CPU cores on the container.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fpga_nodejs">
+<a href="#fpga_nodejs" style="color: inherit; text-decoration: inherit;">fpga</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gpu_nodejs">
+<a href="#gpu_nodejs" style="color: inherit; text-decoration: inherit;">gpu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of GPU cores in the container.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memoryingb_nodejs">
+<a href="#memoryingb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>In<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of memory on the container in GB.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpu_python">
+<a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of CPU cores on the container.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fpga_python">
+<a href="#fpga_python" style="color: inherit; text-decoration: inherit;">fpga</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gpu_python">
+<a href="#gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of GPU cores in the container.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memory_in_gb_python">
+<a href="#memory_in_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>in_<wbr>gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The amount of memory on the container in GB.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ContainerResourceRequirementsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/machinelearningservices/preview?tab=doc#ContainerResourceRequirementsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.MachineLearningServices.Preview.Outputs.ContainerResourceRequirementsResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2243,6 +3861,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.MachineLearningServices.Preview.Inputs.DatasetReferenceArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the dataset reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the dataset reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the dataset reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the dataset reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the dataset reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the dataset reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the dataset reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the dataset reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DatasetReferenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/machinelearningservices/preview?tab=doc#DatasetReferenceResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.MachineLearningServices.Preview.Outputs.DatasetReferenceResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3343,6 +5087,338 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="errordetailresponse">Error<wbr>Detail<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ErrorDetailResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/machinelearningservices/preview?tab=doc#ErrorDetailResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.MachineLearningServices.Preview.Outputs.ErrorDetailResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="identityresponse">Identity<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#IdentityResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/machinelearningservices/preview?tab=doc#IdentityResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.MachineLearningServices.Preview.Outputs.IdentityResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>RM.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Preview.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]User<wbr>Assigned<wbr>Identity<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="imageasset">Image<wbr>Asset</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#ImageAsset">input</a>   API doc for this type.
@@ -3353,6 +5429,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.MachineLearningServices.Preview.Inputs.ImageAssetArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Asset Id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mimetype_csharp">
+<a href="#mimetype_csharp" style="color: inherit; text-decoration: inherit;">Mime<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The mime type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unpack_csharp">
+<a href="#unpack_csharp" style="color: inherit; text-decoration: inherit;">Unpack</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the Asset is unpacked.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Url of the Asset.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Asset Id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mimetype_go">
+<a href="#mimetype_go" style="color: inherit; text-decoration: inherit;">Mime<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The mime type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unpack_go">
+<a href="#unpack_go" style="color: inherit; text-decoration: inherit;">Unpack</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the Asset is unpacked.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Url of the Asset.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Asset Id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mimetype_nodejs">
+<a href="#mimetype_nodejs" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The mime type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unpack_nodejs">
+<a href="#unpack_nodejs" style="color: inherit; text-decoration: inherit;">unpack</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the Asset is unpacked.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Url of the Asset.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Asset Id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mimetype_python">
+<a href="#mimetype_python" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The mime type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unpack_python">
+<a href="#unpack_python" style="color: inherit; text-decoration: inherit;">unpack</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the Asset is unpacked.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Url of the Asset.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="imageassetresponse">Image<wbr>Asset<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ImageAssetResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/machinelearningservices/preview?tab=doc#ImageAssetResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.MachineLearningServices.Preview.Outputs.ImageAssetResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6503,6 +8785,892 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 
 
 
+<h4 id="modelresponse">Model<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ModelResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/machinelearningservices/preview?tab=doc#ModelResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.MachineLearningServices.Preview.Outputs.ModelResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mimetype_csharp">
+<a href="#mimetype_csharp" style="color: inherit; text-decoration: inherit;">Mime<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The MIME type of Model content. For more details about MIME type, please open https://www.iana.org/assignments/media-types/media-types.xhtml{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL of the Model. Usually a SAS URL.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdtime_csharp">
+<a href="#createdtime_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model creation time (UTC).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasets_csharp">
+<a href="#datasets_csharp" style="color: inherit; text-decoration: inherit;">Datasets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Preview.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of datasets associated with the model.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="derivedmodelids_csharp">
+<a href="#derivedmodelids_csharp" style="color: inherit; text-decoration: inherit;">Derived<wbr>Model<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Models derived from this model{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model description text.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experimentname_csharp">
+<a href="#experimentname_csharp" style="color: inherit; text-decoration: inherit;">Experiment<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the experiment where this model was created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="framework_csharp">
+<a href="#framework_csharp" style="color: inherit; text-decoration: inherit;">Framework</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model framework.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frameworkversion_csharp">
+<a href="#frameworkversion_csharp" style="color: inherit; text-decoration: inherit;">Framework<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model framework version.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model Id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kvtags_csharp">
+<a href="#kvtags_csharp" style="color: inherit; text-decoration: inherit;">Kv<wbr>Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The Model tag dictionary. Items are mutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="modifiedtime_csharp">
+<a href="#modifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model last modified time (UTC).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parentmodelid_csharp">
+<a href="#parentmodelid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Model<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Parent Model Id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The Model property dictionary. Properties are immutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcerequirements_csharp">
+<a href="#resourcerequirements_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Requirements</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Preview.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Resource requirements for the model{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runid_csharp">
+<a href="#runid_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The RunId that created this model.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sampleinputdata_csharp">
+<a href="#sampleinputdata_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Input<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sampleoutputdata_csharp">
+<a href="#sampleoutputdata_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Output<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unpack_csharp">
+<a href="#unpack_csharp" style="color: inherit; text-decoration: inherit;">Unpack</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether we need to unpack the Model during docker Image creation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The Model version assigned by Model Management Service.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mimetype_go">
+<a href="#mimetype_go" style="color: inherit; text-decoration: inherit;">Mime<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The MIME type of Model content. For more details about MIME type, please open https://www.iana.org/assignments/media-types/media-types.xhtml{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL of the Model. Usually a SAS URL.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdtime_go">
+<a href="#createdtime_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model creation time (UTC).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasets_go">
+<a href="#datasets_go" style="color: inherit; text-decoration: inherit;">Datasets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">[]Dataset<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of datasets associated with the model.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="derivedmodelids_go">
+<a href="#derivedmodelids_go" style="color: inherit; text-decoration: inherit;">Derived<wbr>Model<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Models derived from this model{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model description text.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experimentname_go">
+<a href="#experimentname_go" style="color: inherit; text-decoration: inherit;">Experiment<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the experiment where this model was created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="framework_go">
+<a href="#framework_go" style="color: inherit; text-decoration: inherit;">Framework</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model framework.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frameworkversion_go">
+<a href="#frameworkversion_go" style="color: inherit; text-decoration: inherit;">Framework<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model framework version.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model Id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kvtags_go">
+<a href="#kvtags_go" style="color: inherit; text-decoration: inherit;">Kv<wbr>Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The Model tag dictionary. Items are mutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="modifiedtime_go">
+<a href="#modifiedtime_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model last modified time (UTC).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parentmodelid_go">
+<a href="#parentmodelid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Model<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Parent Model Id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The Model property dictionary. Properties are immutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcerequirements_go">
+<a href="#resourcerequirements_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Requirements</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Resource requirements for the model{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runid_go">
+<a href="#runid_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The RunId that created this model.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sampleinputdata_go">
+<a href="#sampleinputdata_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Input<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sampleoutputdata_go">
+<a href="#sampleoutputdata_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Output<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unpack_go">
+<a href="#unpack_go" style="color: inherit; text-decoration: inherit;">Unpack</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether we need to unpack the Model during docker Image creation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The Model version assigned by Model Management Service.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mimetype_nodejs">
+<a href="#mimetype_nodejs" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The MIME type of Model content. For more details about MIME type, please open https://www.iana.org/assignments/media-types/media-types.xhtml{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL of the Model. Usually a SAS URL.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdtime_nodejs">
+<a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model creation time (UTC).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasets_nodejs">
+<a href="#datasets_nodejs" style="color: inherit; text-decoration: inherit;">datasets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of datasets associated with the model.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="derivedmodelids_nodejs">
+<a href="#derivedmodelids_nodejs" style="color: inherit; text-decoration: inherit;">derived<wbr>Model<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Models derived from this model{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model description text.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experimentname_nodejs">
+<a href="#experimentname_nodejs" style="color: inherit; text-decoration: inherit;">experiment<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the experiment where this model was created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="framework_nodejs">
+<a href="#framework_nodejs" style="color: inherit; text-decoration: inherit;">framework</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model framework.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frameworkversion_nodejs">
+<a href="#frameworkversion_nodejs" style="color: inherit; text-decoration: inherit;">framework<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model framework version.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model Id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kvtags_nodejs">
+<a href="#kvtags_nodejs" style="color: inherit; text-decoration: inherit;">kv<wbr>Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The Model tag dictionary. Items are mutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="modifiedtime_nodejs">
+<a href="#modifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Model last modified time (UTC).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parentmodelid_nodejs">
+<a href="#parentmodelid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Model<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Parent Model Id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The Model property dictionary. Properties are immutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcerequirements_nodejs">
+<a href="#resourcerequirements_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Requirements</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Resource requirements for the model{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runid_nodejs">
+<a href="#runid_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The RunId that created this model.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sampleinputdata_nodejs">
+<a href="#sampleinputdata_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Input<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sampleoutputdata_nodejs">
+<a href="#sampleoutputdata_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Output<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unpack_nodejs">
+<a href="#unpack_nodejs" style="color: inherit; text-decoration: inherit;">unpack</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether we need to unpack the Model during docker Image creation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The Model version assigned by Model Management Service.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mimetype_python">
+<a href="#mimetype_python" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The MIME type of Model content. For more details about MIME type, please open https://www.iana.org/assignments/media-types/media-types.xhtml{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Model name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The URL of the Model. Usually a SAS URL.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_time_python">
+<a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Model creation time (UTC).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasets_python">
+<a href="#datasets_python" style="color: inherit; text-decoration: inherit;">datasets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">List[Dataset<wbr>Reference<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of datasets associated with the model.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="derivedmodelids_python">
+<a href="#derivedmodelids_python" style="color: inherit; text-decoration: inherit;">derived<wbr>Model<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Models derived from this model{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Model description text.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experiment_name_python">
+<a href="#experiment_name_python" style="color: inherit; text-decoration: inherit;">experiment_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the experiment where this model was created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="framework_python">
+<a href="#framework_python" style="color: inherit; text-decoration: inherit;">framework</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Model framework.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frameworkversion_python">
+<a href="#frameworkversion_python" style="color: inherit; text-decoration: inherit;">framework<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Model framework version.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Model Id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kv_tags_python">
+<a href="#kv_tags_python" style="color: inherit; text-decoration: inherit;">kv_<wbr>tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The Model tag dictionary. Items are mutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="modified_time_python">
+<a href="#modified_time_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Model last modified time (UTC).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parentmodelid_python">
+<a href="#parentmodelid_python" style="color: inherit; text-decoration: inherit;">parent<wbr>Model<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Parent Model Id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The Model property dictionary. Properties are immutable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcerequirements_python">
+<a href="#resourcerequirements_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Requirements</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Dict[Container<wbr>Resource<wbr>Requirements<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Resource requirements for the model{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="run_id_python">
+<a href="#run_id_python" style="color: inherit; text-decoration: inherit;">run_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The RunId that created this model.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sampleinputdata_python">
+<a href="#sampleinputdata_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Input<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sampleoutputdata_python">
+<a href="#sampleoutputdata_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Output<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unpack_python">
+<a href="#unpack_python" style="color: inherit; text-decoration: inherit;">unpack</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether we need to unpack the Model during docker Image creation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The Model version assigned by Model Management Service.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="rcranpackage">RCran<wbr>Package</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#RCranPackage">input</a>   API doc for this type.
@@ -6513,6 +9681,132 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.MachineLearningServices.Preview.Inputs.RCranPackageArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The package name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repository_csharp">
+<a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The repository name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The package name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repository_go">
+<a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The repository name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The package name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repository_nodejs">
+<a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The repository name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The package name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repository_python">
+<a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The repository name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rcranpackageresponse">RCran<wbr>Package<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RCranPackageResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/machinelearningservices/preview?tab=doc#RCranPackageResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.MachineLearningServices.Preview.Outputs.RCranPackageResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6755,6 +10049,92 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 
 
 
+<h4 id="rgithubpackageresponseresponse">RGit<wbr>Hub<wbr>Package<wbr>Response<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RGitHubPackageResponseResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/machinelearningservices/preview?tab=doc#RGitHubPackageResponseResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.MachineLearningServices.Preview.Outputs.RGitHubPackageResponseResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repository_csharp">
+<a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Repository address in the format username/repo[/subdir][@ref|#pull].{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repository_go">
+<a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Repository address in the format username/repo[/subdir][@ref|#pull].{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repository_nodejs">
+<a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Repository address in the format username/repo[/subdir][@ref|#pull].{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repository_python">
+<a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Repository address in the format username/repo[/subdir][@ref|#pull].{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ServiceResponseBaseResponseError">output</a> API doc for this type.
@@ -6921,6 +10301,132 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 
 
 
+<h4 id="skuresponse">Sku<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SkuResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/machinelearningservices/preview?tab=doc#SkuResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.MachineLearningServices.Preview.Outputs.SkuResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_csharp">
+<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_go">
+<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_nodejs">
+<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_python">
+<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="sparkmavenpackage">Spark<wbr>Maven<wbr>Package</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#SparkMavenPackage">input</a>   API doc for this type.
@@ -7079,6 +10585,338 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="sparkmavenpackageresponse">Spark<wbr>Maven<wbr>Package<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SparkMavenPackageResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/machinelearningservices/preview?tab=doc#SparkMavenPackageResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.MachineLearningServices.Preview.Outputs.SparkMavenPackageResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="artifact_csharp">
+<a href="#artifact_csharp" style="color: inherit; text-decoration: inherit;">Artifact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="group_csharp">
+<a href="#group_csharp" style="color: inherit; text-decoration: inherit;">Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="artifact_go">
+<a href="#artifact_go" style="color: inherit; text-decoration: inherit;">Artifact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="group_go">
+<a href="#group_go" style="color: inherit; text-decoration: inherit;">Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="artifact_nodejs">
+<a href="#artifact_nodejs" style="color: inherit; text-decoration: inherit;">artifact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="group_nodejs">
+<a href="#group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="artifact_python">
+<a href="#artifact_python" style="color: inherit; text-decoration: inherit;">artifact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="group_python">
+<a href="#group_python" style="color: inherit; text-decoration: inherit;">group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#UserAssignedIdentityResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/machinelearningservices/preview?tab=doc#UserAssignedIdentityResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.MachineLearningServices.Preview.Outputs.UserAssignedIdentityResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

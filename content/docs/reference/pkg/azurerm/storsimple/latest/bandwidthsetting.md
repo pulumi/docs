@@ -837,6 +837,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="bandwidthscheduleresponse">Bandwidth<wbr>Schedule<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#BandwidthScheduleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storsimple/latest?tab=doc#BandwidthScheduleResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.StorSimple.Latest.Outputs.BandwidthScheduleResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="days_csharp">
+<a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rateinmbps_csharp">
+<a href="#rateinmbps_csharp" style="color: inherit; text-decoration: inherit;">Rate<wbr>In<wbr>Mbps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The rate in Mbps.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Stor<wbr>Simple.<wbr>Latest.<wbr>Inputs.<wbr>Time<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stop_csharp">
+<a href="#stop_csharp" style="color: inherit; text-decoration: inherit;">Stop</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Stor<wbr>Simple.<wbr>Latest.<wbr>Inputs.<wbr>Time<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="days_go">
+<a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rateinmbps_go">
+<a href="#rateinmbps_go" style="color: inherit; text-decoration: inherit;">Rate<wbr>In<wbr>Mbps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The rate in Mbps.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeresponse">Time<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stop_go">
+<a href="#stop_go" style="color: inherit; text-decoration: inherit;">Stop</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeresponse">Time<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="days_nodejs">
+<a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rateinmbps_nodejs">
+<a href="#rateinmbps_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>In<wbr>Mbps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The rate in Mbps.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeresponse">Time<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stop_nodejs">
+<a href="#stop_nodejs" style="color: inherit; text-decoration: inherit;">stop</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeresponse">Time<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="days_python">
+<a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The days of the week when this schedule is applicable.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rate_in_mbps_python">
+<a href="#rate_in_mbps_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>in_<wbr>mbps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The rate in Mbps.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeresponse">Dict[Time<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stop_python">
+<a href="#stop_python" style="color: inherit; text-decoration: inherit;">stop</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#timeresponse">Dict[Time<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="time">Time</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#Time">input</a>   API doc for this type.
@@ -847,6 +1053,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.StorSimple.Latest.Inputs.TimeArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hours_csharp">
+<a href="#hours_csharp" style="color: inherit; text-decoration: inherit;">Hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The hour.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="minutes_csharp">
+<a href="#minutes_csharp" style="color: inherit; text-decoration: inherit;">Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The minute.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="seconds_csharp">
+<a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The second.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hours_go">
+<a href="#hours_go" style="color: inherit; text-decoration: inherit;">Hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The hour.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="minutes_go">
+<a href="#minutes_go" style="color: inherit; text-decoration: inherit;">Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The minute.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="seconds_go">
+<a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The second.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hours_nodejs">
+<a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The hour.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="minutes_nodejs">
+<a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The minute.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="seconds_nodejs">
+<a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The second.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hours_python">
+<a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The hour.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="minutes_python">
+<a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The minute.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="seconds_python">
+<a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The second.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="timeresponse">Time<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#TimeResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storsimple/latest?tab=doc#TimeResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.StorSimple.Latest.Outputs.TimeResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -1961,6 +1961,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="capabilityresponse">Capability<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#CapabilityResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/web/latest?tab=doc#CapabilityResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Web.Latest.Outputs.CapabilityResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reason_csharp">
+<a href="#reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reason_go">
+<a href="#reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reason_nodejs">
+<a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reason_python">
+<a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="namevaluepair">Name<wbr>Value<wbr>Pair</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#NameValuePair">input</a>   API doc for this type.
@@ -1971,6 +2137,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Web.Latest.Inputs.NameValuePairArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Pair name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Pair value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Pair name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Pair value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Pair name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Pair value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Pair name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Pair value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="namevaluepairresponse">Name<wbr>Value<wbr>Pair<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#NameValuePairResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/web/latest?tab=doc#NameValuePairResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Web.Latest.Outputs.NameValuePairResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2293,6 +2585,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="networkaccesscontrolentryresponse">Network<wbr>Access<wbr>Control<wbr>Entry<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#NetworkAccessControlEntryResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/web/latest?tab=doc#NetworkAccessControlEntryResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Web.Latest.Outputs.NetworkAccessControlEntryResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="order_csharp">
+<a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remotesubnet_csharp">
+<a href="#remotesubnet_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="order_go">
+<a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remotesubnet_go">
+<a href="#remotesubnet_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="order_nodejs">
+<a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remotesubnet_nodejs">
+<a href="#remotesubnet_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="order_python">
+<a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remotesubnet_python">
+<a href="#remotesubnet_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="skucapacity">Sku<wbr>Capacity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#SkuCapacity">input</a>   API doc for this type.
@@ -2303,6 +2801,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Web.Latest.Inputs.SkuCapacityArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_csharp">
+<a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximum_csharp">
+<a href="#maximum_csharp" style="color: inherit; text-decoration: inherit;">Maximum</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimum_csharp">
+<a href="#minimum_csharp" style="color: inherit; text-decoration: inherit;">Minimum</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaletype_csharp">
+<a href="#scaletype_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_go">
+<a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximum_go">
+<a href="#maximum_go" style="color: inherit; text-decoration: inherit;">Maximum</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimum_go">
+<a href="#minimum_go" style="color: inherit; text-decoration: inherit;">Minimum</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaletype_go">
+<a href="#scaletype_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_nodejs">
+<a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximum_nodejs">
+<a href="#maximum_nodejs" style="color: inherit; text-decoration: inherit;">maximum</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimum_nodejs">
+<a href="#minimum_nodejs" style="color: inherit; text-decoration: inherit;">minimum</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaletype_nodejs">
+<a href="#scaletype_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_python">
+<a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximum_python">
+<a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimum_python">
+<a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scale_type_python">
+<a href="#scale_type_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="skucapacityresponse">Sku<wbr>Capacity<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SkuCapacityResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/web/latest?tab=doc#SkuCapacityResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Web.Latest.Outputs.SkuCapacityResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2865,6 +3569,372 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="skudescriptionresponse">Sku<wbr>Description<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SkuDescriptionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/web/latest?tab=doc#SkuDescriptionResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Web.Latest.Outputs.SkuDescriptionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capabilities_csharp">
+<a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#capabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Web.<wbr>Latest.<wbr>Inputs.<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_csharp">
+<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="family_csharp">
+<a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="locations_csharp">
+<a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skucapacity_csharp">
+<a href="#skucapacity_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skucapacityresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Web.<wbr>Latest.<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_csharp">
+<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capabilities_go">
+<a href="#capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#capabilityresponse">[]Capability<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_go">
+<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="family_go">
+<a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="locations_go">
+<a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skucapacity_go">
+<a href="#skucapacity_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_go">
+<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capabilities_nodejs">
+<a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#capabilityresponse">Capability<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_nodejs">
+<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="family_nodejs">
+<a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="locations_nodejs">
+<a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skucapacity_nodejs">
+<a href="#skucapacity_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_nodejs">
+<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capabilities_python">
+<a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#capabilityresponse">List[Capability<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_python">
+<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="family_python">
+<a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="locations_python">
+<a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sku_capacity_python">
+<a href="#sku_capacity_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skucapacityresponse">Dict[Sku<wbr>Capacity<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_python">
+<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="stampcapacity">Stamp<wbr>Capacity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#StampCapacity">input</a>   API doc for this type.
@@ -2875,6 +3945,468 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Web.Latest.Inputs.StampCapacityArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availablecapacity_csharp">
+<a href="#availablecapacity_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Available capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="computemode_csharp">
+<a href="#computemode_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Shared/Dedicated workers{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludefromcapacityallocation_csharp">
+<a href="#excludefromcapacityallocation_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>From<wbr>Capacity<wbr>Allocation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true it includes basic sites
+            Basic sites are not used for capacity allocation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isapplicableforallcomputemodes_csharp">
+<a href="#isapplicableforallcomputemodes_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Applicable<wbr>For<wbr>All<wbr>Compute<wbr>Modes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is capacity applicable for all sites?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the stamp{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sitemode_csharp">
+<a href="#sitemode_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Shared or Dedicated{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="totalcapacity_csharp">
+<a href="#totalcapacity_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Total capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the unit{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workersize_csharp">
+<a href="#workersize_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Size of the machines{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workersizeid_csharp">
+<a href="#workersizeid_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Size Id of machines: 
+            0 - Small
+            1 - Medium
+            2 - Large{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availablecapacity_go">
+<a href="#availablecapacity_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Available capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="computemode_go">
+<a href="#computemode_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Shared/Dedicated workers{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludefromcapacityallocation_go">
+<a href="#excludefromcapacityallocation_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>From<wbr>Capacity<wbr>Allocation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true it includes basic sites
+            Basic sites are not used for capacity allocation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isapplicableforallcomputemodes_go">
+<a href="#isapplicableforallcomputemodes_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Applicable<wbr>For<wbr>All<wbr>Compute<wbr>Modes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is capacity applicable for all sites?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the stamp{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sitemode_go">
+<a href="#sitemode_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Shared or Dedicated{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="totalcapacity_go">
+<a href="#totalcapacity_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Total capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the unit{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workersize_go">
+<a href="#workersize_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Size of the machines{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workersizeid_go">
+<a href="#workersizeid_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Size Id of machines: 
+            0 - Small
+            1 - Medium
+            2 - Large{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availablecapacity_nodejs">
+<a href="#availablecapacity_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Available capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="computemode_nodejs">
+<a href="#computemode_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Shared/Dedicated workers{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludefromcapacityallocation_nodejs">
+<a href="#excludefromcapacityallocation_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>From<wbr>Capacity<wbr>Allocation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If true it includes basic sites
+            Basic sites are not used for capacity allocation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isapplicableforallcomputemodes_nodejs">
+<a href="#isapplicableforallcomputemodes_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Applicable<wbr>For<wbr>All<wbr>Compute<wbr>Modes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Is capacity applicable for all sites?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the stamp{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sitemode_nodejs">
+<a href="#sitemode_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Shared or Dedicated{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="totalcapacity_nodejs">
+<a href="#totalcapacity_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Total capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the unit{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workersize_nodejs">
+<a href="#workersize_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Size of the machines{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workersizeid_nodejs">
+<a href="#workersizeid_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Size<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Size Id of machines: 
+            0 - Small
+            1 - Medium
+            2 - Large{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="available_capacity_python">
+<a href="#available_capacity_python" style="color: inherit; text-decoration: inherit;">available_<wbr>capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Available capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="computemode_python">
+<a href="#computemode_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Shared/Dedicated workers{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludefromcapacityallocation_python">
+<a href="#excludefromcapacityallocation_python" style="color: inherit; text-decoration: inherit;">exclude<wbr>From<wbr>Capacity<wbr>Allocation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true it includes basic sites
+            Basic sites are not used for capacity allocation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isapplicableforallcomputemodes_python">
+<a href="#isapplicableforallcomputemodes_python" style="color: inherit; text-decoration: inherit;">is<wbr>Applicable<wbr>For<wbr>All<wbr>Compute<wbr>Modes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is capacity applicable for all sites?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the stamp{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sitemode_python">
+<a href="#sitemode_python" style="color: inherit; text-decoration: inherit;">site<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Shared or Dedicated{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="totalcapacity_python">
+<a href="#totalcapacity_python" style="color: inherit; text-decoration: inherit;">total<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Total capacity (# of machines, bytes of storage etc...){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the unit{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workersize_python">
+<a href="#workersize_python" style="color: inherit; text-decoration: inherit;">worker<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Size of the machines{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workersizeid_python">
+<a href="#workersizeid_python" style="color: inherit; text-decoration: inherit;">worker<wbr>Size<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Size Id of machines: 
+            0 - Small
+            1 - Medium
+            2 - Large{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="stampcapacityresponse">Stamp<wbr>Capacity<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#StampCapacityResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/web/latest?tab=doc#StampCapacityResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Web.Latest.Outputs.StampCapacityResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3533,6 +5065,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="virtualipmappingresponse">Virtual<wbr>IPMapping<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#VirtualIPMappingResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/web/latest?tab=doc#VirtualIPMappingResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Web.Latest.Outputs.VirtualIPMappingResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inuse_csharp">
+<a href="#inuse_csharp" style="color: inherit; text-decoration: inherit;">In<wbr>Use</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is VIP mapping in use{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalhttpport_csharp">
+<a href="#internalhttpport_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Http<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Internal HTTP port{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalhttpsport_csharp">
+<a href="#internalhttpsport_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Https<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Internal HTTPS port{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualip_csharp">
+<a href="#virtualip_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>IP</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual IP address{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inuse_go">
+<a href="#inuse_go" style="color: inherit; text-decoration: inherit;">In<wbr>Use</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is VIP mapping in use{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalhttpport_go">
+<a href="#internalhttpport_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Http<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Internal HTTP port{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalhttpsport_go">
+<a href="#internalhttpsport_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Https<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Internal HTTPS port{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualip_go">
+<a href="#virtualip_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>IP</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual IP address{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inuse_nodejs">
+<a href="#inuse_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Use</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Is VIP mapping in use{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalhttpport_nodejs">
+<a href="#internalhttpport_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Http<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Internal HTTP port{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalhttpsport_nodejs">
+<a href="#internalhttpsport_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Https<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Internal HTTPS port{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualip_nodejs">
+<a href="#virtualip_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>IP</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual IP address{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inuse_python">
+<a href="#inuse_python" style="color: inherit; text-decoration: inherit;">in<wbr>Use</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is VIP mapping in use{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalhttpport_python">
+<a href="#internalhttpport_python" style="color: inherit; text-decoration: inherit;">internal<wbr>Http<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Internal HTTP port{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalhttpsport_python">
+<a href="#internalhttpsport_python" style="color: inherit; text-decoration: inherit;">internal<wbr>Https<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Internal HTTPS port{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtual_ip_python">
+<a href="#virtual_ip_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual IP address{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="virtualnetworkprofile">Virtual<wbr>Network<wbr>Profile</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#VirtualNetworkProfile">input</a>   API doc for this type.
@@ -3543,6 +5281,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Web.Latest.Inputs.VirtualNetworkProfileArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_csharp">
+<a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_go">
+<a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_nodejs">
+<a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource id of the virtual network{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the virtual network (read-only){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_python">
+<a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Subnet within the virtual network{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type of the virtual network (read-only){{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnetworkprofileresponse">Virtual<wbr>Network<wbr>Profile<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#VirtualNetworkProfileResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/web/latest?tab=doc#VirtualNetworkProfileResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Web.Latest.Outputs.VirtualNetworkProfileResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4205,6 +6149,532 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skudescription">Dict[Sku<wbr>Description]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workersize_python">
+<a href="#workersize_python" style="color: inherit; text-decoration: inherit;">worker<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workersizeid_python">
+<a href="#workersizeid_python" style="color: inherit; text-decoration: inherit;">worker<wbr>Size<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="worker_count_python">
+<a href="#worker_count_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="workerpoolresponse">Worker<wbr>Pool<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#WorkerPoolResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/web/latest?tab=doc#WorkerPoolResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Web.Latest.Outputs.WorkerPoolResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="computemode_csharp">
+<a href="#computemode_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancenames_csharp">
+<a href="#instancenames_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kind of resource{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skudescriptionresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Web.<wbr>Latest.<wbr>Inputs.<wbr>Sku<wbr>Description<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workercount_csharp">
+<a href="#workercount_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workersize_csharp">
+<a href="#workersize_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workersizeid_csharp">
+<a href="#workersizeid_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="computemode_go">
+<a href="#computemode_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancenames_go">
+<a href="#instancenames_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kind of resource{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skudescriptionresponse">Sku<wbr>Description<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workercount_go">
+<a href="#workercount_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workersize_go">
+<a href="#workersize_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workersizeid_go">
+<a href="#workersizeid_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Size<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="computemode_nodejs">
+<a href="#computemode_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancenames_nodejs">
+<a href="#instancenames_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Kind of resource{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skudescriptionresponse">Sku<wbr>Description<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workercount_nodejs">
+<a href="#workercount_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of instances in the worker pool{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workersize_nodejs">
+<a href="#workersize_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}VM size of the worker pool instances{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workersizeid_nodejs">
+<a href="#workersizeid_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Size<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Worker size id for referencing this worker pool{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="computemode_python">
+<a href="#computemode_python" style="color: inherit; text-decoration: inherit;">compute<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Shared or dedicated web app hosting{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancenames_python">
+<a href="#instancenames_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Names of all instances in the worker pool (read only){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Kind of resource{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skudescriptionresponse">Dict[Sku<wbr>Description<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Describes a sku for a scalable resource{{% /md %}}</dd>
 

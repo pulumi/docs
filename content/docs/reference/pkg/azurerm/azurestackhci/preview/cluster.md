@@ -988,6 +988,664 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+## Supporting Types
+
+
+<h4 id="clusternoderesponse">Cluster<wbr>Node<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ClusterNodeResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/azurestackhci/preview?tab=doc#ClusterNodeResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.AzureStackHCI.Preview.Outputs.ClusterNodeResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="corecount_csharp">
+<a href="#corecount_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Number of physical cores on the cluster node.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Id of the node in the cluster.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="manufacturer_csharp">
+<a href="#manufacturer_csharp" style="color: inherit; text-decoration: inherit;">Manufacturer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Manufacturer of the cluster node hardware.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="memoryingib_csharp">
+<a href="#memoryingib_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>In<wbr>Gi<wbr>B</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Total available memory on the cluster node (in GiB).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="model_csharp">
+<a href="#model_csharp" style="color: inherit; text-decoration: inherit;">Model</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Model name of the cluster node hardware.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the cluster node.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="osname_csharp">
+<a href="#osname_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operating system running on the cluster node.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="osversion_csharp">
+<a href="#osversion_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Version of the operating system running on the cluster node.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serialnumber_csharp">
+<a href="#serialnumber_csharp" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Immutable id of the cluster node.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="corecount_go">
+<a href="#corecount_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Number of physical cores on the cluster node.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Id of the node in the cluster.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="manufacturer_go">
+<a href="#manufacturer_go" style="color: inherit; text-decoration: inherit;">Manufacturer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Manufacturer of the cluster node hardware.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="memoryingib_go">
+<a href="#memoryingib_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>In<wbr>Gi<wbr>B</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Total available memory on the cluster node (in GiB).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="model_go">
+<a href="#model_go" style="color: inherit; text-decoration: inherit;">Model</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Model name of the cluster node hardware.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the cluster node.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="osname_go">
+<a href="#osname_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operating system running on the cluster node.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="osversion_go">
+<a href="#osversion_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Version of the operating system running on the cluster node.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serialnumber_go">
+<a href="#serialnumber_go" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Immutable id of the cluster node.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="corecount_nodejs">
+<a href="#corecount_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of physical cores on the cluster node.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Id of the node in the cluster.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="manufacturer_nodejs">
+<a href="#manufacturer_nodejs" style="color: inherit; text-decoration: inherit;">manufacturer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Manufacturer of the cluster node hardware.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="memoryingib_nodejs">
+<a href="#memoryingib_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>In<wbr>Gi<wbr>B</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Total available memory on the cluster node (in GiB).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="model_nodejs">
+<a href="#model_nodejs" style="color: inherit; text-decoration: inherit;">model</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Model name of the cluster node hardware.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the cluster node.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="osname_nodejs">
+<a href="#osname_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operating system running on the cluster node.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="osversion_nodejs">
+<a href="#osversion_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Version of the operating system running on the cluster node.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serialnumber_nodejs">
+<a href="#serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Immutable id of the cluster node.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="corecount_python">
+<a href="#corecount_python" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Number of physical cores on the cluster node.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Id of the node in the cluster.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="manufacturer_python">
+<a href="#manufacturer_python" style="color: inherit; text-decoration: inherit;">manufacturer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Manufacturer of the cluster node hardware.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="memoryingib_python">
+<a href="#memoryingib_python" style="color: inherit; text-decoration: inherit;">memory<wbr>In<wbr>Gi<wbr>B</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Total available memory on the cluster node (in GiB).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="model_python">
+<a href="#model_python" style="color: inherit; text-decoration: inherit;">model</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Model name of the cluster node hardware.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the cluster node.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="os_name_python">
+<a href="#os_name_python" style="color: inherit; text-decoration: inherit;">os_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Operating system running on the cluster node.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="os_version_python">
+<a href="#os_version_python" style="color: inherit; text-decoration: inherit;">os_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Version of the operating system running on the cluster node.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serial_number_python">
+<a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Immutable id of the cluster node.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clusterreportedpropertiesresponse">Cluster<wbr>Reported<wbr>Properties<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ClusterReportedPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/azurestackhci/preview?tab=doc#ClusterReportedPropertiesResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.AzureStackHCI.Preview.Outputs.ClusterReportedPropertiesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clusterid_csharp">
+<a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Unique id generated by the on-prem cluster.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clustername_csharp">
+<a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the on-prem cluster connected to this resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clusterversion_csharp">
+<a href="#clusterversion_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Version of the cluster software.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastupdated_csharp">
+<a href="#lastupdated_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last time the cluster reported the data.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="nodes_csharp">
+<a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Azure<wbr>Stack<wbr>HCI.<wbr>Preview.<wbr>Inputs.<wbr>Cluster<wbr>Node<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of nodes reported by the cluster.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clusterid_go">
+<a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Unique id generated by the on-prem cluster.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clustername_go">
+<a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the on-prem cluster connected to this resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clusterversion_go">
+<a href="#clusterversion_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Version of the cluster software.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastupdated_go">
+<a href="#lastupdated_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last time the cluster reported the data.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="nodes_go">
+<a href="#nodes_go" style="color: inherit; text-decoration: inherit;">Nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternoderesponse">[]Cluster<wbr>Node<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of nodes reported by the cluster.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clusterid_nodejs">
+<a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Unique id generated by the on-prem cluster.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clustername_nodejs">
+<a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the on-prem cluster connected to this resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clusterversion_nodejs">
+<a href="#clusterversion_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Version of the cluster software.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastupdated_nodejs">
+<a href="#lastupdated_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last time the cluster reported the data.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="nodes_nodejs">
+<a href="#nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternoderesponse">Cluster<wbr>Node<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of nodes reported by the cluster.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cluster_id_python">
+<a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Unique id generated by the on-prem cluster.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cluster_name_python">
+<a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the on-prem cluster connected to this resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cluster_version_python">
+<a href="#cluster_version_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Version of the cluster software.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="last_updated_python">
+<a href="#last_updated_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Last time the cluster reported the data.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="nodes_python">
+<a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternoderesponse">List[Cluster<wbr>Node<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of nodes reported by the cluster.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

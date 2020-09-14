@@ -361,6 +361,630 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="azureresourceerrorinforesponse">Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AzureResourceErrorInfoResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest?tab=doc#AzureResourceErrorInfoResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Logic.Latest.Outputs.AzureResourceErrorInfoResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="details_csharp">
+<a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureresourceerrorinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Logic.<wbr>Latest.<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="details_go">
+<a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureresourceerrorinforesponse">[]Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="details_nodejs">
+<a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureresourceerrorinforesponse">Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="details_python">
+<a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureresourceerrorinforesponse">List[Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="expressionresponse">Expression<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ExpressionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest?tab=doc#ExpressionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Logic.Latest.Outputs.ExpressionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_csharp">
+<a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureresourceerrorinforesponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Logic.<wbr>Latest.<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subexpressions_csharp">
+<a href="#subexpressions_csharp" style="color: inherit; text-decoration: inherit;">Subexpressions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressionresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Logic.<wbr>Latest.<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="text_csharp">
+<a href="#text_csharp" style="color: inherit; text-decoration: inherit;">Text</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The text.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_go">
+<a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureresourceerrorinforesponse">Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subexpressions_go">
+<a href="#subexpressions_go" style="color: inherit; text-decoration: inherit;">Subexpressions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressionresponse">[]Expression<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="text_go">
+<a href="#text_go" style="color: inherit; text-decoration: inherit;">Text</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The text.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_nodejs">
+<a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureresourceerrorinforesponse">Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subexpressions_nodejs">
+<a href="#subexpressions_nodejs" style="color: inherit; text-decoration: inherit;">subexpressions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressionresponse">Expression<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="text_nodejs">
+<a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The text.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_python">
+<a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureresourceerrorinforesponse">Dict[Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subexpressions_python">
+<a href="#subexpressions_python" style="color: inherit; text-decoration: inherit;">subexpressions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressionresponse">List[Expression<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="text_python">
+<a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The text.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="expressionrootresponse">Expression<wbr>Root<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ExpressionRootResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest?tab=doc#ExpressionRootResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Logic.Latest.Outputs.ExpressionRootResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_csharp">
+<a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureresourceerrorinforesponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Logic.<wbr>Latest.<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subexpressions_csharp">
+<a href="#subexpressions_csharp" style="color: inherit; text-decoration: inherit;">Subexpressions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressionresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Logic.<wbr>Latest.<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="text_csharp">
+<a href="#text_csharp" style="color: inherit; text-decoration: inherit;">Text</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The text.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_go">
+<a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureresourceerrorinforesponse">Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subexpressions_go">
+<a href="#subexpressions_go" style="color: inherit; text-decoration: inherit;">Subexpressions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressionresponse">[]Expression<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="text_go">
+<a href="#text_go" style="color: inherit; text-decoration: inherit;">Text</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The text.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_nodejs">
+<a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureresourceerrorinforesponse">Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subexpressions_nodejs">
+<a href="#subexpressions_nodejs" style="color: inherit; text-decoration: inherit;">subexpressions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressionresponse">Expression<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="text_nodejs">
+<a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The text.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_python">
+<a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureresourceerrorinforesponse">Dict[Azure<wbr>Resource<wbr>Error<wbr>Info<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The azure resource error info.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The path.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subexpressions_python">
+<a href="#subexpressions_python" style="color: inherit; text-decoration: inherit;">subexpressions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#expressionresponse">List[Expression<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The sub expressions.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="text_python">
+<a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The text.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

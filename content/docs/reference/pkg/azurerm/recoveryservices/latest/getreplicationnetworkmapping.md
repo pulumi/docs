@@ -483,6 +483,636 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="azuretoazurenetworkmappingsettingsresponse">Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AzureToAzureNetworkMappingSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#AzureToAzureNetworkMappingSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.AzureToAzureNetworkMappingSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primaryfabriclocation_csharp">
+<a href="#primaryfabriclocation_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Fabric<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The primary fabric location.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoveryfabriclocation_csharp">
+<a href="#recoveryfabriclocation_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Fabric<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery fabric location.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primaryfabriclocation_go">
+<a href="#primaryfabriclocation_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Fabric<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The primary fabric location.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoveryfabriclocation_go">
+<a href="#recoveryfabriclocation_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Fabric<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery fabric location.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primaryfabriclocation_nodejs">
+<a href="#primaryfabriclocation_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Fabric<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The primary fabric location.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoveryfabriclocation_nodejs">
+<a href="#recoveryfabriclocation_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Fabric<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery fabric location.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primaryfabriclocation_python">
+<a href="#primaryfabriclocation_python" style="color: inherit; text-decoration: inherit;">primary<wbr>Fabric<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The primary fabric location.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoveryfabriclocation_python">
+<a href="#recoveryfabriclocation_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Fabric<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery fabric location.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="networkmappingpropertiesresponse">Network<wbr>Mapping<wbr>Properties<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#NetworkMappingPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#NetworkMappingPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.NetworkMappingPropertiesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fabricspecificsettings_csharp">
+<a href="#fabricspecificsettings_csharp" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Specific<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primaryfabricfriendlyname_csharp">
+<a href="#primaryfabricfriendlyname_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Fabric<wbr>Friendly<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The primary fabric friendly name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primarynetworkfriendlyname_csharp">
+<a href="#primarynetworkfriendlyname_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Network<wbr>Friendly<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The primary network friendly name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primarynetworkid_csharp">
+<a href="#primarynetworkid_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The primary network id for network mapping.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoveryfabricarmid_csharp">
+<a href="#recoveryfabricarmid_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Fabric<wbr>Arm<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery fabric ARM id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoveryfabricfriendlyname_csharp">
+<a href="#recoveryfabricfriendlyname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Fabric<wbr>Friendly<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery fabric friendly name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoverynetworkfriendlyname_csharp">
+<a href="#recoverynetworkfriendlyname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Network<wbr>Friendly<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery network friendly name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoverynetworkid_csharp">
+<a href="#recoverynetworkid_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery network id for network mapping.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The pairing state for network mapping.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fabricspecificsettings_go">
+<a href="#fabricspecificsettings_go" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Specific<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primaryfabricfriendlyname_go">
+<a href="#primaryfabricfriendlyname_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Fabric<wbr>Friendly<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The primary fabric friendly name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primarynetworkfriendlyname_go">
+<a href="#primarynetworkfriendlyname_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Network<wbr>Friendly<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The primary network friendly name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primarynetworkid_go">
+<a href="#primarynetworkid_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The primary network id for network mapping.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoveryfabricarmid_go">
+<a href="#recoveryfabricarmid_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Fabric<wbr>Arm<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery fabric ARM id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoveryfabricfriendlyname_go">
+<a href="#recoveryfabricfriendlyname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Fabric<wbr>Friendly<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery fabric friendly name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoverynetworkfriendlyname_go">
+<a href="#recoverynetworkfriendlyname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Network<wbr>Friendly<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery network friendly name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoverynetworkid_go">
+<a href="#recoverynetworkid_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery network id for network mapping.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The pairing state for network mapping.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fabricspecificsettings_nodejs">
+<a href="#fabricspecificsettings_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Specific<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response | Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response | Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primaryfabricfriendlyname_nodejs">
+<a href="#primaryfabricfriendlyname_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Fabric<wbr>Friendly<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The primary fabric friendly name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primarynetworkfriendlyname_nodejs">
+<a href="#primarynetworkfriendlyname_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Network<wbr>Friendly<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The primary network friendly name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primarynetworkid_nodejs">
+<a href="#primarynetworkid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The primary network id for network mapping.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoveryfabricarmid_nodejs">
+<a href="#recoveryfabricarmid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Fabric<wbr>Arm<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery fabric ARM id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoveryfabricfriendlyname_nodejs">
+<a href="#recoveryfabricfriendlyname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Fabric<wbr>Friendly<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery fabric friendly name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoverynetworkfriendlyname_nodejs">
+<a href="#recoverynetworkfriendlyname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Network<wbr>Friendly<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery network friendly name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoverynetworkid_nodejs">
+<a href="#recoverynetworkid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery network id for network mapping.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The pairing state for network mapping.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fabric_specific_settings_python">
+<a href="#fabric_specific_settings_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>specific_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response] | Dict[Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response] | Dict[Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primary_fabric_friendly_name_python">
+<a href="#primary_fabric_friendly_name_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>fabric_<wbr>friendly_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The primary fabric friendly name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primary_network_friendly_name_python">
+<a href="#primary_network_friendly_name_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>network_<wbr>friendly_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The primary network friendly name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primary_network_id_python">
+<a href="#primary_network_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>network_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The primary network id for network mapping.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recovery_fabric_arm_id_python">
+<a href="#recovery_fabric_arm_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>fabric_<wbr>arm_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery fabric ARM id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recovery_fabric_friendly_name_python">
+<a href="#recovery_fabric_friendly_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>fabric_<wbr>friendly_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery fabric friendly name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recovery_network_friendly_name_python">
+<a href="#recovery_network_friendly_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>network_<wbr>friendly_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery network friendly name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recovery_network_id_python">
+<a href="#recovery_network_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>network_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery network id for network mapping.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The pairing state for network mapping.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="vmmtoazurenetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#VmmToAzureNetworkMappingSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#VmmToAzureNetworkMappingSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.VmmToAzureNetworkMappingSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="vmmtovmmnetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#VmmToVmmNetworkMappingSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#VmmToVmmNetworkMappingSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.VmmToVmmNetworkMappingSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

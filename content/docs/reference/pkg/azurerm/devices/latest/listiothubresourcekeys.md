@@ -281,6 +281,218 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="sharedaccesssignatureauthorizationruleresponse">Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SharedAccessSignatureAuthorizationRuleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/devices/latest?tab=doc#SharedAccessSignatureAuthorizationRuleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Devices.Latest.Outputs.SharedAccessSignatureAuthorizationRuleResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keyname_csharp">
+<a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rights_csharp">
+<a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primarykey_csharp">
+<a href="#primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The primary key.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secondarykey_csharp">
+<a href="#secondarykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The secondary key.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keyname_go">
+<a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rights_go">
+<a href="#rights_go" style="color: inherit; text-decoration: inherit;">Rights</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primarykey_go">
+<a href="#primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The primary key.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secondarykey_go">
+<a href="#secondarykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The secondary key.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keyname_nodejs">
+<a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rights_nodejs">
+<a href="#rights_nodejs" style="color: inherit; text-decoration: inherit;">rights</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primarykey_nodejs">
+<a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The primary key.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secondarykey_nodejs">
+<a href="#secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The secondary key.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_name_python">
+<a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the shared access policy.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rights_python">
+<a href="#rights_python" style="color: inherit; text-decoration: inherit;">rights</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The permissions assigned to the shared access policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primary_key_python">
+<a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The primary key.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secondary_key_python">
+<a href="#secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The secondary key.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

@@ -1166,6 +1166,3190 @@ The following output properties are available:
 ## Supporting Types
 
 
+<h4 id="cacheexpirationactionparametersresponse">Cache<wbr>Expiration<wbr>Action<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#CacheExpirationActionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#CacheExpirationActionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.CacheExpirationActionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cachebehavior_csharp">
+<a href="#cachebehavior_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Caching behavior for the requests{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cachetype_csharp">
+<a href="#cachetype_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The level at which the content needs to be cached.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cacheduration_csharp">
+<a href="#cacheduration_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cachebehavior_go">
+<a href="#cachebehavior_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Caching behavior for the requests{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cachetype_go">
+<a href="#cachetype_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The level at which the content needs to be cached.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cacheduration_go">
+<a href="#cacheduration_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cachebehavior_nodejs">
+<a href="#cachebehavior_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Caching behavior for the requests{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cachetype_nodejs">
+<a href="#cachetype_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The level at which the content needs to be cached.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cacheduration_nodejs">
+<a href="#cacheduration_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cachebehavior_python">
+<a href="#cachebehavior_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Caching behavior for the requests{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cachetype_python">
+<a href="#cachetype_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The level at which the content needs to be cached.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cacheduration_python">
+<a href="#cacheduration_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="cachekeyquerystringactionparametersresponse">Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#CacheKeyQueryStringActionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#CacheKeyQueryStringActionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.CacheKeyQueryStringActionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="querystringbehavior_csharp">
+<a href="#querystringbehavior_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Caching behavior for the requests{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="queryparameters_csharp">
+<a href="#queryparameters_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}query parameters to include or exclude (comma separated).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="querystringbehavior_go">
+<a href="#querystringbehavior_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Caching behavior for the requests{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="queryparameters_go">
+<a href="#queryparameters_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}query parameters to include or exclude (comma separated).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="querystringbehavior_nodejs">
+<a href="#querystringbehavior_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Caching behavior for the requests{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="queryparameters_nodejs">
+<a href="#queryparameters_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}query parameters to include or exclude (comma separated).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="querystringbehavior_python">
+<a href="#querystringbehavior_python" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Caching behavior for the requests{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="query_parameters_python">
+<a href="#query_parameters_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}query parameters to include or exclude (comma separated).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="cookiesmatchconditionparametersresponse">Cookies<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#CookiesMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#CookiesMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.CookiesMatchConditionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="selector_csharp">
+<a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Cookies to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_csharp">
+<a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_csharp">
+<a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="selector_go">
+<a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Cookies to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_go">
+<a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_go">
+<a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="selector_nodejs">
+<a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Cookies to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_nodejs">
+<a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_nodejs">
+<a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="selector_python">
+<a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Cookies to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_python">
+<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_python">
+<a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deepcreatedorigingroupresponse">Deep<wbr>Created<wbr>Origin<wbr>Group<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeepCreatedOriginGroupResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeepCreatedOriginGroupResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeepCreatedOriginGroupResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Origin group name which must be unique within the endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="origins_csharp">
+<a href="#origins_csharp" style="color: inherit; text-decoration: inherit;">Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The source of the content being delivered via CDN within given origin group.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthprobesettings_csharp">
+<a href="#healthprobesettings_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthprobeparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Health<wbr>Probe<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Health probe settings to the origin that is used to determine the health of the origin.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsebasedoriginerrordetectionsettings_csharp">
+<a href="#responsebasedoriginerrordetectionsettings_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#responsebasedoriginerrordetectionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trafficrestorationtimetohealedornewendpointsinminutes_csharp">
+<a href="#trafficrestorationtimetohealedornewendpointsinminutes_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Restoration<wbr>Time<wbr>To<wbr>Healed<wbr>Or<wbr>New<wbr>Endpoints<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Origin group name which must be unique within the endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="origins_go">
+<a href="#origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">[]Resource<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The source of the content being delivered via CDN within given origin group.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthprobesettings_go">
+<a href="#healthprobesettings_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthprobeparametersresponse">Health<wbr>Probe<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Health probe settings to the origin that is used to determine the health of the origin.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsebasedoriginerrordetectionsettings_go">
+<a href="#responsebasedoriginerrordetectionsettings_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#responsebasedoriginerrordetectionparametersresponse">Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trafficrestorationtimetohealedornewendpointsinminutes_go">
+<a href="#trafficrestorationtimetohealedornewendpointsinminutes_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Restoration<wbr>Time<wbr>To<wbr>Healed<wbr>Or<wbr>New<wbr>Endpoints<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Origin group name which must be unique within the endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="origins_nodejs">
+<a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The source of the content being delivered via CDN within given origin group.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthprobesettings_nodejs">
+<a href="#healthprobesettings_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Probe<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthprobeparametersresponse">Health<wbr>Probe<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Health probe settings to the origin that is used to determine the health of the origin.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsebasedoriginerrordetectionsettings_nodejs">
+<a href="#responsebasedoriginerrordetectionsettings_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#responsebasedoriginerrordetectionparametersresponse">Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trafficrestorationtimetohealedornewendpointsinminutes_nodejs">
+<a href="#trafficrestorationtimetohealedornewendpointsinminutes_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Restoration<wbr>Time<wbr>To<wbr>Healed<wbr>Or<wbr>New<wbr>Endpoints<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Origin group name which must be unique within the endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="origins_python">
+<a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">List[Resource<wbr>Reference<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The source of the content being delivered via CDN within given origin group.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="health_probe_settings_python">
+<a href="#health_probe_settings_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthprobeparametersresponse">Dict[Health<wbr>Probe<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Health probe settings to the origin that is used to determine the health of the origin.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="response_based_origin_error_detection_settings_python">
+<a href="#response_based_origin_error_detection_settings_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>origin_<wbr>error_<wbr>detection_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#responsebasedoriginerrordetectionparametersresponse">Dict[Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="traffic_restoration_time_to_healed_or_new_endpoints_in_minutes_python">
+<a href="#traffic_restoration_time_to_healed_or_new_endpoints_in_minutes_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>restoration_<wbr>time_<wbr>to_<wbr>healed_<wbr>or_<wbr>new_<wbr>endpoints_<wbr>in_<wbr>minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deepcreatedoriginresponse">Deep<wbr>Created<wbr>Origin<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeepCreatedOriginResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeepCreatedOriginResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeepCreatedOriginResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hostname_csharp">
+<a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Origin name which must be unique within the endpoint. {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Origin is enabled for load balancing or not. By default, origin is always enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpport_csharp">
+<a href="#httpport_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the HTTP port. Must be between 1 and 65535.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpsport_csharp">
+<a href="#httpsport_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the HTTPS port. Must be between 1 and 65535.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="originhostheader_csharp">
+<a href="#originhostheader_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Host<wbr>Header</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="priority_csharp">
+<a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkalias_csharp">
+<a href="#privatelinkalias_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Alias</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkapprovalmessage_csharp">
+<a href="#privatelinkapprovalmessage_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Approval<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A custom message to be included in the approval request to connect to the Private Link.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinklocation_csharp">
+<a href="#privatelinklocation_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkresourceid_csharp">
+<a href="#privatelinkresourceid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weight_csharp">
+<a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Weight of the origin in given origin group for load balancing. Must be between 1 and 1000{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hostname_go">
+<a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Origin name which must be unique within the endpoint. {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Origin is enabled for load balancing or not. By default, origin is always enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpport_go">
+<a href="#httpport_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the HTTP port. Must be between 1 and 65535.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpsport_go">
+<a href="#httpsport_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the HTTPS port. Must be between 1 and 65535.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="originhostheader_go">
+<a href="#originhostheader_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Host<wbr>Header</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="priority_go">
+<a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkalias_go">
+<a href="#privatelinkalias_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Alias</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkapprovalmessage_go">
+<a href="#privatelinkapprovalmessage_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Approval<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A custom message to be included in the approval request to connect to the Private Link.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinklocation_go">
+<a href="#privatelinklocation_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkresourceid_go">
+<a href="#privatelinkresourceid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weight_go">
+<a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Weight of the origin in given origin group for load balancing. Must be between 1 and 1000{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hostname_nodejs">
+<a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Origin name which must be unique within the endpoint. {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Origin is enabled for load balancing or not. By default, origin is always enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpport_nodejs">
+<a href="#httpport_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the HTTP port. Must be between 1 and 65535.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpsport_nodejs">
+<a href="#httpsport_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the HTTPS port. Must be between 1 and 65535.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="originhostheader_nodejs">
+<a href="#originhostheader_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Host<wbr>Header</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="priority_nodejs">
+<a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkalias_nodejs">
+<a href="#privatelinkalias_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Alias</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkapprovalmessage_nodejs">
+<a href="#privatelinkapprovalmessage_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Approval<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A custom message to be included in the approval request to connect to the Private Link.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinklocation_nodejs">
+<a href="#privatelinklocation_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkresourceid_nodejs">
+<a href="#privatelinkresourceid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weight_nodejs">
+<a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Weight of the origin in given origin group for load balancing. Must be between 1 and 1000{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="host_name_python">
+<a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Origin name which must be unique within the endpoint. {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Origin is enabled for load balancing or not. By default, origin is always enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_port_python">
+<a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the HTTP port. Must be between 1 and 65535.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="https_port_python">
+<a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the HTTPS port. Must be between 1 and 65535.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="origin_host_header_python">
+<a href="#origin_host_header_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>host_<wbr>header</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="priority_python">
+<a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_link_alias_python">
+<a href="#private_link_alias_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>alias</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_link_approval_message_python">
+<a href="#private_link_approval_message_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>approval_<wbr>message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A custom message to be included in the approval request to connect to the Private Link.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_link_location_python">
+<a href="#private_link_location_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_link_resource_id_python">
+<a href="#private_link_resource_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weight_python">
+<a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Weight of the origin in given origin group for load balancing. Must be between 1 and 1000{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deliveryrulecacheexpirationactionresponse">Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryRuleCacheExpirationActionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeliveryRuleCacheExpirationActionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeliveryRuleCacheExpirationActionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheexpirationactionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheexpirationactionparametersresponse">Cache<wbr>Expiration<wbr>Action<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheexpirationactionparametersresponse">Cache<wbr>Expiration<wbr>Action<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheexpirationactionparametersresponse">Dict[Cache<wbr>Expiration<wbr>Action<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deliveryrulecachekeyquerystringactionresponse">Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryRuleCacheKeyQueryStringActionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeliveryRuleCacheKeyQueryStringActionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeliveryRuleCacheKeyQueryStringActionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachekeyquerystringactionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachekeyquerystringactionparametersresponse">Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachekeyquerystringactionparametersresponse">Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachekeyquerystringactionparametersresponse">Dict[Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deliveryrulecookiesconditionresponse">Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryRuleCookiesConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeliveryRuleCookiesConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeliveryRuleCookiesConditionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cookiesmatchconditionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Cookies<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cookiesmatchconditionparametersresponse">Cookies<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cookiesmatchconditionparametersresponse">Cookies<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cookiesmatchconditionparametersresponse">Dict[Cookies<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deliveryrulehttpversionconditionresponse">Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryRuleHttpVersionConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeliveryRuleHttpVersionConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeliveryRuleHttpVersionConditionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httpversionmatchconditionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Http<wbr>Version<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httpversionmatchconditionparametersresponse">Http<wbr>Version<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httpversionmatchconditionparametersresponse">Http<wbr>Version<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httpversionmatchconditionparametersresponse">Dict[Http<wbr>Version<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deliveryruleisdeviceconditionresponse">Delivery<wbr>Rule<wbr>Is<wbr>Device<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryRuleIsDeviceConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeliveryRuleIsDeviceConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeliveryRuleIsDeviceConditionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#isdevicematchconditionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Is<wbr>Device<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#isdevicematchconditionparametersresponse">Is<wbr>Device<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#isdevicematchconditionparametersresponse">Is<wbr>Device<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#isdevicematchconditionparametersresponse">Dict[Is<wbr>Device<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deliveryrulepostargsconditionresponse">Delivery<wbr>Rule<wbr>Post<wbr>Args<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryRulePostArgsConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeliveryRulePostArgsConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeliveryRulePostArgsConditionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#postargsmatchconditionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Post<wbr>Args<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#postargsmatchconditionparametersresponse">Post<wbr>Args<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#postargsmatchconditionparametersresponse">Post<wbr>Args<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#postargsmatchconditionparametersresponse">Dict[Post<wbr>Args<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deliveryrulequerystringconditionresponse">Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryRuleQueryStringConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeliveryRuleQueryStringConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeliveryRuleQueryStringConditionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#querystringmatchconditionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Query<wbr>String<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#querystringmatchconditionparametersresponse">Query<wbr>String<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#querystringmatchconditionparametersresponse">Query<wbr>String<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#querystringmatchconditionparametersresponse">Dict[Query<wbr>String<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deliveryruleremoteaddressconditionresponse">Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryRuleRemoteAddressConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeliveryRuleRemoteAddressConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeliveryRuleRemoteAddressConditionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#remoteaddressmatchconditionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Remote<wbr>Address<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#remoteaddressmatchconditionparametersresponse">Remote<wbr>Address<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#remoteaddressmatchconditionparametersresponse">Remote<wbr>Address<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#remoteaddressmatchconditionparametersresponse">Dict[Remote<wbr>Address<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deliveryrulerequestbodyconditionresponse">Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryRuleRequestBodyConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeliveryRuleRequestBodyConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeliveryRuleRequestBodyConditionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requestbodymatchconditionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Request<wbr>Body<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requestbodymatchconditionparametersresponse">Request<wbr>Body<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requestbodymatchconditionparametersresponse">Request<wbr>Body<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requestbodymatchconditionparametersresponse">Dict[Request<wbr>Body<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deliveryrulerequestheaderactionresponse">Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Action<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryRuleRequestHeaderActionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeliveryRuleRequestHeaderActionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeliveryRuleRequestHeaderActionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#headeractionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#headeractionparametersresponse">Header<wbr>Action<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#headeractionparametersresponse">Header<wbr>Action<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#headeractionparametersresponse">Dict[Header<wbr>Action<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deliveryrulerequestheaderconditionresponse">Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryRuleRequestHeaderConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeliveryRuleRequestHeaderConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeliveryRuleRequestHeaderConditionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requestheadermatchconditionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Request<wbr>Header<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requestheadermatchconditionparametersresponse">Request<wbr>Header<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requestheadermatchconditionparametersresponse">Request<wbr>Header<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requestheadermatchconditionparametersresponse">Dict[Request<wbr>Header<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deliveryrulerequestmethodconditionresponse">Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryRuleRequestMethodConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeliveryRuleRequestMethodConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeliveryRuleRequestMethodConditionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requestmethodmatchconditionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Request<wbr>Method<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requestmethodmatchconditionparametersresponse">Request<wbr>Method<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requestmethodmatchconditionparametersresponse">Request<wbr>Method<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requestmethodmatchconditionparametersresponse">Dict[Request<wbr>Method<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deliveryrulerequestschemeconditionresponse">Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryRuleRequestSchemeConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeliveryRuleRequestSchemeConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeliveryRuleRequestSchemeConditionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requestschemematchconditionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Request<wbr>Scheme<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requestschemematchconditionparametersresponse">Request<wbr>Scheme<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requestschemematchconditionparametersresponse">Request<wbr>Scheme<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requestschemematchconditionparametersresponse">Dict[Request<wbr>Scheme<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deliveryrulerequesturiconditionresponse">Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryRuleRequestUriConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeliveryRuleRequestUriConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeliveryRuleRequestUriConditionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requesturimatchconditionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Request<wbr>Uri<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requesturimatchconditionparametersresponse">Request<wbr>Uri<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requesturimatchconditionparametersresponse">Request<wbr>Uri<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#requesturimatchconditionparametersresponse">Dict[Request<wbr>Uri<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deliveryruleresponse">Delivery<wbr>Rule<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryRuleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeliveryRuleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeliveryRuleResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="actions_csharp">
+<a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Action<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Response<wbr>Header<wbr>Action<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Url<wbr>Redirect<wbr>Action<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Url<wbr>Signing<wbr>Action<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of actions that are executed when all the conditions of a rule are satisfied.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="order_csharp">
+<a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="conditions_csharp">
+<a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Is<wbr>Device<wbr>Condition<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Args<wbr>Condition<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of conditions that must be matched for the actions to be executed{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the rule{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="actions_go">
+<a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A list of actions that are executed when all the conditions of a rule are satisfied.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="order_go">
+<a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="conditions_go">
+<a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A list of conditions that must be matched for the actions to be executed{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the rule{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="actions_nodejs">
+<a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Response | Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Response | Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Action<wbr>Response | Delivery<wbr>Rule<wbr>Response<wbr>Header<wbr>Action<wbr>Response | Url<wbr>Redirect<wbr>Action<wbr>Response | Url<wbr>Rewrite<wbr>Action<wbr>Response | Url<wbr>Signing<wbr>Action<wbr>Response[]</span>
+    </dt>
+    <dd>{{% md %}}A list of actions that are executed when all the conditions of a rule are satisfied.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="order_nodejs">
+<a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="conditions_nodejs">
+<a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Is<wbr>Device<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Post<wbr>Args<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Response[]</span>
+    </dt>
+    <dd>{{% md %}}A list of conditions that must be matched for the actions to be executed{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the rule{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="actions_python">
+<a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">List[Union<Azurerm:Cdn/Latest:Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Response, Azurerm:Cdn/Latest:Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Response, Azurerm:Cdn/Latest:Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Action<wbr>Response, Azurerm:Cdn/Latest:Delivery<wbr>Rule<wbr>Response<wbr>Header<wbr>Action<wbr>Response, Azurerm:Cdn/Latest:Url<wbr>Redirect<wbr>Action<wbr>Response, Azurerm:Cdn/Latest:Url<wbr>Rewrite<wbr>Action<wbr>Response, Azurerm:Cdn/Latest:Url<wbr>Signing<wbr>Action<wbr>Response, Default=>]</span>
+    </dt>
+    <dd>{{% md %}}A list of actions that are executed when all the conditions of a rule are satisfied.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="order_python">
+<a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="conditions_python">
+<a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">List[Union<Azurerm:Cdn/Latest:Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Response, Azurerm:Cdn/Latest:Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Response, Azurerm:Cdn/Latest:Delivery<wbr>Rule<wbr>Is<wbr>Device<wbr>Condition<wbr>Response, Azurerm:Cdn/Latest:Delivery<wbr>Rule<wbr>Post<wbr>Args<wbr>Condition<wbr>Response, Azurerm:Cdn/Latest:Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Response, Azurerm:Cdn/Latest:Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Response, Azurerm:Cdn/Latest:Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Response, Azurerm:Cdn/Latest:Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Response, Azurerm:Cdn/Latest:Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Response, Azurerm:Cdn/Latest:Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Response, Azurerm:Cdn/Latest:Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Response, Azurerm:Cdn/Latest:Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Response, Azurerm:Cdn/Latest:Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Response, Azurerm:Cdn/Latest:Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Response, Default=>]</span>
+    </dt>
+    <dd>{{% md %}}A list of conditions that must be matched for the actions to be executed{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the rule{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deliveryruleresponseheaderactionresponse">Delivery<wbr>Rule<wbr>Response<wbr>Header<wbr>Action<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryRuleResponseHeaderActionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeliveryRuleResponseHeaderActionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeliveryRuleResponseHeaderActionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#headeractionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#headeractionparametersresponse">Header<wbr>Action<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#headeractionparametersresponse">Header<wbr>Action<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#headeractionparametersresponse">Dict[Header<wbr>Action<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deliveryruleurlfileextensionconditionresponse">Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryRuleUrlFileExtensionConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeliveryRuleUrlFileExtensionConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeliveryRuleUrlFileExtensionConditionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlfileextensionmatchconditionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Url<wbr>File<wbr>Extension<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlfileextensionmatchconditionparametersresponse">Url<wbr>File<wbr>Extension<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlfileextensionmatchconditionparametersresponse">Url<wbr>File<wbr>Extension<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlfileextensionmatchconditionparametersresponse">Dict[Url<wbr>File<wbr>Extension<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deliveryruleurlfilenameconditionresponse">Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryRuleUrlFileNameConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeliveryRuleUrlFileNameConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeliveryRuleUrlFileNameConditionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlfilenamematchconditionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Url<wbr>File<wbr>Name<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlfilenamematchconditionparametersresponse">Url<wbr>File<wbr>Name<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlfilenamematchconditionparametersresponse">Url<wbr>File<wbr>Name<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlfilenamematchconditionparametersresponse">Dict[Url<wbr>File<wbr>Name<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deliveryruleurlpathconditionresponse">Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryRuleUrlPathConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#DeliveryRuleUrlPathConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.DeliveryRuleUrlPathConditionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlpathmatchconditionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Url<wbr>Path<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlpathmatchconditionparametersresponse">Url<wbr>Path<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlpathmatchconditionparametersresponse">Url<wbr>Path<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlpathmatchconditionparametersresponse">Dict[Url<wbr>Path<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="endpointpropertiesupdateparametersresponsedeliverypolicy">Endpoint<wbr>Properties<wbr>Update<wbr>Parameters<wbr>Response<wbr>Delivery<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#EndpointPropertiesUpdateParametersResponseDeliveryPolicy">output</a> API doc for this type.
@@ -1370,6 +4554,5694 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="geofilterresponse">Geo<wbr>Filter<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#GeoFilterResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#GeoFilterResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.GeoFilterResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Action of the geo filter, i.e. allow or block access.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="countrycodes_csharp">
+<a href="#countrycodes_csharp" style="color: inherit; text-decoration: inherit;">Country<wbr>Codes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="relativepath_csharp">
+<a href="#relativepath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.){{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Action of the geo filter, i.e. allow or block access.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="countrycodes_go">
+<a href="#countrycodes_go" style="color: inherit; text-decoration: inherit;">Country<wbr>Codes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="relativepath_go">
+<a href="#relativepath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.){{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Action of the geo filter, i.e. allow or block access.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="countrycodes_nodejs">
+<a href="#countrycodes_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Codes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="relativepath_nodejs">
+<a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.){{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Action of the geo filter, i.e. allow or block access.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="countrycodes_python">
+<a href="#countrycodes_python" style="color: inherit; text-decoration: inherit;">country<wbr>Codes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="relative_path_python">
+<a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.){{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="headeractionparametersresponse">Header<wbr>Action<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#HeaderActionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#HeaderActionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.HeaderActionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headeraction_csharp">
+<a href="#headeraction_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Action to perform{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the header to modify{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Value for the specified action{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headeraction_go">
+<a href="#headeraction_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Action to perform{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the header to modify{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Value for the specified action{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headeraction_nodejs">
+<a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Action to perform{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the header to modify{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Value for the specified action{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headeraction_python">
+<a href="#headeraction_python" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Action to perform{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_python">
+<a href="#headername_python" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the header to modify{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Value for the specified action{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="healthprobeparametersresponse">Health<wbr>Probe<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#HealthProbeParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#HealthProbeParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.HealthProbeParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probeintervalinseconds_csharp">
+<a href="#probeintervalinseconds_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Interval<wbr>In<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probepath_csharp">
+<a href="#probepath_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path relative to the origin that is used to determine the health of the origin.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probeprotocol_csharp">
+<a href="#probeprotocol_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Protocol to use for health probe.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proberequesttype_csharp">
+<a href="#proberequesttype_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Request<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of health probe request that is made.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probeintervalinseconds_go">
+<a href="#probeintervalinseconds_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Interval<wbr>In<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probepath_go">
+<a href="#probepath_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path relative to the origin that is used to determine the health of the origin.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probeprotocol_go">
+<a href="#probeprotocol_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Protocol to use for health probe.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proberequesttype_go">
+<a href="#proberequesttype_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Request<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of health probe request that is made.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probeintervalinseconds_nodejs">
+<a href="#probeintervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Interval<wbr>In<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probepath_nodejs">
+<a href="#probepath_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path relative to the origin that is used to determine the health of the origin.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probeprotocol_nodejs">
+<a href="#probeprotocol_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Protocol to use for health probe.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proberequesttype_nodejs">
+<a href="#proberequesttype_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Request<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of health probe request that is made.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probe_interval_in_seconds_python">
+<a href="#probe_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>interval_<wbr>in_<wbr>seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probe_path_python">
+<a href="#probe_path_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The path relative to the origin that is used to determine the health of the origin.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probe_protocol_python">
+<a href="#probe_protocol_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Protocol to use for health probe.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probe_request_type_python">
+<a href="#probe_request_type_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>request_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of health probe request that is made.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="httperrorrangeparametersresponse">Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#HttpErrorRangeParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#HttpErrorRangeParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.HttpErrorRangeParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="begin_csharp">
+<a href="#begin_csharp" style="color: inherit; text-decoration: inherit;">Begin</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_csharp">
+<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="begin_go">
+<a href="#begin_go" style="color: inherit; text-decoration: inherit;">Begin</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_go">
+<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="begin_nodejs">
+<a href="#begin_nodejs" style="color: inherit; text-decoration: inherit;">begin</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_nodejs">
+<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="begin_python">
+<a href="#begin_python" style="color: inherit; text-decoration: inherit;">begin</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_python">
+<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="httpversionmatchconditionparametersresponse">Http<wbr>Version<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#HttpVersionMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#HttpVersionMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.HttpVersionMatchConditionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_csharp">
+<a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_go">
+<a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_nodejs">
+<a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_python">
+<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="isdevicematchconditionparametersresponse">Is<wbr>Device<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#IsDeviceMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#IsDeviceMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.IsDeviceMatchConditionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_csharp">
+<a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_csharp">
+<a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_go">
+<a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_go">
+<a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_nodejs">
+<a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_nodejs">
+<a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_python">
+<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_python">
+<a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="keyvaultsigningkeyparametersresponse">Key<wbr>Vault<wbr>Signing<wbr>Key<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#KeyVaultSigningKeyParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#KeyVaultSigningKeyParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.KeyVaultSigningKeyParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource group of the user's Key Vault containing the secret{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secretname_csharp">
+<a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of secret in Key Vault.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secretversion_csharp">
+<a href="#secretversion_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The version(GUID) of secret in Key Vault.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="subscriptionid_csharp">
+<a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Subscription Id of the user's Key Vault containing the secret{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vaultname_csharp">
+<a href="#vaultname_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the user's Key Vault containing the secret{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource group of the user's Key Vault containing the secret{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secretname_go">
+<a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of secret in Key Vault.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secretversion_go">
+<a href="#secretversion_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The version(GUID) of secret in Key Vault.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="subscriptionid_go">
+<a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Subscription Id of the user's Key Vault containing the secret{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vaultname_go">
+<a href="#vaultname_go" style="color: inherit; text-decoration: inherit;">Vault<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the user's Key Vault containing the secret{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource group of the user's Key Vault containing the secret{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secretname_nodejs">
+<a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of secret in Key Vault.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secretversion_nodejs">
+<a href="#secretversion_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The version(GUID) of secret in Key Vault.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="subscriptionid_nodejs">
+<a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Subscription Id of the user's Key Vault containing the secret{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vaultname_nodejs">
+<a href="#vaultname_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the user's Key Vault containing the secret{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource group of the user's Key Vault containing the secret{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secretversion_python">
+<a href="#secretversion_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The version(GUID) of secret in Key Vault.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secret_name_python">
+<a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of secret in Key Vault.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="subscription_id_python">
+<a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Subscription Id of the user's Key Vault containing the secret{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vault_name_python">
+<a href="#vault_name_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the user's Key Vault containing the secret{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="postargsmatchconditionparametersresponse">Post<wbr>Args<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#PostArgsMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#PostArgsMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.PostArgsMatchConditionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="selector_csharp">
+<a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of PostArg to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_csharp">
+<a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_csharp">
+<a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="selector_go">
+<a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of PostArg to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_go">
+<a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_go">
+<a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="selector_nodejs">
+<a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of PostArg to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_nodejs">
+<a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_nodejs">
+<a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="selector_python">
+<a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of PostArg to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_python">
+<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_python">
+<a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="querystringmatchconditionparametersresponse">Query<wbr>String<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#QueryStringMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#QueryStringMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.QueryStringMatchConditionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_csharp">
+<a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_csharp">
+<a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_go">
+<a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_go">
+<a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_nodejs">
+<a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_nodejs">
+<a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_python">
+<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_python">
+<a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="remoteaddressmatchconditionparametersresponse">Remote<wbr>Address<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RemoteAddressMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#RemoteAddressMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.RemoteAddressMatchConditionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_csharp">
+<a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_csharp">
+<a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_go">
+<a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_go">
+<a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_nodejs">
+<a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_nodejs">
+<a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_python">
+<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_python">
+<a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="requestbodymatchconditionparametersresponse">Request<wbr>Body<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RequestBodyMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#RequestBodyMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.RequestBodyMatchConditionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_csharp">
+<a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_csharp">
+<a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_go">
+<a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_go">
+<a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_nodejs">
+<a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_nodejs">
+<a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_python">
+<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_python">
+<a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="requestheadermatchconditionparametersresponse">Request<wbr>Header<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RequestHeaderMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#RequestHeaderMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.RequestHeaderMatchConditionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="selector_csharp">
+<a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Header to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_csharp">
+<a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_csharp">
+<a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="selector_go">
+<a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Header to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_go">
+<a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_go">
+<a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="selector_nodejs">
+<a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Header to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_nodejs">
+<a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_nodejs">
+<a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="selector_python">
+<a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of Header to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_python">
+<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_python">
+<a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="requestmethodmatchconditionparametersresponse">Request<wbr>Method<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RequestMethodMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#RequestMethodMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.RequestMethodMatchConditionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_csharp">
+<a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_go">
+<a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_nodejs">
+<a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_python">
+<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="requestschemematchconditionparametersresponse">Request<wbr>Scheme<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RequestSchemeMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#RequestSchemeMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.RequestSchemeMatchConditionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_csharp">
+<a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_go">
+<a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_nodejs">
+<a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_python">
+<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="requesturimatchconditionparametersresponse">Request<wbr>Uri<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RequestUriMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#RequestUriMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.RequestUriMatchConditionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_csharp">
+<a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_csharp">
+<a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_go">
+<a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_go">
+<a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_nodejs">
+<a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_nodejs">
+<a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_python">
+<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_python">
+<a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ResourceReferenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#ResourceReferenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.ResourceReferenceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="responsebasedoriginerrordetectionparametersresponse">Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ResponseBasedOriginErrorDetectionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#ResponseBasedOriginErrorDetectionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.ResponseBasedOriginErrorDetectionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httperrorranges_csharp">
+<a href="#httperrorranges_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Error<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsebaseddetectederrortypes_csharp">
+<a href="#responsebaseddetectederrortypes_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of response errors for real user requests for which origin will be deemed unhealthy{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsebasedfailoverthresholdpercentage_csharp">
+<a href="#responsebasedfailoverthresholdpercentage_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Based<wbr>Failover<wbr>Threshold<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httperrorranges_go">
+<a href="#httperrorranges_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Error<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">[]Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsebaseddetectederrortypes_go">
+<a href="#responsebaseddetectederrortypes_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of response errors for real user requests for which origin will be deemed unhealthy{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsebasedfailoverthresholdpercentage_go">
+<a href="#responsebasedfailoverthresholdpercentage_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Based<wbr>Failover<wbr>Threshold<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httperrorranges_nodejs">
+<a href="#httperrorranges_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Error<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsebaseddetectederrortypes_nodejs">
+<a href="#responsebaseddetectederrortypes_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of response errors for real user requests for which origin will be deemed unhealthy{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsebasedfailoverthresholdpercentage_nodejs">
+<a href="#responsebasedfailoverthresholdpercentage_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Based<wbr>Failover<wbr>Threshold<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_error_ranges_python">
+<a href="#http_error_ranges_python" style="color: inherit; text-decoration: inherit;">http_<wbr>error_<wbr>ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">List[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="response_based_detected_error_types_python">
+<a href="#response_based_detected_error_types_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>detected_<wbr>error_<wbr>types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of response errors for real user requests for which origin will be deemed unhealthy{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="response_based_failover_threshold_percentage_python">
+<a href="#response_based_failover_threshold_percentage_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>failover_<wbr>threshold_<wbr>percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlfileextensionmatchconditionparametersresponse">Url<wbr>File<wbr>Extension<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#UrlFileExtensionMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#UrlFileExtensionMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.UrlFileExtensionMatchConditionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_csharp">
+<a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_csharp">
+<a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_go">
+<a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_go">
+<a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_nodejs">
+<a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_nodejs">
+<a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_python">
+<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_python">
+<a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlfilenamematchconditionparametersresponse">Url<wbr>File<wbr>Name<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#UrlFileNameMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#UrlFileNameMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.UrlFileNameMatchConditionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_csharp">
+<a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_csharp">
+<a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_go">
+<a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_go">
+<a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_nodejs">
+<a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_nodejs">
+<a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_python">
+<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_python">
+<a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlpathmatchconditionparametersresponse">Url<wbr>Path<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#UrlPathMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#UrlPathMatchConditionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.UrlPathMatchConditionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_csharp">
+<a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_csharp">
+<a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_csharp">
+<a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_go">
+<a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_go">
+<a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_go">
+<a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_nodejs">
+<a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_nodejs">
+<a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_nodejs">
+<a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="matchvalues_python">
+<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negatecondition_python">
+<a href="#negatecondition_python" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transforms_python">
+<a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transforms{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlredirectactionparametersresponse">Url<wbr>Redirect<wbr>Action<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#UrlRedirectActionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#UrlRedirectActionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.UrlRedirectActionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="redirecttype_csharp">
+<a href="#redirecttype_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customfragment_csharp">
+<a href="#customfragment_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Fragment</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customhostname_csharp">
+<a href="#customhostname_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Hostname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Host to redirect. Leave empty to use the incoming host as the destination host.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custompath_csharp">
+<a href="#custompath_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customquerystring_csharp">
+<a href="#customquerystring_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Query<wbr>String</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationprotocol_csharp">
+<a href="#destinationprotocol_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Protocol to use for the redirect. The default value is MatchRequest{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="redirecttype_go">
+<a href="#redirecttype_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customfragment_go">
+<a href="#customfragment_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Fragment</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customhostname_go">
+<a href="#customhostname_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Hostname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Host to redirect. Leave empty to use the incoming host as the destination host.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custompath_go">
+<a href="#custompath_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customquerystring_go">
+<a href="#customquerystring_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Query<wbr>String</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationprotocol_go">
+<a href="#destinationprotocol_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Protocol to use for the redirect. The default value is MatchRequest{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="redirecttype_nodejs">
+<a href="#redirecttype_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customfragment_nodejs">
+<a href="#customfragment_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Fragment</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customhostname_nodejs">
+<a href="#customhostname_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Hostname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Host to redirect. Leave empty to use the incoming host as the destination host.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custompath_nodejs">
+<a href="#custompath_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customquerystring_nodejs">
+<a href="#customquerystring_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Query<wbr>String</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationprotocol_nodejs">
+<a href="#destinationprotocol_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Protocol to use for the redirect. The default value is MatchRequest{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="redirecttype_python">
+<a href="#redirecttype_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customfragment_python">
+<a href="#customfragment_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Fragment</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customhostname_python">
+<a href="#customhostname_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Hostname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Host to redirect. Leave empty to use the incoming host as the destination host.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custompath_python">
+<a href="#custompath_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customquerystring_python">
+<a href="#customquerystring_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Query<wbr>String</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationprotocol_python">
+<a href="#destinationprotocol_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Protocol to use for the redirect. The default value is MatchRequest{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlredirectactionresponse">Url<wbr>Redirect<wbr>Action<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#UrlRedirectActionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#UrlRedirectActionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.UrlRedirectActionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlredirectactionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Url<wbr>Redirect<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlredirectactionparametersresponse">Url<wbr>Redirect<wbr>Action<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlredirectactionparametersresponse">Url<wbr>Redirect<wbr>Action<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlredirectactionparametersresponse">Dict[Url<wbr>Redirect<wbr>Action<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlrewriteactionparametersresponse">Url<wbr>Rewrite<wbr>Action<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#UrlRewriteActionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#UrlRewriteActionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.UrlRewriteActionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="destination_csharp">
+<a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Define the relative URL to which the above requests will be rewritten by.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcepattern_csharp">
+<a href="#sourcepattern_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Pattern</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preserveunmatchedpath_csharp">
+<a href="#preserveunmatchedpath_csharp" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Unmatched<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to preserve unmatched path. Default value is true.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="destination_go">
+<a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Define the relative URL to which the above requests will be rewritten by.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcepattern_go">
+<a href="#sourcepattern_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Pattern</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preserveunmatchedpath_go">
+<a href="#preserveunmatchedpath_go" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Unmatched<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to preserve unmatched path. Default value is true.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="destination_nodejs">
+<a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Define the relative URL to which the above requests will be rewritten by.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcepattern_nodejs">
+<a href="#sourcepattern_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Pattern</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preserveunmatchedpath_nodejs">
+<a href="#preserveunmatchedpath_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Unmatched<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to preserve unmatched path. Default value is true.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="destination_python">
+<a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Define the relative URL to which the above requests will be rewritten by.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcepattern_python">
+<a href="#sourcepattern_python" style="color: inherit; text-decoration: inherit;">source<wbr>Pattern</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preserveunmatchedpath_python">
+<a href="#preserveunmatchedpath_python" style="color: inherit; text-decoration: inherit;">preserve<wbr>Unmatched<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether to preserve unmatched path. Default value is true.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlrewriteactionresponse">Url<wbr>Rewrite<wbr>Action<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#UrlRewriteActionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#UrlRewriteActionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.UrlRewriteActionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlrewriteactionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlrewriteactionparametersresponse">Url<wbr>Rewrite<wbr>Action<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlrewriteactionparametersresponse">Url<wbr>Rewrite<wbr>Action<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlrewriteactionparametersresponse">Dict[Url<wbr>Rewrite<wbr>Action<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlsigningactionparametersresponse">Url<wbr>Signing<wbr>Action<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#UrlSigningActionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#UrlSigningActionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.UrlSigningActionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keyid_csharp">
+<a href="#keyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id reference of the key to be used to verify the hash and should be defined in UrlSigningKeys{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="algorithm_csharp">
+<a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Algorithm to use for URL signing{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsubnets_csharp">
+<a href="#ipsubnets_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Subnets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Match values to match against. Supports CIDR ranges (both IPv4 and IPv6).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="odatatype_csharp">
+<a href="#odatatype_csharp" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameternameoverride_csharp">
+<a href="#parameternameoverride_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Name<wbr>Override</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlsigningparamidentifierresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Url<wbr>Signing<wbr>Param<wbr>Identifier<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Defines which query string parameters in the url to be considered for expires, key id etc. {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keyid_go">
+<a href="#keyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id reference of the key to be used to verify the hash and should be defined in UrlSigningKeys{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="algorithm_go">
+<a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Algorithm to use for URL signing{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsubnets_go">
+<a href="#ipsubnets_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Subnets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Match values to match against. Supports CIDR ranges (both IPv4 and IPv6).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="odatatype_go">
+<a href="#odatatype_go" style="color: inherit; text-decoration: inherit;">Odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameternameoverride_go">
+<a href="#parameternameoverride_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Name<wbr>Override</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlsigningparamidentifierresponse">[]Url<wbr>Signing<wbr>Param<wbr>Identifier<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines which query string parameters in the url to be considered for expires, key id etc. {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keyid_nodejs">
+<a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id reference of the key to be used to verify the hash and should be defined in UrlSigningKeys{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="algorithm_nodejs">
+<a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Algorithm to use for URL signing{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsubnets_nodejs">
+<a href="#ipsubnets_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Subnets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Match values to match against. Supports CIDR ranges (both IPv4 and IPv6).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="odatatype_nodejs">
+<a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameternameoverride_nodejs">
+<a href="#parameternameoverride_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name<wbr>Override</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlsigningparamidentifierresponse">Url<wbr>Signing<wbr>Param<wbr>Identifier<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines which query string parameters in the url to be considered for expires, key id etc. {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_id_python">
+<a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Id reference of the key to be used to verify the hash and should be defined in UrlSigningKeys{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="algorithm_python">
+<a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Algorithm to use for URL signing{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsubnets_python">
+<a href="#ipsubnets_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Subnets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Match values to match against. Supports CIDR ranges (both IPv4 and IPv6).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="odatatype_python">
+<a href="#odatatype_python" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameternameoverride_python">
+<a href="#parameternameoverride_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name<wbr>Override</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlsigningparamidentifierresponse">List[Url<wbr>Signing<wbr>Param<wbr>Identifier<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines which query string parameters in the url to be considered for expires, key id etc. {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlsigningactionresponse">Url<wbr>Signing<wbr>Action<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#UrlSigningActionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#UrlSigningActionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.UrlSigningActionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlsigningactionparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Url<wbr>Signing<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlsigningactionparametersresponse">Url<wbr>Signing<wbr>Action<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlsigningactionparametersresponse">Url<wbr>Signing<wbr>Action<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#urlsigningactionparametersresponse">Dict[Url<wbr>Signing<wbr>Action<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlsigningkeyresponse">Url<wbr>Signing<wbr>Key<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#UrlSigningKeyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#UrlSigningKeyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.UrlSigningKeyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keyid_csharp">
+<a href="#keyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keysourceparameters_csharp">
+<a href="#keysourceparameters_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Source<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultsigningkeyparametersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Signing<wbr>Key<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for using customer key vault for Url Signing Key.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keyid_go">
+<a href="#keyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keysourceparameters_go">
+<a href="#keysourceparameters_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Source<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultsigningkeyparametersresponse">Key<wbr>Vault<wbr>Signing<wbr>Key<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for using customer key vault for Url Signing Key.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keyid_nodejs">
+<a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keysourceparameters_nodejs">
+<a href="#keysourceparameters_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Source<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultsigningkeyparametersresponse">Key<wbr>Vault<wbr>Signing<wbr>Key<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for using customer key vault for Url Signing Key.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keysourceparameters_python">
+<a href="#keysourceparameters_python" style="color: inherit; text-decoration: inherit;">key<wbr>Source<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultsigningkeyparametersresponse">Dict[Key<wbr>Vault<wbr>Signing<wbr>Key<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the parameters for using customer key vault for Url Signing Key.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_id_python">
+<a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="urlsigningparamidentifierresponse">Url<wbr>Signing<wbr>Param<wbr>Identifier<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#UrlSigningParamIdentifierResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#UrlSigningParamIdentifierResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.UrlSigningParamIdentifierResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="paramindicator_csharp">
+<a href="#paramindicator_csharp" style="color: inherit; text-decoration: inherit;">Param<wbr>Indicator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the purpose of the parameter{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="paramname_csharp">
+<a href="#paramname_csharp" style="color: inherit; text-decoration: inherit;">Param<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter name{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="paramindicator_go">
+<a href="#paramindicator_go" style="color: inherit; text-decoration: inherit;">Param<wbr>Indicator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the purpose of the parameter{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="paramname_go">
+<a href="#paramname_go" style="color: inherit; text-decoration: inherit;">Param<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter name{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="paramindicator_nodejs">
+<a href="#paramindicator_nodejs" style="color: inherit; text-decoration: inherit;">param<wbr>Indicator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the purpose of the parameter{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="paramname_nodejs">
+<a href="#paramname_nodejs" style="color: inherit; text-decoration: inherit;">param<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter name{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="paramindicator_python">
+<a href="#paramindicator_python" style="color: inherit; text-decoration: inherit;">param<wbr>Indicator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the purpose of the parameter{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="paramname_python">
+<a href="#paramname_python" style="color: inherit; text-decoration: inherit;">param<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter name{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

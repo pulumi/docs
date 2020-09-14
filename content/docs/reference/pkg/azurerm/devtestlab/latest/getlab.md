@@ -1211,6 +1211,464 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 
 
 
+## Supporting Types
+
+
+<h4 id="labannouncementpropertiesresponse">Lab<wbr>Announcement<wbr>Properties<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#LabAnnouncementPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/devtestlab/latest?tab=doc#LabAnnouncementPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DevTestLab.Latest.Outputs.LabAnnouncementPropertiesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="uniqueidentifier_csharp">
+<a href="#uniqueidentifier_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expirationdate_csharp">
+<a href="#expirationdate_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expired_csharp">
+<a href="#expired_csharp" style="color: inherit; text-decoration: inherit;">Expired</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="markdown_csharp">
+<a href="#markdown_csharp" style="color: inherit; text-decoration: inherit;">Markdown</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="title_csharp">
+<a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="uniqueidentifier_go">
+<a href="#uniqueidentifier_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expirationdate_go">
+<a href="#expirationdate_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expired_go">
+<a href="#expired_go" style="color: inherit; text-decoration: inherit;">Expired</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="markdown_go">
+<a href="#markdown_go" style="color: inherit; text-decoration: inherit;">Markdown</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="title_go">
+<a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="uniqueidentifier_nodejs">
+<a href="#uniqueidentifier_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expirationdate_nodejs">
+<a href="#expirationdate_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expired_nodejs">
+<a href="#expired_nodejs" style="color: inherit; text-decoration: inherit;">expired</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="markdown_nodejs">
+<a href="#markdown_nodejs" style="color: inherit; text-decoration: inherit;">markdown</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="title_nodejs">
+<a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unique_identifier_python">
+<a href="#unique_identifier_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expiration_date_python">
+<a href="#expiration_date_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expired_python">
+<a href="#expired_python" style="color: inherit; text-decoration: inherit;">expired</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="markdown_python">
+<a href="#markdown_python" style="color: inherit; text-decoration: inherit;">markdown</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="title_python">
+<a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="labsupportpropertiesresponse">Lab<wbr>Support<wbr>Properties<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#LabSupportPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/devtestlab/latest?tab=doc#LabSupportPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DevTestLab.Latest.Outputs.LabSupportPropertiesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="markdown_csharp">
+<a href="#markdown_csharp" style="color: inherit; text-decoration: inherit;">Markdown</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="markdown_go">
+<a href="#markdown_go" style="color: inherit; text-decoration: inherit;">Markdown</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="markdown_nodejs">
+<a href="#markdown_nodejs" style="color: inherit; text-decoration: inherit;">markdown</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="markdown_python">
+<a href="#markdown_python" style="color: inherit; text-decoration: inherit;">markdown</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

@@ -763,6 +763,384 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="connectorcollectionerrorinforesponse">Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ConnectorCollectionErrorInfoResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/costmanagement/preview?tab=doc#ConnectorCollectionErrorInfoResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.CostManagement.Preview.Outputs.ConnectorCollectionErrorInfoResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorcode_csharp">
+<a href="#errorcode_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Short error message{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errormessage_csharp">
+<a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Detailed error message{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorstarttime_csharp">
+<a href="#errorstarttime_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorcode_go">
+<a href="#errorcode_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Short error message{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errormessage_go">
+<a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Detailed error message{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorstarttime_go">
+<a href="#errorstarttime_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorcode_nodejs">
+<a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Short error message{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errormessage_nodejs">
+<a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Detailed error message{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorstarttime_nodejs">
+<a href="#errorstarttime_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="error_code_python">
+<a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Short error message{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="error_message_python">
+<a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Detailed error message{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="error_start_time_python">
+<a href="#error_start_time_python" style="color: inherit; text-decoration: inherit;">error_<wbr>start_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="connectorcollectioninforesponse">Connector<wbr>Collection<wbr>Info<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ConnectorCollectionInfoResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/costmanagement/preview?tab=doc#ConnectorCollectionInfoResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.CostManagement.Preview.Outputs.ConnectorCollectionInfoResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastrun_csharp">
+<a href="#lastrun_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Run</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastupdated_csharp">
+<a href="#lastupdated_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcelastupdated_csharp">
+<a href="#sourcelastupdated_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Last<wbr>Updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_csharp">
+<a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cost<wbr>Management.<wbr>Preview.<wbr>Inputs.<wbr>Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastrun_go">
+<a href="#lastrun_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Run</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastupdated_go">
+<a href="#lastupdated_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcelastupdated_go">
+<a href="#sourcelastupdated_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Last<wbr>Updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_go">
+<a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastrun_nodejs">
+<a href="#lastrun_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Run</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastupdated_nodejs">
+<a href="#lastupdated_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcelastupdated_nodejs">
+<a href="#sourcelastupdated_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Last<wbr>Updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_nodejs">
+<a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="last_run_python">
+<a href="#last_run_python" style="color: inherit; text-decoration: inherit;">last_<wbr>run</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="last_updated_python">
+<a href="#last_updated_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="source_last_updated_python">
+<a href="#source_last_updated_python" style="color: inherit; text-decoration: inherit;">source_<wbr>last_<wbr>updated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_python">
+<a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Dict[Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

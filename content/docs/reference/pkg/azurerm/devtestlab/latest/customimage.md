@@ -1197,6 +1197,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="customimagepropertiescustomresponse">Custom<wbr>Image<wbr>Properties<wbr>Custom<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#CustomImagePropertiesCustomResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/devtestlab/latest?tab=doc#CustomImagePropertiesCustomResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DevTestLab.Latest.Outputs.CustomImagePropertiesCustomResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ostype_csharp">
+<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imagename_csharp">
+<a href="#imagename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The image name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sysprep_csharp">
+<a href="#sysprep_csharp" style="color: inherit; text-decoration: inherit;">Sys<wbr>Prep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ostype_go">
+<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imagename_go">
+<a href="#imagename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The image name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sysprep_go">
+<a href="#sysprep_go" style="color: inherit; text-decoration: inherit;">Sys<wbr>Prep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ostype_nodejs">
+<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imagename_nodejs">
+<a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The image name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sysprep_nodejs">
+<a href="#sysprep_nodejs" style="color: inherit; text-decoration: inherit;">sys<wbr>Prep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="os_type_python">
+<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_name_python">
+<a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The image name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sys_prep_python">
+<a href="#sys_prep_python" style="color: inherit; text-decoration: inherit;">sys_<wbr>prep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="customimagepropertiesfromplan">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#CustomImagePropertiesFromPlan">input</a>   API doc for this type.
@@ -1207,6 +1373,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DevTestLab.Latest.Inputs.CustomImagePropertiesFromPlanArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offer_csharp">
+<a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publisher_csharp">
+<a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offer_go">
+<a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publisher_go">
+<a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offer_nodejs">
+<a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publisher_nodejs">
+<a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offer_python">
+<a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publisher_python">
+<a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="customimagepropertiesfromplanresponse">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#CustomImagePropertiesFromPlanResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/devtestlab/latest?tab=doc#CustomImagePropertiesFromPlanResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DevTestLab.Latest.Outputs.CustomImagePropertiesFromPlanResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1529,6 +1861,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="customimagepropertiesfromvmresponse">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#CustomImagePropertiesFromVmResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/devtestlab/latest?tab=doc#CustomImagePropertiesFromVmResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DevTestLab.Latest.Outputs.CustomImagePropertiesFromVmResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linuxosinfo_csharp">
+<a href="#linuxosinfo_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>Info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxosinforesponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Latest.<wbr>Inputs.<wbr>Linux<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcevmid_csharp">
+<a href="#sourcevmid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vm<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowsosinfo_csharp">
+<a href="#windowsosinfo_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>Info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#windowsosinforesponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Latest.<wbr>Inputs.<wbr>Windows<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linuxosinfo_go">
+<a href="#linuxosinfo_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>Info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxosinforesponse">Linux<wbr>Os<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcevmid_go">
+<a href="#sourcevmid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vm<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowsosinfo_go">
+<a href="#windowsosinfo_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>Info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#windowsosinforesponse">Windows<wbr>Os<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linuxosinfo_nodejs">
+<a href="#linuxosinfo_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Os<wbr>Info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxosinforesponse">Linux<wbr>Os<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcevmid_nodejs">
+<a href="#sourcevmid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vm<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowsosinfo_nodejs">
+<a href="#windowsosinfo_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Os<wbr>Info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#windowsosinforesponse">Windows<wbr>Os<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linux_os_info_python">
+<a href="#linux_os_info_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxosinforesponse">Dict[Linux<wbr>Os<wbr>Info<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_vm_id_python">
+<a href="#source_vm_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vm_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windows_os_info_python">
+<a href="#windows_os_info_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>os_<wbr>info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#windowsosinforesponse">Dict[Windows<wbr>Os<wbr>Info<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="datadiskstoragetypeinfo">Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#DataDiskStorageTypeInfo">input</a>   API doc for this type.
@@ -1539,6 +2037,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DevTestLab.Latest.Inputs.DataDiskStorageTypeInfoArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lun_csharp">
+<a href="#lun_csharp" style="color: inherit; text-decoration: inherit;">Lun</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Disk Lun{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storagetype_csharp">
+<a href="#storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lun_go">
+<a href="#lun_go" style="color: inherit; text-decoration: inherit;">Lun</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Disk Lun{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storagetype_go">
+<a href="#storagetype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lun_nodejs">
+<a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Disk Lun{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storagetype_nodejs">
+<a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lun_python">
+<a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Disk Lun{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_type_python">
+<a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="datadiskstoragetypeinforesponse">Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DataDiskStorageTypeInfoResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/devtestlab/latest?tab=doc#DataDiskStorageTypeInfoResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DevTestLab.Latest.Outputs.DataDiskStorageTypeInfoResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1741,6 +2365,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="linuxosinforesponse">Linux<wbr>Os<wbr>Info<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#LinuxOsInfoResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/devtestlab/latest?tab=doc#LinuxOsInfoResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DevTestLab.Latest.Outputs.LinuxOsInfoResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linuxosstate_csharp">
+<a href="#linuxosstate_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linuxosstate_go">
+<a href="#linuxosstate_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linuxosstate_nodejs">
+<a href="#linuxosstate_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Os<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linux_os_state_python">
+<a href="#linux_os_state_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="windowsosinfo">Windows<wbr>Os<wbr>Info</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#WindowsOsInfo">input</a>   API doc for this type.
@@ -1751,6 +2461,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DevTestLab.Latest.Inputs.WindowsOsInfoArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowsosstate_csharp">
+<a href="#windowsosstate_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowsosstate_go">
+<a href="#windowsosstate_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowsosstate_nodejs">
+<a href="#windowsosstate_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Os<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windows_os_state_python">
+<a href="#windows_os_state_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>os_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="windowsosinforesponse">Windows<wbr>Os<wbr>Info<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#WindowsOsInfoResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/devtestlab/latest?tab=doc#WindowsOsInfoResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DevTestLab.Latest.Outputs.WindowsOsInfoResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

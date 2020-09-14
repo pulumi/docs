@@ -1077,6 +1077,332 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="addressresponse">Address<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AddressResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/databoxedge/preview?tab=doc#AddressResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DataBoxEdge.Preview.Outputs.AddressResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="addressline1_csharp">
+<a href="#addressline1_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Line1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address line1.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="city_csharp">
+<a href="#city_csharp" style="color: inherit; text-decoration: inherit;">City</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The city name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="country_csharp">
+<a href="#country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The country name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="postalcode_csharp">
+<a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The postal code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressline2_csharp">
+<a href="#addressline2_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Line2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address line2.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressline3_csharp">
+<a href="#addressline3_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Line3</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address line3.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="addressline1_go">
+<a href="#addressline1_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Line1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address line1.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="city_go">
+<a href="#city_go" style="color: inherit; text-decoration: inherit;">City</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The city name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="country_go">
+<a href="#country_go" style="color: inherit; text-decoration: inherit;">Country</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The country name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="postalcode_go">
+<a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The postal code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressline2_go">
+<a href="#addressline2_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Line2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address line2.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressline3_go">
+<a href="#addressline3_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Line3</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address line3.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="addressline1_nodejs">
+<a href="#addressline1_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Line1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address line1.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="city_nodejs">
+<a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The city name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="country_nodejs">
+<a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The country name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="postalcode_nodejs">
+<a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The postal code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressline2_nodejs">
+<a href="#addressline2_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Line2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address line2.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressline3_nodejs">
+<a href="#addressline3_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Line3</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address line3.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="address_line1_python">
+<a href="#address_line1_python" style="color: inherit; text-decoration: inherit;">address_<wbr>line1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The address line1.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="city_python">
+<a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The city name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="country_python">
+<a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The country name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="postal_code_python">
+<a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The postal code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The state name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="address_line2_python">
+<a href="#address_line2_python" style="color: inherit; text-decoration: inherit;">address_<wbr>line2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The address line2.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="address_line3_python">
+<a href="#address_line3_python" style="color: inherit; text-decoration: inherit;">address_<wbr>line3</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The address line3.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="contactdetails">Contact<wbr>Details</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#ContactDetails">input</a>   API doc for this type.
@@ -1087,6 +1413,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DataBoxEdge.Preview.Inputs.ContactDetailsArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="companyname_csharp">
+<a href="#companyname_csharp" style="color: inherit; text-decoration: inherit;">Company<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the company.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="contactperson_csharp">
+<a href="#contactperson_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Person</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The contact person name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="emaillist_csharp">
+<a href="#emaillist_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>List</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The email list.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="phone_csharp">
+<a href="#phone_csharp" style="color: inherit; text-decoration: inherit;">Phone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The phone number.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="companyname_go">
+<a href="#companyname_go" style="color: inherit; text-decoration: inherit;">Company<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the company.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="contactperson_go">
+<a href="#contactperson_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Person</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The contact person name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="emaillist_go">
+<a href="#emaillist_go" style="color: inherit; text-decoration: inherit;">Email<wbr>List</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The email list.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="phone_go">
+<a href="#phone_go" style="color: inherit; text-decoration: inherit;">Phone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The phone number.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="companyname_nodejs">
+<a href="#companyname_nodejs" style="color: inherit; text-decoration: inherit;">company<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the company.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="contactperson_nodejs">
+<a href="#contactperson_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Person</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The contact person name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="emaillist_nodejs">
+<a href="#emaillist_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>List</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The email list.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="phone_nodejs">
+<a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The phone number.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="company_name_python">
+<a href="#company_name_python" style="color: inherit; text-decoration: inherit;">company_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the company.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="contact_person_python">
+<a href="#contact_person_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>person</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The contact person name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="email_list_python">
+<a href="#email_list_python" style="color: inherit; text-decoration: inherit;">email_<wbr>list</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The email list.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="phone_python">
+<a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The phone number.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="contactdetailsresponse">Contact<wbr>Details<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ContactDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/databoxedge/preview?tab=doc#ContactDetailsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DataBoxEdge.Preview.Outputs.ContactDetailsResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1401,6 +1933,422 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Comments related to this status change.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="orderstatusresponse">Order<wbr>Status<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#OrderStatusResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/databoxedge/preview?tab=doc#OrderStatusResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DataBoxEdge.Preview.Outputs.OrderStatusResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="additionalorderdetails_csharp">
+<a href="#additionalorderdetails_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Order<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Dictionary to hold generic information which is not stored
+by the already existing properties{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the order as per the allowed status types.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="updatedatetime_csharp">
+<a href="#updatedatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Date<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time of status update.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="comments_csharp">
+<a href="#comments_csharp" style="color: inherit; text-decoration: inherit;">Comments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Comments related to this status change.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="additionalorderdetails_go">
+<a href="#additionalorderdetails_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Order<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Dictionary to hold generic information which is not stored
+by the already existing properties{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the order as per the allowed status types.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="updatedatetime_go">
+<a href="#updatedatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Date<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time of status update.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="comments_go">
+<a href="#comments_go" style="color: inherit; text-decoration: inherit;">Comments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Comments related to this status change.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="additionalorderdetails_nodejs">
+<a href="#additionalorderdetails_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Order<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Dictionary to hold generic information which is not stored
+by the already existing properties{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the order as per the allowed status types.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="updatedatetime_nodejs">
+<a href="#updatedatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Date<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time of status update.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="comments_nodejs">
+<a href="#comments_nodejs" style="color: inherit; text-decoration: inherit;">comments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Comments related to this status change.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="additional_order_details_python">
+<a href="#additional_order_details_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>order_<wbr>details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Dictionary to hold generic information which is not stored
+by the already existing properties{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the order as per the allowed status types.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="update_date_time_python">
+<a href="#update_date_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>date_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Time of status update.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="comments_python">
+<a href="#comments_python" style="color: inherit; text-decoration: inherit;">comments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Comments related to this status change.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="trackinginforesponse">Tracking<wbr>Info<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#TrackingInfoResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/databoxedge/preview?tab=doc#TrackingInfoResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DataBoxEdge.Preview.Outputs.TrackingInfoResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="carriername_csharp">
+<a href="#carriername_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the carrier used in the delivery.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serialnumber_csharp">
+<a href="#serialnumber_csharp" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Serial number of the device being tracked.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trackingid_csharp">
+<a href="#trackingid_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Tracking ID of the shipment.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trackingurl_csharp">
+<a href="#trackingurl_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Tracking URL of the shipment.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="carriername_go">
+<a href="#carriername_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the carrier used in the delivery.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serialnumber_go">
+<a href="#serialnumber_go" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Serial number of the device being tracked.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trackingid_go">
+<a href="#trackingid_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Tracking ID of the shipment.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trackingurl_go">
+<a href="#trackingurl_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Tracking URL of the shipment.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="carriername_nodejs">
+<a href="#carriername_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the carrier used in the delivery.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serialnumber_nodejs">
+<a href="#serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Serial number of the device being tracked.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trackingid_nodejs">
+<a href="#trackingid_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Tracking ID of the shipment.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trackingurl_nodejs">
+<a href="#trackingurl_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Tracking URL of the shipment.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="carrier_name_python">
+<a href="#carrier_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the carrier used in the delivery.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serial_number_python">
+<a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Serial number of the device being tracked.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trackingid_python">
+<a href="#trackingid_python" style="color: inherit; text-decoration: inherit;">tracking<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Tracking ID of the shipment.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trackingurl_python">
+<a href="#trackingurl_python" style="color: inherit; text-decoration: inherit;">tracking<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Tracking URL of the shipment.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

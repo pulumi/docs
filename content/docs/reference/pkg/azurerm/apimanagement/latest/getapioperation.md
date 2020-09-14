@@ -683,6 +683,956 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="parametercontractresponse">Parameter<wbr>Contract<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ParameterContractResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/apimanagement/latest?tab=doc#ParameterContractResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ApiManagement.Latest.Outputs.ParameterContractResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultvalue_csharp">
+<a href="#defaultvalue_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="required_csharp">
+<a href="#required_csharp" style="color: inherit; text-decoration: inherit;">Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultvalue_go">
+<a href="#defaultvalue_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="required_go">
+<a href="#required_go" style="color: inherit; text-decoration: inherit;">Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultvalue_nodejs">
+<a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="required_nodejs">
+<a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_value_python">
+<a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="required_python">
+<a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="representationcontractresponse">Representation<wbr>Contract<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RepresentationContractResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/apimanagement/latest?tab=doc#RepresentationContractResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ApiManagement.Latest.Outputs.RepresentationContractResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="contenttype_csharp">
+<a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formparameters_csharp">
+<a href="#formparameters_csharp" style="color: inherit; text-decoration: inherit;">Form<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Api<wbr>Management.<wbr>Latest.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sample_csharp">
+<a href="#sample_csharp" style="color: inherit; text-decoration: inherit;">Sample</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaid_csharp">
+<a href="#schemaid_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="typename_csharp">
+<a href="#typename_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="contenttype_go">
+<a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formparameters_go">
+<a href="#formparameters_go" style="color: inherit; text-decoration: inherit;">Form<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parametercontractresponse">[]Parameter<wbr>Contract<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sample_go">
+<a href="#sample_go" style="color: inherit; text-decoration: inherit;">Sample</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaid_go">
+<a href="#schemaid_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="typename_go">
+<a href="#typename_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="contenttype_nodejs">
+<a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formparameters_nodejs">
+<a href="#formparameters_nodejs" style="color: inherit; text-decoration: inherit;">form<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parametercontractresponse">Parameter<wbr>Contract<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sample_nodejs">
+<a href="#sample_nodejs" style="color: inherit; text-decoration: inherit;">sample</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaid_nodejs">
+<a href="#schemaid_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="typename_nodejs">
+<a href="#typename_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="content_type_python">
+<a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="formparameters_python">
+<a href="#formparameters_python" style="color: inherit; text-decoration: inherit;">form<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parametercontractresponse">List[Parameter<wbr>Contract<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sample_python">
+<a href="#sample_python" style="color: inherit; text-decoration: inherit;">sample</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schema_id_python">
+<a href="#schema_id_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_name_python">
+<a href="#type_name_python" style="color: inherit; text-decoration: inherit;">type_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="requestcontractresponse">Request<wbr>Contract<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RequestContractResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/apimanagement/latest?tab=doc#RequestContractResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ApiManagement.Latest.Outputs.RequestContractResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operation request description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Api<wbr>Management.<wbr>Latest.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="queryparameters_csharp">
+<a href="#queryparameters_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Api<wbr>Management.<wbr>Latest.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="representations_csharp">
+<a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Api<wbr>Management.<wbr>Latest.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operation request description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parametercontractresponse">[]Parameter<wbr>Contract<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="queryparameters_go">
+<a href="#queryparameters_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parametercontractresponse">[]Parameter<wbr>Contract<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="representations_go">
+<a href="#representations_go" style="color: inherit; text-decoration: inherit;">Representations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#representationcontractresponse">[]Representation<wbr>Contract<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operation request description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parametercontractresponse">Parameter<wbr>Contract<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="queryparameters_nodejs">
+<a href="#queryparameters_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parametercontractresponse">Parameter<wbr>Contract<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="representations_nodejs">
+<a href="#representations_nodejs" style="color: inherit; text-decoration: inherit;">representations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#representationcontractresponse">Representation<wbr>Contract<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Operation request description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parametercontractresponse">List[Parameter<wbr>Contract<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="query_parameters_python">
+<a href="#query_parameters_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parametercontractresponse">List[Parameter<wbr>Contract<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="representations_python">
+<a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#representationcontractresponse">List[Representation<wbr>Contract<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="responsecontractresponse">Response<wbr>Contract<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ResponseContractResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/apimanagement/latest?tab=doc#ResponseContractResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ApiManagement.Latest.Outputs.ResponseContractResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statuscode_csharp">
+<a href="#statuscode_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operation response description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Api<wbr>Management.<wbr>Latest.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="representations_csharp">
+<a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Api<wbr>Management.<wbr>Latest.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statuscode_go">
+<a href="#statuscode_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operation response description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parametercontractresponse">[]Parameter<wbr>Contract<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="representations_go">
+<a href="#representations_go" style="color: inherit; text-decoration: inherit;">Representations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#representationcontractresponse">[]Representation<wbr>Contract<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="statuscode_nodejs">
+<a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operation response description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parametercontractresponse">Parameter<wbr>Contract<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="representations_nodejs">
+<a href="#representations_nodejs" style="color: inherit; text-decoration: inherit;">representations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#representationcontractresponse">Representation<wbr>Contract<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_code_python">
+<a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Operation response description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parametercontractresponse">List[Parameter<wbr>Contract<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="representations_python">
+<a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#representationcontractresponse">List[Representation<wbr>Contract<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

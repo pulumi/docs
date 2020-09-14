@@ -490,6 +490,132 @@ The following output properties are available:
 
 
 
+<h4 id="wsdlserviceresponse">Wsdl<wbr>Service<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#WsdlServiceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/web/latest?tab=doc#WsdlServiceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Web.Latest.Outputs.WsdlServiceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="qualifiedname_csharp">
+<a href="#qualifiedname_csharp" style="color: inherit; text-decoration: inherit;">Qualified<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service's qualified name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpointqualifiednames_csharp">
+<a href="#endpointqualifiednames_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Qualified<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of the endpoints' qualified names{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="qualifiedname_go">
+<a href="#qualifiedname_go" style="color: inherit; text-decoration: inherit;">Qualified<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service's qualified name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpointqualifiednames_go">
+<a href="#endpointqualifiednames_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Qualified<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of the endpoints' qualified names{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="qualifiedname_nodejs">
+<a href="#qualifiedname_nodejs" style="color: inherit; text-decoration: inherit;">qualified<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service's qualified name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpointqualifiednames_nodejs">
+<a href="#endpointqualifiednames_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Qualified<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of the endpoints' qualified names{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="qualified_name_python">
+<a href="#qualified_name_python" style="color: inherit; text-decoration: inherit;">qualified_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The service's qualified name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpoint_qualified_names_python">
+<a href="#endpoint_qualified_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>qualified_<wbr>names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of the endpoints' qualified names{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 
 
 

@@ -917,6 +917,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="propagatedroutetableresponse">Propagated<wbr>Route<wbr>Table<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#PropagatedRouteTableResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest?tab=doc#PropagatedRouteTableResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Network.Latest.Outputs.PropagatedRouteTableResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ids_csharp">
+<a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Network.<wbr>Latest.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of labels.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ids_go">
+<a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of labels.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ids_nodejs">
+<a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of labels.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ids_python">
+<a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">List[Sub<wbr>Resource<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of labels.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="routingconfiguration">Routing<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#RoutingConfiguration">input</a>   API doc for this type.
@@ -1083,6 +1209,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="routingconfigurationresponse">Routing<wbr>Configuration<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RoutingConfigurationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest?tab=doc#RoutingConfigurationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Network.Latest.Outputs.RoutingConfigurationResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="associatedroutetable_csharp">
+<a href="#associatedroutetable_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Route<wbr>Table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Network.<wbr>Latest.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="propagatedroutetables_csharp">
+<a href="#propagatedroutetables_csharp" style="color: inherit; text-decoration: inherit;">Propagated<wbr>Route<wbr>Tables</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propagatedroutetableresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Network.<wbr>Latest.<wbr>Inputs.<wbr>Propagated<wbr>Route<wbr>Table<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vnetroutes_csharp">
+<a href="#vnetroutes_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Routes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vnetrouteresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Network.<wbr>Latest.<wbr>Inputs.<wbr>Vnet<wbr>Route<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="associatedroutetable_go">
+<a href="#associatedroutetable_go" style="color: inherit; text-decoration: inherit;">Associated<wbr>Route<wbr>Table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="propagatedroutetables_go">
+<a href="#propagatedroutetables_go" style="color: inherit; text-decoration: inherit;">Propagated<wbr>Route<wbr>Tables</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propagatedroutetableresponse">Propagated<wbr>Route<wbr>Table<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vnetroutes_go">
+<a href="#vnetroutes_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Routes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vnetrouteresponse">Vnet<wbr>Route<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="associatedroutetable_nodejs">
+<a href="#associatedroutetable_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Route<wbr>Table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="propagatedroutetables_nodejs">
+<a href="#propagatedroutetables_nodejs" style="color: inherit; text-decoration: inherit;">propagated<wbr>Route<wbr>Tables</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propagatedroutetableresponse">Propagated<wbr>Route<wbr>Table<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vnetroutes_nodejs">
+<a href="#vnetroutes_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Routes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vnetrouteresponse">Vnet<wbr>Route<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="associated_route_table_python">
+<a href="#associated_route_table_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>route_<wbr>table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="propagated_route_tables_python">
+<a href="#propagated_route_tables_python" style="color: inherit; text-decoration: inherit;">propagated_<wbr>route_<wbr>tables</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#propagatedroutetableresponse">Dict[Propagated<wbr>Route<wbr>Table<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vnet_routes_python">
+<a href="#vnet_routes_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>routes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vnetrouteresponse">Dict[Vnet<wbr>Route<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="staticroute">Static<wbr>Route</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#StaticRoute">input</a>   API doc for this type.
@@ -1093,6 +1385,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Network.Latest.Inputs.StaticRouteArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressprefixes_csharp">
+<a href="#addressprefixes_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of all address prefixes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the StaticRoute that is unique within a VnetRoute.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nexthopipaddress_csharp">
+<a href="#nexthopipaddress_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ip address of the next hop.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressprefixes_go">
+<a href="#addressprefixes_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of all address prefixes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the StaticRoute that is unique within a VnetRoute.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nexthopipaddress_go">
+<a href="#nexthopipaddress_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ip address of the next hop.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressprefixes_nodejs">
+<a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of all address prefixes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the StaticRoute that is unique within a VnetRoute.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nexthopipaddress_nodejs">
+<a href="#nexthopipaddress_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ip address of the next hop.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="address_prefixes_python">
+<a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of all address prefixes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the StaticRoute that is unique within a VnetRoute.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="next_hop_ip_address_python">
+<a href="#next_hop_ip_address_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ip_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ip address of the next hop.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="staticrouteresponse">Static<wbr>Route<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#StaticRouteResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest?tab=doc#StaticRouteResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Network.Latest.Outputs.StaticRouteResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1335,6 +1793,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="subresourceresponse">Sub<wbr>Resource<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SubResourceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest?tab=doc#SubResourceResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Network.Latest.Outputs.SubResourceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="vnetroute">Vnet<wbr>Route</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#VnetRoute">input</a>   API doc for this type.
@@ -1411,6 +1955,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#staticroute">List[Static<wbr>Route]</a></span>
+    </dt>
+    <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="vnetrouteresponse">Vnet<wbr>Route<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#VnetRouteResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest?tab=doc#VnetRouteResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Network.Latest.Outputs.VnetRouteResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="staticroutes_csharp">
+<a href="#staticroutes_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Routes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#staticrouteresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Network.<wbr>Latest.<wbr>Inputs.<wbr>Static<wbr>Route<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="staticroutes_go">
+<a href="#staticroutes_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Routes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#staticrouteresponse">[]Static<wbr>Route<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="staticroutes_nodejs">
+<a href="#staticroutes_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Routes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#staticrouteresponse">Static<wbr>Route<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="static_routes_python">
+<a href="#static_routes_python" style="color: inherit; text-decoration: inherit;">static_<wbr>routes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#staticrouteresponse">List[Static<wbr>Route<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd>
 

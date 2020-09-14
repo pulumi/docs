@@ -837,6 +837,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="clfstargetresponse">Clfs<wbr>Target<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ClfsTargetResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storagecache/latest?tab=doc#ClfsTargetResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.StorageCache.Latest.Outputs.ClfsTargetResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_csharp">
+<a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID of storage container.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_go">
+<a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID of storage container.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_nodejs">
+<a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID of storage container.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_python">
+<a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID of storage container.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="namespacejunction">Namespace<wbr>Junction</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#NamespaceJunction">input</a>   API doc for this type.
@@ -847,6 +933,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.StorageCache.Latest.Inputs.NamespaceJunctionArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="namespacepath_csharp">
+<a href="#namespacepath_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Namespace path on a Cache for a Storage Target.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nfsexport_csharp">
+<a href="#nfsexport_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Export</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}NFS export where targetPath exists.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetpath_csharp">
+<a href="#targetpath_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path in Storage Target to which namespacePath points.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="namespacepath_go">
+<a href="#namespacepath_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Namespace path on a Cache for a Storage Target.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nfsexport_go">
+<a href="#nfsexport_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Export</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}NFS export where targetPath exists.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetpath_go">
+<a href="#targetpath_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path in Storage Target to which namespacePath points.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="namespacepath_nodejs">
+<a href="#namespacepath_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Namespace path on a Cache for a Storage Target.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nfsexport_nodejs">
+<a href="#nfsexport_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Export</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}NFS export where targetPath exists.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetpath_nodejs">
+<a href="#targetpath_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path in Storage Target to which namespacePath points.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="namespacepath_python">
+<a href="#namespacepath_python" style="color: inherit; text-decoration: inherit;">namespace<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Namespace path on a Cache for a Storage Target.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nfsexport_python">
+<a href="#nfsexport_python" style="color: inherit; text-decoration: inherit;">nfs<wbr>Export</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}NFS export where targetPath exists.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetpath_python">
+<a href="#targetpath_python" style="color: inherit; text-decoration: inherit;">target<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Path in Storage Target to which namespacePath points.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="namespacejunctionresponse">Namespace<wbr>Junction<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#NamespaceJunctionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storagecache/latest?tab=doc#NamespaceJunctionResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.StorageCache.Latest.Outputs.NamespaceJunctionResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1129,6 +1381,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="nfs3targetresponse">Nfs3Target<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#Nfs3TargetResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storagecache/latest?tab=doc#Nfs3TargetResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.StorageCache.Latest.Outputs.Nfs3TargetResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_csharp">
+<a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address or host name of an NFSv3 host (e.g., 10.0.44.44).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usagemodel_csharp">
+<a href="#usagemodel_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Model</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Identifies the primary usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_go">
+<a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address or host name of an NFSv3 host (e.g., 10.0.44.44).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usagemodel_go">
+<a href="#usagemodel_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Model</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Identifies the primary usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_nodejs">
+<a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address or host name of an NFSv3 host (e.g., 10.0.44.44).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usagemodel_nodejs">
+<a href="#usagemodel_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Model</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Identifies the primary usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_python">
+<a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}IP address or host name of an NFSv3 host (e.g., 10.0.44.44).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usage_model_python">
+<a href="#usage_model_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>model</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Identifies the primary usage model to be used for this Storage Target. Get choices from .../usageModels{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="unknowntarget">Unknown<wbr>Target</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#UnknownTarget">input</a>   API doc for this type.
@@ -1139,6 +1517,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.StorageCache.Latest.Inputs.UnknownTargetArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unknownmap_csharp">
+<a href="#unknownmap_csharp" style="color: inherit; text-decoration: inherit;">Unknown<wbr>Map</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Dictionary of string->string pairs containing information about the Storage Target.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unknownmap_go">
+<a href="#unknownmap_go" style="color: inherit; text-decoration: inherit;">Unknown<wbr>Map</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Dictionary of string->string pairs containing information about the Storage Target.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unknownmap_nodejs">
+<a href="#unknownmap_nodejs" style="color: inherit; text-decoration: inherit;">unknown<wbr>Map</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Dictionary of string->string pairs containing information about the Storage Target.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="unknown_map_python">
+<a href="#unknown_map_python" style="color: inherit; text-decoration: inherit;">unknown_<wbr>map</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Dictionary of string->string pairs containing information about the Storage Target.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="unknowntargetresponse">Unknown<wbr>Target<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#UnknownTargetResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storagecache/latest?tab=doc#UnknownTargetResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.StorageCache.Latest.Outputs.UnknownTargetResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -1133,6 +1133,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="azurefunctioneventsubscriptiondestinationresponse">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AzureFunctionEventSubscriptionDestinationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#AzureFunctionEventSubscriptionDestinationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.AzureFunctionEventSubscriptionDestinationResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxeventsperbatch_csharp">
+<a href="#maxeventsperbatch_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Events<wbr>Per<wbr>Batch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferredbatchsizeinkilobytes_csharp">
+<a href="#preferredbatchsizeinkilobytes_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxeventsperbatch_go">
+<a href="#maxeventsperbatch_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Events<wbr>Per<wbr>Batch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferredbatchsizeinkilobytes_go">
+<a href="#preferredbatchsizeinkilobytes_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxeventsperbatch_nodejs">
+<a href="#maxeventsperbatch_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferredbatchsizeinkilobytes_nodejs">
+<a href="#preferredbatchsizeinkilobytes_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxeventsperbatch_python">
+<a href="#maxeventsperbatch_python" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferredbatchsizeinkilobytes_python">
+<a href="#preferredbatchsizeinkilobytes_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="boolequalsadvancedfilter">Bool<wbr>Equals<wbr>Advanced<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#BoolEqualsAdvancedFilter">input</a>   API doc for this type.
@@ -1143,6 +1309,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Inputs.BoolEqualsAdvancedFilterArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The boolean filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The boolean filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}The boolean filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The boolean filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="boolequalsadvancedfilterresponse">Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#BoolEqualsAdvancedFilterResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#BoolEqualsAdvancedFilterResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.BoolEqualsAdvancedFilterResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1389,6 +1681,136 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 
 
 
+<h4 id="deadletterwithresourceidentityresponse">Dead<wbr>Letter<wbr>With<wbr>Resource<wbr>Identity<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeadLetterWithResourceIdentityResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#DeadLetterWithResourceIdentityResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.DeadLetterWithResourceIdentityResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadletterdestination_csharp">
+<a href="#deadletterdestination_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
+Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The identity to use when dead-lettering events.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadletterdestination_go">
+<a href="#deadletterdestination_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
+Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Event<wbr>Subscription<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The identity to use when dead-lettering events.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadletterdestination_nodejs">
+<a href="#deadletterdestination_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
+Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Event<wbr>Subscription<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The identity to use when dead-lettering events.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dead_letter_destination_python">
+<a href="#dead_letter_destination_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Dict[Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
+Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Dict[Event<wbr>Subscription<wbr>Identity<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The identity to use when dead-lettering events.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="deliverywithresourceidentity">Delivery<wbr>With<wbr>Resource<wbr>Identity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#DeliveryWithResourceIdentity">input</a>   API doc for this type.
@@ -1519,6 +1941,136 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 
 
 
+<h4 id="deliverywithresourceidentityresponse">Delivery<wbr>With<wbr>Resource<wbr>Identity<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeliveryWithResourceIdentityResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#DeliveryWithResourceIdentityResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.DeliveryWithResourceIdentityResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destination_csharp">
+<a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
+Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The identity to use when delivering events.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destination_go">
+<a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
+Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Event<wbr>Subscription<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The identity to use when delivering events.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destination_nodejs">
+<a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response | Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response | Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response | Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response | Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response | Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response | Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
+Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Event<wbr>Subscription<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The identity to use when delivering events.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destination_python">
+<a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response] | Dict[Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response] | Dict[Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response] | Dict[Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response] | Dict[Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response] | Dict[Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response] | Dict[Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
+Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Dict[Event<wbr>Subscription<wbr>Identity<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The identity to use when delivering events.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="eventhubeventsubscriptiondestination">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#EventHubEventSubscriptionDestination">input</a>   API doc for this type.
@@ -1529,6 +2081,92 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Inputs.EventHubEventSubscriptionDestinationArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Id that represents the endpoint of an Event Hub destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Id that represents the endpoint of an Event Hub destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Id that represents the endpoint of an Event Hub destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Id that represents the endpoint of an Event Hub destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="eventhubeventsubscriptiondestinationresponse">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#EventHubEventSubscriptionDestinationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#EventHubEventSubscriptionDestinationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.EventHubEventSubscriptionDestinationResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1867,6 +2505,268 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
+<h4 id="eventsubscriptionfilterresponse">Event<wbr>Subscription<wbr>Filter<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#EventSubscriptionFilterResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#EventSubscriptionFilterResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.EventSubscriptionFilterResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="advancedfilters_csharp">
+<a href="#advancedfilters_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Event<wbr>Grid.<wbr>Preview.<wbr>Inputs.<wbr>String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includedeventtypes_csharp">
+<a href="#includedeventtypes_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Event<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="issubjectcasesensitive_csharp">
+<a href="#issubjectcasesensitive_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Subject<wbr>Case<wbr>Sensitive</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
+should be compared in a case sensitive manner.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subjectbeginswith_csharp">
+<a href="#subjectbeginswith_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Begins<wbr>With</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional string to filter events for an event subscription based on a resource path prefix.
+The format of this depends on the publisher of the events.
+Wildcard characters are not supported in this path.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subjectendswith_csharp">
+<a href="#subjectendswith_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Ends<wbr>With</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional string to filter events for an event subscription based on a resource path suffix.
+Wildcard characters are not supported in this path.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="advancedfilters_go">
+<a href="#advancedfilters_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includedeventtypes_go">
+<a href="#includedeventtypes_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Event<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="issubjectcasesensitive_go">
+<a href="#issubjectcasesensitive_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Subject<wbr>Case<wbr>Sensitive</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
+should be compared in a case sensitive manner.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subjectbeginswith_go">
+<a href="#subjectbeginswith_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Begins<wbr>With</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional string to filter events for an event subscription based on a resource path prefix.
+The format of this depends on the publisher of the events.
+Wildcard characters are not supported in this path.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subjectendswith_go">
+<a href="#subjectendswith_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Ends<wbr>With</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional string to filter events for an event subscription based on a resource path suffix.
+Wildcard characters are not supported in this path.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="advancedfilters_nodejs">
+<a href="#advancedfilters_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response[]</span>
+    </dt>
+    <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includedeventtypes_nodejs">
+<a href="#includedeventtypes_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Event<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="issubjectcasesensitive_nodejs">
+<a href="#issubjectcasesensitive_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Subject<wbr>Case<wbr>Sensitive</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
+should be compared in a case sensitive manner.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subjectbeginswith_nodejs">
+<a href="#subjectbeginswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Begins<wbr>With</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional string to filter events for an event subscription based on a resource path prefix.
+The format of this depends on the publisher of the events.
+Wildcard characters are not supported in this path.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subjectendswith_nodejs">
+<a href="#subjectendswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Ends<wbr>With</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional string to filter events for an event subscription based on a resource path suffix.
+Wildcard characters are not supported in this path.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="advanced_filters_python">
+<a href="#advanced_filters_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">List[Union<Azurerm:Eventgrid/Preview:Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Azurerm:Eventgrid/Preview:Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response, Azurerm:Eventgrid/Preview:Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Azurerm:Eventgrid/Preview:Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Azurerm:Eventgrid/Preview:Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response, Azurerm:Eventgrid/Preview:Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Azurerm:Eventgrid/Preview:Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Azurerm:Eventgrid/Preview:String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response, Azurerm:Eventgrid/Preview:String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response, Azurerm:Eventgrid/Preview:String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response, Azurerm:Eventgrid/Preview:String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Azurerm:Eventgrid/Preview:String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Default=>]</span>
+    </dt>
+    <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="included_event_types_python">
+<a href="#included_event_types_python" style="color: inherit; text-decoration: inherit;">included_<wbr>event_<wbr>types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_subject_case_sensitive_python">
+<a href="#is_subject_case_sensitive_python" style="color: inherit; text-decoration: inherit;">is_<wbr>subject_<wbr>case_<wbr>sensitive</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
+should be compared in a case sensitive manner.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subject_begins_with_python">
+<a href="#subject_begins_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>begins_<wbr>with</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}An optional string to filter events for an event subscription based on a resource path prefix.
+The format of this depends on the publisher of the events.
+Wildcard characters are not supported in this path.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subject_ends_with_python">
+<a href="#subject_ends_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>ends_<wbr>with</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}An optional string to filter events for an event subscription based on a resource path suffix.
+Wildcard characters are not supported in this path.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="eventsubscriptionidentity">Event<wbr>Subscription<wbr>Identity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#EventSubscriptionIdentity">input</a>   API doc for this type.
@@ -1877,6 +2777,132 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Inputs.EventSubscriptionIdentityArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentity_csharp">
+<a href="#userassignedidentity_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user identity associated with the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentity_go">
+<a href="#userassignedidentity_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user identity associated with the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentity_nodejs">
+<a href="#userassignedidentity_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user identity associated with the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identity_python">
+<a href="#user_assigned_identity_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The user identity associated with the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="eventsubscriptionidentityresponse">Event<wbr>Subscription<wbr>Identity<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#EventSubscriptionIdentityResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#EventSubscriptionIdentityResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.EventSubscriptionIdentityResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2079,6 +3105,92 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
+<h4 id="hybridconnectioneventsubscriptiondestinationresponse">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#HybridConnectionEventSubscriptionDestinationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#HybridConnectionEventSubscriptionDestinationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.HybridConnectionEventSubscriptionDestinationResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource ID of an hybrid connection that is the destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource ID of an hybrid connection that is the destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource ID of an hybrid connection that is the destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource ID of an hybrid connection that is the destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="numbergreaterthanadvancedfilter">Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#NumberGreaterThanAdvancedFilter">input</a>   API doc for this type.
@@ -2089,6 +3201,132 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Inputs.NumberGreaterThanAdvancedFilterArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="numbergreaterthanadvancedfilterresponse">Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#NumberGreaterThanAdvancedFilterResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#NumberGreaterThanAdvancedFilterResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.NumberGreaterThanAdvancedFilterResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2331,6 +3569,132 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
+<h4 id="numbergreaterthanorequalsadvancedfilterresponse">Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#NumberGreaterThanOrEqualsAdvancedFilterResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#NumberGreaterThanOrEqualsAdvancedFilterResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.NumberGreaterThanOrEqualsAdvancedFilterResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="numberinadvancedfilter">Number<wbr>In<wbr>Advanced<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#NumberInAdvancedFilter">input</a>   API doc for this type.
@@ -2341,6 +3705,132 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Inputs.NumberInAdvancedFilterArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;double&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">[]float64</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number[]</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="numberinadvancedfilterresponse">Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#NumberInAdvancedFilterResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#NumberInAdvancedFilterResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.NumberInAdvancedFilterResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2583,6 +4073,132 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
+<h4 id="numberlessthanadvancedfilterresponse">Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#NumberLessThanAdvancedFilterResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#NumberLessThanAdvancedFilterResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.NumberLessThanAdvancedFilterResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="numberlessthanorequalsadvancedfilter">Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#NumberLessThanOrEqualsAdvancedFilter">input</a>   API doc for this type.
@@ -2593,6 +4209,132 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Inputs.NumberLessThanOrEqualsAdvancedFilterArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The filter value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="numberlessthanorequalsadvancedfilterresponse">Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#NumberLessThanOrEqualsAdvancedFilterResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#NumberLessThanOrEqualsAdvancedFilterResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.NumberLessThanOrEqualsAdvancedFilterResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2835,6 +4577,132 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
+<h4 id="numbernotinadvancedfilterresponse">Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#NumberNotInAdvancedFilterResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#NumberNotInAdvancedFilterResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.NumberNotInAdvancedFilterResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;double&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">[]float64</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number[]</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="retrypolicy">Retry<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#RetryPolicy">input</a>   API doc for this type.
@@ -2845,6 +4713,132 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Inputs.RetryPolicyArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventtimetoliveinminutes_csharp">
+<a href="#eventtimetoliveinminutes_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Time<wbr>To<wbr>Live<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Time To Live (in minutes) for events.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxdeliveryattempts_csharp">
+<a href="#maxdeliveryattempts_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Attempts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of delivery retry attempts for events.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventtimetoliveinminutes_go">
+<a href="#eventtimetoliveinminutes_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Time<wbr>To<wbr>Live<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Time To Live (in minutes) for events.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxdeliveryattempts_go">
+<a href="#maxdeliveryattempts_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Attempts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of delivery retry attempts for events.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventtimetoliveinminutes_nodejs">
+<a href="#eventtimetoliveinminutes_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Time<wbr>To<wbr>Live<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Time To Live (in minutes) for events.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxdeliveryattempts_nodejs">
+<a href="#maxdeliveryattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Attempts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of delivery retry attempts for events.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="event_time_to_live_in_minutes_python">
+<a href="#event_time_to_live_in_minutes_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time_<wbr>to_<wbr>live_<wbr>in_<wbr>minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Time To Live (in minutes) for events.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_delivery_attempts_python">
+<a href="#max_delivery_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>attempts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of delivery retry attempts for events.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="retrypolicyresponse">Retry<wbr>Policy<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RetryPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#RetryPolicyResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.RetryPolicyResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3047,6 +5041,92 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
+<h4 id="servicebusqueueeventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ServiceBusQueueEventSubscriptionDestinationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#ServiceBusQueueEventSubscriptionDestinationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.ServiceBusQueueEventSubscriptionDestinationResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Service Bus destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Service Bus destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Service Bus destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Service Bus destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="servicebustopiceventsubscriptiondestination">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#ServiceBusTopicEventSubscriptionDestination">input</a>   API doc for this type.
@@ -3133,6 +5213,92 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
+<h4 id="servicebustopiceventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ServiceBusTopicEventSubscriptionDestinationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#ServiceBusTopicEventSubscriptionDestinationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.ServiceBusTopicEventSubscriptionDestinationResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Service Bus Topic destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Service Bus Topic destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Service Bus Topic destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Service Bus Topic destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="storageblobdeadletterdestination">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#StorageBlobDeadLetterDestination">input</a>   API doc for this type.
@@ -3143,6 +5309,132 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Inputs.StorageBlobDeadLetterDestinationArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobcontainername_csharp">
+<a href="#blobcontainername_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Container<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Storage blob container that is the destination of the deadletter events{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource ID of the storage account that is the destination of the deadletter events{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobcontainername_go">
+<a href="#blobcontainername_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Container<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Storage blob container that is the destination of the deadletter events{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource ID of the storage account that is the destination of the deadletter events{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobcontainername_nodejs">
+<a href="#blobcontainername_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Container<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Storage blob container that is the destination of the deadletter events{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource ID of the storage account that is the destination of the deadletter events{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blob_container_name_python">
+<a href="#blob_container_name_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>container_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Storage blob container that is the destination of the deadletter events{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource ID of the storage account that is the destination of the deadletter events{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="storageblobdeadletterdestinationresponse">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#StorageBlobDeadLetterDestinationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#StorageBlobDeadLetterDestinationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.StorageBlobDeadLetterDestinationResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3385,6 +5677,132 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
+<h4 id="storagequeueeventsubscriptiondestinationresponse">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#StorageQueueEventSubscriptionDestinationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#StorageQueueEventSubscriptionDestinationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.StorageQueueEventSubscriptionDestinationResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="queuename_csharp">
+<a href="#queuename_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Storage queue under a storage account that is the destination of an event subscription.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="queuename_go">
+<a href="#queuename_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Storage queue under a storage account that is the destination of an event subscription.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="queuename_nodejs">
+<a href="#queuename_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Storage queue under a storage account that is the destination of an event subscription.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="queue_name_python">
+<a href="#queue_name_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Storage queue under a storage account that is the destination of an event subscription.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="stringbeginswithadvancedfilter">String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#StringBeginsWithAdvancedFilter">input</a>   API doc for this type.
@@ -3395,6 +5813,132 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Inputs.StringBeginsWithAdvancedFilterArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="stringbeginswithadvancedfilterresponse">String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#StringBeginsWithAdvancedFilterResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#StringBeginsWithAdvancedFilterResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.StringBeginsWithAdvancedFilterResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3637,6 +6181,132 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
+<h4 id="stringcontainsadvancedfilterresponse">String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#StringContainsAdvancedFilterResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#StringContainsAdvancedFilterResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.StringContainsAdvancedFilterResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="stringendswithadvancedfilter">String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#StringEndsWithAdvancedFilter">input</a>   API doc for this type.
@@ -3647,6 +6317,132 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Inputs.StringEndsWithAdvancedFilterArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="stringendswithadvancedfilterresponse">String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#StringEndsWithAdvancedFilterResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#StringEndsWithAdvancedFilterResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.StringEndsWithAdvancedFilterResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3889,6 +6685,132 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 
 
+<h4 id="stringinadvancedfilterresponse">String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#StringInAdvancedFilterResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#StringInAdvancedFilterResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.StringInAdvancedFilterResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="stringnotinadvancedfilter">String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#StringNotInAdvancedFilter">input</a>   API doc for this type.
@@ -3899,6 +6821,132 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Inputs.StringNotInAdvancedFilterArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="stringnotinadvancedfilterresponse">String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#StringNotInAdvancedFilterResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#StringNotInAdvancedFilterResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.StringNotInAdvancedFilterResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4203,6 +7251,292 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="azureactivedirectoryapplicationidoruri_python">
+<a href="#azureactivedirectoryapplicationidoruri_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Application<wbr>Id<wbr>Or<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="azureactivedirectorytenantid_python">
+<a href="#azureactivedirectorytenantid_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpointurl_python">
+<a href="#endpointurl_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The URL that represents the endpoint of the destination of an event subscription.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxeventsperbatch_python">
+<a href="#maxeventsperbatch_python" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferredbatchsizeinkilobytes_python">
+<a href="#preferredbatchsizeinkilobytes_python" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="webhookeventsubscriptiondestinationresponse">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#WebHookEventSubscriptionDestinationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/eventgrid/preview?tab=doc#WebHookEventSubscriptionDestinationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.EventGrid.Preview.Outputs.WebHookEventSubscriptionDestinationResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpointbaseurl_csharp">
+<a href="#endpointbaseurl_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Base<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The base URL that represents the endpoint of the destination of an event subscription.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="azureactivedirectoryapplicationidoruri_csharp">
+<a href="#azureactivedirectoryapplicationidoruri_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory<wbr>Application<wbr>Id<wbr>Or<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="azureactivedirectorytenantid_csharp">
+<a href="#azureactivedirectorytenantid_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpointurl_csharp">
+<a href="#endpointurl_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL that represents the endpoint of the destination of an event subscription.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxeventsperbatch_csharp">
+<a href="#maxeventsperbatch_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Events<wbr>Per<wbr>Batch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferredbatchsizeinkilobytes_csharp">
+<a href="#preferredbatchsizeinkilobytes_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpointbaseurl_go">
+<a href="#endpointbaseurl_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Base<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The base URL that represents the endpoint of the destination of an event subscription.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="azureactivedirectoryapplicationidoruri_go">
+<a href="#azureactivedirectoryapplicationidoruri_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory<wbr>Application<wbr>Id<wbr>Or<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="azureactivedirectorytenantid_go">
+<a href="#azureactivedirectorytenantid_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpointurl_go">
+<a href="#endpointurl_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL that represents the endpoint of the destination of an event subscription.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxeventsperbatch_go">
+<a href="#maxeventsperbatch_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Events<wbr>Per<wbr>Batch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferredbatchsizeinkilobytes_go">
+<a href="#preferredbatchsizeinkilobytes_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpointbaseurl_nodejs">
+<a href="#endpointbaseurl_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Base<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The base URL that represents the endpoint of the destination of an event subscription.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="azureactivedirectoryapplicationidoruri_nodejs">
+<a href="#azureactivedirectoryapplicationidoruri_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Application<wbr>Id<wbr>Or<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="azureactivedirectorytenantid_nodejs">
+<a href="#azureactivedirectorytenantid_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpointurl_nodejs">
+<a href="#endpointurl_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL that represents the endpoint of the destination of an event subscription.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxeventsperbatch_nodejs">
+<a href="#maxeventsperbatch_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferredbatchsizeinkilobytes_nodejs">
+<a href="#preferredbatchsizeinkilobytes_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpointbaseurl_python">
+<a href="#endpointbaseurl_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Base<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The base URL that represents the endpoint of the destination of an event subscription.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

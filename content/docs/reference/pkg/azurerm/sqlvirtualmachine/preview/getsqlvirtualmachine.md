@@ -963,6 +963,2444 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="additionalfeaturesserverconfigurationsresponse">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AdditionalFeaturesServerConfigurationsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sqlvirtualmachine/preview?tab=doc#AdditionalFeaturesServerConfigurationsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.SqlVirtualMachine.Preview.Outputs.AdditionalFeaturesServerConfigurationsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isrservicesenabled_csharp">
+<a href="#isrservicesenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>RServices<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable R services (SQL 2016 onwards).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isrservicesenabled_go">
+<a href="#isrservicesenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>RServices<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable R services (SQL 2016 onwards).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isrservicesenabled_nodejs">
+<a href="#isrservicesenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>RServices<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable R services (SQL 2016 onwards).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_r_services_enabled_python">
+<a href="#is_r_services_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>r_<wbr>services_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable R services (SQL 2016 onwards).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="autobackupsettingsresponse">Auto<wbr>Backup<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AutoBackupSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sqlvirtualmachine/preview?tab=doc#AutoBackupSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.SqlVirtualMachine.Preview.Outputs.AutoBackupSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupscheduletype_csharp">
+<a href="#backupscheduletype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Schedule<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupsystemdbs_csharp">
+<a href="#backupsystemdbs_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>System<wbr>Dbs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Include or exclude system databases from auto backup.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_csharp">
+<a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable autobackup on SQL virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableencryption_csharp">
+<a href="#enableencryption_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable encryption for backup on SQL virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fullbackupfrequency_csharp">
+<a href="#fullbackupfrequency_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fullbackupstarttime_csharp">
+<a href="#fullbackupstarttime_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Start time of a given day during which full backups can take place. 0-23 hours.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fullbackupwindowhours_csharp">
+<a href="#fullbackupwindowhours_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Window<wbr>Hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place. 1-23 hours.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logbackupfrequency_csharp">
+<a href="#logbackupfrequency_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Password for encryption on backup.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionperiod_csharp">
+<a href="#retentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccesskey_csharp">
+<a href="#storageaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Storage account key where backup will be taken to.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccounturl_csharp">
+<a href="#storageaccounturl_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Storage account url where backup will be taken to.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupscheduletype_go">
+<a href="#backupscheduletype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Schedule<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupsystemdbs_go">
+<a href="#backupsystemdbs_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>System<wbr>Dbs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Include or exclude system databases from auto backup.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_go">
+<a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable autobackup on SQL virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableencryption_go">
+<a href="#enableencryption_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable encryption for backup on SQL virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fullbackupfrequency_go">
+<a href="#fullbackupfrequency_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fullbackupstarttime_go">
+<a href="#fullbackupstarttime_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Start time of a given day during which full backups can take place. 0-23 hours.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fullbackupwindowhours_go">
+<a href="#fullbackupwindowhours_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Window<wbr>Hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place. 1-23 hours.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logbackupfrequency_go">
+<a href="#logbackupfrequency_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Password for encryption on backup.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionperiod_go">
+<a href="#retentionperiod_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccesskey_go">
+<a href="#storageaccesskey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Storage account key where backup will be taken to.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccounturl_go">
+<a href="#storageaccounturl_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Storage account url where backup will be taken to.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupscheduletype_nodejs">
+<a href="#backupscheduletype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Schedule<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupsystemdbs_nodejs">
+<a href="#backupsystemdbs_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>System<wbr>Dbs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Include or exclude system databases from auto backup.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_nodejs">
+<a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable autobackup on SQL virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableencryption_nodejs">
+<a href="#enableencryption_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable encryption for backup on SQL virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fullbackupfrequency_nodejs">
+<a href="#fullbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fullbackupstarttime_nodejs">
+<a href="#fullbackupstarttime_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Start time of a given day during which full backups can take place. 0-23 hours.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fullbackupwindowhours_nodejs">
+<a href="#fullbackupwindowhours_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Window<wbr>Hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place. 1-23 hours.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logbackupfrequency_nodejs">
+<a href="#logbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup<wbr>Frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Password for encryption on backup.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionperiod_nodejs">
+<a href="#retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccesskey_nodejs">
+<a href="#storageaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Storage account key where backup will be taken to.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccounturl_nodejs">
+<a href="#storageaccounturl_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Storage account url where backup will be taken to.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_schedule_type_python">
+<a href="#backup_schedule_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>schedule_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_system_dbs_python">
+<a href="#backup_system_dbs_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>system_<wbr>dbs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Include or exclude system databases from auto backup.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_python">
+<a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable autobackup on SQL virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_encryption_python">
+<a href="#enable_encryption_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable encryption for backup on SQL virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="full_backup_frequency_python">
+<a href="#full_backup_frequency_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="full_backup_start_time_python">
+<a href="#full_backup_start_time_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>start_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Start time of a given day during which full backups can take place. 0-23 hours.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="full_backup_window_hours_python">
+<a href="#full_backup_window_hours_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>window_<wbr>hours</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place. 1-23 hours.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_backup_frequency_python">
+<a href="#log_backup_frequency_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Password for encryption on backup.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retention_period_python">
+<a href="#retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_access_key_python">
+<a href="#storage_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>access_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Storage account key where backup will be taken to.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_account_url_python">
+<a href="#storage_account_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Storage account url where backup will be taken to.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="autopatchingsettingsresponse">Auto<wbr>Patching<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AutoPatchingSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sqlvirtualmachine/preview?tab=doc#AutoPatchingSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.SqlVirtualMachine.Preview.Outputs.AutoPatchingSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dayofweek_csharp">
+<a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_csharp">
+<a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable autopatching on SQL virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maintenancewindowduration_csharp">
+<a href="#maintenancewindowduration_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Duration of patching.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maintenancewindowstartinghour_csharp">
+<a href="#maintenancewindowstartinghour_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Starting<wbr>Hour</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Hour of the day when patching is initiated. Local VM time.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dayofweek_go">
+<a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_go">
+<a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable autopatching on SQL virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maintenancewindowduration_go">
+<a href="#maintenancewindowduration_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Duration of patching.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maintenancewindowstartinghour_go">
+<a href="#maintenancewindowstartinghour_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Starting<wbr>Hour</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Hour of the day when patching is initiated. Local VM time.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dayofweek_nodejs">
+<a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_nodejs">
+<a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable autopatching on SQL virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maintenancewindowduration_nodejs">
+<a href="#maintenancewindowduration_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Duration of patching.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maintenancewindowstartinghour_nodejs">
+<a href="#maintenancewindowstartinghour_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Starting<wbr>Hour</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Hour of the day when patching is initiated. Local VM time.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="day_of_week_python">
+<a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_python">
+<a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable autopatching on SQL virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maintenance_window_duration_python">
+<a href="#maintenance_window_duration_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Duration of patching.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maintenance_window_starting_hour_python">
+<a href="#maintenance_window_starting_hour_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>starting_<wbr>hour</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Hour of the day when patching is initiated. Local VM time.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="keyvaultcredentialsettingsresponse">Key<wbr>Vault<wbr>Credential<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#KeyVaultCredentialSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sqlvirtualmachine/preview?tab=doc#KeyVaultCredentialSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.SqlVirtualMachine.Preview.Outputs.KeyVaultCredentialSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="azurekeyvaulturl_csharp">
+<a href="#azurekeyvaulturl_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Key Vault url.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credentialname_csharp">
+<a href="#credentialname_csharp" style="color: inherit; text-decoration: inherit;">Credential<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Credential name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_csharp">
+<a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable key vault credential setting.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalname_csharp">
+<a href="#serviceprincipalname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalsecret_csharp">
+<a href="#serviceprincipalsecret_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Service principal name secret to access key vault.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="azurekeyvaulturl_go">
+<a href="#azurekeyvaulturl_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Key Vault url.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credentialname_go">
+<a href="#credentialname_go" style="color: inherit; text-decoration: inherit;">Credential<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Credential name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_go">
+<a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable key vault credential setting.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalname_go">
+<a href="#serviceprincipalname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalsecret_go">
+<a href="#serviceprincipalsecret_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Service principal name secret to access key vault.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="azurekeyvaulturl_nodejs">
+<a href="#azurekeyvaulturl_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Key Vault url.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credentialname_nodejs">
+<a href="#credentialname_nodejs" style="color: inherit; text-decoration: inherit;">credential<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Credential name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_nodejs">
+<a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable key vault credential setting.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalname_nodejs">
+<a href="#serviceprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalsecret_nodejs">
+<a href="#serviceprincipalsecret_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Service principal name secret to access key vault.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="azure_key_vault_url_python">
+<a href="#azure_key_vault_url_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault_<wbr>url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Key Vault url.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credential_name_python">
+<a href="#credential_name_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Credential name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_python">
+<a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable or disable key vault credential setting.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_principal_name_python">
+<a href="#service_principal_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_principal_secret_python">
+<a href="#service_principal_secret_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Service principal name secret to access key vault.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="resourceidentityresponse">Resource<wbr>Identity<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ResourceIdentityResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sqlvirtualmachine/preview?tab=doc#ResourceIdentityResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.SqlVirtualMachine.Preview.Outputs.ResourceIdentityResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SQLStorageSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sqlvirtualmachine/preview?tab=doc#SQLStorageSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.SqlVirtualMachine.Preview.Outputs.SQLStorageSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultfilepath_csharp">
+<a href="#defaultfilepath_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>File<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server default file path{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="luns_csharp">
+<a href="#luns_csharp" style="color: inherit; text-decoration: inherit;">Luns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Logical Unit Numbers for the disks.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultfilepath_go">
+<a href="#defaultfilepath_go" style="color: inherit; text-decoration: inherit;">Default<wbr>File<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server default file path{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="luns_go">
+<a href="#luns_go" style="color: inherit; text-decoration: inherit;">Luns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+    </dt>
+    <dd>{{% md %}}Logical Unit Numbers for the disks.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultfilepath_nodejs">
+<a href="#defaultfilepath_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>File<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server default file path{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="luns_nodejs">
+<a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+    </dt>
+    <dd>{{% md %}}Logical Unit Numbers for the disks.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_file_path_python">
+<a href="#default_file_path_python" style="color: inherit; text-decoration: inherit;">default_<wbr>file_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server default file path{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="luns_python">
+<a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+    </dt>
+    <dd>{{% md %}}Logical Unit Numbers for the disks.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="serverconfigurationsmanagementsettingsresponse">Server<wbr>Configurations<wbr>Management<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ServerConfigurationsManagementSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sqlvirtualmachine/preview?tab=doc#ServerConfigurationsManagementSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.SqlVirtualMachine.Preview.Outputs.ServerConfigurationsManagementSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalfeaturesserverconfigurations_csharp">
+<a href="#additionalfeaturesserverconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Features<wbr>Server<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Preview.<wbr>Inputs.<wbr>Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlconnectivityupdatesettings_csharp">
+<a href="#sqlconnectivityupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Preview.<wbr>Inputs.<wbr>Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlstorageupdatesettings_csharp">
+<a href="#sqlstorageupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Storage<wbr>Update<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Preview.<wbr>Inputs.<wbr>Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlworkloadtypeupdatesettings_csharp">
+<a href="#sqlworkloadtypeupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Preview.<wbr>Inputs.<wbr>Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalfeaturesserverconfigurations_go">
+<a href="#additionalfeaturesserverconfigurations_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Features<wbr>Server<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlconnectivityupdatesettings_go">
+<a href="#sqlconnectivityupdatesettings_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlstorageupdatesettings_go">
+<a href="#sqlstorageupdatesettings_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Storage<wbr>Update<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlworkloadtypeupdatesettings_go">
+<a href="#sqlworkloadtypeupdatesettings_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalfeaturesserverconfigurations_nodejs">
+<a href="#additionalfeaturesserverconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Features<wbr>Server<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlconnectivityupdatesettings_nodejs">
+<a href="#sqlconnectivityupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlstorageupdatesettings_nodejs">
+<a href="#sqlstorageupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Storage<wbr>Update<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlworkloadtypeupdatesettings_nodejs">
+<a href="#sqlworkloadtypeupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additional_features_server_configurations_python">
+<a href="#additional_features_server_configurations_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>features_<wbr>server_<wbr>configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Dict[Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sql_connectivity_update_settings_python">
+<a href="#sql_connectivity_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Dict[Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sql_storage_update_settings_python">
+<a href="#sql_storage_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>storage_<wbr>update_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Dict[Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sql_workload_type_update_settings_python">
+<a href="#sql_workload_type_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>workload_<wbr>type_<wbr>update_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Dict[Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="sqlconnectivityupdatesettingsresponse">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SqlConnectivityUpdateSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sqlvirtualmachine/preview?tab=doc#SqlConnectivityUpdateSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.SqlVirtualMachine.Preview.Outputs.SqlConnectivityUpdateSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectivitytype_csharp">
+<a href="#connectivitytype_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlauthupdatepassword_csharp">
+<a href="#sqlauthupdatepassword_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Auth<wbr>Update<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server sysadmin login password.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlauthupdateusername_csharp">
+<a href="#sqlauthupdateusername_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Auth<wbr>Update<wbr>User<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server sysadmin login to create.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectivitytype_go">
+<a href="#connectivitytype_go" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlauthupdatepassword_go">
+<a href="#sqlauthupdatepassword_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Auth<wbr>Update<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server sysadmin login password.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlauthupdateusername_go">
+<a href="#sqlauthupdateusername_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Auth<wbr>Update<wbr>User<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server sysadmin login to create.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectivitytype_nodejs">
+<a href="#connectivitytype_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlauthupdatepassword_nodejs">
+<a href="#sqlauthupdatepassword_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Auth<wbr>Update<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server sysadmin login password.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlauthupdateusername_nodejs">
+<a href="#sqlauthupdateusername_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Auth<wbr>Update<wbr>User<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server sysadmin login to create.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectivity_type_python">
+<a href="#connectivity_type_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server port.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sql_auth_update_password_python">
+<a href="#sql_auth_update_password_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>auth_<wbr>update_<wbr>password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server sysadmin login password.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sql_auth_update_user_name_python">
+<a href="#sql_auth_update_user_name_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>auth_<wbr>update_<wbr>user_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server sysadmin login to create.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="sqlstorageupdatesettingsresponse">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SqlStorageUpdateSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sqlvirtualmachine/preview?tab=doc#SqlStorageUpdateSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.SqlVirtualMachine.Preview.Outputs.SqlStorageUpdateSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="diskconfigurationtype_csharp">
+<a href="#diskconfigurationtype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Configuration<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="diskcount_csharp">
+<a href="#diskcount_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual machine disk count.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startingdeviceid_csharp">
+<a href="#startingdeviceid_csharp" style="color: inherit; text-decoration: inherit;">Starting<wbr>Device<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Device id of the first disk to be updated.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="diskconfigurationtype_go">
+<a href="#diskconfigurationtype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Configuration<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="diskcount_go">
+<a href="#diskcount_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual machine disk count.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startingdeviceid_go">
+<a href="#startingdeviceid_go" style="color: inherit; text-decoration: inherit;">Starting<wbr>Device<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Device id of the first disk to be updated.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="diskconfigurationtype_nodejs">
+<a href="#diskconfigurationtype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Configuration<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="diskcount_nodejs">
+<a href="#diskcount_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual machine disk count.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startingdeviceid_nodejs">
+<a href="#startingdeviceid_nodejs" style="color: inherit; text-decoration: inherit;">starting<wbr>Device<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Device id of the first disk to be updated.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disk_configuration_type_python">
+<a href="#disk_configuration_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>configuration_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disk_count_python">
+<a href="#disk_count_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual machine disk count.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starting_device_id_python">
+<a href="#starting_device_id_python" style="color: inherit; text-decoration: inherit;">starting_<wbr>device_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Device id of the first disk to be updated.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="sqlworkloadtypeupdatesettingsresponse">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SqlWorkloadTypeUpdateSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sqlvirtualmachine/preview?tab=doc#SqlWorkloadTypeUpdateSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.SqlVirtualMachine.Preview.Outputs.SqlWorkloadTypeUpdateSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlworkloadtype_csharp">
+<a href="#sqlworkloadtype_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Workload<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlworkloadtype_go">
+<a href="#sqlworkloadtype_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Workload<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlworkloadtype_nodejs">
+<a href="#sqlworkloadtype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Workload<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sql_workload_type_python">
+<a href="#sql_workload_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>workload_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="storageconfigurationsettingsresponse">Storage<wbr>Configuration<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#StorageConfigurationSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sqlvirtualmachine/preview?tab=doc#StorageConfigurationSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.SqlVirtualMachine.Preview.Outputs.StorageConfigurationSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="diskconfigurationtype_csharp">
+<a href="#diskconfigurationtype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Configuration<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqldatasettings_csharp">
+<a href="#sqldatasettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Data<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Preview.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqllogsettings_csharp">
+<a href="#sqllogsettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Log<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Preview.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqltempdbsettings_csharp">
+<a href="#sqltempdbsettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Temp<wbr>Db<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Preview.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageworkloadtype_csharp">
+<a href="#storageworkloadtype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Workload<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Storage workload type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="diskconfigurationtype_go">
+<a href="#diskconfigurationtype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Configuration<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqldatasettings_go">
+<a href="#sqldatasettings_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Data<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqllogsettings_go">
+<a href="#sqllogsettings_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Log<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqltempdbsettings_go">
+<a href="#sqltempdbsettings_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Temp<wbr>Db<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageworkloadtype_go">
+<a href="#storageworkloadtype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Workload<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Storage workload type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="diskconfigurationtype_nodejs">
+<a href="#diskconfigurationtype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Configuration<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqldatasettings_nodejs">
+<a href="#sqldatasettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Data<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqllogsettings_nodejs">
+<a href="#sqllogsettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Log<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqltempdbsettings_nodejs">
+<a href="#sqltempdbsettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Temp<wbr>Db<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageworkloadtype_nodejs">
+<a href="#storageworkloadtype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Workload<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Storage workload type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disk_configuration_type_python">
+<a href="#disk_configuration_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>configuration_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sql_data_settings_python">
+<a href="#sql_data_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>data_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">Dict[SQLStorage<wbr>Settings<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sql_log_settings_python">
+<a href="#sql_log_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>log_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">Dict[SQLStorage<wbr>Settings<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sql_temp_db_settings_python">
+<a href="#sql_temp_db_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>temp_<wbr>db_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">Dict[SQLStorage<wbr>Settings<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_workload_type_python">
+<a href="#storage_workload_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>workload_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Storage workload type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="wsfcdomaincredentialsresponse">Wsfc<wbr>Domain<wbr>Credentials<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#WsfcDomainCredentialsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sqlvirtualmachine/preview?tab=doc#WsfcDomainCredentialsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.SqlVirtualMachine.Preview.Outputs.WsfcDomainCredentialsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterbootstrapaccountpassword_csharp">
+<a href="#clusterbootstrapaccountpassword_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Bootstrap<wbr>Account<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Cluster bootstrap account password.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusteroperatoraccountpassword_csharp">
+<a href="#clusteroperatoraccountpassword_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Operator<wbr>Account<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Cluster operator account password.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlserviceaccountpassword_csharp">
+<a href="#sqlserviceaccountpassword_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Service<wbr>Account<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}SQL service account password.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterbootstrapaccountpassword_go">
+<a href="#clusterbootstrapaccountpassword_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Bootstrap<wbr>Account<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Cluster bootstrap account password.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusteroperatoraccountpassword_go">
+<a href="#clusteroperatoraccountpassword_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Operator<wbr>Account<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Cluster operator account password.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlserviceaccountpassword_go">
+<a href="#sqlserviceaccountpassword_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Service<wbr>Account<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SQL service account password.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterbootstrapaccountpassword_nodejs">
+<a href="#clusterbootstrapaccountpassword_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Bootstrap<wbr>Account<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Cluster bootstrap account password.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusteroperatoraccountpassword_nodejs">
+<a href="#clusteroperatoraccountpassword_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Operator<wbr>Account<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Cluster operator account password.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlserviceaccountpassword_nodejs">
+<a href="#sqlserviceaccountpassword_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Service<wbr>Account<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}SQL service account password.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cluster_bootstrap_account_password_python">
+<a href="#cluster_bootstrap_account_password_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>bootstrap_<wbr>account_<wbr>password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Cluster bootstrap account password.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cluster_operator_account_password_python">
+<a href="#cluster_operator_account_password_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>operator_<wbr>account_<wbr>password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Cluster operator account password.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sql_service_account_password_python">
+<a href="#sql_service_account_password_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>service_<wbr>account_<wbr>password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}SQL service account password.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

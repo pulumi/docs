@@ -1197,6 +1197,252 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#InstanceViewStatusResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest?tab=doc#InstanceViewStatusResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Compute.Latest.Outputs.InstanceViewStatusResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="displaystatus_csharp">
+<a href="#displaystatus_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_csharp">
+<a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The level code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="time_csharp">
+<a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="displaystatus_go">
+<a href="#displaystatus_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_go">
+<a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The level code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="time_go">
+<a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="displaystatus_nodejs">
+<a href="#displaystatus_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_nodejs">
+<a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The level code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="time_nodejs">
+<a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The status code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="display_status_python">
+<a href="#display_status_python" style="color: inherit; text-decoration: inherit;">display_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_python">
+<a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The level code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="time_python">
+<a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="virtualmachineextensioninstanceview">Virtual<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#VirtualMachineExtensionInstanceView">input</a>   API doc for this type.
@@ -1413,6 +1659,252 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceviewstatus">List[Instance<wbr>View<wbr>Status]</a></span>
+    </dt>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_handler_version_python">
+<a href="#type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualmachineextensioninstanceviewresponse">Virtual<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#VirtualMachineExtensionInstanceViewResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest?tab=doc#VirtualMachineExtensionInstanceViewResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Compute.Latest.Outputs.VirtualMachineExtensionInstanceViewResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual machine extension name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statuses_csharp">
+<a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Compute.<wbr>Latest.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substatuses_csharp">
+<a href="#substatuses_csharp" style="color: inherit; text-decoration: inherit;">Substatuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Compute.<wbr>Latest.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="typehandlerversion_csharp">
+<a href="#typehandlerversion_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual machine extension name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statuses_go">
+<a href="#statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">[]Instance<wbr>View<wbr>Status<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substatuses_go">
+<a href="#substatuses_go" style="color: inherit; text-decoration: inherit;">Substatuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">[]Instance<wbr>View<wbr>Status<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="typehandlerversion_go">
+<a href="#typehandlerversion_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual machine extension name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statuses_nodejs">
+<a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substatuses_nodejs">
+<a href="#substatuses_nodejs" style="color: inherit; text-decoration: inherit;">substatuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="typehandlerversion_nodejs">
+<a href="#typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual machine extension name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="statuses_python">
+<a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substatuses_python">
+<a href="#substatuses_python" style="color: inherit; text-decoration: inherit;">substatuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
 

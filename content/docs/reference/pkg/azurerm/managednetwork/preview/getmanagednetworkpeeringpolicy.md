@@ -403,6 +403,384 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="managednetworkpeeringpolicypropertiesresponse">Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ManagedNetworkPeeringPolicyPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/managednetwork/preview?tab=doc#ManagedNetworkPeeringPolicyPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ManagedNetwork.Preview.Outputs.ManagedNetworkPeeringPolicyPropertiesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hub_csharp">
+<a href="#hub_csharp" style="color: inherit; text-decoration: inherit;">Hub</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Managed<wbr>Network.<wbr>Preview.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mesh_csharp">
+<a href="#mesh_csharp" style="color: inherit; text-decoration: inherit;">Mesh</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Managed<wbr>Network.<wbr>Preview.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spokes_csharp">
+<a href="#spokes_csharp" style="color: inherit; text-decoration: inherit;">Spokes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Managed<wbr>Network.<wbr>Preview.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hub_go">
+<a href="#hub_go" style="color: inherit; text-decoration: inherit;">Hub</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mesh_go">
+<a href="#mesh_go" style="color: inherit; text-decoration: inherit;">Mesh</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidresponse">[]Resource<wbr>Id<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spokes_go">
+<a href="#spokes_go" style="color: inherit; text-decoration: inherit;">Spokes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidresponse">[]Resource<wbr>Id<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hub_nodejs">
+<a href="#hub_nodejs" style="color: inherit; text-decoration: inherit;">hub</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mesh_nodejs">
+<a href="#mesh_nodejs" style="color: inherit; text-decoration: inherit;">mesh</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spokes_nodejs">
+<a href="#spokes_nodejs" style="color: inherit; text-decoration: inherit;">spokes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hub_python">
+<a href="#hub_python" style="color: inherit; text-decoration: inherit;">hub</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidresponse">Dict[Resource<wbr>Id<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mesh_python">
+<a href="#mesh_python" style="color: inherit; text-decoration: inherit;">mesh</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spokes_python">
+<a href="#spokes_python" style="color: inherit; text-decoration: inherit;">spokes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidresponse">List[Resource<wbr>Id<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="resourceidresponse">Resource<wbr>Id<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ResourceIdResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/managednetwork/preview?tab=doc#ResourceIdResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ManagedNetwork.Preview.Outputs.ResourceIdResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

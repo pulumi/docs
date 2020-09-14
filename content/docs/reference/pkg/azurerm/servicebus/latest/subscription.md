@@ -1228,6 +1228,258 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+## Supporting Types
+
+
+<h4 id="messagecountdetailsresponse">Message<wbr>Count<wbr>Details<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MessageCountDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/servicebus/latest?tab=doc#MessageCountDetailsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ServiceBus.Latest.Outputs.MessageCountDetailsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="activemessagecount_csharp">
+<a href="#activemessagecount_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Message<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="deadlettermessagecount_csharp">
+<a href="#deadlettermessagecount_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Message<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scheduledmessagecount_csharp">
+<a href="#scheduledmessagecount_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Message<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="transferdeadlettermessagecount_csharp">
+<a href="#transferdeadlettermessagecount_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Dead<wbr>Letter<wbr>Message<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="transfermessagecount_csharp">
+<a href="#transfermessagecount_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Message<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="activemessagecount_go">
+<a href="#activemessagecount_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Message<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="deadlettermessagecount_go">
+<a href="#deadlettermessagecount_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Message<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scheduledmessagecount_go">
+<a href="#scheduledmessagecount_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Message<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="transferdeadlettermessagecount_go">
+<a href="#transferdeadlettermessagecount_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Dead<wbr>Letter<wbr>Message<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="transfermessagecount_go">
+<a href="#transfermessagecount_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Message<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="activemessagecount_nodejs">
+<a href="#activemessagecount_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Message<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="deadlettermessagecount_nodejs">
+<a href="#deadlettermessagecount_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Message<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scheduledmessagecount_nodejs">
+<a href="#scheduledmessagecount_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Message<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="transferdeadlettermessagecount_nodejs">
+<a href="#transferdeadlettermessagecount_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Dead<wbr>Letter<wbr>Message<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="transfermessagecount_nodejs">
+<a href="#transfermessagecount_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Message<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="active_message_count_python">
+<a href="#active_message_count_python" style="color: inherit; text-decoration: inherit;">active_<wbr>message_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dead_letter_message_count_python">
+<a href="#dead_letter_message_count_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>message_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scheduled_message_count_python">
+<a href="#scheduled_message_count_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>message_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="transfer_dead_letter_message_count_python">
+<a href="#transfer_dead_letter_message_count_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>dead_<wbr>letter_<wbr>message_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="transfer_message_count_python">
+<a href="#transfer_message_count_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>message_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

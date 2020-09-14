@@ -751,6 +751,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+<h4 id="assessmentlinksresponse">Assessment<wbr>Links<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AssessmentLinksResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/security/latest?tab=doc#AssessmentLinksResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Security.Latest.Outputs.AssessmentLinksResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="azureportaluri_csharp">
+<a href="#azureportaluri_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Portal<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Link to assessment in Azure Portal{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="azureportaluri_go">
+<a href="#azureportaluri_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Portal<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Link to assessment in Azure Portal{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="azureportaluri_nodejs">
+<a href="#azureportaluri_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Portal<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Link to assessment in Azure Portal{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="azure_portal_uri_python">
+<a href="#azure_portal_uri_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>portal_<wbr>uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Link to assessment in Azure Portal{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="assessmentstatus">Assessment<wbr>Status</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#AssessmentStatus">input</a>   API doc for this type.
@@ -761,6 +847,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Security.Latest.Inputs.AssessmentStatusArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cause_csharp">
+<a href="#cause_csharp" style="color: inherit; text-decoration: inherit;">Cause</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cause_go">
+<a href="#cause_go" style="color: inherit; text-decoration: inherit;">Cause</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cause_nodejs">
+<a href="#cause_nodejs" style="color: inherit; text-decoration: inherit;">cause</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cause_python">
+<a href="#cause_python" style="color: inherit; text-decoration: inherit;">cause</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="assessmentstatusresponse">Assessment<wbr>Status<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AssessmentStatusResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/security/latest?tab=doc#AssessmentStatusResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Security.Latest.Outputs.AssessmentStatusResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -955,6 +1207,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="azureresourcedetailsresponse">Azure<wbr>Resource<wbr>Details<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AzureResourceDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/security/latest?tab=doc#AzureResourceDetailsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Security.Latest.Outputs.AzureResourceDetailsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the assessed resource{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the assessed resource{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the assessed resource{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the assessed resource{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1169,6 +1507,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="onpremiseresourcedetailsresponse">On<wbr>Premise<wbr>Resource<wbr>Details<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#OnPremiseResourceDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/security/latest?tab=doc#OnPremiseResourceDetailsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Security.Latest.Outputs.OnPremiseResourceDetailsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="machinename_csharp">
+<a href="#machinename_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcecomputerid_csharp">
+<a href="#sourcecomputerid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Computer<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vmuuid_csharp">
+<a href="#vmuuid_csharp" style="color: inherit; text-decoration: inherit;">Vmuuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workspaceid_csharp">
+<a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="machinename_go">
+<a href="#machinename_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcecomputerid_go">
+<a href="#sourcecomputerid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Computer<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vmuuid_go">
+<a href="#vmuuid_go" style="color: inherit; text-decoration: inherit;">Vmuuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workspaceid_go">
+<a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="machinename_nodejs">
+<a href="#machinename_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcecomputerid_nodejs">
+<a href="#sourcecomputerid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Computer<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vmuuid_nodejs">
+<a href="#vmuuid_nodejs" style="color: inherit; text-decoration: inherit;">vmuuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workspaceid_nodejs">
+<a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="machine_name_python">
+<a href="#machine_name_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcecomputerid_python">
+<a href="#sourcecomputerid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Computer<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vmuuid_python">
+<a href="#vmuuid_python" style="color: inherit; text-decoration: inherit;">vmuuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="workspace_id_python">
+<a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="securityassessmentmetadatapartnerdata">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#SecurityAssessmentMetadataPartnerData">input</a>   API doc for this type.
@@ -1179,6 +1723,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Security.Latest.Inputs.SecurityAssessmentMetadataPartnerDataArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="partnername_csharp">
+<a href="#partnername_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secret_csharp">
+<a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="productname_csharp">
+<a href="#productname_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="partnername_go">
+<a href="#partnername_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secret_go">
+<a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="productname_go">
+<a href="#productname_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="partnername_nodejs">
+<a href="#partnername_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secret_nodejs">
+<a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="productname_nodejs">
+<a href="#productname_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="partner_name_python">
+<a href="#partner_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secret_python">
+<a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="product_name_python">
+<a href="#product_name_python" style="color: inherit; text-decoration: inherit;">product_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="securityassessmentmetadatapartnerdataresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SecurityAssessmentMetadataPartnerDataResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/security/latest?tab=doc#SecurityAssessmentMetadataPartnerDataResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Security.Latest.Outputs.SecurityAssessmentMetadataPartnerDataResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1821,6 +2531,532 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="securityassessmentmetadatapropertiesresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Properties<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SecurityAssessmentMetadataPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/security/latest?tab=doc#SecurityAssessmentMetadataPropertiesResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Security.Latest.Outputs.SecurityAssessmentMetadataPropertiesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="assessmenttype_csharp">
+<a href="#assessmenttype_csharp" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policydefinitionid_csharp">
+<a href="#policydefinitionid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource ID of the policy definition that turns this assessment calculation on{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="severity_csharp">
+<a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="category_csharp">
+<a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="implementationeffort_csharp">
+<a href="#implementationeffort_csharp" style="color: inherit; text-decoration: inherit;">Implementation<wbr>Effort</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="partnerdata_csharp">
+<a href="#partnerdata_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Security.<wbr>Latest.<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preview_csharp">
+<a href="#preview_csharp" style="color: inherit; text-decoration: inherit;">Preview</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remediationdescription_csharp">
+<a href="#remediationdescription_csharp" style="color: inherit; text-decoration: inherit;">Remediation<wbr>Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threats_csharp">
+<a href="#threats_csharp" style="color: inherit; text-decoration: inherit;">Threats</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userimpact_csharp">
+<a href="#userimpact_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="assessmenttype_go">
+<a href="#assessmenttype_go" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policydefinitionid_go">
+<a href="#policydefinitionid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource ID of the policy definition that turns this assessment calculation on{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="severity_go">
+<a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="category_go">
+<a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="implementationeffort_go">
+<a href="#implementationeffort_go" style="color: inherit; text-decoration: inherit;">Implementation<wbr>Effort</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="partnerdata_go">
+<a href="#partnerdata_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preview_go">
+<a href="#preview_go" style="color: inherit; text-decoration: inherit;">Preview</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remediationdescription_go">
+<a href="#remediationdescription_go" style="color: inherit; text-decoration: inherit;">Remediation<wbr>Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threats_go">
+<a href="#threats_go" style="color: inherit; text-decoration: inherit;">Threats</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userimpact_go">
+<a href="#userimpact_go" style="color: inherit; text-decoration: inherit;">User<wbr>Impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="assessmenttype_nodejs">
+<a href="#assessmenttype_nodejs" style="color: inherit; text-decoration: inherit;">assessment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policydefinitionid_nodejs">
+<a href="#policydefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource ID of the policy definition that turns this assessment calculation on{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="severity_nodejs">
+<a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="category_nodejs">
+<a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="implementationeffort_nodejs">
+<a href="#implementationeffort_nodejs" style="color: inherit; text-decoration: inherit;">implementation<wbr>Effort</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="partnerdata_nodejs">
+<a href="#partnerdata_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preview_nodejs">
+<a href="#preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remediationdescription_nodejs">
+<a href="#remediationdescription_nodejs" style="color: inherit; text-decoration: inherit;">remediation<wbr>Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threats_nodejs">
+<a href="#threats_nodejs" style="color: inherit; text-decoration: inherit;">threats</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userimpact_nodejs">
+<a href="#userimpact_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="assessment_type_python">
+<a href="#assessment_type_python" style="color: inherit; text-decoration: inherit;">assessment_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policy_definition_id_python">
+<a href="#policy_definition_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource ID of the policy definition that turns this assessment calculation on{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="severity_python">
+<a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="category_python">
+<a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="implementation_effort_python">
+<a href="#implementation_effort_python" style="color: inherit; text-decoration: inherit;">implementation_<wbr>effort</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="partner_data_python">
+<a href="#partner_data_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Dict[Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preview_python">
+<a href="#preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remediation_description_python">
+<a href="#remediation_description_python" style="color: inherit; text-decoration: inherit;">remediation_<wbr>description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threats_python">
+<a href="#threats_python" style="color: inherit; text-decoration: inherit;">threats</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_impact_python">
+<a href="#user_impact_python" style="color: inherit; text-decoration: inherit;">user_<wbr>impact</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="securityassessmentpartnerdata">Security<wbr>Assessment<wbr>Partner<wbr>Data</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#SecurityAssessmentPartnerData">input</a>   API doc for this type.
@@ -1831,6 +3067,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Security.Latest.Inputs.SecurityAssessmentPartnerDataArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="partnername_csharp">
+<a href="#partnername_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secret_csharp">
+<a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="partnername_go">
+<a href="#partnername_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secret_go">
+<a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="partnername_nodejs">
+<a href="#partnername_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secret_nodejs">
+<a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="partner_name_python">
+<a href="#partner_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="secret_python">
+<a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="securityassessmentpartnerdataresponse">Security<wbr>Assessment<wbr>Partner<wbr>Data<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SecurityAssessmentPartnerDataResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/security/latest?tab=doc#SecurityAssessmentPartnerDataResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Security.Latest.Outputs.SecurityAssessmentPartnerDataResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

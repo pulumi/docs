@@ -917,6 +917,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="bodydiagnosticsettingsresponse">Body<wbr>Diagnostic<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#BodyDiagnosticSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/apimanagement/latest?tab=doc#BodyDiagnosticSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ApiManagement.Latest.Outputs.BodyDiagnosticSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bytes_csharp">
+<a href="#bytes_csharp" style="color: inherit; text-decoration: inherit;">Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bytes_go">
+<a href="#bytes_go" style="color: inherit; text-decoration: inherit;">Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bytes_nodejs">
+<a href="#bytes_nodejs" style="color: inherit; text-decoration: inherit;">bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bytes_python">
+<a href="#bytes_python" style="color: inherit; text-decoration: inherit;">bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="httpmessagediagnostic">Http<wbr>Message<wbr>Diagnostic</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#HttpMessageDiagnostic">input</a>   API doc for this type.
@@ -1023,6 +1109,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bodydiagnosticsettings">Dict[Body<wbr>Diagnostic<wbr>Settings]</a></span>
+    </dt>
+    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#HttpMessageDiagnosticResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/apimanagement/latest?tab=doc#HttpMessageDiagnosticResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ApiManagement.Latest.Outputs.HttpMessageDiagnosticResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="body_csharp">
+<a href="#body_csharp" style="color: inherit; text-decoration: inherit;">Body</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Api<wbr>Management.<wbr>Latest.<wbr>Inputs.<wbr>Body<wbr>Diagnostic<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="body_go">
+<a href="#body_go" style="color: inherit; text-decoration: inherit;">Body</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Body<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="body_nodejs">
+<a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Body<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="body_python">
+<a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Dict[Body<wbr>Diagnostic<wbr>Settings<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
 
@@ -1169,6 +1381,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="pipelinediagnosticsettingsresponse">Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#PipelineDiagnosticSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/apimanagement/latest?tab=doc#PipelineDiagnosticSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ApiManagement.Latest.Outputs.PipelineDiagnosticSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="request_csharp">
+<a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Api<wbr>Management.<wbr>Latest.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="response_csharp">
+<a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Api<wbr>Management.<wbr>Latest.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="request_go">
+<a href="#request_go" style="color: inherit; text-decoration: inherit;">Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="response_go">
+<a href="#response_go" style="color: inherit; text-decoration: inherit;">Response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="request_nodejs">
+<a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="response_nodejs">
+<a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="request_python">
+<a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Dict[Http<wbr>Message<wbr>Diagnostic<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="response_python">
+<a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Dict[Http<wbr>Message<wbr>Diagnostic<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="samplingsettings">Sampling<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#SamplingSettings">input</a>   API doc for this type.
@@ -1179,6 +1517,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ApiManagement.Latest.Inputs.SamplingSettingsArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_csharp">
+<a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="samplingtype_csharp">
+<a href="#samplingtype_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_go">
+<a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="samplingtype_go">
+<a href="#samplingtype_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_nodejs">
+<a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="samplingtype_nodejs">
+<a href="#samplingtype_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percentage_python">
+<a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sampling_type_python">
+<a href="#sampling_type_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="samplingsettingsresponse">Sampling<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SamplingSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/apimanagement/latest?tab=doc#SamplingSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.ApiManagement.Latest.Outputs.SamplingSettingsResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

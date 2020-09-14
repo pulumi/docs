@@ -957,6 +957,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="firewallruleresponse">Firewall<wbr>Rule<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#FirewallRuleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/blockchain/preview?tab=doc#FirewallRuleResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Blockchain.Preview.Outputs.FirewallRuleResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endipaddress_csharp">
+<a href="#endipaddress_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the end IP address of the firewall rule range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rulename_csharp">
+<a href="#rulename_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the name of the firewall rules.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startipaddress_csharp">
+<a href="#startipaddress_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the start IP address of the firewall rule range.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endipaddress_go">
+<a href="#endipaddress_go" style="color: inherit; text-decoration: inherit;">End<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the end IP address of the firewall rule range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rulename_go">
+<a href="#rulename_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the name of the firewall rules.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startipaddress_go">
+<a href="#startipaddress_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the start IP address of the firewall rule range.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endipaddress_nodejs">
+<a href="#endipaddress_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the end IP address of the firewall rule range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rulename_nodejs">
+<a href="#rulename_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the name of the firewall rules.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startipaddress_nodejs">
+<a href="#startipaddress_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the start IP address of the firewall rule range.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_ip_address_python">
+<a href="#end_ip_address_python" style="color: inherit; text-decoration: inherit;">end_<wbr>ip_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the end IP address of the firewall rule range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rule_name_python">
+<a href="#rule_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the name of the firewall rules.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_ip_address_python">
+<a href="#start_ip_address_python" style="color: inherit; text-decoration: inherit;">start_<wbr>ip_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the start IP address of the firewall rule range.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 
 
 

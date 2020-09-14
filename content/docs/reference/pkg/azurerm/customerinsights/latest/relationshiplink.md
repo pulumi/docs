@@ -1077,6 +1077,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="participantprofilepropertyreferenceresponse">Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ParticipantProfilePropertyReferenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/customerinsights/latest?tab=doc#ParticipantProfilePropertyReferenceResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.CustomerInsights.Latest.Outputs.ParticipantProfilePropertyReferenceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="interactionpropertyname_csharp">
+<a href="#interactionpropertyname_csharp" style="color: inherit; text-decoration: inherit;">Interaction<wbr>Property<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="profilepropertyname_csharp">
+<a href="#profilepropertyname_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Property<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="interactionpropertyname_go">
+<a href="#interactionpropertyname_go" style="color: inherit; text-decoration: inherit;">Interaction<wbr>Property<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="profilepropertyname_go">
+<a href="#profilepropertyname_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Property<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="interactionpropertyname_nodejs">
+<a href="#interactionpropertyname_nodejs" style="color: inherit; text-decoration: inherit;">interaction<wbr>Property<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="profilepropertyname_nodejs">
+<a href="#profilepropertyname_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Property<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="interactionpropertyname_python">
+<a href="#interactionpropertyname_python" style="color: inherit; text-decoration: inherit;">interaction<wbr>Property<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The source interaction property that maps to the target profile property.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="profilepropertyname_python">
+<a href="#profilepropertyname_python" style="color: inherit; text-decoration: inherit;">profile<wbr>Property<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The target profile property that maps to the source interaction property.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="relationshiplinkfieldmapping">Relationship<wbr>Link<wbr>Field<wbr>Mapping</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#RelationshipLinkFieldMapping">input</a>   API doc for this type.
@@ -1087,6 +1213,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.CustomerInsights.Latest.Inputs.RelationshipLinkFieldMappingArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="interactionfieldname_csharp">
+<a href="#interactionfieldname_csharp" style="color: inherit; text-decoration: inherit;">Interaction<wbr>Field<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="relationshipfieldname_csharp">
+<a href="#relationshipfieldname_csharp" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Field<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linktype_csharp">
+<a href="#linktype_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Link type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="interactionfieldname_go">
+<a href="#interactionfieldname_go" style="color: inherit; text-decoration: inherit;">Interaction<wbr>Field<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="relationshipfieldname_go">
+<a href="#relationshipfieldname_go" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Field<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linktype_go">
+<a href="#linktype_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Link type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="interactionfieldname_nodejs">
+<a href="#interactionfieldname_nodejs" style="color: inherit; text-decoration: inherit;">interaction<wbr>Field<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="relationshipfieldname_nodejs">
+<a href="#relationshipfieldname_nodejs" style="color: inherit; text-decoration: inherit;">relationship<wbr>Field<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linktype_nodejs">
+<a href="#linktype_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Link type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="interactionfieldname_python">
+<a href="#interactionfieldname_python" style="color: inherit; text-decoration: inherit;">interaction<wbr>Field<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The field name on the Interaction Type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="relationshipfieldname_python">
+<a href="#relationshipfieldname_python" style="color: inherit; text-decoration: inherit;">relationship<wbr>Field<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The field name on the Relationship metadata.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="link_type_python">
+<a href="#link_type_python" style="color: inherit; text-decoration: inherit;">link_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Link type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="relationshiplinkfieldmappingresponse">Relationship<wbr>Link<wbr>Field<wbr>Mapping<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RelationshipLinkFieldMappingResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/customerinsights/latest?tab=doc#RelationshipLinkFieldMappingResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.CustomerInsights.Latest.Outputs.RelationshipLinkFieldMappingResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

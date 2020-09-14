@@ -492,6 +492,1282 @@ The following output properties are available:
 
 
 
+<h4 id="dataflowsinkresponse">Data<wbr>Flow<wbr>Sink<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DataFlowSinkResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/datafactory/latest?tab=doc#DataFlowSinkResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DataFactory.Latest.Outputs.DataFlowSinkResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataset_csharp">
+<a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Data<wbr>Factory.<wbr>Latest.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_csharp">
+<a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Data<wbr>Factory.<wbr>Latest.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemalinkedservice_csharp">
+<a href="#schemalinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Data<wbr>Factory.<wbr>Latest.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataset_go">
+<a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_go">
+<a href="#linkedservice_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemalinkedservice_go">
+<a href="#schemalinkedservice_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataset_nodejs">
+<a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_nodejs">
+<a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemalinkedservice_nodejs">
+<a href="#schemalinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Linked<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataset_python">
+<a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dict[Dataset<wbr>Reference<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_python">
+<a href="#linkedservice_python" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemalinkedservice_python">
+<a href="#schemalinkedservice_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Linked<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="dataflowsourceresponse">Data<wbr>Flow<wbr>Source<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DataFlowSourceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/datafactory/latest?tab=doc#DataFlowSourceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DataFactory.Latest.Outputs.DataFlowSourceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataset_csharp">
+<a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Data<wbr>Factory.<wbr>Latest.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_csharp">
+<a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Data<wbr>Factory.<wbr>Latest.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemalinkedservice_csharp">
+<a href="#schemalinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Data<wbr>Factory.<wbr>Latest.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataset_go">
+<a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_go">
+<a href="#linkedservice_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemalinkedservice_go">
+<a href="#schemalinkedservice_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataset_nodejs">
+<a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_nodejs">
+<a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemalinkedservice_nodejs">
+<a href="#schemalinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Linked<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataset_python">
+<a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dict[Dataset<wbr>Reference<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_python">
+<a href="#linkedservice_python" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemalinkedservice_python">
+<a href="#schemalinkedservice_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Linked<wbr>Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Dict[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DatasetReferenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/datafactory/latest?tab=doc#DatasetReferenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DataFactory.Latest.Outputs.DatasetReferenceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencename_csharp">
+<a href="#referencename_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Reference dataset name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencename_go">
+<a href="#referencename_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Reference dataset name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencename_nodejs">
+<a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Reference dataset name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+    </dt>
+    <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencename_python">
+<a href="#referencename_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Reference dataset name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any>]</span>
+    </dt>
+    <dd>{{% md %}}Arguments for dataset.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#LinkedServiceReferenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/datafactory/latest?tab=doc#LinkedServiceReferenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DataFactory.Latest.Outputs.LinkedServiceReferenceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencename_csharp">
+<a href="#referencename_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencename_go">
+<a href="#referencename_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencename_nodejs">
+<a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: {[key: string]: any}}</span>
+    </dt>
+    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencename_python">
+<a href="#referencename_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any>]</span>
+    </dt>
+    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="mappingdataflowresponse">Mapping<wbr>Data<wbr>Flow<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MappingDataFlowResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/datafactory/latest?tab=doc#MappingDataFlowResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DataFactory.Latest.Outputs.MappingDataFlowResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="folder_csharp">
+<a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Pulumi.<wbr>Azure<wbr>RM.<wbr>Data<wbr>Factory.<wbr>Latest.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Response<wbr>Folder<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="script_csharp">
+<a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}DataFlow script.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sinks_csharp">
+<a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Data<wbr>Factory.<wbr>Latest.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Sink<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks in data flow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sources_csharp">
+<a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Data<wbr>Factory.<wbr>Latest.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in data flow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transformations_csharp">
+<a href="#transformations_csharp" style="color: inherit; text-decoration: inherit;">Transformations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Data<wbr>Factory.<wbr>Latest.<wbr>Inputs.<wbr>Transformation<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of transformations in data flow.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">[]map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="folder_go">
+<a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Data<wbr>Flow<wbr>Response<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="script_go">
+<a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}DataFlow script.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sinks_go">
+<a href="#sinks_go" style="color: inherit; text-decoration: inherit;">Sinks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsinkresponse">[]Data<wbr>Flow<wbr>Sink<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks in data flow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sources_go">
+<a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsourceresponse">[]Data<wbr>Flow<wbr>Source<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in data flow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transformations_go">
+<a href="#transformations_go" style="color: inherit; text-decoration: inherit;">Transformations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transformationresponse">[]Transformation<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of transformations in data flow.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}[]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="folder_nodejs">
+<a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Data<wbr>Flow<wbr>Response<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="script_nodejs">
+<a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}DataFlow script.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sinks_nodejs">
+<a href="#sinks_nodejs" style="color: inherit; text-decoration: inherit;">sinks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsinkresponse">Data<wbr>Flow<wbr>Sink<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks in data flow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sources_nodejs">
+<a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsourceresponse">Data<wbr>Flow<wbr>Source<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in data flow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transformations_nodejs">
+<a href="#transformations_nodejs" style="color: inherit; text-decoration: inherit;">transformations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transformationresponse">Transformation<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transformations in data flow.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">List[Any>]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="folder_python">
+<a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Dict[Data<wbr>Flow<wbr>Response<wbr>Folder]</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="script_python">
+<a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}DataFlow script.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sinks_python">
+<a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsinkresponse">List[Data<wbr>Flow<wbr>Sink<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sinks in data flow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sources_python">
+<a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowsourceresponse">List[Data<wbr>Flow<wbr>Source<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in data flow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transformations_python">
+<a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transformationresponse">List[Transformation<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of transformations in data flow.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="transformationresponse">Transformation<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#TransformationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/datafactory/latest?tab=doc#TransformationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DataFactory.Latest.Outputs.TransformationResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 
 
 

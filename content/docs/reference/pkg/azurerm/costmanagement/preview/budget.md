@@ -917,6 +917,258 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="budgettimeperiodresponse">Budget<wbr>Time<wbr>Period<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#BudgetTimePeriodResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/costmanagement/preview?tab=doc#BudgetTimePeriodResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.CostManagement.Preview.Outputs.BudgetTimePeriodResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="startdate_csharp">
+<a href="#startdate_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The start date for the budget.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enddate_csharp">
+<a href="#enddate_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The end date for the budget. If not provided, we default this to 10 years from the start date.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="startdate_go">
+<a href="#startdate_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The start date for the budget.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enddate_go">
+<a href="#enddate_go" style="color: inherit; text-decoration: inherit;">End<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The end date for the budget. If not provided, we default this to 10 years from the start date.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="startdate_nodejs">
+<a href="#startdate_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The start date for the budget.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enddate_nodejs">
+<a href="#enddate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The end date for the budget. If not provided, we default this to 10 years from the start date.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_date_python">
+<a href="#start_date_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The start date for the budget.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_date_python">
+<a href="#end_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The end date for the budget. If not provided, we default this to 10 years from the start date.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="currentspendresponse">Current<wbr>Spend<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#CurrentSpendResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/costmanagement/preview?tab=doc#CurrentSpendResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.CostManagement.Preview.Outputs.CurrentSpendResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="amount_csharp">
+<a href="#amount_csharp" style="color: inherit; text-decoration: inherit;">Amount</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The total amount of cost which is being tracked by the budget.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="amount_go">
+<a href="#amount_go" style="color: inherit; text-decoration: inherit;">Amount</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The total amount of cost which is being tracked by the budget.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="amount_nodejs">
+<a href="#amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The total amount of cost which is being tracked by the budget.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="amount_python">
+<a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The total amount of cost which is being tracked by the budget.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="notification">Notification</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#Notification">input</a>   API doc for this type.
@@ -927,6 +1179,292 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.CostManagement.Preview.Inputs.NotificationArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="contactemails_csharp">
+<a href="#contactemails_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Emails</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The notification is enabled or not.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The comparison operator.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contactgroups_csharp">
+<a href="#contactgroups_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contactroles_csharp">
+<a href="#contactroles_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Roles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="contactemails_go">
+<a href="#contactemails_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Emails</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The notification is enabled or not.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The comparison operator.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contactgroups_go">
+<a href="#contactgroups_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contactroles_go">
+<a href="#contactroles_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Roles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="contactemails_nodejs">
+<a href="#contactemails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Emails</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}The notification is enabled or not.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The comparison operator.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contactgroups_nodejs">
+<a href="#contactgroups_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contactroles_nodejs">
+<a href="#contactroles_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Roles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="contactemails_python">
+<a href="#contactemails_python" style="color: inherit; text-decoration: inherit;">contact<wbr>Emails</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The notification is enabled or not.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The comparison operator.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contactgroups_python">
+<a href="#contactgroups_python" style="color: inherit; text-decoration: inherit;">contact<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contactroles_python">
+<a href="#contactroles_python" style="color: inherit; text-decoration: inherit;">contact<wbr>Roles</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="notificationresponse">Notification<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#NotificationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/costmanagement/preview?tab=doc#NotificationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.CostManagement.Preview.Outputs.NotificationResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1369,6 +1907,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ReportConfigComparisonExpressionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/costmanagement/preview?tab=doc#ReportConfigComparisonExpressionResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.CostManagement.Preview.Outputs.ReportConfigComparisonExpressionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="reportconfigfilter">Report<wbr>Config<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#ReportConfigFilter">input</a>   API doc for this type.
@@ -1605,6 +2309,252 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpression">Dict[Report<wbr>Config<wbr>Comparison<wbr>Expression]</a></span>
+    </dt>
+    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="reportconfigfilterresponse">Report<wbr>Config<wbr>Filter<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ReportConfigFilterResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/costmanagement/preview?tab=doc#ReportConfigFilterResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.CostManagement.Preview.Outputs.ReportConfigFilterResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="and_csharp">
+<a href="#and_csharp" style="color: inherit; text-decoration: inherit;">And</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cost<wbr>Management.<wbr>Preview.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dimension_csharp">
+<a href="#dimension_csharp" style="color: inherit; text-decoration: inherit;">Dimension</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cost<wbr>Management.<wbr>Preview.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="not_csharp">
+<a href="#not_csharp" style="color: inherit; text-decoration: inherit;">Not</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cost<wbr>Management.<wbr>Preview.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="or_csharp">
+<a href="#or_csharp" style="color: inherit; text-decoration: inherit;">Or</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cost<wbr>Management.<wbr>Preview.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tag_csharp">
+<a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Cost<wbr>Management.<wbr>Preview.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="and_go">
+<a href="#and_go" style="color: inherit; text-decoration: inherit;">And</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">[]Report<wbr>Config<wbr>Filter<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dimension_go">
+<a href="#dimension_go" style="color: inherit; text-decoration: inherit;">Dimension</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="not_go">
+<a href="#not_go" style="color: inherit; text-decoration: inherit;">Not</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">Report<wbr>Config<wbr>Filter<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="or_go">
+<a href="#or_go" style="color: inherit; text-decoration: inherit;">Or</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">[]Report<wbr>Config<wbr>Filter<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tag_go">
+<a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="and_nodejs">
+<a href="#and_nodejs" style="color: inherit; text-decoration: inherit;">and</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">Report<wbr>Config<wbr>Filter<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dimension_nodejs">
+<a href="#dimension_nodejs" style="color: inherit; text-decoration: inherit;">dimension</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="not_nodejs">
+<a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">Report<wbr>Config<wbr>Filter<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="or_nodejs">
+<a href="#or_nodejs" style="color: inherit; text-decoration: inherit;">or</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">Report<wbr>Config<wbr>Filter<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tag_nodejs">
+<a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="and__python">
+<a href="#and__python" style="color: inherit; text-decoration: inherit;">and_</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">List[Report<wbr>Config<wbr>Filter<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dimension_python">
+<a href="#dimension_python" style="color: inherit; text-decoration: inherit;">dimension</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Dict[Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="not__python">
+<a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">Dict[Report<wbr>Config<wbr>Filter<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="or__python">
+<a href="#or__python" style="color: inherit; text-decoration: inherit;">or_</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">List[Report<wbr>Config<wbr>Filter<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tag_python">
+<a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Dict[Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
 

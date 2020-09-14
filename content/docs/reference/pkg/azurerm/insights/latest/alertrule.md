@@ -917,6 +917,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="locationthresholdruleconditionresponse">Location<wbr>Threshold<wbr>Rule<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#LocationThresholdRuleConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/latest?tab=doc#LocationThresholdRuleConditionResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Latest.Outputs.LocationThresholdRuleConditionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="failedlocationcount_csharp">
+<a href="#failedlocationcount_csharp" style="color: inherit; text-decoration: inherit;">Failed<wbr>Location<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasource_csharp">
+<a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Insights.<wbr>Latest.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Insights.<wbr>Latest.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowsize_csharp">
+<a href="#windowsize_csharp" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="failedlocationcount_go">
+<a href="#failedlocationcount_go" style="color: inherit; text-decoration: inherit;">Failed<wbr>Location<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasource_go">
+<a href="#datasource_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowsize_go">
+<a href="#windowsize_go" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="failedlocationcount_nodejs">
+<a href="#failedlocationcount_nodejs" style="color: inherit; text-decoration: inherit;">failed<wbr>Location<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasource_nodejs">
+<a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response | Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowsize_nodejs">
+<a href="#windowsize_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="failedlocationcount_python">
+<a href="#failedlocationcount_python" style="color: inherit; text-decoration: inherit;">failed<wbr>Location<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasource_python">
+<a href="#datasource_python" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response] | Dict[Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="window_size_python">
+<a href="#window_size_python" style="color: inherit; text-decoration: inherit;">window_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="managementeventaggregationcondition">Management<wbr>Event<wbr>Aggregation<wbr>Condition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#ManagementEventAggregationCondition">input</a>   API doc for this type.
@@ -927,6 +1093,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Latest.Inputs.ManagementEventAggregationConditionArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}the condition operator.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowsize_csharp">
+<a href="#windowsize_csharp" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the condition operator.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowsize_go">
+<a href="#windowsize_go" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the condition operator.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowsize_nodejs">
+<a href="#windowsize_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the condition operator.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="window_size_python">
+<a href="#window_size_python" style="color: inherit; text-decoration: inherit;">window_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="managementeventaggregationconditionresponse">Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ManagementEventAggregationConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/latest?tab=doc#ManagementEventAggregationConditionResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Latest.Outputs.ManagementEventAggregationConditionResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1209,6 +1541,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="managementeventruleconditionresponse">Management<wbr>Event<wbr>Rule<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ManagementEventRuleConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/latest?tab=doc#ManagementEventRuleConditionResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Latest.Outputs.ManagementEventRuleConditionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aggregation_csharp">
+<a href="#aggregation_csharp" style="color: inherit; text-decoration: inherit;">Aggregation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementeventaggregationconditionresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Insights.<wbr>Latest.<wbr>Inputs.<wbr>Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasource_csharp">
+<a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Insights.<wbr>Latest.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Insights.<wbr>Latest.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aggregation_go">
+<a href="#aggregation_go" style="color: inherit; text-decoration: inherit;">Aggregation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementeventaggregationconditionresponse">Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasource_go">
+<a href="#datasource_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aggregation_nodejs">
+<a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementeventaggregationconditionresponse">Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasource_nodejs">
+<a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response | Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aggregation_python">
+<a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementeventaggregationconditionresponse">Dict[Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasource_python">
+<a href="#datasource_python" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response] | Dict[Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="ruleemailaction">Rule<wbr>Email<wbr>Action</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#RuleEmailAction">input</a>   API doc for this type.
@@ -1335,6 +1793,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="ruleemailactionresponse">Rule<wbr>Email<wbr>Action<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RuleEmailActionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/latest?tab=doc#RuleEmailActionResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Latest.Outputs.RuleEmailActionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customemails_csharp">
+<a href="#customemails_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Emails</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sendtoserviceowners_csharp">
+<a href="#sendtoserviceowners_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>To<wbr>Service<wbr>Owners</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customemails_go">
+<a href="#customemails_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Emails</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sendtoserviceowners_go">
+<a href="#sendtoserviceowners_go" style="color: inherit; text-decoration: inherit;">Send<wbr>To<wbr>Service<wbr>Owners</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customemails_nodejs">
+<a href="#customemails_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Emails</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sendtoserviceowners_nodejs">
+<a href="#sendtoserviceowners_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Service<wbr>Owners</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customemails_python">
+<a href="#customemails_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Emails</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sendtoserviceowners_python">
+<a href="#sendtoserviceowners_python" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Service<wbr>Owners</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="rulemanagementeventclaimsdatasource">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#RuleManagementEventClaimsDataSource">input</a>   API doc for this type.
@@ -1345,6 +1929,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Latest.Inputs.RuleManagementEventClaimsDataSourceArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="emailaddress_csharp">
+<a href="#emailaddress_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}the email address.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="emailaddress_go">
+<a href="#emailaddress_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the email address.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="emailaddress_nodejs">
+<a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the email address.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="emailaddress_python">
+<a href="#emailaddress_python" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the email address.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulemanagementeventclaimsdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RuleManagementEventClaimsDataSourceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/latest?tab=doc#RuleManagementEventClaimsDataSourceResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Latest.Outputs.RuleManagementEventClaimsDataSourceResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1867,6 +2537,452 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RuleManagementEventDataSourceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/latest?tab=doc#RuleManagementEventDataSourceResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Latest.Outputs.RuleManagementEventDataSourceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="claims_csharp">
+<a href="#claims_csharp" style="color: inherit; text-decoration: inherit;">Claims</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Insights.<wbr>Latest.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}the claims.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventname_csharp">
+<a href="#eventname_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}the event name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventsource_csharp">
+<a href="#eventsource_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}the event source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_csharp">
+<a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}the level.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationname_csharp">
+<a href="#operationname_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}the resource group name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceprovidername_csharp">
+<a href="#resourceprovidername_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceuri_csharp">
+<a href="#resourceuri_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substatus_csharp">
+<a href="#substatus_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}the substatus.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="claims_go">
+<a href="#claims_go" style="color: inherit; text-decoration: inherit;">Claims</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}the claims.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventname_go">
+<a href="#eventname_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the event name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventsource_go">
+<a href="#eventsource_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the event source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_go">
+<a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the level.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationname_go">
+<a href="#operationname_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the resource group name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceprovidername_go">
+<a href="#resourceprovidername_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceuri_go">
+<a href="#resourceuri_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substatus_go">
+<a href="#substatus_go" style="color: inherit; text-decoration: inherit;">Sub<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the substatus.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="claims_nodejs">
+<a href="#claims_nodejs" style="color: inherit; text-decoration: inherit;">claims</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}the claims.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventname_nodejs">
+<a href="#eventname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the event name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventsource_nodejs">
+<a href="#eventsource_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the event source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_nodejs">
+<a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the level.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationname_nodejs">
+<a href="#operationname_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the resource group name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceprovidername_nodejs">
+<a href="#resourceprovidername_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Provider<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceuri_nodejs">
+<a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substatus_nodejs">
+<a href="#substatus_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the substatus.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="claims_python">
+<a href="#claims_python" style="color: inherit; text-decoration: inherit;">claims</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Dict[Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}the claims.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventname_python">
+<a href="#eventname_python" style="color: inherit; text-decoration: inherit;">event<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the event name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventsource_python">
+<a href="#eventsource_python" style="color: inherit; text-decoration: inherit;">event<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the event source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_python">
+<a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the level.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationname_python">
+<a href="#operationname_python" style="color: inherit; text-decoration: inherit;">operation<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the resource group name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_provider_name_python">
+<a href="#resource_provider_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>provider_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_uri_python">
+<a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substatus_python">
+<a href="#substatus_python" style="color: inherit; text-decoration: inherit;">sub<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the substatus.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#RuleMetricDataSource">input</a>   API doc for this type.
@@ -1993,6 +3109,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RuleMetricDataSourceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/latest?tab=doc#RuleMetricDataSourceResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Latest.Outputs.RuleMetricDataSourceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricname_csharp">
+<a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceuri_csharp">
+<a href="#resourceuri_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricname_go">
+<a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceuri_go">
+<a href="#resourceuri_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricname_nodejs">
+<a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceuri_nodejs">
+<a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricname_python">
+<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_uri_python">
+<a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="rulewebhookaction">Rule<wbr>Webhook<wbr>Action</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#RuleWebhookAction">input</a>   API doc for this type.
@@ -2003,6 +3245,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Latest.Inputs.RuleWebhookActionArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceuri_csharp">
+<a href="#serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceuri_go">
+<a href="#serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceuri_nodejs">
+<a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_uri_python">
+<a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulewebhookactionresponse">Rule<wbr>Webhook<wbr>Action<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RuleWebhookActionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/latest?tab=doc#RuleWebhookActionResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Latest.Outputs.RuleWebhookActionResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2335,6 +3703,252 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source] | Dict[Rule<wbr>Metric<wbr>Data<wbr>Source]</span>
+    </dt>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeaggregation_python">
+<a href="#timeaggregation_python" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="window_size_python">
+<a href="#window_size_python" style="color: inherit; text-decoration: inherit;">window_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="thresholdruleconditionresponse">Threshold<wbr>Rule<wbr>Condition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ThresholdRuleConditionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/insights/latest?tab=doc#ThresholdRuleConditionResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Insights.Latest.Outputs.ThresholdRuleConditionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="threshold_csharp">
+<a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasource_csharp">
+<a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Insights.<wbr>Latest.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Insights.<wbr>Latest.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeaggregation_csharp">
+<a href="#timeaggregation_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowsize_csharp">
+<a href="#windowsize_csharp" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="threshold_go">
+<a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasource_go">
+<a href="#datasource_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeaggregation_go">
+<a href="#timeaggregation_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowsize_go">
+<a href="#windowsize_go" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="threshold_nodejs">
+<a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasource_nodejs">
+<a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response | Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeaggregation_nodejs">
+<a href="#timeaggregation_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="windowsize_nodejs">
+<a href="#windowsize_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="threshold_python">
+<a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasource_python">
+<a href="#datasource_python" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response] | Dict[Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
 

@@ -1188,6 +1188,916 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+## Supporting Types
+
+
+<h4 id="immutabilitypolicypropertiesresponse">Immutability<wbr>Policy<wbr>Properties<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ImmutabilityPolicyPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#ImmutabilityPolicyPropertiesResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.ImmutabilityPolicyPropertiesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}ImmutabilityPolicy Etag.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="updatehistory_csharp">
+<a href="#updatehistory_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>History</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#updatehistorypropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Storage.<wbr>Preview.<wbr>Inputs.<wbr>Update<wbr>History<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowprotectedappendwrites_csharp">
+<a href="#allowprotectedappendwrites_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Protected<wbr>Append<wbr>Writes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="immutabilityperiodsincecreationindays_csharp">
+<a href="#immutabilityperiodsincecreationindays_csharp" style="color: inherit; text-decoration: inherit;">Immutability<wbr>Period<wbr>Since<wbr>Creation<wbr>In<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ImmutabilityPolicy Etag.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="updatehistory_go">
+<a href="#updatehistory_go" style="color: inherit; text-decoration: inherit;">Update<wbr>History</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#updatehistorypropertyresponse">[]Update<wbr>History<wbr>Property<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowprotectedappendwrites_go">
+<a href="#allowprotectedappendwrites_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Protected<wbr>Append<wbr>Writes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="immutabilityperiodsincecreationindays_go">
+<a href="#immutabilityperiodsincecreationindays_go" style="color: inherit; text-decoration: inherit;">Immutability<wbr>Period<wbr>Since<wbr>Creation<wbr>In<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ImmutabilityPolicy Etag.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="updatehistory_nodejs">
+<a href="#updatehistory_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>History</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#updatehistorypropertyresponse">Update<wbr>History<wbr>Property<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowprotectedappendwrites_nodejs">
+<a href="#allowprotectedappendwrites_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Protected<wbr>Append<wbr>Writes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="immutabilityperiodsincecreationindays_nodejs">
+<a href="#immutabilityperiodsincecreationindays_nodejs" style="color: inherit; text-decoration: inherit;">immutability<wbr>Period<wbr>Since<wbr>Creation<wbr>In<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}ImmutabilityPolicy Etag.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="update_history_python">
+<a href="#update_history_python" style="color: inherit; text-decoration: inherit;">update_<wbr>history</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#updatehistorypropertyresponse">List[Update<wbr>History<wbr>Property<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allow_protected_append_writes_python">
+<a href="#allow_protected_append_writes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>protected_<wbr>append_<wbr>writes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="immutability_period_since_creation_in_days_python">
+<a href="#immutability_period_since_creation_in_days_python" style="color: inherit; text-decoration: inherit;">immutability_<wbr>period_<wbr>since_<wbr>creation_<wbr>in_<wbr>days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="legalholdpropertiesresponse">Legal<wbr>Hold<wbr>Properties<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#LegalHoldPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#LegalHoldPropertiesResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.LegalHoldPropertiesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="haslegalhold_csharp">
+<a href="#haslegalhold_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Legal<wbr>Hold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tagpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Storage.<wbr>Preview.<wbr>Inputs.<wbr>Tag<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="haslegalhold_go">
+<a href="#haslegalhold_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Legal<wbr>Hold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tagpropertyresponse">[]Tag<wbr>Property<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="haslegalhold_nodejs">
+<a href="#haslegalhold_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Legal<wbr>Hold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tagpropertyresponse">Tag<wbr>Property<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="has_legal_hold_python">
+<a href="#has_legal_hold_python" style="color: inherit; text-decoration: inherit;">has_<wbr>legal_<wbr>hold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tagpropertyresponse">List[Tag<wbr>Property<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="tagpropertyresponse">Tag<wbr>Property<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#TagPropertyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#TagPropertyResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.TagPropertyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectidentifier_csharp">
+<a href="#objectidentifier_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the Object ID of the user who added the tag.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tag_csharp">
+<a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tag value.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who added the tag.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timestamp_csharp">
+<a href="#timestamp_csharp" style="color: inherit; text-decoration: inherit;">Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the date and time the tag was added.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upn_csharp">
+<a href="#upn_csharp" style="color: inherit; text-decoration: inherit;">Upn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the User Principal Name of the user who added the tag.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectidentifier_go">
+<a href="#objectidentifier_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the Object ID of the user who added the tag.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tag_go">
+<a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tag value.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who added the tag.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timestamp_go">
+<a href="#timestamp_go" style="color: inherit; text-decoration: inherit;">Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the date and time the tag was added.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upn_go">
+<a href="#upn_go" style="color: inherit; text-decoration: inherit;">Upn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the User Principal Name of the user who added the tag.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectidentifier_nodejs">
+<a href="#objectidentifier_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the Object ID of the user who added the tag.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tag_nodejs">
+<a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tag value.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who added the tag.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timestamp_nodejs">
+<a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the date and time the tag was added.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upn_nodejs">
+<a href="#upn_nodejs" style="color: inherit; text-decoration: inherit;">upn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the User Principal Name of the user who added the tag.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectidentifier_python">
+<a href="#objectidentifier_python" style="color: inherit; text-decoration: inherit;">object<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the Object ID of the user who added the tag.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tag_python">
+<a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The tag value.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who added the tag.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timestamp_python">
+<a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the date and time the tag was added.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upn_python">
+<a href="#upn_python" style="color: inherit; text-decoration: inherit;">upn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the User Principal Name of the user who added the tag.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="updatehistorypropertyresponse">Update<wbr>History<wbr>Property<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#UpdateHistoryPropertyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/storage/preview?tab=doc#UpdateHistoryPropertyResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Storage.Preview.Outputs.UpdateHistoryPropertyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="immutabilityperiodsincecreationindays_csharp">
+<a href="#immutabilityperiodsincecreationindays_csharp" style="color: inherit; text-decoration: inherit;">Immutability<wbr>Period<wbr>Since<wbr>Creation<wbr>In<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectidentifier_csharp">
+<a href="#objectidentifier_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the Object ID of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timestamp_csharp">
+<a href="#timestamp_csharp" style="color: inherit; text-decoration: inherit;">Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the date and time the ImmutabilityPolicy was updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="update_csharp">
+<a href="#update_csharp" style="color: inherit; text-decoration: inherit;">Update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upn_csharp">
+<a href="#upn_csharp" style="color: inherit; text-decoration: inherit;">Upn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the User Principal Name of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="immutabilityperiodsincecreationindays_go">
+<a href="#immutabilityperiodsincecreationindays_go" style="color: inherit; text-decoration: inherit;">Immutability<wbr>Period<wbr>Since<wbr>Creation<wbr>In<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectidentifier_go">
+<a href="#objectidentifier_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the Object ID of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timestamp_go">
+<a href="#timestamp_go" style="color: inherit; text-decoration: inherit;">Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the date and time the ImmutabilityPolicy was updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="update_go">
+<a href="#update_go" style="color: inherit; text-decoration: inherit;">Update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upn_go">
+<a href="#upn_go" style="color: inherit; text-decoration: inherit;">Upn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the User Principal Name of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="immutabilityperiodsincecreationindays_nodejs">
+<a href="#immutabilityperiodsincecreationindays_nodejs" style="color: inherit; text-decoration: inherit;">immutability<wbr>Period<wbr>Since<wbr>Creation<wbr>In<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectidentifier_nodejs">
+<a href="#objectidentifier_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the Object ID of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timestamp_nodejs">
+<a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the date and time the ImmutabilityPolicy was updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="update_nodejs">
+<a href="#update_nodejs" style="color: inherit; text-decoration: inherit;">update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upn_nodejs">
+<a href="#upn_nodejs" style="color: inherit; text-decoration: inherit;">upn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the User Principal Name of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="immutability_period_since_creation_in_days_python">
+<a href="#immutability_period_since_creation_in_days_python" style="color: inherit; text-decoration: inherit;">immutability_<wbr>period_<wbr>since_<wbr>creation_<wbr>in_<wbr>days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectidentifier_python">
+<a href="#objectidentifier_python" style="color: inherit; text-decoration: inherit;">object<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the Object ID of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timestamp_python">
+<a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the date and time the ImmutabilityPolicy was updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="update_python">
+<a href="#update_python" style="color: inherit; text-decoration: inherit;">update</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="upn_python">
+<a href="#upn_python" style="color: inherit; text-decoration: inherit;">upn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Returns the User Principal Name of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

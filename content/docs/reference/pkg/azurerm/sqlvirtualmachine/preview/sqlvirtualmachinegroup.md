@@ -1197,6 +1197,372 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="wsfcdomainprofileresponse">Wsfc<wbr>Domain<wbr>Profile<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#WsfcDomainProfileResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sqlvirtualmachine/preview?tab=doc#WsfcDomainProfileResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.SqlVirtualMachine.Preview.Outputs.WsfcDomainProfileResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterbootstrapaccount_csharp">
+<a href="#clusterbootstrapaccount_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Bootstrap<wbr>Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusteroperatoraccount_csharp">
+<a href="#clusteroperatoraccount_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Operator<wbr>Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domainfqdn_csharp">
+<a href="#domainfqdn_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filesharewitnesspath_csharp">
+<a href="#filesharewitnesspath_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>Witness<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oupath_csharp">
+<a href="#oupath_csharp" style="color: inherit; text-decoration: inherit;">Ou<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlserviceaccount_csharp">
+<a href="#sqlserviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Service<wbr>Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccountprimarykey_csharp">
+<a href="#storageaccountprimarykey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Primary<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccounturl_csharp">
+<a href="#storageaccounturl_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterbootstrapaccount_go">
+<a href="#clusterbootstrapaccount_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Bootstrap<wbr>Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusteroperatoraccount_go">
+<a href="#clusteroperatoraccount_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Operator<wbr>Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domainfqdn_go">
+<a href="#domainfqdn_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filesharewitnesspath_go">
+<a href="#filesharewitnesspath_go" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>Witness<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oupath_go">
+<a href="#oupath_go" style="color: inherit; text-decoration: inherit;">Ou<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlserviceaccount_go">
+<a href="#sqlserviceaccount_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Service<wbr>Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccountprimarykey_go">
+<a href="#storageaccountprimarykey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Primary<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccounturl_go">
+<a href="#storageaccounturl_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterbootstrapaccount_nodejs">
+<a href="#clusterbootstrapaccount_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Bootstrap<wbr>Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusteroperatoraccount_nodejs">
+<a href="#clusteroperatoraccount_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Operator<wbr>Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domainfqdn_nodejs">
+<a href="#domainfqdn_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filesharewitnesspath_nodejs">
+<a href="#filesharewitnesspath_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share<wbr>Witness<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oupath_nodejs">
+<a href="#oupath_nodejs" style="color: inherit; text-decoration: inherit;">ou<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sqlserviceaccount_nodejs">
+<a href="#sqlserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Service<wbr>Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccountprimarykey_nodejs">
+<a href="#storageaccountprimarykey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Primary<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccounturl_nodejs">
+<a href="#storageaccounturl_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cluster_bootstrap_account_python">
+<a href="#cluster_bootstrap_account_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>bootstrap_<wbr>account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cluster_operator_account_python">
+<a href="#cluster_operator_account_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>operator_<wbr>account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domain_fqdn_python">
+<a href="#domain_fqdn_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_share_witness_path_python">
+<a href="#file_share_witness_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share_<wbr>witness_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ou_path_python">
+<a href="#ou_path_python" style="color: inherit; text-decoration: inherit;">ou_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sql_service_account_python">
+<a href="#sql_service_account_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>service_<wbr>account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_account_primary_key_python">
+<a href="#storage_account_primary_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>primary_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_account_url_python">
+<a href="#storage_account_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 
 
 

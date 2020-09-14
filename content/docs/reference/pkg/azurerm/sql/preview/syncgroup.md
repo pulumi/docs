@@ -1037,6 +1037,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="syncgroupschemaresponse">Sync<wbr>Group<wbr>Schema<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SyncGroupSchemaResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sql/preview?tab=doc#SyncGroupSchemaResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Sql.Preview.Outputs.SyncGroupSchemaResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mastersyncmembername_csharp">
+<a href="#mastersyncmembername_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Sync<wbr>Member<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of master sync member where the schema is from.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tables_csharp">
+<a href="#tables_csharp" style="color: inherit; text-decoration: inherit;">Tables</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syncgroupschematableresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Sql.<wbr>Preview.<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of tables in sync group schema.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mastersyncmembername_go">
+<a href="#mastersyncmembername_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Sync<wbr>Member<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of master sync member where the schema is from.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tables_go">
+<a href="#tables_go" style="color: inherit; text-decoration: inherit;">Tables</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syncgroupschematableresponse">[]Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of tables in sync group schema.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mastersyncmembername_nodejs">
+<a href="#mastersyncmembername_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Sync<wbr>Member<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of master sync member where the schema is from.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tables_nodejs">
+<a href="#tables_nodejs" style="color: inherit; text-decoration: inherit;">tables</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syncgroupschematableresponse">Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of tables in sync group schema.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="master_sync_member_name_python">
+<a href="#master_sync_member_name_python" style="color: inherit; text-decoration: inherit;">master_<wbr>sync_<wbr>member_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of master sync member where the schema is from.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tables_python">
+<a href="#tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syncgroupschematableresponse">List[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of tables in sync group schema.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="syncgroupschematable">Sync<wbr>Group<wbr>Schema<wbr>Table</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#SyncGroupSchemaTable">input</a>   API doc for this type.
@@ -1321,6 +1447,298 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Quoted name of sync group table column.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="syncgroupschematablecolumnresponse">Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SyncGroupSchemaTableColumnResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sql/preview?tab=doc#SyncGroupSchemaTableColumnResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Sql.Preview.Outputs.SyncGroupSchemaTableColumnResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasize_csharp">
+<a href="#datasize_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Data size of the column.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datatype_csharp">
+<a href="#datatype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Data type of the column.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quotedname_csharp">
+<a href="#quotedname_csharp" style="color: inherit; text-decoration: inherit;">Quoted<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Quoted name of sync group table column.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasize_go">
+<a href="#datasize_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Data size of the column.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datatype_go">
+<a href="#datatype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Data type of the column.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quotedname_go">
+<a href="#quotedname_go" style="color: inherit; text-decoration: inherit;">Quoted<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Quoted name of sync group table column.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasize_nodejs">
+<a href="#datasize_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Data size of the column.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datatype_nodejs">
+<a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Data type of the column.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quotedname_nodejs">
+<a href="#quotedname_nodejs" style="color: inherit; text-decoration: inherit;">quoted<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Quoted name of sync group table column.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datasize_python">
+<a href="#datasize_python" style="color: inherit; text-decoration: inherit;">data<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Data size of the column.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="data_type_python">
+<a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Data type of the column.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quotedname_python">
+<a href="#quotedname_python" style="color: inherit; text-decoration: inherit;">quoted<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Quoted name of sync group table column.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="syncgroupschematableresponse">Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SyncGroupSchemaTableResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/sql/preview?tab=doc#SyncGroupSchemaTableResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Sql.Preview.Outputs.SyncGroupSchemaTableResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="columns_csharp">
+<a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Sql.<wbr>Preview.<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of columns in sync group schema.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quotedname_csharp">
+<a href="#quotedname_csharp" style="color: inherit; text-decoration: inherit;">Quoted<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Quoted name of sync group schema table.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="columns_go">
+<a href="#columns_go" style="color: inherit; text-decoration: inherit;">Columns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">[]Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of columns in sync group schema.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quotedname_go">
+<a href="#quotedname_go" style="color: inherit; text-decoration: inherit;">Quoted<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Quoted name of sync group schema table.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="columns_nodejs">
+<a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of columns in sync group schema.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quotedname_nodejs">
+<a href="#quotedname_nodejs" style="color: inherit; text-decoration: inherit;">quoted<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Quoted name of sync group schema table.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="columns_python">
+<a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">List[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of columns in sync group schema.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quotedname_python">
+<a href="#quotedname_python" style="color: inherit; text-decoration: inherit;">quoted<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Quoted name of sync group schema table.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

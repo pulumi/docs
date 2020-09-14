@@ -603,6 +603,596 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="healthprobeparametersresponse">Health<wbr>Probe<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#HealthProbeParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#HealthProbeParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.HealthProbeParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probeintervalinseconds_csharp">
+<a href="#probeintervalinseconds_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Interval<wbr>In<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probepath_csharp">
+<a href="#probepath_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path relative to the origin that is used to determine the health of the origin.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probeprotocol_csharp">
+<a href="#probeprotocol_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Protocol to use for health probe.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proberequesttype_csharp">
+<a href="#proberequesttype_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Request<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of health probe request that is made.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probeintervalinseconds_go">
+<a href="#probeintervalinseconds_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Interval<wbr>In<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probepath_go">
+<a href="#probepath_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path relative to the origin that is used to determine the health of the origin.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probeprotocol_go">
+<a href="#probeprotocol_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Protocol to use for health probe.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proberequesttype_go">
+<a href="#proberequesttype_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Request<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of health probe request that is made.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probeintervalinseconds_nodejs">
+<a href="#probeintervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Interval<wbr>In<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probepath_nodejs">
+<a href="#probepath_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path relative to the origin that is used to determine the health of the origin.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probeprotocol_nodejs">
+<a href="#probeprotocol_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Protocol to use for health probe.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proberequesttype_nodejs">
+<a href="#proberequesttype_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Request<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of health probe request that is made.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probe_interval_in_seconds_python">
+<a href="#probe_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>interval_<wbr>in_<wbr>seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probe_path_python">
+<a href="#probe_path_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The path relative to the origin that is used to determine the health of the origin.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probe_protocol_python">
+<a href="#probe_protocol_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Protocol to use for health probe.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probe_request_type_python">
+<a href="#probe_request_type_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>request_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of health probe request that is made.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="httperrorrangeparametersresponse">Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#HttpErrorRangeParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#HttpErrorRangeParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.HttpErrorRangeParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="begin_csharp">
+<a href="#begin_csharp" style="color: inherit; text-decoration: inherit;">Begin</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_csharp">
+<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="begin_go">
+<a href="#begin_go" style="color: inherit; text-decoration: inherit;">Begin</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_go">
+<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="begin_nodejs">
+<a href="#begin_nodejs" style="color: inherit; text-decoration: inherit;">begin</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_nodejs">
+<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="begin_python">
+<a href="#begin_python" style="color: inherit; text-decoration: inherit;">begin</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_python">
+<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ResourceReferenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#ResourceReferenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.ResourceReferenceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="responsebasedoriginerrordetectionparametersresponse">Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ResponseBasedOriginErrorDetectionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/cdn/latest?tab=doc#ResponseBasedOriginErrorDetectionParametersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Cdn.Latest.Outputs.ResponseBasedOriginErrorDetectionParametersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httperrorranges_csharp">
+<a href="#httperrorranges_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Error<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Cdn.<wbr>Latest.<wbr>Inputs.<wbr>Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsebaseddetectederrortypes_csharp">
+<a href="#responsebaseddetectederrortypes_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of response errors for real user requests for which origin will be deemed unhealthy{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsebasedfailoverthresholdpercentage_csharp">
+<a href="#responsebasedfailoverthresholdpercentage_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Based<wbr>Failover<wbr>Threshold<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httperrorranges_go">
+<a href="#httperrorranges_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Error<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">[]Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsebaseddetectederrortypes_go">
+<a href="#responsebaseddetectederrortypes_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of response errors for real user requests for which origin will be deemed unhealthy{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsebasedfailoverthresholdpercentage_go">
+<a href="#responsebasedfailoverthresholdpercentage_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Based<wbr>Failover<wbr>Threshold<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httperrorranges_nodejs">
+<a href="#httperrorranges_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Error<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsebaseddetectederrortypes_nodejs">
+<a href="#responsebaseddetectederrortypes_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of response errors for real user requests for which origin will be deemed unhealthy{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="responsebasedfailoverthresholdpercentage_nodejs">
+<a href="#responsebasedfailoverthresholdpercentage_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Based<wbr>Failover<wbr>Threshold<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_error_ranges_python">
+<a href="#http_error_ranges_python" style="color: inherit; text-decoration: inherit;">http_<wbr>error_<wbr>ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">List[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="response_based_detected_error_types_python">
+<a href="#response_based_detected_error_types_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>detected_<wbr>error_<wbr>types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of response errors for real user requests for which origin will be deemed unhealthy{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="response_based_failover_threshold_percentage_python">
+<a href="#response_based_failover_threshold_percentage_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>failover_<wbr>threshold_<wbr>percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

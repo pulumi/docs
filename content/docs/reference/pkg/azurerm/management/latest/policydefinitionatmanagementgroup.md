@@ -1083,6 +1083,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="parameterdefinitionsvalueresponse">Parameter<wbr>Definitions<wbr>Value<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ParameterDefinitionsValueResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/management/latest?tab=doc#ParameterDefinitionsValueResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Management.Latest.Outputs.ParameterDefinitionsValueResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedvalues_csharp">
+<a href="#allowedvalues_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultvalue_csharp">
+<a href="#defaultvalue_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Pulumi.<wbr>Azure<wbr>RM.<wbr>Management.<wbr>Latest.<wbr>Inputs.<wbr>Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedvalues_go">
+<a href="#allowedvalues_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">[]map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultvalue_go">
+<a href="#defaultvalue_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata</a></span>
+    </dt>
+    <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedvalues_nodejs">
+<a href="#allowedvalues_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}[]</span>
+    </dt>
+    <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultvalue_nodejs">
+<a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata</a></span>
+    </dt>
+    <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedvalues_python">
+<a href="#allowedvalues_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">List[Any>]</span>
+    </dt>
+    <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_value_python">
+<a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Dict[Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata]</a></span>
+    </dt>
+    <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ParameterDefinitionsValueResponseMetadata">output</a> API doc for this type.

@@ -563,6 +563,1014 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="mediagraphassetsinkresponse">Media<wbr>Graph<wbr>Asset<wbr>Sink<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MediaGraphAssetSinkResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/preview?tab=doc#MediaGraphAssetSinkResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Preview.Outputs.MediaGraphAssetSinkResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="assetname_csharp">
+<a href="#assetname_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Asset name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inputs_csharp">
+<a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Sink inputs.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sink name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="assetname_go">
+<a href="#assetname_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Asset name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inputs_go">
+<a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Sink inputs.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sink name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="assetname_nodejs">
+<a href="#assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Asset name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inputs_nodejs">
+<a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Sink inputs.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sink name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="asset_name_python">
+<a href="#asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Asset name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inputs_python">
+<a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Sink inputs.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sink name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="mediagraphclearendpointresponse">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MediaGraphClearEndpointResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/preview?tab=doc#MediaGraphClearEndpointResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Preview.Outputs.MediaGraphClearEndpointResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Url for the endpoint.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credentials_csharp">
+<a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Preview.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Url for the endpoint.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credentials_go">
+<a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Url for the endpoint.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credentials_nodejs">
+<a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Url for the endpoint.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credentials_python">
+<a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Dict[Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="mediagraphpemcertificatelistresponse">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MediaGraphPemCertificateListResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/preview?tab=doc#MediaGraphPemCertificateListResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Preview.Outputs.MediaGraphPemCertificateListResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificates_csharp">
+<a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}PEM formatted public certificates, one per entry.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificates_go">
+<a href="#certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}PEM formatted public certificates, one per entry.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificates_nodejs">
+<a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}PEM formatted public certificates, one per entry.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificates_python">
+<a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}PEM formatted public certificates, one per entry.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="mediagraphrtspsourceresponse">Media<wbr>Graph<wbr>Rtsp<wbr>Source<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MediaGraphRtspSourceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/preview?tab=doc#MediaGraphRtspSourceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Preview.Outputs.MediaGraphRtspSourceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoint_csharp">
+<a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Preview.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Preview.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Source name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="transport_csharp">
+<a href="#transport_csharp" style="color: inherit; text-decoration: inherit;">Transport</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoint_go">
+<a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Source name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="transport_go">
+<a href="#transport_go" style="color: inherit; text-decoration: inherit;">Transport</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoint_nodejs">
+<a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response | Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Source name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="transport_nodejs">
+<a href="#transport_nodejs" style="color: inherit; text-decoration: inherit;">transport</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoint_python">
+<a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response] | Dict[Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Source name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="transport_python">
+<a href="#transport_python" style="color: inherit; text-decoration: inherit;">transport</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="mediagraphtlsendpointresponse">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MediaGraphTlsEndpointResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/preview?tab=doc#MediaGraphTlsEndpointResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Preview.Outputs.MediaGraphTlsEndpointResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Url for the endpoint.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credentials_csharp">
+<a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Preview.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trustedcertificates_csharp">
+<a href="#trustedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Preview.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="validationoptions_csharp">
+<a href="#validationoptions_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Preview.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Url for the endpoint.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credentials_go">
+<a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trustedcertificates_go">
+<a href="#trustedcertificates_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="validationoptions_go">
+<a href="#validationoptions_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Url for the endpoint.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credentials_nodejs">
+<a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trustedcertificates_nodejs">
+<a href="#trustedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="validationoptions_nodejs">
+<a href="#validationoptions_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Url for the endpoint.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credentials_python">
+<a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Dict[Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trustedcertificates_python">
+<a href="#trustedcertificates_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Dict[Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="validationoptions_python">
+<a href="#validationoptions_python" style="color: inherit; text-decoration: inherit;">validation<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Dict[Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="mediagraphtlsvalidationoptionsresponse">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MediaGraphTlsValidationOptionsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/preview?tab=doc#MediaGraphTlsValidationOptionsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Preview.Outputs.MediaGraphTlsValidationOptionsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ignorehostname_csharp">
+<a href="#ignorehostname_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Hostname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Ignore the host name (common name) during validation.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ignoresignature_csharp">
+<a href="#ignoresignature_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Signature</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Ignore the integrity of the certificate chain at the current time.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ignorehostname_go">
+<a href="#ignorehostname_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Hostname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Ignore the host name (common name) during validation.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ignoresignature_go">
+<a href="#ignoresignature_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Signature</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Ignore the integrity of the certificate chain at the current time.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ignorehostname_nodejs">
+<a href="#ignorehostname_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Hostname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Ignore the host name (common name) during validation.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ignoresignature_nodejs">
+<a href="#ignoresignature_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Signature</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Ignore the integrity of the certificate chain at the current time.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ignorehostname_python">
+<a href="#ignorehostname_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Hostname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Ignore the host name (common name) during validation.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ignoresignature_python">
+<a href="#ignoresignature_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Signature</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Ignore the integrity of the certificate chain at the current time.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MediaGraphUsernamePasswordCredentialsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/preview?tab=doc#MediaGraphUsernamePasswordCredentialsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Preview.Outputs.MediaGraphUsernamePasswordCredentialsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Password for a username/password pair.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Username for a username/password pair.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Password for a username/password pair.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Username for a username/password pair.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Password for a username/password pair.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Username for a username/password pair.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Password for a username/password pair.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Username for a username/password pair.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

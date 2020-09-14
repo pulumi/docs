@@ -1403,6 +1403,338 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#FlowAccessControlConfigurationPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest?tab=doc#FlowAccessControlConfigurationPolicyResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Logic.Latest.Outputs.FlowAccessControlConfigurationPolicyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedcalleripaddresses_csharp">
+<a href="#allowedcalleripaddresses_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Caller<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipaddressrangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Logic.<wbr>Latest.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Range<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The allowed caller IP address ranges.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="openauthenticationpolicies_csharp">
+<a href="#openauthenticationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Authentication<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#openauthenticationaccesspoliciesresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Logic.<wbr>Latest.<wbr>Inputs.<wbr>Open<wbr>Authentication<wbr>Access<wbr>Policies<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The authentication policies for workflow.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedcalleripaddresses_go">
+<a href="#allowedcalleripaddresses_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Caller<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipaddressrangeresponse">[]Ip<wbr>Address<wbr>Range<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The allowed caller IP address ranges.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="openauthenticationpolicies_go">
+<a href="#openauthenticationpolicies_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Authentication<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#openauthenticationaccesspoliciesresponse">Open<wbr>Authentication<wbr>Access<wbr>Policies<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The authentication policies for workflow.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedcalleripaddresses_nodejs">
+<a href="#allowedcalleripaddresses_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Caller<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipaddressrangeresponse">Ip<wbr>Address<wbr>Range<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The allowed caller IP address ranges.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="openauthenticationpolicies_nodejs">
+<a href="#openauthenticationpolicies_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Authentication<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#openauthenticationaccesspoliciesresponse">Open<wbr>Authentication<wbr>Access<wbr>Policies<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The authentication policies for workflow.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowed_caller_ip_addresses_python">
+<a href="#allowed_caller_ip_addresses_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>caller_<wbr>ip_<wbr>addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipaddressrangeresponse">List[Ip<wbr>Address<wbr>Range<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The allowed caller IP address ranges.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="open_authentication_policies_python">
+<a href="#open_authentication_policies_python" style="color: inherit; text-decoration: inherit;">open_<wbr>authentication_<wbr>policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#openauthenticationaccesspoliciesresponse">Dict[Open<wbr>Authentication<wbr>Access<wbr>Policies<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The authentication policies for workflow.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="flowaccesscontrolconfigurationresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#FlowAccessControlConfigurationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest?tab=doc#FlowAccessControlConfigurationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Logic.Latest.Outputs.FlowAccessControlConfigurationResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="actions_csharp">
+<a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Logic.<wbr>Latest.<wbr>Inputs.<wbr>Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The access control configuration for workflow actions.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contents_csharp">
+<a href="#contents_csharp" style="color: inherit; text-decoration: inherit;">Contents</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Logic.<wbr>Latest.<wbr>Inputs.<wbr>Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The access control configuration for accessing workflow run contents.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="triggers_csharp">
+<a href="#triggers_csharp" style="color: inherit; text-decoration: inherit;">Triggers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Logic.<wbr>Latest.<wbr>Inputs.<wbr>Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The access control configuration for invoking workflow triggers.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workflowmanagement_csharp">
+<a href="#workflowmanagement_csharp" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Management</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Logic.<wbr>Latest.<wbr>Inputs.<wbr>Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The access control configuration for workflow management.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="actions_go">
+<a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The access control configuration for workflow actions.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contents_go">
+<a href="#contents_go" style="color: inherit; text-decoration: inherit;">Contents</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The access control configuration for accessing workflow run contents.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="triggers_go">
+<a href="#triggers_go" style="color: inherit; text-decoration: inherit;">Triggers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The access control configuration for invoking workflow triggers.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workflowmanagement_go">
+<a href="#workflowmanagement_go" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Management</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The access control configuration for workflow management.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="actions_nodejs">
+<a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The access control configuration for workflow actions.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contents_nodejs">
+<a href="#contents_nodejs" style="color: inherit; text-decoration: inherit;">contents</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The access control configuration for accessing workflow run contents.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="triggers_nodejs">
+<a href="#triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The access control configuration for invoking workflow triggers.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workflowmanagement_nodejs">
+<a href="#workflowmanagement_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>Management</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The access control configuration for workflow management.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="actions_python">
+<a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Dict[Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The access control configuration for workflow actions.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="contents_python">
+<a href="#contents_python" style="color: inherit; text-decoration: inherit;">contents</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Dict[Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The access control configuration for accessing workflow run contents.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="triggers_python">
+<a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Dict[Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The access control configuration for invoking workflow triggers.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workflow_management_python">
+<a href="#workflow_management_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>management</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Dict[Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The access control configuration for workflow management.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="flowendpoints">Flow<wbr>Endpoints</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#FlowEndpoints">input</a>   API doc for this type.
@@ -1655,6 +1987,258 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="flowendpointsconfigurationresponse">Flow<wbr>Endpoints<wbr>Configuration<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#FlowEndpointsConfigurationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest?tab=doc#FlowEndpointsConfigurationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Logic.Latest.Outputs.FlowEndpointsConfigurationResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connector_csharp">
+<a href="#connector_csharp" style="color: inherit; text-decoration: inherit;">Connector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Logic.<wbr>Latest.<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workflow_csharp">
+<a href="#workflow_csharp" style="color: inherit; text-decoration: inherit;">Workflow</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Logic.<wbr>Latest.<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connector_go">
+<a href="#connector_go" style="color: inherit; text-decoration: inherit;">Connector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workflow_go">
+<a href="#workflow_go" style="color: inherit; text-decoration: inherit;">Workflow</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connector_nodejs">
+<a href="#connector_nodejs" style="color: inherit; text-decoration: inherit;">connector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workflow_nodejs">
+<a href="#workflow_nodejs" style="color: inherit; text-decoration: inherit;">workflow</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connector_python">
+<a href="#connector_python" style="color: inherit; text-decoration: inherit;">connector</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Dict[Flow<wbr>Endpoints<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workflow_python">
+<a href="#workflow_python" style="color: inherit; text-decoration: inherit;">workflow</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Dict[Flow<wbr>Endpoints<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#FlowEndpointsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest?tab=doc#FlowEndpointsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Logic.Latest.Outputs.FlowEndpointsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessendpointipaddresses_csharp">
+<a href="#accessendpointipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Logic.<wbr>Latest.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outgoingipaddresses_csharp">
+<a href="#outgoingipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Outgoing<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Logic.<wbr>Latest.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessendpointipaddresses_go">
+<a href="#accessendpointipaddresses_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipaddressresponse">[]Ip<wbr>Address<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outgoingipaddresses_go">
+<a href="#outgoingipaddresses_go" style="color: inherit; text-decoration: inherit;">Outgoing<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipaddressresponse">[]Ip<wbr>Address<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessendpointipaddresses_nodejs">
+<a href="#accessendpointipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipaddressresponse">Ip<wbr>Address<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outgoingipaddresses_nodejs">
+<a href="#outgoingipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">outgoing<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipaddressresponse">Ip<wbr>Address<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="access_endpoint_ip_addresses_python">
+<a href="#access_endpoint_ip_addresses_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint_<wbr>ip_<wbr>addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipaddressresponse">List[Ip<wbr>Address<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outgoing_ip_addresses_python">
+<a href="#outgoing_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outgoing_<wbr>ip_<wbr>addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipaddressresponse">List[Ip<wbr>Address<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="ipaddress">Ip<wbr>Address</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#IpAddress">input</a>   API doc for this type.
@@ -1827,6 +2411,178 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="ipaddressrangeresponse">Ip<wbr>Address<wbr>Range<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#IpAddressRangeResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest?tab=doc#IpAddressRangeResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Logic.Latest.Outputs.IpAddressRangeResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressrange_csharp">
+<a href="#addressrange_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IP address range.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressrange_go">
+<a href="#addressrange_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IP address range.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressrange_nodejs">
+<a href="#addressrange_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IP address range.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressrange_python">
+<a href="#addressrange_python" style="color: inherit; text-decoration: inherit;">address<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The IP address range.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="ipaddressresponse">Ip<wbr>Address<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#IpAddressResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest?tab=doc#IpAddressResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Logic.Latest.Outputs.IpAddressResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="address_csharp">
+<a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="address_go">
+<a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="address_nodejs">
+<a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="address_python">
+<a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The address.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="openauthenticationaccesspolicies">Open<wbr>Authentication<wbr>Access<wbr>Policies</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#OpenAuthenticationAccessPolicies">input</a>   API doc for this type.
@@ -1903,6 +2659,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Open<wbr>Authentication<wbr>Access<wbr>Policy]</span>
+    </dt>
+    <dd>{{% md %}}Open authentication policies.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="openauthenticationaccesspoliciesresponse">Open<wbr>Authentication<wbr>Access<wbr>Policies<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#OpenAuthenticationAccessPoliciesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest?tab=doc#OpenAuthenticationAccessPoliciesResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Logic.Latest.Outputs.OpenAuthenticationAccessPoliciesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policies_csharp">
+<a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>RM.<wbr>Logic.<wbr>Latest.<wbr>Inputs.<wbr>Open<wbr>Authentication<wbr>Access<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}Open authentication policies.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policies_go">
+<a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]Open<wbr>Authentication<wbr>Access<wbr>Policy<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}Open authentication policies.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policies_nodejs">
+<a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: Open<wbr>Authentication<wbr>Access<wbr>Policy<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}Open authentication policies.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policies_python">
+<a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Open<wbr>Authentication<wbr>Access<wbr>Policy<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Open authentication policies.{{% /md %}}</dd>
 
@@ -1999,6 +2841,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="openauthenticationaccesspolicyresponse">Open<wbr>Authentication<wbr>Access<wbr>Policy<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#OpenAuthenticationAccessPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest?tab=doc#OpenAuthenticationAccessPolicyResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Logic.Latest.Outputs.OpenAuthenticationAccessPolicyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of provider for OAuth.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="claims_csharp">
+<a href="#claims_csharp" style="color: inherit; text-decoration: inherit;">Claims</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#openauthenticationpolicyclaimresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Logic.<wbr>Latest.<wbr>Inputs.<wbr>Open<wbr>Authentication<wbr>Policy<wbr>Claim<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The access policy claims.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of provider for OAuth.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="claims_go">
+<a href="#claims_go" style="color: inherit; text-decoration: inherit;">Claims</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#openauthenticationpolicyclaimresponse">[]Open<wbr>Authentication<wbr>Policy<wbr>Claim<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The access policy claims.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of provider for OAuth.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="claims_nodejs">
+<a href="#claims_nodejs" style="color: inherit; text-decoration: inherit;">claims</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#openauthenticationpolicyclaimresponse">Open<wbr>Authentication<wbr>Policy<wbr>Claim<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The access policy claims.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of provider for OAuth.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="claims_python">
+<a href="#claims_python" style="color: inherit; text-decoration: inherit;">claims</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#openauthenticationpolicyclaimresponse">List[Open<wbr>Authentication<wbr>Policy<wbr>Claim<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The access policy claims.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="openauthenticationpolicyclaim">Open<wbr>Authentication<wbr>Policy<wbr>Claim</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#OpenAuthenticationPolicyClaim">input</a>   API doc for this type.
@@ -2009,6 +2977,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Logic.Latest.Inputs.OpenAuthenticationPolicyClaimArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the claim.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the claim.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the claim.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the claim.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the claim.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the claim.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the claim.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The value of the claim.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="openauthenticationpolicyclaimresponse">Open<wbr>Authentication<wbr>Policy<wbr>Claim<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#OpenAuthenticationPolicyClaimResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest?tab=doc#OpenAuthenticationPolicyClaimResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Logic.Latest.Outputs.OpenAuthenticationPolicyClaimResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2211,6 +3305,298 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ResourceReferenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest?tab=doc#ResourceReferenceResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Logic.Latest.Outputs.ResourceReferenceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The resource id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="skuresponse">Sku<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SkuResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest?tab=doc#SkuResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Logic.Latest.Outputs.SkuResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="plan_csharp">
+<a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Logic.<wbr>Latest.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to plan.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="plan_go">
+<a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to plan.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="plan_nodejs">
+<a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to plan.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="plan_python">
+<a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Dict[Resource<wbr>Reference<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to plan.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="workflowparameter">Workflow<wbr>Parameter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#WorkflowParameter">input</a>   API doc for this type.
@@ -2221,6 +3607,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Logic.Latest.Inputs.WorkflowParameterArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The metadata.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The metadata.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The metadata.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The description.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The metadata.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The value.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="workflowparameterresponse">Workflow<wbr>Parameter<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#WorkflowParameterResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest?tab=doc#WorkflowParameterResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Logic.Latest.Outputs.WorkflowParameterResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

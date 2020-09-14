@@ -643,6 +643,1838 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="datadiskimageencryptionresponse">Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DataDiskImageEncryptionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest?tab=doc#DataDiskImageEncryptionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Compute.Latest.Outputs.DataDiskImageEncryptionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lun_csharp">
+<a href="#lun_csharp" style="color: inherit; text-decoration: inherit;">Lun</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="diskencryptionsetid_csharp">
+<a href="#diskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lun_go">
+<a href="#lun_go" style="color: inherit; text-decoration: inherit;">Lun</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="diskencryptionsetid_go">
+<a href="#diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lun_nodejs">
+<a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="diskencryptionsetid_nodejs">
+<a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lun_python">
+<a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disk_encryption_set_id_python">
+<a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="encryptionimagesresponse">Encryption<wbr>Images<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#EncryptionImagesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest?tab=doc#EncryptionImagesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Compute.Latest.Outputs.EncryptionImagesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datadiskimages_csharp">
+<a href="#datadiskimages_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datadiskimageencryptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Compute.<wbr>Latest.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="osdiskimage_csharp">
+<a href="#osdiskimage_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#osdiskimageencryptionresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Compute.<wbr>Latest.<wbr>Inputs.<wbr>OSDisk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datadiskimages_go">
+<a href="#datadiskimages_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datadiskimageencryptionresponse">[]Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="osdiskimage_go">
+<a href="#osdiskimage_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#osdiskimageencryptionresponse">OSDisk<wbr>Image<wbr>Encryption<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datadiskimages_nodejs">
+<a href="#datadiskimages_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Images</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datadiskimageencryptionresponse">Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="osdiskimage_nodejs">
+<a href="#osdiskimage_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#osdiskimageencryptionresponse">OSDisk<wbr>Image<wbr>Encryption<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="data_disk_images_python">
+<a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datadiskimageencryptionresponse">List[Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="os_disk_image_python">
+<a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#osdiskimageencryptionresponse">Dict[OSDisk<wbr>Image<wbr>Encryption<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#GalleryArtifactVersionSourceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest?tab=doc#GalleryArtifactVersionSourceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Compute.Latest.Outputs.GalleryArtifactVersionSourceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uri_csharp">
+<a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uri_go">
+<a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uri_nodejs">
+<a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uri_python">
+<a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="gallerydatadiskimageresponse">Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#GalleryDataDiskImageResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest?tab=doc#GalleryDataDiskImageResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Compute.Latest.Outputs.GalleryDataDiskImageResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lun_csharp">
+<a href="#lun_csharp" style="color: inherit; text-decoration: inherit;">Lun</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sizeingb_csharp">
+<a href="#sizeingb_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostcaching_csharp">
+<a href="#hostcaching_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_csharp">
+<a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Compute.<wbr>Latest.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lun_go">
+<a href="#lun_go" style="color: inherit; text-decoration: inherit;">Lun</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sizeingb_go">
+<a href="#sizeingb_go" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostcaching_go">
+<a href="#hostcaching_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_go">
+<a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lun_nodejs">
+<a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sizeingb_nodejs">
+<a href="#sizeingb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostcaching_nodejs">
+<a href="#hostcaching_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Caching</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_nodejs">
+<a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lun_python">
+<a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="size_in_gb_python">
+<a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_caching_python">
+<a href="#host_caching_python" style="color: inherit; text-decoration: inherit;">host_<wbr>caching</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_python">
+<a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Dict[Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="galleryimageversionpublishingprofileresponse">Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#GalleryImageVersionPublishingProfileResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest?tab=doc#GalleryImageVersionPublishingProfileResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Compute.Latest.Outputs.GalleryImageVersionPublishingProfileResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="publisheddate_csharp">
+<a href="#publisheddate_csharp" style="color: inherit; text-decoration: inherit;">Published<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp for when the gallery image version is published.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endoflifedate_csharp">
+<a href="#endoflifedate_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Of<wbr>Life<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludefromlatest_csharp">
+<a href="#excludefromlatest_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>From<wbr>Latest</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replicacount_csharp">
+<a href="#replicacount_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccounttype_csharp">
+<a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetregions_csharp">
+<a href="#targetregions_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Regions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#targetregionresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Compute.<wbr>Latest.<wbr>Inputs.<wbr>Target<wbr>Region<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="publisheddate_go">
+<a href="#publisheddate_go" style="color: inherit; text-decoration: inherit;">Published<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp for when the gallery image version is published.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endoflifedate_go">
+<a href="#endoflifedate_go" style="color: inherit; text-decoration: inherit;">End<wbr>Of<wbr>Life<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludefromlatest_go">
+<a href="#excludefromlatest_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>From<wbr>Latest</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replicacount_go">
+<a href="#replicacount_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccounttype_go">
+<a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetregions_go">
+<a href="#targetregions_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Regions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#targetregionresponse">[]Target<wbr>Region<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="publisheddate_nodejs">
+<a href="#publisheddate_nodejs" style="color: inherit; text-decoration: inherit;">published<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp for when the gallery image version is published.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endoflifedate_nodejs">
+<a href="#endoflifedate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Of<wbr>Life<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludefromlatest_nodejs">
+<a href="#excludefromlatest_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>From<wbr>Latest</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replicacount_nodejs">
+<a href="#replicacount_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccounttype_nodejs">
+<a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetregions_nodejs">
+<a href="#targetregions_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Regions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#targetregionresponse">Target<wbr>Region<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="published_date_python">
+<a href="#published_date_python" style="color: inherit; text-decoration: inherit;">published_<wbr>date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp for when the gallery image version is published.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_of_life_date_python">
+<a href="#end_of_life_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>of_<wbr>life_<wbr>date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exclude_from_latest_python">
+<a href="#exclude_from_latest_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>from_<wbr>latest</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replica_count_python">
+<a href="#replica_count_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_account_type_python">
+<a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_regions_python">
+<a href="#target_regions_python" style="color: inherit; text-decoration: inherit;">target_<wbr>regions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#targetregionresponse">List[Target<wbr>Region<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="galleryimageversionstorageprofileresponse">Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#GalleryImageVersionStorageProfileResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest?tab=doc#GalleryImageVersionStorageProfileResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Compute.Latest.Outputs.GalleryImageVersionStorageProfileResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datadiskimages_csharp">
+<a href="#datadiskimages_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gallerydatadiskimageresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Compute.<wbr>Latest.<wbr>Inputs.<wbr>Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="osdiskimage_csharp">
+<a href="#osdiskimage_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#galleryosdiskimageresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Compute.<wbr>Latest.<wbr>Inputs.<wbr>Gallery<wbr>OSDisk<wbr>Image<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_csharp">
+<a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Compute.<wbr>Latest.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datadiskimages_go">
+<a href="#datadiskimages_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gallerydatadiskimageresponse">[]Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="osdiskimage_go">
+<a href="#osdiskimage_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#galleryosdiskimageresponse">Gallery<wbr>OSDisk<wbr>Image<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_go">
+<a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datadiskimages_nodejs">
+<a href="#datadiskimages_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Images</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gallerydatadiskimageresponse">Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="osdiskimage_nodejs">
+<a href="#osdiskimage_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#galleryosdiskimageresponse">Gallery<wbr>OSDisk<wbr>Image<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_nodejs">
+<a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="data_disk_images_python">
+<a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gallerydatadiskimageresponse">List[Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="os_disk_image_python">
+<a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#galleryosdiskimageresponse">Dict[Gallery<wbr>OSDisk<wbr>Image<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_python">
+<a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Dict[Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="galleryosdiskimageresponse">Gallery<wbr>OSDisk<wbr>Image<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#GalleryOSDiskImageResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest?tab=doc#GalleryOSDiskImageResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Compute.Latest.Outputs.GalleryOSDiskImageResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sizeingb_csharp">
+<a href="#sizeingb_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostcaching_csharp">
+<a href="#hostcaching_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_csharp">
+<a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Compute.<wbr>Latest.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sizeingb_go">
+<a href="#sizeingb_go" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostcaching_go">
+<a href="#hostcaching_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_go">
+<a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sizeingb_nodejs">
+<a href="#sizeingb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostcaching_nodejs">
+<a href="#hostcaching_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Caching</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_nodejs">
+<a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="size_in_gb_python">
+<a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_caching_python">
+<a href="#host_caching_python" style="color: inherit; text-decoration: inherit;">host_<wbr>caching</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_python">
+<a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Dict[Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="osdiskimageencryptionresponse">OSDisk<wbr>Image<wbr>Encryption<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#OSDiskImageEncryptionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest?tab=doc#OSDiskImageEncryptionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Compute.Latest.Outputs.OSDiskImageEncryptionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="diskencryptionsetid_csharp">
+<a href="#diskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="diskencryptionsetid_go">
+<a href="#diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="diskencryptionsetid_nodejs">
+<a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disk_encryption_set_id_python">
+<a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="regionalreplicationstatusresponse">Regional<wbr>Replication<wbr>Status<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RegionalReplicationStatusResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest?tab=doc#RegionalReplicationStatusResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Compute.Latest.Outputs.RegionalReplicationStatusResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_csharp">
+<a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the replication status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="progress_csharp">
+<a href="#progress_csharp" style="color: inherit; text-decoration: inherit;">Progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}It indicates progress of the replication job.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The region to which the gallery image version is being replicated to.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}This is the regional replication state.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_go">
+<a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the replication status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="progress_go">
+<a href="#progress_go" style="color: inherit; text-decoration: inherit;">Progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}It indicates progress of the replication job.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The region to which the gallery image version is being replicated to.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This is the regional replication state.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_nodejs">
+<a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the replication status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="progress_nodejs">
+<a href="#progress_nodejs" style="color: inherit; text-decoration: inherit;">progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}It indicates progress of the replication job.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The region to which the gallery image version is being replicated to.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This is the regional replication state.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_python">
+<a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the replication status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="progress_python">
+<a href="#progress_python" style="color: inherit; text-decoration: inherit;">progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}It indicates progress of the replication job.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The region to which the gallery image version is being replicated to.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}This is the regional replication state.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="replicationstatusresponse">Replication<wbr>Status<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ReplicationStatusResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest?tab=doc#ReplicationStatusResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Compute.Latest.Outputs.ReplicationStatusResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="aggregatedstate_csharp">
+<a href="#aggregatedstate_csharp" style="color: inherit; text-decoration: inherit;">Aggregated<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}This is the aggregated replication status based on all the regional replication status flags.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="summary_csharp">
+<a href="#summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionalreplicationstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Compute.<wbr>Latest.<wbr>Inputs.<wbr>Regional<wbr>Replication<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="aggregatedstate_go">
+<a href="#aggregatedstate_go" style="color: inherit; text-decoration: inherit;">Aggregated<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This is the aggregated replication status based on all the regional replication status flags.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="summary_go">
+<a href="#summary_go" style="color: inherit; text-decoration: inherit;">Summary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionalreplicationstatusresponse">[]Regional<wbr>Replication<wbr>Status<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="aggregatedstate_nodejs">
+<a href="#aggregatedstate_nodejs" style="color: inherit; text-decoration: inherit;">aggregated<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}This is the aggregated replication status based on all the regional replication status flags.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="summary_nodejs">
+<a href="#summary_nodejs" style="color: inherit; text-decoration: inherit;">summary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionalreplicationstatusresponse">Regional<wbr>Replication<wbr>Status<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="aggregated_state_python">
+<a href="#aggregated_state_python" style="color: inherit; text-decoration: inherit;">aggregated_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}This is the aggregated replication status based on all the regional replication status flags.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="summary_python">
+<a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionalreplicationstatusresponse">List[Regional<wbr>Replication<wbr>Status<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="targetregionresponse">Target<wbr>Region<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#TargetRegionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/compute/latest?tab=doc#TargetRegionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Compute.Latest.Outputs.TargetRegionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the region.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_csharp">
+<a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionimagesresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Compute.<wbr>Latest.<wbr>Inputs.<wbr>Encryption<wbr>Images<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="regionalreplicacount_csharp">
+<a href="#regionalreplicacount_csharp" style="color: inherit; text-decoration: inherit;">Regional<wbr>Replica<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccounttype_csharp">
+<a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the region.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_go">
+<a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionimagesresponse">Encryption<wbr>Images<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="regionalreplicacount_go">
+<a href="#regionalreplicacount_go" style="color: inherit; text-decoration: inherit;">Regional<wbr>Replica<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccounttype_go">
+<a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the region.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_nodejs">
+<a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionimagesresponse">Encryption<wbr>Images<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="regionalreplicacount_nodejs">
+<a href="#regionalreplicacount_nodejs" style="color: inherit; text-decoration: inherit;">regional<wbr>Replica<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccounttype_nodejs">
+<a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the region.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_python">
+<a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionimagesresponse">Dict[Encryption<wbr>Images<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="regionalreplicacount_python">
+<a href="#regionalreplicacount_python" style="color: inherit; text-decoration: inherit;">regional<wbr>Replica<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_account_type_python">
+<a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

@@ -1357,6 +1357,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="addressspaceresponse">Address<wbr>Space<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AddressSpaceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest?tab=doc#AddressSpaceResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Network.Latest.Outputs.AddressSpaceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressprefixes_csharp">
+<a href="#addressprefixes_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressprefixes_go">
+<a href="#addressprefixes_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressprefixes_nodejs">
+<a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="address_prefixes_python">
+<a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="bgpsettings">Bgp<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#BgpSettings">input</a>   API doc for this type.
@@ -1563,6 +1649,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#BgpSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest?tab=doc#BgpSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Network.Latest.Outputs.BgpSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="asn_csharp">
+<a href="#asn_csharp" style="color: inherit; text-decoration: inherit;">Asn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bgppeeringaddress_csharp">
+<a href="#bgppeeringaddress_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bgppeeringaddresses_csharp">
+<a href="#bgppeeringaddresses_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Network.<wbr>Latest.<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peerweight_csharp">
+<a href="#peerweight_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="asn_go">
+<a href="#asn_go" style="color: inherit; text-decoration: inherit;">Asn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bgppeeringaddress_go">
+<a href="#bgppeeringaddress_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bgppeeringaddresses_go">
+<a href="#bgppeeringaddresses_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">[]IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peerweight_go">
+<a href="#peerweight_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="asn_nodejs">
+<a href="#asn_nodejs" style="color: inherit; text-decoration: inherit;">asn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bgppeeringaddress_nodejs">
+<a href="#bgppeeringaddress_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bgppeeringaddresses_nodejs">
+<a href="#bgppeeringaddresses_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peerweight_nodejs">
+<a href="#peerweight_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="asn_python">
+<a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bgp_peering_address_python">
+<a href="#bgp_peering_address_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bgp_peering_addresses_python">
+<a href="#bgp_peering_addresses_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">List[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peer_weight_python">
+<a href="#peer_weight_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>weight</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="ipconfigurationbgppeeringaddress">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#IPConfigurationBgpPeeringAddress">input</a>   API doc for this type.
@@ -1689,6 +1981,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="ipconfigurationbgppeeringaddressresponse">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#IPConfigurationBgpPeeringAddressResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest?tab=doc#IPConfigurationBgpPeeringAddressResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Network.Latest.Outputs.IPConfigurationBgpPeeringAddressResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="defaultbgpipaddresses_csharp">
+<a href="#defaultbgpipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tunnelipaddresses_csharp">
+<a href="#tunnelipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custombgpipaddresses_csharp">
+<a href="#custombgpipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurationid_csharp">
+<a href="#ipconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Ipconfiguration<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="defaultbgpipaddresses_go">
+<a href="#defaultbgpipaddresses_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tunnelipaddresses_go">
+<a href="#tunnelipaddresses_go" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custombgpipaddresses_go">
+<a href="#custombgpipaddresses_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurationid_go">
+<a href="#ipconfigurationid_go" style="color: inherit; text-decoration: inherit;">Ipconfiguration<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="defaultbgpipaddresses_nodejs">
+<a href="#defaultbgpipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tunnelipaddresses_nodejs">
+<a href="#tunnelipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custombgpipaddresses_nodejs">
+<a href="#custombgpipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurationid_nodejs">
+<a href="#ipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">ipconfiguration<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="defaultbgpipaddresses_python">
+<a href="#defaultbgpipaddresses_python" style="color: inherit; text-decoration: inherit;">default<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tunnelipaddresses_python">
+<a href="#tunnelipaddresses_python" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custombgpipaddresses_python">
+<a href="#custombgpipaddresses_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurationid_python">
+<a href="#ipconfigurationid_python" style="color: inherit; text-decoration: inherit;">ipconfiguration<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="ipsecpolicy">Ipsec<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#IpsecPolicy">input</a>   API doc for this type.
@@ -1699,6 +2197,372 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Network.Latest.Inputs.IpsecPolicyArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dhgroup_csharp">
+<a href="#dhgroup_csharp" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ikeencryption_csharp">
+<a href="#ikeencryption_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ikeintegrity_csharp">
+<a href="#ikeintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipsecencryption_csharp">
+<a href="#ipsecencryption_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipsecintegrity_csharp">
+<a href="#ipsecintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Integrity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="pfsgroup_csharp">
+<a href="#pfsgroup_csharp" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sadatasizekilobytes_csharp">
+<a href="#sadatasizekilobytes_csharp" style="color: inherit; text-decoration: inherit;">Sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="salifetimeseconds_csharp">
+<a href="#salifetimeseconds_csharp" style="color: inherit; text-decoration: inherit;">Sa<wbr>Life<wbr>Time<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dhgroup_go">
+<a href="#dhgroup_go" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ikeencryption_go">
+<a href="#ikeencryption_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ikeintegrity_go">
+<a href="#ikeintegrity_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipsecencryption_go">
+<a href="#ipsecencryption_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipsecintegrity_go">
+<a href="#ipsecintegrity_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Integrity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="pfsgroup_go">
+<a href="#pfsgroup_go" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sadatasizekilobytes_go">
+<a href="#sadatasizekilobytes_go" style="color: inherit; text-decoration: inherit;">Sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="salifetimeseconds_go">
+<a href="#salifetimeseconds_go" style="color: inherit; text-decoration: inherit;">Sa<wbr>Life<wbr>Time<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dhgroup_nodejs">
+<a href="#dhgroup_nodejs" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ikeencryption_nodejs">
+<a href="#ikeencryption_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ikeintegrity_nodejs">
+<a href="#ikeintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipsecencryption_nodejs">
+<a href="#ipsecencryption_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipsecintegrity_nodejs">
+<a href="#ipsecintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="pfsgroup_nodejs">
+<a href="#pfsgroup_nodejs" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sadatasizekilobytes_nodejs">
+<a href="#sadatasizekilobytes_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="salifetimeseconds_nodejs">
+<a href="#salifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Life<wbr>Time<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dhgroup_python">
+<a href="#dhgroup_python" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ikeencryption_python">
+<a href="#ikeencryption_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ikeintegrity_python">
+<a href="#ikeintegrity_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipsecencryption_python">
+<a href="#ipsecencryption_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipsecintegrity_python">
+<a href="#ipsecintegrity_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="pfsgroup_python">
+<a href="#pfsgroup_python" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sadatasizekilobytes_python">
+<a href="#sadatasizekilobytes_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="salifetimeseconds_python">
+<a href="#salifetimeseconds_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Life<wbr>Time<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="ipsecpolicyresponse">Ipsec<wbr>Policy<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#IpsecPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest?tab=doc#IpsecPolicyResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Network.Latest.Outputs.IpsecPolicyResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2221,6 +3085,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="radiusserverresponse">Radius<wbr>Server<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RadiusServerResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest?tab=doc#RadiusServerResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Network.Latest.Outputs.RadiusServerResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="radiusserveraddress_csharp">
+<a href="#radiusserveraddress_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address of this radius server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radiusserverscore_csharp">
+<a href="#radiusserverscore_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Score</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radiusserversecret_csharp">
+<a href="#radiusserversecret_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The secret used for this radius server.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="radiusserveraddress_go">
+<a href="#radiusserveraddress_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address of this radius server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radiusserverscore_go">
+<a href="#radiusserverscore_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Score</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radiusserversecret_go">
+<a href="#radiusserversecret_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The secret used for this radius server.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="radiusserveraddress_nodejs">
+<a href="#radiusserveraddress_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address of this radius server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radiusserverscore_nodejs">
+<a href="#radiusserverscore_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Score</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radiusserversecret_nodejs">
+<a href="#radiusserversecret_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The secret used for this radius server.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="radius_server_address_python">
+<a href="#radius_server_address_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The address of this radius server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radiusserverscore_python">
+<a href="#radiusserverscore_python" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Score</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radius_server_secret_python">
+<a href="#radius_server_secret_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The secret used for this radius server.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="subresource">Sub<wbr>Resource</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#SubResource">input</a>   API doc for this type.
@@ -2231,6 +3261,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Network.Latest.Inputs.SubResourceArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="subresourceresponse">Sub<wbr>Resource<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SubResourceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest?tab=doc#SubResourceResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Network.Latest.Outputs.SubResourceResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2553,6 +3669,372 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="virtualnetworkgatewayipconfigurationresponse">Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#VirtualNetworkGatewayIPConfigurationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest?tab=doc#VirtualNetworkGatewayIPConfigurationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Network.Latest.Outputs.VirtualNetworkGatewayIPConfigurationResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="privateipaddress_csharp">
+<a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Private IP Address for this gateway.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the virtual network gateway IP configuration resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipallocationmethod_csharp">
+<a href="#privateipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAllocation<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddress_csharp">
+<a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Network.<wbr>Latest.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_csharp">
+<a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Network.<wbr>Latest.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="privateipaddress_go">
+<a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Private IP Address for this gateway.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the virtual network gateway IP configuration resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipallocationmethod_go">
+<a href="#privateipallocationmethod_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAllocation<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddress_go">
+<a href="#publicipaddress_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_go">
+<a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="privateipaddress_nodejs">
+<a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Private IP Address for this gateway.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the virtual network gateway IP configuration resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipallocationmethod_nodejs">
+<a href="#privateipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAllocation<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddress_nodejs">
+<a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_nodejs">
+<a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="private_ip_address_python">
+<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Private IP Address for this gateway.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the virtual network gateway IP configuration resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_ip_allocation_method_python">
+<a href="#private_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>allocation_<wbr>method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="public_ip_address_python">
+<a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_python">
+<a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Dict[Sub<wbr>Resource<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="virtualnetworkgatewaysku">Virtual<wbr>Network<wbr>Gateway<wbr>Sku</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#VirtualNetworkGatewaySku">input</a>   API doc for this type.
@@ -2651,6 +4133,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gateway SKU name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_python">
+<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gateway SKU tier.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnetworkgatewayskuresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#VirtualNetworkGatewaySkuResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest?tab=doc#VirtualNetworkGatewaySkuResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Network.Latest.Outputs.VirtualNetworkGatewaySkuResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="capacity_csharp">
+<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The capacity.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gateway SKU name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_csharp">
+<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gateway SKU tier.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="capacity_go">
+<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The capacity.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gateway SKU name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_go">
+<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gateway SKU tier.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="capacity_nodejs">
+<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The capacity.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gateway SKU name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tier_nodejs">
+<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gateway SKU tier.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="capacity_python">
+<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The capacity.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3165,6 +4813,492 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="vpnclientconfigurationresponse">Vpn<wbr>Client<wbr>Configuration<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#VpnClientConfigurationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest?tab=doc#VpnClientConfigurationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Network.Latest.Outputs.VpnClientConfigurationResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadaudience_csharp">
+<a href="#aadaudience_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Audience</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadissuer_csharp">
+<a href="#aadissuer_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Issuer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadtenant_csharp">
+<a href="#aadtenant_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radiusserveraddress_csharp">
+<a href="#radiusserveraddress_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The radius server address property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radiusserversecret_csharp">
+<a href="#radiusserversecret_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The radius secret property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radiusservers_csharp">
+<a href="#radiusservers_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#radiusserverresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Network.<wbr>Latest.<wbr>Inputs.<wbr>Radius<wbr>Server<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnclientaddresspool_csharp">
+<a href="#vpnclientaddresspool_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Address<wbr>Pool</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Network.<wbr>Latest.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnclientipsecpolicies_csharp">
+<a href="#vpnclientipsecpolicies_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Ipsec<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipsecpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Network.<wbr>Latest.<wbr>Inputs.<wbr>Ipsec<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnclientprotocols_csharp">
+<a href="#vpnclientprotocols_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Protocols</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}VpnClientProtocols for Virtual network gateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnclientrevokedcertificates_csharp">
+<a href="#vpnclientrevokedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Revoked<wbr>Certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Network.<wbr>Latest.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnclientrootcertificates_csharp">
+<a href="#vpnclientrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Root<wbr>Certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnclientrootcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Network.<wbr>Latest.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadaudience_go">
+<a href="#aadaudience_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Audience</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadissuer_go">
+<a href="#aadissuer_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Issuer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadtenant_go">
+<a href="#aadtenant_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radiusserveraddress_go">
+<a href="#radiusserveraddress_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The radius server address property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radiusserversecret_go">
+<a href="#radiusserversecret_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The radius secret property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radiusservers_go">
+<a href="#radiusservers_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#radiusserverresponse">[]Radius<wbr>Server<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnclientaddresspool_go">
+<a href="#vpnclientaddresspool_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Address<wbr>Pool</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnclientipsecpolicies_go">
+<a href="#vpnclientipsecpolicies_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Ipsec<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipsecpolicyresponse">[]Ipsec<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnclientprotocols_go">
+<a href="#vpnclientprotocols_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Protocols</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}VpnClientProtocols for Virtual network gateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnclientrevokedcertificates_go">
+<a href="#vpnclientrevokedcertificates_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Revoked<wbr>Certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">[]Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnclientrootcertificates_go">
+<a href="#vpnclientrootcertificates_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Root<wbr>Certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnclientrootcertificateresponse">[]Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadaudience_nodejs">
+<a href="#aadaudience_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Audience</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadissuer_nodejs">
+<a href="#aadissuer_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Issuer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadtenant_nodejs">
+<a href="#aadtenant_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radiusserveraddress_nodejs">
+<a href="#radiusserveraddress_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The radius server address property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radiusserversecret_nodejs">
+<a href="#radiusserversecret_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The radius secret property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radiusservers_nodejs">
+<a href="#radiusservers_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#radiusserverresponse">Radius<wbr>Server<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnclientaddresspool_nodejs">
+<a href="#vpnclientaddresspool_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Address<wbr>Pool</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnclientipsecpolicies_nodejs">
+<a href="#vpnclientipsecpolicies_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Ipsec<wbr>Policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipsecpolicyresponse">Ipsec<wbr>Policy<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnclientprotocols_nodejs">
+<a href="#vpnclientprotocols_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Protocols</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}VpnClientProtocols for Virtual network gateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnclientrevokedcertificates_nodejs">
+<a href="#vpnclientrevokedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Revoked<wbr>Certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnclientrootcertificates_nodejs">
+<a href="#vpnclientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Root<wbr>Certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnclientrootcertificateresponse">Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aad_audience_python">
+<a href="#aad_audience_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>audience</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aad_issuer_python">
+<a href="#aad_issuer_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>issuer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aad_tenant_python">
+<a href="#aad_tenant_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radius_server_address_python">
+<a href="#radius_server_address_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The radius server address property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radius_server_secret_python">
+<a href="#radius_server_secret_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The radius secret property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="radius_servers_python">
+<a href="#radius_servers_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#radiusserverresponse">List[Radius<wbr>Server<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpn_client_address_pool_python">
+<a href="#vpn_client_address_pool_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>address_<wbr>pool</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#addressspaceresponse">Dict[Address<wbr>Space<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpn_client_ipsec_policies_python">
+<a href="#vpn_client_ipsec_policies_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>ipsec_<wbr>policies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ipsecpolicyresponse">List[Ipsec<wbr>Policy<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpn_client_protocols_python">
+<a href="#vpn_client_protocols_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>protocols</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}VpnClientProtocols for Virtual network gateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpn_client_revoked_certificates_python">
+<a href="#vpn_client_revoked_certificates_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>revoked_<wbr>certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">List[Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpn_client_root_certificates_python">
+<a href="#vpn_client_root_certificates_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>root_<wbr>certificates</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnclientrootcertificateresponse">List[Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="vpnclientrevokedcertificate">Vpn<wbr>Client<wbr>Revoked<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#VpnClientRevokedCertificate">input</a>   API doc for this type.
@@ -3331,6 +5465,252 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="vpnclientrevokedcertificateresponse">Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#VpnClientRevokedCertificateResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest?tab=doc#VpnClientRevokedCertificateResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Network.Latest.Outputs.VpnClientRevokedCertificateResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the VPN client revoked certificate resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_csharp">
+<a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The revoked VPN client certificate thumbprint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the VPN client revoked certificate resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_go">
+<a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The revoked VPN client certificate thumbprint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the VPN client revoked certificate resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_nodejs">
+<a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The revoked VPN client certificate thumbprint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the VPN client revoked certificate resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="thumbprint_python">
+<a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The revoked VPN client certificate thumbprint.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="vpnclientrootcertificate">Vpn<wbr>Client<wbr>Root<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#VpnClientRootCertificate">input</a>   API doc for this type.
@@ -3459,6 +5839,252 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="publiccertdata_python">
+<a href="#publiccertdata_python" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate public data.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="vpnclientrootcertificateresponse">Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#VpnClientRootCertificateResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/network/latest?tab=doc#VpnClientRootCertificateResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Network.Latest.Outputs.VpnClientRootCertificateResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the VPN client root certificate resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="publiccertdata_csharp">
+<a href="#publiccertdata_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate public data.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the VPN client root certificate resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="publiccertdata_go">
+<a href="#publiccertdata_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate public data.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the VPN client root certificate resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="publiccertdata_nodejs">
+<a href="#publiccertdata_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate public data.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the VPN client root certificate resource.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">

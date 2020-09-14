@@ -957,6 +957,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="serviceunitartifactsresponse">Service<wbr>Unit<wbr>Artifacts<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ServiceUnitArtifactsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/deploymentmanager/preview?tab=doc#ServiceUnitArtifactsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DeploymentManager.Preview.Outputs.ServiceUnitArtifactsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parametersartifactsourcerelativepath_csharp">
+<a href="#parametersartifactsourcerelativepath_csharp" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parametersuri_csharp">
+<a href="#parametersuri_csharp" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="templateartifactsourcerelativepath_csharp">
+<a href="#templateartifactsourcerelativepath_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="templateuri_csharp">
+<a href="#templateuri_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parametersartifactsourcerelativepath_go">
+<a href="#parametersartifactsourcerelativepath_go" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parametersuri_go">
+<a href="#parametersuri_go" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="templateartifactsourcerelativepath_go">
+<a href="#templateartifactsourcerelativepath_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="templateuri_go">
+<a href="#templateuri_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parametersartifactsourcerelativepath_nodejs">
+<a href="#parametersartifactsourcerelativepath_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parametersuri_nodejs">
+<a href="#parametersuri_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="templateartifactsourcerelativepath_nodejs">
+<a href="#templateartifactsourcerelativepath_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="templateuri_nodejs">
+<a href="#templateuri_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_artifact_source_relative_path_python">
+<a href="#parameters_artifact_source_relative_path_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>artifact_<wbr>source_<wbr>relative_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_uri_python">
+<a href="#parameters_uri_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="template_artifact_source_relative_path_python">
+<a href="#template_artifact_source_relative_path_python" style="color: inherit; text-decoration: inherit;">template_<wbr>artifact_<wbr>source_<wbr>relative_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="template_uri_python">
+<a href="#template_uri_python" style="color: inherit; text-decoration: inherit;">template_<wbr>uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 
 
 

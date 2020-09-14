@@ -708,6 +708,218 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+## Supporting Types
+
+
+<h4 id="refreshdetailsresponse">Refresh<wbr>Details<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RefreshDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/databoxedge/latest?tab=doc#RefreshDetailsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DataBoxEdge.Latest.Outputs.RefreshDetailsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errormanifestfile_csharp">
+<a href="#errormanifestfile_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Manifest<wbr>File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inprogressrefreshjobid_csharp">
+<a href="#inprogressrefreshjobid_csharp" style="color: inherit; text-decoration: inherit;">In<wbr>Progress<wbr>Refresh<wbr>Job<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastcompletedrefreshjobtimeinutc_csharp">
+<a href="#lastcompletedrefreshjobtimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Completed<wbr>Refresh<wbr>Job<wbr>Time<wbr>In<wbr>UTC</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastjob_csharp">
+<a href="#lastjob_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Job</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errormanifestfile_go">
+<a href="#errormanifestfile_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Manifest<wbr>File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inprogressrefreshjobid_go">
+<a href="#inprogressrefreshjobid_go" style="color: inherit; text-decoration: inherit;">In<wbr>Progress<wbr>Refresh<wbr>Job<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastcompletedrefreshjobtimeinutc_go">
+<a href="#lastcompletedrefreshjobtimeinutc_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Completed<wbr>Refresh<wbr>Job<wbr>Time<wbr>In<wbr>UTC</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastjob_go">
+<a href="#lastjob_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Job</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errormanifestfile_nodejs">
+<a href="#errormanifestfile_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Manifest<wbr>File</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inprogressrefreshjobid_nodejs">
+<a href="#inprogressrefreshjobid_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Progress<wbr>Refresh<wbr>Job<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastcompletedrefreshjobtimeinutc_nodejs">
+<a href="#lastcompletedrefreshjobtimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Completed<wbr>Refresh<wbr>Job<wbr>Time<wbr>In<wbr>UTC</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastjob_nodejs">
+<a href="#lastjob_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Job</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_manifest_file_python">
+<a href="#error_manifest_file_python" style="color: inherit; text-decoration: inherit;">error_<wbr>manifest_<wbr>file</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="in_progress_refresh_job_id_python">
+<a href="#in_progress_refresh_job_id_python" style="color: inherit; text-decoration: inherit;">in_<wbr>progress_<wbr>refresh_<wbr>job_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_completed_refresh_job_time_in_utc_python">
+<a href="#last_completed_refresh_job_time_in_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>completed_<wbr>refresh_<wbr>job_<wbr>time_<wbr>in_<wbr>utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_job_python">
+<a href="#last_job_python" style="color: inherit; text-decoration: inherit;">last_<wbr>job</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

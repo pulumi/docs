@@ -403,6 +403,916 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="databasessolutionsummaryresponse">Databases<wbr>Solution<wbr>Summary<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DatabasesSolutionSummaryResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#DatabasesSolutionSummaryResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.DatabasesSolutionSummaryResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="databaseinstancesassessedcount_csharp">
+<a href="#databaseinstancesassessedcount_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Instances<wbr>Assessed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of database instances assessed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="databasesassessedcount_csharp">
+<a href="#databasesassessedcount_csharp" style="color: inherit; text-decoration: inherit;">Databases<wbr>Assessed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of databases assessed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migrationreadycount_csharp">
+<a href="#migrationreadycount_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Ready<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of databases ready for migration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="databaseinstancesassessedcount_go">
+<a href="#databaseinstancesassessedcount_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Instances<wbr>Assessed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of database instances assessed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="databasesassessedcount_go">
+<a href="#databasesassessedcount_go" style="color: inherit; text-decoration: inherit;">Databases<wbr>Assessed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of databases assessed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migrationreadycount_go">
+<a href="#migrationreadycount_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Ready<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of databases ready for migration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="databaseinstancesassessedcount_nodejs">
+<a href="#databaseinstancesassessedcount_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Instances<wbr>Assessed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of database instances assessed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="databasesassessedcount_nodejs">
+<a href="#databasesassessedcount_nodejs" style="color: inherit; text-decoration: inherit;">databases<wbr>Assessed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of databases assessed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migrationreadycount_nodejs">
+<a href="#migrationreadycount_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Ready<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of databases ready for migration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="databaseinstancesassessedcount_python">
+<a href="#databaseinstancesassessedcount_python" style="color: inherit; text-decoration: inherit;">database<wbr>Instances<wbr>Assessed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of database instances assessed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="databasesassessedcount_python">
+<a href="#databasesassessedcount_python" style="color: inherit; text-decoration: inherit;">databases<wbr>Assessed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of databases assessed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migrationreadycount_python">
+<a href="#migrationreadycount_python" style="color: inherit; text-decoration: inherit;">migration<wbr>Ready<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of databases ready for migration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="serverssolutionsummaryresponse">Servers<wbr>Solution<wbr>Summary<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ServersSolutionSummaryResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#ServersSolutionSummaryResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.ServersSolutionSummaryResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assessedcount_csharp">
+<a href="#assessedcount_csharp" style="color: inherit; text-decoration: inherit;">Assessed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers assessed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="discoveredcount_csharp">
+<a href="#discoveredcount_csharp" style="color: inherit; text-decoration: inherit;">Discovered<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers discovered.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migratedcount_csharp">
+<a href="#migratedcount_csharp" style="color: inherit; text-decoration: inherit;">Migrated<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers migrated.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replicatingcount_csharp">
+<a href="#replicatingcount_csharp" style="color: inherit; text-decoration: inherit;">Replicating<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers being replicated.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="testmigratedcount_csharp">
+<a href="#testmigratedcount_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Migrated<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers test migrated.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assessedcount_go">
+<a href="#assessedcount_go" style="color: inherit; text-decoration: inherit;">Assessed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers assessed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="discoveredcount_go">
+<a href="#discoveredcount_go" style="color: inherit; text-decoration: inherit;">Discovered<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers discovered.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migratedcount_go">
+<a href="#migratedcount_go" style="color: inherit; text-decoration: inherit;">Migrated<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers migrated.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replicatingcount_go">
+<a href="#replicatingcount_go" style="color: inherit; text-decoration: inherit;">Replicating<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers being replicated.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="testmigratedcount_go">
+<a href="#testmigratedcount_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Migrated<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers test migrated.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assessedcount_nodejs">
+<a href="#assessedcount_nodejs" style="color: inherit; text-decoration: inherit;">assessed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers assessed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="discoveredcount_nodejs">
+<a href="#discoveredcount_nodejs" style="color: inherit; text-decoration: inherit;">discovered<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers discovered.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migratedcount_nodejs">
+<a href="#migratedcount_nodejs" style="color: inherit; text-decoration: inherit;">migrated<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers migrated.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replicatingcount_nodejs">
+<a href="#replicatingcount_nodejs" style="color: inherit; text-decoration: inherit;">replicating<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers being replicated.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="testmigratedcount_nodejs">
+<a href="#testmigratedcount_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Migrated<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers test migrated.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assessedcount_python">
+<a href="#assessedcount_python" style="color: inherit; text-decoration: inherit;">assessed<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers assessed.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="discoveredcount_python">
+<a href="#discoveredcount_python" style="color: inherit; text-decoration: inherit;">discovered<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers discovered.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="migratedcount_python">
+<a href="#migratedcount_python" style="color: inherit; text-decoration: inherit;">migrated<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers migrated.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replicatingcount_python">
+<a href="#replicatingcount_python" style="color: inherit; text-decoration: inherit;">replicating<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers being replicated.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="testmigratedcount_python">
+<a href="#testmigratedcount_python" style="color: inherit; text-decoration: inherit;">test<wbr>Migrated<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of servers test migrated.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="solutiondetailsresponse">Solution<wbr>Details<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SolutionDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#SolutionDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.SolutionDetailsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assessmentcount_csharp">
+<a href="#assessmentcount_csharp" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of assessments reported by the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendeddetails_csharp">
+<a href="#extendeddetails_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the extended details reported by the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupcount_csharp">
+<a href="#groupcount_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of groups reported by the solution.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assessmentcount_go">
+<a href="#assessmentcount_go" style="color: inherit; text-decoration: inherit;">Assessment<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of assessments reported by the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendeddetails_go">
+<a href="#extendeddetails_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the extended details reported by the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupcount_go">
+<a href="#groupcount_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of groups reported by the solution.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assessmentcount_nodejs">
+<a href="#assessmentcount_nodejs" style="color: inherit; text-decoration: inherit;">assessment<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of assessments reported by the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendeddetails_nodejs">
+<a href="#extendeddetails_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the extended details reported by the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupcount_nodejs">
+<a href="#groupcount_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of groups reported by the solution.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assessment_count_python">
+<a href="#assessment_count_python" style="color: inherit; text-decoration: inherit;">assessment_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of assessments reported by the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extended_details_python">
+<a href="#extended_details_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the extended details reported by the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="group_count_python">
+<a href="#group_count_python" style="color: inherit; text-decoration: inherit;">group_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the count of groups reported by the solution.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="solutionpropertiesresponse">Solution<wbr>Properties<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SolutionPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#SolutionPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.SolutionPropertiesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cleanupstate_csharp">
+<a href="#cleanupstate_csharp" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the cleanup state of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="details_csharp">
+<a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#solutiondetailsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Solution<wbr>Details<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goal_csharp">
+<a href="#goal_csharp" style="color: inherit; text-decoration: inherit;">Goal</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the goal of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="purpose_csharp">
+<a href="#purpose_csharp" style="color: inherit; text-decoration: inherit;">Purpose</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the purpose of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the current status of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="summary_csharp">
+<a href="#summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Databases<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Servers<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the summary of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tool_csharp">
+<a href="#tool_csharp" style="color: inherit; text-decoration: inherit;">Tool</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the tool being used in the solution.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cleanupstate_go">
+<a href="#cleanupstate_go" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the cleanup state of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="details_go">
+<a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#solutiondetailsresponse">Solution<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goal_go">
+<a href="#goal_go" style="color: inherit; text-decoration: inherit;">Goal</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the goal of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="purpose_go">
+<a href="#purpose_go" style="color: inherit; text-decoration: inherit;">Purpose</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the purpose of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the current status of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="summary_go">
+<a href="#summary_go" style="color: inherit; text-decoration: inherit;">Summary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the summary of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tool_go">
+<a href="#tool_go" style="color: inherit; text-decoration: inherit;">Tool</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the tool being used in the solution.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cleanupstate_nodejs">
+<a href="#cleanupstate_nodejs" style="color: inherit; text-decoration: inherit;">cleanup<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the cleanup state of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="details_nodejs">
+<a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#solutiondetailsresponse">Solution<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goal_nodejs">
+<a href="#goal_nodejs" style="color: inherit; text-decoration: inherit;">goal</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the goal of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="purpose_nodejs">
+<a href="#purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the purpose of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the current status of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="summary_nodejs">
+<a href="#summary_nodejs" style="color: inherit; text-decoration: inherit;">summary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Databases<wbr>Solution<wbr>Summary<wbr>Response | Servers<wbr>Solution<wbr>Summary<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the summary of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tool_nodejs">
+<a href="#tool_nodejs" style="color: inherit; text-decoration: inherit;">tool</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the tool being used in the solution.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cleanup_state_python">
+<a href="#cleanup_state_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the cleanup state of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="details_python">
+<a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#solutiondetailsresponse">Dict[Solution<wbr>Details<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="goal_python">
+<a href="#goal_python" style="color: inherit; text-decoration: inherit;">goal</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the goal of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="purpose_python">
+<a href="#purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the purpose of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the current status of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="summary_python">
+<a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[Databases<wbr>Solution<wbr>Summary<wbr>Response] | Dict[Servers<wbr>Solution<wbr>Summary<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the summary of the solution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tool_python">
+<a href="#tool_python" style="color: inherit; text-decoration: inherit;">tool</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the tool being used in the solution.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

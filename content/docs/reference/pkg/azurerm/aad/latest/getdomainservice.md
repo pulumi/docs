@@ -843,6 +843,1608 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="domainsecuritysettingsresponse">Domain<wbr>Security<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DomainSecuritySettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/aad/latest?tab=doc#DomainSecuritySettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Aad.Latest.Outputs.DomainSecuritySettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ntlmv1_csharp">
+<a href="#ntlmv1_csharp" style="color: inherit; text-decoration: inherit;">Ntlm<wbr>V1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not NtlmV1 is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncntlmpasswords_csharp">
+<a href="#syncntlmpasswords_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Ntlm<wbr>Passwords</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsv1_csharp">
+<a href="#tlsv1_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>V1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not TlsV1 is enabled or disabled.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ntlmv1_go">
+<a href="#ntlmv1_go" style="color: inherit; text-decoration: inherit;">Ntlm<wbr>V1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not NtlmV1 is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncntlmpasswords_go">
+<a href="#syncntlmpasswords_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Ntlm<wbr>Passwords</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsv1_go">
+<a href="#tlsv1_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>V1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not TlsV1 is enabled or disabled.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ntlmv1_nodejs">
+<a href="#ntlmv1_nodejs" style="color: inherit; text-decoration: inherit;">ntlm<wbr>V1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not NtlmV1 is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncntlmpasswords_nodejs">
+<a href="#syncntlmpasswords_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Ntlm<wbr>Passwords</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsv1_nodejs">
+<a href="#tlsv1_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>V1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not TlsV1 is enabled or disabled.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ntlm_v1_python">
+<a href="#ntlm_v1_python" style="color: inherit; text-decoration: inherit;">ntlm_<wbr>v1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not NtlmV1 is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sync_ntlm_passwords_python">
+<a href="#sync_ntlm_passwords_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>ntlm_<wbr>passwords</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_v1_python">
+<a href="#tls_v1_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>v1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not TlsV1 is enabled or disabled.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="healthalertresponse">Health<wbr>Alert<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#HealthAlertResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/aad/latest?tab=doc#HealthAlertResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Aad.Latest.Outputs.HealthAlertResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Id{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="issue_csharp">
+<a href="#issue_csharp" style="color: inherit; text-decoration: inherit;">Issue</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Issue{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastdetected_csharp">
+<a href="#lastdetected_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Detected</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Last Detected DateTime{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Name{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="raised_csharp">
+<a href="#raised_csharp" style="color: inherit; text-decoration: inherit;">Raised</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Raised DateTime{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resolutionuri_csharp">
+<a href="#resolutionuri_csharp" style="color: inherit; text-decoration: inherit;">Resolution<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert TSG Link{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="severity_csharp">
+<a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Severity{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Id{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="issue_go">
+<a href="#issue_go" style="color: inherit; text-decoration: inherit;">Issue</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Issue{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastdetected_go">
+<a href="#lastdetected_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Detected</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Last Detected DateTime{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Name{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="raised_go">
+<a href="#raised_go" style="color: inherit; text-decoration: inherit;">Raised</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Raised DateTime{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resolutionuri_go">
+<a href="#resolutionuri_go" style="color: inherit; text-decoration: inherit;">Resolution<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert TSG Link{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="severity_go">
+<a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Severity{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Id{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="issue_nodejs">
+<a href="#issue_nodejs" style="color: inherit; text-decoration: inherit;">issue</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Issue{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastdetected_nodejs">
+<a href="#lastdetected_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Detected</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Last Detected DateTime{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Name{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="raised_nodejs">
+<a href="#raised_nodejs" style="color: inherit; text-decoration: inherit;">raised</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Raised DateTime{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resolutionuri_nodejs">
+<a href="#resolutionuri_nodejs" style="color: inherit; text-decoration: inherit;">resolution<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert TSG Link{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="severity_nodejs">
+<a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Severity{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Id{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="issue_python">
+<a href="#issue_python" style="color: inherit; text-decoration: inherit;">issue</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Issue{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastdetected_python">
+<a href="#lastdetected_python" style="color: inherit; text-decoration: inherit;">last<wbr>Detected</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Last Detected DateTime{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Name{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="raised_python">
+<a href="#raised_python" style="color: inherit; text-decoration: inherit;">raised</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Raised DateTime{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resolutionuri_python">
+<a href="#resolutionuri_python" style="color: inherit; text-decoration: inherit;">resolution<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert TSG Link{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="severity_python">
+<a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Health Alert Severity{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="healthmonitorresponse">Health<wbr>Monitor<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#HealthMonitorResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/aad/latest?tab=doc#HealthMonitorResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Aad.Latest.Outputs.HealthMonitorResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_csharp">
+<a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Monitor Details{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Monitor Id{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Monitor Name{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_go">
+<a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Monitor Details{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Monitor Id{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Monitor Name{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_nodejs">
+<a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Monitor Details{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Monitor Id{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Health Monitor Name{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_python">
+<a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Health Monitor Details{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Health Monitor Id{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Health Monitor Name{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="ldapssettingsresponse">Ldaps<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#LdapsSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/aad/latest?tab=doc#LdapsSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Aad.Latest.Outputs.LdapsSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatenotafter_csharp">
+<a href="#certificatenotafter_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Not<wbr>After</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}NotAfter DateTime of configure ldaps certificate.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatethumbprint_csharp">
+<a href="#certificatethumbprint_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Thumbprint of configure ldaps certificate.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="publiccertificate_csharp">
+<a href="#publiccertificate_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Public certificate used to configure secure ldap.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalaccess_csharp">
+<a href="#externalaccess_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ldaps_csharp">
+<a href="#ldaps_csharp" style="color: inherit; text-decoration: inherit;">Ldaps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not Secure LDAP is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pfxcertificate_csharp">
+<a href="#pfxcertificate_csharp" style="color: inherit; text-decoration: inherit;">Pfx<wbr>Certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate required to configure Secure LDAP. The parameter passed here should be a base64encoded representation of the certificate pfx file.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pfxcertificatepassword_csharp">
+<a href="#pfxcertificatepassword_csharp" style="color: inherit; text-decoration: inherit;">Pfx<wbr>Certificate<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The password to decrypt the provided Secure LDAP certificate pfx file.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatenotafter_go">
+<a href="#certificatenotafter_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Not<wbr>After</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}NotAfter DateTime of configure ldaps certificate.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatethumbprint_go">
+<a href="#certificatethumbprint_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Thumbprint of configure ldaps certificate.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="publiccertificate_go">
+<a href="#publiccertificate_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Public certificate used to configure secure ldap.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalaccess_go">
+<a href="#externalaccess_go" style="color: inherit; text-decoration: inherit;">External<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ldaps_go">
+<a href="#ldaps_go" style="color: inherit; text-decoration: inherit;">Ldaps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not Secure LDAP is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pfxcertificate_go">
+<a href="#pfxcertificate_go" style="color: inherit; text-decoration: inherit;">Pfx<wbr>Certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate required to configure Secure LDAP. The parameter passed here should be a base64encoded representation of the certificate pfx file.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pfxcertificatepassword_go">
+<a href="#pfxcertificatepassword_go" style="color: inherit; text-decoration: inherit;">Pfx<wbr>Certificate<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The password to decrypt the provided Secure LDAP certificate pfx file.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatenotafter_nodejs">
+<a href="#certificatenotafter_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Not<wbr>After</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}NotAfter DateTime of configure ldaps certificate.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificatethumbprint_nodejs">
+<a href="#certificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Thumbprint of configure ldaps certificate.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="publiccertificate_nodejs">
+<a href="#publiccertificate_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Public certificate used to configure secure ldap.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalaccess_nodejs">
+<a href="#externalaccess_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ldaps_nodejs">
+<a href="#ldaps_nodejs" style="color: inherit; text-decoration: inherit;">ldaps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not Secure LDAP is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pfxcertificate_nodejs">
+<a href="#pfxcertificate_nodejs" style="color: inherit; text-decoration: inherit;">pfx<wbr>Certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate required to configure Secure LDAP. The parameter passed here should be a base64encoded representation of the certificate pfx file.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pfxcertificatepassword_nodejs">
+<a href="#pfxcertificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">pfx<wbr>Certificate<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The password to decrypt the provided Secure LDAP certificate pfx file.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificate_not_after_python">
+<a href="#certificate_not_after_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>not_<wbr>after</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}NotAfter DateTime of configure ldaps certificate.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="certificate_thumbprint_python">
+<a href="#certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>thumbprint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Thumbprint of configure ldaps certificate.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="public_certificate_python">
+<a href="#public_certificate_python" style="color: inherit; text-decoration: inherit;">public_<wbr>certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Public certificate used to configure secure ldap.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="external_access_python">
+<a href="#external_access_python" style="color: inherit; text-decoration: inherit;">external_<wbr>access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ldaps_python">
+<a href="#ldaps_python" style="color: inherit; text-decoration: inherit;">ldaps</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not Secure LDAP is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pfx_certificate_python">
+<a href="#pfx_certificate_python" style="color: inherit; text-decoration: inherit;">pfx_<wbr>certificate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The certificate required to configure Secure LDAP. The parameter passed here should be a base64encoded representation of the certificate pfx file.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pfx_certificate_password_python">
+<a href="#pfx_certificate_password_python" style="color: inherit; text-decoration: inherit;">pfx_<wbr>certificate_<wbr>password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The password to decrypt the provided Secure LDAP certificate pfx file.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="notificationsettingsresponse">Notification<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#NotificationSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/aad/latest?tab=doc#NotificationSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Aad.Latest.Outputs.NotificationSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalrecipients_csharp">
+<a href="#additionalrecipients_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Recipients</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of additional recipients{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="notifydcadmins_csharp">
+<a href="#notifydcadmins_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Dc<wbr>Admins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Should domain controller admins be notified{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="notifyglobaladmins_csharp">
+<a href="#notifyglobaladmins_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Global<wbr>Admins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Should global admins be notified{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalrecipients_go">
+<a href="#additionalrecipients_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Recipients</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of additional recipients{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="notifydcadmins_go">
+<a href="#notifydcadmins_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Dc<wbr>Admins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Should domain controller admins be notified{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="notifyglobaladmins_go">
+<a href="#notifyglobaladmins_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Global<wbr>Admins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Should global admins be notified{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalrecipients_nodejs">
+<a href="#additionalrecipients_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Recipients</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of additional recipients{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="notifydcadmins_nodejs">
+<a href="#notifydcadmins_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Dc<wbr>Admins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Should domain controller admins be notified{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="notifyglobaladmins_nodejs">
+<a href="#notifyglobaladmins_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Global<wbr>Admins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Should global admins be notified{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additional_recipients_python">
+<a href="#additional_recipients_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>recipients</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of additional recipients{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="notify_dc_admins_python">
+<a href="#notify_dc_admins_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>dc_<wbr>admins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Should domain controller admins be notified{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="notify_global_admins_python">
+<a href="#notify_global_admins_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>global_<wbr>admins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Should global admins be notified{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="replicasetresponse">Replica<wbr>Set<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ReplicaSetResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/aad/latest?tab=doc#ReplicaSetResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Aad.Latest.Outputs.ReplicaSetResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="domaincontrolleripaddress_csharp">
+<a href="#domaincontrolleripaddress_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Controller<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of Domain Controller IP Address{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="externalaccessipaddress_csharp">
+<a href="#externalaccessipaddress_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Access<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}External access ip address.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthalerts_csharp">
+<a href="#healthalerts_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Alerts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthalertresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Aad.<wbr>Latest.<wbr>Inputs.<wbr>Health<wbr>Alert<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of Domain Health Alerts{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthlastevaluated_csharp">
+<a href="#healthlastevaluated_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Last<wbr>Evaluated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last domain evaluation run DateTime{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthmonitors_csharp">
+<a href="#healthmonitors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Monitors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthmonitorresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Aad.<wbr>Latest.<wbr>Inputs.<wbr>Health<wbr>Monitor<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of Domain Health Monitors{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="replicasetid_csharp">
+<a href="#replicasetid_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}ReplicaSet Id{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="servicestatus_csharp">
+<a href="#servicestatus_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of Domain Service instance{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vnetsiteid_csharp">
+<a href="#vnetsiteid_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Site<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual network site id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual network location{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual network that Domain Services will be deployed on. The id of the subnet that Domain Services will be deployed on. /virtualNetwork/vnetName/subnets/subnetName.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="domaincontrolleripaddress_go">
+<a href="#domaincontrolleripaddress_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Controller<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of Domain Controller IP Address{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="externalaccessipaddress_go">
+<a href="#externalaccessipaddress_go" style="color: inherit; text-decoration: inherit;">External<wbr>Access<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}External access ip address.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthalerts_go">
+<a href="#healthalerts_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Alerts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthalertresponse">[]Health<wbr>Alert<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of Domain Health Alerts{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthlastevaluated_go">
+<a href="#healthlastevaluated_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Last<wbr>Evaluated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last domain evaluation run DateTime{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthmonitors_go">
+<a href="#healthmonitors_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Monitors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthmonitorresponse">[]Health<wbr>Monitor<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of Domain Health Monitors{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="replicasetid_go">
+<a href="#replicasetid_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ReplicaSet Id{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="servicestatus_go">
+<a href="#servicestatus_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of Domain Service instance{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vnetsiteid_go">
+<a href="#vnetsiteid_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Site<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual network site id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual network location{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual network that Domain Services will be deployed on. The id of the subnet that Domain Services will be deployed on. /virtualNetwork/vnetName/subnets/subnetName.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="domaincontrolleripaddress_nodejs">
+<a href="#domaincontrolleripaddress_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Controller<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Domain Controller IP Address{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="externalaccessipaddress_nodejs">
+<a href="#externalaccessipaddress_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Access<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}External access ip address.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthalerts_nodejs">
+<a href="#healthalerts_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Alerts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthalertresponse">Health<wbr>Alert<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Domain Health Alerts{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthlastevaluated_nodejs">
+<a href="#healthlastevaluated_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Last<wbr>Evaluated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last domain evaluation run DateTime{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthmonitors_nodejs">
+<a href="#healthmonitors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Monitors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthmonitorresponse">Health<wbr>Monitor<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Domain Health Monitors{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="replicasetid_nodejs">
+<a href="#replicasetid_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ReplicaSet Id{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="servicestatus_nodejs">
+<a href="#servicestatus_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of Domain Service instance{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vnetsiteid_nodejs">
+<a href="#vnetsiteid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Site<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual network site id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual network location{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual network that Domain Services will be deployed on. The id of the subnet that Domain Services will be deployed on. /virtualNetwork/vnetName/subnets/subnetName.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="domaincontrolleripaddress_python">
+<a href="#domaincontrolleripaddress_python" style="color: inherit; text-decoration: inherit;">domain<wbr>Controller<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Domain Controller IP Address{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="externalaccessipaddress_python">
+<a href="#externalaccessipaddress_python" style="color: inherit; text-decoration: inherit;">external<wbr>Access<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}External access ip address.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthalerts_python">
+<a href="#healthalerts_python" style="color: inherit; text-decoration: inherit;">health<wbr>Alerts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthalertresponse">List[Health<wbr>Alert<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Domain Health Alerts{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthlastevaluated_python">
+<a href="#healthlastevaluated_python" style="color: inherit; text-decoration: inherit;">health<wbr>Last<wbr>Evaluated</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Last domain evaluation run DateTime{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="healthmonitors_python">
+<a href="#healthmonitors_python" style="color: inherit; text-decoration: inherit;">health<wbr>Monitors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthmonitorresponse">List[Health<wbr>Monitor<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Domain Health Monitors{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="replicasetid_python">
+<a href="#replicasetid_python" style="color: inherit; text-decoration: inherit;">replica<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}ReplicaSet Id{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="service_status_python">
+<a href="#service_status_python" style="color: inherit; text-decoration: inherit;">service_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Status of Domain Service instance{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vnetsiteid_python">
+<a href="#vnetsiteid_python" style="color: inherit; text-decoration: inherit;">vnet<wbr>Site<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual network site id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual network location{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual network that Domain Services will be deployed on. The id of the subnet that Domain Services will be deployed on. /virtualNetwork/vnetName/subnets/subnetName.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

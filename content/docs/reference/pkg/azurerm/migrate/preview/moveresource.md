@@ -551,6 +551,96 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+<h4 id="automaticresolutionpropertiesresponse">Automatic<wbr>Resolution<wbr>Properties<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AutomaticResolutionPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#AutomaticResolutionPropertiesResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.AutomaticResolutionPropertiesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="moveresourceid_csharp">
+<a href="#moveresourceid_csharp" style="color: inherit; text-decoration: inherit;">Move<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the MoveResource ARM ID of
+the dependent resource if the resolution type is Automatic.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="moveresourceid_go">
+<a href="#moveresourceid_go" style="color: inherit; text-decoration: inherit;">Move<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the MoveResource ARM ID of
+the dependent resource if the resolution type is Automatic.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="moveresourceid_nodejs">
+<a href="#moveresourceid_nodejs" style="color: inherit; text-decoration: inherit;">move<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the MoveResource ARM ID of
+the dependent resource if the resolution type is Automatic.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="moveresourceid_python">
+<a href="#moveresourceid_python" style="color: inherit; text-decoration: inherit;">move<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the MoveResource ARM ID of
+the dependent resource if the resolution type is Automatic.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="availabilitysetresourcesettings">Availability<wbr>Set<wbr>Resource<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#AvailabilitySetResourceSettings">input</a>   API doc for this type.
@@ -717,6 +807,298 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AvailabilitySetResourceSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#AvailabilitySetResourceSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.AvailabilitySetResourceSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_csharp">
+<a href="#targetresourcename_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="faultdomain_csharp">
+<a href="#faultdomain_csharp" style="color: inherit; text-decoration: inherit;">Fault<wbr>Domain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target fault domain.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="updatedomain_csharp">
+<a href="#updatedomain_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Domain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target update domain.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_go">
+<a href="#targetresourcename_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="faultdomain_go">
+<a href="#faultdomain_go" style="color: inherit; text-decoration: inherit;">Fault<wbr>Domain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target fault domain.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="updatedomain_go">
+<a href="#updatedomain_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Domain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target update domain.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_nodejs">
+<a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="faultdomain_nodejs">
+<a href="#faultdomain_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Domain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target fault domain.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="updatedomain_nodejs">
+<a href="#updatedomain_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Domain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target update domain.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_resource_name_python">
+<a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="faultdomain_python">
+<a href="#faultdomain_python" style="color: inherit; text-decoration: inherit;">fault<wbr>Domain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target fault domain.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="updatedomain_python">
+<a href="#updatedomain_python" style="color: inherit; text-decoration: inherit;">update<wbr>Domain</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target update domain.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="jobstatusresponse">Job<wbr>Status<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#JobStatusResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#JobStatusResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.JobStatusResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="jobprogress_csharp">
+<a href="#jobprogress_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the monitoring job percentage.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="jobname_csharp">
+<a href="#jobname_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the job name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="jobprogress_go">
+<a href="#jobprogress_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the monitoring job percentage.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="jobname_go">
+<a href="#jobname_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the job name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="jobprogress_nodejs">
+<a href="#jobprogress_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the monitoring job percentage.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="jobname_nodejs">
+<a href="#jobname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the job name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="job_progress_python">
+<a href="#job_progress_python" style="color: inherit; text-decoration: inherit;">job_<wbr>progress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the monitoring job percentage.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="job_name_python">
+<a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the job name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="lbbackendaddresspoolresourcesettings">LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#LBBackendAddressPoolResourceSettings">input</a>   API doc for this type.
@@ -727,6 +1109,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Inputs.LBBackendAddressPoolResourceSettingsArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the backend address pool name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the backend address pool name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the backend address pool name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the backend address pool name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="lbbackendaddresspoolresourcesettingsresponse">LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#LBBackendAddressPoolResourceSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#LBBackendAddressPoolResourceSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.LBBackendAddressPoolResourceSettingsResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1053,6 +1521,256 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 
 
 
+<h4 id="lbfrontendipconfigurationresourcesettingsresponse">LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#LBFrontendIPConfigurationResourceSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#LBFrontendIPConfigurationResourceSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.LBFrontendIPConfigurationResourceSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the frontend IP configuration name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_csharp">
+<a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the IP address of the Load Balancer.This is only specified if a specific
+private IP address shall be allocated from the subnet specified in subnetRef.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipallocationmethod_csharp">
+<a href="#privateipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Allocation<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets PrivateIP allocation method (Static/Dynamic).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_csharp">
+<a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Subnet<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zones_csharp">
+<a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the csv list of zones.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the frontend IP configuration name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_go">
+<a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the IP address of the Load Balancer.This is only specified if a specific
+private IP address shall be allocated from the subnet specified in subnetRef.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipallocationmethod_go">
+<a href="#privateipallocationmethod_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Allocation<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets PrivateIP allocation method (Static/Dynamic).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_go">
+<a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zones_go">
+<a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the csv list of zones.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the frontend IP configuration name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_nodejs">
+<a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the IP address of the Load Balancer.This is only specified if a specific
+private IP address shall be allocated from the subnet specified in subnetRef.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipallocationmethod_nodejs">
+<a href="#privateipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Allocation<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets PrivateIP allocation method (Static/Dynamic).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_nodejs">
+<a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zones_nodejs">
+<a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the csv list of zones.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the frontend IP configuration name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipallocationmethod_python">
+<a href="#privateipallocationmethod_python" style="color: inherit; text-decoration: inherit;">private<wbr>IPAllocation<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets PrivateIP allocation method (Static/Dynamic).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_ip_address_python">
+<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the IP address of the Load Balancer.This is only specified if a specific
+private IP address shall be allocated from the subnet specified in subnetRef.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_python">
+<a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Dict[Subnet<wbr>Reference<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zones_python">
+<a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the csv list of zones.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="loadbalancerbackendaddresspoolreference">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#LoadBalancerBackendAddressPoolReference">input</a>   API doc for this type.
@@ -1063,6 +1781,132 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Inputs.LoadBalancerBackendAddressPoolReferenceArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcearmresourceid_csharp">
+<a href="#sourcearmresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcearmresourceid_go">
+<a href="#sourcearmresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcearmresourceid_nodejs">
+<a href="#sourcearmresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcearmresourceid_python">
+<a href="#sourcearmresourceid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="loadbalancerbackendaddresspoolreferenceresponse">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#LoadBalancerBackendAddressPoolReferenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#LoadBalancerBackendAddressPoolReferenceResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.LoadBalancerBackendAddressPoolReferenceResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1429,6 +2273,342 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 
 
 
+<h4 id="loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#LoadBalancerResourceSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#LoadBalancerResourceSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.LoadBalancerResourceSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_csharp">
+<a href="#targetresourcename_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backendaddresspools_csharp">
+<a href="#backendaddresspools_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pools</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettingsresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the backend address pools of the load balancer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frontendipconfigurations_csharp">
+<a href="#frontendipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>IPConfigurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettingsresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the frontend IP configurations of the load balancer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets load balancer sku (Basic/Standard).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zones_csharp">
+<a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
+ precedence only if frontend IP configurations settings are not present.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_go">
+<a href="#targetresourcename_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backendaddresspools_go">
+<a href="#backendaddresspools_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pools</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettingsresponse">[]LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the backend address pools of the load balancer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frontendipconfigurations_go">
+<a href="#frontendipconfigurations_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>IPConfigurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettingsresponse">[]LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the frontend IP configurations of the load balancer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets load balancer sku (Basic/Standard).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zones_go">
+<a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
+ precedence only if frontend IP configurations settings are not present.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_nodejs">
+<a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backendaddresspools_nodejs">
+<a href="#backendaddresspools_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pools</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettingsresponse">LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the backend address pools of the load balancer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frontendipconfigurations_nodejs">
+<a href="#frontendipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>IPConfigurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettingsresponse">LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the frontend IP configurations of the load balancer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets load balancer sku (Basic/Standard).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zones_nodejs">
+<a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
+ precedence only if frontend IP configurations settings are not present.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_resource_name_python">
+<a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backend_address_pools_python">
+<a href="#backend_address_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pools</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettingsresponse">List[LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the backend address pools of the load balancer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frontend_ip_configurations_python">
+<a href="#frontend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettingsresponse">List[LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the frontend IP configurations of the load balancer.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets load balancer sku (Basic/Standard).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zones_python">
+<a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
+ precedence only if frontend IP configurations settings are not present.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="manualresolutionpropertiesresponse">Manual<wbr>Resolution<wbr>Properties<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ManualResolutionPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#ManualResolutionPropertiesResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.ManualResolutionPropertiesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetid_csharp">
+<a href="#targetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target resource ARM ID of the dependent resource if the resource type is Manual.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetid_go">
+<a href="#targetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target resource ARM ID of the dependent resource if the resource type is Manual.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetid_nodejs">
+<a href="#targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target resource ARM ID of the dependent resource if the resource type is Manual.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_id_python">
+<a href="#target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target resource ARM ID of the dependent resource if the resource type is Manual.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="moveresourcedependencyoverride">Move<wbr>Resource<wbr>Dependency<wbr>Override</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#MoveResourceDependencyOverride">input</a>   API doc for this type.
@@ -1551,6 +2731,754 @@ the dependent resource.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
 the dependent resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="moveresourcedependencyoverrideresponse">Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MoveResourceDependencyOverrideResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#MoveResourceDependencyOverrideResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.MoveResourceDependencyOverrideResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the ARM ID of the dependent resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetid_csharp">
+<a href="#targetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
+the dependent resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the ARM ID of the dependent resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetid_go">
+<a href="#targetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
+the dependent resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the ARM ID of the dependent resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetid_nodejs">
+<a href="#targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
+the dependent resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the ARM ID of the dependent resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_id_python">
+<a href="#target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
+the dependent resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="moveresourcedependencyresponse">Move<wbr>Resource<wbr>Dependency<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MoveResourceDependencyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#MoveResourceDependencyResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.MoveResourceDependencyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="automaticresolution_csharp">
+<a href="#automaticresolution_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Resolution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#automaticresolutionpropertiesresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Automatic<wbr>Resolution<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the properties for automatic resolution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dependencytype_csharp">
+<a href="#dependencytype_csharp" style="color: inherit; text-decoration: inherit;">Dependency<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the dependency type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the source ARM ID of the dependent resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isoptional_csharp">
+<a href="#isoptional_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Optional</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether the dependency is optional.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="manualresolution_csharp">
+<a href="#manualresolution_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Resolution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#manualresolutionpropertiesresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Manual<wbr>Resolution<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the properties for manual resolution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resolutionstatus_csharp">
+<a href="#resolutionstatus_csharp" style="color: inherit; text-decoration: inherit;">Resolution<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the dependency resolution status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resolutiontype_csharp">
+<a href="#resolutiontype_csharp" style="color: inherit; text-decoration: inherit;">Resolution<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the resolution type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="automaticresolution_go">
+<a href="#automaticresolution_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Resolution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#automaticresolutionpropertiesresponse">Automatic<wbr>Resolution<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the properties for automatic resolution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dependencytype_go">
+<a href="#dependencytype_go" style="color: inherit; text-decoration: inherit;">Dependency<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the dependency type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the source ARM ID of the dependent resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isoptional_go">
+<a href="#isoptional_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Optional</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether the dependency is optional.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="manualresolution_go">
+<a href="#manualresolution_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Resolution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#manualresolutionpropertiesresponse">Manual<wbr>Resolution<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the properties for manual resolution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resolutionstatus_go">
+<a href="#resolutionstatus_go" style="color: inherit; text-decoration: inherit;">Resolution<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the dependency resolution status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resolutiontype_go">
+<a href="#resolutiontype_go" style="color: inherit; text-decoration: inherit;">Resolution<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the resolution type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="automaticresolution_nodejs">
+<a href="#automaticresolution_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Resolution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#automaticresolutionpropertiesresponse">Automatic<wbr>Resolution<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the properties for automatic resolution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dependencytype_nodejs">
+<a href="#dependencytype_nodejs" style="color: inherit; text-decoration: inherit;">dependency<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the dependency type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the source ARM ID of the dependent resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isoptional_nodejs">
+<a href="#isoptional_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Optional</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether the dependency is optional.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="manualresolution_nodejs">
+<a href="#manualresolution_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Resolution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#manualresolutionpropertiesresponse">Manual<wbr>Resolution<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the properties for manual resolution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resolutionstatus_nodejs">
+<a href="#resolutionstatus_nodejs" style="color: inherit; text-decoration: inherit;">resolution<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the dependency resolution status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resolutiontype_nodejs">
+<a href="#resolutiontype_nodejs" style="color: inherit; text-decoration: inherit;">resolution<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the resolution type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="automaticresolution_python">
+<a href="#automaticresolution_python" style="color: inherit; text-decoration: inherit;">automatic<wbr>Resolution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#automaticresolutionpropertiesresponse">Dict[Automatic<wbr>Resolution<wbr>Properties<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the properties for automatic resolution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dependencytype_python">
+<a href="#dependencytype_python" style="color: inherit; text-decoration: inherit;">dependency<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the dependency type.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the source ARM ID of the dependent resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isoptional_python">
+<a href="#isoptional_python" style="color: inherit; text-decoration: inherit;">is<wbr>Optional</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether the dependency is optional.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="manualresolution_python">
+<a href="#manualresolution_python" style="color: inherit; text-decoration: inherit;">manual<wbr>Resolution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#manualresolutionpropertiesresponse">Dict[Manual<wbr>Resolution<wbr>Properties<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the properties for manual resolution.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resolutionstatus_python">
+<a href="#resolutionstatus_python" style="color: inherit; text-decoration: inherit;">resolution<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the dependency resolution status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resolutiontype_python">
+<a href="#resolutiontype_python" style="color: inherit; text-decoration: inherit;">resolution<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the resolution type.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MoveResourceErrorBodyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#MoveResourceErrorBodyResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.MoveResourceErrorBodyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}An identifier for the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_csharp">
+<a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_csharp">
+<a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target of the particular error. For example, the name of the property in error.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An identifier for the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_go">
+<a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">[]Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_go">
+<a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target of the particular error. For example, the name of the property in error.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An identifier for the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_nodejs">
+<a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_nodejs">
+<a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target of the particular error. For example, the name of the property in error.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}An identifier for the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_python">
+<a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">List[Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_python">
+<a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The target of the particular error. For example, the name of the property in error.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="moveresourceerrorresponse">Move<wbr>Resource<wbr>Error<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MoveResourceErrorResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#MoveResourceErrorResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.MoveResourceErrorResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The move resource error body.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The move resource error body.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The move resource error body.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Dict[Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The move resource error body.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1795,6 +3723,452 @@ the dependent resource.{{% /md %}}</dd>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[Availability<wbr>Set<wbr>Resource<wbr>Settings] | Dict[Load<wbr>Balancer<wbr>Resource<wbr>Settings] | Dict[Network<wbr>Interface<wbr>Resource<wbr>Settings] | Dict[Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings] | Dict[Public<wbr>IPAddress<wbr>Resource<wbr>Settings] | Dict[Resource<wbr>Group<wbr>Resource<wbr>Settings] | Dict[Sql<wbr>Database<wbr>Resource<wbr>Settings] | Dict[Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings] | Dict[Sql<wbr>Server<wbr>Resource<wbr>Settings] | Dict[Virtual<wbr>Machine<wbr>Resource<wbr>Settings] | Dict[Virtual<wbr>Network<wbr>Resource<wbr>Settings]</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="moveresourcepropertiesresponse">Move<wbr>Resource<wbr>Properties<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MoveResourcePropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#MoveResourcePropertiesResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.MoveResourcePropertiesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dependson_csharp">
+<a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the move resource dependencies.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errors_csharp">
+<a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponseerrors">Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the move resource errors.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="movestatus_csharp">
+<a href="#movestatus_csharp" style="color: inherit; text-decoration: inherit;">Move<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponsemovestatus">Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the move resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourceid_csharp">
+<a href="#sourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Source ARM Id of the resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourceresourcesettings_csharp">
+<a href="#sourceresourcesettings_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponsesourceresourcesettings">Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Source<wbr>Resource<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetid_csharp">
+<a href="#targetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Target ARM Id of the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dependsonoverrides_csharp">
+<a href="#dependsonoverrides_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On<wbr>Overrides</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcedependencyoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the move resource dependencies overrides.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="existingtargetid_csharp">
+<a href="#existingtargetid_csharp" style="color: inherit; text-decoration: inherit;">Existing<wbr>Target<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the existing target ARM Id of the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcesettings_csharp">
+<a href="#resourcesettings_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dependson_go">
+<a href="#dependson_go" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcedependencyresponse">[]Move<wbr>Resource<wbr>Dependency<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the move resource dependencies.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errors_go">
+<a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponseerrors">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the move resource errors.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="movestatus_go">
+<a href="#movestatus_go" style="color: inherit; text-decoration: inherit;">Move<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponsemovestatus">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the move resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourceid_go">
+<a href="#sourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Source ARM Id of the resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourceresourcesettings_go">
+<a href="#sourceresourcesettings_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponsesourceresourcesettings">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Source<wbr>Resource<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetid_go">
+<a href="#targetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Target ARM Id of the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dependsonoverrides_go">
+<a href="#dependsonoverrides_go" style="color: inherit; text-decoration: inherit;">Depends<wbr>On<wbr>Overrides</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcedependencyoverrideresponse">[]Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the move resource dependencies overrides.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="existingtargetid_go">
+<a href="#existingtargetid_go" style="color: inherit; text-decoration: inherit;">Existing<wbr>Target<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the existing target ARM Id of the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcesettings_go">
+<a href="#resourcesettings_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="dependson_nodejs">
+<a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcedependencyresponse">Move<wbr>Resource<wbr>Dependency<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the move resource dependencies.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errors_nodejs">
+<a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponseerrors">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the move resource errors.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="movestatus_nodejs">
+<a href="#movestatus_nodejs" style="color: inherit; text-decoration: inherit;">move<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponsemovestatus">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the move resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourceid_nodejs">
+<a href="#sourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Source ARM Id of the resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourceresourcesettings_nodejs">
+<a href="#sourceresourcesettings_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponsesourceresourcesettings">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Source<wbr>Resource<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetid_nodejs">
+<a href="#targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Target ARM Id of the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dependsonoverrides_nodejs">
+<a href="#dependsonoverrides_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On<wbr>Overrides</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcedependencyoverrideresponse">Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the move resource dependencies overrides.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="existingtargetid_nodejs">
+<a href="#existingtargetid_nodejs" style="color: inherit; text-decoration: inherit;">existing<wbr>Target<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the existing target ARM Id of the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcesettings_nodejs">
+<a href="#resourcesettings_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response | Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response | Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response | Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response | Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response | Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response | Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response | Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response | Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response | Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response | Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="depends_on_python">
+<a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcedependencyresponse">List[Move<wbr>Resource<wbr>Dependency<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the move resource dependencies.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errors_python">
+<a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponseerrors">Dict[Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the move resource errors.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="move_status_python">
+<a href="#move_status_python" style="color: inherit; text-decoration: inherit;">move_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponsemovestatus">Dict[Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the move resource status.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="source_id_python">
+<a href="#source_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Source ARM Id of the resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="source_resource_settings_python">
+<a href="#source_resource_settings_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponsesourceresourcesettings">Dict[Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Source<wbr>Resource<wbr>Settings]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_id_python">
+<a href="#target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Target ARM Id of the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="depends_on_overrides_python">
+<a href="#depends_on_overrides_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on_<wbr>overrides</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#moveresourcedependencyoverrideresponse">List[Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the move resource dependencies overrides.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="existing_target_id_python">
+<a href="#existing_target_id_python" style="color: inherit; text-decoration: inherit;">existing_<wbr>target_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the existing target ARM Id of the resource.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_settings_python">
+<a href="#resource_settings_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response] | Dict[Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd>
 
@@ -2349,6 +4723,172 @@ the dependent resource.{{% /md %}}</dd>
 
 
 
+<h4 id="networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#NetworkInterfaceResourceSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#NetworkInterfaceResourceSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.NetworkInterfaceResourceSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_csharp">
+<a href="#targetresourcename_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableacceleratednetworking_csharp">
+<a href="#enableacceleratednetworking_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Accelerated<wbr>Networking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether accelerated networking is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurations_csharp">
+<a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nicipconfigurationresourcesettingsresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the IP configurations of the NIC.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_go">
+<a href="#targetresourcename_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableacceleratednetworking_go">
+<a href="#enableacceleratednetworking_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Accelerated<wbr>Networking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether accelerated networking is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurations_go">
+<a href="#ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nicipconfigurationresourcesettingsresponse">[]Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the IP configurations of the NIC.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_nodejs">
+<a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableacceleratednetworking_nodejs">
+<a href="#enableacceleratednetworking_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Accelerated<wbr>Networking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether accelerated networking is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurations_nodejs">
+<a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nicipconfigurationresourcesettingsresponse">Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the IP configurations of the NIC.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_resource_name_python">
+<a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_accelerated_networking_python">
+<a href="#enable_accelerated_networking_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>accelerated_<wbr>networking</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether accelerated networking is enabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_configurations_python">
+<a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nicipconfigurationresourcesettingsresponse">List[Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the IP configurations of the NIC.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="networksecuritygroupresourcesettings">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#NetworkSecurityGroupResourceSettings">input</a>   API doc for this type.
@@ -2465,6 +5005,132 @@ the dependent resource.{{% /md %}}</dd>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nsgsecurityrule">List[Nsg<wbr>Security<wbr>Rule]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets Security rules of network security group.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#NetworkSecurityGroupResourceSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#NetworkSecurityGroupResourceSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.NetworkSecurityGroupResourceSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_csharp">
+<a href="#targetresourcename_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securityrules_csharp">
+<a href="#securityrules_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nsgsecurityruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Nsg<wbr>Security<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets Security rules of network security group.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_go">
+<a href="#targetresourcename_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securityrules_go">
+<a href="#securityrules_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nsgsecurityruleresponse">[]Nsg<wbr>Security<wbr>Rule<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets Security rules of network security group.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_nodejs">
+<a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securityrules_nodejs">
+<a href="#securityrules_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nsgsecurityruleresponse">Nsg<wbr>Security<wbr>Rule<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets Security rules of network security group.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_resource_name_python">
+<a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="security_rules_python">
+<a href="#security_rules_python" style="color: inherit; text-decoration: inherit;">security_<wbr>rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nsgsecurityruleresponse">List[Nsg<wbr>Security<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets Security rules of network security group.{{% /md %}}</dd>
 
@@ -2761,6 +5427,292 @@ the dependent resource.{{% /md %}}</dd>
 
 
 
+<h4 id="nicipconfigurationresourcesettingsresponse">Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#NicIpConfigurationResourceSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#NicIpConfigurationResourceSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.NicIpConfigurationResourceSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancerbackendaddresspools_csharp">
+<a href="#loadbalancerbackendaddresspools_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the references of the load balancer backend address pools.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the IP configuration name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primary_csharp">
+<a href="#primary_csharp" style="color: inherit; text-decoration: inherit;">Primary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether this IP configuration is the primary.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_csharp">
+<a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the private IP address of the network interface IP Configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipallocationmethod_csharp">
+<a href="#privateipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Allocation<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the private IP address allocation method.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_csharp">
+<a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Subnet<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancerbackendaddresspools_go">
+<a href="#loadbalancerbackendaddresspools_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreferenceresponse">[]Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the references of the load balancer backend address pools.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the IP configuration name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primary_go">
+<a href="#primary_go" style="color: inherit; text-decoration: inherit;">Primary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether this IP configuration is the primary.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_go">
+<a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the private IP address of the network interface IP Configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipallocationmethod_go">
+<a href="#privateipallocationmethod_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Allocation<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the private IP address allocation method.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_go">
+<a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancerbackendaddresspools_nodejs">
+<a href="#loadbalancerbackendaddresspools_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreferenceresponse">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the references of the load balancer backend address pools.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the IP configuration name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primary_nodejs">
+<a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether this IP configuration is the primary.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_nodejs">
+<a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the private IP address of the network interface IP Configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipallocationmethod_nodejs">
+<a href="#privateipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Allocation<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the private IP address allocation method.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_nodejs">
+<a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="load_balancer_backend_address_pools_python">
+<a href="#load_balancer_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pools</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreferenceresponse">List[Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the references of the load balancer backend address pools.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the IP configuration name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primary_python">
+<a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether this IP configuration is the primary.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipallocationmethod_python">
+<a href="#privateipallocationmethod_python" style="color: inherit; text-decoration: inherit;">private<wbr>IPAllocation<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the private IP address allocation method.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_ip_address_python">
+<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the private IP address of the network interface IP Configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_python">
+<a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Dict[Subnet<wbr>Reference<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="nsgsecurityrule">Nsg<wbr>Security<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#NsgSecurityRule">input</a>   API doc for this type.
@@ -2771,6 +5723,496 @@ the dependent resource.{{% /md %}}</dd>
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Inputs.NsgSecurityRuleArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="access_csharp">
+<a href="#access_csharp" style="color: inherit; text-decoration: inherit;">Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets whether network traffic is allowed or denied.
+Possible values are “Allow” and “Deny”.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a description for this rule. Restricted to 140 chars.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationaddressprefix_csharp">
+<a href="#destinationaddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Address<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets destination address prefix. CIDR or source IP range.
+ A “*” can also be used to match all source IPs. Default tags such
+as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationportrange_csharp">
+<a href="#destinationportrange_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets Destination Port or Range. Integer or range between
+0 and 65535. A “*” can also be used to match all ports.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="direction_csharp">
+<a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the direction of the rule.InBound or Outbound. The
+direction specifies if rule will be evaluated on incoming or outgoing traffic.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Security rule name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="priority_csharp">
+<a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the priority of the rule. The value can be between
+100 and 4096. The priority number must be unique for each rule in the collection.
+The lower the priority number, the higher the priority of the rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceaddressprefix_csharp">
+<a href="#sourceaddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Address<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets source address prefix. CIDR or source IP range. A
+“*” can also be used to match all source IPs.  Default tags such as ‘VirtualNetwork’,
+‘AzureLoadBalancer’ and ‘Internet’ can also be used. If this is an ingress
+rule, specifies where network traffic originates from.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceportrange_csharp">
+<a href="#sourceportrange_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Port<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets Source Port or Range. Integer or range between 0 and
+65535. A “*” can also be used to match all ports.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="access_go">
+<a href="#access_go" style="color: inherit; text-decoration: inherit;">Access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets whether network traffic is allowed or denied.
+Possible values are “Allow” and “Deny”.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a description for this rule. Restricted to 140 chars.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationaddressprefix_go">
+<a href="#destinationaddressprefix_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Address<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets destination address prefix. CIDR or source IP range.
+ A “*” can also be used to match all source IPs. Default tags such
+as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationportrange_go">
+<a href="#destinationportrange_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets Destination Port or Range. Integer or range between
+0 and 65535. A “*” can also be used to match all ports.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="direction_go">
+<a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the direction of the rule.InBound or Outbound. The
+direction specifies if rule will be evaluated on incoming or outgoing traffic.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Security rule name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="priority_go">
+<a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the priority of the rule. The value can be between
+100 and 4096. The priority number must be unique for each rule in the collection.
+The lower the priority number, the higher the priority of the rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceaddressprefix_go">
+<a href="#sourceaddressprefix_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Address<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets source address prefix. CIDR or source IP range. A
+“*” can also be used to match all source IPs.  Default tags such as ‘VirtualNetwork’,
+‘AzureLoadBalancer’ and ‘Internet’ can also be used. If this is an ingress
+rule, specifies where network traffic originates from.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceportrange_go">
+<a href="#sourceportrange_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Port<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets Source Port or Range. Integer or range between 0 and
+65535. A “*” can also be used to match all ports.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="access_nodejs">
+<a href="#access_nodejs" style="color: inherit; text-decoration: inherit;">access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets whether network traffic is allowed or denied.
+Possible values are “Allow” and “Deny”.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a description for this rule. Restricted to 140 chars.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationaddressprefix_nodejs">
+<a href="#destinationaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Address<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets destination address prefix. CIDR or source IP range.
+ A “*” can also be used to match all source IPs. Default tags such
+as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationportrange_nodejs">
+<a href="#destinationportrange_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets Destination Port or Range. Integer or range between
+0 and 65535. A “*” can also be used to match all ports.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="direction_nodejs">
+<a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the direction of the rule.InBound or Outbound. The
+direction specifies if rule will be evaluated on incoming or outgoing traffic.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Security rule name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="priority_nodejs">
+<a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the priority of the rule. The value can be between
+100 and 4096. The priority number must be unique for each rule in the collection.
+The lower the priority number, the higher the priority of the rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceaddressprefix_nodejs">
+<a href="#sourceaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Address<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets source address prefix. CIDR or source IP range. A
+“*” can also be used to match all source IPs.  Default tags such as ‘VirtualNetwork’,
+‘AzureLoadBalancer’ and ‘Internet’ can also be used. If this is an ingress
+rule, specifies where network traffic originates from.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceportrange_nodejs">
+<a href="#sourceportrange_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Port<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets Source Port or Range. Integer or range between 0 and
+65535. A “*” can also be used to match all ports.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="access_python">
+<a href="#access_python" style="color: inherit; text-decoration: inherit;">access</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets whether network traffic is allowed or denied.
+Possible values are “Allow” and “Deny”.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a description for this rule. Restricted to 140 chars.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destination_address_prefix_python">
+<a href="#destination_address_prefix_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>address_<wbr>prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets destination address prefix. CIDR or source IP range.
+ A “*” can also be used to match all source IPs. Default tags such
+as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destination_port_range_python">
+<a href="#destination_port_range_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port_<wbr>range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets Destination Port or Range. Integer or range between
+0 and 65535. A “*” can also be used to match all ports.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="direction_python">
+<a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the direction of the rule.InBound or Outbound. The
+direction specifies if rule will be evaluated on incoming or outgoing traffic.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Security rule name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="priority_python">
+<a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the priority of the rule. The value can be between
+100 and 4096. The priority number must be unique for each rule in the collection.
+The lower the priority number, the higher the priority of the rule.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_address_prefix_python">
+<a href="#source_address_prefix_python" style="color: inherit; text-decoration: inherit;">source_<wbr>address_<wbr>prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets source address prefix. CIDR or source IP range. A
+“*” can also be used to match all source IPs.  Default tags such as ‘VirtualNetwork’,
+‘AzureLoadBalancer’ and ‘Internet’ can also be used. If this is an ingress
+rule, specifies where network traffic originates from.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_port_range_python">
+<a href="#source_port_range_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port_<wbr>range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets Source Port or Range. Integer or range between 0 and
+65535. A “*” can also be used to match all ports.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="nsgsecurityruleresponse">Nsg<wbr>Security<wbr>Rule<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#NsgSecurityRuleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#NsgSecurityRuleResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.NsgSecurityRuleResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3537,6 +6979,292 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 
 
 
+<h4 id="publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#PublicIPAddressResourceSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#PublicIPAddressResourceSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.PublicIPAddressResourceSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_csharp">
+<a href="#targetresourcename_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domainnamelabel_csharp">
+<a href="#domainnamelabel_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name<wbr>Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the domain name label.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fqdn_csharp">
+<a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">FQDN</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the fully qualified domain name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicipallocationmethod_csharp">
+<a href="#publicipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Allocation<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets public IP allocation method.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets public IP sku.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zones_csharp">
+<a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets public IP zones.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_go">
+<a href="#targetresourcename_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domainnamelabel_go">
+<a href="#domainnamelabel_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name<wbr>Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the domain name label.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fqdn_go">
+<a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">FQDN</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the fully qualified domain name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicipallocationmethod_go">
+<a href="#publicipallocationmethod_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Allocation<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets public IP allocation method.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets public IP sku.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zones_go">
+<a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets public IP zones.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_nodejs">
+<a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domainnamelabel_nodejs">
+<a href="#domainnamelabel_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name<wbr>Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the domain name label.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fqdn_nodejs">
+<a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">f<wbr>QDN</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the fully qualified domain name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicipallocationmethod_nodejs">
+<a href="#publicipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Allocation<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets public IP allocation method.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets public IP sku.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zones_nodejs">
+<a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets public IP zones.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_resource_name_python">
+<a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domain_name_label_python">
+<a href="#domain_name_label_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name_<wbr>label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the domain name label.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fqdn_python">
+<a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">f<wbr>QDN</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the fully qualified domain name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicipallocationmethod_python">
+<a href="#publicipallocationmethod_python" style="color: inherit; text-decoration: inherit;">public<wbr>IPAllocation<wbr>Method</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets public IP allocation method.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets public IP sku.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zones_python">
+<a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets public IP zones.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="resourcegroupresourcesettings">Resource<wbr>Group<wbr>Resource<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#ResourceGroupResourceSettings">input</a>   API doc for this type.
@@ -3623,6 +7351,92 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 
 
 
+<h4 id="resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ResourceGroupResourceSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#ResourceGroupResourceSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.ResourceGroupResourceSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_csharp">
+<a href="#targetresourcename_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_go">
+<a href="#targetresourcename_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_nodejs">
+<a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_resource_name_python">
+<a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="sqldatabaseresourcesettings">Sql<wbr>Database<wbr>Resource<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#SqlDatabaseResourceSettings">input</a>   API doc for this type.
@@ -3633,6 +7447,132 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Inputs.SqlDatabaseResourceSettingsArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_csharp">
+<a href="#targetresourcename_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneredundant_csharp">
+<a href="#zoneredundant_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_go">
+<a href="#targetresourcename_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneredundant_go">
+<a href="#zoneredundant_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_nodejs">
+<a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneredundant_nodejs">
+<a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_resource_name_python">
+<a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_redundant_python">
+<a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SqlDatabaseResourceSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#SqlDatabaseResourceSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.SqlDatabaseResourceSettingsResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3875,6 +7815,132 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 
 
 
+<h4 id="sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SqlElasticPoolResourceSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#SqlElasticPoolResourceSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.SqlElasticPoolResourceSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_csharp">
+<a href="#targetresourcename_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneredundant_csharp">
+<a href="#zoneredundant_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_go">
+<a href="#targetresourcename_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneredundant_go">
+<a href="#zoneredundant_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_nodejs">
+<a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneredundant_nodejs">
+<a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_resource_name_python">
+<a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_redundant_python">
+<a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="sqlserverresourcesettings">Sql<wbr>Server<wbr>Resource<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#SqlServerResourceSettings">input</a>   API doc for this type.
@@ -3961,6 +8027,92 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 
 
 
+<h4 id="sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SqlServerResourceSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#SqlServerResourceSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.SqlServerResourceSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_csharp">
+<a href="#targetresourcename_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_go">
+<a href="#targetresourcename_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_nodejs">
+<a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_resource_name_python">
+<a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="subnetreference">Subnet<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#SubnetReference">input</a>   API doc for this type.
@@ -3971,6 +8123,132 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Inputs.SubnetReferenceArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcearmresourceid_csharp">
+<a href="#sourcearmresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcearmresourceid_go">
+<a href="#sourcearmresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcearmresourceid_nodejs">
+<a href="#sourcearmresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcearmresourceid_python">
+<a href="#sourcearmresourceid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SubnetReferenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#SubnetReferenceResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.SubnetReferenceResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4213,6 +8491,132 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 
 
 
+<h4 id="subnetresourcesettingsresponse">Subnet<wbr>Resource<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SubnetResourceSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#SubnetResourceSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.SubnetResourceSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressprefix_csharp">
+<a href="#addressprefix_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets address prefix for the subnet.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Subnet name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressprefix_go">
+<a href="#addressprefix_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets address prefix for the subnet.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Subnet name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressprefix_nodejs">
+<a href="#addressprefix_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets address prefix for the subnet.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Subnet name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="address_prefix_python">
+<a href="#address_prefix_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefix</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets address prefix for the subnet.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Subnet name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="virtualmachineresourcesettings">Virtual<wbr>Machine<wbr>Resource<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#VirtualMachineResourceSettings">input</a>   API doc for this type.
@@ -4223,6 +8627,212 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Inputs.VirtualMachineResourceSettingsArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_csharp">
+<a href="#targetresourcename_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetavailabilitysetid_csharp">
+<a href="#targetavailabilitysetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target availability set id for virtual machines not in an availability set at source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetavailabilityzone_csharp">
+<a href="#targetavailabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target availability zone.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetvmsize_csharp">
+<a href="#targetvmsize_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Vm<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target virtual machine size.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_go">
+<a href="#targetresourcename_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetavailabilitysetid_go">
+<a href="#targetavailabilitysetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target availability set id for virtual machines not in an availability set at source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetavailabilityzone_go">
+<a href="#targetavailabilityzone_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target availability zone.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetvmsize_go">
+<a href="#targetvmsize_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Vm<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target virtual machine size.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_nodejs">
+<a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetavailabilitysetid_nodejs">
+<a href="#targetavailabilitysetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target availability set id for virtual machines not in an availability set at source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetavailabilityzone_nodejs">
+<a href="#targetavailabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target availability zone.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetvmsize_nodejs">
+<a href="#targetvmsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Vm<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target virtual machine size.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_resource_name_python">
+<a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetavailabilityzone_python">
+<a href="#targetavailabilityzone_python" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target availability zone.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_availability_set_id_python">
+<a href="#target_availability_set_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>availability_<wbr>set_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target availability set id for virtual machines not in an availability set at source.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_vm_size_python">
+<a href="#target_vm_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>vm_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target virtual machine size.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#VirtualMachineResourceSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#VirtualMachineResourceSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.VirtualMachineResourceSettingsResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4663,6 +9273,260 @@ DDOS protection should be switched on.{{% /md %}}</dd>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetresourcesettings">List[Subnet<wbr>Resource<wbr>Settings]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets List of subnets in a VirtualNetwork.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#VirtualNetworkResourceSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/migrate/preview?tab=doc#VirtualNetworkResourceSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Migrate.Preview.Outputs.VirtualNetworkResourceSettingsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_csharp">
+<a href="#targetresourcename_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressspace_csharp">
+<a href="#addressspace_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Space</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the address prefixes for the virtual network.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dnsservers_csharp">
+<a href="#dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
+deployed in the virtual network.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableddosprotection_csharp">
+<a href="#enableddosprotection_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ddos<wbr>Protection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether gets or sets whether the
+DDOS protection should be switched on.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnets_csharp">
+<a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subnetresourcesettingsresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Migrate.<wbr>Preview.<wbr>Inputs.<wbr>Subnet<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets List of subnets in a VirtualNetwork.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_go">
+<a href="#targetresourcename_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressspace_go">
+<a href="#addressspace_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Space</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the address prefixes for the virtual network.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dnsservers_go">
+<a href="#dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
+deployed in the virtual network.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableddosprotection_go">
+<a href="#enableddosprotection_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ddos<wbr>Protection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether gets or sets whether the
+DDOS protection should be switched on.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnets_go">
+<a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subnetresourcesettingsresponse">[]Subnet<wbr>Resource<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets List of subnets in a VirtualNetwork.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_nodejs">
+<a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressspace_nodejs">
+<a href="#addressspace_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Space</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the address prefixes for the virtual network.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dnsservers_nodejs">
+<a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
+deployed in the virtual network.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enableddosprotection_nodejs">
+<a href="#enableddosprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ddos<wbr>Protection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether gets or sets whether the
+DDOS protection should be switched on.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnets_nodejs">
+<a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subnetresourcesettingsresponse">Subnet<wbr>Resource<wbr>Settings<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets List of subnets in a VirtualNetwork.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_resource_name_python">
+<a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="address_space_python">
+<a href="#address_space_python" style="color: inherit; text-decoration: inherit;">address_<wbr>space</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the address prefixes for the virtual network.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dns_servers_python">
+<a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
+deployed in the virtual network.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_ddos_protection_python">
+<a href="#enable_ddos_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ddos_<wbr>protection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets a value indicating whether gets or sets whether the
+DDOS protection should be switched on.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnets_python">
+<a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subnetresourcesettingsresponse">List[Subnet<wbr>Resource<wbr>Settings<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets List of subnets in a VirtualNetwork.{{% /md %}}</dd>
 

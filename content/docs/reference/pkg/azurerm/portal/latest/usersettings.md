@@ -557,6 +557,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="storageprofileresponse">Storage<wbr>Profile<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#StorageProfileResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/portal/latest?tab=doc#StorageProfileResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Portal.Latest.Outputs.StorageProfileResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksizeingb_csharp">
+<a href="#disksizeingb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>In<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Size of file share{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filesharename_csharp">
+<a href="#filesharename_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccountresourceid_csharp">
+<a href="#storageaccountresourceid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Full resource ID of storage account.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksizeingb_go">
+<a href="#disksizeingb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>In<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Size of file share{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filesharename_go">
+<a href="#filesharename_go" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccountresourceid_go">
+<a href="#storageaccountresourceid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Full resource ID of storage account.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksizeingb_nodejs">
+<a href="#disksizeingb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>In<wbr>GB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Size of file share{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filesharename_nodejs">
+<a href="#filesharename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccountresourceid_nodejs">
+<a href="#storageaccountresourceid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Full resource ID of storage account.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disk_size_in_gb_python">
+<a href="#disk_size_in_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>in_<wbr>gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Size of file share{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_share_name_python">
+<a href="#file_share_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_account_resource_id_python">
+<a href="#storage_account_resource_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Full resource ID of storage account.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="terminalsettings">Terminal<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#TerminalSettings">input</a>   API doc for this type.
@@ -567,6 +733,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Portal.Latest.Inputs.TerminalSettingsArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fontsize_csharp">
+<a href="#fontsize_csharp" style="color: inherit; text-decoration: inherit;">Font<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fontstyle_csharp">
+<a href="#fontstyle_csharp" style="color: inherit; text-decoration: inherit;">Font<wbr>Style</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fontsize_go">
+<a href="#fontsize_go" style="color: inherit; text-decoration: inherit;">Font<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fontstyle_go">
+<a href="#fontstyle_go" style="color: inherit; text-decoration: inherit;">Font<wbr>Style</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fontsize_nodejs">
+<a href="#fontsize_nodejs" style="color: inherit; text-decoration: inherit;">font<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fontstyle_nodejs">
+<a href="#fontstyle_nodejs" style="color: inherit; text-decoration: inherit;">font<wbr>Style</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="font_size_python">
+<a href="#font_size_python" style="color: inherit; text-decoration: inherit;">font_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="font_style_python">
+<a href="#font_style_python" style="color: inherit; text-decoration: inherit;">font_<wbr>style</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="terminalsettingsresponse">Terminal<wbr>Settings<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#TerminalSettingsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/portal/latest?tab=doc#TerminalSettingsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Portal.Latest.Outputs.TerminalSettingsResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -919,6 +1211,252 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#terminalsettings">Dict[Terminal<wbr>Settings]</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="userpropertiesresponse">User<wbr>Properties<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#UserPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/portal/latest?tab=doc#UserPropertiesResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Portal.Latest.Outputs.UserPropertiesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="preferredlocation_csharp">
+<a href="#preferredlocation_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The preferred location of the cloud shell.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="preferredostype_csharp">
+<a href="#preferredostype_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Os<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="preferredshelltype_csharp">
+<a href="#preferredshelltype_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Shell<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="storageprofile_csharp">
+<a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Portal.<wbr>Latest.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="terminalsettings_csharp">
+<a href="#terminalsettings_csharp" style="color: inherit; text-decoration: inherit;">Terminal<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#terminalsettingsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Portal.<wbr>Latest.<wbr>Inputs.<wbr>Terminal<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="preferredlocation_go">
+<a href="#preferredlocation_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The preferred location of the cloud shell.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="preferredostype_go">
+<a href="#preferredostype_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Os<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="preferredshelltype_go">
+<a href="#preferredshelltype_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Shell<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="storageprofile_go">
+<a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="terminalsettings_go">
+<a href="#terminalsettings_go" style="color: inherit; text-decoration: inherit;">Terminal<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#terminalsettingsresponse">Terminal<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="preferredlocation_nodejs">
+<a href="#preferredlocation_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The preferred location of the cloud shell.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="preferredostype_nodejs">
+<a href="#preferredostype_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Os<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="preferredshelltype_nodejs">
+<a href="#preferredshelltype_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Shell<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="storageprofile_nodejs">
+<a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="terminalsettings_nodejs">
+<a href="#terminalsettings_nodejs" style="color: inherit; text-decoration: inherit;">terminal<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#terminalsettingsresponse">Terminal<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="preferred_location_python">
+<a href="#preferred_location_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The preferred location of the cloud shell.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="preferred_os_type_python">
+<a href="#preferred_os_type_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>os_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="preferred_shell_type_python">
+<a href="#preferred_shell_type_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>shell_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="storage_profile_python">
+<a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofileresponse">Dict[Storage<wbr>Profile<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="terminal_settings_python">
+<a href="#terminal_settings_python" style="color: inherit; text-decoration: inherit;">terminal_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#terminalsettingsresponse">Dict[Terminal<wbr>Settings<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd>
 

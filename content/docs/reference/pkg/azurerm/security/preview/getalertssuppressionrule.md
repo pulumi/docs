@@ -523,6 +523,184 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="scopeelementresponse">Scope<wbr>Element<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ScopeElementResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/security/preview?tab=doc#ScopeElementResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Security.Preview.Outputs.ScopeElementResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="field_csharp">
+<a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="field_go">
+<a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="field_nodejs">
+<a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="field_python">
+<a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The alert entity type to suppress by.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="suppressionalertsscoperesponse">Suppression<wbr>Alerts<wbr>Scope<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SuppressionAlertsScopeResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/security/preview?tab=doc#SuppressionAlertsScopeResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Security.Preview.Outputs.SuppressionAlertsScopeResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allof_csharp">
+<a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scopeelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Security.<wbr>Preview.<wbr>Inputs.<wbr>Scope<wbr>Element<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allof_go">
+<a href="#allof_go" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scopeelementresponse">[]Scope<wbr>Element<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allof_nodejs">
+<a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scopeelementresponse">Scope<wbr>Element<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="all_of_python">
+<a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scopeelementresponse">List[Scope<wbr>Element<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

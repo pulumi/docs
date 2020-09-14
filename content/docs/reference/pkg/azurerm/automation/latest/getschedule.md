@@ -883,6 +883,304 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="advancedschedulemonthlyoccurrenceresponse">Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AdvancedScheduleMonthlyOccurrenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/automation/latest?tab=doc#AdvancedScheduleMonthlyOccurrenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Automation.Latest.Outputs.AdvancedScheduleMonthlyOccurrenceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="day_csharp">
+<a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="occurrence_csharp">
+<a href="#occurrence_csharp" style="color: inherit; text-decoration: inherit;">Occurrence</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="day_go">
+<a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="occurrence_go">
+<a href="#occurrence_go" style="color: inherit; text-decoration: inherit;">Occurrence</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="day_nodejs">
+<a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="occurrence_nodejs">
+<a href="#occurrence_nodejs" style="color: inherit; text-decoration: inherit;">occurrence</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="day_python">
+<a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="occurrence_python">
+<a href="#occurrence_python" style="color: inherit; text-decoration: inherit;">occurrence</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="advancedscheduleresponse">Advanced<wbr>Schedule<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AdvancedScheduleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/automation/latest?tab=doc#AdvancedScheduleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Automation.Latest.Outputs.AdvancedScheduleResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthdays_csharp">
+<a href="#monthdays_csharp" style="color: inherit; text-decoration: inherit;">Month<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthlyoccurrences_csharp">
+<a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Automation.<wbr>Latest.<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weekdays_csharp">
+<a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthdays_go">
+<a href="#monthdays_go" style="color: inherit; text-decoration: inherit;">Month<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+    </dt>
+    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthlyoccurrences_go">
+<a href="#monthlyoccurrences_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">[]Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weekdays_go">
+<a href="#weekdays_go" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthdays_nodejs">
+<a href="#monthdays_nodejs" style="color: inherit; text-decoration: inherit;">month<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+    </dt>
+    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthlyoccurrences_nodejs">
+<a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weekdays_nodejs">
+<a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="month_days_python">
+<a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+    </dt>
+    <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthly_occurrences_python">
+<a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">List[Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="week_days_python">
+<a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

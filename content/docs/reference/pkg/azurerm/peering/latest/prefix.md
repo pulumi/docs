@@ -788,6 +788,258 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+## Supporting Types
+
+
+<h4 id="peeringserviceprefixeventresponse">Peering<wbr>Service<wbr>Prefix<wbr>Event<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#PeeringServicePrefixEventResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/peering/latest?tab=doc#PeeringServicePrefixEventResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Peering.Latest.Outputs.PeeringServicePrefixEventResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="eventdescription_csharp">
+<a href="#eventdescription_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the event associated with a prefix.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="eventlevel_csharp">
+<a href="#eventlevel_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The level of the event associated with a prefix.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="eventsummary_csharp">
+<a href="#eventsummary_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Summary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The summary of the event associated with a prefix.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="eventtimestamp_csharp">
+<a href="#eventtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of the event associated with a prefix.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="eventtype_csharp">
+<a href="#eventtype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the event associated with a prefix.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="eventdescription_go">
+<a href="#eventdescription_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the event associated with a prefix.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="eventlevel_go">
+<a href="#eventlevel_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The level of the event associated with a prefix.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="eventsummary_go">
+<a href="#eventsummary_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Summary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The summary of the event associated with a prefix.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="eventtimestamp_go">
+<a href="#eventtimestamp_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of the event associated with a prefix.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="eventtype_go">
+<a href="#eventtype_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the event associated with a prefix.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="eventdescription_nodejs">
+<a href="#eventdescription_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the event associated with a prefix.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="eventlevel_nodejs">
+<a href="#eventlevel_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The level of the event associated with a prefix.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="eventsummary_nodejs">
+<a href="#eventsummary_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Summary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The summary of the event associated with a prefix.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="eventtimestamp_nodejs">
+<a href="#eventtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of the event associated with a prefix.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="eventtype_nodejs">
+<a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the event associated with a prefix.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="eventdescription_python">
+<a href="#eventdescription_python" style="color: inherit; text-decoration: inherit;">event<wbr>Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the event associated with a prefix.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="eventlevel_python">
+<a href="#eventlevel_python" style="color: inherit; text-decoration: inherit;">event<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The level of the event associated with a prefix.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="eventsummary_python">
+<a href="#eventsummary_python" style="color: inherit; text-decoration: inherit;">event<wbr>Summary</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The summary of the event associated with a prefix.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="eventtimestamp_python">
+<a href="#eventtimestamp_python" style="color: inherit; text-decoration: inherit;">event<wbr>Timestamp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of the event associated with a prefix.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="event_type_python">
+<a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the event associated with a prefix.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

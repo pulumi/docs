@@ -637,6 +637,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="costallocationproportionresponse">Cost<wbr>Allocation<wbr>Proportion<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#CostAllocationProportionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/billing/preview?tab=doc#CostAllocationProportionResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Billing.Preview.Outputs.CostAllocationProportionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="percentage_csharp">
+<a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="percentage_go">
+<a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="percentage_nodejs">
+<a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="percentage_python">
+<a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="costallocationruledetails">Cost<wbr>Allocation<wbr>Rule<wbr>Details</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#CostAllocationRuleDetails">input</a>   API doc for this type.
@@ -753,6 +879,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetcostallocationresource">List[Target<wbr>Cost<wbr>Allocation<wbr>Resource]</a></span>
+    </dt>
+    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="costallocationruledetailsresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#CostAllocationRuleDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/billing/preview?tab=doc#CostAllocationRuleDetailsResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Billing.Preview.Outputs.CostAllocationRuleDetailsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresources_csharp">
+<a href="#sourceresources_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resources</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sourcecostallocationresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Billing.<wbr>Preview.<wbr>Inputs.<wbr>Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetresources_csharp">
+<a href="#targetresources_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resources</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#targetcostallocationresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Billing.<wbr>Preview.<wbr>Inputs.<wbr>Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresources_go">
+<a href="#sourceresources_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resources</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sourcecostallocationresourceresponse">[]Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetresources_go">
+<a href="#targetresources_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resources</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#targetcostallocationresourceresponse">[]Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresources_nodejs">
+<a href="#sourceresources_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resources</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sourcecostallocationresourceresponse">Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetresources_nodejs">
+<a href="#targetresources_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resources</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#targetcostallocationresourceresponse">Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_resources_python">
+<a href="#source_resources_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resources</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sourcecostallocationresourceresponse">List[Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_resources_python">
+<a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#targetcostallocationresourceresponse">List[Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd>
 
@@ -929,6 +1181,252 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="costallocationrulepropertiesresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Properties<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#CostAllocationRulePropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/billing/preview?tab=doc#CostAllocationRulePropertiesResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Billing.Preview.Outputs.CostAllocationRulePropertiesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="createddate_csharp">
+<a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_csharp">
+<a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#costallocationruledetailsresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Billing.<wbr>Preview.<wbr>Inputs.<wbr>Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="updateddate_csharp">
+<a href="#updateddate_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time at which the rule was last updated.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="createddate_go">
+<a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_go">
+<a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#costallocationruledetailsresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="updateddate_go">
+<a href="#updateddate_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time at which the rule was last updated.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="createddate_nodejs">
+<a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_nodejs">
+<a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#costallocationruledetailsresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="updateddate_nodejs">
+<a href="#updateddate_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Time at which the rule was last updated.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="created_date_python">
+<a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_python">
+<a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#costallocationruledetailsresponse">Dict[Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="updated_date_python">
+<a href="#updated_date_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Time at which the rule was last updated.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="sourcecostallocationresource">Source<wbr>Cost<wbr>Allocation<wbr>Resource</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#SourceCostAllocationResource">input</a>   API doc for this type.
@@ -939,6 +1437,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Billing.Preview.Inputs.SourceCostAllocationResourceArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcetype_csharp">
+<a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcetype_go">
+<a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcetype_nodejs">
+<a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_type_python">
+<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="sourcecostallocationresourceresponse">Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SourceCostAllocationResourceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/billing/preview?tab=doc#SourceCostAllocationResourceResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Billing.Preview.Outputs.SourceCostAllocationResourceResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1291,6 +1955,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costallocationproportion">List[Cost<wbr>Allocation<wbr>Proportion]</a></span>
+    </dt>
+    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="targetcostallocationresourceresponse">Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#TargetCostAllocationResourceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/billing/preview?tab=doc#TargetCostAllocationResourceResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Billing.Preview.Outputs.TargetCostAllocationResourceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policytype_csharp">
+<a href="#policytype_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcetype_csharp">
+<a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#costallocationproportionresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Billing.<wbr>Preview.<wbr>Inputs.<wbr>Cost<wbr>Allocation<wbr>Proportion<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policytype_go">
+<a href="#policytype_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcetype_go">
+<a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#costallocationproportionresponse">[]Cost<wbr>Allocation<wbr>Proportion<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policytype_nodejs">
+<a href="#policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcetype_nodejs">
+<a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#costallocationproportionresponse">Cost<wbr>Allocation<wbr>Proportion<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policy_type_python">
+<a href="#policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_type_python">
+<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#costallocationproportionresponse">List[Cost<wbr>Allocation<wbr>Proportion<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
 

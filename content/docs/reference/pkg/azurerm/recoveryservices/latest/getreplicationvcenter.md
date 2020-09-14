@@ -443,6 +443,1670 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="healtherrorresponse">Health<wbr>Error<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#HealthErrorResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#HealthErrorResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.HealthErrorResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="creationtimeutc_csharp">
+<a href="#creationtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time<wbr>Utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customerresolvability_csharp">
+<a href="#customerresolvability_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Resolvability</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Value indicating whether the health error is customer resolvable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entityid_csharp">
+<a href="#entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorcategory_csharp">
+<a href="#errorcategory_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Category of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorcode_csharp">
+<a href="#errorcode_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorid_csharp">
+<a href="#errorid_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorlevel_csharp">
+<a href="#errorlevel_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errormessage_csharp">
+<a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorsource_csharp">
+<a href="#errorsource_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errortype_csharp">
+<a href="#errortype_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="innerhealtherrors_csharp">
+<a href="#innerhealtherrors_csharp" style="color: inherit; text-decoration: inherit;">Inner<wbr>Health<wbr>Errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="possiblecauses_csharp">
+<a href="#possiblecauses_csharp" style="color: inherit; text-decoration: inherit;">Possible<wbr>Causes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recommendedaction_csharp">
+<a href="#recommendedaction_csharp" style="color: inherit; text-decoration: inherit;">Recommended<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoveryprovidererrormessage_csharp">
+<a href="#recoveryprovidererrormessage_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Provider<wbr>Error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}DRA error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="summarymessage_csharp">
+<a href="#summarymessage_csharp" style="color: inherit; text-decoration: inherit;">Summary<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="creationtimeutc_go">
+<a href="#creationtimeutc_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time<wbr>Utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customerresolvability_go">
+<a href="#customerresolvability_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Resolvability</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Value indicating whether the health error is customer resolvable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entityid_go">
+<a href="#entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorcategory_go">
+<a href="#errorcategory_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Category of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorcode_go">
+<a href="#errorcode_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorid_go">
+<a href="#errorid_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorlevel_go">
+<a href="#errorlevel_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errormessage_go">
+<a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorsource_go">
+<a href="#errorsource_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errortype_go">
+<a href="#errortype_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="innerhealtherrors_go">
+<a href="#innerhealtherrors_go" style="color: inherit; text-decoration: inherit;">Inner<wbr>Health<wbr>Errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">[]Inner<wbr>Health<wbr>Error<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="possiblecauses_go">
+<a href="#possiblecauses_go" style="color: inherit; text-decoration: inherit;">Possible<wbr>Causes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recommendedaction_go">
+<a href="#recommendedaction_go" style="color: inherit; text-decoration: inherit;">Recommended<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoveryprovidererrormessage_go">
+<a href="#recoveryprovidererrormessage_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Provider<wbr>Error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}DRA error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="summarymessage_go">
+<a href="#summarymessage_go" style="color: inherit; text-decoration: inherit;">Summary<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="creationtimeutc_nodejs">
+<a href="#creationtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time<wbr>Utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customerresolvability_nodejs">
+<a href="#customerresolvability_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Resolvability</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Value indicating whether the health error is customer resolvable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entityid_nodejs">
+<a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorcategory_nodejs">
+<a href="#errorcategory_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Category of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorcode_nodejs">
+<a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorid_nodejs">
+<a href="#errorid_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorlevel_nodejs">
+<a href="#errorlevel_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errormessage_nodejs">
+<a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorsource_nodejs">
+<a href="#errorsource_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errortype_nodejs">
+<a href="#errortype_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="innerhealtherrors_nodejs">
+<a href="#innerhealtherrors_nodejs" style="color: inherit; text-decoration: inherit;">inner<wbr>Health<wbr>Errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Inner<wbr>Health<wbr>Error<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="possiblecauses_nodejs">
+<a href="#possiblecauses_nodejs" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recommendedaction_nodejs">
+<a href="#recommendedaction_nodejs" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoveryprovidererrormessage_nodejs">
+<a href="#recoveryprovidererrormessage_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Provider<wbr>Error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}DRA error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="summarymessage_nodejs">
+<a href="#summarymessage_nodejs" style="color: inherit; text-decoration: inherit;">summary<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="creationtimeutc_python">
+<a href="#creationtimeutc_python" style="color: inherit; text-decoration: inherit;">creation<wbr>Time<wbr>Utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customerresolvability_python">
+<a href="#customerresolvability_python" style="color: inherit; text-decoration: inherit;">customer<wbr>Resolvability</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Value indicating whether the health error is customer resolvable.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entityid_python">
+<a href="#entityid_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorcategory_python">
+<a href="#errorcategory_python" style="color: inherit; text-decoration: inherit;">error<wbr>Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Category of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorid_python">
+<a href="#errorid_python" style="color: inherit; text-decoration: inherit;">error<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The health error unique id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorlevel_python">
+<a href="#errorlevel_python" style="color: inherit; text-decoration: inherit;">error<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorsource_python">
+<a href="#errorsource_python" style="color: inherit; text-decoration: inherit;">error<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errortype_python">
+<a href="#errortype_python" style="color: inherit; text-decoration: inherit;">error<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_code_python">
+<a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_message_python">
+<a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="innerhealtherrors_python">
+<a href="#innerhealtherrors_python" style="color: inherit; text-decoration: inherit;">inner<wbr>Health<wbr>Errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">List[Inner<wbr>Health<wbr>Error<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="possiblecauses_python">
+<a href="#possiblecauses_python" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recommendedaction_python">
+<a href="#recommendedaction_python" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoveryprovidererrormessage_python">
+<a href="#recoveryprovidererrormessage_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Provider<wbr>Error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}DRA error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="summarymessage_python">
+<a href="#summarymessage_python" style="color: inherit; text-decoration: inherit;">summary<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="innerhealtherrorresponse">Inner<wbr>Health<wbr>Error<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#InnerHealthErrorResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#InnerHealthErrorResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.InnerHealthErrorResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="creationtimeutc_csharp">
+<a href="#creationtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time<wbr>Utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entityid_csharp">
+<a href="#entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorcategory_csharp">
+<a href="#errorcategory_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Category of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorcode_csharp">
+<a href="#errorcode_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorlevel_csharp">
+<a href="#errorlevel_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errormessage_csharp">
+<a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorsource_csharp">
+<a href="#errorsource_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errortype_csharp">
+<a href="#errortype_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="possiblecauses_csharp">
+<a href="#possiblecauses_csharp" style="color: inherit; text-decoration: inherit;">Possible<wbr>Causes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recommendedaction_csharp">
+<a href="#recommendedaction_csharp" style="color: inherit; text-decoration: inherit;">Recommended<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoveryprovidererrormessage_csharp">
+<a href="#recoveryprovidererrormessage_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Provider<wbr>Error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}DRA error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="summarymessage_csharp">
+<a href="#summarymessage_csharp" style="color: inherit; text-decoration: inherit;">Summary<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="creationtimeutc_go">
+<a href="#creationtimeutc_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time<wbr>Utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entityid_go">
+<a href="#entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorcategory_go">
+<a href="#errorcategory_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Category of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorcode_go">
+<a href="#errorcode_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorlevel_go">
+<a href="#errorlevel_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errormessage_go">
+<a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorsource_go">
+<a href="#errorsource_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errortype_go">
+<a href="#errortype_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="possiblecauses_go">
+<a href="#possiblecauses_go" style="color: inherit; text-decoration: inherit;">Possible<wbr>Causes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recommendedaction_go">
+<a href="#recommendedaction_go" style="color: inherit; text-decoration: inherit;">Recommended<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoveryprovidererrormessage_go">
+<a href="#recoveryprovidererrormessage_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Provider<wbr>Error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}DRA error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="summarymessage_go">
+<a href="#summarymessage_go" style="color: inherit; text-decoration: inherit;">Summary<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="creationtimeutc_nodejs">
+<a href="#creationtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time<wbr>Utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entityid_nodejs">
+<a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorcategory_nodejs">
+<a href="#errorcategory_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Category of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorcode_nodejs">
+<a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorlevel_nodejs">
+<a href="#errorlevel_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errormessage_nodejs">
+<a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorsource_nodejs">
+<a href="#errorsource_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errortype_nodejs">
+<a href="#errortype_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="possiblecauses_nodejs">
+<a href="#possiblecauses_nodejs" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recommendedaction_nodejs">
+<a href="#recommendedaction_nodejs" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoveryprovidererrormessage_nodejs">
+<a href="#recoveryprovidererrormessage_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Provider<wbr>Error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}DRA error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="summarymessage_nodejs">
+<a href="#summarymessage_nodejs" style="color: inherit; text-decoration: inherit;">summary<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="creationtimeutc_python">
+<a href="#creationtimeutc_python" style="color: inherit; text-decoration: inherit;">creation<wbr>Time<wbr>Utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Error creation time (UTC){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entityid_python">
+<a href="#entityid_python" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the entity.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorcategory_python">
+<a href="#errorcategory_python" style="color: inherit; text-decoration: inherit;">error<wbr>Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Category of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorlevel_python">
+<a href="#errorlevel_python" style="color: inherit; text-decoration: inherit;">error<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Level of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errorsource_python">
+<a href="#errorsource_python" style="color: inherit; text-decoration: inherit;">error<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Source of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="errortype_python">
+<a href="#errortype_python" style="color: inherit; text-decoration: inherit;">error<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_code_python">
+<a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_message_python">
+<a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="possiblecauses_python">
+<a href="#possiblecauses_python" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Possible causes of error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recommendedaction_python">
+<a href="#recommendedaction_python" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Recommended action to resolve error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoveryprovidererrormessage_python">
+<a href="#recoveryprovidererrormessage_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Provider<wbr>Error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}DRA error message.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="summarymessage_python">
+<a href="#summarymessage_python" style="color: inherit; text-decoration: inherit;">summary<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Summary message of the entity.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="vcenterpropertiesresponse">VCenter<wbr>Properties<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#VCenterPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#VCenterPropertiesResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.VCenterPropertiesResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="discoverystatus_csharp">
+<a href="#discoverystatus_csharp" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The VCenter discovery status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fabricarmresourcename_csharp">
+<a href="#fabricarmresourcename_csharp" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Arm<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM resource name of the fabric containing this VCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the vCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healtherrors_csharp">
+<a href="#healtherrors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The health errors for this VCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructureid_csharp">
+<a href="#infrastructureid_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The infrastructure Id of vCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalid_csharp">
+<a href="#internalid_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}VCenter internal ID.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IP address of the vCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastheartbeat_csharp">
+<a href="#lastheartbeat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Heartbeat</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time when the last heartbeat was received by vCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="processserverid_csharp">
+<a href="#processserverid_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Server<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The process server Id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runasaccountid_csharp">
+<a href="#runasaccountid_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="discoverystatus_go">
+<a href="#discoverystatus_go" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The VCenter discovery status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fabricarmresourcename_go">
+<a href="#fabricarmresourcename_go" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Arm<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM resource name of the fabric containing this VCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the vCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healtherrors_go">
+<a href="#healtherrors_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healtherrorresponse">[]Health<wbr>Error<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The health errors for this VCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructureid_go">
+<a href="#infrastructureid_go" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The infrastructure Id of vCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalid_go">
+<a href="#internalid_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}VCenter internal ID.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IP address of the vCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastheartbeat_go">
+<a href="#lastheartbeat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Heartbeat</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time when the last heartbeat was received by vCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="processserverid_go">
+<a href="#processserverid_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Server<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The process server Id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runasaccountid_go">
+<a href="#runasaccountid_go" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="discoverystatus_nodejs">
+<a href="#discoverystatus_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The VCenter discovery status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fabricarmresourcename_nodejs">
+<a href="#fabricarmresourcename_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Arm<wbr>Resource<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM resource name of the fabric containing this VCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the vCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healtherrors_nodejs">
+<a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The health errors for this VCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructureid_nodejs">
+<a href="#infrastructureid_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The infrastructure Id of vCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalid_nodejs">
+<a href="#internalid_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}VCenter internal ID.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IP address of the vCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastheartbeat_nodejs">
+<a href="#lastheartbeat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Heartbeat</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time when the last heartbeat was received by vCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="processserverid_nodejs">
+<a href="#processserverid_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Server<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The process server Id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runasaccountid_nodejs">
+<a href="#runasaccountid_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="discovery_status_python">
+<a href="#discovery_status_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The VCenter discovery status.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fabric_arm_resource_name_python">
+<a href="#fabric_arm_resource_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>arm_<wbr>resource_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM resource name of the fabric containing this VCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the vCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="health_errors_python">
+<a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healtherrorresponse">List[Health<wbr>Error<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The health errors for this VCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructure_id_python">
+<a href="#infrastructure_id_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The infrastructure Id of vCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internal_id_python">
+<a href="#internal_id_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}VCenter internal ID.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The IP address of the vCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_heartbeat_python">
+<a href="#last_heartbeat_python" style="color: inherit; text-decoration: inherit;">last_<wbr>heartbeat</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The time when the last heartbeat was received by vCenter.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The port number for discovery.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="process_server_id_python">
+<a href="#process_server_id_python" style="color: inherit; text-decoration: inherit;">process_<wbr>server_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The process server Id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="run_as_account_id_python">
+<a href="#run_as_account_id_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>account_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

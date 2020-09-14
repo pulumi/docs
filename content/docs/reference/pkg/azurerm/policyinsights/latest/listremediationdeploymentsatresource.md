@@ -321,6 +321,710 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="errordefinitionresponse">Error<wbr>Definition<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ErrorDefinitionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/policyinsights/latest?tab=doc#ErrorDefinitionResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.PolicyInsights.Latest.Outputs.ErrorDefinitionResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="additionalinfo_csharp">
+<a href="#additionalinfo_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#typederrorinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Policy<wbr>Insights.<wbr>Latest.<wbr>Inputs.<wbr>Typed<wbr>Error<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Additional scenario specific error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Service specific error code which serves as the substatus for the HTTP error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_csharp">
+<a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Policy<wbr>Insights.<wbr>Latest.<wbr>Inputs.<wbr>Error<wbr>Definition<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Internal error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Description of the error.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_csharp">
+<a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target of the error.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="additionalinfo_go">
+<a href="#additionalinfo_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#typederrorinforesponse">[]Typed<wbr>Error<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional scenario specific error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Service specific error code which serves as the substatus for the HTTP error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_go">
+<a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordefinitionresponse">[]Error<wbr>Definition<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Internal error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Description of the error.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_go">
+<a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target of the error.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="additionalinfo_nodejs">
+<a href="#additionalinfo_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#typederrorinforesponse">Typed<wbr>Error<wbr>Info<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Additional scenario specific error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Service specific error code which serves as the substatus for the HTTP error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_nodejs">
+<a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordefinitionresponse">Error<wbr>Definition<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Internal error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Description of the error.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_nodejs">
+<a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target of the error.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="additional_info_python">
+<a href="#additional_info_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#typederrorinforesponse">List[Typed<wbr>Error<wbr>Info<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Additional scenario specific error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Service specific error code which serves as the substatus for the HTTP error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="details_python">
+<a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordefinitionresponse">List[Error<wbr>Definition<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Internal error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Description of the error.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_python">
+<a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The target of the error.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="remediationdeploymentresponse">Remediation<wbr>Deployment<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RemediationDeploymentResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/policyinsights/latest?tab=doc#RemediationDeploymentResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.PolicyInsights.Latest.Outputs.RemediationDeploymentResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="createdon_csharp">
+<a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time at which the remediation was created.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="deploymentid_csharp">
+<a href="#deploymentid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the template deployment that will remediate the resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="error_csharp">
+<a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordefinitionresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Policy<wbr>Insights.<wbr>Latest.<wbr>Inputs.<wbr>Error<wbr>Definition<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Error encountered while remediated the resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastupdatedon_csharp">
+<a href="#lastupdatedon_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time at which the remediation deployment was last updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remediatedresourceid_csharp">
+<a href="#remediatedresourceid_csharp" style="color: inherit; text-decoration: inherit;">Remediated<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the resource that is being remediated by the deployment.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcelocation_csharp">
+<a href="#resourcelocation_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Location of the resource that is being remediated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the remediation deployment.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="createdon_go">
+<a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time at which the remediation was created.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="deploymentid_go">
+<a href="#deploymentid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the template deployment that will remediate the resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="error_go">
+<a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordefinitionresponse">Error<wbr>Definition<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Error encountered while remediated the resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastupdatedon_go">
+<a href="#lastupdatedon_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time at which the remediation deployment was last updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remediatedresourceid_go">
+<a href="#remediatedresourceid_go" style="color: inherit; text-decoration: inherit;">Remediated<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the resource that is being remediated by the deployment.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcelocation_go">
+<a href="#resourcelocation_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Location of the resource that is being remediated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the remediation deployment.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="createdon_nodejs">
+<a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time at which the remediation was created.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="deploymentid_nodejs">
+<a href="#deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the template deployment that will remediate the resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="error_nodejs">
+<a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordefinitionresponse">Error<wbr>Definition<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Error encountered while remediated the resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastupdatedon_nodejs">
+<a href="#lastupdatedon_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time at which the remediation deployment was last updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remediatedresourceid_nodejs">
+<a href="#remediatedresourceid_nodejs" style="color: inherit; text-decoration: inherit;">remediated<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the resource that is being remediated by the deployment.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcelocation_nodejs">
+<a href="#resourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Location of the resource that is being remediated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the remediation deployment.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="created_on_python">
+<a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The time at which the remediation was created.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="deployment_id_python">
+<a href="#deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the template deployment that will remediate the resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="error_python">
+<a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordefinitionresponse">Dict[Error<wbr>Definition<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Error encountered while remediated the resource.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="last_updated_on_python">
+<a href="#last_updated_on_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>on</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The time at which the remediation deployment was last updated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remediatedresourceid_python">
+<a href="#remediatedresourceid_python" style="color: inherit; text-decoration: inherit;">remediated<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource ID of the resource that is being remediated by the deployment.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_location_python">
+<a href="#resource_location_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Location of the resource that is being remediated.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the remediation deployment.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="typederrorinforesponse">Typed<wbr>Error<wbr>Info<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#TypedErrorInfoResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/policyinsights/latest?tab=doc#TypedErrorInfoResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.PolicyInsights.Latest.Outputs.TypedErrorInfoResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="info_csharp">
+<a href="#info_csharp" style="color: inherit; text-decoration: inherit;">Info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The scenario specific error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of included error details.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="info_go">
+<a href="#info_go" style="color: inherit; text-decoration: inherit;">Info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The scenario specific error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of included error details.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="info_nodejs">
+<a href="#info_nodejs" style="color: inherit; text-decoration: inherit;">info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The scenario specific error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of included error details.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="info_python">
+<a href="#info_python" style="color: inherit; text-decoration: inherit;">info</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The scenario specific error details.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of included error details.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

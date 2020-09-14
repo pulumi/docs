@@ -483,6 +483,2794 @@ The following output properties are available:
 
 
 
+## Supporting Types
+
+
+<h4 id="audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AudioAnalyzerPresetResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest?tab=doc#AudioAnalyzerPresetResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Latest.Outputs.AudioAnalyzerPresetResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audiolanguage_csharp">
+<a href="#audiolanguage_csharp" style="color: inherit; text-decoration: inherit;">Audio<wbr>Language</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experimentaloptions_csharp">
+<a href="#experimentaloptions_csharp" style="color: inherit; text-decoration: inherit;">Experimental<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audiolanguage_go">
+<a href="#audiolanguage_go" style="color: inherit; text-decoration: inherit;">Audio<wbr>Language</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experimentaloptions_go">
+<a href="#experimentaloptions_go" style="color: inherit; text-decoration: inherit;">Experimental<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audiolanguage_nodejs">
+<a href="#audiolanguage_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Language</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experimentaloptions_nodejs">
+<a href="#experimentaloptions_nodejs" style="color: inherit; text-decoration: inherit;">experimental<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audiolanguage_python">
+<a href="#audiolanguage_python" style="color: inherit; text-decoration: inherit;">audio<wbr>Language</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experimentaloptions_python">
+<a href="#experimentaloptions_python" style="color: inherit; text-decoration: inherit;">experimental<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="audiooverlayresponse">Audio<wbr>Overlay<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AudioOverlayResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest?tab=doc#AudioOverlayResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Latest.Outputs.AudioOverlayResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inputlabel_csharp">
+<a href="#inputlabel_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG or PNG formats, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audiogainlevel_csharp">
+<a href="#audiogainlevel_csharp" style="color: inherit; text-decoration: inherit;">Audio<wbr>Gain<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_csharp">
+<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The position in the input video at which the overlay ends. The value should be in ISO 8601 duration format. For example, PT30S to end the overlay at 30 seconds in to the input video. If not specified the overlay will be applied until the end of the input video if inputLoop is true. Else, if inputLoop is false, then overlay will last as long as the duration of the overlay media.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fadeinduration_csharp">
+<a href="#fadeinduration_csharp" style="color: inherit; text-decoration: inherit;">Fade<wbr>In<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fadeoutduration_csharp">
+<a href="#fadeoutduration_csharp" style="color: inherit; text-decoration: inherit;">Fade<wbr>Out<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds in to the input video. If not specified the overlay starts from the beginning of the input video.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inputlabel_go">
+<a href="#inputlabel_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG or PNG formats, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audiogainlevel_go">
+<a href="#audiogainlevel_go" style="color: inherit; text-decoration: inherit;">Audio<wbr>Gain<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_go">
+<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The position in the input video at which the overlay ends. The value should be in ISO 8601 duration format. For example, PT30S to end the overlay at 30 seconds in to the input video. If not specified the overlay will be applied until the end of the input video if inputLoop is true. Else, if inputLoop is false, then overlay will last as long as the duration of the overlay media.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fadeinduration_go">
+<a href="#fadeinduration_go" style="color: inherit; text-decoration: inherit;">Fade<wbr>In<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fadeoutduration_go">
+<a href="#fadeoutduration_go" style="color: inherit; text-decoration: inherit;">Fade<wbr>Out<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds in to the input video. If not specified the overlay starts from the beginning of the input video.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inputlabel_nodejs">
+<a href="#inputlabel_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG or PNG formats, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audiogainlevel_nodejs">
+<a href="#audiogainlevel_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Gain<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_nodejs">
+<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The position in the input video at which the overlay ends. The value should be in ISO 8601 duration format. For example, PT30S to end the overlay at 30 seconds in to the input video. If not specified the overlay will be applied until the end of the input video if inputLoop is true. Else, if inputLoop is false, then overlay will last as long as the duration of the overlay media.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fadeinduration_nodejs">
+<a href="#fadeinduration_nodejs" style="color: inherit; text-decoration: inherit;">fade<wbr>In<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fadeoutduration_nodejs">
+<a href="#fadeoutduration_nodejs" style="color: inherit; text-decoration: inherit;">fade<wbr>Out<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds in to the input video. If not specified the overlay starts from the beginning of the input video.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inputlabel_python">
+<a href="#inputlabel_python" style="color: inherit; text-decoration: inherit;">input<wbr>Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG or PNG formats, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audiogainlevel_python">
+<a href="#audiogainlevel_python" style="color: inherit; text-decoration: inherit;">audio<wbr>Gain<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_python">
+<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The position in the input video at which the overlay ends. The value should be in ISO 8601 duration format. For example, PT30S to end the overlay at 30 seconds in to the input video. If not specified the overlay will be applied until the end of the input video if inputLoop is true. Else, if inputLoop is false, then overlay will last as long as the duration of the overlay media.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fadeinduration_python">
+<a href="#fadeinduration_python" style="color: inherit; text-decoration: inherit;">fade<wbr>In<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fadeoutduration_python">
+<a href="#fadeoutduration_python" style="color: inherit; text-decoration: inherit;">fade<wbr>Out<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds in to the input video. If not specified the overlay starts from the beginning of the input video.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="audioresponse">Audio<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AudioResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest?tab=doc#AudioResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Latest.Outputs.AudioResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bitrate_csharp">
+<a href="#bitrate_csharp" style="color: inherit; text-decoration: inherit;">Bitrate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channels_csharp">
+<a href="#channels_csharp" style="color: inherit; text-decoration: inherit;">Channels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="samplingrate_csharp">
+<a href="#samplingrate_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Rate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bitrate_go">
+<a href="#bitrate_go" style="color: inherit; text-decoration: inherit;">Bitrate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channels_go">
+<a href="#channels_go" style="color: inherit; text-decoration: inherit;">Channels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="samplingrate_go">
+<a href="#samplingrate_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Rate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bitrate_nodejs">
+<a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bitrate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channels_nodejs">
+<a href="#channels_nodejs" style="color: inherit; text-decoration: inherit;">channels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="samplingrate_nodejs">
+<a href="#samplingrate_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Rate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bitrate_python">
+<a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channels_python">
+<a href="#channels_python" style="color: inherit; text-decoration: inherit;">channels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="samplingrate_python">
+<a href="#samplingrate_python" style="color: inherit; text-decoration: inherit;">sampling<wbr>Rate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#BuiltInStandardEncoderPresetResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest?tab=doc#BuiltInStandardEncoderPresetResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Latest.Outputs.BuiltInStandardEncoderPresetResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="presetname_csharp">
+<a href="#presetname_csharp" style="color: inherit; text-decoration: inherit;">Preset<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The built-in preset to be used for encoding videos.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="presetname_go">
+<a href="#presetname_go" style="color: inherit; text-decoration: inherit;">Preset<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The built-in preset to be used for encoding videos.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="presetname_nodejs">
+<a href="#presetname_nodejs" style="color: inherit; text-decoration: inherit;">preset<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The built-in preset to be used for encoding videos.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="preset_name_python">
+<a href="#preset_name_python" style="color: inherit; text-decoration: inherit;">preset_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The built-in preset to be used for encoding videos.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="copyaudioresponse">Copy<wbr>Audio<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#CopyAudioResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest?tab=doc#CopyAudioResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Latest.Outputs.CopyAudioResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="copyvideoresponse">Copy<wbr>Video<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#CopyVideoResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest?tab=doc#CopyVideoResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Latest.Outputs.CopyVideoResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="deinterlaceresponse">Deinterlace<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DeinterlaceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest?tab=doc#DeinterlaceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Latest.Outputs.DeinterlaceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The deinterlacing mode. Defaults to AutoPixelAdaptive.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parity_csharp">
+<a href="#parity_csharp" style="color: inherit; text-decoration: inherit;">Parity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field parity for de-interlacing, defaults to Auto.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The deinterlacing mode. Defaults to AutoPixelAdaptive.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parity_go">
+<a href="#parity_go" style="color: inherit; text-decoration: inherit;">Parity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field parity for de-interlacing, defaults to Auto.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The deinterlacing mode. Defaults to AutoPixelAdaptive.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parity_nodejs">
+<a href="#parity_nodejs" style="color: inherit; text-decoration: inherit;">parity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The field parity for de-interlacing, defaults to Auto.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The deinterlacing mode. Defaults to AutoPixelAdaptive.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parity_python">
+<a href="#parity_python" style="color: inherit; text-decoration: inherit;">parity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The field parity for de-interlacing, defaults to Auto.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#FaceDetectorPresetResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest?tab=doc#FaceDetectorPresetResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Latest.Outputs.FaceDetectorPresetResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experimentaloptions_csharp">
+<a href="#experimentaloptions_csharp" style="color: inherit; text-decoration: inherit;">Experimental<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resolution_csharp">
+<a href="#resolution_csharp" style="color: inherit; text-decoration: inherit;">Resolution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experimentaloptions_go">
+<a href="#experimentaloptions_go" style="color: inherit; text-decoration: inherit;">Experimental<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resolution_go">
+<a href="#resolution_go" style="color: inherit; text-decoration: inherit;">Resolution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experimentaloptions_nodejs">
+<a href="#experimentaloptions_nodejs" style="color: inherit; text-decoration: inherit;">experimental<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resolution_nodejs">
+<a href="#resolution_nodejs" style="color: inherit; text-decoration: inherit;">resolution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experimentaloptions_python">
+<a href="#experimentaloptions_python" style="color: inherit; text-decoration: inherit;">experimental<wbr>Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resolution_python">
+<a href="#resolution_python" style="color: inherit; text-decoration: inherit;">resolution</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="filtersresponse">Filters<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#FiltersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest?tab=doc#FiltersResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Latest.Outputs.FiltersResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="crop_csharp">
+<a href="#crop_csharp" style="color: inherit; text-decoration: inherit;">Crop</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Latest.<wbr>Inputs.<wbr>Rectangle<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deinterlace_csharp">
+<a href="#deinterlace_csharp" style="color: inherit; text-decoration: inherit;">Deinterlace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deinterlaceresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Latest.<wbr>Inputs.<wbr>Deinterlace<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="overlays_csharp">
+<a href="#overlays_csharp" style="color: inherit; text-decoration: inherit;">Overlays</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Latest.<wbr>Inputs.<wbr>Audio<wbr>Overlay<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Latest.<wbr>Inputs.<wbr>Video<wbr>Overlay<wbr>Response<wbr>Args&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rotation_csharp">
+<a href="#rotation_csharp" style="color: inherit; text-decoration: inherit;">Rotation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="crop_go">
+<a href="#crop_go" style="color: inherit; text-decoration: inherit;">Crop</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deinterlace_go">
+<a href="#deinterlace_go" style="color: inherit; text-decoration: inherit;">Deinterlace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deinterlaceresponse">Deinterlace<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="overlays_go">
+<a href="#overlays_go" style="color: inherit; text-decoration: inherit;">Overlays</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rotation_go">
+<a href="#rotation_go" style="color: inherit; text-decoration: inherit;">Rotation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="crop_nodejs">
+<a href="#crop_nodejs" style="color: inherit; text-decoration: inherit;">crop</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deinterlace_nodejs">
+<a href="#deinterlace_nodejs" style="color: inherit; text-decoration: inherit;">deinterlace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deinterlaceresponse">Deinterlace<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="overlays_nodejs">
+<a href="#overlays_nodejs" style="color: inherit; text-decoration: inherit;">overlays</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Audio<wbr>Overlay<wbr>Response | Video<wbr>Overlay<wbr>Response[]</span>
+    </dt>
+    <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rotation_nodejs">
+<a href="#rotation_nodejs" style="color: inherit; text-decoration: inherit;">rotation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="crop_python">
+<a href="#crop_python" style="color: inherit; text-decoration: inherit;">crop</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rectangleresponse">Dict[Rectangle<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deinterlace_python">
+<a href="#deinterlace_python" style="color: inherit; text-decoration: inherit;">deinterlace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deinterlaceresponse">Dict[Deinterlace<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="overlays_python">
+<a href="#overlays_python" style="color: inherit; text-decoration: inherit;">overlays</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">List[Union<Azurerm:Media/Latest:Audio<wbr>Overlay<wbr>Response, Azurerm:Media/Latest:Video<wbr>Overlay<wbr>Response, Default=>]</span>
+    </dt>
+    <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rotation_python">
+<a href="#rotation_python" style="color: inherit; text-decoration: inherit;">rotation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="imageformatresponse">Image<wbr>Format<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#ImageFormatResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest?tab=doc#ImageFormatResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Latest.Outputs.ImageFormatResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_csharp">
+<a href="#filenamepattern_csharp" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - The base name of the input video {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_go">
+<a href="#filenamepattern_go" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - The base name of the input video {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_nodejs">
+<a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - The base name of the input video {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_python">
+<a href="#filenamepattern_python" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - The base name of the input video {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="multibitrateformatresponse">Multi<wbr>Bitrate<wbr>Format<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MultiBitrateFormatResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest?tab=doc#MultiBitrateFormatResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Latest.Outputs.MultiBitrateFormatResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_csharp">
+<a href="#filenamepattern_csharp" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - The base name of the input video {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputfiles_csharp">
+<a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Latest.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_go">
+<a href="#filenamepattern_go" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - The base name of the input video {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputfiles_go">
+<a href="#outputfiles_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfileresponse">[]Output<wbr>File<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_nodejs">
+<a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - The base name of the input video {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputfiles_nodejs">
+<a href="#outputfiles_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfileresponse">Output<wbr>File<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_python">
+<a href="#filenamepattern_python" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - The base name of the input video {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputfiles_python">
+<a href="#outputfiles_python" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfileresponse">List[Output<wbr>File<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="outputfileresponse">Output<wbr>File<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#OutputFileResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest?tab=doc#OutputFileResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Latest.Outputs.OutputFileResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like '[v1, a1]' tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like '[v1, a1]' tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like '[v1, a1]' tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like '[v1, a1]' tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rectangleresponse">Rectangle<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RectangleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest?tab=doc#RectangleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Latest.Outputs.RectangleResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_csharp">
+<a href="#height_csharp" style="color: inherit; text-decoration: inherit;">Height</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="left_csharp">
+<a href="#left_csharp" style="color: inherit; text-decoration: inherit;">Left</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The number of pixels from the left-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="top_csharp">
+<a href="#top_csharp" style="color: inherit; text-decoration: inherit;">Top</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The number of pixels from the top-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_csharp">
+<a href="#width_csharp" style="color: inherit; text-decoration: inherit;">Width</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The width of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_go">
+<a href="#height_go" style="color: inherit; text-decoration: inherit;">Height</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="left_go">
+<a href="#left_go" style="color: inherit; text-decoration: inherit;">Left</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The number of pixels from the left-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="top_go">
+<a href="#top_go" style="color: inherit; text-decoration: inherit;">Top</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The number of pixels from the top-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_go">
+<a href="#width_go" style="color: inherit; text-decoration: inherit;">Width</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The width of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_nodejs">
+<a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="left_nodejs">
+<a href="#left_nodejs" style="color: inherit; text-decoration: inherit;">left</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The number of pixels from the left-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="top_nodejs">
+<a href="#top_nodejs" style="color: inherit; text-decoration: inherit;">top</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The number of pixels from the top-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_nodejs">
+<a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The width of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_python">
+<a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="left_python">
+<a href="#left_python" style="color: inherit; text-decoration: inherit;">left</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The number of pixels from the left-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="top_python">
+<a href="#top_python" style="color: inherit; text-decoration: inherit;">top</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The number of pixels from the top-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_python">
+<a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The width of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#StandardEncoderPresetResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest?tab=doc#StandardEncoderPresetResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Latest.Outputs.StandardEncoderPresetResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="codecs_csharp">
+<a href="#codecs_csharp" style="color: inherit; text-decoration: inherit;">Codecs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Latest.<wbr>Inputs.<wbr>Audio<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Latest.<wbr>Inputs.<wbr>Copy<wbr>Audio<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Latest.<wbr>Inputs.<wbr>Copy<wbr>Video<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Latest.<wbr>Inputs.<wbr>Video<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="formats_csharp">
+<a href="#formats_csharp" style="color: inherit; text-decoration: inherit;">Formats</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Latest.<wbr>Inputs.<wbr>Image<wbr>Format<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Latest.<wbr>Inputs.<wbr>Multi<wbr>Bitrate<wbr>Format<wbr>Response<wbr>Args&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filters_csharp">
+<a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#filtersresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Latest.<wbr>Inputs.<wbr>Filters<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="codecs_go">
+<a href="#codecs_go" style="color: inherit; text-decoration: inherit;">Codecs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="formats_go">
+<a href="#formats_go" style="color: inherit; text-decoration: inherit;">Formats</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filters_go">
+<a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#filtersresponse">Filters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="codecs_nodejs">
+<a href="#codecs_nodejs" style="color: inherit; text-decoration: inherit;">codecs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Audio<wbr>Response | Copy<wbr>Audio<wbr>Response | Copy<wbr>Video<wbr>Response | Video<wbr>Response[]</span>
+    </dt>
+    <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="formats_nodejs">
+<a href="#formats_nodejs" style="color: inherit; text-decoration: inherit;">formats</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Image<wbr>Format<wbr>Response | Multi<wbr>Bitrate<wbr>Format<wbr>Response[]</span>
+    </dt>
+    <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filters_nodejs">
+<a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#filtersresponse">Filters<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="codecs_python">
+<a href="#codecs_python" style="color: inherit; text-decoration: inherit;">codecs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">List[Union<Azurerm:Media/Latest:Audio<wbr>Response, Azurerm:Media/Latest:Copy<wbr>Audio<wbr>Response, Azurerm:Media/Latest:Copy<wbr>Video<wbr>Response, Azurerm:Media/Latest:Video<wbr>Response, Default=>]</span>
+    </dt>
+    <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="formats_python">
+<a href="#formats_python" style="color: inherit; text-decoration: inherit;">formats</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">List[Union<Azurerm:Media/Latest:Image<wbr>Format<wbr>Response, Azurerm:Media/Latest:Multi<wbr>Bitrate<wbr>Format<wbr>Response, Default=>]</span>
+    </dt>
+    <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filters_python">
+<a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#filtersresponse">Dict[Filters<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="transformoutputresponse">Transform<wbr>Output<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#TransformOutputResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest?tab=doc#TransformOutputResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Latest.Outputs.TransformOutputResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="preset_csharp">
+<a href="#preset_csharp" style="color: inherit; text-decoration: inherit;">Preset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Latest.<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Latest.<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Latest.<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Latest.<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args&gt;&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="onerror_csharp">
+<a href="#onerror_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="relativepriority_csharp">
+<a href="#relativepriority_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="preset_go">
+<a href="#preset_go" style="color: inherit; text-decoration: inherit;">Preset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="onerror_go">
+<a href="#onerror_go" style="color: inherit; text-decoration: inherit;">On<wbr>Error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="relativepriority_go">
+<a href="#relativepriority_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="preset_nodejs">
+<a href="#preset_nodejs" style="color: inherit; text-decoration: inherit;">preset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Audio<wbr>Analyzer<wbr>Preset<wbr>Response | Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response | Face<wbr>Detector<wbr>Preset<wbr>Response | Standard<wbr>Encoder<wbr>Preset<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="onerror_nodejs">
+<a href="#onerror_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="relativepriority_nodejs">
+<a href="#relativepriority_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="preset_python">
+<a href="#preset_python" style="color: inherit; text-decoration: inherit;">preset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[Audio<wbr>Analyzer<wbr>Preset<wbr>Response] | Dict[Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response] | Dict[Face<wbr>Detector<wbr>Preset<wbr>Response] | Dict[Standard<wbr>Encoder<wbr>Preset<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="onerror_python">
+<a href="#onerror_python" style="color: inherit; text-decoration: inherit;">on<wbr>Error</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="relativepriority_python">
+<a href="#relativepriority_python" style="color: inherit; text-decoration: inherit;">relative<wbr>Priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="videooverlayresponse">Video<wbr>Overlay<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#VideoOverlayResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest?tab=doc#VideoOverlayResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Latest.Outputs.VideoOverlayResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inputlabel_csharp">
+<a href="#inputlabel_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG or PNG formats, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audiogainlevel_csharp">
+<a href="#audiogainlevel_csharp" style="color: inherit; text-decoration: inherit;">Audio<wbr>Gain<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="croprectangle_csharp">
+<a href="#croprectangle_csharp" style="color: inherit; text-decoration: inherit;">Crop<wbr>Rectangle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Latest.<wbr>Inputs.<wbr>Rectangle<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_csharp">
+<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The position in the input video at which the overlay ends. The value should be in ISO 8601 duration format. For example, PT30S to end the overlay at 30 seconds in to the input video. If not specified the overlay will be applied until the end of the input video if inputLoop is true. Else, if inputLoop is false, then overlay will last as long as the duration of the overlay media.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fadeinduration_csharp">
+<a href="#fadeinduration_csharp" style="color: inherit; text-decoration: inherit;">Fade<wbr>In<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fadeoutduration_csharp">
+<a href="#fadeoutduration_csharp" style="color: inherit; text-decoration: inherit;">Fade<wbr>Out<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="opacity_csharp">
+<a href="#opacity_csharp" style="color: inherit; text-decoration: inherit;">Opacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The opacity of the overlay. This is a value in the range [0 - 1.0]. Default is 1.0 which mean the overlay is opaque.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="position_csharp">
+<a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Media.<wbr>Latest.<wbr>Inputs.<wbr>Rectangle<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds in to the input video. If not specified the overlay starts from the beginning of the input video.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inputlabel_go">
+<a href="#inputlabel_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG or PNG formats, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audiogainlevel_go">
+<a href="#audiogainlevel_go" style="color: inherit; text-decoration: inherit;">Audio<wbr>Gain<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="croprectangle_go">
+<a href="#croprectangle_go" style="color: inherit; text-decoration: inherit;">Crop<wbr>Rectangle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_go">
+<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The position in the input video at which the overlay ends. The value should be in ISO 8601 duration format. For example, PT30S to end the overlay at 30 seconds in to the input video. If not specified the overlay will be applied until the end of the input video if inputLoop is true. Else, if inputLoop is false, then overlay will last as long as the duration of the overlay media.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fadeinduration_go">
+<a href="#fadeinduration_go" style="color: inherit; text-decoration: inherit;">Fade<wbr>In<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fadeoutduration_go">
+<a href="#fadeoutduration_go" style="color: inherit; text-decoration: inherit;">Fade<wbr>Out<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="opacity_go">
+<a href="#opacity_go" style="color: inherit; text-decoration: inherit;">Opacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The opacity of the overlay. This is a value in the range [0 - 1.0]. Default is 1.0 which mean the overlay is opaque.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="position_go">
+<a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds in to the input video. If not specified the overlay starts from the beginning of the input video.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inputlabel_nodejs">
+<a href="#inputlabel_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG or PNG formats, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audiogainlevel_nodejs">
+<a href="#audiogainlevel_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Gain<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="croprectangle_nodejs">
+<a href="#croprectangle_nodejs" style="color: inherit; text-decoration: inherit;">crop<wbr>Rectangle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_nodejs">
+<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The position in the input video at which the overlay ends. The value should be in ISO 8601 duration format. For example, PT30S to end the overlay at 30 seconds in to the input video. If not specified the overlay will be applied until the end of the input video if inputLoop is true. Else, if inputLoop is false, then overlay will last as long as the duration of the overlay media.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fadeinduration_nodejs">
+<a href="#fadeinduration_nodejs" style="color: inherit; text-decoration: inherit;">fade<wbr>In<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fadeoutduration_nodejs">
+<a href="#fadeoutduration_nodejs" style="color: inherit; text-decoration: inherit;">fade<wbr>Out<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="opacity_nodejs">
+<a href="#opacity_nodejs" style="color: inherit; text-decoration: inherit;">opacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The opacity of the overlay. This is a value in the range [0 - 1.0]. Default is 1.0 which mean the overlay is opaque.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="position_nodejs">
+<a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds in to the input video. If not specified the overlay starts from the beginning of the input video.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="inputlabel_python">
+<a href="#inputlabel_python" style="color: inherit; text-decoration: inherit;">input<wbr>Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG or PNG formats, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audiogainlevel_python">
+<a href="#audiogainlevel_python" style="color: inherit; text-decoration: inherit;">audio<wbr>Gain<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="croprectangle_python">
+<a href="#croprectangle_python" style="color: inherit; text-decoration: inherit;">crop<wbr>Rectangle</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rectangleresponse">Dict[Rectangle<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_python">
+<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The position in the input video at which the overlay ends. The value should be in ISO 8601 duration format. For example, PT30S to end the overlay at 30 seconds in to the input video. If not specified the overlay will be applied until the end of the input video if inputLoop is true. Else, if inputLoop is false, then overlay will last as long as the duration of the overlay media.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fadeinduration_python">
+<a href="#fadeinduration_python" style="color: inherit; text-decoration: inherit;">fade<wbr>In<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fadeoutduration_python">
+<a href="#fadeoutduration_python" style="color: inherit; text-decoration: inherit;">fade<wbr>Out<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="opacity_python">
+<a href="#opacity_python" style="color: inherit; text-decoration: inherit;">opacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The opacity of the overlay. This is a value in the range [0 - 1.0]. Default is 1.0 which mean the overlay is opaque.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="position_python">
+<a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rectangleresponse">Dict[Rectangle<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds in to the input video. If not specified the overlay starts from the beginning of the input video.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="videoresponse">Video<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#VideoResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/media/latest?tab=doc#VideoResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Media.Latest.Outputs.VideoResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_csharp">
+<a href="#keyframeinterval_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_csharp">
+<a href="#stretchmode_csharp" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_csharp">
+<a href="#syncmode_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_go">
+<a href="#keyframeinterval_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_go">
+<a href="#stretchmode_go" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_go">
+<a href="#syncmode_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_nodejs">
+<a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_nodejs">
+<a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_nodejs">
+<a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_python">
+<a href="#keyframeinterval_python" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_python">
+<a href="#stretchmode_python" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_python">
+<a href="#syncmode_python" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">

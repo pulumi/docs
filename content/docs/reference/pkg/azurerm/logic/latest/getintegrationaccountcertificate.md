@@ -606,6 +606,172 @@ The following output properties are available:
 ## Supporting Types
 
 
+<h4 id="keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#KeyVaultKeyReferenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/logic/latest?tab=doc#KeyVaultKeyReferenceResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.Logic.Latest.Outputs.KeyVaultKeyReferenceResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keyname_csharp">
+<a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The private key name in key vault.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keyvault_csharp">
+<a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsekeyvault">Pulumi.<wbr>Azure<wbr>RM.<wbr>Logic.<wbr>Latest.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Key<wbr>Vault<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyversion_csharp">
+<a href="#keyversion_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The private key version in key vault.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keyname_go">
+<a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The private key name in key vault.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keyvault_go">
+<a href="#keyvault_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsekeyvault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Key<wbr>Vault</a></span>
+    </dt>
+    <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyversion_go">
+<a href="#keyversion_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The private key version in key vault.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keyname_nodejs">
+<a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The private key name in key vault.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keyvault_nodejs">
+<a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsekeyvault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Key<wbr>Vault</a></span>
+    </dt>
+    <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyversion_nodejs">
+<a href="#keyversion_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The private key version in key vault.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_name_python">
+<a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The private key name in key vault.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_vault_python">
+<a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsekeyvault">Dict[Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Key<wbr>Vault]</a></span>
+    </dt>
+    <dd>{{% md %}}The key vault reference.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_version_python">
+<a href="#key_version_python" style="color: inherit; text-decoration: inherit;">key_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The private key version in key vault.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="keyvaultkeyreferenceresponsekeyvault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Key<wbr>Vault</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#KeyVaultKeyReferenceResponseKeyVault">output</a> API doc for this type.

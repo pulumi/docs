@@ -877,6 +877,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="azureiaasvmprotectionpolicyresponse">Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AzureIaaSVMProtectionPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#AzureIaaSVMProtectionPolicyResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.AzureIaaSVMProtectionPolicyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemscount_csharp">
+<a href="#protecteditemscount_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of items associated with this policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionpolicy_csharp">
+<a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}The retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedulepolicy_csharp">
+<a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}The backup schedule specified as part of backup policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemscount_go">
+<a href="#protecteditemscount_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of items associated with this policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionpolicy_go">
+<a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedulepolicy_go">
+<a href="#schedulepolicy_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The backup schedule specified as part of backup policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemscount_nodejs">
+<a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of items associated with this policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionpolicy_nodejs">
+<a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response | Simple<wbr>Retention<wbr>Policy<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}The retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedulepolicy_nodejs">
+<a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response | Simple<wbr>Schedule<wbr>Policy<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}The backup schedule specified as part of backup policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemscount_python">
+<a href="#protecteditemscount_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of items associated with this policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retention_policy_python">
+<a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response] | Dict[Simple<wbr>Retention<wbr>Policy<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}The retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedule_policy_python">
+<a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response] | Dict[Simple<wbr>Schedule<wbr>Policy<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}The backup schedule specified as part of backup policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="azuresqlprotectionpolicy">Azure<wbr>Sql<wbr>Protection<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#AzureSqlProtectionPolicy">input</a>   API doc for this type.
@@ -1003,6 +1169,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="azuresqlprotectionpolicyresponse">Azure<wbr>Sql<wbr>Protection<wbr>Policy<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#AzureSqlProtectionPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#AzureSqlProtectionPolicyResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.AzureSqlProtectionPolicyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemscount_csharp">
+<a href="#protecteditemscount_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of items associated with this policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionpolicy_csharp">
+<a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}The retention policy details.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemscount_go">
+<a href="#protecteditemscount_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of items associated with this policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionpolicy_go">
+<a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The retention policy details.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemscount_nodejs">
+<a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of items associated with this policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionpolicy_nodejs">
+<a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response | Simple<wbr>Retention<wbr>Policy<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}The retention policy details.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemscount_python">
+<a href="#protecteditemscount_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of items associated with this policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retention_policy_python">
+<a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response] | Dict[Simple<wbr>Retention<wbr>Policy<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}The retention policy details.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="dailyretentionformat">Daily<wbr>Retention<wbr>Format</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#DailyRetentionFormat">input</a>   API doc for this type.
@@ -1079,6 +1371,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#day">List[Day]</a></span>
+    </dt>
+    <dd>{{% md %}}List of days of the month.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DailyRetentionFormatResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#DailyRetentionFormatResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.DailyRetentionFormatResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysofthemonth_csharp">
+<a href="#daysofthemonth_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>The<wbr>Month</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dayresponse">List&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Day<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of days of the month.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysofthemonth_go">
+<a href="#daysofthemonth_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>The<wbr>Month</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dayresponse">[]Day<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of days of the month.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysofthemonth_nodejs">
+<a href="#daysofthemonth_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Month</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dayresponse">Day<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of days of the month.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysofthemonth_python">
+<a href="#daysofthemonth_python" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Month</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dayresponse">List[Day<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of days of the month.{{% /md %}}</dd>
 
@@ -1215,6 +1593,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="dailyretentionscheduleresponse">Daily<wbr>Retention<wbr>Schedule<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DailyRetentionScheduleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#DailyRetentionScheduleResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.DailyRetentionScheduleResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_csharp">
+<a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The retention duration of retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentiontimes_csharp">
+<a href="#retentiontimes_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The retention times of retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_go">
+<a href="#retentionduration_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The retention duration of retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentiontimes_go">
+<a href="#retentiontimes_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The retention times of retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_nodejs">
+<a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The retention duration of retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentiontimes_nodejs">
+<a href="#retentiontimes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The retention times of retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_python">
+<a href="#retentionduration_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Dict[Retention<wbr>Duration<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The retention duration of retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentiontimes_python">
+<a href="#retentiontimes_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The retention times of retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="day">Day</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#Day">input</a>   API doc for this type.
@@ -1225,6 +1729,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Inputs.DayArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="date_csharp">
+<a href="#date_csharp" style="color: inherit; text-decoration: inherit;">Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="islast_csharp">
+<a href="#islast_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Last</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="date_go">
+<a href="#date_go" style="color: inherit; text-decoration: inherit;">Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="islast_go">
+<a href="#islast_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Last</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="date_nodejs">
+<a href="#date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="islast_nodejs">
+<a href="#islast_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Last</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="date_python">
+<a href="#date_python" style="color: inherit; text-decoration: inherit;">date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="islast_python">
+<a href="#islast_python" style="color: inherit; text-decoration: inherit;">is<wbr>Last</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="dayresponse">Day<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DayResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#DayResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.DayResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1547,6 +2177,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#LongTermRetentionPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#LongTermRetentionPolicyResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.LongTermRetentionPolicyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dailyschedule_csharp">
+<a href="#dailyschedule_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dailyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Daily retention schedule of the backup policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthlyschedule_csharp">
+<a href="#monthlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Schedule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monthlyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Monthly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Monthly retention schedule of the backup policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weeklyschedule_csharp">
+<a href="#weeklyschedule_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#weeklyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Weekly retention schedule of the backup policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="yearlyschedule_csharp">
+<a href="#yearlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Yearly<wbr>Schedule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#yearlyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Yearly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Yearly retention schedule of the backup policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dailyschedule_go">
+<a href="#dailyschedule_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dailyretentionscheduleresponse">Daily<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Daily retention schedule of the backup policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthlyschedule_go">
+<a href="#monthlyschedule_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Schedule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monthlyretentionscheduleresponse">Monthly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Monthly retention schedule of the backup policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weeklyschedule_go">
+<a href="#weeklyschedule_go" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#weeklyretentionscheduleresponse">Weekly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Weekly retention schedule of the backup policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="yearlyschedule_go">
+<a href="#yearlyschedule_go" style="color: inherit; text-decoration: inherit;">Yearly<wbr>Schedule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#yearlyretentionscheduleresponse">Yearly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Yearly retention schedule of the backup policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dailyschedule_nodejs">
+<a href="#dailyschedule_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Schedule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dailyretentionscheduleresponse">Daily<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Daily retention schedule of the backup policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthlyschedule_nodejs">
+<a href="#monthlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Schedule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monthlyretentionscheduleresponse">Monthly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Monthly retention schedule of the backup policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weeklyschedule_nodejs">
+<a href="#weeklyschedule_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Schedule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#weeklyretentionscheduleresponse">Weekly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Weekly retention schedule of the backup policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="yearlyschedule_nodejs">
+<a href="#yearlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">yearly<wbr>Schedule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#yearlyretentionscheduleresponse">Yearly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Yearly retention schedule of the backup policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daily_schedule_python">
+<a href="#daily_schedule_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>schedule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dailyretentionscheduleresponse">Dict[Daily<wbr>Retention<wbr>Schedule<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Daily retention schedule of the backup policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthly_schedule_python">
+<a href="#monthly_schedule_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>schedule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#monthlyretentionscheduleresponse">Dict[Monthly<wbr>Retention<wbr>Schedule<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Monthly retention schedule of the backup policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weekly_schedule_python">
+<a href="#weekly_schedule_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>schedule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#weeklyretentionscheduleresponse">Dict[Weekly<wbr>Retention<wbr>Schedule<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Weekly retention schedule of the backup policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="yearlyschedule_python">
+<a href="#yearlyschedule_python" style="color: inherit; text-decoration: inherit;">yearly<wbr>Schedule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#yearlyretentionscheduleresponse">Dict[Yearly<wbr>Retention<wbr>Schedule<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Yearly retention schedule of the backup policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#LongTermSchedulePolicy">input</a>   API doc for this type.
@@ -1557,6 +2393,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Inputs.LongTermSchedulePolicyArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#LongTermSchedulePolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#LongTermSchedulePolicyResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.LongTermSchedulePolicyResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1749,6 +2631,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[Long<wbr>Term<wbr>Schedule<wbr>Policy] | Dict[Simple<wbr>Schedule<wbr>Policy]</span>
+    </dt>
+    <dd>{{% md %}}The schedule specified in the backup policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="mabprotectionpolicyresponse">Mab<wbr>Protection<wbr>Policy<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MabProtectionPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#MabProtectionPolicyResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.MabProtectionPolicyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemscount_csharp">
+<a href="#protecteditemscount_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of items associated with this policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionpolicy_csharp">
+<a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}The details specified in the Retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedulepolicy_csharp">
+<a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}The schedule specified in the backup policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemscount_go">
+<a href="#protecteditemscount_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of items associated with this policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionpolicy_go">
+<a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The details specified in the Retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedulepolicy_go">
+<a href="#schedulepolicy_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The schedule specified in the backup policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemscount_nodejs">
+<a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of items associated with this policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionpolicy_nodejs">
+<a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response | Simple<wbr>Retention<wbr>Policy<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}The details specified in the Retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedulepolicy_nodejs">
+<a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response | Simple<wbr>Schedule<wbr>Policy<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}The schedule specified in the backup policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemscount_python">
+<a href="#protecteditemscount_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of items associated with this policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retention_policy_python">
+<a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response] | Dict[Simple<wbr>Retention<wbr>Policy<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}The details specified in the Retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedule_policy_python">
+<a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response] | Dict[Simple<wbr>Schedule<wbr>Policy<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The schedule specified in the backup policy.{{% /md %}}</dd>
 
@@ -2005,6 +3053,252 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="monthlyretentionscheduleresponse">Monthly<wbr>Retention<wbr>Schedule<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MonthlyRetentionScheduleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#MonthlyRetentionScheduleResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.MonthlyRetentionScheduleResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_csharp">
+<a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Retention duration of the retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduledaily_csharp">
+<a href="#retentionscheduledaily_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Daily</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Daily retention format for the monthly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduleformattype_csharp">
+<a href="#retentionscheduleformattype_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Format<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Retention schedule format type for monthly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduleweekly_csharp">
+<a href="#retentionscheduleweekly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Weekly</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Weekly retention format for the monthly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentiontimes_csharp">
+<a href="#retentiontimes_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Retention times of the retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_go">
+<a href="#retentionduration_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Retention duration of the retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduledaily_go">
+<a href="#retentionscheduledaily_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Daily</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Daily retention format for the monthly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduleformattype_go">
+<a href="#retentionscheduleformattype_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Format<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Retention schedule format type for monthly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduleweekly_go">
+<a href="#retentionscheduleweekly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Weekly</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Weekly retention format for the monthly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentiontimes_go">
+<a href="#retentiontimes_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Retention times of the retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_nodejs">
+<a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Retention duration of the retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduledaily_nodejs">
+<a href="#retentionscheduledaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Daily</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Daily retention format for the monthly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduleformattype_nodejs">
+<a href="#retentionscheduleformattype_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Format<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Retention schedule format type for monthly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduleweekly_nodejs">
+<a href="#retentionscheduleweekly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Weekly</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Weekly retention format for the monthly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentiontimes_nodejs">
+<a href="#retentiontimes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Retention times of the retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_python">
+<a href="#retentionduration_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Dict[Retention<wbr>Duration<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Retention duration of the retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduledaily_python">
+<a href="#retentionscheduledaily_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Daily</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Dict[Daily<wbr>Retention<wbr>Format<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Daily retention format for the monthly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduleformattype_python">
+<a href="#retentionscheduleformattype_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Format<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Retention schedule format type for monthly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduleweekly_python">
+<a href="#retentionscheduleweekly_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Weekly</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Dict[Weekly<wbr>Retention<wbr>Format<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Weekly retention format for the monthly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentiontimes_python">
+<a href="#retentiontimes_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Retention times of the retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="retentionduration">Retention<wbr>Duration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#RetentionDuration">input</a>   API doc for this type.
@@ -2015,6 +3309,136 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Inputs.RetentionDurationArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="count_csharp">
+<a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Count of the duration types. Retention duration is determined by the combining the Count times and durationType. 
+   For example, if Count = 3 and durationType = Weeks, then the retention duration is three weeks.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="durationtype_csharp">
+<a href="#durationtype_csharp" style="color: inherit; text-decoration: inherit;">Duration<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The retention duration type of the retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="count_go">
+<a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Count of the duration types. Retention duration is determined by the combining the Count times and durationType. 
+   For example, if Count = 3 and durationType = Weeks, then the retention duration is three weeks.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="durationtype_go">
+<a href="#durationtype_go" style="color: inherit; text-decoration: inherit;">Duration<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The retention duration type of the retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="count_nodejs">
+<a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Count of the duration types. Retention duration is determined by the combining the Count times and durationType. 
+   For example, if Count = 3 and durationType = Weeks, then the retention duration is three weeks.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="durationtype_nodejs">
+<a href="#durationtype_nodejs" style="color: inherit; text-decoration: inherit;">duration<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The retention duration type of the retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="count_python">
+<a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Count of the duration types. Retention duration is determined by the combining the Count times and durationType. 
+   For example, if Count = 3 and durationType = Weeks, then the retention duration is three weeks.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="durationtype_python">
+<a href="#durationtype_python" style="color: inherit; text-decoration: inherit;">duration<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The retention duration type of the retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="retentiondurationresponse">Retention<wbr>Duration<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#RetentionDurationResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#RetentionDurationResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.RetentionDurationResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2221,6 +3645,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SimpleRetentionPolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#SimpleRetentionPolicyResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.SimpleRetentionPolicyResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_csharp">
+<a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_go">
+<a href="#retentionduration_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_nodejs">
+<a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_python">
+<a href="#retentionduration_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Dict[Retention<wbr>Duration<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#SimpleSchedulePolicy">input</a>   API doc for this type.
@@ -2231,6 +3741,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Inputs.SimpleSchedulePolicyArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedulerundays_csharp">
+<a href="#schedulerundays_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Run<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}This list is the days of the week when the schedule runs.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedulerunfrequency_csharp">
+<a href="#schedulerunfrequency_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Run<wbr>Frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the frequency interval (daily or weekly) for the schedule policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheduleruntimes_csharp">
+<a href="#scheduleruntimes_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Run<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of times, during a day, when the schedule runs.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheduleweeklyfrequency_csharp">
+<a href="#scheduleweeklyfrequency_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Weekly<wbr>Frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of times per week the schedule runs.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedulerundays_go">
+<a href="#schedulerundays_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Run<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}This list is the days of the week when the schedule runs.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedulerunfrequency_go">
+<a href="#schedulerunfrequency_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Run<wbr>Frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the frequency interval (daily or weekly) for the schedule policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheduleruntimes_go">
+<a href="#scheduleruntimes_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Run<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of times, during a day, when the schedule runs.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheduleweeklyfrequency_go">
+<a href="#scheduleweeklyfrequency_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Weekly<wbr>Frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of times per week the schedule runs.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedulerundays_nodejs">
+<a href="#schedulerundays_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}This list is the days of the week when the schedule runs.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedulerunfrequency_nodejs">
+<a href="#schedulerunfrequency_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the frequency interval (daily or weekly) for the schedule policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheduleruntimes_nodejs">
+<a href="#scheduleruntimes_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of times, during a day, when the schedule runs.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheduleweeklyfrequency_nodejs">
+<a href="#scheduleweeklyfrequency_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Weekly<wbr>Frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of times per week the schedule runs.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedulerundays_python">
+<a href="#schedulerundays_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Days</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}This list is the days of the week when the schedule runs.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedulerunfrequency_python">
+<a href="#schedulerunfrequency_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the frequency interval (daily or weekly) for the schedule policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheduleruntimes_python">
+<a href="#scheduleruntimes_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of times, during a day, when the schedule runs.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheduleweeklyfrequency_python">
+<a href="#scheduleweeklyfrequency_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Weekly<wbr>Frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of times per week the schedule runs.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#SimpleSchedulePolicyResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#SimpleSchedulePolicyResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.SimpleSchedulePolicyResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2553,6 +4269,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#WeeklyRetentionFormatResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#WeeklyRetentionFormatResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.WeeklyRetentionFormatResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysoftheweek_csharp">
+<a href="#daysoftheweek_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>The<wbr>Week</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of days of the week.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weeksofthemonth_csharp">
+<a href="#weeksofthemonth_csharp" style="color: inherit; text-decoration: inherit;">Weeks<wbr>Of<wbr>The<wbr>Month</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of weeks of the month.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysoftheweek_go">
+<a href="#daysoftheweek_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>The<wbr>Week</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of days of the week.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weeksofthemonth_go">
+<a href="#weeksofthemonth_go" style="color: inherit; text-decoration: inherit;">Weeks<wbr>Of<wbr>The<wbr>Month</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of weeks of the month.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysoftheweek_nodejs">
+<a href="#daysoftheweek_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Week</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of days of the week.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weeksofthemonth_nodejs">
+<a href="#weeksofthemonth_nodejs" style="color: inherit; text-decoration: inherit;">weeks<wbr>Of<wbr>The<wbr>Month</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of weeks of the month.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysoftheweek_python">
+<a href="#daysoftheweek_python" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Week</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of days of the week.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weeksofthemonth_python">
+<a href="#weeksofthemonth_python" style="color: inherit; text-decoration: inherit;">weeks<wbr>Of<wbr>The<wbr>Month</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of weeks of the month.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="weeklyretentionschedule">Weekly<wbr>Retention<wbr>Schedule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/input/#WeeklyRetentionSchedule">input</a>   API doc for this type.
@@ -2699,6 +4541,172 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentionduration">Dict[Retention<wbr>Duration]</a></span>
+    </dt>
+    <dd>{{% md %}}Retention duration of retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentiontimes_python">
+<a href="#retentiontimes_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Retention times of the retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="weeklyretentionscheduleresponse">Weekly<wbr>Retention<wbr>Schedule<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#WeeklyRetentionScheduleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#WeeklyRetentionScheduleResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.WeeklyRetentionScheduleResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysoftheweek_csharp">
+<a href="#daysoftheweek_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>The<wbr>Week</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of the days of the week for the weekly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_csharp">
+<a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Retention duration of retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentiontimes_csharp">
+<a href="#retentiontimes_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Retention times of the retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysoftheweek_go">
+<a href="#daysoftheweek_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>The<wbr>Week</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of the days of the week for the weekly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_go">
+<a href="#retentionduration_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Retention duration of retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentiontimes_go">
+<a href="#retentiontimes_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Retention times of the retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysoftheweek_nodejs">
+<a href="#daysoftheweek_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Week</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of the days of the week for the weekly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_nodejs">
+<a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Retention duration of retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentiontimes_nodejs">
+<a href="#retentiontimes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Retention times of the retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysoftheweek_python">
+<a href="#daysoftheweek_python" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Week</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of the days of the week for the weekly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_python">
+<a href="#retentionduration_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Dict[Retention<wbr>Duration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention policy.{{% /md %}}</dd>
 
@@ -2985,6 +4993,292 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weeklyretentionformat">Dict[Weekly<wbr>Retention<wbr>Format]</a></span>
+    </dt>
+    <dd>{{% md %}}Weekly retention format for the yearly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentiontimes_python">
+<a href="#retentiontimes_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Retention times for the retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="yearlyretentionscheduleresponse">Yearly<wbr>Retention<wbr>Schedule<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#YearlyRetentionScheduleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/recoveryservices/latest?tab=doc#YearlyRetentionScheduleResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.RecoveryServices.Latest.Outputs.YearlyRetentionScheduleResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthsofyear_csharp">
+<a href="#monthsofyear_csharp" style="color: inherit; text-decoration: inherit;">Months<wbr>Of<wbr>Year</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of the months of year for the yearly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_csharp">
+<a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Retention duration for the retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduledaily_csharp">
+<a href="#retentionscheduledaily_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Daily</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Daily retention format for the yearly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduleformattype_csharp">
+<a href="#retentionscheduleformattype_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Format<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Retention schedule format for the yearly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduleweekly_csharp">
+<a href="#retentionscheduleweekly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Weekly</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Recovery<wbr>Services.<wbr>Latest.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Weekly retention format for the yearly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentiontimes_csharp">
+<a href="#retentiontimes_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Retention times for the retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthsofyear_go">
+<a href="#monthsofyear_go" style="color: inherit; text-decoration: inherit;">Months<wbr>Of<wbr>Year</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of the months of year for the yearly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_go">
+<a href="#retentionduration_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Retention duration for the retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduledaily_go">
+<a href="#retentionscheduledaily_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Daily</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Daily retention format for the yearly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduleformattype_go">
+<a href="#retentionscheduleformattype_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Format<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Retention schedule format for the yearly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduleweekly_go">
+<a href="#retentionscheduleweekly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Weekly</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Weekly retention format for the yearly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentiontimes_go">
+<a href="#retentiontimes_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Retention times for the retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthsofyear_nodejs">
+<a href="#monthsofyear_nodejs" style="color: inherit; text-decoration: inherit;">months<wbr>Of<wbr>Year</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of the months of year for the yearly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_nodejs">
+<a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Retention duration for the retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduledaily_nodejs">
+<a href="#retentionscheduledaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Daily</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Daily retention format for the yearly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduleformattype_nodejs">
+<a href="#retentionscheduleformattype_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Format<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Retention schedule format for the yearly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduleweekly_nodejs">
+<a href="#retentionscheduleweekly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Weekly</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Weekly retention format for the yearly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentiontimes_nodejs">
+<a href="#retentiontimes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Retention times for the retention policy.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthsofyear_python">
+<a href="#monthsofyear_python" style="color: inherit; text-decoration: inherit;">months<wbr>Of<wbr>Year</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of the months of year for the yearly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionduration_python">
+<a href="#retentionduration_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Dict[Retention<wbr>Duration<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Retention duration for the retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduledaily_python">
+<a href="#retentionscheduledaily_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Daily</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Dict[Daily<wbr>Retention<wbr>Format<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Daily retention format for the yearly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduleformattype_python">
+<a href="#retentionscheduleformattype_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Format<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Retention schedule format for the yearly retention policy.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retentionscheduleweekly_python">
+<a href="#retentionscheduleweekly_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Weekly</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Dict[Weekly<wbr>Retention<wbr>Format<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for the yearly retention policy.{{% /md %}}</dd>
 
