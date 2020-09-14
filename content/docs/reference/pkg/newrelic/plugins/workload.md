@@ -16,6 +16,85 @@ A New Relic Personal API key is required to provision this resource.  Set the `a
 attribute in the `provider` block or the `NEW_RELIC_API_KEY` environment
 variable with your Personal API key.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new NewRelic.Plugins.Workload("foo", new NewRelic.Plugins.WorkloadArgs
+        {
+            AccountId = 12345678,
+            EntityGuids = 
+            {
+                "MjUyMDUyOHxBUE18QVBQTElDQVRJT058MjE1MDM3Nzk1",
+            },
+            EntitySearchQueries = 
+            {
+                new NewRelic.Plugins.Inputs.WorkloadEntitySearchQueryArgs
+                {
+                    Query = "name like 'Example application'",
+                },
+            },
+            ScopeAccountIds = 
+            {
+                12345678,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.plugins.Workload("foo",
+    account_id=12345678,
+    entity_guids=["MjUyMDUyOHxBUE18QVBQTElDQVRJT058MjE1MDM3Nzk1"],
+    entity_search_queries=[newrelic.plugins.WorkloadEntitySearchQueryArgs(
+        query="name like 'Example application'",
+    )],
+    scope_account_ids=[12345678])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const foo = new newrelic.plugins.Workload("foo", {
+    accountId: 12345678,
+    entityGuids: ["MjUyMDUyOHxBUE18QVBQTElDQVRJT058MjE1MDM3Nzk1"],
+    entitySearchQueries: [{
+        query: "name like 'Example application'",
+    }],
+    scopeAccountIds: [12345678],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Workload Resource {#create}
@@ -27,7 +106,7 @@ variable with your Personal API key.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/plugins/#pulumi_newrelic.plugins.Workload">Workload</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">entity_guids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">entity_search_queries</span><span class="p">:</span> <span class="nx">Optional[List[WorkloadEntitySearchQueryArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope_account_ids</span><span class="p">:</span> <span class="nx">Optional[List[float]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/plugins/#pulumi_newrelic.plugins.Workload">Workload</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">entity_guids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">entity_search_queries</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkloadEntitySearchQueryArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope_account_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -391,7 +470,7 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The New Relic account ID where you want to create the workload.
 {{% /md %}}</dd>
@@ -402,7 +481,7 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#entity_guids_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>guids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of entity GUIDs manually assigned to this workload.
 {{% /md %}}</dd>
@@ -413,7 +492,7 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#entity_search_queries_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>search_<wbr>queries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadentitysearchquery">List[Workload<wbr>Entity<wbr>Search<wbr>Query<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workloadentitysearchquery">Sequence[Workload<wbr>Entity<wbr>Search<wbr>Query<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of search queries that define a dynamic workload.  See Nested entity_search_query blocks below for details.
 {{% /md %}}</dd>
@@ -435,7 +514,7 @@ The Workload resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#scope_account_ids_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>account_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}A list of account IDs that will be used to get entities from.
 {{% /md %}}</dd>
@@ -690,7 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_id_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The unique entity identifier of the workload.
 {{% /md %}}</dd>
@@ -715,7 +794,7 @@ Get an existing Workload resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">composite_entity_search_query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity_guids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">entity_search_queries</span><span class="p">:</span> <span class="nx">Optional[List[WorkloadEntitySearchQueryArgs]]</span> = None<span class="p">, </span><span class="nx">guid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">permalink</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope_account_ids</span><span class="p">:</span> <span class="nx">Optional[List[float]]</span> = None<span class="p">, </span><span class="nx">workload_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> Workload</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">composite_entity_search_query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity_guids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">entity_search_queries</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkloadEntitySearchQueryArgs]]</span> = None<span class="p">, </span><span class="nx">guid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">permalink</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope_account_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">workload_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Workload</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1153,7 +1232,7 @@ The following state arguments are supported:
 <a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The New Relic account ID where you want to create the workload.
 {{% /md %}}</dd>
@@ -1175,7 +1254,7 @@ The following state arguments are supported:
 <a href="#state_entity_guids_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>guids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of entity GUIDs manually assigned to this workload.
 {{% /md %}}</dd>
@@ -1186,7 +1265,7 @@ The following state arguments are supported:
 <a href="#state_entity_search_queries_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>search_<wbr>queries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadentitysearchquery">List[Workload<wbr>Entity<wbr>Search<wbr>Query<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workloadentitysearchquery">Sequence[Workload<wbr>Entity<wbr>Search<wbr>Query<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of search queries that define a dynamic workload.  See Nested entity_search_query blocks below for details.
 {{% /md %}}</dd>
@@ -1230,7 +1309,7 @@ The following state arguments are supported:
 <a href="#state_scope_account_ids_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>account_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}A list of account IDs that will be used to get entities from.
 {{% /md %}}</dd>
@@ -1241,7 +1320,7 @@ The following state arguments are supported:
 <a href="#state_workload_id_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The unique entity identifier of the workload.
 {{% /md %}}</dd>
