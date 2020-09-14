@@ -106,7 +106,7 @@ done
 
 With the database in place, all that is left is to make some small MongoDB-specific changes to the way queries are sent by the client and server components.
 
-The server component will be changed to use a `model.js` file, which acts like a blueprint for the choices that the database has. 
+The server component will be changed to use a `model.js` file, which acts like a blueprint for the choices that the database has.
 
 ```javascript
 const mongoose = require("mongoose");
@@ -124,17 +124,17 @@ let Choice = new mongoose.Schema({
 module.exports = mongoose.model("choice", Choice);
 ```
 
-Likewise, the `db.js` file will be modified to create a specialized to our database. 
+Likewise, the `db.js` file will be modified to create a specialized to our database.
 
 ```javascript
 const mongoose = require("mongoose");
 
-const url = "mongodb://" 
-  + process.env["MONGODB_ADDRESS"] 
-  + ":" + process.env["MONGODB_PORT"] 
+const url = "mongodb://"
+  + process.env["MONGODB_ADDRESS"]
+  + ":" + process.env["MONGODB_PORT"]
   + "/" + process.env["DATABASE_NAME"]
 
-mongoose.connect(url, { 
+mongoose.connect(url, {
   useNewUrlParser: true,
   user: process.env["USER_NAME"],
   pass: process.env["USER_PASSWORD"]
@@ -144,7 +144,7 @@ const connection = mongoose.connection;
 module.exports = connection;
 ```
 
-And finally, the `index.js` file holding the main code of our server will be modified to send queries to the MongoDB database. 
+And finally, the `index.js` file holding the main code of our server will be modified to send queries to the MongoDB database.
 
 ```javascript
 const express = require("express");
@@ -166,7 +166,7 @@ app.get("/voting", async (request, response) => {
   Choice.find(function(error, result) {
     if (error) {
         console.log(error);
-    } else {      
+    } else {
       response.json(result);
     }
   });
@@ -245,7 +245,7 @@ async function castVote(id) {...}
 export default ListChoices;
 ```
 
-Now that, server, client, and database have been fully converted to use MongoDB, we can make the last remanining change in the infrastructure by updating the database deployment and service. 
+Now that, server, client, and database have been fully converted to use MongoDB, we can make the last remanining change in the infrastructure by updating the database deployment and service.
 
 ```typescript
 import * as aws from "@pulumi/aws";
@@ -290,7 +290,7 @@ const databaseDeployment = new k8s.apps.v1.Deployment(databaseAppName, {
                     resources: {
                         limits: {
                             memory: "1Gi",
-                            cpu: "1000m" 
+                            cpu: "1000m"
                         }
                     }
                 }],
@@ -361,7 +361,7 @@ const serverDeployment = new k8s.apps.v1.Deployment("server-side-service", {
                     resources: {
                         limits: {
                             memory: "500Mi",
-                            cpu: "500m" 
+                            cpu: "500m"
                         }
                     }
                 }],
