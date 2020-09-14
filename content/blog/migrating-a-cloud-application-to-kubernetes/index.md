@@ -54,71 +54,7 @@ Some of the components of our Kubernetes project are nearly identical to those i
 $ cd ..
 $ cp -r aws-pern-voting-app/clientside/ aws-ts-k8s-voting-app/clientside
 $ cp -r aws-pern-voting-app/serverside/ aws-ts-k8s-voting-app/serverside
-$ cp -r aws-pern-voting-app/postgresql_dynamic_provider.ts aws-ts-k8s-voting-app//postgresql_dynamic_provider.ts
 $ cd aws-ts-k8s-voting-app
-```
-
-Because we haven't set up our database with any SSL certificates to authenticate and encrypt internet traffic, the PostgreSQL Dynamic Provider used in the PERN app to create schemas needs to be modified to include an `ssl: false` pool parameter in the `create` and `delete` functions.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as crypto from "crypto";
-
-export interface SchemaInputs {...}
-
-export class SchemaProvider implements pulumi.dynamic.ResourceProvider {
-    async create(args: SchemaInputs): Promise<pulumi.dynamic.CreateResult> {
-        const { Pool } = require("pg");
-        const pool = new Pool({
-            user: args.creatorName,
-            password: args.creatorPassword,
-            host: args.serverAddress,
-            port: 5432,
-            database: args.databaseName,
-            ssl: false,
-        });
-
-        const scriptExecuted = await pool.query(args.creationScript);
-        await pool.end();
-        return {id: "postgresqlSchema-" + crypto.randomBytes(16).toString("hex"), outs: args};
-    }
-
-    async delete(id: string, args: SchemaInputs): Promise<void> {
-        const { Pool } = require("pg");
-        const pool = new Pool({
-            user: args.creatorName,
-            password: args.creatorPassword,
-            host: args.serverAddress,
-            port: 5432,
-            database: args.databaseName,
-            ssl: false,
-        });
-
-        const
-        scriptExecuted = await pool.query(args.deletionScript);
-        await pool.end();
-    }
-
-    async diff(id: string, oldArgs: SchemaInputs, newArgs: SchemaInputs): Promise<pulumi.dynamic.DiffResult> {...}
-    async update(id: string, oldArgs: SchemaInputs, newArgs: SchemaInputs): Promise<pulumi.dynamic.UpdateResult> {...}
-}
-```
-
-Likewise, we need to add an `ssl: false` option to `serverside/server/db.js` as well.
-
-```typescript
-const Pool = require("pg").Pool;
-
-const pool = new Pool({
-    user: process.env["USER_NAME"],
-    password: process.env["USER_PASSWORD"],
-    host: process.env["POSTGRES_ADDRESS"],
-    port: process.env["POSTGRES_PORT"],
-    database: process.env["DATABASE_NAME"],
-    ssl: false,
-});
-
-module.exports = pool;
 ```
 
 To prepare our application for Kubernetes, we create a PostgreSQL Docker container for the application. Although this is slightly more complex than directly asking AWS to provision an RDS instance, the underlying mechanics are the same for either approach.
@@ -194,6 +130,23 @@ else
 fi
 
 su postgres -c "/usr/lib/postgresql/10/bin/postgres -D /persistentVolume/postgresqlDb"
+```
+
+Because we don't have any SSL certificates to authenticate and encrypt internet traffic, the way the server connects to the database needs to be modified to include an `ssl: false` pool parameter.
+
+```typescript
+const Pool = require("pg").Pool;
+
+const pool = new Pool({
+    user: process.env["USER_NAME"],
+    password: process.env["USER_PASSWORD"],
+    host: process.env["POSTGRES_ADDRESS"],
+    port: process.env["POSTGRES_PORT"],
+    database: process.env["DATABASE_NAME"],
+    ssl: false,
+});
+
+module.exports = pool;
 ```
 
 With our Dynamic Provider, server, client, and database in place, we can focus on the infrastructure. We start with importing libraries and describing the application's configuration options.
