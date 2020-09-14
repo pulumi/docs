@@ -24,7 +24,7 @@ export class EventListItem {
     const displayDate = moment(startDate).format("MMM D, YYYY");
 
     const eventLinkProps = {
-      href: archetype === "webinar" && !external ? `/webinars/${registrationUrl}` : registrationUrl,
+      href: archetype === "webinar" && !external ? `/resources/${registrationUrl}` : registrationUrl,
       rel: external ? "noopener noreferrer" : undefined,
       target: external ? "_blank" : undefined,
     };
