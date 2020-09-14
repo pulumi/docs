@@ -645,7 +645,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of matched Container Registry Repositories. Its element is set to `names`.
 {{% /md %}}</dd>
@@ -656,7 +656,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of repository names.
 {{% /md %}}</dd>
@@ -667,7 +667,7 @@ The following output properties are available:
 <a href="#repos_python" style="color: inherit; text-decoration: inherit;">repos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getreposrepo">List[Get<wbr>Repos<wbr>Repo]</a></span>
+        <span class="property-type"><a href="#getreposrepo">Sequence[Get<wbr>Repos<wbr>Repo]</a></span>
     </dt>
     <dd>{{% md %}}A list of matched Container Registry Namespaces. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -1024,7 +1024,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getreposrepotag">List[Get<wbr>Repos<wbr>Repo<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getreposrepotag">Sequence[Get<wbr>Repos<wbr>Repo<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of image tags belong to this repository. Each contains several attributes, see `Block Tag`.
 {{% /md %}}</dd>
@@ -1501,7 +1501,7 @@ The following output properties are available:
 <a href="#image_create_python" style="color: inherit; text-decoration: inherit;">image_<wbr>create</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Create time of this image, unix time in nanoseconds.
 {{% /md %}}</dd>
@@ -1523,7 +1523,7 @@ The following output properties are available:
 <a href="#image_size_python" style="color: inherit; text-decoration: inherit;">image_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Status of this image, in bytes.
 {{% /md %}}</dd>
@@ -1534,7 +1534,7 @@ The following output properties are available:
 <a href="#image_update_python" style="color: inherit; text-decoration: inherit;">image_<wbr>update</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Last update time of this image, unix time in nanoseconds.
 {{% /md %}}</dd>

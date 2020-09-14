@@ -22,7 +22,7 @@ meta_desc: "Explore the Domain resource of the cdn module, including examples, i
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cdn/#pulumi_alicloud.cdn.Domain">Domain</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_config</span><span class="p">:</span> <span class="nx">Optional[DomainAuthConfigArgs]</span> = None<span class="p">, </span><span class="nx">block_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">cache_configs</span><span class="p">:</span> <span class="nx">Optional[List[DomainCacheConfigArgs]]</span> = None<span class="p">, </span><span class="nx">cdn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_config</span><span class="p">:</span> <span class="nx">Optional[DomainCertificateConfigArgs]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_header_configs</span><span class="p">:</span> <span class="nx">Optional[List[DomainHttpHeaderConfigArgs]]</span> = None<span class="p">, </span><span class="nx">optimize_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">page404_config</span><span class="p">:</span> <span class="nx">Optional[DomainPage404ConfigArgs]</span> = None<span class="p">, </span><span class="nx">page_compress_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameter_filter_config</span><span class="p">:</span> <span class="nx">Optional[DomainParameterFilterConfigArgs]</span> = None<span class="p">, </span><span class="nx">range_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refer_config</span><span class="p">:</span> <span class="nx">Optional[DomainReferConfigArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">source_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">video_seek_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cdn/#pulumi_alicloud.cdn.Domain">Domain</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_config</span><span class="p">:</span> <span class="nx">Optional[DomainAuthConfigArgs]</span> = None<span class="p">, </span><span class="nx">block_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cache_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainCacheConfigArgs]]</span> = None<span class="p">, </span><span class="nx">cdn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_config</span><span class="p">:</span> <span class="nx">Optional[DomainCertificateConfigArgs]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_header_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainHttpHeaderConfigArgs]]</span> = None<span class="p">, </span><span class="nx">optimize_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">page404_config</span><span class="p">:</span> <span class="nx">Optional[DomainPage404ConfigArgs]</span> = None<span class="p">, </span><span class="nx">page_compress_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameter_filter_config</span><span class="p">:</span> <span class="nx">Optional[DomainParameterFilterConfigArgs]</span> = None<span class="p">, </span><span class="nx">range_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refer_config</span><span class="p">:</span> <span class="nx">Optional[DomainReferConfigArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">source_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">video_seek_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -842,7 +842,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#block_ips_python" style="color: inherit; text-decoration: inherit;">block_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd>
 
@@ -852,7 +852,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#cache_configs_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincacheconfig">List[Domain<wbr>Cache<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domaincacheconfig">Sequence[Domain<wbr>Cache<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The cache configs of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd>
@@ -873,7 +873,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#http_header_configs_python" style="color: inherit; text-decoration: inherit;">http_<wbr>header_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainhttpheaderconfig">List[Domain<wbr>Http<wbr>Header<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainhttpheaderconfig">Sequence[Domain<wbr>Http<wbr>Header<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The http header configs of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd>
@@ -961,7 +961,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#source_port_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Source port of the accelerated domain. Valid values are `80` and `443`. Default value is `80`. You must use `80` when the `source_type` is `oss`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_new` configuration `sources` block `port` argument instead.{{% /md %}}</p></dd>
@@ -983,7 +983,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Sources of the accelerated domain. It's a list of domain names or IP address and consists of at most 20 items. You must set this parameter when `cdn_type` value is not `liveStream`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_new` configuration `sources` argument instead.{{% /md %}}</p></dd>
@@ -1098,7 +1098,7 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_config</span><span class="p">:</span> <span class="nx">Optional[DomainAuthConfigArgs]</span> = None<span class="p">, </span><span class="nx">block_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">cache_configs</span><span class="p">:</span> <span class="nx">Optional[List[DomainCacheConfigArgs]]</span> = None<span class="p">, </span><span class="nx">cdn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_config</span><span class="p">:</span> <span class="nx">Optional[DomainCertificateConfigArgs]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_header_configs</span><span class="p">:</span> <span class="nx">Optional[List[DomainHttpHeaderConfigArgs]]</span> = None<span class="p">, </span><span class="nx">optimize_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">page404_config</span><span class="p">:</span> <span class="nx">Optional[DomainPage404ConfigArgs]</span> = None<span class="p">, </span><span class="nx">page_compress_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameter_filter_config</span><span class="p">:</span> <span class="nx">Optional[DomainParameterFilterConfigArgs]</span> = None<span class="p">, </span><span class="nx">range_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refer_config</span><span class="p">:</span> <span class="nx">Optional[DomainReferConfigArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">source_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">video_seek_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_config</span><span class="p">:</span> <span class="nx">Optional[DomainAuthConfigArgs]</span> = None<span class="p">, </span><span class="nx">block_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cache_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainCacheConfigArgs]]</span> = None<span class="p">, </span><span class="nx">cdn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_config</span><span class="p">:</span> <span class="nx">Optional[DomainCertificateConfigArgs]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_header_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainHttpHeaderConfigArgs]]</span> = None<span class="p">, </span><span class="nx">optimize_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">page404_config</span><span class="p">:</span> <span class="nx">Optional[DomainPage404ConfigArgs]</span> = None<span class="p">, </span><span class="nx">page_compress_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameter_filter_config</span><span class="p">:</span> <span class="nx">Optional[DomainParameterFilterConfigArgs]</span> = None<span class="p">, </span><span class="nx">range_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refer_config</span><span class="p">:</span> <span class="nx">Optional[DomainReferConfigArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">source_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">video_seek_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1838,7 +1838,7 @@ The following state arguments are supported:
 <a href="#state_block_ips_python" style="color: inherit; text-decoration: inherit;">block_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd>
 
@@ -1848,7 +1848,7 @@ The following state arguments are supported:
 <a href="#state_cache_configs_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincacheconfig">List[Domain<wbr>Cache<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domaincacheconfig">Sequence[Domain<wbr>Cache<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The cache configs of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd>
@@ -1891,7 +1891,7 @@ The following state arguments are supported:
 <a href="#state_http_header_configs_python" style="color: inherit; text-decoration: inherit;">http_<wbr>header_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainhttpheaderconfig">List[Domain<wbr>Http<wbr>Header<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainhttpheaderconfig">Sequence[Domain<wbr>Http<wbr>Header<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The http header configs of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd>
@@ -1979,7 +1979,7 @@ The following state arguments are supported:
 <a href="#state_source_port_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Source port of the accelerated domain. Valid values are `80` and `443`. Default value is `80`. You must use `80` when the `source_type` is `oss`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_new` configuration `sources` block `port` argument instead.{{% /md %}}</p></dd>
@@ -2001,7 +2001,7 @@ The following state arguments are supported:
 <a href="#state_sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Sources of the accelerated domain. It's a list of domain names or IP address and consists of at most 20 items. You must set this parameter when `cdn_type` value is not `liveStream`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_new` configuration `sources` argument instead.{{% /md %}}</p></dd>
@@ -2242,7 +2242,7 @@ The following state arguments are supported:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Authentication cache time of the auth config. Default value is `1800`. It's value is valid only when the `auth_type` is `type_b` or `type_c`.
 {{% /md %}}</dd>
@@ -2483,7 +2483,7 @@ The following state arguments are supported:
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Cache time of the cache config.
 {{% /md %}}</dd>
@@ -2504,7 +2504,7 @@ The following state arguments are supported:
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Weight of the cache config. This parameter's value is between 1 and 99. Default value is `1`. The higher the value, the higher the priority.
 {{% /md %}}</dd>
@@ -3164,7 +3164,7 @@ The following state arguments are supported:
 <a href="#hash_key_args_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key_<wbr>args</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Reserved parameters of `parameter_filter_config`. It's a list of string and consists of at most 10 items.
 {{% /md %}}</dd>
@@ -3320,7 +3320,7 @@ The following state arguments are supported:
 <a href="#refer_lists_python" style="color: inherit; text-decoration: inherit;">refer_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of domain names of the refer config.
 {{% /md %}}</dd>

@@ -110,7 +110,7 @@ export const firstFcFunctionName = functionsDs.functions[0].name;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_functions(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFunctionsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_functions(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFunctionsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -302,7 +302,7 @@ The following arguments are supported:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}- A list of functions ids.
 {{% /md %}}</dd>
@@ -597,7 +597,7 @@ The following output properties are available:
 <a href="#functions_python" style="color: inherit; text-decoration: inherit;">functions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getfunctionsfunction">List[Get<wbr>Functions<wbr>Function]</a></span>
+        <span class="property-type"><a href="#getfunctionsfunction">Sequence[Get<wbr>Functions<wbr>Function]</a></span>
     </dt>
     <dd>{{% md %}}A list of functions. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of functions ids.
 {{% /md %}}</dd>
@@ -630,7 +630,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of functions names.
 {{% /md %}}</dd>
@@ -695,6 +695,17 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="caport_csharp">
+<a href="#caport_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The port that the function listen to, only valid for [custom runtime](https://www.alibabacloud.com/help/doc-detail/132044.htm) and [custom container runtime](https://www.alibabacloud.com/help/doc-detail/179368.htm).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -775,6 +786,50 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="initializationtimeout_csharp">
+<a href="#initializationtimeout_csharp" style="color: inherit; text-decoration: inherit;">Initialization<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum length of time, in seconds, that the function's initialization should be run for.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initializer_csharp">
+<a href="#initializer_csharp" style="color: inherit; text-decoration: inherit;">Initializer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The entry point of the function's [initialization](https://www.alibabacloud.com/help/doc-detail/157704.htm).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instanceconcurrency_csharp">
+<a href="#instanceconcurrency_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Concurrency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of requests can be executed concurrently within the single function instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instancetype_csharp">
+<a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The instance type of the function.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="lastmodificationtime_csharp">
 <a href="#lastmodificationtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modification<wbr>Time</a>
 </span> 
@@ -828,12 +883,34 @@ The following output properties are available:
     <dd>{{% md %}}Maximum amount of time the function can run in seconds.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customcontainerconfig_csharp">
+<a href="#customcontainerconfig_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Container<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionsfunctioncustomcontainerconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Get<wbr>Functions<wbr>Function<wbr>Custom<wbr>Container<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for custom container runtime. It contains following attributes:
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="caport_go">
+<a href="#caport_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The port that the function listen to, only valid for [custom runtime](https://www.alibabacloud.com/help/doc-detail/132044.htm) and [custom container runtime](https://www.alibabacloud.com/help/doc-detail/179368.htm).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -914,6 +991,50 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="initializationtimeout_go">
+<a href="#initializationtimeout_go" style="color: inherit; text-decoration: inherit;">Initialization<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum length of time, in seconds, that the function's initialization should be run for.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initializer_go">
+<a href="#initializer_go" style="color: inherit; text-decoration: inherit;">Initializer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The entry point of the function's [initialization](https://www.alibabacloud.com/help/doc-detail/157704.htm).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instanceconcurrency_go">
+<a href="#instanceconcurrency_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Concurrency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of requests can be executed concurrently within the single function instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instancetype_go">
+<a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The instance type of the function.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="lastmodificationtime_go">
 <a href="#lastmodificationtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modification<wbr>Time</a>
 </span> 
@@ -967,12 +1088,34 @@ The following output properties are available:
     <dd>{{% md %}}Maximum amount of time the function can run in seconds.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customcontainerconfig_go">
+<a href="#customcontainerconfig_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Container<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionsfunctioncustomcontainerconfig">Get<wbr>Functions<wbr>Function<wbr>Custom<wbr>Container<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for custom container runtime. It contains following attributes:
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="caport_nodejs">
+<a href="#caport_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The port that the function listen to, only valid for [custom runtime](https://www.alibabacloud.com/help/doc-detail/132044.htm) and [custom container runtime](https://www.alibabacloud.com/help/doc-detail/179368.htm).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1053,6 +1196,50 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="initializationtimeout_nodejs">
+<a href="#initializationtimeout_nodejs" style="color: inherit; text-decoration: inherit;">initialization<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum length of time, in seconds, that the function's initialization should be run for.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initializer_nodejs">
+<a href="#initializer_nodejs" style="color: inherit; text-decoration: inherit;">initializer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The entry point of the function's [initialization](https://www.alibabacloud.com/help/doc-detail/157704.htm).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instanceconcurrency_nodejs">
+<a href="#instanceconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Concurrency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of requests can be executed concurrently within the single function instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instancetype_nodejs">
+<a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The instance type of the function.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="lastmodificationtime_nodejs">
 <a href="#lastmodificationtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modification<wbr>Time</a>
 </span> 
@@ -1106,12 +1293,34 @@ The following output properties are available:
     <dd>{{% md %}}Maximum amount of time the function can run in seconds.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customcontainerconfig_nodejs">
+<a href="#customcontainerconfig_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Container<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionsfunctioncustomcontainerconfig">Get<wbr>Functions<wbr>Function<wbr>Custom<wbr>Container<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for custom container runtime. It contains following attributes:
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ca_port_python">
+<a href="#ca_port_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The port that the function listen to, only valid for [custom runtime](https://www.alibabacloud.com/help/doc-detail/132044.htm) and [custom container runtime](https://www.alibabacloud.com/help/doc-detail/179368.htm).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1130,7 +1339,7 @@ The following output properties are available:
 <a href="#code_size_python" style="color: inherit; text-decoration: inherit;">code_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Function code size in bytes.
 {{% /md %}}</dd>
@@ -1192,6 +1401,50 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="initialization_timeout_python">
+<a href="#initialization_timeout_python" style="color: inherit; text-decoration: inherit;">initialization_<wbr>timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum length of time, in seconds, that the function's initialization should be run for.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initializer_python">
+<a href="#initializer_python" style="color: inherit; text-decoration: inherit;">initializer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The entry point of the function's [initialization](https://www.alibabacloud.com/help/doc-detail/157704.htm).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instance_concurrency_python">
+<a href="#instance_concurrency_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>concurrency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of requests can be executed concurrently within the single function instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instance_type_python">
+<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The instance type of the function.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="last_modification_time_python">
 <a href="#last_modification_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modification_<wbr>time</a>
 </span> 
@@ -1207,7 +1460,7 @@ The following output properties are available:
 <a href="#memory_size_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB the function can use at runtime.
 {{% /md %}}</dd>
@@ -1240,9 +1493,198 @@ The following output properties are available:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum amount of time the function can run in seconds.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custom_container_config_python">
+<a href="#custom_container_config_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>container_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionsfunctioncustomcontainerconfig">Get<wbr>Functions<wbr>Function<wbr>Custom<wbr>Container<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for custom container runtime. It contains following attributes:
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getfunctionsfunctioncustomcontainerconfig">Get<wbr>Functions<wbr>Function<wbr>Custom<wbr>Container<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetFunctionsFunctionCustomContainerConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/fc?tab=doc#GetFunctionsFunctionCustomContainerConfig">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.FC.Outputs.GetFunctionsFunctionCustomContainerConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="args_csharp">
+<a href="#args_csharp" style="color: inherit; text-decoration: inherit;">Args</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The args field specifies the arguments passed to the command.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="command_csharp">
+<a href="#command_csharp" style="color: inherit; text-decoration: inherit;">Command</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The entry point of the container, which specifies the actual command run by the container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="image_csharp">
+<a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The container image address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="args_go">
+<a href="#args_go" style="color: inherit; text-decoration: inherit;">Args</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The args field specifies the arguments passed to the command.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="command_go">
+<a href="#command_go" style="color: inherit; text-decoration: inherit;">Command</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The entry point of the container, which specifies the actual command run by the container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="image_go">
+<a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The container image address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="args_nodejs">
+<a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The args field specifies the arguments passed to the command.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="command_nodejs">
+<a href="#command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The entry point of the container, which specifies the actual command run by the container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="image_nodejs">
+<a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The container image address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="args_python">
+<a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The args field specifies the arguments passed to the command.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="command_python">
+<a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The entry point of the container, which specifies the actual command run by the container.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="image_python">
+<a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The container image address.
 {{% /md %}}</dd>
 
 </dl>

@@ -106,7 +106,7 @@ export const firstFcServiceName = fcServicesDs.services[0].name;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_services(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServicesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_services(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServicesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -254,7 +254,7 @@ The following arguments are supported:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}- A list of FC services ids.
 {{% /md %}}</dd>
@@ -530,7 +530,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of FC services ids.
 {{% /md %}}</dd>
@@ -541,7 +541,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of FC services names.
 {{% /md %}}</dd>
@@ -552,7 +552,7 @@ The following output properties are available:
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicesservice">List[Get<wbr>Services<wbr>Service]</a></span>
+        <span class="property-type"><a href="#getservicesservice">Sequence[Get<wbr>Services<wbr>Service]</a></span>
     </dt>
     <dd>{{% md %}}A list of FC services. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -687,6 +687,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="nasconfig_csharp">
+<a href="#nasconfig_csharp" style="color: inherit; text-decoration: inherit;">Nas<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicesservicenasconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Get<wbr>Services<wbr>Service<wbr>Nas<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A list of one element about the nas configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
 </span> 
@@ -789,6 +800,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}FC service name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="nasconfig_go">
+<a href="#nasconfig_go" style="color: inherit; text-decoration: inherit;">Nas<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicesservicenasconfig">Get<wbr>Services<wbr>Service<wbr>Nas<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A list of one element about the nas configuration.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -899,6 +921,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="nasconfig_nodejs">
+<a href="#nasconfig_nodejs" style="color: inherit; text-decoration: inherit;">nas<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicesservicenasconfig">Get<wbr>Services<wbr>Service<wbr>Nas<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A list of one element about the nas configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span> 
@@ -1001,6 +1034,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}FC service name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="nas_config_python">
+<a href="#nas_config_python" style="color: inherit; text-decoration: inherit;">nas_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicesservicenasconfig">Get<wbr>Services<wbr>Service<wbr>Nas<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A list of one element about the nas configuration.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1157,6 +1201,318 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Log Service project name.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getservicesservicenasconfig">Get<wbr>Services<wbr>Service<wbr>Nas<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetServicesServiceNasConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/fc?tab=doc#GetServicesServiceNasConfig">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.FC.Outputs.GetServicesServiceNasConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="groupid_csharp">
+<a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The group id of the NAS file system.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mountpoints_csharp">
+<a href="#mountpoints_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Points</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicesservicenasconfigmountpoint">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Get<wbr>Services<wbr>Service<wbr>Nas<wbr>Config<wbr>Mount<wbr>Point<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The mount points configuration, including following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="userid_csharp">
+<a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The user id of the NAS file system.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="groupid_go">
+<a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The group id of the NAS file system.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mountpoints_go">
+<a href="#mountpoints_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Points</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicesservicenasconfigmountpoint">[]Get<wbr>Services<wbr>Service<wbr>Nas<wbr>Config<wbr>Mount<wbr>Point</a></span>
+    </dt>
+    <dd>{{% md %}}The mount points configuration, including following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="userid_go">
+<a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The user id of the NAS file system.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="groupid_nodejs">
+<a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The group id of the NAS file system.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mountpoints_nodejs">
+<a href="#mountpoints_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Points</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicesservicenasconfigmountpoint">Get<wbr>Services<wbr>Service<wbr>Nas<wbr>Config<wbr>Mount<wbr>Point[]</a></span>
+    </dt>
+    <dd>{{% md %}}The mount points configuration, including following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="userid_nodejs">
+<a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The user id of the NAS file system.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="group_id_python">
+<a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The group id of the NAS file system.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mount_points_python">
+<a href="#mount_points_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>points</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicesservicenasconfigmountpoint">Sequence[Get<wbr>Services<wbr>Service<wbr>Nas<wbr>Config<wbr>Mount<wbr>Point<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The mount points configuration, including following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="user_id_python">
+<a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The user id of the NAS file system.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getservicesservicenasconfigmountpoint">Get<wbr>Services<wbr>Service<wbr>Nas<wbr>Config<wbr>Mount<wbr>Point</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetServicesServiceNasConfigMountPoint">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/fc?tab=doc#GetServicesServiceNasConfigMountPoint">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.FC.Outputs.GetServicesServiceNasConfigMountPoint.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mountdir_csharp">
+<a href="#mountdir_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Dir</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The local address where to mount your remote NAS directory.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serveraddr_csharp">
+<a href="#serveraddr_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address of the remote NAS directory.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mountdir_go">
+<a href="#mountdir_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Dir</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The local address where to mount your remote NAS directory.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serveraddr_go">
+<a href="#serveraddr_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address of the remote NAS directory.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mountdir_nodejs">
+<a href="#mountdir_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Dir</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The local address where to mount your remote NAS directory.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serveraddr_nodejs">
+<a href="#serveraddr_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address of the remote NAS directory.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mount_dir_python">
+<a href="#mount_dir_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>dir</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The local address where to mount your remote NAS directory.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="server_addr_python">
+<a href="#server_addr_python" style="color: inherit; text-decoration: inherit;">server_<wbr>addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The address of the remote NAS directory.
 {{% /md %}}</dd>
 
 </dl>
@@ -1332,7 +1688,7 @@ The following output properties are available:
 <a href="#vswitch_ids_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Associated VSwitch IDs.
 {{% /md %}}</dd>

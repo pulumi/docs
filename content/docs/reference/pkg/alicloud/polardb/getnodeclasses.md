@@ -817,7 +817,7 @@ The following output properties are available:
 <a href="#classes_python" style="color: inherit; text-decoration: inherit;">classes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodeclassesclass">List[Get<wbr>Node<wbr>Classes<wbr>Class]</a></span>
+        <span class="property-type"><a href="#getnodeclassesclass">Sequence[Get<wbr>Node<wbr>Classes<wbr>Class]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node classes. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -1029,7 +1029,7 @@ The following output properties are available:
 <a href="#supported_engines_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>engines</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodeclassesclasssupportedengine">List[Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getnodeclassesclasssupportedengine">Sequence[Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node classes in the zone.
 {{% /md %}}</dd>
@@ -1163,7 +1163,7 @@ The following output properties are available:
 <a href="#available_resources_python" style="color: inherit; text-decoration: inherit;">available_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodeclassesclasssupportedengineavailableresource">List[Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Available<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getnodeclassesclasssupportedengineavailableresource">Sequence[Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Available<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node available classes.
 {{% /md %}}</dd>

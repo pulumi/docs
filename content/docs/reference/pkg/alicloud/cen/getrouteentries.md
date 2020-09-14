@@ -569,7 +569,7 @@ The following output properties are available:
 <a href="#entries_python" style="color: inherit; text-decoration: inherit;">entries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrouteentriesentry">List[Get<wbr>Route<wbr>Entries<wbr>Entry]</a></span>
+        <span class="property-type"><a href="#getrouteentriesentry">Sequence[Get<wbr>Route<wbr>Entries<wbr>Entry]</a></span>
     </dt>
     <dd>{{% md %}}A list of CEN Route Entries. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -961,7 +961,7 @@ The following output properties are available:
 <a href="#conflicts_python" style="color: inherit; text-decoration: inherit;">conflicts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrouteentriesentryconflict">List[Get<wbr>Route<wbr>Entries<wbr>Entry<wbr>Conflict<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getrouteentriesentryconflict">Sequence[Get<wbr>Route<wbr>Entries<wbr>Entry<wbr>Conflict<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of conflicted Route Entries. Each element contains the following attributes:
 {{% /md %}}</dd>

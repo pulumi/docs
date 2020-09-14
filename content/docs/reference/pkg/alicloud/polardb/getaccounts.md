@@ -467,7 +467,7 @@ The following output properties are available:
 <a href="#accounts_python" style="color: inherit; text-decoration: inherit;">accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccountsaccount">List[Get<wbr>Accounts<wbr>Account]</a></span>
+        <span class="property-type"><a href="#getaccountsaccount">Sequence[Get<wbr>Accounts<wbr>Account]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB cluster accounts. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Account name of the cluster.
 {{% /md %}}</dd>
@@ -825,7 +825,7 @@ The following output properties are available:
 <a href="#database_privileges_python" style="color: inherit; text-decoration: inherit;">database_<wbr>privileges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccountsaccountdatabaseprivilege">List[Get<wbr>Accounts<wbr>Account<wbr>Database<wbr>Privilege<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getaccountsaccountdatabaseprivilege">Sequence[Get<wbr>Accounts<wbr>Account<wbr>Database<wbr>Privilege<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of database privilege. Each element contains the following attributes.
 {{% /md %}}</dd>

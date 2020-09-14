@@ -295,7 +295,7 @@ const exampleAlert = new alicloud.log.Alert("exampleAlert", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/log/#pulumi_alicloud.log.Alert">Alert</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_displayname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dashboard</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mute_until</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">notification_lists</span><span class="p">:</span> <span class="nx">Optional[List[AlertNotificationListArgs]]</span> = None<span class="p">, </span><span class="nx">notify_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_lists</span><span class="p">:</span> <span class="nx">Optional[List[AlertQueryListArgs]]</span> = None<span class="p">, </span><span class="nx">schedule_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throttling</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/log/#pulumi_alicloud.log.Alert">Alert</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_displayname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dashboard</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mute_until</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">notification_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertNotificationListArgs]]</span> = None<span class="p">, </span><span class="nx">notify_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertQueryListArgs]]</span> = None<span class="p">, </span><span class="nx">schedule_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throttling</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -963,7 +963,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#notification_lists_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertnotificationlist">List[Alert<wbr>Notification<wbr>List<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertnotificationlist">Sequence[Alert<wbr>Notification<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Alarm information notification list.
 {{% /md %}}</dd>
@@ -985,7 +985,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#query_lists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertquerylist">List[Alert<wbr>Query<wbr>List<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertquerylist">Sequence[Alert<wbr>Query<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Multiple conditions for configured alarm query.
 {{% /md %}}</dd>
@@ -1007,7 +1007,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#mute_until_python" style="color: inherit; text-decoration: inherit;">mute_<wbr>until</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Timestamp, notifications before closing again.
 {{% /md %}}</dd>
@@ -1018,7 +1018,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#notify_threshold_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
 {{% /md %}}</dd>
@@ -1155,7 +1155,7 @@ Get an existing Alert resource's state with the given name, ID, and optional ext
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_displayname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dashboard</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mute_until</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">notification_lists</span><span class="p">:</span> <span class="nx">Optional[List[AlertNotificationListArgs]]</span> = None<span class="p">, </span><span class="nx">notify_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_lists</span><span class="p">:</span> <span class="nx">Optional[List[AlertQueryListArgs]]</span> = None<span class="p">, </span><span class="nx">schedule_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throttling</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Alert</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_displayname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dashboard</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mute_until</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">notification_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertNotificationListArgs]]</span> = None<span class="p">, </span><span class="nx">notify_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertQueryListArgs]]</span> = None<span class="p">, </span><span class="nx">schedule_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throttling</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Alert</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1776,7 +1776,7 @@ The following state arguments are supported:
 <a href="#state_mute_until_python" style="color: inherit; text-decoration: inherit;">mute_<wbr>until</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Timestamp, notifications before closing again.
 {{% /md %}}</dd>
@@ -1787,7 +1787,7 @@ The following state arguments are supported:
 <a href="#state_notification_lists_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertnotificationlist">List[Alert<wbr>Notification<wbr>List<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertnotificationlist">Sequence[Alert<wbr>Notification<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Alarm information notification list.
 {{% /md %}}</dd>
@@ -1798,7 +1798,7 @@ The following state arguments are supported:
 <a href="#state_notify_threshold_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
 {{% /md %}}</dd>
@@ -1820,7 +1820,7 @@ The following state arguments are supported:
 <a href="#state_query_lists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertquerylist">List[Alert<wbr>Query<wbr>List<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertquerylist">Sequence[Alert<wbr>Query<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Multiple conditions for configured alarm query.
 {{% /md %}}</dd>
@@ -2105,7 +2105,7 @@ The following state arguments are supported:
 <a href="#email_lists_python" style="color: inherit; text-decoration: inherit;">email_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Email address list.
 {{% /md %}}</dd>
@@ -2116,7 +2116,7 @@ The following state arguments are supported:
 <a href="#mobile_lists_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}SMS sending mobile number.
 {{% /md %}}</dd>

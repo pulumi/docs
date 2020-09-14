@@ -447,7 +447,7 @@ The following output properties are available:
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getendpointsendpoint">List[Get<wbr>Endpoints<wbr>Endpoint]</a></span>
+        <span class="property-type"><a href="#getendpointsendpoint">Sequence[Get<wbr>Endpoints<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB cluster endpoints. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -763,7 +763,7 @@ The following output properties are available:
 <a href="#address_items_python" style="color: inherit; text-decoration: inherit;">address_<wbr>items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getendpointsendpointaddressitem">List[Get<wbr>Endpoints<wbr>Endpoint<wbr>Address<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getendpointsendpointaddressitem">Sequence[Get<wbr>Endpoints<wbr>Endpoint<wbr>Address<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoint addresses. Each element contains the following attributes.
 {{% /md %}}</dd>

@@ -14,6 +14,1239 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
 
 > **NOTE:** Available in 1.57.0+.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### 1. Create A Cluster
+{{% example csharp %}}
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultMainVersions = Output.Create(AliCloud.Emr.GetMainVersions.InvokeAsync());
+        var defaultInstanceTypes = defaultMainVersions.Apply(defaultMainVersions => Output.Create(AliCloud.Emr.GetInstanceTypes.InvokeAsync(new AliCloud.Emr.GetInstanceTypesArgs
+        {
+            DestinationResource = "InstanceType",
+            ClusterType = defaultMainVersions.MainVersions[0].ClusterTypes[0],
+            SupportLocalStorage = false,
+            InstanceChargeType = "PostPaid",
+            SupportNodeTypes = 
+            {
+                "MASTER",
+                "CORE",
+                "TASK",
+            },
+        })));
+        var dataDisk = Output.Tuple(defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes).Apply(values =>
+        {
+            var defaultMainVersions = values.Item1;
+            var defaultInstanceTypes = values.Item2;
+            var defaultInstanceTypes1 = values.Item3;
+            return Output.Create(AliCloud.Emr.GetDiskTypes.InvokeAsync(new AliCloud.Emr.GetDiskTypesArgs
+            {
+                DestinationResource = "DataDisk",
+                ClusterType = defaultMainVersions.MainVersions[0].ClusterTypes[0],
+                InstanceChargeType = "PostPaid",
+                InstanceType = defaultInstanceTypes.Types[0].Id,
+                ZoneId = defaultInstanceTypes1.Types[0].ZoneId,
+            }));
+        });
+        var systemDisk = Output.Tuple(defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes).Apply(values =>
+        {
+            var defaultMainVersions = values.Item1;
+            var defaultInstanceTypes = values.Item2;
+            var defaultInstanceTypes1 = values.Item3;
+            return Output.Create(AliCloud.Emr.GetDiskTypes.InvokeAsync(new AliCloud.Emr.GetDiskTypesArgs
+            {
+                DestinationResource = "SystemDisk",
+                ClusterType = defaultMainVersions.MainVersions[0].ClusterTypes[0],
+                InstanceChargeType = "PostPaid",
+                InstanceType = defaultInstanceTypes.Types[0].Id,
+                ZoneId = defaultInstanceTypes1.Types[0].ZoneId,
+            }));
+        });
+        var vpc = new List<AliCloud.Vpc.Network>();
+        for (var rangeIndex = 0; rangeIndex < (@var.Vpc_id == "" ? 1 : 0 == true); rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            vpc.Add(new AliCloud.Vpc.Network($"vpc-{range.Value}", new AliCloud.Vpc.NetworkArgs
+            {
+                CidrBlock = @var.Vpc_cidr,
+            }));
+        }
+        var defaultSecurityGroup = new List<AliCloud.Ecs.SecurityGroup>();
+        for (var rangeIndex = 0; rangeIndex < (@var.Security_group_id == "" ? 1 : 0 == true); rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            defaultSecurityGroup.Add(new AliCloud.Ecs.SecurityGroup($"defaultSecurityGroup-{range.Value}", new AliCloud.Ecs.SecurityGroupArgs
+            {
+                VpcId = @var.Vpc_id == "" ? vpc.Id : @var.Vpc_id,
+            }));
+        }
+        // VSwitch Resource for Module
+        var vswitch = new List<AliCloud.Vpc.Switch>();
+        for (var rangeIndex = 0; rangeIndex < (@var.Vswitch_id == "" ? 1 : 0 == true); rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            vswitch.Add(new AliCloud.Vpc.Switch($"vswitch-{range.Value}", new AliCloud.Vpc.SwitchArgs
+            {
+                AvailabilityZone = @var.Availability_zone == "" ? defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].ZoneId) : @var.Availability_zone,
+                CidrBlock = @var.Vswitch_cidr,
+                VpcId = @var.Vpc_id == "" ? vpc.Id : @var.Vpc_id,
+            }));
+        }
+        // Ram role Resource for Module
+        var defaultRole = new AliCloud.Ram.Role("defaultRole", new AliCloud.Ram.RoleArgs
+        {
+            Document = @"    {
+        ""Statement"": [
+        {
+            ""Action"": ""sts:AssumeRole"",
+            ""Effect"": ""Allow"",
+            ""Principal"": {
+            ""Service"": [
+                ""emr.aliyuncs.com"",
+                ""ecs.aliyuncs.com""
+            ]
+            }
+        }
+        ],
+        ""Version"": ""1""
+    }
+",
+            Description = "this is a role test.",
+            Force = true,
+        });
+        var defaultCluster = new AliCloud.Emr.Cluster("defaultCluster", new AliCloud.Emr.ClusterArgs
+        {
+            EmrVer = defaultMainVersions.Apply(defaultMainVersions => defaultMainVersions.MainVersions[0].EmrVersion),
+            ClusterType = defaultMainVersions.Apply(defaultMainVersions => defaultMainVersions.MainVersions[0].ClusterTypes[0]),
+            HostGroups = 
+            {
+                new AliCloud.Emr.Inputs.ClusterHostGroupArgs
+                {
+                    HostGroupName = "master_group",
+                    HostGroupType = "MASTER",
+                    NodeCount = "2",
+                    InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].Id),
+                    DiskType = dataDisk.Apply(dataDisk => dataDisk.Types[0].Value),
+                    DiskCapacity = Output.Tuple(dataDisk, dataDisk).Apply(values =>
+                    {
+                        var dataDisk = values.Item1;
+                        var dataDisk1 = values.Item2;
+                        return dataDisk.Types[0].Min > 160 ? dataDisk1.Types[0].Min : 160;
+                    }),
+                    DiskCount = "1",
+                    SysDiskType = systemDisk.Apply(systemDisk => systemDisk.Types[0].Value),
+                    SysDiskCapacity = Output.Tuple(systemDisk, systemDisk).Apply(values =>
+                    {
+                        var systemDisk = values.Item1;
+                        var systemDisk1 = values.Item2;
+                        return systemDisk.Types[0].Min > 160 ? systemDisk1.Types[0].Min : 160;
+                    }),
+                },
+                new AliCloud.Emr.Inputs.ClusterHostGroupArgs
+                {
+                    HostGroupName = "core_group",
+                    HostGroupType = "CORE",
+                    NodeCount = "3",
+                    InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].Id),
+                    DiskType = dataDisk.Apply(dataDisk => dataDisk.Types[0].Value),
+                    DiskCapacity = Output.Tuple(dataDisk, dataDisk).Apply(values =>
+                    {
+                        var dataDisk = values.Item1;
+                        var dataDisk1 = values.Item2;
+                        return dataDisk.Types[0].Min > 160 ? dataDisk1.Types[0].Min : 160;
+                    }),
+                    DiskCount = "4",
+                    SysDiskType = systemDisk.Apply(systemDisk => systemDisk.Types[0].Value),
+                    SysDiskCapacity = Output.Tuple(systemDisk, systemDisk).Apply(values =>
+                    {
+                        var systemDisk = values.Item1;
+                        var systemDisk1 = values.Item2;
+                        return systemDisk.Types[0].Min > 160 ? systemDisk1.Types[0].Min : 160;
+                    }),
+                },
+                new AliCloud.Emr.Inputs.ClusterHostGroupArgs
+                {
+                    HostGroupName = "task_group",
+                    HostGroupType = "TASK",
+                    NodeCount = "2",
+                    InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].Id),
+                    DiskType = dataDisk.Apply(dataDisk => dataDisk.Types[0].Value),
+                    DiskCapacity = Output.Tuple(dataDisk, dataDisk).Apply(values =>
+                    {
+                        var dataDisk = values.Item1;
+                        var dataDisk1 = values.Item2;
+                        return dataDisk.Types[0].Min > 160 ? dataDisk1.Types[0].Min : 160;
+                    }),
+                    DiskCount = "4",
+                    SysDiskType = systemDisk.Apply(systemDisk => systemDisk.Types[0].Value),
+                    SysDiskCapacity = Output.Tuple(systemDisk, systemDisk).Apply(values =>
+                    {
+                        var systemDisk = values.Item1;
+                        var systemDisk1 = values.Item2;
+                        return systemDisk.Types[0].Min > 160 ? systemDisk1.Types[0].Min : 160;
+                    }),
+                },
+            },
+            HighAvailabilityEnable = true,
+            ZoneId = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].ZoneId),
+            SecurityGroupId = @var.Security_group_id == "" ? defaultSecurityGroup.Id : @var.Security_group_id,
+            IsOpenPublicIp = true,
+            ChargeType = "PostPaid",
+            VswitchId = @var.Vswitch_id == "" ? vswitch.Id : @var.Vswitch_id,
+            UserDefinedEmrEcsRole = defaultRole.Name,
+            SshEnable = true,
+            MasterPwd = "ABCtest1234!",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultMainVersions = alicloud.emr.getMainVersions({});
+const defaultInstanceTypes = defaultMainVersions.then(defaultMainVersions => alicloud.emr.getInstanceTypes({
+    destinationResource: "InstanceType",
+    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
+    supportLocalStorage: false,
+    instanceChargeType: "PostPaid",
+    supportNodeTypes: [
+        "MASTER",
+        "CORE",
+        "TASK",
+    ],
+}));
+const dataDisk = Promise.all([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes]).then(([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes1]) => alicloud.emr.getDiskTypes({
+    destinationResource: "DataDisk",
+    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
+    instanceChargeType: "PostPaid",
+    instanceType: defaultInstanceTypes.types[0].id,
+    zoneId: defaultInstanceTypes1.types[0].zoneId,
+}));
+const systemDisk = Promise.all([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes]).then(([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes1]) => alicloud.emr.getDiskTypes({
+    destinationResource: "SystemDisk",
+    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
+    instanceChargeType: "PostPaid",
+    instanceType: defaultInstanceTypes.types[0].id,
+    zoneId: defaultInstanceTypes1.types[0].zoneId,
+}));
+const vpc: alicloud.vpc.Network[];
+for (const range = {value: 0}; range.value < (_var.vpc_id == "" ? 1 : 0 == true); range.value++) {
+    vpc.push(new alicloud.vpc.Network(`vpc-${range.value}`, {cidrBlock: _var.vpc_cidr}));
+}
+const defaultSecurityGroup: alicloud.ecs.SecurityGroup[];
+for (const range = {value: 0}; range.value < (_var.security_group_id == "" ? 1 : 0 == true); range.value++) {
+    defaultSecurityGroup.push(new alicloud.ecs.SecurityGroup(`defaultSecurityGroup-${range.value}`, {vpcId: _var.vpc_id == "" ? vpc.id : _var.vpc_id}));
+}
+// VSwitch Resource for Module
+const vswitch: alicloud.vpc.Switch[];
+for (const range = {value: 0}; range.value < (_var.vswitch_id == "" ? 1 : 0 == true); range.value++) {
+    vswitch.push(new alicloud.vpc.Switch(`vswitch-${range.value}`, {
+        availabilityZone: _var.availability_zone == "" ? defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId) : _var.availability_zone,
+        cidrBlock: _var.vswitch_cidr,
+        vpcId: _var.vpc_id == "" ? vpc.id : _var.vpc_id,
+    }));
+}
+// Ram role Resource for Module
+const defaultRole = new alicloud.ram.Role("defaultRole", {
+    document: `    {
+        "Statement": [
+        {
+            "Action": "sts:AssumeRole",
+            "Effect": "Allow",
+            "Principal": {
+            "Service": [
+                "emr.aliyuncs.com",
+                "ecs.aliyuncs.com"
+            ]
+            }
+        }
+        ],
+        "Version": "1"
+    }
+`,
+    description: "this is a role test.",
+    force: true,
+});
+const defaultCluster = new alicloud.emr.Cluster("defaultCluster", {
+    emrVer: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].emrVersion),
+    clusterType: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].clusterTypes[0]),
+    hostGroups: [
+        {
+            hostGroupName: "master_group",
+            hostGroupType: "MASTER",
+            nodeCount: "2",
+            instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
+            diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
+            diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
+            diskCount: "1",
+            sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
+            sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
+        },
+        {
+            hostGroupName: "core_group",
+            hostGroupType: "CORE",
+            nodeCount: "3",
+            instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
+            diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
+            diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
+            diskCount: "4",
+            sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
+            sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
+        },
+        {
+            hostGroupName: "task_group",
+            hostGroupType: "TASK",
+            nodeCount: "2",
+            instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
+            diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
+            diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
+            diskCount: "4",
+            sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
+            sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
+        },
+    ],
+    highAvailabilityEnable: true,
+    zoneId: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId),
+    securityGroupId: _var.security_group_id == "" ? defaultSecurityGroup.id : _var.security_group_id,
+    isOpenPublicIp: true,
+    chargeType: "PostPaid",
+    vswitchId: _var.vswitch_id == "" ? vswitch.id : _var.vswitch_id,
+    userDefinedEmrEcsRole: defaultRole.name,
+    sshEnable: true,
+    masterPwd: "ABCtest1234!",
+});
+```
+
+{{% /example %}}
+
+### 2. Scale Up
+{{% example csharp %}}
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultMainVersions = Output.Create(AliCloud.Emr.GetMainVersions.InvokeAsync());
+        var defaultInstanceTypes = defaultMainVersions.Apply(defaultMainVersions => Output.Create(AliCloud.Emr.GetInstanceTypes.InvokeAsync(new AliCloud.Emr.GetInstanceTypesArgs
+        {
+            DestinationResource = "InstanceType",
+            ClusterType = defaultMainVersions.MainVersions[0].ClusterTypes[0],
+            SupportLocalStorage = false,
+            InstanceChargeType = "PostPaid",
+            SupportNodeTypes = 
+            {
+                "MASTER",
+                "CORE",
+                "TASK",
+            },
+        })));
+        var dataDisk = Output.Tuple(defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes).Apply(values =>
+        {
+            var defaultMainVersions = values.Item1;
+            var defaultInstanceTypes = values.Item2;
+            var defaultInstanceTypes1 = values.Item3;
+            return Output.Create(AliCloud.Emr.GetDiskTypes.InvokeAsync(new AliCloud.Emr.GetDiskTypesArgs
+            {
+                DestinationResource = "DataDisk",
+                ClusterType = defaultMainVersions.MainVersions[0].ClusterTypes[0],
+                InstanceChargeType = "PostPaid",
+                InstanceType = defaultInstanceTypes.Types[0].Id,
+                ZoneId = defaultInstanceTypes1.Types[0].ZoneId,
+            }));
+        });
+        var systemDisk = Output.Tuple(defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes).Apply(values =>
+        {
+            var defaultMainVersions = values.Item1;
+            var defaultInstanceTypes = values.Item2;
+            var defaultInstanceTypes1 = values.Item3;
+            return Output.Create(AliCloud.Emr.GetDiskTypes.InvokeAsync(new AliCloud.Emr.GetDiskTypesArgs
+            {
+                DestinationResource = "SystemDisk",
+                ClusterType = defaultMainVersions.MainVersions[0].ClusterTypes[0],
+                InstanceChargeType = "PostPaid",
+                InstanceType = defaultInstanceTypes.Types[0].Id,
+                ZoneId = defaultInstanceTypes1.Types[0].ZoneId,
+            }));
+        });
+        var vpc = new List<AliCloud.Vpc.Network>();
+        for (var rangeIndex = 0; rangeIndex < (@var.Vpc_id == "" ? 1 : 0 == true); rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            vpc.Add(new AliCloud.Vpc.Network($"vpc-{range.Value}", new AliCloud.Vpc.NetworkArgs
+            {
+                CidrBlock = @var.Vpc_cidr,
+            }));
+        }
+        var defaultSecurityGroup = new List<AliCloud.Ecs.SecurityGroup>();
+        for (var rangeIndex = 0; rangeIndex < (@var.Security_group_id == "" ? 1 : 0 == true); rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            defaultSecurityGroup.Add(new AliCloud.Ecs.SecurityGroup($"defaultSecurityGroup-{range.Value}", new AliCloud.Ecs.SecurityGroupArgs
+            {
+                VpcId = @var.Vpc_id == "" ? vpc.Id : @var.Vpc_id,
+            }));
+        }
+        // VSwitch Resource for Module
+        var vswitch = new List<AliCloud.Vpc.Switch>();
+        for (var rangeIndex = 0; rangeIndex < (@var.Vswitch_id == "" ? 1 : 0 == true); rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            vswitch.Add(new AliCloud.Vpc.Switch($"vswitch-{range.Value}", new AliCloud.Vpc.SwitchArgs
+            {
+                AvailabilityZone = @var.Availability_zone == "" ? defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].ZoneId) : @var.Availability_zone,
+                CidrBlock = @var.Vswitch_cidr,
+                VpcId = @var.Vpc_id == "" ? vpc.Id : @var.Vpc_id,
+            }));
+        }
+        // Ram role Resource for Module
+        var defaultRole = new AliCloud.Ram.Role("defaultRole", new AliCloud.Ram.RoleArgs
+        {
+            Document = @"    {
+        ""Statement"": [
+        {
+            ""Action"": ""sts:AssumeRole"",
+            ""Effect"": ""Allow"",
+            ""Principal"": {
+            ""Service"": [
+                ""emr.aliyuncs.com"",
+                ""ecs.aliyuncs.com""
+            ]
+            }
+        }
+        ],
+        ""Version"": ""1""
+    }
+",
+            Description = "this is a role test.",
+            Force = true,
+        });
+        var defaultCluster = new AliCloud.Emr.Cluster("defaultCluster", new AliCloud.Emr.ClusterArgs
+        {
+            EmrVer = defaultMainVersions.Apply(defaultMainVersions => defaultMainVersions.MainVersions[0].EmrVersion),
+            ClusterType = defaultMainVersions.Apply(defaultMainVersions => defaultMainVersions.MainVersions[0].ClusterTypes[0]),
+            HostGroups = 
+            {
+                new AliCloud.Emr.Inputs.ClusterHostGroupArgs
+                {
+                    HostGroupName = "master_group",
+                    HostGroupType = "MASTER",
+                    NodeCount = "2",
+                    InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].Id),
+                    DiskType = dataDisk.Apply(dataDisk => dataDisk.Types[0].Value),
+                    DiskCapacity = Output.Tuple(dataDisk, dataDisk).Apply(values =>
+                    {
+                        var dataDisk = values.Item1;
+                        var dataDisk1 = values.Item2;
+                        return dataDisk.Types[0].Min > 160 ? dataDisk1.Types[0].Min : 160;
+                    }),
+                    DiskCount = "1",
+                    SysDiskType = systemDisk.Apply(systemDisk => systemDisk.Types[0].Value),
+                    SysDiskCapacity = Output.Tuple(systemDisk, systemDisk).Apply(values =>
+                    {
+                        var systemDisk = values.Item1;
+                        var systemDisk1 = values.Item2;
+                        return systemDisk.Types[0].Min > 160 ? systemDisk1.Types[0].Min : 160;
+                    }),
+                },
+                new AliCloud.Emr.Inputs.ClusterHostGroupArgs
+                {
+                    HostGroupName = "core_group",
+                    HostGroupType = "CORE",
+                    NodeCount = "2",
+                    InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].Id),
+                    DiskType = dataDisk.Apply(dataDisk => dataDisk.Types[0].Value),
+                    DiskCapacity = Output.Tuple(dataDisk, dataDisk).Apply(values =>
+                    {
+                        var dataDisk = values.Item1;
+                        var dataDisk1 = values.Item2;
+                        return dataDisk.Types[0].Min > 160 ? dataDisk1.Types[0].Min : 160;
+                    }),
+                    DiskCount = "4",
+                    SysDiskType = systemDisk.Apply(systemDisk => systemDisk.Types[0].Value),
+                    SysDiskCapacity = Output.Tuple(systemDisk, systemDisk).Apply(values =>
+                    {
+                        var systemDisk = values.Item1;
+                        var systemDisk1 = values.Item2;
+                        return systemDisk.Types[0].Min > 160 ? systemDisk1.Types[0].Min : 160;
+                    }),
+                },
+                new AliCloud.Emr.Inputs.ClusterHostGroupArgs
+                {
+                    HostGroupName = "task_group",
+                    HostGroupType = "TASK",
+                    NodeCount = "4",
+                    InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].Id),
+                    DiskType = dataDisk.Apply(dataDisk => dataDisk.Types[0].Value),
+                    DiskCapacity = Output.Tuple(dataDisk, dataDisk).Apply(values =>
+                    {
+                        var dataDisk = values.Item1;
+                        var dataDisk1 = values.Item2;
+                        return dataDisk.Types[0].Min > 160 ? dataDisk1.Types[0].Min : 160;
+                    }),
+                    DiskCount = "4",
+                    SysDiskType = systemDisk.Apply(systemDisk => systemDisk.Types[0].Value),
+                    SysDiskCapacity = Output.Tuple(systemDisk, systemDisk).Apply(values =>
+                    {
+                        var systemDisk = values.Item1;
+                        var systemDisk1 = values.Item2;
+                        return systemDisk.Types[0].Min > 160 ? systemDisk1.Types[0].Min : 160;
+                    }),
+                },
+            },
+            HighAvailabilityEnable = true,
+            ZoneId = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].ZoneId),
+            SecurityGroupId = @var.Security_group_id == "" ? defaultSecurityGroup.Id : @var.Security_group_id,
+            IsOpenPublicIp = true,
+            ChargeType = "PostPaid",
+            VswitchId = @var.Vswitch_id == "" ? vswitch.Id : @var.Vswitch_id,
+            UserDefinedEmrEcsRole = defaultRole.Name,
+            SshEnable = true,
+            MasterPwd = "ABCtest1234!",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultMainVersions = alicloud.emr.getMainVersions({});
+const defaultInstanceTypes = defaultMainVersions.then(defaultMainVersions => alicloud.emr.getInstanceTypes({
+    destinationResource: "InstanceType",
+    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
+    supportLocalStorage: false,
+    instanceChargeType: "PostPaid",
+    supportNodeTypes: [
+        "MASTER",
+        "CORE",
+        "TASK",
+    ],
+}));
+const dataDisk = Promise.all([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes]).then(([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes1]) => alicloud.emr.getDiskTypes({
+    destinationResource: "DataDisk",
+    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
+    instanceChargeType: "PostPaid",
+    instanceType: defaultInstanceTypes.types[0].id,
+    zoneId: defaultInstanceTypes1.types[0].zoneId,
+}));
+const systemDisk = Promise.all([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes]).then(([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes1]) => alicloud.emr.getDiskTypes({
+    destinationResource: "SystemDisk",
+    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
+    instanceChargeType: "PostPaid",
+    instanceType: defaultInstanceTypes.types[0].id,
+    zoneId: defaultInstanceTypes1.types[0].zoneId,
+}));
+const vpc: alicloud.vpc.Network[];
+for (const range = {value: 0}; range.value < (_var.vpc_id == "" ? 1 : 0 == true); range.value++) {
+    vpc.push(new alicloud.vpc.Network(`vpc-${range.value}`, {cidrBlock: _var.vpc_cidr}));
+}
+const defaultSecurityGroup: alicloud.ecs.SecurityGroup[];
+for (const range = {value: 0}; range.value < (_var.security_group_id == "" ? 1 : 0 == true); range.value++) {
+    defaultSecurityGroup.push(new alicloud.ecs.SecurityGroup(`defaultSecurityGroup-${range.value}`, {vpcId: _var.vpc_id == "" ? vpc.id : _var.vpc_id}));
+}
+// VSwitch Resource for Module
+const vswitch: alicloud.vpc.Switch[];
+for (const range = {value: 0}; range.value < (_var.vswitch_id == "" ? 1 : 0 == true); range.value++) {
+    vswitch.push(new alicloud.vpc.Switch(`vswitch-${range.value}`, {
+        availabilityZone: _var.availability_zone == "" ? defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId) : _var.availability_zone,
+        cidrBlock: _var.vswitch_cidr,
+        vpcId: _var.vpc_id == "" ? vpc.id : _var.vpc_id,
+    }));
+}
+// Ram role Resource for Module
+const defaultRole = new alicloud.ram.Role("defaultRole", {
+    document: `    {
+        "Statement": [
+        {
+            "Action": "sts:AssumeRole",
+            "Effect": "Allow",
+            "Principal": {
+            "Service": [
+                "emr.aliyuncs.com",
+                "ecs.aliyuncs.com"
+            ]
+            }
+        }
+        ],
+        "Version": "1"
+    }
+`,
+    description: "this is a role test.",
+    force: true,
+});
+const defaultCluster = new alicloud.emr.Cluster("defaultCluster", {
+    emrVer: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].emrVersion),
+    clusterType: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].clusterTypes[0]),
+    hostGroups: [
+        {
+            hostGroupName: "master_group",
+            hostGroupType: "MASTER",
+            nodeCount: "2",
+            instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
+            diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
+            diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
+            diskCount: "1",
+            sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
+            sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
+        },
+        {
+            hostGroupName: "core_group",
+            hostGroupType: "CORE",
+            nodeCount: "2",
+            instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
+            diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
+            diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
+            diskCount: "4",
+            sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
+            sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
+        },
+        {
+            hostGroupName: "task_group",
+            hostGroupType: "TASK",
+            nodeCount: "4",
+            instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
+            diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
+            diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
+            diskCount: "4",
+            sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
+            sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
+        },
+    ],
+    highAvailabilityEnable: true,
+    zoneId: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId),
+    securityGroupId: _var.security_group_id == "" ? defaultSecurityGroup.id : _var.security_group_id,
+    isOpenPublicIp: true,
+    chargeType: "PostPaid",
+    vswitchId: _var.vswitch_id == "" ? vswitch.id : _var.vswitch_id,
+    userDefinedEmrEcsRole: defaultRole.name,
+    sshEnable: true,
+    masterPwd: "ABCtest1234!",
+});
+```
+
+{{% /example %}}
+
+### 3. Scale Down
+{{% example csharp %}}
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultMainVersions = Output.Create(AliCloud.Emr.GetMainVersions.InvokeAsync());
+        var defaultInstanceTypes = defaultMainVersions.Apply(defaultMainVersions => Output.Create(AliCloud.Emr.GetInstanceTypes.InvokeAsync(new AliCloud.Emr.GetInstanceTypesArgs
+        {
+            DestinationResource = "InstanceType",
+            ClusterType = defaultMainVersions.MainVersions[0].ClusterTypes[0],
+            SupportLocalStorage = false,
+            InstanceChargeType = "PostPaid",
+            SupportNodeTypes = 
+            {
+                "MASTER",
+                "CORE",
+                "TASK",
+            },
+        })));
+        var dataDisk = Output.Tuple(defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes).Apply(values =>
+        {
+            var defaultMainVersions = values.Item1;
+            var defaultInstanceTypes = values.Item2;
+            var defaultInstanceTypes1 = values.Item3;
+            return Output.Create(AliCloud.Emr.GetDiskTypes.InvokeAsync(new AliCloud.Emr.GetDiskTypesArgs
+            {
+                DestinationResource = "DataDisk",
+                ClusterType = defaultMainVersions.MainVersions[0].ClusterTypes[0],
+                InstanceChargeType = "PostPaid",
+                InstanceType = defaultInstanceTypes.Types[0].Id,
+                ZoneId = defaultInstanceTypes1.Types[0].ZoneId,
+            }));
+        });
+        var systemDisk = Output.Tuple(defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes).Apply(values =>
+        {
+            var defaultMainVersions = values.Item1;
+            var defaultInstanceTypes = values.Item2;
+            var defaultInstanceTypes1 = values.Item3;
+            return Output.Create(AliCloud.Emr.GetDiskTypes.InvokeAsync(new AliCloud.Emr.GetDiskTypesArgs
+            {
+                DestinationResource = "SystemDisk",
+                ClusterType = defaultMainVersions.MainVersions[0].ClusterTypes[0],
+                InstanceChargeType = "PostPaid",
+                InstanceType = defaultInstanceTypes.Types[0].Id,
+                ZoneId = defaultInstanceTypes1.Types[0].ZoneId,
+            }));
+        });
+        var vpc = new List<AliCloud.Vpc.Network>();
+        for (var rangeIndex = 0; rangeIndex < (@var.Vpc_id == "" ? 1 : 0 == true); rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            vpc.Add(new AliCloud.Vpc.Network($"vpc-{range.Value}", new AliCloud.Vpc.NetworkArgs
+            {
+                CidrBlock = @var.Vpc_cidr,
+            }));
+        }
+        var defaultSecurityGroup = new List<AliCloud.Ecs.SecurityGroup>();
+        for (var rangeIndex = 0; rangeIndex < (@var.Security_group_id == "" ? 1 : 0 == true); rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            defaultSecurityGroup.Add(new AliCloud.Ecs.SecurityGroup($"defaultSecurityGroup-{range.Value}", new AliCloud.Ecs.SecurityGroupArgs
+            {
+                VpcId = @var.Vpc_id == "" ? vpc.Id : @var.Vpc_id,
+            }));
+        }
+        // VSwitch Resource for Module
+        var vswitch = new List<AliCloud.Vpc.Switch>();
+        for (var rangeIndex = 0; rangeIndex < (@var.Vswitch_id == "" ? 1 : 0 == true); rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            vswitch.Add(new AliCloud.Vpc.Switch($"vswitch-{range.Value}", new AliCloud.Vpc.SwitchArgs
+            {
+                AvailabilityZone = @var.Availability_zone == "" ? defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].ZoneId) : @var.Availability_zone,
+                CidrBlock = @var.Vswitch_cidr,
+                VpcId = @var.Vpc_id == "" ? vpc.Id : @var.Vpc_id,
+            }));
+        }
+        // Ram role Resource for Module
+        var defaultRole = new AliCloud.Ram.Role("defaultRole", new AliCloud.Ram.RoleArgs
+        {
+            Document = @"    {
+        ""Statement"": [
+        {
+            ""Action"": ""sts:AssumeRole"",
+            ""Effect"": ""Allow"",
+            ""Principal"": {
+            ""Service"": [
+                ""emr.aliyuncs.com"",
+                ""ecs.aliyuncs.com""
+            ]
+            }
+        }
+        ],
+        ""Version"": ""1""
+    }
+",
+            Description = "this is a role test.",
+            Force = true,
+        });
+        var defaultCluster = new AliCloud.Emr.Cluster("defaultCluster", new AliCloud.Emr.ClusterArgs
+        {
+            EmrVer = defaultMainVersions.Apply(defaultMainVersions => defaultMainVersions.MainVersions[0].EmrVersion),
+            ClusterType = defaultMainVersions.Apply(defaultMainVersions => defaultMainVersions.MainVersions[0].ClusterTypes[0]),
+            HostGroups = 
+            {
+                new AliCloud.Emr.Inputs.ClusterHostGroupArgs
+                {
+                    HostGroupName = "master_group",
+                    HostGroupType = "MASTER",
+                    NodeCount = "2",
+                    InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].Id),
+                    DiskType = dataDisk.Apply(dataDisk => dataDisk.Types[0].Value),
+                    DiskCapacity = Output.Tuple(dataDisk, dataDisk).Apply(values =>
+                    {
+                        var dataDisk = values.Item1;
+                        var dataDisk1 = values.Item2;
+                        return dataDisk.Types[0].Min > 160 ? dataDisk1.Types[0].Min : 160;
+                    }),
+                    DiskCount = "1",
+                    SysDiskType = systemDisk.Apply(systemDisk => systemDisk.Types[0].Value),
+                    SysDiskCapacity = Output.Tuple(systemDisk, systemDisk).Apply(values =>
+                    {
+                        var systemDisk = values.Item1;
+                        var systemDisk1 = values.Item2;
+                        return systemDisk.Types[0].Min > 160 ? systemDisk1.Types[0].Min : 160;
+                    }),
+                },
+                new AliCloud.Emr.Inputs.ClusterHostGroupArgs
+                {
+                    HostGroupName = "core_group",
+                    HostGroupType = "CORE",
+                    NodeCount = "2",
+                    InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].Id),
+                    DiskType = dataDisk.Apply(dataDisk => dataDisk.Types[0].Value),
+                    DiskCapacity = Output.Tuple(dataDisk, dataDisk).Apply(values =>
+                    {
+                        var dataDisk = values.Item1;
+                        var dataDisk1 = values.Item2;
+                        return dataDisk.Types[0].Min > 160 ? dataDisk1.Types[0].Min : 160;
+                    }),
+                    DiskCount = "4",
+                    SysDiskType = systemDisk.Apply(systemDisk => systemDisk.Types[0].Value),
+                    SysDiskCapacity = Output.Tuple(systemDisk, systemDisk).Apply(values =>
+                    {
+                        var systemDisk = values.Item1;
+                        var systemDisk1 = values.Item2;
+                        return systemDisk.Types[0].Min > 160 ? systemDisk1.Types[0].Min : 160;
+                    }),
+                },
+                new AliCloud.Emr.Inputs.ClusterHostGroupArgs
+                {
+                    HostGroupName = "task_group",
+                    HostGroupType = "TASK",
+                    NodeCount = "2",
+                    InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].Id),
+                    DiskType = dataDisk.Apply(dataDisk => dataDisk.Types[0].Value),
+                    DiskCapacity = Output.Tuple(dataDisk, dataDisk).Apply(values =>
+                    {
+                        var dataDisk = values.Item1;
+                        var dataDisk1 = values.Item2;
+                        return dataDisk.Types[0].Min > 160 ? dataDisk1.Types[0].Min : 160;
+                    }),
+                    DiskCount = "4",
+                    SysDiskType = systemDisk.Apply(systemDisk => systemDisk.Types[0].Value),
+                    SysDiskCapacity = Output.Tuple(systemDisk, systemDisk).Apply(values =>
+                    {
+                        var systemDisk = values.Item1;
+                        var systemDisk1 = values.Item2;
+                        return systemDisk.Types[0].Min > 160 ? systemDisk1.Types[0].Min : 160;
+                    }),
+                },
+            },
+            HighAvailabilityEnable = true,
+            ZoneId = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].ZoneId),
+            SecurityGroupId = @var.Security_group_id == "" ? defaultSecurityGroup.Id : @var.Security_group_id,
+            IsOpenPublicIp = true,
+            ChargeType = "PostPaid",
+            VswitchId = @var.Vswitch_id == "" ? vswitch.Id : @var.Vswitch_id,
+            UserDefinedEmrEcsRole = defaultRole.Name,
+            SshEnable = true,
+            MasterPwd = "ABCtest1234!",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultMainVersions = alicloud.emr.getMainVersions({});
+const defaultInstanceTypes = defaultMainVersions.then(defaultMainVersions => alicloud.emr.getInstanceTypes({
+    destinationResource: "InstanceType",
+    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
+    supportLocalStorage: false,
+    instanceChargeType: "PostPaid",
+    supportNodeTypes: [
+        "MASTER",
+        "CORE",
+        "TASK",
+    ],
+}));
+const dataDisk = Promise.all([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes]).then(([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes1]) => alicloud.emr.getDiskTypes({
+    destinationResource: "DataDisk",
+    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
+    instanceChargeType: "PostPaid",
+    instanceType: defaultInstanceTypes.types[0].id,
+    zoneId: defaultInstanceTypes1.types[0].zoneId,
+}));
+const systemDisk = Promise.all([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes]).then(([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes1]) => alicloud.emr.getDiskTypes({
+    destinationResource: "SystemDisk",
+    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
+    instanceChargeType: "PostPaid",
+    instanceType: defaultInstanceTypes.types[0].id,
+    zoneId: defaultInstanceTypes1.types[0].zoneId,
+}));
+const vpc: alicloud.vpc.Network[];
+for (const range = {value: 0}; range.value < (_var.vpc_id == "" ? 1 : 0 == true); range.value++) {
+    vpc.push(new alicloud.vpc.Network(`vpc-${range.value}`, {cidrBlock: _var.vpc_cidr}));
+}
+const defaultSecurityGroup: alicloud.ecs.SecurityGroup[];
+for (const range = {value: 0}; range.value < (_var.security_group_id == "" ? 1 : 0 == true); range.value++) {
+    defaultSecurityGroup.push(new alicloud.ecs.SecurityGroup(`defaultSecurityGroup-${range.value}`, {vpcId: _var.vpc_id == "" ? vpc.id : _var.vpc_id}));
+}
+// VSwitch Resource for Module
+const vswitch: alicloud.vpc.Switch[];
+for (const range = {value: 0}; range.value < (_var.vswitch_id == "" ? 1 : 0 == true); range.value++) {
+    vswitch.push(new alicloud.vpc.Switch(`vswitch-${range.value}`, {
+        availabilityZone: _var.availability_zone == "" ? defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId) : _var.availability_zone,
+        cidrBlock: _var.vswitch_cidr,
+        vpcId: _var.vpc_id == "" ? vpc.id : _var.vpc_id,
+    }));
+}
+// Ram role Resource for Module
+const defaultRole = new alicloud.ram.Role("defaultRole", {
+    document: `    {
+        "Statement": [
+        {
+            "Action": "sts:AssumeRole",
+            "Effect": "Allow",
+            "Principal": {
+            "Service": [
+                "emr.aliyuncs.com",
+                "ecs.aliyuncs.com"
+            ]
+            }
+        }
+        ],
+        "Version": "1"
+    }
+`,
+    description: "this is a role test.",
+    force: true,
+});
+const defaultCluster = new alicloud.emr.Cluster("defaultCluster", {
+    emrVer: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].emrVersion),
+    clusterType: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].clusterTypes[0]),
+    hostGroups: [
+        {
+            hostGroupName: "master_group",
+            hostGroupType: "MASTER",
+            nodeCount: "2",
+            instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
+            diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
+            diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
+            diskCount: "1",
+            sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
+            sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
+        },
+        {
+            hostGroupName: "core_group",
+            hostGroupType: "CORE",
+            nodeCount: "2",
+            instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
+            diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
+            diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
+            diskCount: "4",
+            sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
+            sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
+        },
+        {
+            hostGroupName: "task_group",
+            hostGroupType: "TASK",
+            nodeCount: "2",
+            instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
+            diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
+            diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
+            diskCount: "4",
+            sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
+            sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
+        },
+    ],
+    highAvailabilityEnable: true,
+    zoneId: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId),
+    securityGroupId: _var.security_group_id == "" ? defaultSecurityGroup.id : _var.security_group_id,
+    isOpenPublicIp: true,
+    chargeType: "PostPaid",
+    vswitchId: _var.vswitch_id == "" ? vswitch.id : _var.vswitch_id,
+    userDefinedEmrEcsRole: defaultRole.name,
+    sshEnable: true,
+    masterPwd: "ABCtest1234!",
+});
+```
+
+{{% /example %}}
+
+### 4. Create a emr gateway cluster
+{{% example csharp %}}
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultMainVersions = Output.Create(AliCloud.Emr.GetMainVersions.InvokeAsync());
+        var defaultInstanceTypes = defaultMainVersions.Apply(defaultMainVersions => Output.Create(AliCloud.Emr.GetInstanceTypes.InvokeAsync(new AliCloud.Emr.GetInstanceTypesArgs
+        {
+            DestinationResource = "InstanceType",
+            ClusterType = defaultMainVersions.MainVersions[0].ClusterTypes[0],
+            SupportLocalStorage = false,
+            InstanceChargeType = "PostPaid",
+            SupportNodeTypes = 
+            {
+                "GATEWAY",
+            },
+        })));
+        var dataDisk = Output.Tuple(defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes).Apply(values =>
+        {
+            var defaultMainVersions = values.Item1;
+            var defaultInstanceTypes = values.Item2;
+            var defaultInstanceTypes1 = values.Item3;
+            return Output.Create(AliCloud.Emr.GetDiskTypes.InvokeAsync(new AliCloud.Emr.GetDiskTypesArgs
+            {
+                DestinationResource = "DataDisk",
+                ClusterType = defaultMainVersions.MainVersions[0].ClusterTypes[0],
+                InstanceChargeType = "PostPaid",
+                InstanceType = defaultInstanceTypes.Types[0].Id,
+                ZoneId = defaultInstanceTypes1.Types[0].ZoneId,
+            }));
+        });
+        var systemDisk = Output.Tuple(defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes).Apply(values =>
+        {
+            var defaultMainVersions = values.Item1;
+            var defaultInstanceTypes = values.Item2;
+            var defaultInstanceTypes1 = values.Item3;
+            return Output.Create(AliCloud.Emr.GetDiskTypes.InvokeAsync(new AliCloud.Emr.GetDiskTypesArgs
+            {
+                DestinationResource = "SystemDisk",
+                ClusterType = defaultMainVersions.MainVersions[0].ClusterTypes[0],
+                InstanceChargeType = "PostPaid",
+                InstanceType = defaultInstanceTypes.Types[0].Id,
+                ZoneId = defaultInstanceTypes1.Types[0].ZoneId,
+            }));
+        });
+        var vpc = new List<AliCloud.Vpc.Network>();
+        for (var rangeIndex = 0; rangeIndex < (@var.Vpc_id == "" ? 1 : 0 == true); rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            vpc.Add(new AliCloud.Vpc.Network($"vpc-{range.Value}", new AliCloud.Vpc.NetworkArgs
+            {
+                CidrBlock = @var.Vpc_cidr,
+            }));
+        }
+        var defaultSecurityGroup = new List<AliCloud.Ecs.SecurityGroup>();
+        for (var rangeIndex = 0; rangeIndex < (@var.Security_group_id == "" ? 1 : 0 == true); rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            defaultSecurityGroup.Add(new AliCloud.Ecs.SecurityGroup($"defaultSecurityGroup-{range.Value}", new AliCloud.Ecs.SecurityGroupArgs
+            {
+                VpcId = @var.Vpc_id == "" ? vpc.Id : @var.Vpc_id,
+            }));
+        }
+        // VSwitch Resource for Module
+        var vswitch = new List<AliCloud.Vpc.Switch>();
+        for (var rangeIndex = 0; rangeIndex < (@var.Vswitch_id == "" ? 1 : 0 == true); rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            vswitch.Add(new AliCloud.Vpc.Switch($"vswitch-{range.Value}", new AliCloud.Vpc.SwitchArgs
+            {
+                AvailabilityZone = @var.Availability_zone == "" ? defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].ZoneId) : @var.Availability_zone,
+                CidrBlock = @var.Vswitch_cidr,
+                VpcId = @var.Vpc_id == "" ? vpc.Id : @var.Vpc_id,
+            }));
+        }
+        // Ram role Resource for Module
+        var defaultRole = new AliCloud.Ram.Role("defaultRole", new AliCloud.Ram.RoleArgs
+        {
+            Document = @"    {
+        ""Statement"": [
+        {
+            ""Action"": ""sts:AssumeRole"",
+            ""Effect"": ""Allow"",
+            ""Principal"": {
+            ""Service"": [
+                ""emr.aliyuncs.com"",
+                ""ecs.aliyuncs.com""
+            ]
+            }
+        }
+        ],
+        ""Version"": ""1""
+    }
+",
+            Description = "this is a role test.",
+            Force = true,
+        });
+        var gateway = new AliCloud.Emr.Cluster("gateway", new AliCloud.Emr.ClusterArgs
+        {
+            EmrVer = defaultMainVersions.Apply(defaultMainVersions => defaultMainVersions.MainVersions[0].EmrVersion),
+            ClusterType = "GATEWAY",
+            HostGroups = 
+            {
+                new AliCloud.Emr.Inputs.ClusterHostGroupArgs
+                {
+                    HostGroupName = "master_group",
+                    HostGroupType = "GATEWAY",
+                    NodeCount = "1",
+                    InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].Id),
+                    DiskType = dataDisk.Apply(dataDisk => dataDisk.Types[0].Value),
+                    DiskCapacity = Output.Tuple(dataDisk, dataDisk).Apply(values =>
+                    {
+                        var dataDisk = values.Item1;
+                        var dataDisk1 = values.Item2;
+                        return dataDisk.Types[0].Min > 160 ? dataDisk1.Types[0].Min : 160;
+                    }),
+                    DiskCount = "1",
+                    SysDiskType = systemDisk.Apply(systemDisk => systemDisk.Types[0].Value),
+                    SysDiskCapacity = Output.Tuple(systemDisk, systemDisk).Apply(values =>
+                    {
+                        var systemDisk = values.Item1;
+                        var systemDisk1 = values.Item2;
+                        return systemDisk.Types[0].Min > 160 ? systemDisk1.Types[0].Min : 160;
+                    }),
+                },
+            },
+            HighAvailabilityEnable = true,
+            ZoneId = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.Types[0].ZoneId),
+            SecurityGroupId = @var.Security_group_id == "" ? defaultSecurityGroup.Id : @var.Security_group_id,
+            IsOpenPublicIp = true,
+            ChargeType = "PostPaid",
+            VswitchId = @var.Vswitch_id == "" ? vswitch.Id : @var.Vswitch_id,
+            UserDefinedEmrEcsRole = defaultRole.Name,
+            SshEnable = true,
+            MasterPwd = "ABCtest1234!",
+            RelatedClusterId = related_cluster_id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultMainVersions = alicloud.emr.getMainVersions({});
+const defaultInstanceTypes = defaultMainVersions.then(defaultMainVersions => alicloud.emr.getInstanceTypes({
+    destinationResource: "InstanceType",
+    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
+    supportLocalStorage: false,
+    instanceChargeType: "PostPaid",
+    supportNodeTypes: ["GATEWAY"],
+}));
+const dataDisk = Promise.all([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes]).then(([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes1]) => alicloud.emr.getDiskTypes({
+    destinationResource: "DataDisk",
+    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
+    instanceChargeType: "PostPaid",
+    instanceType: defaultInstanceTypes.types[0].id,
+    zoneId: defaultInstanceTypes1.types[0].zoneId,
+}));
+const systemDisk = Promise.all([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes]).then(([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes1]) => alicloud.emr.getDiskTypes({
+    destinationResource: "SystemDisk",
+    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
+    instanceChargeType: "PostPaid",
+    instanceType: defaultInstanceTypes.types[0].id,
+    zoneId: defaultInstanceTypes1.types[0].zoneId,
+}));
+const vpc: alicloud.vpc.Network[];
+for (const range = {value: 0}; range.value < (_var.vpc_id == "" ? 1 : 0 == true); range.value++) {
+    vpc.push(new alicloud.vpc.Network(`vpc-${range.value}`, {cidrBlock: _var.vpc_cidr}));
+}
+const defaultSecurityGroup: alicloud.ecs.SecurityGroup[];
+for (const range = {value: 0}; range.value < (_var.security_group_id == "" ? 1 : 0 == true); range.value++) {
+    defaultSecurityGroup.push(new alicloud.ecs.SecurityGroup(`defaultSecurityGroup-${range.value}`, {vpcId: _var.vpc_id == "" ? vpc.id : _var.vpc_id}));
+}
+// VSwitch Resource for Module
+const vswitch: alicloud.vpc.Switch[];
+for (const range = {value: 0}; range.value < (_var.vswitch_id == "" ? 1 : 0 == true); range.value++) {
+    vswitch.push(new alicloud.vpc.Switch(`vswitch-${range.value}`, {
+        availabilityZone: _var.availability_zone == "" ? defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId) : _var.availability_zone,
+        cidrBlock: _var.vswitch_cidr,
+        vpcId: _var.vpc_id == "" ? vpc.id : _var.vpc_id,
+    }));
+}
+// Ram role Resource for Module
+const defaultRole = new alicloud.ram.Role("defaultRole", {
+    document: `    {
+        "Statement": [
+        {
+            "Action": "sts:AssumeRole",
+            "Effect": "Allow",
+            "Principal": {
+            "Service": [
+                "emr.aliyuncs.com",
+                "ecs.aliyuncs.com"
+            ]
+            }
+        }
+        ],
+        "Version": "1"
+    }
+`,
+    description: "this is a role test.",
+    force: true,
+});
+const gateway = new alicloud.emr.Cluster("gateway", {
+    emrVer: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].emrVersion),
+    clusterType: "GATEWAY",
+    hostGroups: [{
+        hostGroupName: "master_group",
+        hostGroupType: "GATEWAY",
+        nodeCount: "1",
+        instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
+        diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
+        diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
+        diskCount: "1",
+        sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
+        sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
+    }],
+    highAvailabilityEnable: true,
+    zoneId: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId),
+    securityGroupId: _var.security_group_id == "" ? defaultSecurityGroup.id : _var.security_group_id,
+    isOpenPublicIp: true,
+    chargeType: "PostPaid",
+    vswitchId: _var.vswitch_id == "" ? vswitch.id : _var.vswitch_id,
+    userDefinedEmrEcsRole: defaultRole.name,
+    sshEnable: true,
+    masterPwd: "ABCtest1234!",
+    relatedClusterId: related_cluster_id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}
@@ -25,7 +1258,7 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/emr/#pulumi_alicloud.emr.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[List[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deposit_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eas_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">emr_ver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">high_availability_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_groups</span><span class="p">:</span> <span class="nx">Optional[List[ClusterHostGroupArgs]]</span> = None<span class="p">, </span><span class="nx">is_open_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_pair_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_pwd</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">option_software_lists</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">related_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">use_local_metadb</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_defined_emr_ecs_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/emr/#pulumi_alicloud.emr.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deposit_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eas_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">emr_ver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">high_availability_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterHostGroupArgs]]</span> = None<span class="p">, </span><span class="nx">is_open_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_pair_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_pwd</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">option_software_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">related_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">use_local_metadb</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_defined_emr_ecs_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -944,7 +2177,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#bootstrap_actions_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">List[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">Sequence[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -998,7 +2231,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#host_groups_python" style="color: inherit; text-decoration: inherit;">host_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhostgroup">List[Cluster<wbr>Host<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterhostgroup">Sequence[Cluster<wbr>Host<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
 {{% /md %}}</dd>
@@ -1052,7 +2285,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#option_software_lists_python" style="color: inherit; text-decoration: inherit;">option_<wbr>software_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Optional software list.
 {{% /md %}}</dd>
@@ -1233,7 +2466,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[List[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deposit_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eas_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">emr_ver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">high_availability_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_groups</span><span class="p">:</span> <span class="nx">Optional[List[ClusterHostGroupArgs]]</span> = None<span class="p">, </span><span class="nx">is_open_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_pair_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_pwd</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">option_software_lists</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">related_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">use_local_metadb</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_defined_emr_ecs_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deposit_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eas_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">emr_ver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">high_availability_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterHostGroupArgs]]</span> = None<span class="p">, </span><span class="nx">is_open_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_pair_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_pwd</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">option_software_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">related_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">use_local_metadb</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_defined_emr_ecs_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2061,7 +3294,7 @@ The following state arguments are supported:
 <a href="#state_bootstrap_actions_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">List[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">Sequence[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2137,7 +3370,7 @@ The following state arguments are supported:
 <a href="#state_host_groups_python" style="color: inherit; text-decoration: inherit;">host_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhostgroup">List[Cluster<wbr>Host<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterhostgroup">Sequence[Cluster<wbr>Host<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
 {{% /md %}}</dd>
@@ -2191,7 +3424,7 @@ The following state arguments are supported:
 <a href="#state_option_software_lists_python" style="color: inherit; text-decoration: inherit;">option_<wbr>software_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Optional software list.
 {{% /md %}}</dd>
@@ -3101,7 +4334,7 @@ The following state arguments are supported:
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If charge type is PrePaid, this should be specified, unit is month. Supported value: 1、2、3、4、5、6、7、8、9、12、24、36.
 {{% /md %}}</dd>
