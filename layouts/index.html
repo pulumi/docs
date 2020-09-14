@@ -1,11 +1,10 @@
 {{ define "hero" }}
     <header class="header-hero-home text-center mb-8 relative px-4">
-
-        {{ partial "alert" . }}
-
+        <div class="hero-alert">
+            {{ partial "alert" . }}
+        </div>
         <div class="relative">
             <div class="relative overflow-visible inline-block">
-
                 <h1 class="font-sans font-body font-normal">
                     {{ .Params.heading }}
                 </h1>
@@ -16,7 +15,6 @@
                     <img class="w-48" src="/images/mascot/pulumipus.svg" alt="Pulumi mascot">
                 </div>
             </div>
-
             <div class="mt-8">
                 <a href="{{ relref . "/docs/get-started" }}" class="btn bg-purple-300 hover:bg-purple-200 border-none px-8 py-4 transition-all text-sm rounded-full uppercase shadow-lg" title="Create your first project with Pulumi">
                     Get Started

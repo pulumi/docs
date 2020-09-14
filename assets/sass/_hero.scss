@@ -22,6 +22,58 @@
         p {
             @apply text-purple-100 text-2xl max-w-2xl inline-block leading-relaxed mb-4;
         }
+
+        @screen md {
+            @keyframes growVertically {
+                from {
+                    @apply h-0;
+                }
+                to {
+                    @apply h-12;
+                }
+            }
+
+            @keyframes growHorizontally {
+                from {
+                    max-width: 0;
+                }
+                to {
+                    max-width: 1000px;
+                }
+            }
+
+            @keyframes animateBorder {
+                from {
+                    @apply border-blue-700;
+                }
+                to {
+                    @apply border-blue-600;
+                }
+            }
+
+            .hero-alert {
+                .alert {
+                    @apply h-0 opacity-0 overflow-hidden whitespace-no-wrap;
+                    max-width: 0;
+                    animation:
+                        growVertically 250ms ease-in 600ms forwards,
+                        growHorizontally 300ms ease-in 1100ms forwards,
+                        fadeIn 200ms ease-in 1200ms forwards;
+
+                    .alert-chicklet {
+                        @apply opacity-0 border-blue-700;
+                        animation:
+                            animateBorder 200ms ease-in 2000ms forwards,
+                            fadeIn 300ms ease-in 1400ms forwards;
+                    }
+
+                    .alert-content, {
+                        @apply opacity-0;
+                        animation: fadeIn 200ms ease-in 1350ms forwards;
+                    }
+                }
+            }
+        }
     }
 
     &-glow {
