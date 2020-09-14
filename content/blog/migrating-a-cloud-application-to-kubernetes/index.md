@@ -45,9 +45,7 @@ The `package.json` file lists the libraries used by the project. We will add the
 
 ```json
 "@pulumi/eks": "^0.20.0",
-"@pulumi/cloud-aws": "^0.19.0",
-"@pulumi/postgresql": "^2.3.0",
-"pg": "^8.3.3"
+"@pulumi/cloud-aws": "^0.19.0"
 ```
 
 Some of the components of our Kubernetes project are nearly identical to those in the PERN application. We can copy many of these files from the example into our directory.
