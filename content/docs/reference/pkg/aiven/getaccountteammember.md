@@ -2,7 +2,7 @@
 ---
 title: "GetAccountTeamMember"
 title_tag: "Function GetAccountTeamMember | Package Aiven"
-meta_desc: "Explore the GetAccountTeamMember function of the Aiven package, including examples, input properties, output properties, and supporting types. {{% examples %}}"
+meta_desc: "Explore the GetAccountTeamMember function of the Aiven package, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -11,87 +11,6 @@ meta_desc: "Explore the GetAccountTeamMember function of the Aiven package, incl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var foo = Output.Create(Aiven.GetAccountTeamMember.InvokeAsync(new Aiven.GetAccountTeamMemberArgs
-        {
-            AccountId = aiven_account.Developers.Account_id,
-            TeamId = aiven_account.Developers.Account_id,
-            UserEmail = "user+1@example.com",
-        }));
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.LookupAccountTeamMember(ctx, &aiven.LookupAccountTeamMemberArgs{
-			AccountId: aiven_account.Developers.Account_id,
-			TeamId:    aiven_account.Developers.Account_id,
-			UserEmail: "user+1@example.com",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-foo = aiven.get_account_team_member(account_id=aiven_account["developers"]["account_id"],
-    team_id=aiven_account["developers"]["account_id"],
-    user_email="user+1@example.com")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const foo = pulumi.all([aiven_account_developers.accountId, aiven_account_developers.accountId]).apply(([aiven_account_developersAccountId, aiven_account_developersAccountId1]) => aiven.getAccountTeamMember({
-    accountId: aiven_account_developersAccountId,
-    teamId: aiven_account_developersAccountId1,
-    userEmail: "user+1@example.com",
-}, { async: true }));
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetAccountTeamMember {#using}

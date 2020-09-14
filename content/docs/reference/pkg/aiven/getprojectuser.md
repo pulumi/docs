@@ -2,7 +2,7 @@
 ---
 title: "GetProjectUser"
 title_tag: "Function GetProjectUser | Package Aiven"
-meta_desc: "Explore the GetProjectUser function of the Aiven package, including examples, input properties, output properties, and supporting types. {{% examples %}}"
+meta_desc: "Explore the GetProjectUser function of the Aiven package, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -11,83 +11,6 @@ meta_desc: "Explore the GetProjectUser function of the Aiven package, including 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var mytestuser = Output.Create(Aiven.GetProjectUser.InvokeAsync(new Aiven.GetProjectUserArgs
-        {
-            Project = data.Aiven_project.Myproject.Project,
-            Email = "john.doe@example.com",
-        }));
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.LookupProjectUser(ctx, &aiven.LookupProjectUserArgs{
-			Project: data.Aiven_project.Myproject.Project,
-			Email:   "john.doe@example.com",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-mytestuser = aiven.get_project_user(project=data["aiven_project"]["myproject"]["project"],
-    email="john.doe@example.com")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const mytestuser = aiven.getProjectUser({
-    project: data.aiven_project.myproject.project,
-    email: "john.doe@example.com",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetProjectUser {#using}

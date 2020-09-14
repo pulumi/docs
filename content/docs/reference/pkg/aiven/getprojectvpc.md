@@ -2,7 +2,7 @@
 ---
 title: "GetProjectVpc"
 title_tag: "Function GetProjectVpc | Package Aiven"
-meta_desc: "Explore the GetProjectVpc function of the Aiven package, including examples, input properties, output properties, and supporting types. {{% examples %}}"
+meta_desc: "Explore the GetProjectVpc function of the Aiven package, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -11,83 +11,6 @@ meta_desc: "Explore the GetProjectVpc function of the Aiven package, including e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myvpc = Output.Create(Aiven.GetProjectVpc.InvokeAsync(new Aiven.GetProjectVpcArgs
-        {
-            Project = data.Aiven_project.Myproject.Project,
-            CloudName = "google-europe-west1",
-        }));
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.LookupProjectVpc(ctx, &aiven.LookupProjectVpcArgs{
-			Project:   data.Aiven_project.Myproject.Project,
-			CloudName: "google-europe-west1",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-myvpc = aiven.get_project_vpc(project=data["aiven_project"]["myproject"]["project"],
-    cloud_name="google-europe-west1")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const myvpc = aiven.getProjectVpc({
-    project: data.aiven_project.myproject.project,
-    cloudName: "google-europe-west1",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetProjectVpc {#using}

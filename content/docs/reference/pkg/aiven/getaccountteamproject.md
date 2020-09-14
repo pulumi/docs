@@ -2,7 +2,7 @@
 ---
 title: "GetAccountTeamProject"
 title_tag: "Function GetAccountTeamProject | Package Aiven"
-meta_desc: "Explore the GetAccountTeamProject function of the Aiven package, including examples, input properties, output properties, and supporting types. {{% examples %}}"
+meta_desc: "Explore the GetAccountTeamProject function of the Aiven package, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -11,87 +11,6 @@ meta_desc: "Explore the GetAccountTeamProject function of the Aiven package, inc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var accountTeamProject1 = Output.Create(Aiven.GetAccountTeamProject.InvokeAsync(new Aiven.GetAccountTeamProjectArgs
-        {
-            AccountId = aiven_account_team.Developers.Account_id,
-            ProjectName = aiven_project.Project1.Project,
-            TeamId = aiven_account_team.Developers.Team_id,
-        }));
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.LookupAccountTeamProject(ctx, &aiven.LookupAccountTeamProjectArgs{
-			AccountId:   aiven_account_team.Developers.Account_id,
-			ProjectName: aiven_project.Project1.Project,
-			TeamId:      aiven_account_team.Developers.Team_id,
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-account_team_project1 = aiven.get_account_team_project(account_id=aiven_account_team["developers"]["account_id"],
-    project_name=aiven_project["project1"]["project"],
-    team_id=aiven_account_team["developers"]["team_id"])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const accountTeamProject1 = pulumi.all([aiven_account_team_developers.accountId, aiven_project_project1.project, aiven_account_team_developers.teamId]).apply(([accountId, project, teamId]) => aiven.getAccountTeamProject({
-    accountId: accountId,
-    projectName: project,
-    teamId: teamId,
-}, { async: true }));
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetAccountTeamProject {#using}
