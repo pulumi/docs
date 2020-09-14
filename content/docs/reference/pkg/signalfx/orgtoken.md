@@ -53,7 +53,40 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := signalfx.NewOrgToken(ctx, "myteamkey0", &signalfx.OrgTokenArgs{
+			Description: pulumi.String("My team's rad key"),
+			HostOrUsageLimits: &signalfx.OrgTokenHostOrUsageLimitsArgs{
+				ContainerLimit:                      pulumi.Int(200),
+				ContainerNotificationThreshold:      pulumi.Int(180),
+				CustomMetricsLimit:                  pulumi.Int(1000),
+				CustomMetricsNotificationThreshold:  pulumi.Int(900),
+				HighResMetricsLimit:                 pulumi.Int(1000),
+				HighResMetricsNotificationThreshold: pulumi.Int(900),
+				HostLimit:                           pulumi.Int(100),
+				HostNotificationThreshold:           pulumi.Int(90),
+			},
+			Notifications: pulumi.StringArray{
+				pulumi.String("Email,foo-alerts@bar.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -63,16 +96,16 @@ import pulumi_signalfx as signalfx
 
 myteamkey0 = signalfx.OrgToken("myteamkey0",
     description="My team's rad key",
-    host_or_usage_limits={
-        "containerLimit": 200,
-        "containerNotificationThreshold": 180,
-        "customMetricsLimit": 1000,
-        "customMetricsNotificationThreshold": 900,
-        "highResMetricsLimit": 1000,
-        "highResMetricsNotificationThreshold": 900,
-        "hostLimit": 100,
-        "hostNotificationThreshold": 90,
-    },
+    host_or_usage_limits=signalfx.OrgTokenHostOrUsageLimitsArgs(
+        container_limit=200,
+        container_notification_threshold=180,
+        custom_metrics_limit=1000,
+        custom_metrics_notification_threshold=900,
+        high_res_metrics_limit=1000,
+        high_res_metrics_notification_threshold=900,
+        host_limit=100,
+        host_notification_threshold=90,
+    ),
     notifications=["Email,foo-alerts@bar.com"])
 ```
 
@@ -114,11 +147,11 @@ const myteamkey0 = new signalfx.OrgToken("myteamkey0", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/#pulumi_signalfx.OrgToken">OrgToken</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>disabled=None<span class="p">, </span>dpm_limits=None<span class="p">, </span>host_or_usage_limits=None<span class="p">, </span>name=None<span class="p">, </span>notifications=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/#pulumi_signalfx.OrgToken">OrgToken</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dpm_limits</span><span class="p">:</span> <span class="nx">Optional[OrgTokenDpmLimitsArgs]</span> = None<span class="p">, </span><span class="nx">host_or_usage_limits</span><span class="p">:</span> <span class="nx">Optional[OrgTokenHostOrUsageLimitsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#OrgToken">NewOrgToken</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#OrgTokenArgs">OrgTokenArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#OrgToken">OrgToken</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#OrgToken">NewOrgToken</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#OrgTokenArgs">OrgTokenArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#OrgToken">OrgToken</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -192,7 +225,7 @@ const myteamkey0 = new signalfx.OrgToken("myteamkey0", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -212,7 +245,7 @@ const myteamkey0 = new signalfx.OrgToken("myteamkey0", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#OrgTokenArgs">OrgTokenArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#OrgTokenArgs">OrgTokenArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -222,7 +255,7 @@ const myteamkey0 = new signalfx.OrgToken("myteamkey0", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -349,7 +382,8 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Where to send notifications about this token's limits. Please consult the `Notification Format` laid out in detectors.
+    <dd>{{% md %}}List of strings specifying where notifications will be sent when an incident occurs. See
+https://developers.signalfx.com/v2/docs/detector-model#notifications-models for more info
 {{% /md %}}</dd>
 
 </dl>
@@ -422,7 +456,8 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Where to send notifications about this token's limits. Please consult the `Notification Format` laid out in detectors.
+    <dd>{{% md %}}List of strings specifying where notifications will be sent when an incident occurs. See
+https://developers.signalfx.com/v2/docs/detector-model#notifications-models for more info
 {{% /md %}}</dd>
 
 </dl>
@@ -495,7 +530,8 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Where to send notifications about this token's limits. Please consult the `Notification Format` laid out in detectors.
+    <dd>{{% md %}}List of strings specifying where notifications will be sent when an incident occurs. See
+https://developers.signalfx.com/v2/docs/detector-model#notifications-models for more info
 {{% /md %}}</dd>
 
 </dl>
@@ -533,7 +569,7 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#dpm_limits_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>limits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orgtokendpmlimits">Dict[Org<wbr>Token<wbr>Dpm<wbr>Limits]</a></span>
+        <span class="property-type"><a href="#orgtokendpmlimits">Org<wbr>Token<wbr>Dpm<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify DPM-based limits for this token.
 {{% /md %}}</dd>
@@ -544,7 +580,7 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#host_or_usage_limits_python" style="color: inherit; text-decoration: inherit;">host_<wbr>or_<wbr>usage_<wbr>limits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orgtokenhostorusagelimits">Dict[Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits]</a></span>
+        <span class="property-type"><a href="#orgtokenhostorusagelimits">Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify Usage-based limits for this token.
 {{% /md %}}</dd>
@@ -566,9 +602,10 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}Where to send notifications about this token's limits. Please consult the `Notification Format` laid out in detectors.
+    <dd>{{% md %}}List of strings specifying where notifications will be sent when an incident occurs. See
+https://developers.signalfx.com/v2/docs/detector-model#notifications-models for more info
 {{% /md %}}</dd>
 
 </dl>
@@ -713,15 +750,16 @@ Get an existing OrgToken resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>disabled=None<span class="p">, </span>dpm_limits=None<span class="p">, </span>host_or_usage_limits=None<span class="p">, </span>name=None<span class="p">, </span>notifications=None<span class="p">, </span>secret=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dpm_limits</span><span class="p">:</span> <span class="nx">Optional[OrgTokenDpmLimitsArgs]</span> = None<span class="p">, </span><span class="nx">host_or_usage_limits</span><span class="p">:</span> <span class="nx">Optional[OrgTokenHostOrUsageLimitsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> OrgToken</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrgToken<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#OrgTokenState">OrgTokenState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#OrgToken">OrgToken</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrgToken<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#OrgTokenState">OrgTokenState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#OrgToken">OrgToken</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.OrgToken.html">OrgToken</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx..OrgTokenState.html">OrgTokenState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.OrgToken.html">OrgToken</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx..OrgTokenState.html">OrgTokenState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -890,7 +928,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Where to send notifications about this token's limits. Please consult the `Notification Format` laid out in detectors.
+    <dd>{{% md %}}List of strings specifying where notifications will be sent when an incident occurs. See
+https://developers.signalfx.com/v2/docs/detector-model#notifications-models for more info
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -974,7 +1013,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Where to send notifications about this token's limits. Please consult the `Notification Format` laid out in detectors.
+    <dd>{{% md %}}List of strings specifying where notifications will be sent when an incident occurs. See
+https://developers.signalfx.com/v2/docs/detector-model#notifications-models for more info
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1058,7 +1098,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Where to send notifications about this token's limits. Please consult the `Notification Format` laid out in detectors.
+    <dd>{{% md %}}List of strings specifying where notifications will be sent when an incident occurs. See
+https://developers.signalfx.com/v2/docs/detector-model#notifications-models for more info
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1107,7 +1148,7 @@ The following state arguments are supported:
 <a href="#state_dpm_limits_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>limits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orgtokendpmlimits">Dict[Org<wbr>Token<wbr>Dpm<wbr>Limits]</a></span>
+        <span class="property-type"><a href="#orgtokendpmlimits">Org<wbr>Token<wbr>Dpm<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify DPM-based limits for this token.
 {{% /md %}}</dd>
@@ -1118,7 +1159,7 @@ The following state arguments are supported:
 <a href="#state_host_or_usage_limits_python" style="color: inherit; text-decoration: inherit;">host_<wbr>or_<wbr>usage_<wbr>limits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orgtokenhostorusagelimits">Dict[Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits]</a></span>
+        <span class="property-type"><a href="#orgtokenhostorusagelimits">Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify Usage-based limits for this token.
 {{% /md %}}</dd>
@@ -1140,9 +1181,10 @@ The following state arguments are supported:
 <a href="#state_notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}Where to send notifications about this token's limits. Please consult the `Notification Format` laid out in detectors.
+    <dd>{{% md %}}List of strings specifying where notifications will be sent when an incident occurs. See
+https://developers.signalfx.com/v2/docs/detector-model#notifications-models for more info
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1177,7 +1219,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#OrgTokenDpmLimitsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#OrgTokenDpmLimitsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#OrgTokenDpmLimitsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#OrgTokenDpmLimitsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.OrgTokenDpmLimitsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.OrgTokenDpmLimits.html">output</a> API doc for this type.
@@ -1278,22 +1320,22 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="dpmlimit_python">
-<a href="#dpmlimit_python" style="color: inherit; text-decoration: inherit;">dpm<wbr>Limit</a>
+        <span id="dpm_limit_python">
+<a href="#dpm_limit_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The datapoints per minute (dpm) limit for this token. If you exceed this limit, SignalFx sends out an alert.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dpmnotificationthreshold_python">
-<a href="#dpmnotificationthreshold_python" style="color: inherit; text-decoration: inherit;">dpm<wbr>Notification<wbr>Threshold</a>
+        <span id="dpm_notification_threshold_python">
+<a href="#dpm_notification_threshold_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>notification_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}DPM level at which SignalFx sends the notification for this token. If you don't specify a notification, SignalFx sends the generic notification.
 {{% /md %}}</dd>
@@ -1311,7 +1353,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#OrgTokenHostOrUsageLimitsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#OrgTokenHostOrUsageLimitsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#OrgTokenHostOrUsageLimitsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#OrgTokenHostOrUsageLimitsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.OrgTokenHostOrUsageLimitsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.OrgTokenHostOrUsageLimits.html">output</a> API doc for this type.
@@ -1610,88 +1652,88 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="containerlimit_python">
-<a href="#containerlimit_python" style="color: inherit; text-decoration: inherit;">container<wbr>Limit</a>
+        <span id="container_limit_python">
+<a href="#container_limit_python" style="color: inherit; text-decoration: inherit;">container_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max number of Docker containers that can use this token
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="containernotificationthreshold_python">
-<a href="#containernotificationthreshold_python" style="color: inherit; text-decoration: inherit;">container<wbr>Notification<wbr>Threshold</a>
+        <span id="container_notification_threshold_python">
+<a href="#container_notification_threshold_python" style="color: inherit; text-decoration: inherit;">container_<wbr>notification_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Notification threshold for Docker containers
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="custommetricslimit_python">
-<a href="#custommetricslimit_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Metrics<wbr>Limit</a>
+        <span id="custom_metrics_limit_python">
+<a href="#custom_metrics_limit_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>metrics_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max number of custom metrics that can be sent with this token
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="custommetricsnotificationthreshold_python">
-<a href="#custommetricsnotificationthreshold_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Metrics<wbr>Notification<wbr>Threshold</a>
+        <span id="custom_metrics_notification_threshold_python">
+<a href="#custom_metrics_notification_threshold_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>metrics_<wbr>notification_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Notification threshold for custom metrics
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="highresmetricslimit_python">
-<a href="#highresmetricslimit_python" style="color: inherit; text-decoration: inherit;">high<wbr>Res<wbr>Metrics<wbr>Limit</a>
+        <span id="high_res_metrics_limit_python">
+<a href="#high_res_metrics_limit_python" style="color: inherit; text-decoration: inherit;">high_<wbr>res_<wbr>metrics_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max number of hi-res metrics that can be sent with this toke
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="highresmetricsnotificationthreshold_python">
-<a href="#highresmetricsnotificationthreshold_python" style="color: inherit; text-decoration: inherit;">high<wbr>Res<wbr>Metrics<wbr>Notification<wbr>Threshold</a>
+        <span id="high_res_metrics_notification_threshold_python">
+<a href="#high_res_metrics_notification_threshold_python" style="color: inherit; text-decoration: inherit;">high_<wbr>res_<wbr>metrics_<wbr>notification_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Notification threshold for hi-res metrics
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostlimit_python">
-<a href="#hostlimit_python" style="color: inherit; text-decoration: inherit;">host<wbr>Limit</a>
+        <span id="host_limit_python">
+<a href="#host_limit_python" style="color: inherit; text-decoration: inherit;">host_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max number of hosts that can use this token
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostnotificationthreshold_python">
-<a href="#hostnotificationthreshold_python" style="color: inherit; text-decoration: inherit;">host<wbr>Notification<wbr>Threshold</a>
+        <span id="host_notification_threshold_python">
+<a href="#host_notification_threshold_python" style="color: inherit; text-decoration: inherit;">host_<wbr>notification_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Notification threshold for hosts
 {{% /md %}}</dd>
@@ -1714,6 +1756,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/terraform-providers/terraform-provider-signalfx).</dd>
+	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).</dd>
 </dl>
 
