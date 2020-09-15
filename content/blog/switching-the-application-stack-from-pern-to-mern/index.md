@@ -11,7 +11,7 @@ In this blog post, we return to the PERN application we previously [migrated to 
 
 <!--more-->
 
-The main difference between PostgreSQL and MongoDB is data is stored. PostgreSQL is a relational database that allows users to create complex tables and relations between values. In contrast, MongoDB is a key-value database that stores data in simple collections without any special relations. Because the application takes the form of three distinct components--the client, server, and database--almost all of the changes will occur in the database component. In fact, we can reuse most of the existing code and will be able to change the database without additional hassle.
+The main difference between PostgreSQL and MongoDB is data is stored. PostgreSQL is a relational database that allows users to create complex tables and relations between values. In contrast, MongoDB is a key-value database that stores data in simple collections instead of a relational model. Because the application takes the form of three distinct components--the client, server, and database--almost all of the changes will occur in the database component. In fact, we can reuse most of the existing code and will be able to change the database without additional hassle.
 
 The first step to switching the stack is to clone the [PERN Kubernetes example](https://github.com/pulumi/examples/tree/master/aws-ts-k8s-voting-app). We'll use a sparse clone to copy only the `aws-ts-k8s-voting-app` directory.
 
