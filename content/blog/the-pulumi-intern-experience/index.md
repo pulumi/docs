@@ -52,7 +52,7 @@ Thank you [Albert]({{< relref "/blog/author/albert-zhong" >}}), [Zephyr]({{< rel
 
 Thank you [Evan](https://www.pulumi.com/blog/author/evan-boyle) for being an amazing mentor by being so approachable, and always being there everyday. You were always so patient with me and answered virtually any question I threw at you :)
 
-Thank you [Lee](https://www.pulumi.com/blog/author/lee-zen) and and [Luke](https://www.pulumi.com/blog/author/luke-hoban) for being such organized, motivating, and empathetic managers!
+Thank you [Lee]({{< relref "/blog/author/lee-zen" >}}) and and [Luke]({{< relref "/blog/author/luke-hoban" >}}) for being such organized, motivating, and empathetic managers!
 
 Thank you to [Levi](https://www.pulumi.com/blog/author/levi-blackstone), [Lee Briggs](https://www.pulumi.com/blog/author/lee-briggs), Komal, [Pat](https://www.pulumi.com/blog/author/pat-gavlin), and [Mikhail](https://www.pulumi.com/blog/author/mikhail-shilkov) for being so open and friendly and always being available and sharing your experience when I needed anything at all!
 
