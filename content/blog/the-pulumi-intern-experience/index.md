@@ -42,7 +42,7 @@ Another feature that came out of this was a UI layer to access it directly on th
 
 ## Final Thoughts
 
-Coming into industry work right out of my freshman year of college was a daunting task; however, I wouldn’t have wanted to intern at any other place other than Pulumi! The mentorship, team camaraderie, and, most importantly, the exposure to new technologies and learning made this the best possible experience I could’ve thought of. I’m super proud of what I could	accomplish with the team, and I’m excited to see what the future holds for the company!
+Coming into industry work right out of my freshman year of college was a daunting task; however, I wouldn’t have wanted to intern at any other place other than Pulumi! The mentorship, team camaraderie, and, most importantly, the exposure to new technologies and learning made this the best possible experience I could’ve imagined. I’m super proud of what I could	accomplish with the team, and I’m excited to see what the future holds for the company!
 
 What is the cloud? Three months later, I can say that the cloud, to me, is a vast tool for people to build their visions and dreams, and Pulumi is the place I would come to help me get that started :)
 
