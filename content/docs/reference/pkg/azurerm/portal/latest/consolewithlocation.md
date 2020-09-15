@@ -12,6 +12,67 @@ meta_desc: "Explore the ConsoleWithLocation resource of the portal/latest module
 
 Cloud shell console
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PutConsole
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var consoleWithLocation = new AzureRM.Portal.Latest.ConsoleWithLocation("consoleWithLocation", new AzureRM.Portal.Latest.ConsoleWithLocationArgs
+        {
+            ConsoleName = "default",
+            Location = "eastus",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+console_with_location = azurerm.portal.latest.ConsoleWithLocation("consoleWithLocation",
+    console_name="default",
+    location="eastus")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const consoleWithLocation = new azurerm.portal.latest.ConsoleWithLocation("consoleWithLocation", {
+    consoleName: "default",
+    location: "eastus",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ConsoleWithLocation Resource {#create}

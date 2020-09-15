@@ -12,6 +12,73 @@ meta_desc: "Explore the LinkedWorkspace resource of the machinelearningservices/
 
 Linked workspace.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateLinkedWorkspace
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var linkedWorkspace = new AzureRM.MachineLearningServices.Latest.LinkedWorkspace("linkedWorkspace", new AzureRM.MachineLearningServices.Latest.LinkedWorkspaceArgs
+        {
+            LinkName = "link-1",
+            Name = "link-1",
+            ResourceGroupName = "resourceGroup-1",
+            WorkspaceName = "workspace-1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+linked_workspace = azurerm.machinelearningservices.latest.LinkedWorkspace("linkedWorkspace",
+    link_name="link-1",
+    name="link-1",
+    resource_group_name="resourceGroup-1",
+    workspace_name="workspace-1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const linkedWorkspace = new azurerm.machinelearningservices.latest.LinkedWorkspace("linkedWorkspace", {
+    linkName: "link-1",
+    name: "link-1",
+    resourceGroupName: "resourceGroup-1",
+    workspaceName: "workspace-1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LinkedWorkspace Resource {#create}

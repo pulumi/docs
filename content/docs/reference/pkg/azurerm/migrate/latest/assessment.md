@@ -12,6 +12,76 @@ meta_desc: "Explore the Assessment resource of the migrate/latest module, includ
 
 An assessment created for a group in the Migration project.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Assessments_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var assessment = new AzureRM.Migrate.Latest.Assessment("assessment", new AzureRM.Migrate.Latest.AssessmentArgs
+        {
+            AssessmentName = "assessment_5_14_2019_16_48_47",
+            ETag = "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
+            GroupName = "Group2",
+            ProjectName = "abgoyalWEselfhostb72bproject",
+            ResourceGroupName = "abgoyal-westEurope",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+assessment = azurerm.migrate.latest.Assessment("assessment",
+    assessment_name="assessment_5_14_2019_16_48_47",
+    e_tag="\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
+    group_name="Group2",
+    project_name="abgoyalWEselfhostb72bproject",
+    resource_group_name="abgoyal-westEurope")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const assessment = new azurerm.migrate.latest.Assessment("assessment", {
+    assessmentName: "assessment_5_14_2019_16_48_47",
+    eTag: "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
+    groupName: "Group2",
+    projectName: "abgoyalWEselfhostb72bproject",
+    resourceGroupName: "abgoyal-westEurope",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Assessment Resource {#create}

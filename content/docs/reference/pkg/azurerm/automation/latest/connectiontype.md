@@ -12,6 +12,131 @@ meta_desc: "Explore the ConnectionType resource of the automation/latest module,
 
 Definition of the connection type.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update connection type
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var connectionType = new AzureRM.Automation.Latest.ConnectionType("connectionType", new AzureRM.Automation.Latest.ConnectionTypeArgs
+        {
+            AutomationAccountName = "myAutomationAccount22",
+            ConnectionTypeName = "myCT",
+            FieldDefinitions = 
+            {
+                { "myBoolField", new AzureRM.Automation.Latest.Inputs.FieldDefinitionArgs
+                {
+                    IsEncrypted = false,
+                    IsOptional = false,
+                    Type = "bool",
+                } },
+                { "myStringField", new AzureRM.Automation.Latest.Inputs.FieldDefinitionArgs
+                {
+                    IsEncrypted = false,
+                    IsOptional = false,
+                    Type = "string",
+                } },
+                { "myStringFieldEncrypted", new AzureRM.Automation.Latest.Inputs.FieldDefinitionArgs
+                {
+                    IsEncrypted = true,
+                    IsOptional = false,
+                    Type = "string",
+                } },
+            },
+            IsGlobal = false,
+            Name = "myCT",
+            ResourceGroupName = "rg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+connection_type = azurerm.automation.latest.ConnectionType("connectionType",
+    automation_account_name="myAutomationAccount22",
+    connection_type_name="myCT",
+    field_definitions={
+        "myBoolField": {
+            "isEncrypted": False,
+            "isOptional": False,
+            "type": "bool",
+        },
+        "myStringField": {
+            "isEncrypted": False,
+            "isOptional": False,
+            "type": "string",
+        },
+        "myStringFieldEncrypted": {
+            "isEncrypted": True,
+            "isOptional": False,
+            "type": "string",
+        },
+    },
+    is_global=False,
+    name="myCT",
+    resource_group_name="rg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const connectionType = new azurerm.automation.latest.ConnectionType("connectionType", {
+    automationAccountName: "myAutomationAccount22",
+    connectionTypeName: "myCT",
+    fieldDefinitions: {
+        myBoolField: {
+            isEncrypted: false,
+            isOptional: false,
+            type: "bool",
+        },
+        myStringField: {
+            isEncrypted: false,
+            isOptional: false,
+            type: "string",
+        },
+        myStringFieldEncrypted: {
+            isEncrypted: true,
+            isOptional: false,
+            type: "string",
+        },
+    },
+    isGlobal: false,
+    name: "myCT",
+    resourceGroupName: "rg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ConnectionType Resource {#create}

@@ -12,6 +12,256 @@ meta_desc: "Explore the MachineLearningService resource of the machinelearningse
 
 Machine Learning service object wrapped into ARM resource envelope.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Or Update service
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var machineLearningService = new AzureRM.MachineLearningServices.V20200901Preview.MachineLearningService("machineLearningService", new AzureRM.MachineLearningServices.V20200901Preview.MachineLearningServiceArgs
+        {
+            ComputeType = "ACI",
+            EnvironmentImageRequest = new AzureRM.MachineLearningServices.V20200901Preview.Inputs.CreateServiceRequestEnvironmentImageRequestArgs
+            {
+                Assets = 
+                {
+                    new AzureRM.MachineLearningServices.V20200901Preview.Inputs.ImageAssetArgs
+                    {
+                        MimeType = "application/x-python",
+                        Unpack = false,
+                        Url = "aml://storage/azureml/score.py",
+                    },
+                },
+                DriverProgram = "score.py",
+                Environment = new AzureRM.MachineLearningServices.V20200901Preview.Inputs.EnvironmentImageRequestEnvironmentArgs
+                {
+                    Docker = new AzureRM.MachineLearningServices.V20200901Preview.Inputs.ModelEnvironmentDefinitionDockerArgs
+                    {
+                        BaseImage = "mcr.microsoft.com/azureml/base:openmpi3.1.2-ubuntu16.04",
+                        BaseImageRegistry = ,
+                    },
+                    EnvironmentVariables = 
+                    {
+                        { "EXAMPLE_ENV_VAR", "EXAMPLE_VALUE" },
+                    },
+                    Name = "AzureML-Scikit-learn-0.20.3",
+                    Python = new AzureRM.MachineLearningServices.V20200901Preview.Inputs.ModelEnvironmentDefinitionPythonArgs
+                    {
+                        CondaDependencies = 
+                        {
+                            { "channels", 
+                            {
+                                "conda-forge",
+                            } },
+                            { "dependencies", 
+                            {
+                                "python=3.6.2",
+                                
+                                {
+                                    { "pip", 
+                                    {
+                                        "azureml-core==1.0.69",
+                                        "azureml-defaults==1.0.69",
+                                        "azureml-telemetry==1.0.69",
+                                        "azureml-train-restclients-hyperdrive==1.0.69",
+                                        "azureml-train-core==1.0.69",
+                                        "scikit-learn==0.20.3",
+                                        "scipy==1.2.1",
+                                        "numpy==1.16.2",
+                                        "joblib==0.13.2",
+                                    } },
+                                },
+                            } },
+                            { "name", "azureml_ae1acbe6e1e6aabbad900b53c491a17c" },
+                        },
+                        InterpreterPath = "python",
+                        UserManagedDependencies = false,
+                    },
+                    Spark = new AzureRM.MachineLearningServices.V20200901Preview.Inputs.ModelEnvironmentDefinitionSparkArgs
+                    {
+                        Packages = {},
+                        PrecachePackages = true,
+                        Repositories = {},
+                    },
+                    Version = "3",
+                },
+                Models = 
+                {
+                    new AzureRM.MachineLearningServices.V20200901Preview.Inputs.ModelArgs
+                    {
+                        MimeType = "application/x-python",
+                        Name = "sklearn_regression_model.pkl",
+                        Url = "aml://storage/azureml/sklearn_regression_model.pkl",
+                    },
+                },
+            },
+            Location = "eastus2",
+            ResourceGroupName = "testrg123",
+            ServiceName = "service456",
+            WorkspaceName = "workspaces123",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+machine_learning_service = azurerm.machinelearningservices.v20200901preview.MachineLearningService("machineLearningService",
+    compute_type="ACI",
+    environment_image_request={
+        "assets": [{
+            "mimeType": "application/x-python",
+            "unpack": False,
+            "url": "aml://storage/azureml/score.py",
+        }],
+        "driverProgram": "score.py",
+        "environment": {
+            "docker": {
+                "baseImage": "mcr.microsoft.com/azureml/base:openmpi3.1.2-ubuntu16.04",
+                "baseImageRegistry": {},
+            },
+            "environmentVariables": {
+                "EXAMPLE_ENV_VAR": "EXAMPLE_VALUE",
+            },
+            "name": "AzureML-Scikit-learn-0.20.3",
+            "python": {
+                "condaDependencies": {
+                    "channels": ["conda-forge"],
+                    "dependencies": [
+                        "python=3.6.2",
+                        {
+                            "pip": [
+                                "azureml-core==1.0.69",
+                                "azureml-defaults==1.0.69",
+                                "azureml-telemetry==1.0.69",
+                                "azureml-train-restclients-hyperdrive==1.0.69",
+                                "azureml-train-core==1.0.69",
+                                "scikit-learn==0.20.3",
+                                "scipy==1.2.1",
+                                "numpy==1.16.2",
+                                "joblib==0.13.2",
+                            ],
+                        },
+                    ],
+                    "name": "azureml_ae1acbe6e1e6aabbad900b53c491a17c",
+                },
+                "interpreterPath": "python",
+                "userManagedDependencies": False,
+            },
+            "spark": {
+                "packages": [],
+                "precachePackages": True,
+                "repositories": [],
+            },
+            "version": "3",
+        },
+        "models": [{
+            "mimeType": "application/x-python",
+            "name": "sklearn_regression_model.pkl",
+            "url": "aml://storage/azureml/sklearn_regression_model.pkl",
+        }],
+    },
+    location="eastus2",
+    resource_group_name="testrg123",
+    service_name="service456",
+    workspace_name="workspaces123")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const machineLearningService = new azurerm.machinelearningservices.v20200901preview.MachineLearningService("machineLearningService", {
+    computeType: "ACI",
+    environmentImageRequest: {
+        assets: [{
+            mimeType: "application/x-python",
+            unpack: false,
+            url: "aml://storage/azureml/score.py",
+        }],
+        driverProgram: "score.py",
+        environment: {
+            docker: {
+                baseImage: "mcr.microsoft.com/azureml/base:openmpi3.1.2-ubuntu16.04",
+                baseImageRegistry: {},
+            },
+            environmentVariables: {
+                EXAMPLE_ENV_VAR: "EXAMPLE_VALUE",
+            },
+            name: "AzureML-Scikit-learn-0.20.3",
+            python: {
+                condaDependencies: {
+                    channels: ["conda-forge"],
+                    dependencies: [
+                        "python=3.6.2",
+                        {
+                            pip: [
+                                "azureml-core==1.0.69",
+                                "azureml-defaults==1.0.69",
+                                "azureml-telemetry==1.0.69",
+                                "azureml-train-restclients-hyperdrive==1.0.69",
+                                "azureml-train-core==1.0.69",
+                                "scikit-learn==0.20.3",
+                                "scipy==1.2.1",
+                                "numpy==1.16.2",
+                                "joblib==0.13.2",
+                            ],
+                        },
+                    ],
+                    name: "azureml_ae1acbe6e1e6aabbad900b53c491a17c",
+                },
+                interpreterPath: "python",
+                userManagedDependencies: false,
+            },
+            spark: {
+                packages: [],
+                precachePackages: true,
+                repositories: [],
+            },
+            version: "3",
+        },
+        models: [{
+            mimeType: "application/x-python",
+            name: "sklearn_regression_model.pkl",
+            url: "aml://storage/azureml/sklearn_regression_model.pkl",
+        }],
+    },
+    location: "eastus2",
+    resourceGroupName: "testrg123",
+    serviceName: "service456",
+    workspaceName: "workspaces123",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MachineLearningService Resource {#create}

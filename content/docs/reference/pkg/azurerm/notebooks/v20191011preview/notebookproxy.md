@@ -12,6 +12,70 @@ meta_desc: "Explore the NotebookProxy resource of the notebooks/v20191011preview
 
 A NotebookProxy resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Notebook Proxy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var notebookProxy = new AzureRM.Notebooks.V20191011Preview.NotebookProxy("notebookProxy", new AzureRM.Notebooks.V20191011Preview.NotebookProxyArgs
+        {
+            Hostname = "Azure Notebooks",
+            ResourceGroupName = "testRP",
+            ResourceName = "testResource",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+notebook_proxy = azurerm.notebooks.v20191011preview.NotebookProxy("notebookProxy",
+    hostname="Azure Notebooks",
+    resource_group_name="testRP",
+    resource_name="testResource")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const notebookProxy = new azurerm.notebooks.v20191011preview.NotebookProxy("notebookProxy", {
+    hostname: "Azure Notebooks",
+    resourceGroupName: "testRP",
+    resourceName: "testResource",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NotebookProxy Resource {#create}

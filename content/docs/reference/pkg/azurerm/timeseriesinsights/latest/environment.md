@@ -12,6 +12,86 @@ meta_desc: "Explore the Environment resource of the timeseriesinsights/latest mo
 
 An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### EnvironmentsCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var environment = new AzureRM.TimeSeriesInsights.Latest.Environment("environment", new AzureRM.TimeSeriesInsights.Latest.EnvironmentArgs
+        {
+            EnvironmentName = "env1",
+            Kind = "Gen1",
+            Location = "West US",
+            ResourceGroupName = "rg1",
+            Sku = new AzureRM.TimeSeriesInsights.Latest.Inputs.SkuArgs
+            {
+                Capacity = 1,
+                Name = "S1",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+environment = azurerm.timeseriesinsights.latest.Environment("environment",
+    environment_name="env1",
+    kind="Gen1",
+    location="West US",
+    resource_group_name="rg1",
+    sku={
+        "capacity": 1,
+        "name": "S1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const environment = new azurerm.timeseriesinsights.latest.Environment("environment", {
+    environmentName: "env1",
+    kind: "Gen1",
+    location: "West US",
+    resourceGroupName: "rg1",
+    sku: {
+        capacity: 1,
+        name: "S1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Environment Resource {#create}

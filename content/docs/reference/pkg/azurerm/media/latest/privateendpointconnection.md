@@ -12,6 +12,83 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the media/latest m
 
 The Private Endpoint Connection resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Update private endpoint connection.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpointConnection = new AzureRM.Media.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureRM.Media.Latest.PrivateEndpointConnectionArgs
+        {
+            AccountName = "contososports",
+            Name = "connectionName1",
+            PrivateLinkServiceConnectionState = new AzureRM.Media.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
+            {
+                Description = "Test description.",
+                Status = "Approved",
+            },
+            ResourceGroupName = "contoso",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_endpoint_connection = azurerm.media.latest.PrivateEndpointConnection("privateEndpointConnection",
+    account_name="contososports",
+    name="connectionName1",
+    private_link_service_connection_state={
+        "description": "Test description.",
+        "status": "Approved",
+    },
+    resource_group_name="contoso")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateEndpointConnection = new azurerm.media.latest.PrivateEndpointConnection("privateEndpointConnection", {
+    accountName: "contososports",
+    name: "connectionName1",
+    privateLinkServiceConnectionState: {
+        description: "Test description.",
+        status: "Approved",
+    },
+    resourceGroupName: "contoso",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateEndpointConnection Resource {#create}

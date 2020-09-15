@@ -12,6 +12,85 @@ meta_desc: "Explore the MultipleActivationKey resource of the windowsesu/v201909
 
 MAK key details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateMultipleActivationKey
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var multipleActivationKey = new AzureRM.WindowsESU.V20190916Preview.MultipleActivationKey("multipleActivationKey", new AzureRM.WindowsESU.V20190916Preview.MultipleActivationKeyArgs
+        {
+            AgreementNumber = "1a2b45ag",
+            InstalledServerNumber = 100,
+            IsEligible = true,
+            Location = "East US",
+            MultipleActivationKeyName = "server08-key-2019",
+            OsType = "WindowsServer2008",
+            ResourceGroupName = "testgr1",
+            SupportType = "SupplementalServicing",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+multiple_activation_key = azurerm.windowsesu.v20190916preview.MultipleActivationKey("multipleActivationKey",
+    agreement_number="1a2b45ag",
+    installed_server_number=100,
+    is_eligible=True,
+    location="East US",
+    multiple_activation_key_name="server08-key-2019",
+    os_type="WindowsServer2008",
+    resource_group_name="testgr1",
+    support_type="SupplementalServicing")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const multipleActivationKey = new azurerm.windowsesu.v20190916preview.MultipleActivationKey("multipleActivationKey", {
+    agreementNumber: "1a2b45ag",
+    installedServerNumber: 100,
+    isEligible: true,
+    location: "East US",
+    multipleActivationKeyName: "server08-key-2019",
+    osType: "WindowsServer2008",
+    resourceGroupName: "testgr1",
+    supportType: "SupplementalServicing",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MultipleActivationKey Resource {#create}

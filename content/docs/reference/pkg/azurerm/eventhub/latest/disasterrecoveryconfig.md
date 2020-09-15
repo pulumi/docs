@@ -12,6 +12,73 @@ meta_desc: "Explore the DisasterRecoveryConfig resource of the eventhub/latest m
 
 Single item in List or Get Alias(Disaster Recovery configuration) operation
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### EHAliasCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disasterRecoveryConfig = new AzureRM.EventHub.Latest.DisasterRecoveryConfig("disasterRecoveryConfig", new AzureRM.EventHub.Latest.DisasterRecoveryConfigArgs
+        {
+            Alias = "sdk-DisasterRecovery-3814",
+            NamespaceName = "sdk-Namespace-8859",
+            PartnerNamespace = "sdk-Namespace-37",
+            ResourceGroupName = "exampleResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+disaster_recovery_config = azurerm.eventhub.latest.DisasterRecoveryConfig("disasterRecoveryConfig",
+    alias="sdk-DisasterRecovery-3814",
+    namespace_name="sdk-Namespace-8859",
+    partner_namespace="sdk-Namespace-37",
+    resource_group_name="exampleResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const disasterRecoveryConfig = new azurerm.eventhub.latest.DisasterRecoveryConfig("disasterRecoveryConfig", {
+    alias: "sdk-DisasterRecovery-3814",
+    namespaceName: "sdk-Namespace-8859",
+    partnerNamespace: "sdk-Namespace-37",
+    resourceGroupName: "exampleResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DisasterRecoveryConfig Resource {#create}

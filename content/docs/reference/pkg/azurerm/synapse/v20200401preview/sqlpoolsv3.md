@@ -12,6 +12,96 @@ meta_desc: "Explore the SqlPoolsV3 resource of the synapse/v20200401preview modu
 
 A sql pool resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates a sqlpool.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlPoolsV3 = new AzureRM.Synapse.V20200401Preview.SqlPoolsV3("sqlPoolsV3", new AzureRM.Synapse.V20200401Preview.SqlPoolsV3Args
+        {
+            Location = "westus",
+            ResourceGroupName = "rg_fb5ce457-3576-425e-b22d-7300689fbea0",
+            Sku = new AzureRM.Synapse.V20200401Preview.Inputs.SkuArgs
+            {
+                Name = "DW1000f",
+                Tier = "Synapse",
+            },
+            SqlPoolName = "22c317e3-97a3-4ae3-9e91-a3456a5fff31",
+            Tags = 
+            {
+                { "tag1", "val1" },
+            },
+            WorkspaceName = "srv_1e04aaa9-b30e-46ad-af06-7a21202bcc6c",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sql_pools_v3 = azurerm.synapse.v20200401preview.SqlPoolsV3("sqlPoolsV3",
+    location="westus",
+    resource_group_name="rg_fb5ce457-3576-425e-b22d-7300689fbea0",
+    sku={
+        "name": "DW1000f",
+        "tier": "Synapse",
+    },
+    sql_pool_name="22c317e3-97a3-4ae3-9e91-a3456a5fff31",
+    tags={
+        "tag1": "val1",
+    },
+    workspace_name="srv_1e04aaa9-b30e-46ad-af06-7a21202bcc6c")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sqlPoolsV3 = new azurerm.synapse.v20200401preview.SqlPoolsV3("sqlPoolsV3", {
+    location: "westus",
+    resourceGroupName: "rg_fb5ce457-3576-425e-b22d-7300689fbea0",
+    sku: {
+        name: "DW1000f",
+        tier: "Synapse",
+    },
+    sqlPoolName: "22c317e3-97a3-4ae3-9e91-a3456a5fff31",
+    tags: {
+        tag1: "val1",
+    },
+    workspaceName: "srv_1e04aaa9-b30e-46ad-af06-7a21202bcc6c",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SqlPoolsV3 Resource {#create}

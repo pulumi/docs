@@ -12,6 +12,83 @@ meta_desc: "Explore the AutomationAccount resource of the automation/latest modu
 
 Definition of the automation account type.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update automation account
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var automationAccount = new AzureRM.Automation.Latest.AutomationAccount("automationAccount", new AzureRM.Automation.Latest.AutomationAccountArgs
+        {
+            AutomationAccountName = "myAutomationAccount9",
+            Location = "East US 2",
+            Name = "myAutomationAccount9",
+            ResourceGroupName = "rg",
+            Sku = new AzureRM.Automation.Latest.Inputs.SkuArgs
+            {
+                Name = "Free",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+automation_account = azurerm.automation.latest.AutomationAccount("automationAccount",
+    automation_account_name="myAutomationAccount9",
+    location="East US 2",
+    name="myAutomationAccount9",
+    resource_group_name="rg",
+    sku={
+        "name": "Free",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const automationAccount = new azurerm.automation.latest.AutomationAccount("automationAccount", {
+    automationAccountName: "myAutomationAccount9",
+    location: "East US 2",
+    name: "myAutomationAccount9",
+    resourceGroupName: "rg",
+    sku: {
+        name: "Free",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AutomationAccount Resource {#create}

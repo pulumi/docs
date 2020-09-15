@@ -12,6 +12,189 @@ meta_desc: "Explore the OpenShiftCluster resource of the redhatopenshift/latest 
 
 OpenShiftCluster represents an Azure Red Hat OpenShift cluster.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates a OpenShift cluster with the specified subscription, resource group and resource name.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var openShiftCluster = new AzureRM.RedHatOpenShift.Latest.OpenShiftCluster("openShiftCluster", new AzureRM.RedHatOpenShift.Latest.OpenShiftClusterArgs
+        {
+            ApiserverProfile = new AzureRM.RedHatOpenShift.Latest.Inputs.APIServerProfileArgs
+            {
+                Visibility = "Public",
+            },
+            ClusterProfile = new AzureRM.RedHatOpenShift.Latest.Inputs.ClusterProfileArgs
+            {
+                Domain = "cluster.location.aroapp.io",
+                PullSecret = "{\"auths\":{\"registry.connect.redhat.com\":{\"auth\":\"\"},\"registry.redhat.io\":{\"auth\":\"\"}}}",
+                ResourceGroupId = "/subscriptions/subscriptionId/resourceGroups/clusterResourceGroup",
+            },
+            ConsoleProfile = ,
+            IngressProfiles = 
+            {
+                new AzureRM.RedHatOpenShift.Latest.Inputs.IngressProfileArgs
+                {
+                    Name = "default",
+                    Visibility = "Public",
+                },
+            },
+            Location = "location",
+            MasterProfile = new AzureRM.RedHatOpenShift.Latest.Inputs.MasterProfileArgs
+            {
+                SubnetId = "/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/master",
+                VmSize = "Standard_D8s_v3",
+            },
+            NetworkProfile = new AzureRM.RedHatOpenShift.Latest.Inputs.NetworkProfileArgs
+            {
+                PodCidr = "10.128.0.0/14",
+                ServiceCidr = "172.30.0.0/16",
+            },
+            ResourceGroupName = "resourceGroup",
+            ResourceName = "resourceName",
+            ServicePrincipalProfile = new AzureRM.RedHatOpenShift.Latest.Inputs.ServicePrincipalProfileArgs
+            {
+                ClientId = "clientId",
+                ClientSecret = "clientSecret",
+            },
+            Tags = 
+            {
+                { "key", "value" },
+            },
+            WorkerProfiles = 
+            {
+                new AzureRM.RedHatOpenShift.Latest.Inputs.WorkerProfileArgs
+                {
+                    Count = 3,
+                    DiskSizeGB = 128,
+                    Name = "worker",
+                    SubnetId = "/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/worker",
+                    VmSize = "Standard_D2s_v3",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+open_shift_cluster = azurerm.redhatopenshift.latest.OpenShiftCluster("openShiftCluster",
+    apiserver_profile={
+        "visibility": "Public",
+    },
+    cluster_profile={
+        "domain": "cluster.location.aroapp.io",
+        "pullSecret": "{\"auths\":{\"registry.connect.redhat.com\":{\"auth\":\"\"},\"registry.redhat.io\":{\"auth\":\"\"}}}",
+        "resourceGroupId": "/subscriptions/subscriptionId/resourceGroups/clusterResourceGroup",
+    },
+    console_profile={},
+    ingress_profiles=[{
+        "name": "default",
+        "visibility": "Public",
+    }],
+    location="location",
+    master_profile={
+        "subnetId": "/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/master",
+        "vmSize": "Standard_D8s_v3",
+    },
+    network_profile={
+        "podCidr": "10.128.0.0/14",
+        "serviceCidr": "172.30.0.0/16",
+    },
+    resource_group_name="resourceGroup",
+    resource_name="resourceName",
+    service_principal_profile={
+        "clientId": "clientId",
+        "clientSecret": "clientSecret",
+    },
+    tags={
+        "key": "value",
+    },
+    worker_profiles=[{
+        "count": 3,
+        "diskSizeGB": 128,
+        "name": "worker",
+        "subnetId": "/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/worker",
+        "vmSize": "Standard_D2s_v3",
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const openShiftCluster = new azurerm.redhatopenshift.latest.OpenShiftCluster("openShiftCluster", {
+    apiserverProfile: {
+        visibility: "Public",
+    },
+    clusterProfile: {
+        domain: "cluster.location.aroapp.io",
+        pullSecret: "{\"auths\":{\"registry.connect.redhat.com\":{\"auth\":\"\"},\"registry.redhat.io\":{\"auth\":\"\"}}}",
+        resourceGroupId: "/subscriptions/subscriptionId/resourceGroups/clusterResourceGroup",
+    },
+    consoleProfile: {},
+    ingressProfiles: [{
+        name: "default",
+        visibility: "Public",
+    }],
+    location: "location",
+    masterProfile: {
+        subnetId: "/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/master",
+        vmSize: "Standard_D8s_v3",
+    },
+    networkProfile: {
+        podCidr: "10.128.0.0/14",
+        serviceCidr: "172.30.0.0/16",
+    },
+    resourceGroupName: "resourceGroup",
+    resourceName: "resourceName",
+    servicePrincipalProfile: {
+        clientId: "clientId",
+        clientSecret: "clientSecret",
+    },
+    tags: {
+        key: "value",
+    },
+    workerProfiles: [{
+        count: 3,
+        diskSizeGB: 128,
+        name: "worker",
+        subnetId: "/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/worker",
+        vmSize: "Standard_D2s_v3",
+    }],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a OpenShiftCluster Resource {#create}

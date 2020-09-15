@@ -12,6 +12,93 @@ meta_desc: "Explore the Account resource of the datashare/latest module, includi
 
 An account data transfer object.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Accounts_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var account = new AzureRM.DataShare.Latest.Account("account", new AzureRM.DataShare.Latest.AccountArgs
+        {
+            AccountName = "Account1",
+            Identity = new AzureRM.DataShare.Latest.Inputs.IdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Location = "West US 2",
+            ResourceGroupName = "SampleResourceGroup",
+            Tags = 
+            {
+                { "tag1", "Red" },
+                { "tag2", "White" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+account = azurerm.datashare.latest.Account("account",
+    account_name="Account1",
+    identity={
+        "type": "SystemAssigned",
+    },
+    location="West US 2",
+    resource_group_name="SampleResourceGroup",
+    tags={
+        "tag1": "Red",
+        "tag2": "White",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const account = new azurerm.datashare.latest.Account("account", {
+    accountName: "Account1",
+    identity: {
+        type: "SystemAssigned",
+    },
+    location: "West US 2",
+    resourceGroupName: "SampleResourceGroup",
+    tags: {
+        tag1: "Red",
+        tag2: "White",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Account Resource {#create}

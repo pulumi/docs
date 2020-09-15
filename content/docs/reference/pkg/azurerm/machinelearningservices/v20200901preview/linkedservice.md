@@ -12,6 +12,86 @@ meta_desc: "Explore the LinkedService resource of the machinelearningservices/v2
 
 Linked service.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateLinkedService
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var linkedService = new AzureRM.MachineLearningServices.V20200901Preview.LinkedService("linkedService", new AzureRM.MachineLearningServices.V20200901Preview.LinkedServiceArgs
+        {
+            Identity = new AzureRM.MachineLearningServices.V20200901Preview.Inputs.IdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            LinkName = "link-1",
+            Location = "westus",
+            Name = "link-1",
+            ResourceGroupName = "resourceGroup-1",
+            WorkspaceName = "workspace-1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+linked_service = azurerm.machinelearningservices.v20200901preview.LinkedService("linkedService",
+    identity={
+        "type": "SystemAssigned",
+    },
+    link_name="link-1",
+    location="westus",
+    name="link-1",
+    resource_group_name="resourceGroup-1",
+    workspace_name="workspace-1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const linkedService = new azurerm.machinelearningservices.v20200901preview.LinkedService("linkedService", {
+    identity: {
+        type: "SystemAssigned",
+    },
+    linkName: "link-1",
+    location: "westus",
+    name: "link-1",
+    resourceGroupName: "resourceGroup-1",
+    workspaceName: "workspace-1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LinkedService Resource {#create}

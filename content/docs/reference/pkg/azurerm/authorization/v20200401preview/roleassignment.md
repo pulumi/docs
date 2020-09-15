@@ -12,6 +12,88 @@ meta_desc: "Explore the RoleAssignment resource of the authorization/v20200401pr
 
 Role Assignments
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### GetConfigurations
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var roleAssignment = new AzureRM.Authorization.V20200401Preview.RoleAssignment("roleAssignment", new AzureRM.Authorization.V20200401Preview.RoleAssignmentArgs
+        {
+            CanDelegate = false,
+            Condition = "@Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'",
+            ConditionVersion = "1.0",
+            Description = "Grants UserFoo role assignment bar in scope baz",
+            PrincipalId = "d93a38bc-d029-4160-bfb0-fbda779ac214",
+            PrincipalType = "User",
+            RoleAssignmentName = "roleAssignmentName",
+            RoleDefinitionId = "/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772",
+            Scope = "scope",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+role_assignment = azurerm.authorization.v20200401preview.RoleAssignment("roleAssignment",
+    can_delegate=False,
+    condition="@Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'",
+    condition_version="1.0",
+    description="Grants UserFoo role assignment bar in scope baz",
+    principal_id="d93a38bc-d029-4160-bfb0-fbda779ac214",
+    principal_type="User",
+    role_assignment_name="roleAssignmentName",
+    role_definition_id="/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772",
+    scope="scope")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const roleAssignment = new azurerm.authorization.v20200401preview.RoleAssignment("roleAssignment", {
+    canDelegate: false,
+    condition: "@Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'",
+    conditionVersion: "1.0",
+    description: "Grants UserFoo role assignment bar in scope baz",
+    principalId: "d93a38bc-d029-4160-bfb0-fbda779ac214",
+    principalType: "User",
+    roleAssignmentName: "roleAssignmentName",
+    roleDefinitionId: "/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772",
+    scope: "scope",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RoleAssignment Resource {#create}

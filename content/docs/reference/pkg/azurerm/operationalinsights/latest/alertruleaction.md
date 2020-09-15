@@ -12,6 +12,82 @@ meta_desc: "Explore the AlertRuleAction resource of the operationalinsights/late
 
 Action for alert rule.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates an action of alert rule.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var alertRuleAction = new AzureRM.OperationalInsights.Latest.AlertRuleAction("alertRuleAction", new AzureRM.OperationalInsights.Latest.AlertRuleActionArgs
+        {
+            ActionId = "912bec42-cb66-4c03-ac63-1761b6898c3e",
+            Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+            LogicAppResourceId = "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts",
+            ResourceGroupName = "myRg",
+            RuleId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+            TriggerUri = "https://prod-31.northcentralus.logic.azure.com:443/workflows/cd3765391efd48549fd7681ded1d48d7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=signature",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+alert_rule_action = azurerm.operationalinsights.latest.AlertRuleAction("alertRuleAction",
+    action_id="912bec42-cb66-4c03-ac63-1761b6898c3e",
+    etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    logic_app_resource_id="/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts",
+    resource_group_name="myRg",
+    rule_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+    trigger_uri="https://prod-31.northcentralus.logic.azure.com:443/workflows/cd3765391efd48549fd7681ded1d48d7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=signature",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const alertRuleAction = new azurerm.operationalinsights.latest.AlertRuleAction("alertRuleAction", {
+    actionId: "912bec42-cb66-4c03-ac63-1761b6898c3e",
+    etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    logicAppResourceId: "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts",
+    resourceGroupName: "myRg",
+    ruleId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+    triggerUri: `https://prod-31.northcentralus.logic.azure.com:443/workflows/cd3765391efd48549fd7681ded1d48d7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=signature`,
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AlertRuleAction Resource {#create}

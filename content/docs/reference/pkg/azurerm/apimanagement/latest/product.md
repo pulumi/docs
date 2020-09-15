@@ -12,6 +12,73 @@ meta_desc: "Explore the Product resource of the apimanagement/latest module, inc
 
 Product details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateProduct
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var product = new AzureRM.ApiManagement.Latest.Product("product", new AzureRM.ApiManagement.Latest.ProductArgs
+        {
+            DisplayName = "Test Template ProductName 4",
+            ProductId = "testproduct",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+product = azurerm.apimanagement.latest.Product("product",
+    display_name="Test Template ProductName 4",
+    product_id="testproduct",
+    resource_group_name="rg1",
+    service_name="apimService1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const product = new azurerm.apimanagement.latest.Product("product", {
+    displayName: "Test Template ProductName 4",
+    productId: "testproduct",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Product Resource {#create}

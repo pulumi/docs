@@ -12,6 +12,76 @@ meta_desc: "Explore the Route resource of the network/latest module, including e
 
 Route resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create route
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var route = new AzureRM.Network.Latest.Route("route", new AzureRM.Network.Latest.RouteArgs
+        {
+            AddressPrefix = "10.0.3.0/24",
+            NextHopType = "VirtualNetworkGateway",
+            ResourceGroupName = "rg1",
+            RouteName = "route1",
+            RouteTableName = "testrt",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+route = azurerm.network.latest.Route("route",
+    address_prefix="10.0.3.0/24",
+    next_hop_type="VirtualNetworkGateway",
+    resource_group_name="rg1",
+    route_name="route1",
+    route_table_name="testrt")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const route = new azurerm.network.latest.Route("route", {
+    addressPrefix: "10.0.3.0/24",
+    nextHopType: "VirtualNetworkGateway",
+    resourceGroupName: "rg1",
+    routeName: "route1",
+    routeTableName: "testrt",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Route Resource {#create}

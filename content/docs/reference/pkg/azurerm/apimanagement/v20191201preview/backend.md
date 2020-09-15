@@ -12,6 +12,281 @@ meta_desc: "Explore the Backend resource of the apimanagement/v20191201preview m
 
 Backend details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateBackendProxyBackend
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var backend = new AzureRM.ApiManagement.V20191201Preview.Backend("backend", new AzureRM.ApiManagement.V20191201Preview.BackendArgs
+        {
+            BackendId = "proxybackend",
+            Credentials = new AzureRM.ApiManagement.V20191201Preview.Inputs.BackendCredentialsContractArgs
+            {
+                Authorization = new AzureRM.ApiManagement.V20191201Preview.Inputs.BackendAuthorizationHeaderCredentialsArgs
+                {
+                    Parameter = "opensesma",
+                    Scheme = "Basic",
+                },
+                Header = 
+                {
+                    { "x-my-1", 
+                    {
+                        "val1",
+                        "val2",
+                    } },
+                },
+                Query = 
+                {
+                    { "sv", 
+                    {
+                        "xx",
+                        "bb",
+                        "cc",
+                    } },
+                },
+            },
+            Description = "description5308",
+            Protocol = "http",
+            Proxy = new AzureRM.ApiManagement.V20191201Preview.Inputs.BackendProxyContractArgs
+            {
+                Password = "opensesame",
+                Url = "http://192.168.1.1:8080",
+                Username = "Contoso\\admin",
+            },
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Tls = new AzureRM.ApiManagement.V20191201Preview.Inputs.BackendTlsPropertiesArgs
+            {
+                ValidateCertificateChain = true,
+                ValidateCertificateName = true,
+            },
+            Url = "https://backendname2644/",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+backend = azurerm.apimanagement.v20191201preview.Backend("backend",
+    backend_id="proxybackend",
+    credentials={
+        "authorization": {
+            "parameter": "opensesma",
+            "scheme": "Basic",
+        },
+        "header": {
+            "x-my-1": [
+                "val1",
+                "val2",
+            ],
+        },
+        "query": {
+            "sv": [
+                "xx",
+                "bb",
+                "cc",
+            ],
+        },
+    },
+    description="description5308",
+    protocol="http",
+    proxy={
+        "password": "opensesame",
+        "url": "http://192.168.1.1:8080",
+        "username": "Contoso\\admin",
+    },
+    resource_group_name="rg1",
+    service_name="apimService1",
+    tls={
+        "validateCertificateChain": True,
+        "validateCertificateName": True,
+    },
+    url="https://backendname2644/")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const backend = new azurerm.apimanagement.v20191201preview.Backend("backend", {
+    backendId: "proxybackend",
+    credentials: {
+        authorization: {
+            parameter: "opensesma",
+            scheme: "Basic",
+        },
+        header: {
+            "x-my-1": [
+                "val1",
+                "val2",
+            ],
+        },
+        query: {
+            sv: [
+                "xx",
+                "bb",
+                "cc",
+            ],
+        },
+    },
+    description: "description5308",
+    protocol: "http",
+    proxy: {
+        password: "opensesame",
+        url: "http://192.168.1.1:8080",
+        username: "Contoso\\admin",
+    },
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    tls: {
+        validateCertificateChain: true,
+        validateCertificateName: true,
+    },
+    url: "https://backendname2644/",
+});
+
+```
+
+{{% /example %}}
+
+### ApiManagementCreateBackendServiceFabric
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var backend = new AzureRM.ApiManagement.V20191201Preview.Backend("backend", new AzureRM.ApiManagement.V20191201Preview.BackendArgs
+        {
+            BackendId = "sfbackend",
+            Description = "Service Fabric Test App 1",
+            Properties = new AzureRM.ApiManagement.V20191201Preview.Inputs.BackendPropertiesArgs
+            {
+                ServiceFabricCluster = new AzureRM.ApiManagement.V20191201Preview.Inputs.BackendServiceFabricClusterPropertiesArgs
+                {
+                    ClientCertificatethumbprint = "EBA029198AA3E76EF0D70482626E5BCF148594A6",
+                    ManagementEndpoints = 
+                    {
+                        "https://somecluster.com",
+                    },
+                    MaxPartitionResolutionRetries = 5,
+                    ServerX509Names = 
+                    {
+                        new AzureRM.ApiManagement.V20191201Preview.Inputs.X509CertificateNameArgs
+                        {
+                            IssuerCertificateThumbprint = "IssuerCertificateThumbprint1",
+                            Name = "ServerCommonName1",
+                        },
+                    },
+                },
+            },
+            Protocol = "http",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Url = "fabric:/mytestapp/mytestservice",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+backend = azurerm.apimanagement.v20191201preview.Backend("backend",
+    backend_id="sfbackend",
+    description="Service Fabric Test App 1",
+    properties={
+        "serviceFabricCluster": {
+            "clientCertificatethumbprint": "EBA029198AA3E76EF0D70482626E5BCF148594A6",
+            "managementEndpoints": ["https://somecluster.com"],
+            "maxPartitionResolutionRetries": 5,
+            "serverX509Names": [{
+                "issuerCertificateThumbprint": "IssuerCertificateThumbprint1",
+                "name": "ServerCommonName1",
+            }],
+        },
+    },
+    protocol="http",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    url="fabric:/mytestapp/mytestservice")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const backend = new azurerm.apimanagement.v20191201preview.Backend("backend", {
+    backendId: "sfbackend",
+    description: "Service Fabric Test App 1",
+    properties: {
+        serviceFabricCluster: {
+            clientCertificatethumbprint: "EBA029198AA3E76EF0D70482626E5BCF148594A6",
+            managementEndpoints: ["https://somecluster.com"],
+            maxPartitionResolutionRetries: 5,
+            serverX509Names: [{
+                issuerCertificateThumbprint: "IssuerCertificateThumbprint1",
+                name: "ServerCommonName1",
+            }],
+        },
+    },
+    protocol: "http",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    url: "fabric:/mytestapp/mytestservice",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Backend Resource {#create}

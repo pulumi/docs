@@ -12,6 +12,61 @@ meta_desc: "Explore the Console resource of the portal/latest module, including 
 
 Cloud shell console
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PutConsole
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var console = new AzureRM.Portal.Latest.Console("console", new AzureRM.Portal.Latest.ConsoleArgs
+        {
+            ConsoleName = "default",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+console = azurerm.portal.latest.Console("console", console_name="default")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const console = new azurerm.portal.latest.Console("console", {consoleName: "default"});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Console Resource {#create}

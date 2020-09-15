@@ -12,6 +12,82 @@ meta_desc: "Explore the AttachedDatabaseConfiguration resource of the kusto/late
 
 Class representing an attached database configuration.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### AttachedDatabaseConfigurationsCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var attachedDatabaseConfiguration = new AzureRM.Kusto.Latest.AttachedDatabaseConfiguration("attachedDatabaseConfiguration", new AzureRM.Kusto.Latest.AttachedDatabaseConfigurationArgs
+        {
+            AttachedDatabaseConfigurationName = "attachedDatabaseConfigurations1",
+            ClusterName = "kustoclusterrptest4",
+            ClusterResourceId = "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader",
+            DatabaseName = "kustodatabase",
+            DefaultPrincipalsModificationKind = "Union",
+            Location = "westus",
+            ResourceGroupName = "kustorptest",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+attached_database_configuration = azurerm.kusto.latest.AttachedDatabaseConfiguration("attachedDatabaseConfiguration",
+    attached_database_configuration_name="attachedDatabaseConfigurations1",
+    cluster_name="kustoclusterrptest4",
+    cluster_resource_id="/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader",
+    database_name="kustodatabase",
+    default_principals_modification_kind="Union",
+    location="westus",
+    resource_group_name="kustorptest")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const attachedDatabaseConfiguration = new azurerm.kusto.latest.AttachedDatabaseConfiguration("attachedDatabaseConfiguration", {
+    attachedDatabaseConfigurationName: "attachedDatabaseConfigurations1",
+    clusterName: "kustoclusterrptest4",
+    clusterResourceId: "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader",
+    databaseName: "kustodatabase",
+    defaultPrincipalsModificationKind: "Union",
+    location: "westus",
+    resourceGroupName: "kustorptest",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AttachedDatabaseConfiguration Resource {#create}

@@ -12,6 +12,135 @@ meta_desc: "Explore the SyncAgent resource of the sql/v20150501preview module, i
 
 An Azure SQL Database sync agent.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a new sync agent
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var syncAgent = new AzureRM.Sql.V20150501Preview.SyncAgent("syncAgent", new AzureRM.Sql.V20150501Preview.SyncAgentArgs
+        {
+            ResourceGroupName = "syncagentcrud-65440",
+            ServerName = "syncagentcrud-8475",
+            SyncAgentName = "syncagentcrud-3187",
+            SyncDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-Onebox/providers/Microsoft.Sql/servers/syncagentcrud-8475/databases/sync",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sync_agent = azurerm.sql.v20150501preview.SyncAgent("syncAgent",
+    resource_group_name="syncagentcrud-65440",
+    server_name="syncagentcrud-8475",
+    sync_agent_name="syncagentcrud-3187",
+    sync_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-Onebox/providers/Microsoft.Sql/servers/syncagentcrud-8475/databases/sync")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const syncAgent = new azurerm.sql.v20150501preview.SyncAgent("syncAgent", {
+    resourceGroupName: "syncagentcrud-65440",
+    serverName: "syncagentcrud-8475",
+    syncAgentName: "syncagentcrud-3187",
+    syncDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-Onebox/providers/Microsoft.Sql/servers/syncagentcrud-8475/databases/sync",
+});
+
+```
+
+{{% /example %}}
+
+### Update a sync agent
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var syncAgent = new AzureRM.Sql.V20150501Preview.SyncAgent("syncAgent", new AzureRM.Sql.V20150501Preview.SyncAgentArgs
+        {
+            ResourceGroupName = "syncagentcrud-65440",
+            ServerName = "syncagentcrud-8475",
+            SyncAgentName = "syncagentcrud-3187",
+            SyncDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-Onebox/providers/Microsoft.Sql/servers/syncagentcrud-8475/databases/sync",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sync_agent = azurerm.sql.v20150501preview.SyncAgent("syncAgent",
+    resource_group_name="syncagentcrud-65440",
+    server_name="syncagentcrud-8475",
+    sync_agent_name="syncagentcrud-3187",
+    sync_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-Onebox/providers/Microsoft.Sql/servers/syncagentcrud-8475/databases/sync")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const syncAgent = new azurerm.sql.v20150501preview.SyncAgent("syncAgent", {
+    resourceGroupName: "syncagentcrud-65440",
+    serverName: "syncagentcrud-8475",
+    syncAgentName: "syncagentcrud-3187",
+    syncDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-Onebox/providers/Microsoft.Sql/servers/syncagentcrud-8475/databases/sync",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SyncAgent Resource {#create}

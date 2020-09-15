@@ -12,6 +12,73 @@ meta_desc: "Explore the NetworkExperimentProfile resource of the network/latest 
 
 Defines an Network Experiment Profile and lists of Experiments
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates an NetworkExperiment Profile in a Resource Group
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var networkExperimentProfile = new AzureRM.Network.Latest.NetworkExperimentProfile("networkExperimentProfile", new AzureRM.Network.Latest.NetworkExperimentProfileArgs
+        {
+            EnabledState = "Enabled",
+            Location = "WestUs",
+            ProfileName = "MyProfile",
+            ResourceGroupName = "MyResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+network_experiment_profile = azurerm.network.latest.NetworkExperimentProfile("networkExperimentProfile",
+    enabled_state="Enabled",
+    location="WestUs",
+    profile_name="MyProfile",
+    resource_group_name="MyResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const networkExperimentProfile = new azurerm.network.latest.NetworkExperimentProfile("networkExperimentProfile", {
+    enabledState: "Enabled",
+    location: "WestUs",
+    profileName: "MyProfile",
+    resourceGroupName: "MyResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkExperimentProfile Resource {#create}

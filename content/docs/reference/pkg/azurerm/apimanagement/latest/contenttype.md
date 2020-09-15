@@ -12,6 +12,70 @@ meta_desc: "Explore the ContentType resource of the apimanagement/latest module,
 
 Content type contract details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateContentType
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var contentType = new AzureRM.ApiManagement.Latest.ContentType("contentType", new AzureRM.ApiManagement.Latest.ContentTypeArgs
+        {
+            ContentTypeId = "page",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+content_type = azurerm.apimanagement.latest.ContentType("contentType",
+    content_type_id="page",
+    resource_group_name="rg1",
+    service_name="apimService1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const contentType = new azurerm.apimanagement.latest.ContentType("contentType", {
+    contentTypeId: "page",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ContentType Resource {#create}

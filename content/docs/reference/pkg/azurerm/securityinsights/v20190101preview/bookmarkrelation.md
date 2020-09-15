@@ -12,6 +12,79 @@ meta_desc: "Explore the BookmarkRelation resource of the securityinsights/v20190
 
 Represents a relation between two resources
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates a bookmark relation.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bookmarkRelation = new AzureRM.SecurityInsights.V20190101Preview.BookmarkRelation("bookmarkRelation", new AzureRM.SecurityInsights.V20190101Preview.BookmarkRelationArgs
+        {
+            BookmarkId = "2216d0e1-91e3-4902-89fd-d2df8c535096",
+            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
+            RelatedResourceId = "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/incidents/afbd324f-6c48-459c-8710-8d1e1cd03812",
+            RelationName = "4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014",
+            ResourceGroupName = "myRg",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+bookmark_relation = azurerm.securityinsights.v20190101preview.BookmarkRelation("bookmarkRelation",
+    bookmark_id="2216d0e1-91e3-4902-89fd-d2df8c535096",
+    operational_insights_resource_provider="Microsoft.OperationalInsights",
+    related_resource_id="/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/incidents/afbd324f-6c48-459c-8710-8d1e1cd03812",
+    relation_name="4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014",
+    resource_group_name="myRg",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const bookmarkRelation = new azurerm.securityinsights.v20190101preview.BookmarkRelation("bookmarkRelation", {
+    bookmarkId: "2216d0e1-91e3-4902-89fd-d2df8c535096",
+    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
+    relatedResourceId: "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/incidents/afbd324f-6c48-459c-8710-8d1e1cd03812",
+    relationName: "4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014",
+    resourceGroupName: "myRg",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BookmarkRelation Resource {#create}

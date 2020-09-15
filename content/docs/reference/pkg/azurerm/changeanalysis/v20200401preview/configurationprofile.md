@@ -12,6 +12,111 @@ meta_desc: "Explore the ConfigurationProfile resource of the changeanalysis/v202
 
 A profile object that contains change analysis configuration, such as notification settings, for this subscription
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ConfigurationProfile_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var configurationProfile = new AzureRM.ChangeAnalysis.V20200401Preview.ConfigurationProfile("configurationProfile", new AzureRM.ChangeAnalysis.V20200401Preview.ConfigurationProfileArgs
+        {
+            ProfileName = "default",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+configuration_profile = azurerm.changeanalysis.v20200401preview.ConfigurationProfile("configurationProfile", profile_name="default")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const configurationProfile = new azurerm.changeanalysis.v20200401preview.ConfigurationProfile("configurationProfile", {profileName: "default"});
+
+```
+
+{{% /example %}}
+
+### ConfigurationProfile_CreateWithIdentity
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var configurationProfile = new AzureRM.ChangeAnalysis.V20200401Preview.ConfigurationProfile("configurationProfile", new AzureRM.ChangeAnalysis.V20200401Preview.ConfigurationProfileArgs
+        {
+            ProfileName = "default",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+configuration_profile = azurerm.changeanalysis.v20200401preview.ConfigurationProfile("configurationProfile", profile_name="default")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const configurationProfile = new azurerm.changeanalysis.v20200401preview.ConfigurationProfile("configurationProfile", {profileName: "default"});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ConfigurationProfile Resource {#create}

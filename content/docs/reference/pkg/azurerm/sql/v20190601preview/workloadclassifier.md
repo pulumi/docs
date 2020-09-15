@@ -12,6 +12,162 @@ meta_desc: "Explore the WorkloadClassifier resource of the sql/v20190601preview 
 
 Workload classifier operations for a data warehouse
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a workload group with all properties specified.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workloadClassifier = new AzureRM.Sql.V20190601Preview.WorkloadClassifier("workloadClassifier", new AzureRM.Sql.V20190601Preview.WorkloadClassifierArgs
+        {
+            Context = "test_context",
+            DatabaseName = "testdb",
+            EndTime = "14:00",
+            Importance = "high",
+            Label = "test_label",
+            MemberName = "dbo",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+            StartTime = "12:00",
+            WorkloadClassifierName = "wlm_workloadclassifier",
+            WorkloadGroupName = "wlm_workloadgroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+workload_classifier = azurerm.sql.v20190601preview.WorkloadClassifier("workloadClassifier",
+    context="test_context",
+    database_name="testdb",
+    end_time="14:00",
+    importance="high",
+    label="test_label",
+    member_name="dbo",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr",
+    start_time="12:00",
+    workload_classifier_name="wlm_workloadclassifier",
+    workload_group_name="wlm_workloadgroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const workloadClassifier = new azurerm.sql.v20190601preview.WorkloadClassifier("workloadClassifier", {
+    context: "test_context",
+    databaseName: "testdb",
+    endTime: "14:00",
+    importance: "high",
+    label: "test_label",
+    memberName: "dbo",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+    startTime: "12:00",
+    workloadClassifierName: "wlm_workloadclassifier",
+    workloadGroupName: "wlm_workloadgroup",
+});
+
+```
+
+{{% /example %}}
+
+### Create a workload group with the required properties specified.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workloadClassifier = new AzureRM.Sql.V20190601Preview.WorkloadClassifier("workloadClassifier", new AzureRM.Sql.V20190601Preview.WorkloadClassifierArgs
+        {
+            DatabaseName = "testdb",
+            MemberName = "dbo",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+            WorkloadClassifierName = "wlm_workloadclassifier",
+            WorkloadGroupName = "wlm_workloadgroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+workload_classifier = azurerm.sql.v20190601preview.WorkloadClassifier("workloadClassifier",
+    database_name="testdb",
+    member_name="dbo",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr",
+    workload_classifier_name="wlm_workloadclassifier",
+    workload_group_name="wlm_workloadgroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const workloadClassifier = new azurerm.sql.v20190601preview.WorkloadClassifier("workloadClassifier", {
+    databaseName: "testdb",
+    memberName: "dbo",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+    workloadClassifierName: "wlm_workloadclassifier",
+    workloadGroupName: "wlm_workloadgroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a WorkloadClassifier Resource {#create}

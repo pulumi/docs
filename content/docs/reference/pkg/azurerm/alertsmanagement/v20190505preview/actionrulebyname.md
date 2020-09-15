@@ -12,6 +12,73 @@ meta_desc: "Explore the ActionRuleByName resource of the alertsmanagement/v20190
 
 Action rule object containing target scope, conditions and suppression logic
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PutActionRule
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var actionRuleByName = new AzureRM.AlertsManagement.V20190505Preview.ActionRuleByName("actionRuleByName", new AzureRM.AlertsManagement.V20190505Preview.ActionRuleByNameArgs
+        {
+            ActionRuleName = "DailySuppression",
+            Location = "Global",
+            ResourceGroupName = "alertscorrelationrg",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+action_rule_by_name = azurerm.alertsmanagement.v20190505preview.ActionRuleByName("actionRuleByName",
+    action_rule_name="DailySuppression",
+    location="Global",
+    resource_group_name="alertscorrelationrg",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const actionRuleByName = new azurerm.alertsmanagement.v20190505preview.ActionRuleByName("actionRuleByName", {
+    actionRuleName: "DailySuppression",
+    location: "Global",
+    resourceGroupName: "alertscorrelationrg",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ActionRuleByName Resource {#create}

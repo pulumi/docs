@@ -12,6 +12,67 @@ meta_desc: "Explore the IotSensor resource of the security/v20200806preview modu
 
 IoT sensor
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update IoT sensor
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var iotSensor = new AzureRM.Security.V20200806Preview.IotSensor("iotSensor", new AzureRM.Security.V20200806Preview.IotSensorArgs
+        {
+            IotSensorName = "mySensor",
+            Scope = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+iot_sensor = azurerm.security.v20200806preview.IotSensor("iotSensor",
+    iot_sensor_name="mySensor",
+    scope="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const iotSensor = new azurerm.security.v20200806preview.IotSensor("iotSensor", {
+    iotSensorName: "mySensor",
+    scope: "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IotSensor Resource {#create}

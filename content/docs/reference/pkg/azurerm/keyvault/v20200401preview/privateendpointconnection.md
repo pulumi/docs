@@ -12,6 +12,83 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the keyvault/v2020
 
 Private endpoint connection resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### KeyVaultPutPrivateEndpointConnection
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpointConnection = new AzureRM.KeyVault.V20200401Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureRM.KeyVault.V20200401Preview.PrivateEndpointConnectionArgs
+        {
+            PrivateEndpointConnectionName = "sample-pec",
+            PrivateLinkServiceConnectionState = new AzureRM.KeyVault.V20200401Preview.Inputs.PrivateLinkServiceConnectionStateArgs
+            {
+                Description = "My name is Joe and I'm approving this.",
+                Status = "Approved",
+            },
+            ResourceGroupName = "sample-group",
+            VaultName = "sample-vault",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_endpoint_connection = azurerm.keyvault.v20200401preview.PrivateEndpointConnection("privateEndpointConnection",
+    private_endpoint_connection_name="sample-pec",
+    private_link_service_connection_state={
+        "description": "My name is Joe and I'm approving this.",
+        "status": "Approved",
+    },
+    resource_group_name="sample-group",
+    vault_name="sample-vault")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateEndpointConnection = new azurerm.keyvault.v20200401preview.PrivateEndpointConnection("privateEndpointConnection", {
+    privateEndpointConnectionName: "sample-pec",
+    privateLinkServiceConnectionState: {
+        description: "My name is Joe and I'm approving this.",
+        status: "Approved",
+    },
+    resourceGroupName: "sample-group",
+    vaultName: "sample-vault",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateEndpointConnection Resource {#create}

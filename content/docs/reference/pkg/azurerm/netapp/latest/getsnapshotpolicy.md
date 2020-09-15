@@ -228,7 +228,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
+    <dd>{{% md %}}Snapshot policy name{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -246,7 +256,7 @@ The following output properties are available:
 <a href="#dailyschedule_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="#dailyscheduleresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Net<wbr>App.<wbr>Latest.<wbr>Outputs.<wbr>Daily<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for daily snapshots{{% /md %}}</dd>
 
@@ -266,7 +276,7 @@ The following output properties are available:
 <a href="#hourlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="#hourlyscheduleresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Net<wbr>App.<wbr>Latest.<wbr>Outputs.<wbr>Hourly<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd>
 
@@ -276,7 +286,7 @@ The following output properties are available:
 <a href="#monthlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="#monthlyscheduleresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Net<wbr>App.<wbr>Latest.<wbr>Outputs.<wbr>Monthly<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for monthly snapshots{{% /md %}}</dd>
 
@@ -296,7 +306,7 @@ The following output properties are available:
 <a href="#weeklyschedule_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="#weeklyscheduleresponse">Pulumi.<wbr>Azure<wbr>RM.<wbr>Net<wbr>App.<wbr>Latest.<wbr>Outputs.<wbr>Weekly<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for weekly snapshots{{% /md %}}</dd>
 
@@ -325,7 +335,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
+    <dd>{{% md %}}Snapshot policy name{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -343,7 +363,7 @@ The following output properties are available:
 <a href="#dailyschedule_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="#dailyscheduleresponse">Daily<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for daily snapshots{{% /md %}}</dd>
 
@@ -363,7 +383,7 @@ The following output properties are available:
 <a href="#hourlyschedule_go" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="#hourlyscheduleresponse">Hourly<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd>
 
@@ -373,7 +393,7 @@ The following output properties are available:
 <a href="#monthlyschedule_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="#monthlyscheduleresponse">Monthly<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for monthly snapshots{{% /md %}}</dd>
 
@@ -393,7 +413,7 @@ The following output properties are available:
 <a href="#weeklyschedule_go" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="#weeklyscheduleresponse">Weekly<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for weekly snapshots{{% /md %}}</dd>
 
@@ -422,7 +442,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
+    <dd>{{% md %}}Snapshot policy name{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -440,7 +470,7 @@ The following output properties are available:
 <a href="#dailyschedule_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="#dailyscheduleresponse">Daily<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for daily snapshots{{% /md %}}</dd>
 
@@ -460,7 +490,7 @@ The following output properties are available:
 <a href="#hourlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">hourly<wbr>Schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="#hourlyscheduleresponse">Hourly<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd>
 
@@ -470,7 +500,7 @@ The following output properties are available:
 <a href="#monthlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="#monthlyscheduleresponse">Monthly<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for monthly snapshots{{% /md %}}</dd>
 
@@ -490,7 +520,7 @@ The following output properties are available:
 <a href="#weeklyschedule_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="#weeklyscheduleresponse">Weekly<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for weekly snapshots{{% /md %}}</dd>
 
@@ -519,7 +549,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
+    <dd>{{% md %}}Snapshot policy name{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -537,7 +577,7 @@ The following output properties are available:
 <a href="#daily_schedule_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="#dailyscheduleresponse">Dict[Daily<wbr>Schedule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Schedule for daily snapshots{{% /md %}}</dd>
 
@@ -557,7 +597,7 @@ The following output properties are available:
 <a href="#hourly_schedule_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="#hourlyscheduleresponse">Dict[Hourly<wbr>Schedule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd>
 
@@ -567,7 +607,7 @@ The following output properties are available:
 <a href="#monthly_schedule_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="#monthlyscheduleresponse">Dict[Monthly<wbr>Schedule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Schedule for monthly snapshots{{% /md %}}</dd>
 
@@ -587,9 +627,879 @@ The following output properties are available:
 <a href="#weekly_schedule_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="#weeklyscheduleresponse">Dict[Weekly<wbr>Schedule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Schedule for weekly snapshots{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="dailyscheduleresponse">Daily<wbr>Schedule<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#DailyScheduleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/netapp/latest?tab=doc#DailyScheduleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.NetApp.Latest.Outputs.DailyScheduleResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hour_csharp">
+<a href="#hour_csharp" style="color: inherit; text-decoration: inherit;">Hour</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minute_csharp">
+<a href="#minute_csharp" style="color: inherit; text-decoration: inherit;">Minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshotstokeep_csharp">
+<a href="#snapshotstokeep_csharp" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usedbytes_csharp">
+<a href="#usedbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hour_go">
+<a href="#hour_go" style="color: inherit; text-decoration: inherit;">Hour</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minute_go">
+<a href="#minute_go" style="color: inherit; text-decoration: inherit;">Minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshotstokeep_go">
+<a href="#snapshotstokeep_go" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usedbytes_go">
+<a href="#usedbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hour_nodejs">
+<a href="#hour_nodejs" style="color: inherit; text-decoration: inherit;">hour</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minute_nodejs">
+<a href="#minute_nodejs" style="color: inherit; text-decoration: inherit;">minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshotstokeep_nodejs">
+<a href="#snapshotstokeep_nodejs" style="color: inherit; text-decoration: inherit;">snapshots<wbr>To<wbr>Keep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usedbytes_nodejs">
+<a href="#usedbytes_nodejs" style="color: inherit; text-decoration: inherit;">used<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hour_python">
+<a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minute_python">
+<a href="#minute_python" style="color: inherit; text-decoration: inherit;">minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshots_to_keep_python">
+<a href="#snapshots_to_keep_python" style="color: inherit; text-decoration: inherit;">snapshots_<wbr>to_<wbr>keep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Daily snapshot count to keep{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="used_bytes_python">
+<a href="#used_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="hourlyscheduleresponse">Hourly<wbr>Schedule<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#HourlyScheduleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/netapp/latest?tab=doc#HourlyScheduleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.NetApp.Latest.Outputs.HourlyScheduleResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minute_csharp">
+<a href="#minute_csharp" style="color: inherit; text-decoration: inherit;">Minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshotstokeep_csharp">
+<a href="#snapshotstokeep_csharp" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usedbytes_csharp">
+<a href="#usedbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minute_go">
+<a href="#minute_go" style="color: inherit; text-decoration: inherit;">Minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshotstokeep_go">
+<a href="#snapshotstokeep_go" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usedbytes_go">
+<a href="#usedbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minute_nodejs">
+<a href="#minute_nodejs" style="color: inherit; text-decoration: inherit;">minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshotstokeep_nodejs">
+<a href="#snapshotstokeep_nodejs" style="color: inherit; text-decoration: inherit;">snapshots<wbr>To<wbr>Keep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usedbytes_nodejs">
+<a href="#usedbytes_nodejs" style="color: inherit; text-decoration: inherit;">used<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minute_python">
+<a href="#minute_python" style="color: inherit; text-decoration: inherit;">minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshots_to_keep_python">
+<a href="#snapshots_to_keep_python" style="color: inherit; text-decoration: inherit;">snapshots_<wbr>to_<wbr>keep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Hourly snapshot count to keep{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="used_bytes_python">
+<a href="#used_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="monthlyscheduleresponse">Monthly<wbr>Schedule<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#MonthlyScheduleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/netapp/latest?tab=doc#MonthlyScheduleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.NetApp.Latest.Outputs.MonthlyScheduleResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysofmonth_csharp">
+<a href="#daysofmonth_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>Month</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hour_csharp">
+<a href="#hour_csharp" style="color: inherit; text-decoration: inherit;">Hour</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minute_csharp">
+<a href="#minute_csharp" style="color: inherit; text-decoration: inherit;">Minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshotstokeep_csharp">
+<a href="#snapshotstokeep_csharp" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usedbytes_csharp">
+<a href="#usedbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysofmonth_go">
+<a href="#daysofmonth_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>Month</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hour_go">
+<a href="#hour_go" style="color: inherit; text-decoration: inherit;">Hour</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minute_go">
+<a href="#minute_go" style="color: inherit; text-decoration: inherit;">Minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshotstokeep_go">
+<a href="#snapshotstokeep_go" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usedbytes_go">
+<a href="#usedbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="daysofmonth_nodejs">
+<a href="#daysofmonth_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>Month</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hour_nodejs">
+<a href="#hour_nodejs" style="color: inherit; text-decoration: inherit;">hour</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minute_nodejs">
+<a href="#minute_nodejs" style="color: inherit; text-decoration: inherit;">minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshotstokeep_nodejs">
+<a href="#snapshotstokeep_nodejs" style="color: inherit; text-decoration: inherit;">snapshots<wbr>To<wbr>Keep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usedbytes_nodejs">
+<a href="#usedbytes_nodejs" style="color: inherit; text-decoration: inherit;">used<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="days_of_month_python">
+<a href="#days_of_month_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>month</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which days of the month snapshot should be taken. A comma delimited string.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hour_python">
+<a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minute_python">
+<a href="#minute_python" style="color: inherit; text-decoration: inherit;">minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshots_to_keep_python">
+<a href="#snapshots_to_keep_python" style="color: inherit; text-decoration: inherit;">snapshots_<wbr>to_<wbr>keep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Monthly snapshot count to keep{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="used_bytes_python">
+<a href="#used_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="weeklyscheduleresponse">Weekly<wbr>Schedule<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azurerm/types/output/#WeeklyScheduleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/netapp/latest?tab=doc#WeeklyScheduleResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.NetApp.Latest.Outputs.WeeklyScheduleResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="day_csharp">
+<a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hour_csharp">
+<a href="#hour_csharp" style="color: inherit; text-decoration: inherit;">Hour</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minute_csharp">
+<a href="#minute_csharp" style="color: inherit; text-decoration: inherit;">Minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshotstokeep_csharp">
+<a href="#snapshotstokeep_csharp" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usedbytes_csharp">
+<a href="#usedbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="day_go">
+<a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hour_go">
+<a href="#hour_go" style="color: inherit; text-decoration: inherit;">Hour</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minute_go">
+<a href="#minute_go" style="color: inherit; text-decoration: inherit;">Minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshotstokeep_go">
+<a href="#snapshotstokeep_go" style="color: inherit; text-decoration: inherit;">Snapshots<wbr>To<wbr>Keep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usedbytes_go">
+<a href="#usedbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="day_nodejs">
+<a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hour_nodejs">
+<a href="#hour_nodejs" style="color: inherit; text-decoration: inherit;">hour</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minute_nodejs">
+<a href="#minute_nodejs" style="color: inherit; text-decoration: inherit;">minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshotstokeep_nodejs">
+<a href="#snapshotstokeep_nodejs" style="color: inherit; text-decoration: inherit;">snapshots<wbr>To<wbr>Keep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usedbytes_nodejs">
+<a href="#usedbytes_nodejs" style="color: inherit; text-decoration: inherit;">used<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="day_python">
+<a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hour_python">
+<a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which hour in UTC timezone a snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minute_python">
+<a href="#minute_python" style="color: inherit; text-decoration: inherit;">minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates which minute snapshot should be taken{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshots_to_keep_python">
+<a href="#snapshots_to_keep_python" style="color: inherit; text-decoration: inherit;">snapshots_<wbr>to_<wbr>keep</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Weekly snapshot count to keep{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="used_bytes_python">
+<a href="#used_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

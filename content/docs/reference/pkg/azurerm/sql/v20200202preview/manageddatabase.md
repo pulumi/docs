@@ -12,6 +12,438 @@ meta_desc: "Explore the ManagedDatabase resource of the sql/v20200202preview mod
 
 A managed database resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates a new managed database by restoring from an external backup
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedDatabase = new AzureRM.Sql.V20200202Preview.ManagedDatabase("managedDatabase", new AzureRM.Sql.V20200202Preview.ManagedDatabaseArgs
+        {
+            AutoCompleteRestore = true,
+            Collation = "SQL_Latin1_General_CP1_CI_AS",
+            CreateMode = "RestoreExternalBackup",
+            DatabaseName = "managedDatabase",
+            LastBackupName = "last_backup_name",
+            Location = "southeastasia",
+            ManagedInstanceName = "managedInstance",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            StorageContainerSasToken = "sv=2015-12-11&sr=c&sp=rl&sig=1234",
+            StorageContainerUri = "https://myaccountname.blob.core.windows.net/backups",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_database = azurerm.sql.v20200202preview.ManagedDatabase("managedDatabase",
+    auto_complete_restore=True,
+    collation="SQL_Latin1_General_CP1_CI_AS",
+    create_mode="RestoreExternalBackup",
+    database_name="managedDatabase",
+    last_backup_name="last_backup_name",
+    location="southeastasia",
+    managed_instance_name="managedInstance",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    storage_container_sas_token="sv=2015-12-11&sr=c&sp=rl&sig=1234",
+    storage_container_uri="https://myaccountname.blob.core.windows.net/backups")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedDatabase = new azurerm.sql.v20200202preview.ManagedDatabase("managedDatabase", {
+    autoCompleteRestore: true,
+    collation: "SQL_Latin1_General_CP1_CI_AS",
+    createMode: "RestoreExternalBackup",
+    databaseName: "managedDatabase",
+    lastBackupName: "last_backup_name",
+    location: "southeastasia",
+    managedInstanceName: "managedInstance",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    storageContainerSasToken: "sv=2015-12-11&sr=c&sp=rl&sig=1234",
+    storageContainerUri: "https://myaccountname.blob.core.windows.net/backups",
+});
+
+```
+
+{{% /example %}}
+
+### Creates a new managed database from restoring a geo-replicated backup
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedDatabase = new AzureRM.Sql.V20200202Preview.ManagedDatabase("managedDatabase", new AzureRM.Sql.V20200202Preview.ManagedDatabaseArgs
+        {
+            CreateMode = "Recovery",
+            DatabaseName = "testdb_recovered",
+            Location = "southeastasia",
+            ManagedInstanceName = "server1",
+            RecoverableDatabaseId = "/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/Default-SQL-WestEurope/providers/Microsoft.Sql/managedInstances/testsvr/recoverableDatabases/testdb",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_database = azurerm.sql.v20200202preview.ManagedDatabase("managedDatabase",
+    create_mode="Recovery",
+    database_name="testdb_recovered",
+    location="southeastasia",
+    managed_instance_name="server1",
+    recoverable_database_id="/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/Default-SQL-WestEurope/providers/Microsoft.Sql/managedInstances/testsvr/recoverableDatabases/testdb",
+    resource_group_name="Default-SQL-SouthEastAsia")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedDatabase = new azurerm.sql.v20200202preview.ManagedDatabase("managedDatabase", {
+    createMode: "Recovery",
+    databaseName: "testdb_recovered",
+    location: "southeastasia",
+    managedInstanceName: "server1",
+    recoverableDatabaseId: "/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/Default-SQL-WestEurope/providers/Microsoft.Sql/managedInstances/testsvr/recoverableDatabases/testdb",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+});
+
+```
+
+{{% /example %}}
+
+### Creates a new managed database from restoring a long term retention backup
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedDatabase = new AzureRM.Sql.V20200202Preview.ManagedDatabase("managedDatabase", new AzureRM.Sql.V20200202Preview.ManagedDatabaseArgs
+        {
+            Collation = "SQL_Latin1_General_CP1_CI_AS",
+            CreateMode = "RestoreExternalBackup",
+            DatabaseName = "managedDatabase",
+            Location = "southeastasia",
+            ManagedInstanceName = "managedInstance",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            StorageContainerSasToken = "sv=2015-12-11&sr=c&sp=rl&sig=1234",
+            StorageContainerUri = "https://myaccountname.blob.core.windows.net/backups",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_database = azurerm.sql.v20200202preview.ManagedDatabase("managedDatabase",
+    collation="SQL_Latin1_General_CP1_CI_AS",
+    create_mode="RestoreExternalBackup",
+    database_name="managedDatabase",
+    location="southeastasia",
+    managed_instance_name="managedInstance",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    storage_container_sas_token="sv=2015-12-11&sr=c&sp=rl&sig=1234",
+    storage_container_uri="https://myaccountname.blob.core.windows.net/backups")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedDatabase = new azurerm.sql.v20200202preview.ManagedDatabase("managedDatabase", {
+    collation: "SQL_Latin1_General_CP1_CI_AS",
+    createMode: "RestoreExternalBackup",
+    databaseName: "managedDatabase",
+    location: "southeastasia",
+    managedInstanceName: "managedInstance",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    storageContainerSasToken: "sv=2015-12-11&sr=c&sp=rl&sig=1234",
+    storageContainerUri: "https://myaccountname.blob.core.windows.net/backups",
+});
+
+```
+
+{{% /example %}}
+
+### Creates a new managed database using point in time restore
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedDatabase = new AzureRM.Sql.V20200202Preview.ManagedDatabase("managedDatabase", new AzureRM.Sql.V20200202Preview.ManagedDatabaseArgs
+        {
+            CreateMode = "PointInTimeRestore",
+            DatabaseName = "managedDatabase",
+            Location = "southeastasia",
+            ManagedInstanceName = "managedInstance",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            RestorePointInTime = "2017-07-14T05:35:31.503Z",
+            SourceDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/managedInstances/testsvr/databases/testdb",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_database = azurerm.sql.v20200202preview.ManagedDatabase("managedDatabase",
+    create_mode="PointInTimeRestore",
+    database_name="managedDatabase",
+    location="southeastasia",
+    managed_instance_name="managedInstance",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    restore_point_in_time="2017-07-14T05:35:31.503Z",
+    source_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/managedInstances/testsvr/databases/testdb")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedDatabase = new azurerm.sql.v20200202preview.ManagedDatabase("managedDatabase", {
+    createMode: "PointInTimeRestore",
+    databaseName: "managedDatabase",
+    location: "southeastasia",
+    managedInstanceName: "managedInstance",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    restorePointInTime: "2017-07-14T05:35:31.503Z",
+    sourceDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/managedInstances/testsvr/databases/testdb",
+});
+
+```
+
+{{% /example %}}
+
+### Creates a new managed database with maximal properties
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedDatabase = new AzureRM.Sql.V20200202Preview.ManagedDatabase("managedDatabase", new AzureRM.Sql.V20200202Preview.ManagedDatabaseArgs
+        {
+            DatabaseName = "managedDatabase",
+            Location = "southeastasia",
+            ManagedInstanceName = "managedInstance",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            Tags = 
+            {
+                { "tagKey1", "TagValue1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_database = azurerm.sql.v20200202preview.ManagedDatabase("managedDatabase",
+    database_name="managedDatabase",
+    location="southeastasia",
+    managed_instance_name="managedInstance",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    tags={
+        "tagKey1": "TagValue1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedDatabase = new azurerm.sql.v20200202preview.ManagedDatabase("managedDatabase", {
+    databaseName: "managedDatabase",
+    location: "southeastasia",
+    managedInstanceName: "managedInstance",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    tags: {
+        tagKey1: "TagValue1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Creates a new managed database with minimal properties
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedDatabase = new AzureRM.Sql.V20200202Preview.ManagedDatabase("managedDatabase", new AzureRM.Sql.V20200202Preview.ManagedDatabaseArgs
+        {
+            DatabaseName = "managedDatabase",
+            Location = "southeastasia",
+            ManagedInstanceName = "managedInstance",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_database = azurerm.sql.v20200202preview.ManagedDatabase("managedDatabase",
+    database_name="managedDatabase",
+    location="southeastasia",
+    managed_instance_name="managedInstance",
+    resource_group_name="Default-SQL-SouthEastAsia")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedDatabase = new azurerm.sql.v20200202preview.ManagedDatabase("managedDatabase", {
+    databaseName: "managedDatabase",
+    location: "southeastasia",
+    managedInstanceName: "managedInstance",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagedDatabase Resource {#create}

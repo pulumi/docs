@@ -12,6 +12,67 @@ meta_desc: "Explore the GuestUsage resource of the azureactivedirectory/v2020050
 
 Guest Usages Resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### GuestUsages_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var guestUsage = new AzureRM.AzureActiveDirectory.V20200501Preview.GuestUsage("guestUsage", new AzureRM.AzureActiveDirectory.V20200501Preview.GuestUsageArgs
+        {
+            ResourceGroupName = "contosoResourceGroup",
+            ResourceName = "contoso.onmicrosoft.com",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+guest_usage = azurerm.azureactivedirectory.v20200501preview.GuestUsage("guestUsage",
+    resource_group_name="contosoResourceGroup",
+    resource_name="contoso.onmicrosoft.com")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const guestUsage = new azurerm.azureactivedirectory.v20200501preview.GuestUsage("guestUsage", {
+    resourceGroupName: "contosoResourceGroup",
+    resourceName: "contoso.onmicrosoft.com",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GuestUsage Resource {#create}

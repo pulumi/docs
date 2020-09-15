@@ -12,6 +12,83 @@ meta_desc: "Explore the Device resource of the hybridnetwork/v20200101preview mo
 
 Hybrid network device resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update hybrid network device
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var device = new AzureRM.HybridNetwork.V20200101Preview.Device("device", new AzureRM.HybridNetwork.V20200101Preview.DeviceArgs
+        {
+            AzureStackEdge = new AzureRM.HybridNetwork.V20200101Preview.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/subid1/resourcegroups/rg2/providers/Microsoft.DataboxEdge/DataboxEdgeDevices/TestDataboxEdgeDeviceName",
+            },
+            DeviceName = "TestDevice",
+            DeviceType = "AzureStackEdge",
+            Location = "eastus",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+device = azurerm.hybridnetwork.v20200101preview.Device("device",
+    azure_stack_edge={
+        "id": "/subscriptions/subid1/resourcegroups/rg2/providers/Microsoft.DataboxEdge/DataboxEdgeDevices/TestDataboxEdgeDeviceName",
+    },
+    device_name="TestDevice",
+    device_type="AzureStackEdge",
+    location="eastus",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const device = new azurerm.hybridnetwork.v20200101preview.Device("device", {
+    azureStackEdge: {
+        id: "/subscriptions/subid1/resourcegroups/rg2/providers/Microsoft.DataboxEdge/DataboxEdgeDevices/TestDataboxEdgeDeviceName",
+    },
+    deviceName: "TestDevice",
+    deviceType: "AzureStackEdge",
+    location: "eastus",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Device Resource {#create}

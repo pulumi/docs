@@ -12,6 +12,96 @@ meta_desc: "Explore the Namespace resource of the relay/latest module, including
 
 Description of a namespace resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### RelayNamespaceCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @namespace = new AzureRM.Relay.Latest.Namespace("namespace", new AzureRM.Relay.Latest.NamespaceArgs
+        {
+            Location = "West US",
+            NamespaceName = "sdk-RelayNamespace-01",
+            ResourceGroupName = "RG-eg",
+            Sku = new AzureRM.Relay.Latest.Inputs.SkuArgs
+            {
+                Name = "Standard",
+                Tier = "Standard",
+            },
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+namespace = azurerm.relay.latest.Namespace("namespace",
+    location="West US",
+    namespace_name="sdk-RelayNamespace-01",
+    resource_group_name="RG-eg",
+    sku={
+        "name": "Standard",
+        "tier": "Standard",
+    },
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const namespace = new azurerm.relay.latest.Namespace("namespace", {
+    location: "West US",
+    namespaceName: "sdk-RelayNamespace-01",
+    resourceGroupName: "RG-eg",
+    sku: {
+        name: "Standard",
+        tier: "Standard",
+    },
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Namespace Resource {#create}

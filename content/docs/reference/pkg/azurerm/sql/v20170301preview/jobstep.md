@@ -12,6 +12,235 @@ meta_desc: "Explore the JobStep resource of the sql/v20170301preview module, inc
 
 A job step.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a job step with all properties specified.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var jobStep = new AzureRM.Sql.V20170301Preview.JobStep("jobStep", new AzureRM.Sql.V20170301Preview.JobStepArgs
+        {
+            Action = new AzureRM.Sql.V20170301Preview.Inputs.JobStepActionArgs
+            {
+                Source = "Inline",
+                Type = "TSql",
+                Value = "select 2",
+            },
+            Credential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred1",
+            ExecutionOptions = new AzureRM.Sql.V20170301Preview.Inputs.JobStepExecutionOptionsArgs
+            {
+                InitialRetryIntervalSeconds = 11,
+                MaximumRetryIntervalSeconds = 222,
+                RetryAttempts = 42,
+                RetryIntervalBackoffMultiplier = 3,
+                TimeoutSeconds = 1234,
+            },
+            JobAgentName = "agent1",
+            JobName = "job1",
+            Output = new AzureRM.Sql.V20170301Preview.Inputs.JobStepOutputArgs
+            {
+                Credential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred0",
+                DatabaseName = "database3",
+                ResourceGroupName = "group3",
+                SchemaName = "myschema1234",
+                ServerName = "server3",
+                SubscriptionId = "3501b905-a848-4b5d-96e8-b253f62d735a",
+                TableName = "mytable5678",
+                Type = "SqlDatabase",
+            },
+            ResourceGroupName = "group1",
+            ServerName = "server1",
+            StepId = 1,
+            StepName = "step1",
+            TargetGroup = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/targetGroups/targetGroup1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+job_step = azurerm.sql.v20170301preview.JobStep("jobStep",
+    action={
+        "source": "Inline",
+        "type": "TSql",
+        "value": "select 2",
+    },
+    credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred1",
+    execution_options={
+        "initialRetryIntervalSeconds": 11,
+        "maximumRetryIntervalSeconds": 222,
+        "retryAttempts": 42,
+        "retryIntervalBackoffMultiplier": 3,
+        "timeoutSeconds": 1234,
+    },
+    job_agent_name="agent1",
+    job_name="job1",
+    output={
+        "credential": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred0",
+        "databaseName": "database3",
+        "resourceGroupName": "group3",
+        "schemaName": "myschema1234",
+        "serverName": "server3",
+        "subscriptionId": "3501b905-a848-4b5d-96e8-b253f62d735a",
+        "tableName": "mytable5678",
+        "type": "SqlDatabase",
+    },
+    resource_group_name="group1",
+    server_name="server1",
+    step_id=1,
+    step_name="step1",
+    target_group="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/targetGroups/targetGroup1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const jobStep = new azurerm.sql.v20170301preview.JobStep("jobStep", {
+    action: {
+        source: "Inline",
+        type: "TSql",
+        value: "select 2",
+    },
+    credential: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred1",
+    executionOptions: {
+        initialRetryIntervalSeconds: 11,
+        maximumRetryIntervalSeconds: 222,
+        retryAttempts: 42,
+        retryIntervalBackoffMultiplier: 3,
+        timeoutSeconds: 1234,
+    },
+    jobAgentName: "agent1",
+    jobName: "job1",
+    output: {
+        credential: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred0",
+        databaseName: "database3",
+        resourceGroupName: "group3",
+        schemaName: "myschema1234",
+        serverName: "server3",
+        subscriptionId: "3501b905-a848-4b5d-96e8-b253f62d735a",
+        tableName: "mytable5678",
+        type: "SqlDatabase",
+    },
+    resourceGroupName: "group1",
+    serverName: "server1",
+    stepId: 1,
+    stepName: "step1",
+    targetGroup: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/targetGroups/targetGroup1",
+});
+
+```
+
+{{% /example %}}
+
+### Create or update a job step with minimal properties specified.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var jobStep = new AzureRM.Sql.V20170301Preview.JobStep("jobStep", new AzureRM.Sql.V20170301Preview.JobStepArgs
+        {
+            Action = new AzureRM.Sql.V20170301Preview.Inputs.JobStepActionArgs
+            {
+                Value = "select 1",
+            },
+            Credential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred0",
+            JobAgentName = "agent1",
+            JobName = "job1",
+            ResourceGroupName = "group1",
+            ServerName = "server1",
+            StepName = "step1",
+            TargetGroup = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/targetGroups/targetGroup0",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+job_step = azurerm.sql.v20170301preview.JobStep("jobStep",
+    action={
+        "value": "select 1",
+    },
+    credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred0",
+    job_agent_name="agent1",
+    job_name="job1",
+    resource_group_name="group1",
+    server_name="server1",
+    step_name="step1",
+    target_group="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/targetGroups/targetGroup0")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const jobStep = new azurerm.sql.v20170301preview.JobStep("jobStep", {
+    action: {
+        value: "select 1",
+    },
+    credential: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred0",
+    jobAgentName: "agent1",
+    jobName: "job1",
+    resourceGroupName: "group1",
+    serverName: "server1",
+    stepName: "step1",
+    targetGroup: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/targetGroups/targetGroup0",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a JobStep Resource {#create}

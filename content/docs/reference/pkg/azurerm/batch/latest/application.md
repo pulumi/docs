@@ -12,6 +12,76 @@ meta_desc: "Explore the Application resource of the batch/latest module, includi
 
 Contains information about an application in a Batch account.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApplicationCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var application = new AzureRM.Batch.Latest.Application("application", new AzureRM.Batch.Latest.ApplicationArgs
+        {
+            AccountName = "sampleacct",
+            AllowUpdates = false,
+            ApplicationName = "app1",
+            DisplayName = "myAppName",
+            ResourceGroupName = "default-azurebatch-japaneast",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+application = azurerm.batch.latest.Application("application",
+    account_name="sampleacct",
+    allow_updates=False,
+    application_name="app1",
+    display_name="myAppName",
+    resource_group_name="default-azurebatch-japaneast")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const application = new azurerm.batch.latest.Application("application", {
+    accountName: "sampleacct",
+    allowUpdates: false,
+    applicationName: "app1",
+    displayName: "myAppName",
+    resourceGroupName: "default-azurebatch-japaneast",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Application Resource {#create}

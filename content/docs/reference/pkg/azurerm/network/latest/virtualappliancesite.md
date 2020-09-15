@@ -12,6 +12,96 @@ meta_desc: "Explore the VirtualApplianceSite resource of the network/latest modu
 
 Virtual Appliance Site resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Network Virtual Appliance Site
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualApplianceSite = new AzureRM.Network.Latest.VirtualApplianceSite("virtualApplianceSite", new AzureRM.Network.Latest.VirtualApplianceSiteArgs
+        {
+            AddressPrefix = "192.168.1.0/24",
+            NetworkVirtualApplianceName = "nva",
+            O365Policy = new AzureRM.Network.Latest.Inputs.Office365PolicyPropertiesArgs
+            {
+                BreakOutCategories = new AzureRM.Network.Latest.Inputs.BreakOutCategoryPoliciesArgs
+                {
+                    Allow = true,
+                    Default = true,
+                    Optimize = true,
+                },
+            },
+            ResourceGroupName = "rg1",
+            SiteName = "site1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_appliance_site = azurerm.network.latest.VirtualApplianceSite("virtualApplianceSite",
+    address_prefix="192.168.1.0/24",
+    network_virtual_appliance_name="nva",
+    o365_policy={
+        "breakOutCategories": {
+            "allow": True,
+            "default": True,
+            "optimize": True,
+        },
+    },
+    resource_group_name="rg1",
+    site_name="site1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualApplianceSite = new azurerm.network.latest.VirtualApplianceSite("virtualApplianceSite", {
+    addressPrefix: "192.168.1.0/24",
+    networkVirtualApplianceName: "nva",
+    o365Policy: {
+        breakOutCategories: {
+            allow: true,
+            "default": true,
+            optimize: true,
+        },
+    },
+    resourceGroupName: "rg1",
+    siteName: "site1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualApplianceSite Resource {#create}

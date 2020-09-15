@@ -12,6 +12,168 @@ meta_desc: "Explore the ApiPolicy resource of the apimanagement/latest module, i
 
 Policy Contract details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateApiPolicy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiPolicy = new AzureRM.ApiManagement.Latest.ApiPolicy("apiPolicy", new AzureRM.ApiManagement.Latest.ApiPolicyArgs
+        {
+            ApiId = "5600b57e7e8880006a040001",
+            Format = "xml",
+            PolicyId = "policy",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Value = "<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api_policy = azurerm.apimanagement.latest.ApiPolicy("apiPolicy",
+    api_id="5600b57e7e8880006a040001",
+    format="xml",
+    policy_id="policy",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    value="<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const apiPolicy = new azurerm.apimanagement.latest.ApiPolicy("apiPolicy", {
+    apiId: "5600b57e7e8880006a040001",
+    format: "xml",
+    policyId: "policy",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    value: "<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>",
+});
+
+```
+
+{{% /example %}}
+
+### ApiManagementCreateApiPolicyNonXmlEncoded
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiPolicy = new AzureRM.ApiManagement.Latest.ApiPolicy("apiPolicy", new AzureRM.ApiManagement.Latest.ApiPolicyArgs
+        {
+            ApiId = "5600b57e7e8880006a040001",
+            Format = "rawxml",
+            PolicyId = "policy",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Value = @"<policies>
+     <inbound>
+     <base />
+  <set-header name=""newvalue"" exists-action=""override"">
+   <value>""@(context.Request.Headers.FirstOrDefault(h => h.Ke==""Via""))"" </value>
+    </set-header>
+  </inbound>
+      </policies>",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api_policy = azurerm.apimanagement.latest.ApiPolicy("apiPolicy",
+    api_id="5600b57e7e8880006a040001",
+    format="rawxml",
+    policy_id="policy",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    value="""<policies>
+     <inbound>
+     <base />
+  <set-header name="newvalue" exists-action="override">
+   <value>"@(context.Request.Headers.FirstOrDefault(h => h.Ke=="Via"))" </value>
+    </set-header>
+  </inbound>
+      </policies>""")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const apiPolicy = new azurerm.apimanagement.latest.ApiPolicy("apiPolicy", {
+    apiId: "5600b57e7e8880006a040001",
+    format: "rawxml",
+    policyId: "policy",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    value: `<policies>
+     <inbound>
+     <base />
+  <set-header name="newvalue" exists-action="override">
+   <value>"@(context.Request.Headers.FirstOrDefault(h => h.Ke=="Via"))" </value>
+    </set-header>
+  </inbound>
+      </policies>`,
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApiPolicy Resource {#create}

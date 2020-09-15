@@ -12,6 +12,76 @@ meta_desc: "Explore the DataConnector resource of the operationalinsights/latest
 
 Data connector.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates an Office365 data connector.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataConnector = new AzureRM.OperationalInsights.Latest.DataConnector("dataConnector", new AzureRM.OperationalInsights.Latest.DataConnectorArgs
+        {
+            DataConnectorId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+            Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+            Kind = "Office365",
+            ResourceGroupName = "myRg",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+data_connector = azurerm.operationalinsights.latest.DataConnector("dataConnector",
+    data_connector_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+    etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    kind="Office365",
+    resource_group_name="myRg",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataConnector = new azurerm.operationalinsights.latest.DataConnector("dataConnector", {
+    dataConnectorId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+    etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    kind: "Office365",
+    resourceGroupName: "myRg",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DataConnector Resource {#create}

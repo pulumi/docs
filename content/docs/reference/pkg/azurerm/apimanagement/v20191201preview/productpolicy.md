@@ -12,6 +12,124 @@ meta_desc: "Explore the ProductPolicy resource of the apimanagement/v20191201pre
 
 Policy Contract details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateProductPolicy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var productPolicy = new AzureRM.ApiManagement.V20191201Preview.ProductPolicy("productPolicy", new AzureRM.ApiManagement.V20191201Preview.ProductPolicyArgs
+        {
+            Format = "xml",
+            PolicyId = "policy",
+            ProductId = "5702e97e5157a50f48dce801",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Value = @"<policies>
+  <inbound>
+    <rate-limit calls=""{{call-count}}"" renewal-period=""15""></rate-limit>
+    <log-to-eventhub logger-id=""16"">
+                      @( string.Join("","", DateTime.UtcNow, context.Deployment.ServiceName, context.RequestId, context.Request.IpAddress, context.Operation.Name) ) 
+                  </log-to-eventhub>
+    <quota-by-key calls=""40"" counter-key=""cc"" renewal-period=""3600"" increment-count=""@(context.Request.Method == &quot;POST&quot; ? 1:2)"" />
+    <base />
+  </inbound>
+  <backend>
+    <base />
+  </backend>
+  <outbound>
+    <base />
+  </outbound>
+</policies>",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+product_policy = azurerm.apimanagement.v20191201preview.ProductPolicy("productPolicy",
+    format="xml",
+    policy_id="policy",
+    product_id="5702e97e5157a50f48dce801",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    value="""<policies>
+  <inbound>
+    <rate-limit calls="{{call-count}}" renewal-period="15"></rate-limit>
+    <log-to-eventhub logger-id="16">
+                      @( string.Join(",", DateTime.UtcNow, context.Deployment.ServiceName, context.RequestId, context.Request.IpAddress, context.Operation.Name) ) 
+                  </log-to-eventhub>
+    <quota-by-key calls="40" counter-key="cc" renewal-period="3600" increment-count="@(context.Request.Method == &quot;POST&quot; ? 1:2)" />
+    <base />
+  </inbound>
+  <backend>
+    <base />
+  </backend>
+  <outbound>
+    <base />
+  </outbound>
+</policies>""")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const productPolicy = new azurerm.apimanagement.v20191201preview.ProductPolicy("productPolicy", {
+    format: "xml",
+    policyId: "policy",
+    productId: "5702e97e5157a50f48dce801",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    value: `<policies>
+  <inbound>
+    <rate-limit calls="{{call-count}}" renewal-period="15"></rate-limit>
+    <log-to-eventhub logger-id="16">
+                      @( string.Join(",", DateTime.UtcNow, context.Deployment.ServiceName, context.RequestId, context.Request.IpAddress, context.Operation.Name) ) 
+                  </log-to-eventhub>
+    <quota-by-key calls="40" counter-key="cc" renewal-period="3600" increment-count="@(context.Request.Method == &quot;POST&quot; ? 1:2)" />
+    <base />
+  </inbound>
+  <backend>
+    <base />
+  </backend>
+  <outbound>
+    <base />
+  </outbound>
+</policies>`,
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ProductPolicy Resource {#create}

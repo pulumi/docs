@@ -12,6 +12,76 @@ meta_desc: "Explore the StorageSyncService resource of the storagesync/latest mo
 
 Storage Sync Service object.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### StorageSyncServices_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var storageSyncService = new AzureRM.StorageSync.Latest.StorageSyncService("storageSyncService", new AzureRM.StorageSync.Latest.StorageSyncServiceArgs
+        {
+            IncomingTrafficPolicy = "AllowAllTraffic",
+            Location = "WestUS",
+            ResourceGroupName = "SampleResourceGroup_1",
+            StorageSyncServiceName = "SampleStorageSyncService_1",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+storage_sync_service = azurerm.storagesync.latest.StorageSyncService("storageSyncService",
+    incoming_traffic_policy="AllowAllTraffic",
+    location="WestUS",
+    resource_group_name="SampleResourceGroup_1",
+    storage_sync_service_name="SampleStorageSyncService_1",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const storageSyncService = new azurerm.storagesync.latest.StorageSyncService("storageSyncService", {
+    incomingTrafficPolicy: "AllowAllTraffic",
+    location: "WestUS",
+    resourceGroupName: "SampleResourceGroup_1",
+    storageSyncServiceName: "SampleStorageSyncService_1",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a StorageSyncService Resource {#create}

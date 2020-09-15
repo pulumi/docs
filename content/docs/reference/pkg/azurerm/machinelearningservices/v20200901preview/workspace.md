@@ -12,6 +12,153 @@ meta_desc: "Explore the Workspace resource of the machinelearningservices/v20200
 
 An object that represents a machine learning workspace.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Workspace
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workspace = new AzureRM.MachineLearningServices.V20200901Preview.Workspace("workspace", new AzureRM.MachineLearningServices.V20200901Preview.WorkspaceArgs
+        {
+            ApplicationInsights = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",
+            ContainerRegistry = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry",
+            Description = "test description",
+            Encryption = new AzureRM.MachineLearningServices.V20200901Preview.Inputs.EncryptionPropertyArgs
+            {
+                KeyVaultProperties = new AzureRM.MachineLearningServices.V20200901Preview.Inputs.KeyVaultPropertiesArgs
+                {
+                    IdentityClientId = "",
+                    KeyIdentifier = "https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb",
+                    KeyVaultArmId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
+                },
+                Status = "Enabled",
+            },
+            FriendlyName = "HelloName",
+            HbiWorkspace = false,
+            Identity = new AzureRM.MachineLearningServices.V20200901Preview.Inputs.IdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            KeyVault = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
+            Location = "eastus2euap",
+            ResourceGroupName = "workspace-1234",
+            SharedPrivateLinkResources = 
+            {
+                new AzureRM.MachineLearningServices.V20200901Preview.Inputs.SharedPrivateLinkResourceArgs
+                {
+                    Name = "testdbresource",
+                },
+            },
+            Sku = new AzureRM.MachineLearningServices.V20200901Preview.Inputs.SkuArgs
+            {
+                Name = "Basic",
+                Tier = "Basic",
+            },
+            StorageAccount = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount",
+            WorkspaceName = "testworkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+workspace = azurerm.machinelearningservices.v20200901preview.Workspace("workspace",
+    application_insights="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",
+    container_registry="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry",
+    description="test description",
+    encryption={
+        "keyVaultProperties": {
+            "identityClientId": "",
+            "keyIdentifier": "https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb",
+            "keyVaultArmId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
+        },
+        "status": "Enabled",
+    },
+    friendly_name="HelloName",
+    hbi_workspace=False,
+    identity={
+        "type": "SystemAssigned",
+    },
+    key_vault="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
+    location="eastus2euap",
+    resource_group_name="workspace-1234",
+    shared_private_link_resources=[{
+        "name": "testdbresource",
+    }],
+    sku={
+        "name": "Basic",
+        "tier": "Basic",
+    },
+    storage_account="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount",
+    workspace_name="testworkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const workspace = new azurerm.machinelearningservices.v20200901preview.Workspace("workspace", {
+    applicationInsights: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",
+    containerRegistry: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry",
+    description: "test description",
+    encryption: {
+        keyVaultProperties: {
+            identityClientId: "",
+            keyIdentifier: "https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb",
+            keyVaultArmId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
+        },
+        status: "Enabled",
+    },
+    friendlyName: "HelloName",
+    hbiWorkspace: false,
+    identity: {
+        type: "SystemAssigned",
+    },
+    keyVault: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
+    location: "eastus2euap",
+    resourceGroupName: "workspace-1234",
+    sharedPrivateLinkResources: [{
+        name: "testdbresource",
+    }],
+    sku: {
+        name: "Basic",
+        tier: "Basic",
+    },
+    storageAccount: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount",
+    workspaceName: "testworkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Workspace Resource {#create}

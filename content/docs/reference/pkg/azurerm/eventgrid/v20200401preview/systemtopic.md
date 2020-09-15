@@ -12,6 +12,83 @@ meta_desc: "Explore the SystemTopic resource of the eventgrid/v20200401preview m
 
 EventGrid System Topic.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### SystemTopics_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var systemTopic = new AzureRM.EventGrid.V20200401Preview.SystemTopic("systemTopic", new AzureRM.EventGrid.V20200401Preview.SystemTopicArgs
+        {
+            Location = "westus2",
+            ResourceGroupName = "examplerg",
+            SystemTopicName = "exampleSystemTopic1",
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+system_topic = azurerm.eventgrid.v20200401preview.SystemTopic("systemTopic",
+    location="westus2",
+    resource_group_name="examplerg",
+    system_topic_name="exampleSystemTopic1",
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const systemTopic = new azurerm.eventgrid.v20200401preview.SystemTopic("systemTopic", {
+    location: "westus2",
+    resourceGroupName: "examplerg",
+    systemTopicName: "exampleSystemTopic1",
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SystemTopic Resource {#create}

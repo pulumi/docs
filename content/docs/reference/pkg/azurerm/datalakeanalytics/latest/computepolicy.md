@@ -12,6 +12,82 @@ meta_desc: "Explore the ComputePolicy resource of the datalakeanalytics/latest m
 
 Data Lake Analytics compute policy information.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates the specified compute policy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var computePolicy = new AzureRM.DataLakeAnalytics.Latest.ComputePolicy("computePolicy", new AzureRM.DataLakeAnalytics.Latest.ComputePolicyArgs
+        {
+            AccountName = "contosoadla",
+            ComputePolicyName = "test_policy",
+            MaxDegreeOfParallelismPerJob = 10,
+            MinPriorityPerJob = 30,
+            ObjectId = "776b9091-8916-4638-87f7-9c989a38da98",
+            ObjectType = "User",
+            ResourceGroupName = "contosorg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+compute_policy = azurerm.datalakeanalytics.latest.ComputePolicy("computePolicy",
+    account_name="contosoadla",
+    compute_policy_name="test_policy",
+    max_degree_of_parallelism_per_job=10,
+    min_priority_per_job=30,
+    object_id="776b9091-8916-4638-87f7-9c989a38da98",
+    object_type="User",
+    resource_group_name="contosorg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const computePolicy = new azurerm.datalakeanalytics.latest.ComputePolicy("computePolicy", {
+    accountName: "contosoadla",
+    computePolicyName: "test_policy",
+    maxDegreeOfParallelismPerJob: 10,
+    minPriorityPerJob: 30,
+    objectId: "776b9091-8916-4638-87f7-9c989a38da98",
+    objectType: "User",
+    resourceGroupName: "contosorg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ComputePolicy Resource {#create}

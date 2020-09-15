@@ -12,6 +12,76 @@ meta_desc: "Explore the CustomDomain resource of the cdn/latest module, includin
 
 Friendly domain name mapping to the endpoint hostname that the customer provides for branding purposes, e.g. www.contoso.com.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CustomDomains_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var customDomain = new AzureRM.Cdn.Latest.CustomDomain("customDomain", new AzureRM.Cdn.Latest.CustomDomainArgs
+        {
+            CustomDomainName = "www-someDomain-net",
+            EndpointName = "endpoint1",
+            HostName = "www.someDomain.net",
+            ProfileName = "profile1",
+            ResourceGroupName = "RG",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+custom_domain = azurerm.cdn.latest.CustomDomain("customDomain",
+    custom_domain_name="www-someDomain-net",
+    endpoint_name="endpoint1",
+    host_name="www.someDomain.net",
+    profile_name="profile1",
+    resource_group_name="RG")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const customDomain = new azurerm.cdn.latest.CustomDomain("customDomain", {
+    customDomainName: "www-someDomain-net",
+    endpointName: "endpoint1",
+    hostName: "www.someDomain.net",
+    profileName: "profile1",
+    resourceGroupName: "RG",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CustomDomain Resource {#create}

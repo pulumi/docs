@@ -12,6 +12,61 @@ meta_desc: "Explore the Alias resource of the subscription/latest module, includ
 
 Subscription Information with the alias.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateAlias
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @alias = new AzureRM.Subscription.Latest.Alias("alias", new AzureRM.Subscription.Latest.AliasArgs
+        {
+            AliasName = "aliasForNewSub",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+alias = azurerm.subscription.latest.Alias("alias", alias_name="aliasForNewSub")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const alias = new azurerm.subscription.latest.Alias("alias", {aliasName: "aliasForNewSub"});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Alias Resource {#create}

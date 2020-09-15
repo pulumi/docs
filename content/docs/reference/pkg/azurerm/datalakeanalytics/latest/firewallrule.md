@@ -12,6 +12,76 @@ meta_desc: "Explore the FirewallRule resource of the datalakeanalytics/latest mo
 
 Data Lake Analytics firewall rule information.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates the specified firewall rule
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var firewallRule = new AzureRM.DataLakeAnalytics.Latest.FirewallRule("firewallRule", new AzureRM.DataLakeAnalytics.Latest.FirewallRuleArgs
+        {
+            AccountName = "contosoadla",
+            EndIpAddress = "2.2.2.2",
+            FirewallRuleName = "test_rule",
+            ResourceGroupName = "contosorg",
+            StartIpAddress = "1.1.1.1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+firewall_rule = azurerm.datalakeanalytics.latest.FirewallRule("firewallRule",
+    account_name="contosoadla",
+    end_ip_address="2.2.2.2",
+    firewall_rule_name="test_rule",
+    resource_group_name="contosorg",
+    start_ip_address="1.1.1.1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const firewallRule = new azurerm.datalakeanalytics.latest.FirewallRule("firewallRule", {
+    accountName: "contosoadla",
+    endIpAddress: "2.2.2.2",
+    firewallRuleName: "test_rule",
+    resourceGroupName: "contosorg",
+    startIpAddress: "1.1.1.1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FirewallRule Resource {#create}

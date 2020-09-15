@@ -12,6 +12,247 @@ meta_desc: "Explore the Input resource of the streamanalytics/latest module, inc
 
 An input object, containing all information associated with the named input. All inputs are contained under a streaming job.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a reference blob input with CSV serialization
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var input = new AzureRM.StreamAnalytics.Latest.Input("input", new AzureRM.StreamAnalytics.Latest.InputArgs
+        {
+            InputName = "input7225",
+            JobName = "sj9597",
+            ResourceGroupName = "sjrg8440",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+input = azurerm.streamanalytics.latest.Input("input",
+    input_name="input7225",
+    job_name="sj9597",
+    resource_group_name="sjrg8440")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const input = new azurerm.streamanalytics.latest.Input("input", {
+    inputName: "input7225",
+    jobName: "sj9597",
+    resourceGroupName: "sjrg8440",
+});
+
+```
+
+{{% /example %}}
+
+### Create a stream Event Hub input with JSON serialization
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var input = new AzureRM.StreamAnalytics.Latest.Input("input", new AzureRM.StreamAnalytics.Latest.InputArgs
+        {
+            InputName = "input7425",
+            JobName = "sj197",
+            ResourceGroupName = "sjrg3139",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+input = azurerm.streamanalytics.latest.Input("input",
+    input_name="input7425",
+    job_name="sj197",
+    resource_group_name="sjrg3139")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const input = new azurerm.streamanalytics.latest.Input("input", {
+    inputName: "input7425",
+    jobName: "sj197",
+    resourceGroupName: "sjrg3139",
+});
+
+```
+
+{{% /example %}}
+
+### Create a stream IoT Hub input with Avro serialization
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var input = new AzureRM.StreamAnalytics.Latest.Input("input", new AzureRM.StreamAnalytics.Latest.InputArgs
+        {
+            InputName = "input7970",
+            JobName = "sj9742",
+            ResourceGroupName = "sjrg3467",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+input = azurerm.streamanalytics.latest.Input("input",
+    input_name="input7970",
+    job_name="sj9742",
+    resource_group_name="sjrg3467")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const input = new azurerm.streamanalytics.latest.Input("input", {
+    inputName: "input7970",
+    jobName: "sj9742",
+    resourceGroupName: "sjrg3467",
+});
+
+```
+
+{{% /example %}}
+
+### Create a stream blob input with CSV serialization
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var input = new AzureRM.StreamAnalytics.Latest.Input("input", new AzureRM.StreamAnalytics.Latest.InputArgs
+        {
+            InputName = "input8899",
+            JobName = "sj6695",
+            ResourceGroupName = "sjrg8161",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+input = azurerm.streamanalytics.latest.Input("input",
+    input_name="input8899",
+    job_name="sj6695",
+    resource_group_name="sjrg8161")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const input = new azurerm.streamanalytics.latest.Input("input", {
+    inputName: "input8899",
+    jobName: "sj6695",
+    resourceGroupName: "sjrg8161",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Input Resource {#create}

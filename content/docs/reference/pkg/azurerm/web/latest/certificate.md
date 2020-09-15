@@ -12,6 +12,79 @@ meta_desc: "Explore the Certificate resource of the web/latest module, including
 
 SSL certificate for an app.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Or Update Certificate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var certificate = new AzureRM.Web.Latest.Certificate("certificate", new AzureRM.Web.Latest.CertificateArgs
+        {
+            HostNames = 
+            {
+                "ServerCert",
+            },
+            Location = "East US",
+            Name = "testc6282",
+            Password = "SWsSsd__233$Sdsds#%Sd!",
+            ResourceGroupName = "testrg123",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+certificate = azurerm.web.latest.Certificate("certificate",
+    host_names=["ServerCert"],
+    location="East US",
+    name="testc6282",
+    password="SWsSsd__233$Sdsds#%Sd!",
+    resource_group_name="testrg123")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const certificate = new azurerm.web.latest.Certificate("certificate", {
+    hostNames: ["ServerCert"],
+    location: "East US",
+    name: "testc6282",
+    password: `SWsSsd__233$Sdsds#%Sd!`,
+    resourceGroupName: "testrg123",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Certificate Resource {#create}

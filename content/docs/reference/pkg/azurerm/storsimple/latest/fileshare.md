@@ -12,6 +12,94 @@ meta_desc: "Explore the FileShare resource of the storsimple/latest module, incl
 
 The File Share.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### FileSharesCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fileShare = new AzureRM.StorSimple.Latest.FileShare("fileShare", new AzureRM.StorSimple.Latest.FileShareArgs
+        {
+            AdminUser = "fareast\\idcdlslb",
+            DataPolicy = "Tiered",
+            Description = "Demo FileShare for SDK Test Tiered",
+            DeviceName = "HSDK-4XY4FI2IVG",
+            FileServerName = "HSDK-4XY4FI2IVG",
+            ManagerName = "hAzureSDKOperations",
+            MonitoringStatus = "Enabled",
+            ProvisionedCapacityInBytes = 536870912000,
+            ResourceGroupName = "ResourceGroupForSDKTest",
+            ShareName = "Auto-TestFileShare1",
+            ShareStatus = "Online",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+file_share = azurerm.storsimple.latest.FileShare("fileShare",
+    admin_user="fareast\\idcdlslb",
+    data_policy="Tiered",
+    description="Demo FileShare for SDK Test Tiered",
+    device_name="HSDK-4XY4FI2IVG",
+    file_server_name="HSDK-4XY4FI2IVG",
+    manager_name="hAzureSDKOperations",
+    monitoring_status="Enabled",
+    provisioned_capacity_in_bytes=536870912000,
+    resource_group_name="ResourceGroupForSDKTest",
+    share_name="Auto-TestFileShare1",
+    share_status="Online")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const fileShare = new azurerm.storsimple.latest.FileShare("fileShare", {
+    adminUser: "fareast\\idcdlslb",
+    dataPolicy: "Tiered",
+    description: "Demo FileShare for SDK Test Tiered",
+    deviceName: "HSDK-4XY4FI2IVG",
+    fileServerName: "HSDK-4XY4FI2IVG",
+    managerName: "hAzureSDKOperations",
+    monitoringStatus: "Enabled",
+    provisionedCapacityInBytes: 536870912000,
+    resourceGroupName: "ResourceGroupForSDKTest",
+    shareName: "Auto-TestFileShare1",
+    shareStatus: "Online",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FileShare Resource {#create}

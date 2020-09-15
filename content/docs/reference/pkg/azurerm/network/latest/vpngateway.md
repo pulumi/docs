@@ -12,6 +12,155 @@ meta_desc: "Explore the VpnGateway resource of the network/latest module, includ
 
 VpnGateway Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### VpnGatewayPut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpnGateway = new AzureRM.Network.Latest.VpnGateway("vpnGateway", new AzureRM.Network.Latest.VpnGatewayArgs
+        {
+            BgpSettings = new AzureRM.Network.Latest.Inputs.BgpSettingsArgs
+            {
+                Asn = 65515,
+                BgpPeeringAddresses = 
+                {
+                    new AzureRM.Network.Latest.Inputs.IPConfigurationBgpPeeringAddressArgs
+                    {
+                        CustomBgpIpAddresses = 
+                        {
+                            "169.254.21.5",
+                        },
+                        IpconfigurationId = "Instance0",
+                    },
+                    new AzureRM.Network.Latest.Inputs.IPConfigurationBgpPeeringAddressArgs
+                    {
+                        CustomBgpIpAddresses = 
+                        {
+                            "169.254.21.10",
+                        },
+                        IpconfigurationId = "Instance1",
+                    },
+                },
+                PeerWeight = 0,
+            },
+            Connections = 
+            {
+                new AzureRM.Network.Latest.Inputs.VpnConnectionArgs
+                {
+                    Name = "vpnConnection1",
+                },
+            },
+            GatewayName = "gateway1",
+            Location = "westcentralus",
+            ResourceGroupName = "rg1",
+            Tags = 
+            {
+                { "key1", "value1" },
+            },
+            VirtualHub = new AzureRM.Network.Latest.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+vpn_gateway = azurerm.network.latest.VpnGateway("vpnGateway",
+    bgp_settings={
+        "asn": 65515,
+        "bgpPeeringAddresses": [
+            {
+                "customBgpIpAddresses": ["169.254.21.5"],
+                "ipconfigurationId": "Instance0",
+            },
+            {
+                "customBgpIpAddresses": ["169.254.21.10"],
+                "ipconfigurationId": "Instance1",
+            },
+        ],
+        "peerWeight": 0,
+    },
+    connections=[{
+        "name": "vpnConnection1",
+    }],
+    gateway_name="gateway1",
+    location="westcentralus",
+    resource_group_name="rg1",
+    tags={
+        "key1": "value1",
+    },
+    virtual_hub={
+        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const vpnGateway = new azurerm.network.latest.VpnGateway("vpnGateway", {
+    bgpSettings: {
+        asn: 65515,
+        bgpPeeringAddresses: [
+            {
+                customBgpIpAddresses: ["169.254.21.5"],
+                ipconfigurationId: "Instance0",
+            },
+            {
+                customBgpIpAddresses: ["169.254.21.10"],
+                ipconfigurationId: "Instance1",
+            },
+        ],
+        peerWeight: 0,
+    },
+    connections: [{
+        name: "vpnConnection1",
+    }],
+    gatewayName: "gateway1",
+    location: "westcentralus",
+    resourceGroupName: "rg1",
+    tags: {
+        key1: "value1",
+    },
+    virtualHub: {
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VpnGateway Resource {#create}

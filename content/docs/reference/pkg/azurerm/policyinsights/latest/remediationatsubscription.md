@@ -12,6 +12,149 @@ meta_desc: "Explore the RemediationAtSubscription resource of the policyinsights
 
 The remediation definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create remediation at subscription scope
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var remediationAtSubscription = new AzureRM.PolicyInsights.Latest.RemediationAtSubscription("remediationAtSubscription", new AzureRM.PolicyInsights.Latest.RemediationAtSubscriptionArgs
+        {
+            PolicyAssignmentId = "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+            RemediationName = "storageRemediation",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+remediation_at_subscription = azurerm.policyinsights.latest.RemediationAtSubscription("remediationAtSubscription",
+    policy_assignment_id="/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+    remediation_name="storageRemediation")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const remediationAtSubscription = new azurerm.policyinsights.latest.RemediationAtSubscription("remediationAtSubscription", {
+    policyAssignmentId: "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+    remediationName: "storageRemediation",
+});
+
+```
+
+{{% /example %}}
+
+### Create remediation at subscription scope with all properties
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var remediationAtSubscription = new AzureRM.PolicyInsights.Latest.RemediationAtSubscription("remediationAtSubscription", new AzureRM.PolicyInsights.Latest.RemediationAtSubscriptionArgs
+        {
+            Filters = new AzureRM.PolicyInsights.Latest.Inputs.RemediationFiltersArgs
+            {
+                Locations = 
+                {
+                    "eastus",
+                    "westus",
+                },
+            },
+            PolicyAssignmentId = "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+            PolicyDefinitionReferenceId = "8c8fa9e4",
+            RemediationName = "storageRemediation",
+            ResourceDiscoveryMode = "ReEvaluateCompliance",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+remediation_at_subscription = azurerm.policyinsights.latest.RemediationAtSubscription("remediationAtSubscription",
+    filters={
+        "locations": [
+            "eastus",
+            "westus",
+        ],
+    },
+    policy_assignment_id="/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+    policy_definition_reference_id="8c8fa9e4",
+    remediation_name="storageRemediation",
+    resource_discovery_mode="ReEvaluateCompliance")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const remediationAtSubscription = new azurerm.policyinsights.latest.RemediationAtSubscription("remediationAtSubscription", {
+    filters: {
+        locations: [
+            "eastus",
+            "westus",
+        ],
+    },
+    policyAssignmentId: "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+    policyDefinitionReferenceId: "8c8fa9e4",
+    remediationName: "storageRemediation",
+    resourceDiscoveryMode: "ReEvaluateCompliance",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RemediationAtSubscription Resource {#create}

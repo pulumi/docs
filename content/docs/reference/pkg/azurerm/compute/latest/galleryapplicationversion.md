@@ -12,6 +12,124 @@ meta_desc: "Explore the GalleryApplicationVersion resource of the compute/latest
 
 Specifies information about the gallery Application Version that you want to create or update.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a simple gallery Application Version.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var galleryApplicationVersion = new AzureRM.Compute.Latest.GalleryApplicationVersion("galleryApplicationVersion", new AzureRM.Compute.Latest.GalleryApplicationVersionArgs
+        {
+            GalleryApplicationName = "myGalleryApplicationName",
+            GalleryApplicationVersionName = "1.0.0",
+            GalleryName = "myGalleryName",
+            Location = "West US",
+            PublishingProfile = new AzureRM.Compute.Latest.Inputs.GalleryApplicationVersionPublishingProfileArgs
+            {
+                EndOfLifeDate = "2019-07-01T07:00:00Z",
+                ReplicaCount = 1,
+                Source = new AzureRM.Compute.Latest.Inputs.UserArtifactSourceArgs
+                {
+                    FileName = "package.zip",
+                    MediaLink = "https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}",
+                },
+                StorageAccountType = "Standard_LRS",
+                TargetRegions = 
+                {
+                    new AzureRM.Compute.Latest.Inputs.TargetRegionArgs
+                    {
+                        Name = "West US",
+                        RegionalReplicaCount = 1,
+                        StorageAccountType = "Standard_LRS",
+                    },
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+gallery_application_version = azurerm.compute.latest.GalleryApplicationVersion("galleryApplicationVersion",
+    gallery_application_name="myGalleryApplicationName",
+    gallery_application_version_name="1.0.0",
+    gallery_name="myGalleryName",
+    location="West US",
+    publishing_profile={
+        "endOfLifeDate": "2019-07-01T07:00:00Z",
+        "replicaCount": 1,
+        "source": {
+            "fileName": "package.zip",
+            "mediaLink": "https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}",
+        },
+        "storageAccountType": "Standard_LRS",
+        "targetRegions": [{
+            "name": "West US",
+            "regionalReplicaCount": 1,
+            "storageAccountType": "Standard_LRS",
+        }],
+    },
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const galleryApplicationVersion = new azurerm.compute.latest.GalleryApplicationVersion("galleryApplicationVersion", {
+    galleryApplicationName: "myGalleryApplicationName",
+    galleryApplicationVersionName: "1.0.0",
+    galleryName: "myGalleryName",
+    location: "West US",
+    publishingProfile: {
+        endOfLifeDate: "2019-07-01T07:00:00Z",
+        replicaCount: 1,
+        source: {
+            fileName: "package.zip",
+            mediaLink: "https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}",
+        },
+        storageAccountType: "Standard_LRS",
+        targetRegions: [{
+            name: "West US",
+            regionalReplicaCount: 1,
+            storageAccountType: "Standard_LRS",
+        }],
+    },
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GalleryApplicationVersion Resource {#create}

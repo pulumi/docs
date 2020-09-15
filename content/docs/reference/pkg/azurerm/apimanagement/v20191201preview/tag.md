@@ -12,6 +12,73 @@ meta_desc: "Explore the Tag resource of the apimanagement/v20191201preview modul
 
 Tag Contract details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateTag
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tag = new AzureRM.ApiManagement.V20191201Preview.Tag("tag", new AzureRM.ApiManagement.V20191201Preview.TagArgs
+        {
+            DisplayName = "tag1",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            TagId = "tagId1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+tag = azurerm.apimanagement.v20191201preview.Tag("tag",
+    display_name="tag1",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    tag_id="tagId1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const tag = new azurerm.apimanagement.v20191201preview.Tag("tag", {
+    displayName: "tag1",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    tagId: "tagId1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Tag Resource {#create}

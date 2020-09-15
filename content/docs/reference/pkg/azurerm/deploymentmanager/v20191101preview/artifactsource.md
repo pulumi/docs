@@ -12,6 +12,164 @@ meta_desc: "Explore the ArtifactSource resource of the deploymentmanager/v201911
 
 The resource that defines the source location where the artifacts are located.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create artifact source
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var artifactSource = new AzureRM.DeploymentManager.V20191101Preview.ArtifactSource("artifactSource", new AzureRM.DeploymentManager.V20191101Preview.ArtifactSourceArgs
+        {
+            ArtifactSourceName = "myArtifactSource",
+            Authentication = new AzureRM.DeploymentManager.V20191101Preview.Inputs.SasAuthenticationArgs
+            {
+                Type = "Sas",
+            },
+            Location = "centralus",
+            ResourceGroupName = "myResourceGroup",
+            SourceType = "AzureStorage",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+artifact_source = azurerm.deploymentmanager.v20191101preview.ArtifactSource("artifactSource",
+    artifact_source_name="myArtifactSource",
+    authentication={
+        "type": "Sas",
+    },
+    location="centralus",
+    resource_group_name="myResourceGroup",
+    source_type="AzureStorage",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const artifactSource = new azurerm.deploymentmanager.v20191101preview.ArtifactSource("artifactSource", {
+    artifactSourceName: "myArtifactSource",
+    authentication: {
+        type: "Sas",
+    },
+    location: "centralus",
+    resourceGroupName: "myResourceGroup",
+    sourceType: "AzureStorage",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+### Create artifact source with artifact root, an offset into the storage container
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var artifactSource = new AzureRM.DeploymentManager.V20191101Preview.ArtifactSource("artifactSource", new AzureRM.DeploymentManager.V20191101Preview.ArtifactSourceArgs
+        {
+            ArtifactRoot = "1.0.0.0",
+            ArtifactSourceName = "myArtifactSource",
+            Authentication = new AzureRM.DeploymentManager.V20191101Preview.Inputs.SasAuthenticationArgs
+            {
+                Type = "Sas",
+            },
+            Location = "centralus",
+            ResourceGroupName = "myResourceGroup",
+            SourceType = "AzureStorage",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+artifact_source = azurerm.deploymentmanager.v20191101preview.ArtifactSource("artifactSource",
+    artifact_root="1.0.0.0",
+    artifact_source_name="myArtifactSource",
+    authentication={
+        "type": "Sas",
+    },
+    location="centralus",
+    resource_group_name="myResourceGroup",
+    source_type="AzureStorage",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const artifactSource = new azurerm.deploymentmanager.v20191101preview.ArtifactSource("artifactSource", {
+    artifactRoot: "1.0.0.0",
+    artifactSourceName: "myArtifactSource",
+    authentication: {
+        type: "Sas",
+    },
+    location: "centralus",
+    resourceGroupName: "myResourceGroup",
+    sourceType: "AzureStorage",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ArtifactSource Resource {#create}

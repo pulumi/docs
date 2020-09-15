@@ -12,6 +12,73 @@ meta_desc: "Explore the Trigger resource of the databoxedge/latest module, inclu
 
 Trigger details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### TriggerPut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var trigger = new AzureRM.DataBoxEdge.Latest.Trigger("trigger", new AzureRM.DataBoxEdge.Latest.TriggerArgs
+        {
+            DeviceName = "testedgedevice",
+            Kind = "FileEvent",
+            Name = "trigger1",
+            ResourceGroupName = "GroupForEdgeAutomation",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+trigger = azurerm.databoxedge.latest.Trigger("trigger",
+    device_name="testedgedevice",
+    kind="FileEvent",
+    name="trigger1",
+    resource_group_name="GroupForEdgeAutomation")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const trigger = new azurerm.databoxedge.latest.Trigger("trigger", {
+    deviceName: "testedgedevice",
+    kind: "FileEvent",
+    name: "trigger1",
+    resourceGroupName: "GroupForEdgeAutomation",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Trigger Resource {#create}

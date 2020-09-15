@@ -12,6 +12,94 @@ meta_desc: "Explore the IscsiDisk resource of the storsimple/latest module, incl
 
 The iSCSI disk.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### IscsiDisksCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var iscsiDisk = new AzureRM.StorSimple.Latest.IscsiDisk("iscsiDisk", new AzureRM.StorSimple.Latest.IscsiDiskArgs
+        {
+            AccessControlRecords = {},
+            DataPolicy = "Tiered",
+            Description = "Demo IscsiDisk for SDK Test Tiered",
+            DeviceName = "HSDK-0NZI14MDTF",
+            DiskName = "Auto-TestIscsiDisk1",
+            DiskStatus = "Online",
+            IscsiServerName = "HSDK-0NZI14MDTF",
+            ManagerName = "hAzureSDKOperations",
+            MonitoringStatus = "Enabled",
+            ProvisionedCapacityInBytes = 536870912000,
+            ResourceGroupName = "ResourceGroupForSDKTest",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+iscsi_disk = azurerm.storsimple.latest.IscsiDisk("iscsiDisk",
+    access_control_records=[],
+    data_policy="Tiered",
+    description="Demo IscsiDisk for SDK Test Tiered",
+    device_name="HSDK-0NZI14MDTF",
+    disk_name="Auto-TestIscsiDisk1",
+    disk_status="Online",
+    iscsi_server_name="HSDK-0NZI14MDTF",
+    manager_name="hAzureSDKOperations",
+    monitoring_status="Enabled",
+    provisioned_capacity_in_bytes=536870912000,
+    resource_group_name="ResourceGroupForSDKTest")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const iscsiDisk = new azurerm.storsimple.latest.IscsiDisk("iscsiDisk", {
+    accessControlRecords: [],
+    dataPolicy: "Tiered",
+    description: "Demo IscsiDisk for SDK Test Tiered",
+    deviceName: "HSDK-0NZI14MDTF",
+    diskName: "Auto-TestIscsiDisk1",
+    diskStatus: "Online",
+    iscsiServerName: "HSDK-0NZI14MDTF",
+    managerName: "hAzureSDKOperations",
+    monitoringStatus: "Enabled",
+    provisionedCapacityInBytes: 536870912000,
+    resourceGroupName: "ResourceGroupForSDKTest",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IscsiDisk Resource {#create}

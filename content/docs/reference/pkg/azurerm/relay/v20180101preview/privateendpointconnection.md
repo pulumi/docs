@@ -12,6 +12,96 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the relay/v2018010
 
 Private endpoint connection resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### RelayPutPrivateEndpointConnection
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpointConnection = new AzureRM.Relay.V20180101Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureRM.Relay.V20180101Preview.PrivateEndpointConnectionArgs
+        {
+            Location = "South Central US",
+            NamespaceName = "sdk-Namespace-5849",
+            PrivateEndpoint = new AzureRM.Relay.V20180101Preview.Inputs.PrivateEndpointArgs
+            {
+                Id = "/subscriptions/{subid}/resourceGroups/prod-by3-533-rg/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
+            },
+            PrivateEndpointConnectionName = "{privateEndpointConnection name}",
+            PrivateLinkServiceConnectionState = new AzureRM.Relay.V20180101Preview.Inputs.PrivateLinkServiceConnectionStateArgs
+            {
+                Description = "You may pass",
+                Status = "Approved",
+            },
+            ResourceGroupName = "ArunMonocle",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_endpoint_connection = azurerm.relay.v20180101preview.PrivateEndpointConnection("privateEndpointConnection",
+    location="South Central US",
+    namespace_name="sdk-Namespace-5849",
+    private_endpoint={
+        "id": "/subscriptions/{subid}/resourceGroups/prod-by3-533-rg/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
+    },
+    private_endpoint_connection_name="{privateEndpointConnection name}",
+    private_link_service_connection_state={
+        "description": "You may pass",
+        "status": "Approved",
+    },
+    resource_group_name="ArunMonocle")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateEndpointConnection = new azurerm.relay.v20180101preview.PrivateEndpointConnection("privateEndpointConnection", {
+    location: "South Central US",
+    namespaceName: "sdk-Namespace-5849",
+    privateEndpoint: {
+        id: "/subscriptions/{subid}/resourceGroups/prod-by3-533-rg/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
+    },
+    privateEndpointConnectionName: "{privateEndpointConnection name}",
+    privateLinkServiceConnectionState: {
+        description: "You may pass",
+        status: "Approved",
+    },
+    resourceGroupName: "ArunMonocle",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateEndpointConnection Resource {#create}

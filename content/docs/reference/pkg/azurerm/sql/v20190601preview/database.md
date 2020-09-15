@@ -12,6 +12,874 @@ meta_desc: "Explore the Database resource of the sql/v20190601preview module, in
 
 A database resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates a VCore database by specifying service objective name.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureRM.Sql.V20190601Preview.Database("database", new AzureRM.Sql.V20190601Preview.DatabaseArgs
+        {
+            DatabaseName = "testdb",
+            Location = "southeastasia",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+            Sku = new AzureRM.Sql.V20190601Preview.Inputs.SkuArgs
+            {
+                Capacity = 2,
+                Family = "Gen4",
+                Name = "BC",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database = azurerm.sql.v20190601preview.Database("database",
+    database_name="testdb",
+    location="southeastasia",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr",
+    sku={
+        "capacity": 2,
+        "family": "Gen4",
+        "name": "BC",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const database = new azurerm.sql.v20190601preview.Database("database", {
+    databaseName: "testdb",
+    location: "southeastasia",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+    sku: {
+        capacity: 2,
+        family: "Gen4",
+        name: "BC",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Creates a VCore database by specifying sku name and capacity.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureRM.Sql.V20190601Preview.Database("database", new AzureRM.Sql.V20190601Preview.DatabaseArgs
+        {
+            DatabaseName = "testdb",
+            Location = "southeastasia",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+            Sku = new AzureRM.Sql.V20190601Preview.Inputs.SkuArgs
+            {
+                Capacity = 2,
+                Name = "BC_Gen4",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database = azurerm.sql.v20190601preview.Database("database",
+    database_name="testdb",
+    location="southeastasia",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr",
+    sku={
+        "capacity": 2,
+        "name": "BC_Gen4",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const database = new azurerm.sql.v20190601preview.Database("database", {
+    databaseName: "testdb",
+    location: "southeastasia",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+    sku: {
+        capacity: 2,
+        name: "BC_Gen4",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Creates a data warehouse by specifying service objective name.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureRM.Sql.V20190601Preview.Database("database", new AzureRM.Sql.V20190601Preview.DatabaseArgs
+        {
+            DatabaseName = "testdw",
+            Location = "westus",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+            Sku = new AzureRM.Sql.V20190601Preview.Inputs.SkuArgs
+            {
+                Name = "DW1000c",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database = azurerm.sql.v20190601preview.Database("database",
+    database_name="testdw",
+    location="westus",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr",
+    sku={
+        "name": "DW1000c",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const database = new azurerm.sql.v20190601preview.Database("database", {
+    databaseName: "testdw",
+    location: "westus",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+    sku: {
+        name: "DW1000c",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Creates a database as a copy.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureRM.Sql.V20190601Preview.Database("database", new AzureRM.Sql.V20190601Preview.DatabaseArgs
+        {
+            CreateMode = "Copy",
+            DatabaseName = "dbcopy",
+            Location = "southeastasia",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+            Sku = new AzureRM.Sql.V20190601Preview.Inputs.SkuArgs
+            {
+                Name = "S0",
+                Tier = "Standard",
+            },
+            SourceDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database = azurerm.sql.v20190601preview.Database("database",
+    create_mode="Copy",
+    database_name="dbcopy",
+    location="southeastasia",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr",
+    sku={
+        "name": "S0",
+        "tier": "Standard",
+    },
+    source_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const database = new azurerm.sql.v20190601preview.Database("database", {
+    createMode: "Copy",
+    databaseName: "dbcopy",
+    location: "southeastasia",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+    sku: {
+        name: "S0",
+        tier: "Standard",
+    },
+    sourceDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb",
+});
+
+```
+
+{{% /example %}}
+
+### Creates a database as an on-line secondary.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureRM.Sql.V20190601Preview.Database("database", new AzureRM.Sql.V20190601Preview.DatabaseArgs
+        {
+            CreateMode = "Secondary",
+            DatabaseName = "testdb",
+            Location = "southeastasia",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+            Sku = new AzureRM.Sql.V20190601Preview.Inputs.SkuArgs
+            {
+                Name = "S0",
+                Tier = "Standard",
+            },
+            SourceDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-NorthEurope/providers/Microsoft.Sql/servers/testsvr1/databases/testdb",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database = azurerm.sql.v20190601preview.Database("database",
+    create_mode="Secondary",
+    database_name="testdb",
+    location="southeastasia",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr",
+    sku={
+        "name": "S0",
+        "tier": "Standard",
+    },
+    source_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-NorthEurope/providers/Microsoft.Sql/servers/testsvr1/databases/testdb")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const database = new azurerm.sql.v20190601preview.Database("database", {
+    createMode: "Secondary",
+    databaseName: "testdb",
+    location: "southeastasia",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+    sku: {
+        name: "S0",
+        tier: "Standard",
+    },
+    sourceDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-NorthEurope/providers/Microsoft.Sql/servers/testsvr1/databases/testdb",
+});
+
+```
+
+{{% /example %}}
+
+### Creates a database from PointInTimeRestore.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureRM.Sql.V20190601Preview.Database("database", new AzureRM.Sql.V20190601Preview.DatabaseArgs
+        {
+            CreateMode = "PointInTimeRestore",
+            DatabaseName = "dbpitr",
+            Location = "southeastasia",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            RestorePointInTime = "2017-07-14T05:35:31.503Z",
+            ServerName = "testsvr",
+            Sku = new AzureRM.Sql.V20190601Preview.Inputs.SkuArgs
+            {
+                Name = "S0",
+                Tier = "Standard",
+            },
+            SourceDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database = azurerm.sql.v20190601preview.Database("database",
+    create_mode="PointInTimeRestore",
+    database_name="dbpitr",
+    location="southeastasia",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    restore_point_in_time="2017-07-14T05:35:31.503Z",
+    server_name="testsvr",
+    sku={
+        "name": "S0",
+        "tier": "Standard",
+    },
+    source_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const database = new azurerm.sql.v20190601preview.Database("database", {
+    createMode: "PointInTimeRestore",
+    databaseName: "dbpitr",
+    location: "southeastasia",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    restorePointInTime: "2017-07-14T05:35:31.503Z",
+    serverName: "testsvr",
+    sku: {
+        name: "S0",
+        tier: "Standard",
+    },
+    sourceDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb",
+});
+
+```
+
+{{% /example %}}
+
+### Creates a database from recoverableDatabaseId.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureRM.Sql.V20190601Preview.Database("database", new AzureRM.Sql.V20190601Preview.DatabaseArgs
+        {
+            CreateMode = "Restore",
+            DatabaseName = "dbrestore",
+            Location = "southeastasia",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            RestorableDroppedDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/restorableDroppedDatabases/testdb2,131444841315030000",
+            ServerName = "testsvr",
+            Sku = new AzureRM.Sql.V20190601Preview.Inputs.SkuArgs
+            {
+                Name = "S0",
+                Tier = "Standard",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database = azurerm.sql.v20190601preview.Database("database",
+    create_mode="Restore",
+    database_name="dbrestore",
+    location="southeastasia",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    restorable_dropped_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/restorableDroppedDatabases/testdb2,131444841315030000",
+    server_name="testsvr",
+    sku={
+        "name": "S0",
+        "tier": "Standard",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const database = new azurerm.sql.v20190601preview.Database("database", {
+    createMode: "Restore",
+    databaseName: "dbrestore",
+    location: "southeastasia",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    restorableDroppedDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/restorableDroppedDatabases/testdb2,131444841315030000",
+    serverName: "testsvr",
+    sku: {
+        name: "S0",
+        tier: "Standard",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Creates a database from restore with database deletion time.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureRM.Sql.V20190601Preview.Database("database", new AzureRM.Sql.V20190601Preview.DatabaseArgs
+        {
+            CreateMode = "Restore",
+            DatabaseName = "dbrestore",
+            Location = "southeastasia",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+            Sku = new AzureRM.Sql.V20190601Preview.Inputs.SkuArgs
+            {
+                Name = "S0",
+                Tier = "Standard",
+            },
+            SourceDatabaseDeletionDate = "2017-07-14T06:41:06.613Z",
+            SourceDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database = azurerm.sql.v20190601preview.Database("database",
+    create_mode="Restore",
+    database_name="dbrestore",
+    location="southeastasia",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr",
+    sku={
+        "name": "S0",
+        "tier": "Standard",
+    },
+    source_database_deletion_date="2017-07-14T06:41:06.613Z",
+    source_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const database = new azurerm.sql.v20190601preview.Database("database", {
+    createMode: "Restore",
+    databaseName: "dbrestore",
+    location: "southeastasia",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+    sku: {
+        name: "S0",
+        tier: "Standard",
+    },
+    sourceDatabaseDeletionDate: "2017-07-14T06:41:06.613Z",
+    sourceDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb",
+});
+
+```
+
+{{% /example %}}
+
+### Creates a database from restore with restorableDroppedDatabaseId.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureRM.Sql.V20190601Preview.Database("database", new AzureRM.Sql.V20190601Preview.DatabaseArgs
+        {
+            CreateMode = "Copy",
+            DatabaseName = "dbcopy",
+            Location = "southeastasia",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+            Sku = new AzureRM.Sql.V20190601Preview.Inputs.SkuArgs
+            {
+                Name = "S0",
+                Tier = "Standard",
+            },
+            SourceDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database = azurerm.sql.v20190601preview.Database("database",
+    create_mode="Copy",
+    database_name="dbcopy",
+    location="southeastasia",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr",
+    sku={
+        "name": "S0",
+        "tier": "Standard",
+    },
+    source_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const database = new azurerm.sql.v20190601preview.Database("database", {
+    createMode: "Copy",
+    databaseName: "dbcopy",
+    location: "southeastasia",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+    sku: {
+        name: "S0",
+        tier: "Standard",
+    },
+    sourceDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb",
+});
+
+```
+
+{{% /example %}}
+
+### Creates a database with default mode.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureRM.Sql.V20190601Preview.Database("database", new AzureRM.Sql.V20190601Preview.DatabaseArgs
+        {
+            Collation = "SQL_Latin1_General_CP1_CI_AS",
+            CreateMode = "Default",
+            DatabaseName = "testdb",
+            Location = "southeastasia",
+            MaxSizeBytes = 1073741824,
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+            Sku = new AzureRM.Sql.V20190601Preview.Inputs.SkuArgs
+            {
+                Name = "S0",
+                Tier = "Standard",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database = azurerm.sql.v20190601preview.Database("database",
+    collation="SQL_Latin1_General_CP1_CI_AS",
+    create_mode="Default",
+    database_name="testdb",
+    location="southeastasia",
+    max_size_bytes=1073741824,
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr",
+    sku={
+        "name": "S0",
+        "tier": "Standard",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const database = new azurerm.sql.v20190601preview.Database("database", {
+    collation: "SQL_Latin1_General_CP1_CI_AS",
+    createMode: "Default",
+    databaseName: "testdb",
+    location: "southeastasia",
+    maxSizeBytes: 1073741824,
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+    sku: {
+        name: "S0",
+        tier: "Standard",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Creates a database with minimum number of parameters.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureRM.Sql.V20190601Preview.Database("database", new AzureRM.Sql.V20190601Preview.DatabaseArgs
+        {
+            DatabaseName = "testdb",
+            Location = "southeastasia",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database = azurerm.sql.v20190601preview.Database("database",
+    database_name="testdb",
+    location="southeastasia",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const database = new azurerm.sql.v20190601preview.Database("database", {
+    databaseName: "testdb",
+    location: "southeastasia",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Database Resource {#create}

@@ -12,6 +12,126 @@ meta_desc: "Explore the DedicatedHsm resource of the hardwaresecuritymodules/v20
 
 Resource information with extended details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a new or update an existing dedicated HSM
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dedicatedHsm = new AzureRM.HardwareSecurityModules.V20181031Preview.DedicatedHsm("dedicatedHsm", new AzureRM.HardwareSecurityModules.V20181031Preview.DedicatedHsmArgs
+        {
+            Location = "westus",
+            Name = "hsm1",
+            NetworkProfile = new AzureRM.HardwareSecurityModules.V20181031Preview.Inputs.NetworkProfileArgs
+            {
+                NetworkInterfaces = 
+                {
+                    new AzureRM.HardwareSecurityModules.V20181031Preview.Inputs.NetworkInterfaceArgs
+                    {
+                        PrivateIpAddress = "1.0.0.1",
+                    },
+                },
+                Subnet = new AzureRM.HardwareSecurityModules.V20181031Preview.Inputs.ApiEntityReferenceArgs
+                {
+                    Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.Network/virtualNetworks/stamp01/subnets/stamp01",
+                },
+            },
+            ResourceGroupName = "hsm-group",
+            Sku = new AzureRM.HardwareSecurityModules.V20181031Preview.Inputs.SkuArgs
+            {
+                Name = "SafeNet Luna Network HSM A790",
+            },
+            StampId = "stamp01",
+            Tags = 
+            {
+                { "Dept", "hsm" },
+                { "Environment", "dogfood" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+dedicated_hsm = azurerm.hardwaresecuritymodules.v20181031preview.DedicatedHsm("dedicatedHsm",
+    location="westus",
+    name="hsm1",
+    network_profile={
+        "networkInterfaces": [{
+            "privateIpAddress": "1.0.0.1",
+        }],
+        "subnet": {
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.Network/virtualNetworks/stamp01/subnets/stamp01",
+        },
+    },
+    resource_group_name="hsm-group",
+    sku={
+        "name": "SafeNet Luna Network HSM A790",
+    },
+    stamp_id="stamp01",
+    tags={
+        "Dept": "hsm",
+        "Environment": "dogfood",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dedicatedHsm = new azurerm.hardwaresecuritymodules.v20181031preview.DedicatedHsm("dedicatedHsm", {
+    location: "westus",
+    name: "hsm1",
+    networkProfile: {
+        networkInterfaces: [{
+            privateIpAddress: "1.0.0.1",
+        }],
+        subnet: {
+            id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.Network/virtualNetworks/stamp01/subnets/stamp01",
+        },
+    },
+    resourceGroupName: "hsm-group",
+    sku: {
+        name: "SafeNet Luna Network HSM A790",
+    },
+    stampId: "stamp01",
+    tags: {
+        Dept: "hsm",
+        Environment: "dogfood",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DedicatedHsm Resource {#create}

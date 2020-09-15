@@ -12,6 +12,76 @@ meta_desc: "Explore the GraphQuery resource of the resourcegraph/v20200401previe
 
 Graph Query entity definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Graph Query
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var graphQuery = new AzureRM.ResourceGraph.V20200401Preview.GraphQuery("graphQuery", new AzureRM.ResourceGraph.V20200401Preview.GraphQueryArgs
+        {
+            Description = "Docker VMs in PROD",
+            Query = "where isnotnull(tags['Prod']) and properties.extensions[0].Name == 'docker'",
+            ResourceGroupName = "my-resource-group",
+            ResourceName = "MyDockerVMs",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+graph_query = azurerm.resourcegraph.v20200401preview.GraphQuery("graphQuery",
+    description="Docker VMs in PROD",
+    query="where isnotnull(tags['Prod']) and properties.extensions[0].Name == 'docker'",
+    resource_group_name="my-resource-group",
+    resource_name="MyDockerVMs",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const graphQuery = new azurerm.resourcegraph.v20200401preview.GraphQuery("graphQuery", {
+    description: "Docker VMs in PROD",
+    query: "where isnotnull(tags['Prod']) and properties.extensions[0].Name == 'docker'",
+    resourceGroupName: "my-resource-group",
+    resourceName: "MyDockerVMs",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GraphQuery Resource {#create}

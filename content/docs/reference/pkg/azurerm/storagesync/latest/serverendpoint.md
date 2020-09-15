@@ -12,6 +12,100 @@ meta_desc: "Explore the ServerEndpoint resource of the storagesync/latest module
 
 Server Endpoint object.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ServerEndpoints_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serverEndpoint = new AzureRM.StorageSync.Latest.ServerEndpoint("serverEndpoint", new AzureRM.StorageSync.Latest.ServerEndpointArgs
+        {
+            CloudTiering = "off",
+            InitialDownloadPolicy = "NamespaceThenModifiedFiles",
+            LocalCacheMode = "UpdateLocallyCachedFiles",
+            OfflineDataTransfer = "on",
+            OfflineDataTransferShareName = "myfileshare",
+            ResourceGroupName = "SampleResourceGroup_1",
+            ServerEndpointName = "SampleServerEndpoint_1",
+            ServerLocalPath = "D:\\SampleServerEndpoint_1",
+            ServerResourceId = "/subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/registeredServers/080d4133-bdb5-40a0-96a0-71a6057bfe9a",
+            StorageSyncServiceName = "SampleStorageSyncService_1",
+            SyncGroupName = "SampleSyncGroup_1",
+            TierFilesOlderThanDays = 0,
+            VolumeFreeSpacePercent = 100,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server_endpoint = azurerm.storagesync.latest.ServerEndpoint("serverEndpoint",
+    cloud_tiering="off",
+    initial_download_policy="NamespaceThenModifiedFiles",
+    local_cache_mode="UpdateLocallyCachedFiles",
+    offline_data_transfer="on",
+    offline_data_transfer_share_name="myfileshare",
+    resource_group_name="SampleResourceGroup_1",
+    server_endpoint_name="SampleServerEndpoint_1",
+    server_local_path="D:\\SampleServerEndpoint_1",
+    server_resource_id="/subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/registeredServers/080d4133-bdb5-40a0-96a0-71a6057bfe9a",
+    storage_sync_service_name="SampleStorageSyncService_1",
+    sync_group_name="SampleSyncGroup_1",
+    tier_files_older_than_days=0,
+    volume_free_space_percent=100)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const serverEndpoint = new azurerm.storagesync.latest.ServerEndpoint("serverEndpoint", {
+    cloudTiering: "off",
+    initialDownloadPolicy: "NamespaceThenModifiedFiles",
+    localCacheMode: "UpdateLocallyCachedFiles",
+    offlineDataTransfer: "on",
+    offlineDataTransferShareName: "myfileshare",
+    resourceGroupName: "SampleResourceGroup_1",
+    serverEndpointName: "SampleServerEndpoint_1",
+    serverLocalPath: "D:\\SampleServerEndpoint_1",
+    serverResourceId: "/subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/registeredServers/080d4133-bdb5-40a0-96a0-71a6057bfe9a",
+    storageSyncServiceName: "SampleStorageSyncService_1",
+    syncGroupName: "SampleSyncGroup_1",
+    tierFilesOlderThanDays: 0,
+    volumeFreeSpacePercent: 100,
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServerEndpoint Resource {#create}

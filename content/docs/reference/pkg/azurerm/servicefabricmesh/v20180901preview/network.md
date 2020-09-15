@@ -12,6 +12,73 @@ meta_desc: "Explore the Network resource of the servicefabricmesh/v20180901previ
 
 This type describes a network resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateOrUpdateNetwork
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network = new AzureRM.ServiceFabricMesh.V20180901Preview.Network("network", new AzureRM.ServiceFabricMesh.V20180901Preview.NetworkArgs
+        {
+            Location = "EastUS",
+            NetworkResourceName = "sampleNetwork",
+            ResourceGroupName = "sbz_demo",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+network = azurerm.servicefabricmesh.v20180901preview.Network("network",
+    location="EastUS",
+    network_resource_name="sampleNetwork",
+    resource_group_name="sbz_demo",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const network = new azurerm.servicefabricmesh.v20180901preview.Network("network", {
+    location: "EastUS",
+    networkResourceName: "sampleNetwork",
+    resourceGroupName: "sbz_demo",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Network Resource {#create}

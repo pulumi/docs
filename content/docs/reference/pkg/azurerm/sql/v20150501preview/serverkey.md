@@ -12,6 +12,76 @@ meta_desc: "Explore the ServerKey resource of the sql/v20150501preview module, i
 
 A server key.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates a server key
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serverKey = new AzureRM.Sql.V20150501Preview.ServerKey("serverKey", new AzureRM.Sql.V20150501Preview.ServerKeyArgs
+        {
+            KeyName = "someVault_someKey_01234567890123456789012345678901",
+            ResourceGroupName = "sqlcrudtest-7398",
+            ServerKeyType = "AzureKeyVault",
+            ServerName = "sqlcrudtest-4645",
+            Uri = "https://someVault.vault.azure.net/keys/someKey/01234567890123456789012345678901",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server_key = azurerm.sql.v20150501preview.ServerKey("serverKey",
+    key_name="someVault_someKey_01234567890123456789012345678901",
+    resource_group_name="sqlcrudtest-7398",
+    server_key_type="AzureKeyVault",
+    server_name="sqlcrudtest-4645",
+    uri="https://someVault.vault.azure.net/keys/someKey/01234567890123456789012345678901")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const serverKey = new azurerm.sql.v20150501preview.ServerKey("serverKey", {
+    keyName: "someVault_someKey_01234567890123456789012345678901",
+    resourceGroupName: "sqlcrudtest-7398",
+    serverKeyType: "AzureKeyVault",
+    serverName: "sqlcrudtest-4645",
+    uri: "https://someVault.vault.azure.net/keys/someKey/01234567890123456789012345678901",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServerKey Resource {#create}

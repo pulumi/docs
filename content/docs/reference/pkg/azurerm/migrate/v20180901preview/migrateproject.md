@@ -12,6 +12,76 @@ meta_desc: "Explore the MigrateProject resource of the migrate/v20180901preview 
 
 Migrate Project REST Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### MigrateProjects_Put
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var migrateProject = new AzureRM.Migrate.V20180901Preview.MigrateProject("migrateProject", new AzureRM.Migrate.V20180901Preview.MigrateProjectArgs
+        {
+            ETag = "\"b701c73a-0000-0000-0000-59c12ff00000\"",
+            Location = "Southeast Asia",
+            MigrateProjectName = "project01",
+            ResourceGroupName = "myResourceGroup",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+migrate_project = azurerm.migrate.v20180901preview.MigrateProject("migrateProject",
+    e_tag="\"b701c73a-0000-0000-0000-59c12ff00000\"",
+    location="Southeast Asia",
+    migrate_project_name="project01",
+    resource_group_name="myResourceGroup",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const migrateProject = new azurerm.migrate.v20180901preview.MigrateProject("migrateProject", {
+    eTag: "\"b701c73a-0000-0000-0000-59c12ff00000\"",
+    location: "Southeast Asia",
+    migrateProjectName: "project01",
+    resourceGroupName: "myResourceGroup",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MigrateProject Resource {#create}

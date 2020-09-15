@@ -12,6 +12,124 @@ meta_desc: "Explore the SmartDetectorAlertRule resource of the alertsmanagement/
 
 The alert rule information
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a Smart Detector alert rule
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var smartDetectorAlertRule = new AzureRM.AlertsManagement.Latest.SmartDetectorAlertRule("smartDetectorAlertRule", new AzureRM.AlertsManagement.Latest.SmartDetectorAlertRuleArgs
+        {
+            ActionGroups = new AzureRM.AlertsManagement.Latest.Inputs.ActionGroupsInformationArgs
+            {
+                CustomEmailSubject = "My custom email subject",
+                CustomWebhookPayload = "{\"AlertRuleName\":\"#alertrulename\"}",
+                GroupIds = 
+                {
+                    "/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourcegroups/actionGroups/providers/microsoft.insights/actiongroups/MyActionGroup",
+                },
+            },
+            AlertRuleName = "MyAlertRule",
+            Description = "Sample smart detector alert rule description",
+            Detector = new AzureRM.AlertsManagement.Latest.Inputs.DetectorArgs
+            {
+                Id = "VMMemoryLeak",
+            },
+            Frequency = "PT5M",
+            ResourceGroupName = "MyAlertRules",
+            Scope = 
+            {
+                "/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourceGroups/MyVms/providers/Microsoft.Compute/virtualMachines/vm1",
+            },
+            Severity = "Sev3",
+            State = "Enabled",
+            Throttling = new AzureRM.AlertsManagement.Latest.Inputs.ThrottlingInformationArgs
+            {
+                Duration = "PT20M",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+smart_detector_alert_rule = azurerm.alertsmanagement.latest.SmartDetectorAlertRule("smartDetectorAlertRule",
+    action_groups={
+        "customEmailSubject": "My custom email subject",
+        "customWebhookPayload": "{\"AlertRuleName\":\"#alertrulename\"}",
+        "groupIds": ["/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourcegroups/actionGroups/providers/microsoft.insights/actiongroups/MyActionGroup"],
+    },
+    alert_rule_name="MyAlertRule",
+    description="Sample smart detector alert rule description",
+    detector={
+        "id": "VMMemoryLeak",
+    },
+    frequency="PT5M",
+    resource_group_name="MyAlertRules",
+    scope=["/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourceGroups/MyVms/providers/Microsoft.Compute/virtualMachines/vm1"],
+    severity="Sev3",
+    state="Enabled",
+    throttling={
+        "duration": "PT20M",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const smartDetectorAlertRule = new azurerm.alertsmanagement.latest.SmartDetectorAlertRule("smartDetectorAlertRule", {
+    actionGroups: {
+        customEmailSubject: "My custom email subject",
+        customWebhookPayload: "{\"AlertRuleName\":\"#alertrulename\"}",
+        groupIds: ["/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourcegroups/actionGroups/providers/microsoft.insights/actiongroups/MyActionGroup"],
+    },
+    alertRuleName: "MyAlertRule",
+    description: "Sample smart detector alert rule description",
+    detector: {
+        id: "VMMemoryLeak",
+    },
+    frequency: "PT5M",
+    resourceGroupName: "MyAlertRules",
+    scope: ["/subscriptions/b368ca2f-e298-46b7-b0ab-012281956afa/resourceGroups/MyVms/providers/Microsoft.Compute/virtualMachines/vm1"],
+    severity: "Sev3",
+    state: "Enabled",
+    throttling: {
+        duration: "PT20M",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SmartDetectorAlertRule Resource {#create}

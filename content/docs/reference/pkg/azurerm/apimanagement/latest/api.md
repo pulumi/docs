@@ -12,6 +12,944 @@ meta_desc: "Explore the Api resource of the apimanagement/latest module, includi
 
 Api details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateApi
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var api = new AzureRM.ApiManagement.Latest.Api("api", new AzureRM.ApiManagement.Latest.ApiArgs
+        {
+            ApiId = "tempgroup",
+            AuthenticationSettings = new AzureRM.ApiManagement.Latest.Inputs.AuthenticationSettingsContractArgs
+            {
+                OAuth2 = new AzureRM.ApiManagement.Latest.Inputs.OAuth2AuthenticationSettingsContractArgs
+                {
+                    AuthorizationServerId = "authorizationServerId2283",
+                    Scope = "oauth2scope2580",
+                },
+            },
+            Description = "apidescription5200",
+            DisplayName = "apiname1463",
+            Path = "newapiPath",
+            Protocols = 
+            {
+                "https",
+                "http",
+            },
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            ServiceUrl = "http://newechoapi.cloudapp.net/api",
+            SubscriptionKeyParameterNames = new AzureRM.ApiManagement.Latest.Inputs.SubscriptionKeyParameterNamesContractArgs
+            {
+                Header = "header4520",
+                Query = "query3037",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api = azurerm.apimanagement.latest.Api("api",
+    api_id="tempgroup",
+    authentication_settings={
+        "oAuth2": {
+            "authorizationServerId": "authorizationServerId2283",
+            "scope": "oauth2scope2580",
+        },
+    },
+    description="apidescription5200",
+    display_name="apiname1463",
+    path="newapiPath",
+    protocols=[
+        "https",
+        "http",
+    ],
+    resource_group_name="rg1",
+    service_name="apimService1",
+    service_url="http://newechoapi.cloudapp.net/api",
+    subscription_key_parameter_names={
+        "header": "header4520",
+        "query": "query3037",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const api = new azurerm.apimanagement.latest.Api("api", {
+    apiId: "tempgroup",
+    authenticationSettings: {
+        oAuth2: {
+            authorizationServerId: "authorizationServerId2283",
+            scope: "oauth2scope2580",
+        },
+    },
+    description: "apidescription5200",
+    displayName: "apiname1463",
+    path: "newapiPath",
+    protocols: [
+        "https",
+        "http",
+    ],
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    serviceUrl: "http://newechoapi.cloudapp.net/api",
+    subscriptionKeyParameterNames: {
+        header: "header4520",
+        query: "query3037",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### ApiManagementCreateApiClone
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var api = new AzureRM.ApiManagement.Latest.Api("api", new AzureRM.ApiManagement.Latest.ApiArgs
+        {
+            ApiId = "echo-api2",
+            Description = "Copy of Existing Echo Api including Operations.",
+            DisplayName = "Echo API2",
+            IsCurrent = true,
+            Path = "echo2",
+            Protocols = 
+            {
+                "http",
+                "https",
+            },
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            ServiceUrl = "http://echoapi.cloudapp.net/api",
+            SourceApiId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/58a4aeac497000007d040001",
+            SubscriptionRequired = true,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api = azurerm.apimanagement.latest.Api("api",
+    api_id="echo-api2",
+    description="Copy of Existing Echo Api including Operations.",
+    display_name="Echo API2",
+    is_current=True,
+    path="echo2",
+    protocols=[
+        "http",
+        "https",
+    ],
+    resource_group_name="rg1",
+    service_name="apimService1",
+    service_url="http://echoapi.cloudapp.net/api",
+    source_api_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/58a4aeac497000007d040001",
+    subscription_required=True)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const api = new azurerm.apimanagement.latest.Api("api", {
+    apiId: "echo-api2",
+    description: "Copy of Existing Echo Api including Operations.",
+    displayName: "Echo API2",
+    isCurrent: true,
+    path: "echo2",
+    protocols: [
+        "http",
+        "https",
+    ],
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    serviceUrl: "http://echoapi.cloudapp.net/api",
+    sourceApiId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/58a4aeac497000007d040001",
+    subscriptionRequired: true,
+});
+
+```
+
+{{% /example %}}
+
+### ApiManagementCreateApiNewVersionUsingExistingApi
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var api = new AzureRM.ApiManagement.Latest.Api("api", new AzureRM.ApiManagement.Latest.ApiArgs
+        {
+            ApiId = "echoapiv3",
+            ApiVersion = "v4",
+            ApiVersionSetId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apiVersionSets/aa9c59e6-c0cd-4258-9356-9ca7d2f0b458",
+            Description = "Create Echo API into a new Version using Existing Version Set and Copy all Operations.",
+            DisplayName = "Echo API2",
+            IsCurrent = true,
+            Path = "echo2",
+            Protocols = 
+            {
+                "http",
+                "https",
+            },
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            ServiceUrl = "http://echoapi.cloudapp.net/api",
+            SourceApiId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/echoPath",
+            SubscriptionRequired = true,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api = azurerm.apimanagement.latest.Api("api",
+    api_id="echoapiv3",
+    api_version="v4",
+    api_version_set_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apiVersionSets/aa9c59e6-c0cd-4258-9356-9ca7d2f0b458",
+    description="Create Echo API into a new Version using Existing Version Set and Copy all Operations.",
+    display_name="Echo API2",
+    is_current=True,
+    path="echo2",
+    protocols=[
+        "http",
+        "https",
+    ],
+    resource_group_name="rg1",
+    service_name="apimService1",
+    service_url="http://echoapi.cloudapp.net/api",
+    source_api_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/echoPath",
+    subscription_required=True)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const api = new azurerm.apimanagement.latest.Api("api", {
+    apiId: "echoapiv3",
+    apiVersion: "v4",
+    apiVersionSetId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apiVersionSets/aa9c59e6-c0cd-4258-9356-9ca7d2f0b458",
+    description: "Create Echo API into a new Version using Existing Version Set and Copy all Operations.",
+    displayName: "Echo API2",
+    isCurrent: true,
+    path: "echo2",
+    protocols: [
+        "http",
+        "https",
+    ],
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    serviceUrl: "http://echoapi.cloudapp.net/api",
+    sourceApiId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/echoPath",
+    subscriptionRequired: true,
+});
+
+```
+
+{{% /example %}}
+
+### ApiManagementCreateApiRevisionFromExistingApi
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var api = new AzureRM.ApiManagement.Latest.Api("api", new AzureRM.ApiManagement.Latest.ApiArgs
+        {
+            ApiId = "echo-api;rev=3",
+            ApiRevisionDescription = "Creating a Revision of an existing API",
+            Path = "echo",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            ServiceUrl = "http://echoapi.cloudapp.net/apiv3",
+            SourceApiId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/echo-api",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api = azurerm.apimanagement.latest.Api("api",
+    api_id="echo-api;rev=3",
+    api_revision_description="Creating a Revision of an existing API",
+    path="echo",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    service_url="http://echoapi.cloudapp.net/apiv3",
+    source_api_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/echo-api")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const api = new azurerm.apimanagement.latest.Api("api", {
+    apiId: "echo-api;rev=3",
+    apiRevisionDescription: "Creating a Revision of an existing API",
+    path: "echo",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    serviceUrl: "http://echoapi.cloudapp.net/apiv3",
+    sourceApiId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/echo-api",
+});
+
+```
+
+{{% /example %}}
+
+### ApiManagementCreateApiUsingImportOverrideServiceUrl
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var api = new AzureRM.ApiManagement.Latest.Api("api", new AzureRM.ApiManagement.Latest.ApiArgs
+        {
+            ApiId = "apidocs",
+            Format = "swagger-link",
+            Path = "petstoreapi123",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            ServiceUrl = "http://petstore.swagger.wordnik.com/api",
+            Value = "http://apimpimportviaurl.azurewebsites.net/api/apidocs/",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api = azurerm.apimanagement.latest.Api("api",
+    api_id="apidocs",
+    format="swagger-link",
+    path="petstoreapi123",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    service_url="http://petstore.swagger.wordnik.com/api",
+    value="http://apimpimportviaurl.azurewebsites.net/api/apidocs/")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const api = new azurerm.apimanagement.latest.Api("api", {
+    apiId: "apidocs",
+    format: "swagger-link",
+    path: "petstoreapi123",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    serviceUrl: "http://petstore.swagger.wordnik.com/api",
+    value: "http://apimpimportviaurl.azurewebsites.net/api/apidocs/",
+});
+
+```
+
+{{% /example %}}
+
+### ApiManagementCreateApiUsingOai3Import
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var api = new AzureRM.ApiManagement.Latest.Api("api", new AzureRM.ApiManagement.Latest.ApiArgs
+        {
+            ApiId = "petstore",
+            Format = "openapi-link",
+            Path = "petstore",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Value = "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api = azurerm.apimanagement.latest.Api("api",
+    api_id="petstore",
+    format="openapi-link",
+    path="petstore",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    value="https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const api = new azurerm.apimanagement.latest.Api("api", {
+    apiId: "petstore",
+    format: "openapi-link",
+    path: "petstore",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    value: "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml",
+});
+
+```
+
+{{% /example %}}
+
+### ApiManagementCreateApiUsingSwaggerImport
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var api = new AzureRM.ApiManagement.Latest.Api("api", new AzureRM.ApiManagement.Latest.ApiArgs
+        {
+            ApiId = "petstore",
+            Format = "swagger-link-json",
+            Path = "petstore",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Value = "http://petstore.swagger.io/v2/swagger.json",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api = azurerm.apimanagement.latest.Api("api",
+    api_id="petstore",
+    format="swagger-link-json",
+    path="petstore",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    value="http://petstore.swagger.io/v2/swagger.json")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const api = new azurerm.apimanagement.latest.Api("api", {
+    apiId: "petstore",
+    format: "swagger-link-json",
+    path: "petstore",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    value: "http://petstore.swagger.io/v2/swagger.json",
+});
+
+```
+
+{{% /example %}}
+
+### ApiManagementCreateApiUsingWadlImport
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var api = new AzureRM.ApiManagement.Latest.Api("api", new AzureRM.ApiManagement.Latest.ApiArgs
+        {
+            ApiId = "petstore",
+            Format = "wadl-link-json",
+            Path = "collector",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Value = "https://developer.cisco.com/media/wae-release-6-2-api-reference/wae-collector-rest-api/application.wadl",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api = azurerm.apimanagement.latest.Api("api",
+    api_id="petstore",
+    format="wadl-link-json",
+    path="collector",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    value="https://developer.cisco.com/media/wae-release-6-2-api-reference/wae-collector-rest-api/application.wadl")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const api = new azurerm.apimanagement.latest.Api("api", {
+    apiId: "petstore",
+    format: "wadl-link-json",
+    path: "collector",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    value: "https://developer.cisco.com/media/wae-release-6-2-api-reference/wae-collector-rest-api/application.wadl",
+});
+
+```
+
+{{% /example %}}
+
+### ApiManagementCreateApiWithOpenIdConnect
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var api = new AzureRM.ApiManagement.Latest.Api("api", new AzureRM.ApiManagement.Latest.ApiArgs
+        {
+            ApiId = "tempgroup",
+            AuthenticationSettings = new AzureRM.ApiManagement.Latest.Inputs.AuthenticationSettingsContractArgs
+            {
+                Openid = new AzureRM.ApiManagement.Latest.Inputs.OpenIdAuthenticationSettingsContractArgs
+                {
+                    BearerTokenSendingMethods = 
+                    {
+                        "authorizationHeader",
+                    },
+                    OpenidProviderId = "testopenid",
+                },
+            },
+            Description = "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.",
+            DisplayName = "Swagger Petstore",
+            Path = "petstore",
+            Protocols = 
+            {
+                "https",
+            },
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            ServiceUrl = "http://petstore.swagger.io/v2",
+            SubscriptionKeyParameterNames = new AzureRM.ApiManagement.Latest.Inputs.SubscriptionKeyParameterNamesContractArgs
+            {
+                Header = "Ocp-Apim-Subscription-Key",
+                Query = "subscription-key",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api = azurerm.apimanagement.latest.Api("api",
+    api_id="tempgroup",
+    authentication_settings={
+        "openid": {
+            "bearerTokenSendingMethods": ["authorizationHeader"],
+            "openidProviderId": "testopenid",
+        },
+    },
+    description="This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.",
+    display_name="Swagger Petstore",
+    path="petstore",
+    protocols=["https"],
+    resource_group_name="rg1",
+    service_name="apimService1",
+    service_url="http://petstore.swagger.io/v2",
+    subscription_key_parameter_names={
+        "header": "Ocp-Apim-Subscription-Key",
+        "query": "subscription-key",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const api = new azurerm.apimanagement.latest.Api("api", {
+    apiId: "tempgroup",
+    authenticationSettings: {
+        openid: {
+            bearerTokenSendingMethods: ["authorizationHeader"],
+            openidProviderId: "testopenid",
+        },
+    },
+    description: "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.",
+    displayName: "Swagger Petstore",
+    path: "petstore",
+    protocols: ["https"],
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    serviceUrl: "http://petstore.swagger.io/v2",
+    subscriptionKeyParameterNames: {
+        header: "Ocp-Apim-Subscription-Key",
+        query: "subscription-key",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### ApiManagementCreateSoapPassThroughApiUsingWsdlImport
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var api = new AzureRM.ApiManagement.Latest.Api("api", new AzureRM.ApiManagement.Latest.ApiArgs
+        {
+            ApiId = "soapApi",
+            Format = "wsdl-link",
+            Path = "currency",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            SoapApiType = "soap",
+            Value = "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL",
+            WsdlSelector = new AzureRM.ApiManagement.Latest.Inputs.ApiCreateOrUpdatePropertiesWsdlSelectorArgs
+            {
+                WsdlEndpointName = "CurrencyConvertorSoap",
+                WsdlServiceName = "CurrencyConvertor",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api = azurerm.apimanagement.latest.Api("api",
+    api_id="soapApi",
+    format="wsdl-link",
+    path="currency",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    soap_api_type="soap",
+    value="http://www.webservicex.net/CurrencyConvertor.asmx?WSDL",
+    wsdl_selector={
+        "wsdlEndpointName": "CurrencyConvertorSoap",
+        "wsdlServiceName": "CurrencyConvertor",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const api = new azurerm.apimanagement.latest.Api("api", {
+    apiId: "soapApi",
+    format: "wsdl-link",
+    path: "currency",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    soapApiType: "soap",
+    value: "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL",
+    wsdlSelector: {
+        wsdlEndpointName: "CurrencyConvertorSoap",
+        wsdlServiceName: "CurrencyConvertor",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### ApiManagementCreateSoapToRestApiUsingWsdlImport
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var api = new AzureRM.ApiManagement.Latest.Api("api", new AzureRM.ApiManagement.Latest.ApiArgs
+        {
+            ApiId = "soapApi",
+            Format = "wsdl-link",
+            Path = "currency",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Value = "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL",
+            WsdlSelector = new AzureRM.ApiManagement.Latest.Inputs.ApiCreateOrUpdatePropertiesWsdlSelectorArgs
+            {
+                WsdlEndpointName = "CurrencyConvertorSoap",
+                WsdlServiceName = "CurrencyConvertor",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api = azurerm.apimanagement.latest.Api("api",
+    api_id="soapApi",
+    format="wsdl-link",
+    path="currency",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    value="http://www.webservicex.net/CurrencyConvertor.asmx?WSDL",
+    wsdl_selector={
+        "wsdlEndpointName": "CurrencyConvertorSoap",
+        "wsdlServiceName": "CurrencyConvertor",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const api = new azurerm.apimanagement.latest.Api("api", {
+    apiId: "soapApi",
+    format: "wsdl-link",
+    path: "currency",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    value: "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL",
+    wsdlSelector: {
+        wsdlEndpointName: "CurrencyConvertorSoap",
+        wsdlServiceName: "CurrencyConvertor",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Api Resource {#create}

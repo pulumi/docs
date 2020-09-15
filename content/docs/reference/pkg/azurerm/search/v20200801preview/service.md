@@ -12,6 +12,410 @@ meta_desc: "Explore the Service resource of the search/v20200801preview module, 
 
 Describes an Azure Cognitive Search service and its current state.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### SearchCreateOrUpdateService
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var service = new AzureRM.Search.V20200801Preview.Service("service", new AzureRM.Search.V20200801Preview.ServiceArgs
+        {
+            HostingMode = "default",
+            Location = "westus",
+            PartitionCount = 1,
+            ReplicaCount = 3,
+            ResourceGroupName = "rg1",
+            SearchServiceName = "mysearchservice",
+            Sku = new AzureRM.Search.V20200801Preview.Inputs.SkuArgs
+            {
+                Name = "standard",
+            },
+            Tags = 
+            {
+                { "app-name", "My e-commerce app" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+service = azurerm.search.v20200801preview.Service("service",
+    hosting_mode="default",
+    location="westus",
+    partition_count=1,
+    replica_count=3,
+    resource_group_name="rg1",
+    search_service_name="mysearchservice",
+    sku={
+        "name": "standard",
+    },
+    tags={
+        "app-name": "My e-commerce app",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const service = new azurerm.search.v20200801preview.Service("service", {
+    hostingMode: "default",
+    location: "westus",
+    partitionCount: 1,
+    replicaCount: 3,
+    resourceGroupName: "rg1",
+    searchServiceName: "mysearchservice",
+    sku: {
+        name: "standard",
+    },
+    tags: {
+        "app-name": "My e-commerce app",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### SearchCreateOrUpdateServiceToAllowAccessFromPrivateEndpoints
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var service = new AzureRM.Search.V20200801Preview.Service("service", new AzureRM.Search.V20200801Preview.ServiceArgs
+        {
+            HostingMode = "default",
+            Location = "westus",
+            PartitionCount = 1,
+            PublicNetworkAccess = "disabled",
+            ReplicaCount = 3,
+            ResourceGroupName = "rg1",
+            SearchServiceName = "mysearchservice",
+            Sku = new AzureRM.Search.V20200801Preview.Inputs.SkuArgs
+            {
+                Name = "standard",
+            },
+            Tags = 
+            {
+                { "app-name", "My e-commerce app" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+service = azurerm.search.v20200801preview.Service("service",
+    hosting_mode="default",
+    location="westus",
+    partition_count=1,
+    public_network_access="disabled",
+    replica_count=3,
+    resource_group_name="rg1",
+    search_service_name="mysearchservice",
+    sku={
+        "name": "standard",
+    },
+    tags={
+        "app-name": "My e-commerce app",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const service = new azurerm.search.v20200801preview.Service("service", {
+    hostingMode: "default",
+    location: "westus",
+    partitionCount: 1,
+    publicNetworkAccess: "disabled",
+    replicaCount: 3,
+    resourceGroupName: "rg1",
+    searchServiceName: "mysearchservice",
+    sku: {
+        name: "standard",
+    },
+    tags: {
+        "app-name": "My e-commerce app",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### SearchCreateOrUpdateServiceToAllowAccessFromPublicCustomIPs
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var service = new AzureRM.Search.V20200801Preview.Service("service", new AzureRM.Search.V20200801Preview.ServiceArgs
+        {
+            HostingMode = "default",
+            Location = "westus",
+            NetworkRuleSet = new AzureRM.Search.V20200801Preview.Inputs.NetworkRuleSetArgs
+            {
+                IpRules = 
+                {
+                    new AzureRM.Search.V20200801Preview.Inputs.IpRuleArgs
+                    {
+                        Value = "123.4.5.6",
+                    },
+                    new AzureRM.Search.V20200801Preview.Inputs.IpRuleArgs
+                    {
+                        Value = "123.4.6.0/18",
+                    },
+                },
+            },
+            PartitionCount = 1,
+            ReplicaCount = 1,
+            ResourceGroupName = "rg1",
+            SearchServiceName = "mysearchservice",
+            Sku = new AzureRM.Search.V20200801Preview.Inputs.SkuArgs
+            {
+                Name = "standard",
+            },
+            Tags = 
+            {
+                { "app-name", "My e-commerce app" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+service = azurerm.search.v20200801preview.Service("service",
+    hosting_mode="default",
+    location="westus",
+    network_rule_set={
+        "ipRules": [
+            {
+                "value": "123.4.5.6",
+            },
+            {
+                "value": "123.4.6.0/18",
+            },
+        ],
+    },
+    partition_count=1,
+    replica_count=1,
+    resource_group_name="rg1",
+    search_service_name="mysearchservice",
+    sku={
+        "name": "standard",
+    },
+    tags={
+        "app-name": "My e-commerce app",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const service = new azurerm.search.v20200801preview.Service("service", {
+    hostingMode: "default",
+    location: "westus",
+    networkRuleSet: {
+        ipRules: [
+            {
+                value: "123.4.5.6",
+            },
+            {
+                value: "123.4.6.0/18",
+            },
+        ],
+    },
+    partitionCount: 1,
+    replicaCount: 1,
+    resourceGroupName: "rg1",
+    searchServiceName: "mysearchservice",
+    sku: {
+        name: "standard",
+    },
+    tags: {
+        "app-name": "My e-commerce app",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### SearchCreateOrUpdateServiceWithIdentity
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var service = new AzureRM.Search.V20200801Preview.Service("service", new AzureRM.Search.V20200801Preview.ServiceArgs
+        {
+            HostingMode = "default",
+            Identity = new AzureRM.Search.V20200801Preview.Inputs.IdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Location = "westus",
+            PartitionCount = 1,
+            ReplicaCount = 3,
+            ResourceGroupName = "rg1",
+            SearchServiceName = "mysearchservice",
+            Sku = new AzureRM.Search.V20200801Preview.Inputs.SkuArgs
+            {
+                Name = "standard",
+            },
+            Tags = 
+            {
+                { "app-name", "My e-commerce app" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+service = azurerm.search.v20200801preview.Service("service",
+    hosting_mode="default",
+    identity={
+        "type": "SystemAssigned",
+    },
+    location="westus",
+    partition_count=1,
+    replica_count=3,
+    resource_group_name="rg1",
+    search_service_name="mysearchservice",
+    sku={
+        "name": "standard",
+    },
+    tags={
+        "app-name": "My e-commerce app",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const service = new azurerm.search.v20200801preview.Service("service", {
+    hostingMode: "default",
+    identity: {
+        type: "SystemAssigned",
+    },
+    location: "westus",
+    partitionCount: 1,
+    replicaCount: 3,
+    resourceGroupName: "rg1",
+    searchServiceName: "mysearchservice",
+    sku: {
+        name: "standard",
+    },
+    tags: {
+        "app-name": "My e-commerce app",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Service Resource {#create}

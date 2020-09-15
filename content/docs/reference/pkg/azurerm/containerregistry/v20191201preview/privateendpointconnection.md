@@ -12,6 +12,83 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the containerregis
 
 An object that represents a private endpoint connection for a container registry.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PrivateEndpointConnectionCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpointConnection = new AzureRM.ContainerRegistry.V20191201Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureRM.ContainerRegistry.V20191201Preview.PrivateEndpointConnectionArgs
+        {
+            PrivateEndpointConnectionName = "myConnection",
+            PrivateLinkServiceConnectionState = new AzureRM.ContainerRegistry.V20191201Preview.Inputs.PrivateLinkServiceConnectionStateArgs
+            {
+                Description = "Auto-Approved",
+                Status = "Approved",
+            },
+            RegistryName = "myRegistry",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_endpoint_connection = azurerm.containerregistry.v20191201preview.PrivateEndpointConnection("privateEndpointConnection",
+    private_endpoint_connection_name="myConnection",
+    private_link_service_connection_state={
+        "description": "Auto-Approved",
+        "status": "Approved",
+    },
+    registry_name="myRegistry",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateEndpointConnection = new azurerm.containerregistry.v20191201preview.PrivateEndpointConnection("privateEndpointConnection", {
+    privateEndpointConnectionName: "myConnection",
+    privateLinkServiceConnectionState: {
+        description: "Auto-Approved",
+        status: "Approved",
+    },
+    registryName: "myRegistry",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateEndpointConnection Resource {#create}

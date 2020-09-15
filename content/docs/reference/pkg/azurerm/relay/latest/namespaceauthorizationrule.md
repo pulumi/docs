@@ -12,6 +12,83 @@ meta_desc: "Explore the NamespaceAuthorizationRule resource of the relay/latest 
 
 Description of a namespace authorization rule.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### RelayNameSpaceAuthorizationRuleCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var namespaceAuthorizationRule = new AzureRM.Relay.Latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", new AzureRM.Relay.Latest.NamespaceAuthorizationRuleArgs
+        {
+            AuthorizationRuleName = "sdk-RelayAuthRules-01",
+            NamespaceName = "sdk-RelayNamespace-01",
+            ResourceGroupName = "RG-eg",
+            Rights = 
+            {
+                "Listen",
+                "Send",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+namespace_authorization_rule = azurerm.relay.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule",
+    authorization_rule_name="sdk-RelayAuthRules-01",
+    namespace_name="sdk-RelayNamespace-01",
+    resource_group_name="RG-eg",
+    rights=[
+        "Listen",
+        "Send",
+    ])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const namespaceAuthorizationRule = new azurerm.relay.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
+    authorizationRuleName: "sdk-RelayAuthRules-01",
+    namespaceName: "sdk-RelayNamespace-01",
+    resourceGroupName: "RG-eg",
+    rights: [
+        "Listen",
+        "Send",
+    ],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NamespaceAuthorizationRule Resource {#create}

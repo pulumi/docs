@@ -12,6 +12,73 @@ meta_desc: "Explore the PrivateLinkScopedResource resource of the hybridcompute/
 
 A private link scoped resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Update a scoped resource in a private link scope.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateLinkScopedResource = new AzureRM.HybridCompute.V20200815Preview.PrivateLinkScopedResource("privateLinkScopedResource", new AzureRM.HybridCompute.V20200815Preview.PrivateLinkScopedResourceArgs
+        {
+            LinkedResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/machineName1",
+            Name = "scoped-resource-name",
+            ResourceGroupName = "myResourceGroup",
+            ScopeName = "myPrivateLinkScope",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_link_scoped_resource = azurerm.hybridcompute.v20200815preview.PrivateLinkScopedResource("privateLinkScopedResource",
+    linked_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/machineName1",
+    name="scoped-resource-name",
+    resource_group_name="myResourceGroup",
+    scope_name="myPrivateLinkScope")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateLinkScopedResource = new azurerm.hybridcompute.v20200815preview.PrivateLinkScopedResource("privateLinkScopedResource", {
+    linkedResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/machineName1",
+    name: "scoped-resource-name",
+    resourceGroupName: "myResourceGroup",
+    scopeName: "myPrivateLinkScope",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateLinkScopedResource Resource {#create}

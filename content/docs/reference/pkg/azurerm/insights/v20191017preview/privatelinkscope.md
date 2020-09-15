@@ -12,6 +12,139 @@ meta_desc: "Explore the PrivateLinkScope resource of the insights/v20191017previ
 
 An Azure Monitor PrivateLinkScope definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PrivateLinkScopeCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateLinkScope = new AzureRM.Insights.V20191017Preview.PrivateLinkScope("privateLinkScope", new AzureRM.Insights.V20191017Preview.PrivateLinkScopeArgs
+        {
+            Location = "Global",
+            ResourceGroupName = "my-resource-group",
+            ScopeName = "my-privatelinkscope",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_link_scope = azurerm.insights.v20191017preview.PrivateLinkScope("privateLinkScope",
+    location="Global",
+    resource_group_name="my-resource-group",
+    scope_name="my-privatelinkscope")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateLinkScope = new azurerm.insights.v20191017preview.PrivateLinkScope("privateLinkScope", {
+    location: "Global",
+    resourceGroupName: "my-resource-group",
+    scopeName: "my-privatelinkscope",
+});
+
+```
+
+{{% /example %}}
+
+### PrivateLinkScopeUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateLinkScope = new AzureRM.Insights.V20191017Preview.PrivateLinkScope("privateLinkScope", new AzureRM.Insights.V20191017Preview.PrivateLinkScopeArgs
+        {
+            Location = "Global",
+            ResourceGroupName = "my-resource-group",
+            ScopeName = "my-privatelinkscope",
+            Tags = 
+            {
+                { "Tag1", "Value1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_link_scope = azurerm.insights.v20191017preview.PrivateLinkScope("privateLinkScope",
+    location="Global",
+    resource_group_name="my-resource-group",
+    scope_name="my-privatelinkscope",
+    tags={
+        "Tag1": "Value1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateLinkScope = new azurerm.insights.v20191017preview.PrivateLinkScope("privateLinkScope", {
+    location: "Global",
+    resourceGroupName: "my-resource-group",
+    scopeName: "my-privatelinkscope",
+    tags: {
+        Tag1: "Value1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateLinkScope Resource {#create}

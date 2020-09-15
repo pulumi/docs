@@ -12,6 +12,76 @@ meta_desc: "Explore the BackupScheduleGroup resource of the storsimple/latest mo
 
 The Backup Schedule Group
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### BackupScheduleGroupsCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var backupScheduleGroup = new AzureRM.StorSimple.Latest.BackupScheduleGroup("backupScheduleGroup", new AzureRM.StorSimple.Latest.BackupScheduleGroupArgs
+        {
+            DeviceName = "HSDK-4XY4FI2IVG",
+            ManagerName = "hAzureSDKOperations",
+            ResourceGroupName = "ResourceGroupForSDKTest",
+            ScheduleGroupName = "BackupSchGroupForSDKTest",
+            StartTime = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+backup_schedule_group = azurerm.storsimple.latest.BackupScheduleGroup("backupScheduleGroup",
+    device_name="HSDK-4XY4FI2IVG",
+    manager_name="hAzureSDKOperations",
+    resource_group_name="ResourceGroupForSDKTest",
+    schedule_group_name="BackupSchGroupForSDKTest",
+    start_time={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const backupScheduleGroup = new azurerm.storsimple.latest.BackupScheduleGroup("backupScheduleGroup", {
+    deviceName: "HSDK-4XY4FI2IVG",
+    managerName: "hAzureSDKOperations",
+    resourceGroupName: "ResourceGroupForSDKTest",
+    scheduleGroupName: "BackupSchGroupForSDKTest",
+    startTime: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BackupScheduleGroup Resource {#create}

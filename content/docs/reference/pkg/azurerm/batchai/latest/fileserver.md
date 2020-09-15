@@ -12,6 +12,109 @@ meta_desc: "Explore the FileServer resource of the batchai/latest module, includ
 
 File Server information.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a file server
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fileServer = new AzureRM.BatchAI.Latest.FileServer("fileServer", new AzureRM.BatchAI.Latest.FileServerArgs
+        {
+            DataDisks = new AzureRM.BatchAI.Latest.Inputs.DataDisksArgs
+            {
+                DiskCount = 2,
+                DiskSizeInGB = 10,
+                StorageAccountType = "Standard_LRS",
+            },
+            FileServerName = "demo_nfs",
+            ResourceGroupName = "demo_resource_group",
+            SshConfiguration = new AzureRM.BatchAI.Latest.Inputs.SshConfigurationArgs
+            {
+                UserAccountSettings = new AzureRM.BatchAI.Latest.Inputs.UserAccountSettingsArgs
+                {
+                    AdminUserName = "admin_user_name",
+                    AdminUserPassword = "admin_user_password",
+                },
+            },
+            VmSize = "STANDARD_NC6",
+            WorkspaceName = "demo_workspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+file_server = azurerm.batchai.latest.FileServer("fileServer",
+    data_disks={
+        "diskCount": 2,
+        "diskSizeInGB": 10,
+        "storageAccountType": "Standard_LRS",
+    },
+    file_server_name="demo_nfs",
+    resource_group_name="demo_resource_group",
+    ssh_configuration={
+        "userAccountSettings": {
+            "adminUserName": "admin_user_name",
+            "adminUserPassword": "admin_user_password",
+        },
+    },
+    vm_size="STANDARD_NC6",
+    workspace_name="demo_workspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const fileServer = new azurerm.batchai.latest.FileServer("fileServer", {
+    dataDisks: {
+        diskCount: 2,
+        diskSizeInGB: 10,
+        storageAccountType: "Standard_LRS",
+    },
+    fileServerName: "demo_nfs",
+    resourceGroupName: "demo_resource_group",
+    sshConfiguration: {
+        userAccountSettings: {
+            adminUserName: "admin_user_name",
+            adminUserPassword: "admin_user_password",
+        },
+    },
+    vmSize: "STANDARD_NC6",
+    workspaceName: "demo_workspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FileServer Resource {#create}

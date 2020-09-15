@@ -12,6 +12,92 @@ meta_desc: "Explore the ControllerDetails resource of the delegatednetwork/v2020
 
 Represents an instance of a DNC controller.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create controller
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var controllerDetails = new AzureRM.DelegatedNetwork.V20200808Preview.ControllerDetails("controllerDetails", new AzureRM.DelegatedNetwork.V20200808Preview.ControllerDetailsArgs
+        {
+            ControllerType = "Kubernetes",
+            KubernetesProperties = 
+            {
+                new AzureRM.DelegatedNetwork.V20200808Preview.Inputs.KubernetesPropertiesArgs
+                {
+                    ApiServerEndpoint = "https://testk8s.cloudapp.net",
+                    ClusterRootCA = "ddsadsad344mfdsfdl",
+                    ServerAppID = "546192d7-503f-477a-9cfe-4efc3ee2b6e1",
+                    ServerTenantID = "da6192d7-503f-477a-9cfe-4efc3ee2b6c3",
+                },
+            },
+            ResourceGroupName = "TestRG",
+            ResourceName = "dnctestcontroller",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+controller_details = azurerm.delegatednetwork.v20200808preview.ControllerDetails("controllerDetails",
+    controller_type="Kubernetes",
+    kubernetes_properties=[{
+        "apiServerEndpoint": "https://testk8s.cloudapp.net",
+        "clusterRootCA": "ddsadsad344mfdsfdl",
+        "serverAppID": "546192d7-503f-477a-9cfe-4efc3ee2b6e1",
+        "serverTenantID": "da6192d7-503f-477a-9cfe-4efc3ee2b6c3",
+    }],
+    resource_group_name="TestRG",
+    resource_name="dnctestcontroller")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const controllerDetails = new azurerm.delegatednetwork.v20200808preview.ControllerDetails("controllerDetails", {
+    controllerType: "Kubernetes",
+    kubernetesProperties: [{
+        apiServerEndpoint: "https://testk8s.cloudapp.net",
+        clusterRootCA: "ddsadsad344mfdsfdl",
+        serverAppID: "546192d7-503f-477a-9cfe-4efc3ee2b6e1",
+        serverTenantID: "da6192d7-503f-477a-9cfe-4efc3ee2b6c3",
+    }],
+    resourceGroupName: "TestRG",
+    resourceName: "dnctestcontroller",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ControllerDetails Resource {#create}

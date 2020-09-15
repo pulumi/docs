@@ -12,6 +12,162 @@ meta_desc: "Explore the WorkloadGroup resource of the sql/v20190601preview modul
 
 Workload group operations for a data warehouse
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a workload group with all properties specified.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workloadGroup = new AzureRM.Sql.V20190601Preview.WorkloadGroup("workloadGroup", new AzureRM.Sql.V20190601Preview.WorkloadGroupArgs
+        {
+            DatabaseName = "testdb",
+            Importance = "normal",
+            MaxResourcePercent = 100,
+            MaxResourcePercentPerRequest = 3,
+            MinResourcePercent = 0,
+            MinResourcePercentPerRequest = 3,
+            QueryExecutionTimeout = 0,
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+            WorkloadGroupName = "smallrc",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+workload_group = azurerm.sql.v20190601preview.WorkloadGroup("workloadGroup",
+    database_name="testdb",
+    importance="normal",
+    max_resource_percent=100,
+    max_resource_percent_per_request=3,
+    min_resource_percent=0,
+    min_resource_percent_per_request=3,
+    query_execution_timeout=0,
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr",
+    workload_group_name="smallrc")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const workloadGroup = new azurerm.sql.v20190601preview.WorkloadGroup("workloadGroup", {
+    databaseName: "testdb",
+    importance: "normal",
+    maxResourcePercent: 100,
+    maxResourcePercentPerRequest: 3,
+    minResourcePercent: 0,
+    minResourcePercentPerRequest: 3,
+    queryExecutionTimeout: 0,
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+    workloadGroupName: "smallrc",
+});
+
+```
+
+{{% /example %}}
+
+### Create a workload group with the required properties specified.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workloadGroup = new AzureRM.Sql.V20190601Preview.WorkloadGroup("workloadGroup", new AzureRM.Sql.V20190601Preview.WorkloadGroupArgs
+        {
+            DatabaseName = "testdb",
+            MaxResourcePercent = 100,
+            MinResourcePercent = 0,
+            MinResourcePercentPerRequest = 3,
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+            WorkloadGroupName = "smallrc",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+workload_group = azurerm.sql.v20190601preview.WorkloadGroup("workloadGroup",
+    database_name="testdb",
+    max_resource_percent=100,
+    min_resource_percent=0,
+    min_resource_percent_per_request=3,
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr",
+    workload_group_name="smallrc")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const workloadGroup = new azurerm.sql.v20190601preview.WorkloadGroup("workloadGroup", {
+    databaseName: "testdb",
+    maxResourcePercent: 100,
+    minResourcePercent: 0,
+    minResourcePercentPerRequest: 3,
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+    workloadGroupName: "smallrc",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a WorkloadGroup Resource {#create}

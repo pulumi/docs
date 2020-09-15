@@ -12,6 +12,76 @@ meta_desc: "Explore the Database resource of the kusto/latest module, including 
 
 Class representing a Kusto database.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### KustoDatabasesCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureRM.Kusto.Latest.Database("database", new AzureRM.Kusto.Latest.DatabaseArgs
+        {
+            ClusterName = "kustoclusterrptest4",
+            DatabaseName = "KustoDatabase8",
+            Kind = "ReadWrite",
+            Location = "westus",
+            ResourceGroupName = "kustorptest",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database = azurerm.kusto.latest.Database("database",
+    cluster_name="kustoclusterrptest4",
+    database_name="KustoDatabase8",
+    kind="ReadWrite",
+    location="westus",
+    resource_group_name="kustorptest")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const database = new azurerm.kusto.latest.Database("database", {
+    clusterName: "kustoclusterrptest4",
+    databaseName: "KustoDatabase8",
+    kind: "ReadWrite",
+    location: "westus",
+    resourceGroupName: "kustorptest",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Database Resource {#create}

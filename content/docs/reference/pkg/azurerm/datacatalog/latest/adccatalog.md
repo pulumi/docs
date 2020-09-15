@@ -12,6 +12,124 @@ meta_desc: "Explore the ADCCatalog resource of the datacatalog/latest module, in
 
 Azure Data Catalog.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Azure Data Catalog Service
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var adcCatalog = new AzureRM.DataCatalog.Latest.ADCCatalog("adcCatalog", new AzureRM.DataCatalog.Latest.ADCCatalogArgs
+        {
+            Admins = 
+            {
+                new AzureRM.DataCatalog.Latest.Inputs.PrincipalsArgs
+                {
+                    ObjectId = "99999999-9999-9999-999999999999",
+                    Upn = "myupn@microsoft.com",
+                },
+            },
+            CatalogName = "exampleCatalog",
+            EnableAutomaticUnitAdjustment = false,
+            Location = "North US",
+            ResourceGroupName = "exampleResourceGroup",
+            Sku = "Standard",
+            Tags = 
+            {
+                { "mykey", "myvalue" },
+                { "mykey2", "myvalue2" },
+            },
+            Units = 1,
+            Users = 
+            {
+                new AzureRM.DataCatalog.Latest.Inputs.PrincipalsArgs
+                {
+                    ObjectId = "99999999-9999-9999-999999999999",
+                    Upn = "myupn@microsoft.com",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+adc_catalog = azurerm.datacatalog.latest.ADCCatalog("adcCatalog",
+    admins=[{
+        "objectId": "99999999-9999-9999-999999999999",
+        "upn": "myupn@microsoft.com",
+    }],
+    catalog_name="exampleCatalog",
+    enable_automatic_unit_adjustment=False,
+    location="North US",
+    resource_group_name="exampleResourceGroup",
+    sku="Standard",
+    tags={
+        "mykey": "myvalue",
+        "mykey2": "myvalue2",
+    },
+    units=1,
+    users=[{
+        "objectId": "99999999-9999-9999-999999999999",
+        "upn": "myupn@microsoft.com",
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const adcCatalog = new azurerm.datacatalog.latest.ADCCatalog("adcCatalog", {
+    admins: [{
+        objectId: "99999999-9999-9999-999999999999",
+        upn: "myupn@microsoft.com",
+    }],
+    catalogName: "exampleCatalog",
+    enableAutomaticUnitAdjustment: false,
+    location: "North US",
+    resourceGroupName: "exampleResourceGroup",
+    sku: "Standard",
+    tags: {
+        mykey: "myvalue",
+        mykey2: "myvalue2",
+    },
+    units: 1,
+    users: [{
+        objectId: "99999999-9999-9999-999999999999",
+        upn: "myupn@microsoft.com",
+    }],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ADCCatalog Resource {#create}

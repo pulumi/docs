@@ -12,6 +12,76 @@ meta_desc: "Explore the PrivateDnsZoneGroup resource of the network/latest modul
 
 Private dns zone group resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create private dns zone group
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateDnsZoneGroup = new AzureRM.Network.Latest.PrivateDnsZoneGroup("privateDnsZoneGroup", new AzureRM.Network.Latest.PrivateDnsZoneGroupArgs
+        {
+            PrivateDnsZoneConfigs = 
+            {
+                ,
+            },
+            PrivateDnsZoneGroupName = "testPdnsgroup",
+            PrivateEndpointName = "testPe",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_dns_zone_group = azurerm.network.latest.PrivateDnsZoneGroup("privateDnsZoneGroup",
+    private_dns_zone_configs=[{}],
+    private_dns_zone_group_name="testPdnsgroup",
+    private_endpoint_name="testPe",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateDnsZoneGroup = new azurerm.network.latest.PrivateDnsZoneGroup("privateDnsZoneGroup", {
+    privateDnsZoneConfigs: [{}],
+    privateDnsZoneGroupName: "testPdnsgroup",
+    privateEndpointName: "testPe",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateDnsZoneGroup Resource {#create}

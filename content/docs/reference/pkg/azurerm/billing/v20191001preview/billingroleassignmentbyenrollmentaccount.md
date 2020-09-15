@@ -12,6 +12,79 @@ meta_desc: "Explore the BillingRoleAssignmentByEnrollmentAccount resource of the
 
 The role assignment
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PutEnrollmentAccountSubscriptionCreatorRoleAssignment
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var billingRoleAssignmentByEnrollmentAccount = new AzureRM.Billing.V20191001Preview.BillingRoleAssignmentByEnrollmentAccount("billingRoleAssignmentByEnrollmentAccount", new AzureRM.Billing.V20191001Preview.BillingRoleAssignmentByEnrollmentAccountArgs
+        {
+            BillingAccountName = "{billingAccountName}",
+            BillingRoleAssignmentName = "{billingRoleAssignmentName}",
+            EnrollmentAccountName = "{enrollmentAccountName}",
+            PrincipalId = "99a1a759-30dd-42c2-828c-db398826bb67",
+            PrincipalTenantId = "7ca289b9-c32d-4f01-8566-7ff93261d76f",
+            RoleDefinitionId = "/providers/Microsoft.Billing/billingAccounts/7898901/enrollmentAccounts/225314/billingRoleDefinitions/a0bcee42-bf30-4d1b-926a-48d21664ef71",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+billing_role_assignment_by_enrollment_account = azurerm.billing.v20191001preview.BillingRoleAssignmentByEnrollmentAccount("billingRoleAssignmentByEnrollmentAccount",
+    billing_account_name="{billingAccountName}",
+    billing_role_assignment_name="{billingRoleAssignmentName}",
+    enrollment_account_name="{enrollmentAccountName}",
+    principal_id="99a1a759-30dd-42c2-828c-db398826bb67",
+    principal_tenant_id="7ca289b9-c32d-4f01-8566-7ff93261d76f",
+    role_definition_id="/providers/Microsoft.Billing/billingAccounts/7898901/enrollmentAccounts/225314/billingRoleDefinitions/a0bcee42-bf30-4d1b-926a-48d21664ef71")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const billingRoleAssignmentByEnrollmentAccount = new azurerm.billing.v20191001preview.BillingRoleAssignmentByEnrollmentAccount("billingRoleAssignmentByEnrollmentAccount", {
+    billingAccountName: "{billingAccountName}",
+    billingRoleAssignmentName: "{billingRoleAssignmentName}",
+    enrollmentAccountName: "{enrollmentAccountName}",
+    principalId: "99a1a759-30dd-42c2-828c-db398826bb67",
+    principalTenantId: "7ca289b9-c32d-4f01-8566-7ff93261d76f",
+    roleDefinitionId: "/providers/Microsoft.Billing/billingAccounts/7898901/enrollmentAccounts/225314/billingRoleDefinitions/a0bcee42-bf30-4d1b-926a-48d21664ef71",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BillingRoleAssignmentByEnrollmentAccount Resource {#create}

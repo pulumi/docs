@@ -12,6 +12,90 @@ meta_desc: "Explore the Manager resource of the storsimple/latest module, includ
 
 The StorSimple Manager.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ManagersCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var manager = new AzureRM.StorSimple.Latest.Manager("manager", new AzureRM.StorSimple.Latest.ManagerArgs
+        {
+            CisIntrinsicSettings = new AzureRM.StorSimple.Latest.Inputs.ManagerIntrinsicSettingsArgs
+            {
+                Type = "GardaV1",
+            },
+            Location = "westus",
+            ManagerName = "ManagerForSDKTest2",
+            ResourceGroupName = "ResourceGroupForSDKTest",
+            Sku = new AzureRM.StorSimple.Latest.Inputs.ManagerSkuArgs
+            {
+                Name = "Standard",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+manager = azurerm.storsimple.latest.Manager("manager",
+    cis_intrinsic_settings={
+        "type": "GardaV1",
+    },
+    location="westus",
+    manager_name="ManagerForSDKTest2",
+    resource_group_name="ResourceGroupForSDKTest",
+    sku={
+        "name": "Standard",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const manager = new azurerm.storsimple.latest.Manager("manager", {
+    cisIntrinsicSettings: {
+        type: "GardaV1",
+    },
+    location: "westus",
+    managerName: "ManagerForSDKTest2",
+    resourceGroupName: "ResourceGroupForSDKTest",
+    sku: {
+        name: "Standard",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Manager Resource {#create}

@@ -12,6 +12,183 @@ meta_desc: "Explore the InstancePool resource of the sql/v20180601preview module
 
 An Azure SQL instance pool.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create an instance pool with all properties.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instancePool = new AzureRM.Sql.V20180601Preview.InstancePool("instancePool", new AzureRM.Sql.V20180601Preview.InstancePoolArgs
+        {
+            InstancePoolName = "testIP",
+            LicenseType = "LicenseIncluded",
+            ResourceGroupName = "group1",
+            Sku = new AzureRM.Sql.V20180601Preview.Inputs.SkuArgs
+            {
+                Family = "Gen5",
+                Name = "GP_Gen5",
+                Tier = "GeneralPurpose",
+            },
+            SubnetId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetwork/myvnet/subnets/mysubnet1",
+            Tags = 
+            {
+                { "a", "b" },
+            },
+            VCores = 8,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+instance_pool = azurerm.sql.v20180601preview.InstancePool("instancePool",
+    instance_pool_name="testIP",
+    license_type="LicenseIncluded",
+    resource_group_name="group1",
+    sku={
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+    },
+    subnet_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetwork/myvnet/subnets/mysubnet1",
+    tags={
+        "a": "b",
+    },
+    v_cores=8)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const instancePool = new azurerm.sql.v20180601preview.InstancePool("instancePool", {
+    instancePoolName: "testIP",
+    licenseType: "LicenseIncluded",
+    resourceGroupName: "group1",
+    sku: {
+        family: "Gen5",
+        name: "GP_Gen5",
+        tier: "GeneralPurpose",
+    },
+    subnetId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetwork/myvnet/subnets/mysubnet1",
+    tags: {
+        a: "b",
+    },
+    vCores: 8,
+});
+
+```
+
+{{% /example %}}
+
+### Create an instance pool with min properties.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instancePool = new AzureRM.Sql.V20180601Preview.InstancePool("instancePool", new AzureRM.Sql.V20180601Preview.InstancePoolArgs
+        {
+            InstancePoolName = "testIP",
+            LicenseType = "LicenseIncluded",
+            ResourceGroupName = "group1",
+            Sku = new AzureRM.Sql.V20180601Preview.Inputs.SkuArgs
+            {
+                Family = "Gen5",
+                Name = "GP_Gen5",
+                Tier = "GeneralPurpose",
+            },
+            SubnetId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetwork/myvnet/subnets/mysubnet1",
+            VCores = 8,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+instance_pool = azurerm.sql.v20180601preview.InstancePool("instancePool",
+    instance_pool_name="testIP",
+    license_type="LicenseIncluded",
+    resource_group_name="group1",
+    sku={
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+    },
+    subnet_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetwork/myvnet/subnets/mysubnet1",
+    v_cores=8)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const instancePool = new azurerm.sql.v20180601preview.InstancePool("instancePool", {
+    instancePoolName: "testIP",
+    licenseType: "LicenseIncluded",
+    resourceGroupName: "group1",
+    sku: {
+        family: "Gen5",
+        name: "GP_Gen5",
+        tier: "GeneralPurpose",
+    },
+    subnetId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Network/virtualNetwork/myvnet/subnets/mysubnet1",
+    vCores: 8,
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a InstancePool Resource {#create}

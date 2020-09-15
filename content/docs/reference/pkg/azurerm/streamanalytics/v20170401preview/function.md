@@ -12,6 +12,335 @@ meta_desc: "Explore the Function resource of the streamanalytics/v20170401previe
 
 A function object, containing all information associated with the named function. All functions are contained under a streaming job.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a CLRUdf function
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+function = .("function",
+    function_name="function588",
+    job_name="sj9093",
+    properties={
+        "binding": {
+            "properties": {
+                "class": "ASAEdgeUDFDemo.Class1",
+                "dllPath": "ASAEdgeApplication2_CodeBehind",
+                "method": "SquareFunction",
+            },
+            "type": "Microsoft.StreamAnalytics/CLRUdf",
+        },
+        "inputs": [{
+            "dataType": "nvarchar(max)",
+        }],
+        "output": {
+            "dataType": "nvarchar(max)",
+        },
+    },
+    resource_group_name="sjrg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const _function = new .("function", {
+    functionName: "function588",
+    jobName: "sj9093",
+    properties: {
+        binding: {
+            properties: {
+                "class": "ASAEdgeUDFDemo.Class1",
+                dllPath: "ASAEdgeApplication2_CodeBehind",
+                method: "SquareFunction",
+            },
+            type: "Microsoft.StreamAnalytics/CLRUdf",
+        },
+        inputs: [{
+            dataType: "nvarchar(max)",
+        }],
+        output: {
+            dataType: "nvarchar(max)",
+        },
+    },
+    resourceGroupName: "sjrg",
+});
+
+```
+
+{{% /example %}}
+
+### Create a JavaScript function
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+function = .("function",
+    function_name="function8197",
+    job_name="sj8653",
+    properties={
+        "binding": {
+            "properties": {
+                "script": "function (x, y) { return x + y; }",
+            },
+            "type": "Microsoft.StreamAnalytics/JavascriptUdf",
+        },
+        "inputs": [{
+            "dataType": "Any",
+        }],
+        "output": {
+            "dataType": "Any",
+        },
+    },
+    resource_group_name="sjrg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const _function = new .("function", {
+    functionName: "function8197",
+    jobName: "sj8653",
+    properties: {
+        binding: {
+            properties: {
+                script: "function (x, y) { return x + y; }",
+            },
+            type: "Microsoft.StreamAnalytics/JavascriptUdf",
+        },
+        inputs: [{
+            dataType: "Any",
+        }],
+        output: {
+            dataType: "Any",
+        },
+    },
+    resourceGroupName: "sjrg",
+});
+
+```
+
+{{% /example %}}
+
+### Create an Azure ML Service function
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+function = .("function",
+    function_name="function588",
+    job_name="sj9093",
+    properties={
+        "binding": {
+            "properties": {
+                "apiKey": "someApiKey==",
+                "batchSize": 1000,
+                "endpoint": "someAzureMLEndpointURL",
+                "inputs": [{
+                    "dataType": "array",
+                    "mapTo": 0,
+                    "name": "data",
+                }],
+                "numberOfParallelRequests": 1,
+                "outputs": [{
+                    "dataType": "string",
+                    "name": "Sentiment",
+                }],
+            },
+            "type": "Microsoft.MachineLearningServices",
+        },
+        "inputs": [{
+            "dataType": "nvarchar(max)",
+        }],
+        "output": {
+            "dataType": "nvarchar(max)",
+        },
+    },
+    resource_group_name="sjrg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const _function = new .("function", {
+    functionName: "function588",
+    jobName: "sj9093",
+    properties: {
+        binding: {
+            properties: {
+                apiKey: "someApiKey==",
+                batchSize: 1000,
+                endpoint: "someAzureMLEndpointURL",
+                inputs: [{
+                    dataType: "array",
+                    mapTo: 0,
+                    name: "data",
+                }],
+                numberOfParallelRequests: 1,
+                outputs: [{
+                    dataType: "string",
+                    name: "Sentiment",
+                }],
+            },
+            type: "Microsoft.MachineLearningServices",
+        },
+        inputs: [{
+            dataType: "nvarchar(max)",
+        }],
+        output: {
+            dataType: "nvarchar(max)",
+        },
+    },
+    resourceGroupName: "sjrg",
+});
+
+```
+
+{{% /example %}}
+
+### Create an Azure ML function
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+function = .("function",
+    function_name="function588",
+    job_name="sj9093",
+    properties={
+        "binding": {
+            "properties": {
+                "apiKey": "someApiKey==",
+                "batchSize": 1000,
+                "endpoint": "someAzureMLEndpointURL",
+                "inputs": {
+                    "columnNames": [{
+                        "dataType": "string",
+                        "mapTo": 0,
+                        "name": "tweet",
+                    }],
+                    "name": "input1",
+                },
+                "outputs": [{
+                    "dataType": "string",
+                    "name": "Sentiment",
+                }],
+            },
+            "type": "Microsoft.MachineLearning/WebService",
+        },
+        "inputs": [{
+            "dataType": "nvarchar(max)",
+        }],
+        "output": {
+            "dataType": "nvarchar(max)",
+        },
+    },
+    resource_group_name="sjrg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const _function = new .("function", {
+    functionName: "function588",
+    jobName: "sj9093",
+    properties: {
+        binding: {
+            properties: {
+                apiKey: "someApiKey==",
+                batchSize: 1000,
+                endpoint: "someAzureMLEndpointURL",
+                inputs: {
+                    columnNames: [{
+                        dataType: "string",
+                        mapTo: 0,
+                        name: "tweet",
+                    }],
+                    name: "input1",
+                },
+                outputs: [{
+                    dataType: "string",
+                    name: "Sentiment",
+                }],
+            },
+            type: "Microsoft.MachineLearning/WebService",
+        },
+        inputs: [{
+            dataType: "nvarchar(max)",
+        }],
+        output: {
+            dataType: "nvarchar(max)",
+        },
+    },
+    resourceGroupName: "sjrg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Function Resource {#create}

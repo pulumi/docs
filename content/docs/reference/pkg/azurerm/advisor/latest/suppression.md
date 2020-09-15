@@ -12,6 +12,73 @@ meta_desc: "Explore the Suppression resource of the advisor/latest module, inclu
 
 The details of the snoozed or dismissed rule; for example, the duration, name, and GUID associated with the rule.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateSuppression
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var suppression = new AzureRM.Advisor.Latest.Suppression("suppression", new AzureRM.Advisor.Latest.SuppressionArgs
+        {
+            Name = "suppressionName1",
+            RecommendationId = "recommendationId",
+            ResourceUri = "resourceUri",
+            Ttl = "07:00:00:00",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+suppression = azurerm.advisor.latest.Suppression("suppression",
+    name="suppressionName1",
+    recommendation_id="recommendationId",
+    resource_uri="resourceUri",
+    ttl="07:00:00:00")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const suppression = new azurerm.advisor.latest.Suppression("suppression", {
+    name: "suppressionName1",
+    recommendationId: "recommendationId",
+    resourceUri: "resourceUri",
+    ttl: "07:00:00:00",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Suppression Resource {#create}

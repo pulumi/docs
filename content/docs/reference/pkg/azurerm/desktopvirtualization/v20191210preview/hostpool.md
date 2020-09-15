@@ -12,6 +12,120 @@ meta_desc: "Explore the HostPool resource of the desktopvirtualization/v20191210
 
 Represents a HostPool definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### HostPool_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hostPool = new AzureRM.DesktopVirtualization.V20191210Preview.HostPool("hostPool", new AzureRM.DesktopVirtualization.V20191210Preview.HostPoolArgs
+        {
+            Description = "des1",
+            FriendlyName = "friendly",
+            HostPoolName = "hostPool1",
+            HostPoolType = "Pooled",
+            LoadBalancerType = "BreadthFirst",
+            Location = "centralus",
+            MaxSessionLimit = 999999,
+            PersonalDesktopAssignmentType = "Automatic",
+            PreferredAppGroupType = "Desktop",
+            RegistrationInfo = new AzureRM.DesktopVirtualization.V20191210Preview.Inputs.RegistrationInfoArgs
+            {
+                ExpirationTime = "2020-10-01T14:01:54.9571247Z",
+                RegistrationTokenOperation = "Update",
+            },
+            ResourceGroupName = "resourceGroup1",
+            SsoContext = "KeyVaultPath",
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+host_pool = azurerm.desktopvirtualization.v20191210preview.HostPool("hostPool",
+    description="des1",
+    friendly_name="friendly",
+    host_pool_name="hostPool1",
+    host_pool_type="Pooled",
+    load_balancer_type="BreadthFirst",
+    location="centralus",
+    max_session_limit=999999,
+    personal_desktop_assignment_type="Automatic",
+    preferred_app_group_type="Desktop",
+    registration_info={
+        "expirationTime": "2020-10-01T14:01:54.9571247Z",
+        "registrationTokenOperation": "Update",
+    },
+    resource_group_name="resourceGroup1",
+    sso_context="KeyVaultPath",
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const hostPool = new azurerm.desktopvirtualization.v20191210preview.HostPool("hostPool", {
+    description: "des1",
+    friendlyName: "friendly",
+    hostPoolName: "hostPool1",
+    hostPoolType: "Pooled",
+    loadBalancerType: "BreadthFirst",
+    location: "centralus",
+    maxSessionLimit: 999999,
+    personalDesktopAssignmentType: "Automatic",
+    preferredAppGroupType: "Desktop",
+    registrationInfo: {
+        expirationTime: "2020-10-01T14:01:54.9571247Z",
+        registrationTokenOperation: "Update",
+    },
+    resourceGroupName: "resourceGroup1",
+    ssoContext: "KeyVaultPath",
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a HostPool Resource {#create}

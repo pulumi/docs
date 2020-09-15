@@ -12,6 +12,677 @@ meta_desc: "Explore the Cluster resource of the hdinsight/v20180601preview modul
 
 The HDInsight cluster.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create HDInsight cluster with Autoscale configuration
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cluster = new AzureRM.HDInsight.V20180601Preview.Cluster("cluster", new AzureRM.HDInsight.V20180601Preview.ClusterArgs
+        {
+            ClusterName = "cluster1",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cluster = azurerm.hdinsight.v20180601preview.Cluster("cluster",
+    cluster_name="cluster1",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cluster = new azurerm.hdinsight.v20180601preview.Cluster("cluster", {
+    clusterName: "cluster1",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+### Create Hadoop cluster with Azure Data Lake Storage Gen 2
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cluster = new AzureRM.HDInsight.V20180601Preview.Cluster("cluster", new AzureRM.HDInsight.V20180601Preview.ClusterArgs
+        {
+            ClusterName = "cluster1",
+            ResourceGroupName = "rg1",
+            Tags = 
+            {
+                { "key1", "val1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cluster = azurerm.hdinsight.v20180601preview.Cluster("cluster",
+    cluster_name="cluster1",
+    resource_group_name="rg1",
+    tags={
+        "key1": "val1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cluster = new azurerm.hdinsight.v20180601preview.Cluster("cluster", {
+    clusterName: "cluster1",
+    resourceGroupName: "rg1",
+    tags: {
+        key1: "val1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create Hadoop on Linux cluster with SSH password
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cluster = new AzureRM.HDInsight.V20180601Preview.Cluster("cluster", new AzureRM.HDInsight.V20180601Preview.ClusterArgs
+        {
+            ClusterName = "cluster1",
+            ResourceGroupName = "rg1",
+            Tags = 
+            {
+                { "key1", "val1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cluster = azurerm.hdinsight.v20180601preview.Cluster("cluster",
+    cluster_name="cluster1",
+    resource_group_name="rg1",
+    tags={
+        "key1": "val1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cluster = new azurerm.hdinsight.v20180601preview.Cluster("cluster", {
+    clusterName: "cluster1",
+    resourceGroupName: "rg1",
+    tags: {
+        key1: "val1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create Hadoop on Linux cluster with SSH public key
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cluster = new AzureRM.HDInsight.V20180601Preview.Cluster("cluster", new AzureRM.HDInsight.V20180601Preview.ClusterArgs
+        {
+            ClusterName = "cluster1",
+            ResourceGroupName = "rg1",
+            Tags = 
+            {
+                { "key1", "val1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cluster = azurerm.hdinsight.v20180601preview.Cluster("cluster",
+    cluster_name="cluster1",
+    resource_group_name="rg1",
+    tags={
+        "key1": "val1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cluster = new azurerm.hdinsight.v20180601preview.Cluster("cluster", {
+    clusterName: "cluster1",
+    resourceGroupName: "rg1",
+    tags: {
+        key1: "val1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create Kafka cluster with Kafka Rest Proxy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cluster = new AzureRM.HDInsight.V20180601Preview.Cluster("cluster", new AzureRM.HDInsight.V20180601Preview.ClusterArgs
+        {
+            ClusterName = "cluster1",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cluster = azurerm.hdinsight.v20180601preview.Cluster("cluster",
+    cluster_name="cluster1",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cluster = new azurerm.hdinsight.v20180601preview.Cluster("cluster", {
+    clusterName: "cluster1",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+### Create Secure Hadoop cluster
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cluster = new AzureRM.HDInsight.V20180601Preview.Cluster("cluster", new AzureRM.HDInsight.V20180601Preview.ClusterArgs
+        {
+            ClusterName = "cluster1",
+            ResourceGroupName = "rg1",
+            Tags = 
+            {
+                { "key1", "val1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cluster = azurerm.hdinsight.v20180601preview.Cluster("cluster",
+    cluster_name="cluster1",
+    resource_group_name="rg1",
+    tags={
+        "key1": "val1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cluster = new azurerm.hdinsight.v20180601preview.Cluster("cluster", {
+    clusterName: "cluster1",
+    resourceGroupName: "rg1",
+    tags: {
+        key1: "val1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create Spark on Linux Cluster with SSH password
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cluster = new AzureRM.HDInsight.V20180601Preview.Cluster("cluster", new AzureRM.HDInsight.V20180601Preview.ClusterArgs
+        {
+            ClusterName = "cluster1",
+            ResourceGroupName = "rg1",
+            Tags = 
+            {
+                { "key1", "val1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cluster = azurerm.hdinsight.v20180601preview.Cluster("cluster",
+    cluster_name="cluster1",
+    resource_group_name="rg1",
+    tags={
+        "key1": "val1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cluster = new azurerm.hdinsight.v20180601preview.Cluster("cluster", {
+    clusterName: "cluster1",
+    resourceGroupName: "rg1",
+    tags: {
+        key1: "val1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create cluster with TLS 1.2
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cluster = new AzureRM.HDInsight.V20180601Preview.Cluster("cluster", new AzureRM.HDInsight.V20180601Preview.ClusterArgs
+        {
+            ClusterName = "cluster1",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cluster = azurerm.hdinsight.v20180601preview.Cluster("cluster",
+    cluster_name="cluster1",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cluster = new azurerm.hdinsight.v20180601preview.Cluster("cluster", {
+    clusterName: "cluster1",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+### Create cluster with custom network settings
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cluster = new AzureRM.HDInsight.V20180601Preview.Cluster("cluster", new AzureRM.HDInsight.V20180601Preview.ClusterArgs
+        {
+            ClusterName = "cluster1",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cluster = azurerm.hdinsight.v20180601preview.Cluster("cluster",
+    cluster_name="cluster1",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cluster = new azurerm.hdinsight.v20180601preview.Cluster("cluster", {
+    clusterName: "cluster1",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+### Create cluster with encryption at host
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cluster = new AzureRM.HDInsight.V20180601Preview.Cluster("cluster", new AzureRM.HDInsight.V20180601Preview.ClusterArgs
+        {
+            ClusterName = "cluster1",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cluster = azurerm.hdinsight.v20180601preview.Cluster("cluster",
+    cluster_name="cluster1",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cluster = new azurerm.hdinsight.v20180601preview.Cluster("cluster", {
+    clusterName: "cluster1",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+### Create cluster with encryption in transit
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cluster = new AzureRM.HDInsight.V20180601Preview.Cluster("cluster", new AzureRM.HDInsight.V20180601Preview.ClusterArgs
+        {
+            ClusterName = "cluster1",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cluster = azurerm.hdinsight.v20180601preview.Cluster("cluster",
+    cluster_name="cluster1",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cluster = new azurerm.hdinsight.v20180601preview.Cluster("cluster", {
+    clusterName: "cluster1",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}

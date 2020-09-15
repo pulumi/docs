@@ -12,6 +12,85 @@ meta_desc: "Explore the WorkspaceConnection resource of the machinelearningservi
 
 Workspace connection.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateWorkspaceConnection
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workspaceConnection = new AzureRM.MachineLearningServices.Latest.WorkspaceConnection("workspaceConnection", new AzureRM.MachineLearningServices.Latest.WorkspaceConnectionArgs
+        {
+            AuthType = "PAT",
+            Category = "ACR",
+            ConnectionName = "connection-1",
+            Name = "connection-1",
+            ResourceGroupName = "resourceGroup-1",
+            Target = "www.facebook.com",
+            Value = "secrets",
+            WorkspaceName = "workspace-1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+workspace_connection = azurerm.machinelearningservices.latest.WorkspaceConnection("workspaceConnection",
+    auth_type="PAT",
+    category="ACR",
+    connection_name="connection-1",
+    name="connection-1",
+    resource_group_name="resourceGroup-1",
+    target="www.facebook.com",
+    value="secrets",
+    workspace_name="workspace-1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const workspaceConnection = new azurerm.machinelearningservices.latest.WorkspaceConnection("workspaceConnection", {
+    authType: "PAT",
+    category: "ACR",
+    connectionName: "connection-1",
+    name: "connection-1",
+    resourceGroupName: "resourceGroup-1",
+    target: "www.facebook.com",
+    value: "secrets",
+    workspaceName: "workspace-1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a WorkspaceConnection Resource {#create}

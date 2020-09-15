@@ -12,6 +12,76 @@ meta_desc: "Explore the GuestConfigurationAssignment resource of the compute/lat
 
 Guest configuration assignment is an association between a machine and guest configuration.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update guest configuration assignment
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var guestConfigurationAssignment = new AzureRM.Compute.Latest.GuestConfigurationAssignment("guestConfigurationAssignment", new AzureRM.Compute.Latest.GuestConfigurationAssignmentArgs
+        {
+            GuestConfigurationAssignmentName = "WhitelistedApplication",
+            Location = "westcentralus",
+            Name = "WhitelistedApplication",
+            ResourceGroupName = "myResourceGroupName",
+            VmName = "myVMName",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+guest_configuration_assignment = azurerm.compute.latest.GuestConfigurationAssignment("guestConfigurationAssignment",
+    guest_configuration_assignment_name="WhitelistedApplication",
+    location="westcentralus",
+    name="WhitelistedApplication",
+    resource_group_name="myResourceGroupName",
+    vm_name="myVMName")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const guestConfigurationAssignment = new azurerm.compute.latest.GuestConfigurationAssignment("guestConfigurationAssignment", {
+    guestConfigurationAssignmentName: "WhitelistedApplication",
+    location: "westcentralus",
+    name: "WhitelistedApplication",
+    resourceGroupName: "myResourceGroupName",
+    vmName: "myVMName",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GuestConfigurationAssignment Resource {#create}

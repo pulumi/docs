@@ -12,6 +12,129 @@ meta_desc: "Explore the DataFlow resource of the datafactory/latest module, incl
 
 Data flow resource type.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### DataFlows_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataFlow = new AzureRM.DataFactory.Latest.DataFlow("dataFlow", new AzureRM.DataFactory.Latest.DataFlowArgs
+        {
+            DataFlowName = "exampleDataFlow",
+            FactoryName = "exampleFactoryName",
+            ResourceGroupName = "exampleResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+data_flow = azurerm.datafactory.latest.DataFlow("dataFlow",
+    data_flow_name="exampleDataFlow",
+    factory_name="exampleFactoryName",
+    resource_group_name="exampleResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataFlow = new azurerm.datafactory.latest.DataFlow("dataFlow", {
+    dataFlowName: "exampleDataFlow",
+    factoryName: "exampleFactoryName",
+    resourceGroupName: "exampleResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+### DataFlows_Update
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataFlow = new AzureRM.DataFactory.Latest.DataFlow("dataFlow", new AzureRM.DataFactory.Latest.DataFlowArgs
+        {
+            DataFlowName = "exampleDataFlow",
+            FactoryName = "exampleFactoryName",
+            ResourceGroupName = "exampleResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+data_flow = azurerm.datafactory.latest.DataFlow("dataFlow",
+    data_flow_name="exampleDataFlow",
+    factory_name="exampleFactoryName",
+    resource_group_name="exampleResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataFlow = new azurerm.datafactory.latest.DataFlow("dataFlow", {
+    dataFlowName: "exampleDataFlow",
+    factoryName: "exampleFactoryName",
+    resourceGroupName: "exampleResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DataFlow Resource {#create}

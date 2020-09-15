@@ -12,6 +12,171 @@ meta_desc: "Explore the SyncMember resource of the sql/v20190601preview module, 
 
 An Azure SQL Database sync member.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a new sync member
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var syncMember = new AzureRM.Sql.V20190601Preview.SyncMember("syncMember", new AzureRM.Sql.V20190601Preview.SyncMemberArgs
+        {
+            DatabaseName = "syncgroupcrud-4328",
+            DatabaseType = "AzureSqlDatabase",
+            ResourceGroupName = "syncgroupcrud-65440",
+            ServerName = "syncgroupcrud-8475",
+            SyncDirection = "Bidirectional",
+            SyncGroupName = "syncgroupcrud-3187",
+            SyncMemberAzureDatabaseResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+            SyncMemberName = "syncgroupcrud-4879",
+            UsePrivateLinkConnection = true,
+            UserName = "myUser",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sync_member = azurerm.sql.v20190601preview.SyncMember("syncMember",
+    database_name="syncgroupcrud-4328",
+    database_type="AzureSqlDatabase",
+    resource_group_name="syncgroupcrud-65440",
+    server_name="syncgroupcrud-8475",
+    sync_direction="Bidirectional",
+    sync_group_name="syncgroupcrud-3187",
+    sync_member_azure_database_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+    sync_member_name="syncgroupcrud-4879",
+    use_private_link_connection=True,
+    user_name="myUser")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const syncMember = new azurerm.sql.v20190601preview.SyncMember("syncMember", {
+    databaseName: "syncgroupcrud-4328",
+    databaseType: "AzureSqlDatabase",
+    resourceGroupName: "syncgroupcrud-65440",
+    serverName: "syncgroupcrud-8475",
+    syncDirection: "Bidirectional",
+    syncGroupName: "syncgroupcrud-3187",
+    syncMemberAzureDatabaseResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+    syncMemberName: "syncgroupcrud-4879",
+    usePrivateLinkConnection: true,
+    userName: "myUser",
+});
+
+```
+
+{{% /example %}}
+
+### Update a sync member
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var syncMember = new AzureRM.Sql.V20190601Preview.SyncMember("syncMember", new AzureRM.Sql.V20190601Preview.SyncMemberArgs
+        {
+            DatabaseName = "syncgroupcrud-7421",
+            DatabaseType = "AzureSqlDatabase",
+            ResourceGroupName = "syncgroupcrud-65440",
+            ServerName = "syncgroupcrud-8475",
+            SyncDirection = "Bidirectional",
+            SyncGroupName = "syncgroupcrud-3187",
+            SyncMemberAzureDatabaseResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+            SyncMemberName = "syncgroupcrud-4879",
+            UsePrivateLinkConnection = true,
+            UserName = "myUser",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sync_member = azurerm.sql.v20190601preview.SyncMember("syncMember",
+    database_name="syncgroupcrud-7421",
+    database_type="AzureSqlDatabase",
+    resource_group_name="syncgroupcrud-65440",
+    server_name="syncgroupcrud-8475",
+    sync_direction="Bidirectional",
+    sync_group_name="syncgroupcrud-3187",
+    sync_member_azure_database_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+    sync_member_name="syncgroupcrud-4879",
+    use_private_link_connection=True,
+    user_name="myUser")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const syncMember = new azurerm.sql.v20190601preview.SyncMember("syncMember", {
+    databaseName: "syncgroupcrud-7421",
+    databaseType: "AzureSqlDatabase",
+    resourceGroupName: "syncgroupcrud-65440",
+    serverName: "syncgroupcrud-8475",
+    syncDirection: "Bidirectional",
+    syncGroupName: "syncgroupcrud-3187",
+    syncMemberAzureDatabaseResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+    syncMemberName: "syncgroupcrud-4879",
+    usePrivateLinkConnection: true,
+    userName: "myUser",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SyncMember Resource {#create}

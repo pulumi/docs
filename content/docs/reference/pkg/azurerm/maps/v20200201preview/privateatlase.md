@@ -12,6 +12,83 @@ meta_desc: "Explore the PrivateAtlase resource of the maps/v20200201preview modu
 
 An Azure resource which represents which will provision the ability to create private location data.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreatePrivateAtlas
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateAtlase = new AzureRM.Maps.V20200201Preview.PrivateAtlase("privateAtlase", new AzureRM.Maps.V20200201Preview.PrivateAtlaseArgs
+        {
+            AccountName = "myMapsAccount",
+            Location = "unitedstates",
+            PrivateAtlasName = "myPrivateAtlas",
+            ResourceGroupName = "myResourceGroup",
+            Tags = 
+            {
+                { "test", "true" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_atlase = azurerm.maps.v20200201preview.PrivateAtlase("privateAtlase",
+    account_name="myMapsAccount",
+    location="unitedstates",
+    private_atlas_name="myPrivateAtlas",
+    resource_group_name="myResourceGroup",
+    tags={
+        "test": "true",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateAtlase = new azurerm.maps.v20200201preview.PrivateAtlase("privateAtlase", {
+    accountName: "myMapsAccount",
+    location: "unitedstates",
+    privateAtlasName: "myPrivateAtlas",
+    resourceGroupName: "myResourceGroup",
+    tags: {
+        test: "true",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateAtlase Resource {#create}

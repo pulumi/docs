@@ -12,6 +12,82 @@ meta_desc: "Explore the Credential resource of the automation/latest module, inc
 
 Definition of the credential.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a credential
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var credential = new AzureRM.Automation.Latest.Credential("credential", new AzureRM.Automation.Latest.CredentialArgs
+        {
+            AutomationAccountName = "myAutomationAccount18",
+            CredentialName = "myCredential",
+            Description = "my description goes here",
+            Name = "myCredential",
+            Password = "myPassw0rd",
+            ResourceGroupName = "rg",
+            UserName = "mylingaiah",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+credential = azurerm.automation.latest.Credential("credential",
+    automation_account_name="myAutomationAccount18",
+    credential_name="myCredential",
+    description="my description goes here",
+    name="myCredential",
+    password="myPassw0rd",
+    resource_group_name="rg",
+    user_name="mylingaiah")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const credential = new azurerm.automation.latest.Credential("credential", {
+    automationAccountName: "myAutomationAccount18",
+    credentialName: "myCredential",
+    description: "my description goes here",
+    name: "myCredential",
+    password: "myPassw0rd",
+    resourceGroupName: "rg",
+    userName: "mylingaiah",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Credential Resource {#create}

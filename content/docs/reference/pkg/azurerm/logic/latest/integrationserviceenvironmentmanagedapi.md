@@ -12,6 +12,70 @@ meta_desc: "Explore the IntegrationServiceEnvironmentManagedApi resource of the 
 
 The managed api definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Gets the integration service environment managed Apis
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var integrationServiceEnvironmentManagedApi = new AzureRM.Logic.Latest.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi", new AzureRM.Logic.Latest.IntegrationServiceEnvironmentManagedApiArgs
+        {
+            ApiName = "servicebus",
+            IntegrationServiceEnvironmentName = "testIntegrationServiceEnvironment",
+            ResourceGroup = "testResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+integration_service_environment_managed_api = azurerm.logic.latest.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi",
+    api_name="servicebus",
+    integration_service_environment_name="testIntegrationServiceEnvironment",
+    resource_group="testResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const integrationServiceEnvironmentManagedApi = new azurerm.logic.latest.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi", {
+    apiName: "servicebus",
+    integrationServiceEnvironmentName: "testIntegrationServiceEnvironment",
+    resourceGroup: "testResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IntegrationServiceEnvironmentManagedApi Resource {#create}

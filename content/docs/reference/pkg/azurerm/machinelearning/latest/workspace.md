@@ -12,6 +12,99 @@ meta_desc: "Explore the Workspace resource of the machinelearning/latest module,
 
 An object that represents a machine learning workspace.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### WorkspaceCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workspace = new AzureRM.MachineLearning.Latest.Workspace("workspace", new AzureRM.MachineLearning.Latest.WorkspaceArgs
+        {
+            Location = "West Europe",
+            OwnerEmail = "abc@microsoft.com",
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.MachineLearning.Latest.Inputs.SkuArgs
+            {
+                Name = "Enterprise",
+                Tier = "Enterprise",
+            },
+            Tags = 
+            {
+                { "tagKey1", "TagValue1" },
+            },
+            UserStorageAccountId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/teststorage",
+            WorkspaceName = "testworkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+workspace = azurerm.machinelearning.latest.Workspace("workspace",
+    location="West Europe",
+    owner_email="abc@microsoft.com",
+    resource_group_name="myResourceGroup",
+    sku={
+        "name": "Enterprise",
+        "tier": "Enterprise",
+    },
+    tags={
+        "tagKey1": "TagValue1",
+    },
+    user_storage_account_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/teststorage",
+    workspace_name="testworkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const workspace = new azurerm.machinelearning.latest.Workspace("workspace", {
+    location: "West Europe",
+    ownerEmail: "abc@microsoft.com",
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        name: "Enterprise",
+        tier: "Enterprise",
+    },
+    tags: {
+        tagKey1: "TagValue1",
+    },
+    userStorageAccountId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/teststorage",
+    workspaceName: "testworkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Workspace Resource {#create}

@@ -12,6 +12,83 @@ meta_desc: "Explore the Replication resource of the containerregistry/latest mod
 
 An object that represents a replication for a container registry.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ReplicationCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var replication = new AzureRM.ContainerRegistry.Latest.Replication("replication", new AzureRM.ContainerRegistry.Latest.ReplicationArgs
+        {
+            Location = "eastus",
+            RegistryName = "myRegistry",
+            ReplicationName = "myReplication",
+            ResourceGroupName = "myResourceGroup",
+            Tags = 
+            {
+                { "key", "value" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+replication = azurerm.containerregistry.latest.Replication("replication",
+    location="eastus",
+    registry_name="myRegistry",
+    replication_name="myReplication",
+    resource_group_name="myResourceGroup",
+    tags={
+        "key": "value",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const replication = new azurerm.containerregistry.latest.Replication("replication", {
+    location: "eastus",
+    registryName: "myRegistry",
+    replicationName: "myReplication",
+    resourceGroupName: "myResourceGroup",
+    tags: {
+        key: "value",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Replication Resource {#create}

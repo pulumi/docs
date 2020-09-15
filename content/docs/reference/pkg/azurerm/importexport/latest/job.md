@@ -12,6 +12,129 @@ meta_desc: "Explore the Job resource of the importexport/latest module, includin
 
 Contains the job information.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create export job
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var job = new AzureRM.ImportExport.Latest.Job("job", new AzureRM.ImportExport.Latest.JobArgs
+        {
+            JobName = "myExportJob",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+job = azurerm.importexport.latest.Job("job",
+    job_name="myExportJob",
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const job = new azurerm.importexport.latest.Job("job", {
+    jobName: "myExportJob",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+### Create import job
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var job = new AzureRM.ImportExport.Latest.Job("job", new AzureRM.ImportExport.Latest.JobArgs
+        {
+            JobName = "myJob",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+job = azurerm.importexport.latest.Job("job",
+    job_name="myJob",
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const job = new azurerm.importexport.latest.Job("job", {
+    jobName: "myJob",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Job Resource {#create}

@@ -12,6 +12,160 @@ meta_desc: "Explore the Account resource of the datalakestore/latest module, inc
 
 Data Lake Store account information.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates the specified Data Lake Store account
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var account = new AzureRM.DataLakeStore.Latest.Account("account", new AzureRM.DataLakeStore.Latest.AccountArgs
+        {
+            AccountName = "contosoadla",
+            DefaultGroup = "test_default_group",
+            EncryptionConfig = new AzureRM.DataLakeStore.Latest.Inputs.EncryptionConfigArgs
+            {
+                KeyVaultMetaInfo = new AzureRM.DataLakeStore.Latest.Inputs.KeyVaultMetaInfoArgs
+                {
+                    EncryptionKeyName = "test_encryption_key_name",
+                    EncryptionKeyVersion = "encryption_key_version",
+                    KeyVaultResourceId = "34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
+                },
+                Type = "UserManaged",
+            },
+            EncryptionState = "Enabled",
+            FirewallAllowAzureIps = "Enabled",
+            FirewallRules = 
+            {
+                new AzureRM.DataLakeStore.Latest.Inputs.CreateFirewallRuleWithAccountParametersArgs
+                {
+                    Name = "test_rule",
+                },
+            },
+            FirewallState = "Enabled",
+            Identity = new AzureRM.DataLakeStore.Latest.Inputs.EncryptionIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Location = "eastus2",
+            NewTier = "Consumption",
+            ResourceGroupName = "contosorg",
+            Tags = 
+            {
+                { "test_key", "test_value" },
+            },
+            TrustedIdProviderState = "Enabled",
+            TrustedIdProviders = 
+            {
+                new AzureRM.DataLakeStore.Latest.Inputs.CreateTrustedIdProviderWithAccountParametersArgs
+                {
+                    Name = "test_trusted_id_provider_name",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+account = azurerm.datalakestore.latest.Account("account",
+    account_name="contosoadla",
+    default_group="test_default_group",
+    encryption_config={
+        "keyVaultMetaInfo": {
+            "encryptionKeyName": "test_encryption_key_name",
+            "encryptionKeyVersion": "encryption_key_version",
+            "keyVaultResourceId": "34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
+        },
+        "type": "UserManaged",
+    },
+    encryption_state="Enabled",
+    firewall_allow_azure_ips="Enabled",
+    firewall_rules=[{
+        "name": "test_rule",
+    }],
+    firewall_state="Enabled",
+    identity={
+        "type": "SystemAssigned",
+    },
+    location="eastus2",
+    new_tier="Consumption",
+    resource_group_name="contosorg",
+    tags={
+        "test_key": "test_value",
+    },
+    trusted_id_provider_state="Enabled",
+    trusted_id_providers=[{
+        "name": "test_trusted_id_provider_name",
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const account = new azurerm.datalakestore.latest.Account("account", {
+    accountName: "contosoadla",
+    defaultGroup: "test_default_group",
+    encryptionConfig: {
+        keyVaultMetaInfo: {
+            encryptionKeyName: "test_encryption_key_name",
+            encryptionKeyVersion: "encryption_key_version",
+            keyVaultResourceId: "34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
+        },
+        type: "UserManaged",
+    },
+    encryptionState: "Enabled",
+    firewallAllowAzureIps: "Enabled",
+    firewallRules: [{
+        name: "test_rule",
+    }],
+    firewallState: "Enabled",
+    identity: {
+        type: "SystemAssigned",
+    },
+    location: "eastus2",
+    newTier: "Consumption",
+    resourceGroupName: "contosorg",
+    tags: {
+        test_key: "test_value",
+    },
+    trustedIdProviderState: "Enabled",
+    trustedIdProviders: [{
+        name: "test_trusted_id_provider_name",
+    }],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Account Resource {#create}

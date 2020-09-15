@@ -12,6 +12,73 @@ meta_desc: "Explore the NamespaceVirtualNetworkRule resource of the eventhub/v20
 
 Single item in a List or Get VirtualNetworkRules operation
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### NameSpaceVirtualNetworkRuleCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var namespaceVirtualNetworkRule = new AzureRM.EventHub.V20180101Preview.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", new AzureRM.EventHub.V20180101Preview.NamespaceVirtualNetworkRuleArgs
+        {
+            NamespaceName = "sdk-Namespace-6019",
+            ResourceGroupName = "ResourceGroup",
+            VirtualNetworkRuleName = "sdk-VirtualNetworkRules-9191",
+            VirtualNetworkSubnetId = "/subscriptions/Subscription/resourceGroups/sbehvnettest/providers/Microsoft.Network/virtualNetworks/sbehvnettest/subnets/default",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+namespace_virtual_network_rule = azurerm.eventhub.v20180101preview.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule",
+    namespace_name="sdk-Namespace-6019",
+    resource_group_name="ResourceGroup",
+    virtual_network_rule_name="sdk-VirtualNetworkRules-9191",
+    virtual_network_subnet_id="/subscriptions/Subscription/resourceGroups/sbehvnettest/providers/Microsoft.Network/virtualNetworks/sbehvnettest/subnets/default")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const namespaceVirtualNetworkRule = new azurerm.eventhub.v20180101preview.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", {
+    namespaceName: "sdk-Namespace-6019",
+    resourceGroupName: "ResourceGroup",
+    virtualNetworkRuleName: "sdk-VirtualNetworkRules-9191",
+    virtualNetworkSubnetId: "/subscriptions/Subscription/resourceGroups/sbehvnettest/providers/Microsoft.Network/virtualNetworks/sbehvnettest/subnets/default",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NamespaceVirtualNetworkRule Resource {#create}

@@ -12,6 +12,58 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the storage/v20200
 
 The Private Endpoint Connection resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### StorageAccountPutPrivateEndpointConnection
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+private_endpoint_connection = .("privateEndpointConnection",
+    account_name="sto9699",
+    private_endpoint_connection_name="{privateEndpointConnectionName}",
+    private_link_service_connection_state={
+        "description": "Auto-Approved",
+        "status": "Approved",
+    },
+    resource_group_name="res7687")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const privateEndpointConnection = new .("privateEndpointConnection", {
+    accountName: "sto9699",
+    privateEndpointConnectionName: "{privateEndpointConnectionName}",
+    privateLinkServiceConnectionState: {
+        description: "Auto-Approved",
+        status: "Approved",
+    },
+    resourceGroupName: "res7687",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateEndpointConnection Resource {#create}

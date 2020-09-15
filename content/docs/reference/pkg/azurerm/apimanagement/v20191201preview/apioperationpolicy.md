@@ -12,6 +12,82 @@ meta_desc: "Explore the ApiOperationPolicy resource of the apimanagement/v201912
 
 Policy Contract details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateApiOperationPolicy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiOperationPolicy = new AzureRM.ApiManagement.V20191201Preview.ApiOperationPolicy("apiOperationPolicy", new AzureRM.ApiManagement.V20191201Preview.ApiOperationPolicyArgs
+        {
+            ApiId = "5600b57e7e8880006a040001",
+            Format = "xml",
+            OperationId = "5600b57e7e8880006a080001",
+            PolicyId = "policy",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Value = "<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api_operation_policy = azurerm.apimanagement.v20191201preview.ApiOperationPolicy("apiOperationPolicy",
+    api_id="5600b57e7e8880006a040001",
+    format="xml",
+    operation_id="5600b57e7e8880006a080001",
+    policy_id="policy",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    value="<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const apiOperationPolicy = new azurerm.apimanagement.v20191201preview.ApiOperationPolicy("apiOperationPolicy", {
+    apiId: "5600b57e7e8880006a040001",
+    format: "xml",
+    operationId: "5600b57e7e8880006a080001",
+    policyId: "policy",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    value: "<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApiOperationPolicy Resource {#create}

@@ -12,6 +12,93 @@ meta_desc: "Explore the VpnConnection resource of the network/latest module, inc
 
 VpnConnection Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### VpnConnectionPut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpnConnection = new AzureRM.Network.Latest.VpnConnection("vpnConnection", new AzureRM.Network.Latest.VpnConnectionArgs
+        {
+            ConnectionName = "vpnConnection1",
+            GatewayName = "gateway1",
+            RemoteVpnSite = new AzureRM.Network.Latest.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1",
+            },
+            ResourceGroupName = "rg1",
+            VpnLinkConnections = 
+            {
+                new AzureRM.Network.Latest.Inputs.VpnSiteLinkConnectionArgs
+                {
+                    Name = "Connection-Link1",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+vpn_connection = azurerm.network.latest.VpnConnection("vpnConnection",
+    connection_name="vpnConnection1",
+    gateway_name="gateway1",
+    remote_vpn_site={
+        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1",
+    },
+    resource_group_name="rg1",
+    vpn_link_connections=[{
+        "name": "Connection-Link1",
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const vpnConnection = new azurerm.network.latest.VpnConnection("vpnConnection", {
+    connectionName: "vpnConnection1",
+    gatewayName: "gateway1",
+    remoteVpnSite: {
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1",
+    },
+    resourceGroupName: "rg1",
+    vpnLinkConnections: [{
+        name: "Connection-Link1",
+    }],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VpnConnection Resource {#create}

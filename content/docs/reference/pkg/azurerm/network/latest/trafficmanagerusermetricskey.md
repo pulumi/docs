@@ -12,6 +12,60 @@ meta_desc: "Explore the TrafficManagerUserMetricsKey resource of the network/lat
 
 Class representing Traffic Manager User Metrics.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### TrafficManagerUserMetricsKeys-PUT
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var trafficManagerUserMetricsKey = new AzureRM.Network.Latest.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey", new AzureRM.Network.Latest.TrafficManagerUserMetricsKeyArgs
+        {
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+traffic_manager_user_metrics_key = azurerm.network.latest.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const trafficManagerUserMetricsKey = new azurerm.network.latest.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey", {});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TrafficManagerUserMetricsKey Resource {#create}

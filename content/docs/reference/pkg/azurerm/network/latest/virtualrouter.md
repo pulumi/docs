@@ -12,6 +12,90 @@ meta_desc: "Explore the VirtualRouter resource of the network/latest module, inc
 
 VirtualRouter Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create VirtualRouter
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualRouter = new AzureRM.Network.Latest.VirtualRouter("virtualRouter", new AzureRM.Network.Latest.VirtualRouterArgs
+        {
+            HostedGateway = new AzureRM.Network.Latest.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vnetGateway",
+            },
+            Location = "West US",
+            ResourceGroupName = "rg1",
+            Tags = 
+            {
+                { "key1", "value1" },
+            },
+            VirtualRouterName = "virtualRouter",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_router = azurerm.network.latest.VirtualRouter("virtualRouter",
+    hosted_gateway={
+        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vnetGateway",
+    },
+    location="West US",
+    resource_group_name="rg1",
+    tags={
+        "key1": "value1",
+    },
+    virtual_router_name="virtualRouter")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualRouter = new azurerm.network.latest.VirtualRouter("virtualRouter", {
+    hostedGateway: {
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vnetGateway",
+    },
+    location: "West US",
+    resourceGroupName: "rg1",
+    tags: {
+        key1: "value1",
+    },
+    virtualRouterName: "virtualRouter",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualRouter Resource {#create}

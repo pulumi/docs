@@ -12,6 +12,157 @@ meta_desc: "Explore the Component resource of the insights/latest module, includ
 
 An Application Insights component definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ComponentCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var component = new AzureRM.Insights.Latest.Component("component", new AzureRM.Insights.Latest.ComponentArgs
+        {
+            ApplicationType = "web",
+            FlowType = "Bluefield",
+            Kind = "web",
+            Location = "South Central US",
+            RequestSource = "rest",
+            ResourceGroupName = "my-resource-group",
+            ResourceName = "my-component",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+component = azurerm.insights.latest.Component("component",
+    application_type="web",
+    flow_type="Bluefield",
+    kind="web",
+    location="South Central US",
+    request_source="rest",
+    resource_group_name="my-resource-group",
+    resource_name="my-component")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const component = new azurerm.insights.latest.Component("component", {
+    applicationType: "web",
+    flowType: "Bluefield",
+    kind: "web",
+    location: "South Central US",
+    requestSource: "rest",
+    resourceGroupName: "my-resource-group",
+    resourceName: "my-component",
+});
+
+```
+
+{{% /example %}}
+
+### ComponentUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var component = new AzureRM.Insights.Latest.Component("component", new AzureRM.Insights.Latest.ComponentArgs
+        {
+            Kind = "web",
+            Location = "South Central US",
+            ResourceGroupName = "my-resource-group",
+            ResourceName = "my-component",
+            Tags = 
+            {
+                { "ApplicationGatewayType", "Internal-Only" },
+                { "BillingEntity", "Self" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+component = azurerm.insights.latest.Component("component",
+    kind="web",
+    location="South Central US",
+    resource_group_name="my-resource-group",
+    resource_name="my-component",
+    tags={
+        "ApplicationGatewayType": "Internal-Only",
+        "BillingEntity": "Self",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const component = new azurerm.insights.latest.Component("component", {
+    kind: "web",
+    location: "South Central US",
+    resourceGroupName: "my-resource-group",
+    resourceName: "my-component",
+    tags: {
+        ApplicationGatewayType: "Internal-Only",
+        BillingEntity: "Self",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Component Resource {#create}

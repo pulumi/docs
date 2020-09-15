@@ -12,6 +12,96 @@ meta_desc: "Explore the VirtualHub resource of the network/latest module, includ
 
 VirtualHub Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### VirtualHubPut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualHub = new AzureRM.Network.Latest.VirtualHub("virtualHub", new AzureRM.Network.Latest.VirtualHubArgs
+        {
+            AddressPrefix = "10.168.0.0/24",
+            Location = "West US",
+            ResourceGroupName = "rg1",
+            Sku = "Basic",
+            Tags = 
+            {
+                { "key1", "value1" },
+            },
+            VirtualHubName = "virtualHub2",
+            VirtualWan = new AzureRM.Network.Latest.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWans/virtualWan1",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_hub = azurerm.network.latest.VirtualHub("virtualHub",
+    address_prefix="10.168.0.0/24",
+    location="West US",
+    resource_group_name="rg1",
+    sku="Basic",
+    tags={
+        "key1": "value1",
+    },
+    virtual_hub_name="virtualHub2",
+    virtual_wan={
+        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWans/virtualWan1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualHub = new azurerm.network.latest.VirtualHub("virtualHub", {
+    addressPrefix: "10.168.0.0/24",
+    location: "West US",
+    resourceGroupName: "rg1",
+    sku: "Basic",
+    tags: {
+        key1: "value1",
+    },
+    virtualHubName: "virtualHub2",
+    virtualWan: {
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWans/virtualWan1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualHub Resource {#create}

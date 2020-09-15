@@ -12,6 +12,106 @@ meta_desc: "Explore the RoleAssignment resource of the customerinsights/latest m
 
 The Role Assignment resource format.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### RoleAssignments_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var roleAssignment = new AzureRM.CustomerInsights.Latest.RoleAssignment("roleAssignment", new AzureRM.CustomerInsights.Latest.RoleAssignmentArgs
+        {
+            AssignmentName = "assignmentName8976",
+            HubName = "sdkTestHub",
+            Principals = 
+            {
+                new AzureRM.CustomerInsights.Latest.Inputs.AssignmentPrincipalArgs
+                {
+                    PrincipalId = "4c54c38ffa9b416ba5a6d6c8a20cbe7e",
+                    PrincipalType = "User",
+                },
+                new AzureRM.CustomerInsights.Latest.Inputs.AssignmentPrincipalArgs
+                {
+                    PrincipalId = "93061d15a5054f2b9948ae25724cf9d5",
+                    PrincipalType = "User",
+                },
+            },
+            ResourceGroupName = "TestHubRG",
+            Role = "Admin",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+role_assignment = azurerm.customerinsights.latest.RoleAssignment("roleAssignment",
+    assignment_name="assignmentName8976",
+    hub_name="sdkTestHub",
+    principals=[
+        {
+            "principalId": "4c54c38ffa9b416ba5a6d6c8a20cbe7e",
+            "principalType": "User",
+        },
+        {
+            "principalId": "93061d15a5054f2b9948ae25724cf9d5",
+            "principalType": "User",
+        },
+    ],
+    resource_group_name="TestHubRG",
+    role="Admin")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const roleAssignment = new azurerm.customerinsights.latest.RoleAssignment("roleAssignment", {
+    assignmentName: "assignmentName8976",
+    hubName: "sdkTestHub",
+    principals: [
+        {
+            principalId: "4c54c38ffa9b416ba5a6d6c8a20cbe7e",
+            principalType: "User",
+        },
+        {
+            principalId: "93061d15a5054f2b9948ae25724cf9d5",
+            principalType: "User",
+        },
+    ],
+    resourceGroupName: "TestHubRG",
+    role: "Admin",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RoleAssignment Resource {#create}

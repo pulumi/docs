@@ -12,6 +12,111 @@ meta_desc: "Explore the TagAtScope resource of the resources/latest module, incl
 
 Wrapper resource for tags API requests and responses.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Update tags on a resource
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tagAtScope = new AzureRM.Resources.Latest.TagAtScope("tagAtScope", new AzureRM.Resources.Latest.TagAtScopeArgs
+        {
+            Scope = "subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/my-resource-group/providers/myPRNameSpace/VM/myVm",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+tag_at_scope = azurerm.resources.latest.TagAtScope("tagAtScope", scope="subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/my-resource-group/providers/myPRNameSpace/VM/myVm")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const tagAtScope = new azurerm.resources.latest.TagAtScope("tagAtScope", {scope: "subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/my-resource-group/providers/myPRNameSpace/VM/myVm"});
+
+```
+
+{{% /example %}}
+
+### Update tags on a subscription
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tagAtScope = new AzureRM.Resources.Latest.TagAtScope("tagAtScope", new AzureRM.Resources.Latest.TagAtScopeArgs
+        {
+            Scope = "subscriptions/00000000-0000-0000-0000-000000000000",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+tag_at_scope = azurerm.resources.latest.TagAtScope("tagAtScope", scope="subscriptions/00000000-0000-0000-0000-000000000000")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const tagAtScope = new azurerm.resources.latest.TagAtScope("tagAtScope", {scope: "subscriptions/00000000-0000-0000-0000-000000000000"});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TagAtScope Resource {#create}

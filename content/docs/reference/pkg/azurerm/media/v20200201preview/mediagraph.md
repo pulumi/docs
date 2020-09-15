@@ -12,6 +12,339 @@ meta_desc: "Explore the MediaGraph resource of the media/v20200201preview module
 
 The Media Graph.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a Media Graph with a clear RTSP Source
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mediaGraph = new AzureRM.Media.V20200201Preview.MediaGraph("mediaGraph", new AzureRM.Media.V20200201Preview.MediaGraphArgs
+        {
+            AccountName = "contosomedia",
+            Description = "updated description",
+            MediaGraphName = "SampleMediaGraph",
+            ResourceGroupName = "contoso",
+            Sinks = 
+            {
+                new AzureRM.Media.V20200201Preview.Inputs.MediaGraphAssetSinkArgs
+                {
+                    AssetName = "SampleAsset",
+                    Inputs = 
+                    {
+                        "rtspSource",
+                    },
+                    Name = "AssetSink",
+                    OdataType = "#Microsoft.Media.MediaGraphAssetSink",
+                },
+            },
+            Sources = 
+            {
+                new AzureRM.Media.V20200201Preview.Inputs.MediaGraphRtspSourceArgs
+                {
+                    Endpoint = 
+                    {
+                        { "@odata.type", "#Microsoft.Media.MediaGraphClearEndpoint" },
+                        { "credentials", new AzureRM.Media.V20200201Preview.Inputs.MediaGraphUsernamePasswordCredentialsArgs
+                        {
+                            %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression) },
+                            { "url", "rtsp://contoso.com:554/stream1" },
+                        },
+                        Name = "rtspSource",
+                        OdataType = "#Microsoft.Media.MediaGraphRtspSource",
+                        Transport = "Http",
+                    },
+                },
+            });
+        }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+media_graph = azurerm.media.v20200201preview.MediaGraph("mediaGraph",
+    account_name="contosomedia",
+    description="updated description",
+    media_graph_name="SampleMediaGraph",
+    resource_group_name="contoso",
+    sinks=[{
+        "assetName": "SampleAsset",
+        "inputs": ["rtspSource"],
+        "name": "AssetSink",
+        "odataType": "#Microsoft.Media.MediaGraphAssetSink",
+    }],
+    sources=[{
+        "endpoint": {
+            "@odata.type": "#Microsoft.Media.MediaGraphClearEndpoint",
+            "credentials": {
+                "@odata.type": "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+                "password": "examplepassword",
+                "username": "exampleusername",
+            },
+            "url": "rtsp://contoso.com:554/stream1",
+        },
+        "name": "rtspSource",
+        "odataType": "#Microsoft.Media.MediaGraphRtspSource",
+        "transport": "Http",
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const mediaGraph = new azurerm.media.v20200201preview.MediaGraph("mediaGraph", {
+    accountName: "contosomedia",
+    description: "updated description",
+    mediaGraphName: "SampleMediaGraph",
+    resourceGroupName: "contoso",
+    sinks: [{
+        assetName: "SampleAsset",
+        inputs: ["rtspSource"],
+        name: "AssetSink",
+        odataType: "#Microsoft.Media.MediaGraphAssetSink",
+    }],
+    sources: [{
+        endpoint: {
+            "@odata.type": "#Microsoft.Media.MediaGraphClearEndpoint",
+            credentials: {
+                "@odata.type": "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+                password: "examplepassword",
+                username: "exampleusername",
+            },
+            url: "rtsp://contoso.com:554/stream1",
+        },
+        name: "rtspSource",
+        odataType: "#Microsoft.Media.MediaGraphRtspSource",
+        transport: "Http",
+    }],
+});
+
+```
+
+{{% /example %}}
+
+### Create or update a Media Graph with an encrypted RTSP Source
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mediaGraph = new AzureRM.Media.V20200201Preview.MediaGraph("mediaGraph", new AzureRM.Media.V20200201Preview.MediaGraphArgs
+        {
+            AccountName = "contosomedia",
+            Description = "updated description",
+            MediaGraphName = "SampleMediaGraph",
+            ResourceGroupName = "contoso",
+            Sinks = 
+            {
+                new AzureRM.Media.V20200201Preview.Inputs.MediaGraphAssetSinkArgs
+                {
+                    AssetName = "SampleAsset",
+                    Inputs = 
+                    {
+                        "rtspSource",
+                    },
+                    Name = "AssetSink",
+                    OdataType = "#Microsoft.Media.MediaGraphAssetSink",
+                },
+            },
+            Sources = 
+            {
+                new AzureRM.Media.V20200201Preview.Inputs.MediaGraphRtspSourceArgs
+                {
+                    Endpoint = 
+                    {
+                        { "@odata.type", "#Microsoft.Media.MediaGraphTlsEndpoint" },
+                        { "credentials", new AzureRM.Media.V20200201Preview.Inputs.MediaGraphUsernamePasswordCredentialsArgs
+                        {
+                            %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression) },
+                            { "trustedCertificates", new AzureRM.Media.V20200201Preview.Inputs.MediaGraphPemCertificateListArgs
+                            {
+                                %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression) },
+                                { "url", "rtsps://contoso.com:443/stream1" },
+                                { "validationOptions", new AzureRM.Media.V20200201Preview.Inputs.MediaGraphTlsValidationOptionsArgs
+                                {
+                                    IgnoreHostname = true,
+                                    IgnoreSignature = false,
+                                } },
+                            },
+                            Name = "rtspSource",
+                            OdataType = "#Microsoft.Media.MediaGraphRtspSource",
+                            Transport = "Http",
+                        },
+                    },
+                });
+            }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+media_graph = azurerm.media.v20200201preview.MediaGraph("mediaGraph",
+    account_name="contosomedia",
+    description="updated description",
+    media_graph_name="SampleMediaGraph",
+    resource_group_name="contoso",
+    sinks=[{
+        "assetName": "SampleAsset",
+        "inputs": ["rtspSource"],
+        "name": "AssetSink",
+        "odataType": "#Microsoft.Media.MediaGraphAssetSink",
+    }],
+    sources=[{
+        "endpoint": {
+            "@odata.type": "#Microsoft.Media.MediaGraphTlsEndpoint",
+            "credentials": {
+                "@odata.type": "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+                "password": "examplepassword",
+                "username": "exampleusername",
+            },
+            "trustedCertificates": {
+                "@odata.type": "#Microsoft.Media.MediaGraphPemCertificateList",
+                "certificates": ["""-----BEGIN CERTIFICATE-----
+MIIDhTCCAm2gAwIBAgIUajvPKmoO+8qaO89/ZGATl7ZYnTswDQYJKoZIhvcNAQEL
+BQAwUTESMBAGA1UECgwJTWljcm9zb2Z0MRQwEgYDVQQLDAtBenVyZSBNZWRpYTEl
+MCMGA1UEAwwcKFVudHJ1c3RlZCkgVGVzdCBDZXJ0aWZpY2F0ZTAgFw0yMDAyMDYy
+MTI5MTlaGA8zMDE5MDYwOTIxMjkxOVowUTESMBAGA1UECgwJTWljcm9zb2Z0MRQw
+EgYDVQQLDAtBenVyZSBNZWRpYTElMCMGA1UEAwwcKFVudHJ1c3RlZCkgVGVzdCBD
+ZXJ0aWZpY2F0ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK2lg5ff
+7xXPaBZXHl/zrTukdiBtu7BNIOchHba51eloruPRzpvQx7Pedk3CVTut7LYinijf
+uol0EwkQ2FLt2i2jOqiva9nXR95ujIZHcKsEeMC4RSNSP4++k6SpP8FgyYVdv5ru
+f8GC+HyYQ4j0TqpR/cJs53l/LGRSldaFZ6fcDde1jeyca4VivAbAH1/WDIOvmjzo
+9XIGxZ10VSS5l5+DIgdkJZ+mDMLJIuVZ0YVF16ZGEB3beq1trk5lItvmSjQLTllH
+qMFm9UGY8jKZSo/BY8ewHEtnGSAFQK0TVuRx1HhUWwu6C9jk+2zmRS2090BNpQWa
+JMKFJrSPzFDPRX8CAwEAAaNTMFEwHQYDVR0OBBYEFIumbhu0lYk0EFDThEg0yyIn
+/wZZMB8GA1UdIwQYMBaAFIumbhu0lYk0EFDThEg0yyIn/wZZMA8GA1UdEwEB/wQF
+MAMBAf8wDQYJKoZIhvcNAQELBQADggEBADUNw+/NGNVtigq9tMJKqlk39MTpDn1s
+Z1BVIAuAWSQjlevYZJeDIPUiWNWFhRe+xN7oOLnn2+NIXEKKeMSyuPoZYbN0mBkB
+99oS3XVipSANpmDvIepNdCrOnjfqDFIifRF1Dqjtb6i1hb6v/qYKVPLQvcrgGur7
+PKKkAu9p4YRZ3RBdwwaUuMgojrj/l6DGbeJY6IRVnVMY39rryMnZjA5xUlhCu55n
+oB3t/jsJLwnQN+JbAjLAeuqgOWtgARsEFzvpt+VvDsaj0YLOJPhyJwTvHgaa/slB
+nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
+-----END CERTIFICATE-----"""],
+            },
+            "url": "rtsps://contoso.com:443/stream1",
+            "validationOptions": {
+                "ignoreHostname": True,
+                "ignoreSignature": False,
+            },
+        },
+        "name": "rtspSource",
+        "odataType": "#Microsoft.Media.MediaGraphRtspSource",
+        "transport": "Http",
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const mediaGraph = new azurerm.media.v20200201preview.MediaGraph("mediaGraph", {
+    accountName: "contosomedia",
+    description: "updated description",
+    mediaGraphName: "SampleMediaGraph",
+    resourceGroupName: "contoso",
+    sinks: [{
+        assetName: "SampleAsset",
+        inputs: ["rtspSource"],
+        name: "AssetSink",
+        odataType: "#Microsoft.Media.MediaGraphAssetSink",
+    }],
+    sources: [{
+        endpoint: {
+            "@odata.type": "#Microsoft.Media.MediaGraphTlsEndpoint",
+            credentials: {
+                "@odata.type": "#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
+                password: "examplepassword",
+                username: "exampleusername",
+            },
+            trustedCertificates: {
+                "@odata.type": "#Microsoft.Media.MediaGraphPemCertificateList",
+                certificates: [`-----BEGIN CERTIFICATE-----
+MIIDhTCCAm2gAwIBAgIUajvPKmoO+8qaO89/ZGATl7ZYnTswDQYJKoZIhvcNAQEL
+BQAwUTESMBAGA1UECgwJTWljcm9zb2Z0MRQwEgYDVQQLDAtBenVyZSBNZWRpYTEl
+MCMGA1UEAwwcKFVudHJ1c3RlZCkgVGVzdCBDZXJ0aWZpY2F0ZTAgFw0yMDAyMDYy
+MTI5MTlaGA8zMDE5MDYwOTIxMjkxOVowUTESMBAGA1UECgwJTWljcm9zb2Z0MRQw
+EgYDVQQLDAtBenVyZSBNZWRpYTElMCMGA1UEAwwcKFVudHJ1c3RlZCkgVGVzdCBD
+ZXJ0aWZpY2F0ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK2lg5ff
+7xXPaBZXHl/zrTukdiBtu7BNIOchHba51eloruPRzpvQx7Pedk3CVTut7LYinijf
+uol0EwkQ2FLt2i2jOqiva9nXR95ujIZHcKsEeMC4RSNSP4++k6SpP8FgyYVdv5ru
+f8GC+HyYQ4j0TqpR/cJs53l/LGRSldaFZ6fcDde1jeyca4VivAbAH1/WDIOvmjzo
+9XIGxZ10VSS5l5+DIgdkJZ+mDMLJIuVZ0YVF16ZGEB3beq1trk5lItvmSjQLTllH
+qMFm9UGY8jKZSo/BY8ewHEtnGSAFQK0TVuRx1HhUWwu6C9jk+2zmRS2090BNpQWa
+JMKFJrSPzFDPRX8CAwEAAaNTMFEwHQYDVR0OBBYEFIumbhu0lYk0EFDThEg0yyIn
+/wZZMB8GA1UdIwQYMBaAFIumbhu0lYk0EFDThEg0yyIn/wZZMA8GA1UdEwEB/wQF
+MAMBAf8wDQYJKoZIhvcNAQELBQADggEBADUNw+/NGNVtigq9tMJKqlk39MTpDn1s
+Z1BVIAuAWSQjlevYZJeDIPUiWNWFhRe+xN7oOLnn2+NIXEKKeMSyuPoZYbN0mBkB
+99oS3XVipSANpmDvIepNdCrOnjfqDFIifRF1Dqjtb6i1hb6v/qYKVPLQvcrgGur7
+PKKkAu9p4YRZ3RBdwwaUuMgojrj/l6DGbeJY6IRVnVMY39rryMnZjA5xUlhCu55n
+oB3t/jsJLwnQN+JbAjLAeuqgOWtgARsEFzvpt+VvDsaj0YLOJPhyJwTvHgaa/slB
+nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
+-----END CERTIFICATE-----`],
+            },
+            url: "rtsps://contoso.com:443/stream1",
+            validationOptions: {
+                ignoreHostname: true,
+                ignoreSignature: false,
+            },
+        },
+        name: "rtspSource",
+        odataType: "#Microsoft.Media.MediaGraphRtspSource",
+        transport: "Http",
+    }],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MediaGraph Resource {#create}

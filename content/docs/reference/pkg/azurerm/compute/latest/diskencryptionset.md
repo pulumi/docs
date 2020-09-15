@@ -12,6 +12,103 @@ meta_desc: "Explore the DiskEncryptionSet resource of the compute/latest module,
 
 disk encryption set resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a disk encryption set.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var diskEncryptionSet = new AzureRM.Compute.Latest.DiskEncryptionSet("diskEncryptionSet", new AzureRM.Compute.Latest.DiskEncryptionSetArgs
+        {
+            ActiveKey = new AzureRM.Compute.Latest.Inputs.KeyVaultAndKeyReferenceArgs
+            {
+                KeyUrl = "https://myvmvault.vault-int.azure-int.net/keys/{key}",
+                SourceVault = new AzureRM.Compute.Latest.Inputs.SourceVaultArgs
+                {
+                    Id = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault",
+                },
+            },
+            DiskEncryptionSetName = "myDiskEncryptionSet",
+            EncryptionType = "EncryptionAtRestWithCustomerKey",
+            Identity = new AzureRM.Compute.Latest.Inputs.EncryptionSetIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+disk_encryption_set = azurerm.compute.latest.DiskEncryptionSet("diskEncryptionSet",
+    active_key={
+        "keyUrl": "https://myvmvault.vault-int.azure-int.net/keys/{key}",
+        "sourceVault": {
+            "id": "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault",
+        },
+    },
+    disk_encryption_set_name="myDiskEncryptionSet",
+    encryption_type="EncryptionAtRestWithCustomerKey",
+    identity={
+        "type": "SystemAssigned",
+    },
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const diskEncryptionSet = new azurerm.compute.latest.DiskEncryptionSet("diskEncryptionSet", {
+    activeKey: {
+        keyUrl: "https://myvmvault.vault-int.azure-int.net/keys/{key}",
+        sourceVault: {
+            id: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault",
+        },
+    },
+    diskEncryptionSetName: "myDiskEncryptionSet",
+    encryptionType: "EncryptionAtRestWithCustomerKey",
+    identity: {
+        type: "SystemAssigned",
+    },
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DiskEncryptionSet Resource {#create}

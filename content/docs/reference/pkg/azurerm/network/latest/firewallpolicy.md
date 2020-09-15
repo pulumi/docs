@@ -12,6 +12,121 @@ meta_desc: "Explore the FirewallPolicy resource of the network/latest module, in
 
 FirewallPolicy Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create FirewallPolicy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var firewallPolicy = new AzureRM.Network.Latest.FirewallPolicy("firewallPolicy", new AzureRM.Network.Latest.FirewallPolicyArgs
+        {
+            DnsSettings = new AzureRM.Network.Latest.Inputs.DnsSettingsArgs
+            {
+                EnableProxy = true,
+                RequireProxyForNetworkRules = false,
+                Servers = 
+                {
+                    "30.3.4.5",
+                },
+            },
+            FirewallPolicyName = "firewallPolicy",
+            Location = "West US",
+            ResourceGroupName = "rg1",
+            Tags = 
+            {
+                { "key1", "value1" },
+            },
+            ThreatIntelMode = "Alert",
+            ThreatIntelWhitelist = new AzureRM.Network.Latest.Inputs.FirewallPolicyThreatIntelWhitelistArgs
+            {
+                Fqdns = 
+                {
+                    "*.microsoft.com",
+                },
+                IpAddresses = 
+                {
+                    "20.3.4.5",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+firewall_policy = azurerm.network.latest.FirewallPolicy("firewallPolicy",
+    dns_settings={
+        "enableProxy": True,
+        "requireProxyForNetworkRules": False,
+        "servers": ["30.3.4.5"],
+    },
+    firewall_policy_name="firewallPolicy",
+    location="West US",
+    resource_group_name="rg1",
+    tags={
+        "key1": "value1",
+    },
+    threat_intel_mode="Alert",
+    threat_intel_whitelist={
+        "fqdns": ["*.microsoft.com"],
+        "ipAddresses": ["20.3.4.5"],
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const firewallPolicy = new azurerm.network.latest.FirewallPolicy("firewallPolicy", {
+    dnsSettings: {
+        enableProxy: true,
+        requireProxyForNetworkRules: false,
+        servers: ["30.3.4.5"],
+    },
+    firewallPolicyName: "firewallPolicy",
+    location: "West US",
+    resourceGroupName: "rg1",
+    tags: {
+        key1: "value1",
+    },
+    threatIntelMode: "Alert",
+    threatIntelWhitelist: {
+        fqdns: ["*.microsoft.com"],
+        ipAddresses: ["20.3.4.5"],
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FirewallPolicy Resource {#create}

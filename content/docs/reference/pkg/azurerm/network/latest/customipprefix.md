@@ -12,6 +12,73 @@ meta_desc: "Explore the CustomIPPrefix resource of the network/latest module, in
 
 Custom IP prefix resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create custom IP prefix allocation method
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var customIPPrefix = new AzureRM.Network.Latest.CustomIPPrefix("customIPPrefix", new AzureRM.Network.Latest.CustomIPPrefixArgs
+        {
+            Cidr = "0.0.0.0/24",
+            CustomIpPrefixName = "test-customipprefix",
+            Location = "westus",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+custom_ip_prefix = azurerm.network.latest.CustomIPPrefix("customIPPrefix",
+    cidr="0.0.0.0/24",
+    custom_ip_prefix_name="test-customipprefix",
+    location="westus",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const customIPPrefix = new azurerm.network.latest.CustomIPPrefix("customIPPrefix", {
+    cidr: "0.0.0.0/24",
+    customIpPrefixName: "test-customipprefix",
+    location: "westus",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CustomIPPrefix Resource {#create}

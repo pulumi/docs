@@ -12,6 +12,220 @@ meta_desc: "Explore the Runbook resource of the automation/latest module, includ
 
 Definition of the runbook type.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update runbook and publish it
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var runbook = new AzureRM.Automation.Latest.Runbook("runbook", new AzureRM.Automation.Latest.RunbookArgs
+        {
+            AutomationAccountName = "ContoseAutomationAccount",
+            Description = "Description of the Runbook",
+            Location = "East US 2",
+            LogActivityTrace = 1,
+            LogProgress = true,
+            LogVerbose = false,
+            Name = "Get-AzureVMTutorial",
+            PublishContentLink = new AzureRM.Automation.Latest.Inputs.ContentLinkArgs
+            {
+                ContentHash = new AzureRM.Automation.Latest.Inputs.ContentHashArgs
+                {
+                    Algorithm = "SHA256",
+                    Value = "115775B8FF2BE672D8A946BD0B489918C724DDE15A440373CA54461D53010A80",
+                },
+                Uri = "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-automation-runbook-getvms/Runbooks/Get-AzureVMTutorial.ps1",
+            },
+            ResourceGroupName = "rg",
+            RunbookName = "Get-AzureVMTutorial",
+            RunbookType = "PowerShellWorkflow",
+            Tags = 
+            {
+                { "tag01", "value01" },
+                { "tag02", "value02" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+runbook = azurerm.automation.latest.Runbook("runbook",
+    automation_account_name="ContoseAutomationAccount",
+    description="Description of the Runbook",
+    location="East US 2",
+    log_activity_trace=1,
+    log_progress=True,
+    log_verbose=False,
+    name="Get-AzureVMTutorial",
+    publish_content_link={
+        "contentHash": {
+            "algorithm": "SHA256",
+            "value": "115775B8FF2BE672D8A946BD0B489918C724DDE15A440373CA54461D53010A80",
+        },
+        "uri": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-automation-runbook-getvms/Runbooks/Get-AzureVMTutorial.ps1",
+    },
+    resource_group_name="rg",
+    runbook_name="Get-AzureVMTutorial",
+    runbook_type="PowerShellWorkflow",
+    tags={
+        "tag01": "value01",
+        "tag02": "value02",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const runbook = new azurerm.automation.latest.Runbook("runbook", {
+    automationAccountName: "ContoseAutomationAccount",
+    description: "Description of the Runbook",
+    location: "East US 2",
+    logActivityTrace: 1,
+    logProgress: true,
+    logVerbose: false,
+    name: "Get-AzureVMTutorial",
+    publishContentLink: {
+        contentHash: {
+            algorithm: "SHA256",
+            value: "115775B8FF2BE672D8A946BD0B489918C724DDE15A440373CA54461D53010A80",
+        },
+        uri: "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-automation-runbook-getvms/Runbooks/Get-AzureVMTutorial.ps1",
+    },
+    resourceGroupName: "rg",
+    runbookName: "Get-AzureVMTutorial",
+    runbookType: "PowerShellWorkflow",
+    tags: {
+        tag01: "value01",
+        tag02: "value02",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create runbook as draft
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var runbook = new AzureRM.Automation.Latest.Runbook("runbook", new AzureRM.Automation.Latest.RunbookArgs
+        {
+            AutomationAccountName = "ContoseAutomationAccount",
+            Description = "Description of the Runbook",
+            Draft = ,
+            Location = "East US 2",
+            LogProgress = false,
+            LogVerbose = false,
+            Name = "Get-AzureVMTutorial",
+            ResourceGroupName = "rg",
+            RunbookName = "Get-AzureVMTutorial",
+            RunbookType = "PowerShellWorkflow",
+            Tags = 
+            {
+                { "tag01", "value01" },
+                { "tag02", "value02" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+runbook = azurerm.automation.latest.Runbook("runbook",
+    automation_account_name="ContoseAutomationAccount",
+    description="Description of the Runbook",
+    draft={},
+    location="East US 2",
+    log_progress=False,
+    log_verbose=False,
+    name="Get-AzureVMTutorial",
+    resource_group_name="rg",
+    runbook_name="Get-AzureVMTutorial",
+    runbook_type="PowerShellWorkflow",
+    tags={
+        "tag01": "value01",
+        "tag02": "value02",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const runbook = new azurerm.automation.latest.Runbook("runbook", {
+    automationAccountName: "ContoseAutomationAccount",
+    description: "Description of the Runbook",
+    draft: {},
+    location: "East US 2",
+    logProgress: false,
+    logVerbose: false,
+    name: "Get-AzureVMTutorial",
+    resourceGroupName: "rg",
+    runbookName: "Get-AzureVMTutorial",
+    runbookType: "PowerShellWorkflow",
+    tags: {
+        tag01: "value01",
+        tag02: "value02",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Runbook Resource {#create}

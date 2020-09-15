@@ -12,6 +12,67 @@ meta_desc: "Explore the RoleDefinition resource of the authorization/v20180101pr
 
 Role definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### GetConfigurations
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var roleDefinition = new AzureRM.Authorization.V20180101Preview.RoleDefinition("roleDefinition", new AzureRM.Authorization.V20180101Preview.RoleDefinitionArgs
+        {
+            RoleDefinitionId = "roleDefinitionId",
+            Scope = "scope",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+role_definition = azurerm.authorization.v20180101preview.RoleDefinition("roleDefinition",
+    role_definition_id="roleDefinitionId",
+    scope="scope")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const roleDefinition = new azurerm.authorization.v20180101preview.RoleDefinition("roleDefinition", {
+    roleDefinitionId: "roleDefinitionId",
+    scope: "scope",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RoleDefinition Resource {#create}

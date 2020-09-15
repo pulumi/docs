@@ -12,6 +12,73 @@ meta_desc: "Explore the AccessControlRecord resource of the storsimple/latest mo
 
 The access control record.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### AccessControlRecordsCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var accessControlRecord = new AzureRM.StorSimple.Latest.AccessControlRecord("accessControlRecord", new AzureRM.StorSimple.Latest.AccessControlRecordArgs
+        {
+            AccessControlRecordName = "ACRForTest",
+            InitiatorName = "iqn.2017-06.com.contoso:ForTest",
+            ManagerName = "ManagerForSDKTest1",
+            ResourceGroupName = "ResourceGroupForSDKTest",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+access_control_record = azurerm.storsimple.latest.AccessControlRecord("accessControlRecord",
+    access_control_record_name="ACRForTest",
+    initiator_name="iqn.2017-06.com.contoso:ForTest",
+    manager_name="ManagerForSDKTest1",
+    resource_group_name="ResourceGroupForSDKTest")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const accessControlRecord = new azurerm.storsimple.latest.AccessControlRecord("accessControlRecord", {
+    accessControlRecordName: "ACRForTest",
+    initiatorName: "iqn.2017-06.com.contoso:ForTest",
+    managerName: "ManagerForSDKTest1",
+    resourceGroupName: "ResourceGroupForSDKTest",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AccessControlRecord Resource {#create}

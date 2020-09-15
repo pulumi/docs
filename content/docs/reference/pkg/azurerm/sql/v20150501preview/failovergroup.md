@@ -12,6 +12,119 @@ meta_desc: "Explore the FailoverGroup resource of the sql/v20150501preview modul
 
 A failover group.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create failover group
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var failoverGroup = new AzureRM.Sql.V20150501Preview.FailoverGroup("failoverGroup", new AzureRM.Sql.V20150501Preview.FailoverGroupArgs
+        {
+            Databases = 
+            {
+                "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-1",
+                "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-2",
+            },
+            FailoverGroupName = "failover-group-test-3",
+            PartnerServers = 
+            {
+                new AzureRM.Sql.V20150501Preview.Inputs.PartnerInfoArgs
+                {
+                    Id = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-secondary-server",
+                },
+            },
+            ReadOnlyEndpoint = new AzureRM.Sql.V20150501Preview.Inputs.FailoverGroupReadOnlyEndpointArgs
+            {
+                FailoverPolicy = "Disabled",
+            },
+            ReadWriteEndpoint = new AzureRM.Sql.V20150501Preview.Inputs.FailoverGroupReadWriteEndpointArgs
+            {
+                FailoverPolicy = "Automatic",
+                FailoverWithDataLossGracePeriodMinutes = 480,
+            },
+            ResourceGroupName = "Default",
+            ServerName = "failover-group-primary-server",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+failover_group = azurerm.sql.v20150501preview.FailoverGroup("failoverGroup",
+    databases=[
+        "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-1",
+        "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-2",
+    ],
+    failover_group_name="failover-group-test-3",
+    partner_servers=[{
+        "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-secondary-server",
+    }],
+    read_only_endpoint={
+        "failoverPolicy": "Disabled",
+    },
+    read_write_endpoint={
+        "failoverPolicy": "Automatic",
+        "failoverWithDataLossGracePeriodMinutes": 480,
+    },
+    resource_group_name="Default",
+    server_name="failover-group-primary-server")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const failoverGroup = new azurerm.sql.v20150501preview.FailoverGroup("failoverGroup", {
+    databases: [
+        "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-1",
+        "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-2",
+    ],
+    failoverGroupName: "failover-group-test-3",
+    partnerServers: [{
+        id: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-secondary-server",
+    }],
+    readOnlyEndpoint: {
+        failoverPolicy: "Disabled",
+    },
+    readWriteEndpoint: {
+        failoverPolicy: "Automatic",
+        failoverWithDataLossGracePeriodMinutes: 480,
+    },
+    resourceGroupName: "Default",
+    serverName: "failover-group-primary-server",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FailoverGroup Resource {#create}

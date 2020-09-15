@@ -12,6 +12,95 @@ meta_desc: "Explore the AppServicePlan resource of the web/latest module, includ
 
 App Service plan.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Or Update App Service plan
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var appServicePlan = new AzureRM.Web.Latest.AppServicePlan("appServicePlan", new AzureRM.Web.Latest.AppServicePlanArgs
+        {
+            Kind = "app",
+            Location = "East US",
+            Name = "testsf6141",
+            ResourceGroupName = "testrg123",
+            Sku = new AzureRM.Web.Latest.Inputs.SkuDescriptionArgs
+            {
+                Capacity = 1,
+                Family = "P",
+                Name = "P1",
+                Size = "P1",
+                Tier = "Premium",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+app_service_plan = azurerm.web.latest.AppServicePlan("appServicePlan",
+    kind="app",
+    location="East US",
+    name="testsf6141",
+    resource_group_name="testrg123",
+    sku={
+        "capacity": 1,
+        "family": "P",
+        "name": "P1",
+        "size": "P1",
+        "tier": "Premium",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const appServicePlan = new azurerm.web.latest.AppServicePlan("appServicePlan", {
+    kind: "app",
+    location: "East US",
+    name: "testsf6141",
+    resourceGroupName: "testrg123",
+    sku: {
+        capacity: 1,
+        family: "P",
+        name: "P1",
+        size: "P1",
+        tier: "Premium",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AppServicePlan Resource {#create}

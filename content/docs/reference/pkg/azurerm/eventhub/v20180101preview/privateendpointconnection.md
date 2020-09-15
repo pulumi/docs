@@ -12,6 +12,66 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the eventhub/v2018
 
 Properties of the PrivateEndpointConnection.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### NameSpacePrivateEndPointConnectionCreate
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+private_endpoint_connection = .("privateEndpointConnection",
+    namespace_name="sdk-Namespace-2924",
+    private_endpoint={
+        "id": "/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-EventHub-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847",
+    },
+    private_endpoint_connection_name="privateEndpointConnectionName",
+    private_link_service_connection_state={
+        "description": "testing",
+        "status": "Rejected",
+    },
+    provisioning_state="Succeeded",
+    resource_group_name="ArunMonocle")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const privateEndpointConnection = new .("privateEndpointConnection", {
+    namespaceName: "sdk-Namespace-2924",
+    privateEndpoint: {
+        id: "/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-EventHub-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847",
+    },
+    privateEndpointConnectionName: "privateEndpointConnectionName",
+    privateLinkServiceConnectionState: {
+        description: "testing",
+        status: "Rejected",
+    },
+    provisioningState: "Succeeded",
+    resourceGroupName: "ArunMonocle",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateEndpointConnection Resource {#create}

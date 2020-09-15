@@ -12,6 +12,114 @@ meta_desc: "Explore the SqlVirtualMachineGroup resource of the sqlvirtualmachine
 
 A SQL virtual machine group.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates a SQL virtual machine group.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlVirtualMachineGroup = new AzureRM.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineGroup("sqlVirtualMachineGroup", new AzureRM.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineGroupArgs
+        {
+            Location = "northeurope",
+            ResourceGroupName = "testrg",
+            SqlImageOffer = "SQL2016-WS2016",
+            SqlImageSku = "Enterprise",
+            SqlVirtualMachineGroupName = "testvmgroup",
+            Tags = 
+            {
+                { "mytag", "myval" },
+            },
+            WsfcDomainProfile = new AzureRM.SqlVirtualMachine.V20170301Preview.Inputs.WsfcDomainProfileArgs
+            {
+                ClusterBootstrapAccount = "testrpadmin",
+                ClusterOperatorAccount = "testrp@testdomain.com",
+                DomainFqdn = "testdomain.com",
+                OuPath = "OU=WSCluster,DC=testdomain,DC=com",
+                SqlServiceAccount = "sqlservice@testdomain.com",
+                StorageAccountPrimaryKey = "<primary storage access key>",
+                StorageAccountUrl = "https://storgact.blob.core.windows.net/",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sql_virtual_machine_group = azurerm.sqlvirtualmachine.v20170301preview.SqlVirtualMachineGroup("sqlVirtualMachineGroup",
+    location="northeurope",
+    resource_group_name="testrg",
+    sql_image_offer="SQL2016-WS2016",
+    sql_image_sku="Enterprise",
+    sql_virtual_machine_group_name="testvmgroup",
+    tags={
+        "mytag": "myval",
+    },
+    wsfc_domain_profile={
+        "clusterBootstrapAccount": "testrpadmin",
+        "clusterOperatorAccount": "testrp@testdomain.com",
+        "domainFqdn": "testdomain.com",
+        "ouPath": "OU=WSCluster,DC=testdomain,DC=com",
+        "sqlServiceAccount": "sqlservice@testdomain.com",
+        "storageAccountPrimaryKey": "<primary storage access key>",
+        "storageAccountUrl": "https://storgact.blob.core.windows.net/",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sqlVirtualMachineGroup = new azurerm.sqlvirtualmachine.v20170301preview.SqlVirtualMachineGroup("sqlVirtualMachineGroup", {
+    location: "northeurope",
+    resourceGroupName: "testrg",
+    sqlImageOffer: "SQL2016-WS2016",
+    sqlImageSku: "Enterprise",
+    sqlVirtualMachineGroupName: "testvmgroup",
+    tags: {
+        mytag: "myval",
+    },
+    wsfcDomainProfile: {
+        clusterBootstrapAccount: "testrpadmin",
+        clusterOperatorAccount: "testrp@testdomain.com",
+        domainFqdn: "testdomain.com",
+        ouPath: "OU=WSCluster,DC=testdomain,DC=com",
+        sqlServiceAccount: "sqlservice@testdomain.com",
+        storageAccountPrimaryKey: "<primary storage access key>",
+        storageAccountUrl: "https://storgact.blob.core.windows.net/",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SqlVirtualMachineGroup Resource {#create}

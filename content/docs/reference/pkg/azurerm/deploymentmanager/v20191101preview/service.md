@@ -12,6 +12,82 @@ meta_desc: "Explore the Service resource of the deploymentmanager/v20191101previ
 
 The resource representation of a service in a service topology.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create service
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var service = new AzureRM.DeploymentManager.V20191101Preview.Service("service", new AzureRM.DeploymentManager.V20191101Preview.ServiceArgs
+        {
+            Location = "centralus",
+            ResourceGroupName = "myResourceGroup",
+            ServiceName = "myService",
+            ServiceTopologyName = "myTopology",
+            Tags = ,
+            TargetLocation = "centralus",
+            TargetSubscriptionId = "600c95c5-3ee5-44fe-b190-ca38a19adcd7",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+service = azurerm.deploymentmanager.v20191101preview.Service("service",
+    location="centralus",
+    resource_group_name="myResourceGroup",
+    service_name="myService",
+    service_topology_name="myTopology",
+    tags={},
+    target_location="centralus",
+    target_subscription_id="600c95c5-3ee5-44fe-b190-ca38a19adcd7")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const service = new azurerm.deploymentmanager.v20191101preview.Service("service", {
+    location: "centralus",
+    resourceGroupName: "myResourceGroup",
+    serviceName: "myService",
+    serviceTopologyName: "myTopology",
+    tags: {},
+    targetLocation: "centralus",
+    targetSubscriptionId: "600c95c5-3ee5-44fe-b190-ca38a19adcd7",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Service Resource {#create}

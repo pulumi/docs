@@ -12,6 +12,76 @@ meta_desc: "Explore the IdentityProvider resource of the apimanagement/v20191201
 
 Identity Provider details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateIdentityProvider
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var identityProvider = new AzureRM.ApiManagement.V20191201Preview.IdentityProvider("identityProvider", new AzureRM.ApiManagement.V20191201Preview.IdentityProviderArgs
+        {
+            ClientId = "facebookid",
+            ClientSecret = "facebookapplicationsecret",
+            IdentityProviderName = "facebook",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+identity_provider = azurerm.apimanagement.v20191201preview.IdentityProvider("identityProvider",
+    client_id="facebookid",
+    client_secret="facebookapplicationsecret",
+    identity_provider_name="facebook",
+    resource_group_name="rg1",
+    service_name="apimService1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const identityProvider = new azurerm.apimanagement.v20191201preview.IdentityProvider("identityProvider", {
+    clientId: "facebookid",
+    clientSecret: "facebookapplicationsecret",
+    identityProviderName: "facebook",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IdentityProvider Resource {#create}

@@ -12,6 +12,97 @@ meta_desc: "Explore the ExportConfiguration resource of the insights/latest modu
 
 Properties that define a Continuous Export configuration.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ExportConfigurationUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exportConfiguration = new AzureRM.Insights.Latest.ExportConfiguration("exportConfiguration", new AzureRM.Insights.Latest.ExportConfigurationArgs
+        {
+            DestinationAccountId = "/subscriptions/subid/resourceGroups/my-resource-group/providers/Microsoft.ClassicStorage/storageAccounts/mystorageblob",
+            DestinationAddress = "https://mystorageblob.blob.core.windows.net/fchentest?sv=2015-04-05&sr=c&sig=token",
+            DestinationStorageLocationId = "eastus",
+            DestinationStorageSubscriptionId = "subid",
+            DestinationType = "Blob",
+            ExportId = "uGOoki0jQsyEs3IdQ83Q4QsNr4=",
+            IsEnabled = "true",
+            NotificationQueueEnabled = "false",
+            NotificationQueueUri = "",
+            RecordTypes = "Requests, Event, Exceptions, Metrics, PageViews, PageViewPerformance, Rdd, PerformanceCounters, Availability",
+            ResourceGroupName = "my-resource-group",
+            ResourceName = "my-component",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+export_configuration = azurerm.insights.latest.ExportConfiguration("exportConfiguration",
+    destination_account_id="/subscriptions/subid/resourceGroups/my-resource-group/providers/Microsoft.ClassicStorage/storageAccounts/mystorageblob",
+    destination_address="https://mystorageblob.blob.core.windows.net/fchentest?sv=2015-04-05&sr=c&sig=token",
+    destination_storage_location_id="eastus",
+    destination_storage_subscription_id="subid",
+    destination_type="Blob",
+    export_id="uGOoki0jQsyEs3IdQ83Q4QsNr4=",
+    is_enabled="true",
+    notification_queue_enabled="false",
+    notification_queue_uri="",
+    record_types="Requests, Event, Exceptions, Metrics, PageViews, PageViewPerformance, Rdd, PerformanceCounters, Availability",
+    resource_group_name="my-resource-group",
+    resource_name="my-component")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const exportConfiguration = new azurerm.insights.latest.ExportConfiguration("exportConfiguration", {
+    destinationAccountId: "/subscriptions/subid/resourceGroups/my-resource-group/providers/Microsoft.ClassicStorage/storageAccounts/mystorageblob",
+    destinationAddress: "https://mystorageblob.blob.core.windows.net/fchentest?sv=2015-04-05&sr=c&sig=token",
+    destinationStorageLocationId: "eastus",
+    destinationStorageSubscriptionId: "subid",
+    destinationType: "Blob",
+    exportId: "uGOoki0jQsyEs3IdQ83Q4QsNr4=",
+    isEnabled: "true",
+    notificationQueueEnabled: "false",
+    notificationQueueUri: "",
+    recordTypes: "Requests, Event, Exceptions, Metrics, PageViews, PageViewPerformance, Rdd, PerformanceCounters, Availability",
+    resourceGroupName: "my-resource-group",
+    resourceName: "my-component",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ExportConfiguration Resource {#create}

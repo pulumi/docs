@@ -12,6 +12,80 @@ meta_desc: "Explore the PrivateZone resource of the network/latest module, inclu
 
 Describes a Private DNS zone.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PUT Private DNS Zone
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateZone = new AzureRM.Network.Latest.PrivateZone("privateZone", new AzureRM.Network.Latest.PrivateZoneArgs
+        {
+            Location = "Global",
+            PrivateZoneName = "privatezone1.com",
+            ResourceGroupName = "resourceGroup1",
+            Tags = 
+            {
+                { "key1", "value1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_zone = azurerm.network.latest.PrivateZone("privateZone",
+    location="Global",
+    private_zone_name="privatezone1.com",
+    resource_group_name="resourceGroup1",
+    tags={
+        "key1": "value1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateZone = new azurerm.network.latest.PrivateZone("privateZone", {
+    location: "Global",
+    privateZoneName: "privatezone1.com",
+    resourceGroupName: "resourceGroup1",
+    tags: {
+        key1: "value1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateZone Resource {#create}

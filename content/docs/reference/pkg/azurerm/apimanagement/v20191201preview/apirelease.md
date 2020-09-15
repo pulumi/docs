@@ -12,6 +12,76 @@ meta_desc: "Explore the ApiRelease resource of the apimanagement/v20191201previe
 
 ApiRelease details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateApiRelease
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiRelease = new AzureRM.ApiManagement.V20191201Preview.ApiRelease("apiRelease", new AzureRM.ApiManagement.V20191201Preview.ApiReleaseArgs
+        {
+            ApiId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1",
+            Notes = "yahooagain",
+            ReleaseId = "testrev",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api_release = azurerm.apimanagement.v20191201preview.ApiRelease("apiRelease",
+    api_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1",
+    notes="yahooagain",
+    release_id="testrev",
+    resource_group_name="rg1",
+    service_name="apimService1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const apiRelease = new azurerm.apimanagement.v20191201preview.ApiRelease("apiRelease", {
+    apiId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1",
+    notes: "yahooagain",
+    releaseId: "testrev",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApiRelease Resource {#create}

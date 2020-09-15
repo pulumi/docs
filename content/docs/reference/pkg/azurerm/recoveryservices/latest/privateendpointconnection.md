@@ -12,6 +12,70 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the recoveryservic
 
 Private Endpoint Connection Response Properties
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Update PrivateEndpointConnection
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpointConnection = new AzureRM.RecoveryServices.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureRM.RecoveryServices.Latest.PrivateEndpointConnectionArgs
+        {
+            PrivateEndpointConnectionName = "gaallatestpe2.5704c932-249a-490b-a142-1396838cd3b",
+            ResourceGroupName = "gaallaRG",
+            VaultName = "gaallavaultbvtd2msi",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_endpoint_connection = azurerm.recoveryservices.latest.PrivateEndpointConnection("privateEndpointConnection",
+    private_endpoint_connection_name="gaallatestpe2.5704c932-249a-490b-a142-1396838cd3b",
+    resource_group_name="gaallaRG",
+    vault_name="gaallavaultbvtd2msi")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateEndpointConnection = new azurerm.recoveryservices.latest.PrivateEndpointConnection("privateEndpointConnection", {
+    privateEndpointConnectionName: "gaallatestpe2.5704c932-249a-490b-a142-1396838cd3b",
+    resourceGroupName: "gaallaRG",
+    vaultName: "gaallavaultbvtd2msi",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateEndpointConnection Resource {#create}

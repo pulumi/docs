@@ -12,6 +12,70 @@ meta_desc: "Explore the ApplicationSecurityGroup resource of the network/latest 
 
 An application security group in a resource group.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create application security group
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var applicationSecurityGroup = new AzureRM.Network.Latest.ApplicationSecurityGroup("applicationSecurityGroup", new AzureRM.Network.Latest.ApplicationSecurityGroupArgs
+        {
+            ApplicationSecurityGroupName = "test-asg",
+            Location = "westus",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+application_security_group = azurerm.network.latest.ApplicationSecurityGroup("applicationSecurityGroup",
+    application_security_group_name="test-asg",
+    location="westus",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const applicationSecurityGroup = new azurerm.network.latest.ApplicationSecurityGroup("applicationSecurityGroup", {
+    applicationSecurityGroupName: "test-asg",
+    location: "westus",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApplicationSecurityGroup Resource {#create}

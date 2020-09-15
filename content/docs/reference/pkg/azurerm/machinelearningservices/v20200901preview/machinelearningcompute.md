@@ -12,6 +12,588 @@ meta_desc: "Explore the MachineLearningCompute resource of the machinelearningse
 
 Machine Learning compute object wrapped into ARM resource envelope.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create AKS Compute
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var machineLearningCompute = new AzureRM.MachineLearningServices.V20200901Preview.MachineLearningCompute("machineLearningCompute", new AzureRM.MachineLearningServices.V20200901Preview.MachineLearningComputeArgs
+        {
+            ComputeName = "compute123",
+            Location = "eastus",
+            ResourceGroupName = "testrg123",
+            WorkspaceName = "workspaces123",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+machine_learning_compute = azurerm.machinelearningservices.v20200901preview.MachineLearningCompute("machineLearningCompute",
+    compute_name="compute123",
+    location="eastus",
+    resource_group_name="testrg123",
+    workspace_name="workspaces123")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const machineLearningCompute = new azurerm.machinelearningservices.v20200901preview.MachineLearningCompute("machineLearningCompute", {
+    computeName: "compute123",
+    location: "eastus",
+    resourceGroupName: "testrg123",
+    workspaceName: "workspaces123",
+});
+
+```
+
+{{% /example %}}
+
+### Create a AML Compute
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var machineLearningCompute = new AzureRM.MachineLearningServices.V20200901Preview.MachineLearningCompute("machineLearningCompute", new AzureRM.MachineLearningServices.V20200901Preview.MachineLearningComputeArgs
+        {
+            ComputeName = "compute123",
+            Location = "eastus",
+            Properties = 
+            {
+                { "enableNodePublicIp", true },
+                { "isolatedNetwork", false },
+                { "osType", "Windows" },
+                { "remoteLoginPortPublicAccess", "NotSpecified" },
+                { "scaleSettings", 
+                {
+                    { "maxNodeCount", 1 },
+                    { "minNodeCount", 0 },
+                    { "nodeIdleTimeBeforeScaleDown", "PT5M" },
+                } },
+                { "virtualMachineImage", 
+                {
+                    { "id", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myImageGallery/images/myImageDefinition/versions/0.0.1" },
+                } },
+                { "vmPriority", "Dedicated" },
+                { "vmSize", "STANDARD_NC6" },
+            },
+            ResourceGroupName = "testrg123",
+            WorkspaceName = "workspaces123",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+machine_learning_compute = azurerm.machinelearningservices.v20200901preview.MachineLearningCompute("machineLearningCompute",
+    compute_name="compute123",
+    location="eastus",
+    properties={
+        "enableNodePublicIp": True,
+        "isolatedNetwork": False,
+        "osType": "Windows",
+        "remoteLoginPortPublicAccess": "NotSpecified",
+        "scaleSettings": {
+            "maxNodeCount": 1,
+            "minNodeCount": 0,
+            "nodeIdleTimeBeforeScaleDown": "PT5M",
+        },
+        "virtualMachineImage": {
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myImageGallery/images/myImageDefinition/versions/0.0.1",
+        },
+        "vmPriority": "Dedicated",
+        "vmSize": "STANDARD_NC6",
+    },
+    resource_group_name="testrg123",
+    workspace_name="workspaces123")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const machineLearningCompute = new azurerm.machinelearningservices.v20200901preview.MachineLearningCompute("machineLearningCompute", {
+    computeName: "compute123",
+    location: "eastus",
+    properties: {
+        enableNodePublicIp: true,
+        isolatedNetwork: false,
+        osType: "Windows",
+        remoteLoginPortPublicAccess: "NotSpecified",
+        scaleSettings: {
+            maxNodeCount: 1,
+            minNodeCount: 0,
+            nodeIdleTimeBeforeScaleDown: "PT5M",
+        },
+        virtualMachineImage: {
+            id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myImageGallery/images/myImageDefinition/versions/0.0.1",
+        },
+        vmPriority: "Dedicated",
+        vmSize: "STANDARD_NC6",
+    },
+    resourceGroupName: "testrg123",
+    workspaceName: "workspaces123",
+});
+
+```
+
+{{% /example %}}
+
+### Create a DataFactory Compute
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var machineLearningCompute = new AzureRM.MachineLearningServices.V20200901Preview.MachineLearningCompute("machineLearningCompute", new AzureRM.MachineLearningServices.V20200901Preview.MachineLearningComputeArgs
+        {
+            ComputeName = "compute123",
+            Location = "eastus",
+            ResourceGroupName = "testrg123",
+            WorkspaceName = "workspaces123",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+machine_learning_compute = azurerm.machinelearningservices.v20200901preview.MachineLearningCompute("machineLearningCompute",
+    compute_name="compute123",
+    location="eastus",
+    resource_group_name="testrg123",
+    workspace_name="workspaces123")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const machineLearningCompute = new azurerm.machinelearningservices.v20200901preview.MachineLearningCompute("machineLearningCompute", {
+    computeName: "compute123",
+    location: "eastus",
+    resourceGroupName: "testrg123",
+    workspaceName: "workspaces123",
+});
+
+```
+
+{{% /example %}}
+
+### Create an ComputeInstance Compute
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var machineLearningCompute = new AzureRM.MachineLearningServices.V20200901Preview.MachineLearningCompute("machineLearningCompute", new AzureRM.MachineLearningServices.V20200901Preview.MachineLearningComputeArgs
+        {
+            ComputeName = "compute123",
+            Location = "eastus",
+            Properties = 
+            {
+                { "applicationSharingPolicy", "Personal" },
+                { "computeInstanceAuthorizationType", "personal" },
+                { "personalComputeInstanceSettings", 
+                {
+                    { "assignedUser", 
+                    {
+                        { "objectId", "00000000-0000-0000-0000-000000000000" },
+                        { "tenantId", "00000000-0000-0000-0000-000000000000" },
+                    } },
+                } },
+                { "sshSettings", 
+                {
+                    { "sshPublicAccess", "Disabled" },
+                } },
+                { "subnet", "test-subnet-resource-id" },
+                { "vmSize", "STANDARD_NC6" },
+            },
+            ResourceGroupName = "testrg123",
+            WorkspaceName = "workspaces123",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+machine_learning_compute = azurerm.machinelearningservices.v20200901preview.MachineLearningCompute("machineLearningCompute",
+    compute_name="compute123",
+    location="eastus",
+    properties={
+        "applicationSharingPolicy": "Personal",
+        "computeInstanceAuthorizationType": "personal",
+        "personalComputeInstanceSettings": {
+            "assignedUser": {
+                "objectId": "00000000-0000-0000-0000-000000000000",
+                "tenantId": "00000000-0000-0000-0000-000000000000",
+            },
+        },
+        "sshSettings": {
+            "sshPublicAccess": "Disabled",
+        },
+        "subnet": "test-subnet-resource-id",
+        "vmSize": "STANDARD_NC6",
+    },
+    resource_group_name="testrg123",
+    workspace_name="workspaces123")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const machineLearningCompute = new azurerm.machinelearningservices.v20200901preview.MachineLearningCompute("machineLearningCompute", {
+    computeName: "compute123",
+    location: "eastus",
+    properties: {
+        applicationSharingPolicy: "Personal",
+        computeInstanceAuthorizationType: "personal",
+        personalComputeInstanceSettings: {
+            assignedUser: {
+                objectId: "00000000-0000-0000-0000-000000000000",
+                tenantId: "00000000-0000-0000-0000-000000000000",
+            },
+        },
+        sshSettings: {
+            sshPublicAccess: "Disabled",
+        },
+        subnet: "test-subnet-resource-id",
+        vmSize: "STANDARD_NC6",
+    },
+    resourceGroupName: "testrg123",
+    workspaceName: "workspaces123",
+});
+
+```
+
+{{% /example %}}
+
+### Create an ComputeInstance Compute with minimal inputs
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var machineLearningCompute = new AzureRM.MachineLearningServices.V20200901Preview.MachineLearningCompute("machineLearningCompute", new AzureRM.MachineLearningServices.V20200901Preview.MachineLearningComputeArgs
+        {
+            ComputeName = "compute123",
+            Location = "eastus",
+            Properties = 
+            {
+                { "vmSize", "STANDARD_NC6" },
+            },
+            ResourceGroupName = "testrg123",
+            WorkspaceName = "workspaces123",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+machine_learning_compute = azurerm.machinelearningservices.v20200901preview.MachineLearningCompute("machineLearningCompute",
+    compute_name="compute123",
+    location="eastus",
+    properties={
+        "vmSize": "STANDARD_NC6",
+    },
+    resource_group_name="testrg123",
+    workspace_name="workspaces123")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const machineLearningCompute = new azurerm.machinelearningservices.v20200901preview.MachineLearningCompute("machineLearningCompute", {
+    computeName: "compute123",
+    location: "eastus",
+    properties: {
+        vmSize: "STANDARD_NC6",
+    },
+    resourceGroupName: "testrg123",
+    workspaceName: "workspaces123",
+});
+
+```
+
+{{% /example %}}
+
+### Update a AKS Compute
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var machineLearningCompute = new AzureRM.MachineLearningServices.V20200901Preview.MachineLearningCompute("machineLearningCompute", new AzureRM.MachineLearningServices.V20200901Preview.MachineLearningComputeArgs
+        {
+            ComputeName = "compute123",
+            Location = "eastus",
+            Properties = 
+            {
+                { "agentCount", 4 },
+            },
+            ResourceGroupName = "testrg123",
+            WorkspaceName = "workspaces123",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+machine_learning_compute = azurerm.machinelearningservices.v20200901preview.MachineLearningCompute("machineLearningCompute",
+    compute_name="compute123",
+    location="eastus",
+    properties={
+        "agentCount": 4,
+    },
+    resource_group_name="testrg123",
+    workspace_name="workspaces123")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const machineLearningCompute = new azurerm.machinelearningservices.v20200901preview.MachineLearningCompute("machineLearningCompute", {
+    computeName: "compute123",
+    location: "eastus",
+    properties: {
+        agentCount: 4,
+    },
+    resourceGroupName: "testrg123",
+    workspaceName: "workspaces123",
+});
+
+```
+
+{{% /example %}}
+
+### Update a AML Compute
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var machineLearningCompute = new AzureRM.MachineLearningServices.V20200901Preview.MachineLearningCompute("machineLearningCompute", new AzureRM.MachineLearningServices.V20200901Preview.MachineLearningComputeArgs
+        {
+            ComputeName = "compute123",
+            Location = "eastus",
+            Properties = 
+            {
+                { "scaleSettings", 
+                {
+                    { "maxNodeCount", 4 },
+                    { "minNodeCount", 4 },
+                    { "nodeIdleTimeBeforeScaleDown", "PT5M" },
+                } },
+            },
+            ResourceGroupName = "testrg123",
+            WorkspaceName = "workspaces123",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+machine_learning_compute = azurerm.machinelearningservices.v20200901preview.MachineLearningCompute("machineLearningCompute",
+    compute_name="compute123",
+    location="eastus",
+    properties={
+        "scaleSettings": {
+            "maxNodeCount": 4,
+            "minNodeCount": 4,
+            "nodeIdleTimeBeforeScaleDown": "PT5M",
+        },
+    },
+    resource_group_name="testrg123",
+    workspace_name="workspaces123")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const machineLearningCompute = new azurerm.machinelearningservices.v20200901preview.MachineLearningCompute("machineLearningCompute", {
+    computeName: "compute123",
+    location: "eastus",
+    properties: {
+        scaleSettings: {
+            maxNodeCount: 4,
+            minNodeCount: 4,
+            nodeIdleTimeBeforeScaleDown: "PT5M",
+        },
+    },
+    resourceGroupName: "testrg123",
+    workspaceName: "workspaces123",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MachineLearningCompute Resource {#create}

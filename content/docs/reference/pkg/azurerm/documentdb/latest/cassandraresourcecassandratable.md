@@ -12,6 +12,147 @@ meta_desc: "Explore the CassandraResourceCassandraTable resource of the document
 
 An Azure Cosmos DB Cassandra table.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CosmosDBCassandraTableCreateUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cassandraResourceCassandraTable = new AzureRM.DocumentDB.Latest.CassandraResourceCassandraTable("cassandraResourceCassandraTable", new AzureRM.DocumentDB.Latest.CassandraResourceCassandraTableArgs
+        {
+            AccountName = "ddb1",
+            KeyspaceName = "keyspaceName",
+            Location = "West US",
+            Options = ,
+            Resource = new AzureRM.DocumentDB.Latest.Inputs.CassandraTableResourceArgs
+            {
+                DefaultTtl = 100,
+                Id = "tableName",
+                Schema = new AzureRM.DocumentDB.Latest.Inputs.CassandraSchemaArgs
+                {
+                    ClusterKeys = 
+                    {
+                        new AzureRM.DocumentDB.Latest.Inputs.ClusterKeyArgs
+                        {
+                            Name = "columnA",
+                            OrderBy = "Asc",
+                        },
+                    },
+                    Columns = 
+                    {
+                        new AzureRM.DocumentDB.Latest.Inputs.ColumnArgs
+                        {
+                            Name = "columnA",
+                            Type = "Ascii",
+                        },
+                    },
+                    PartitionKeys = 
+                    {
+                        new AzureRM.DocumentDB.Latest.Inputs.CassandraPartitionKeyArgs
+                        {
+                            Name = "columnA",
+                        },
+                    },
+                },
+            },
+            ResourceGroupName = "rg1",
+            TableName = "tableName",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cassandra_resource_cassandra_table = azurerm.documentdb.latest.CassandraResourceCassandraTable("cassandraResourceCassandraTable",
+    account_name="ddb1",
+    keyspace_name="keyspaceName",
+    location="West US",
+    options={},
+    resource={
+        "defaultTtl": 100,
+        "id": "tableName",
+        "schema": {
+            "clusterKeys": [{
+                "name": "columnA",
+                "orderBy": "Asc",
+            }],
+            "columns": [{
+                "name": "columnA",
+                "type": "Ascii",
+            }],
+            "partitionKeys": [{
+                "name": "columnA",
+            }],
+        },
+    },
+    resource_group_name="rg1",
+    table_name="tableName",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cassandraResourceCassandraTable = new azurerm.documentdb.latest.CassandraResourceCassandraTable("cassandraResourceCassandraTable", {
+    accountName: "ddb1",
+    keyspaceName: "keyspaceName",
+    location: "West US",
+    options: {},
+    resource: {
+        defaultTtl: 100,
+        id: "tableName",
+        schema: {
+            clusterKeys: [{
+                name: "columnA",
+                orderBy: "Asc",
+            }],
+            columns: [{
+                name: "columnA",
+                type: "Ascii",
+            }],
+            partitionKeys: [{
+                name: "columnA",
+            }],
+        },
+    },
+    resourceGroupName: "rg1",
+    tableName: "tableName",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CassandraResourceCassandraTable Resource {#create}

@@ -12,6 +12,61 @@ meta_desc: "Explore the Partner resource of the managementpartner/latest module,
 
 this is the management partner operations response
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PutPartnerDetails
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var partner = new AzureRM.ManagementPartner.Latest.Partner("partner", new AzureRM.ManagementPartner.Latest.PartnerArgs
+        {
+            PartnerId = "123456",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+partner = azurerm.managementpartner.latest.Partner("partner", partner_id="123456")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const partner = new azurerm.managementpartner.latest.Partner("partner", {partnerId: "123456"});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Partner Resource {#create}

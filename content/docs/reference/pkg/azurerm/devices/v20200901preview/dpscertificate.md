@@ -12,6 +12,52 @@ meta_desc: "Explore the DpsCertificate resource of the devices/v20200901preview 
 
 The X509 Certificate.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### DPSCreateOrUpdateCertificate
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+dps_certificate = .("dpsCertificate",
+    certificate="############################################",
+    certificate_name="cert",
+    provisioning_service_name="myFirstProvisioningService",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const dpsCertificate = new .("dpsCertificate", {
+    certificate: "############################################",
+    certificateName: "cert",
+    provisioningServiceName: "myFirstProvisioningService",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DpsCertificate Resource {#create}

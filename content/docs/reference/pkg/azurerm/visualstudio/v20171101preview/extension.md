@@ -12,6 +12,98 @@ meta_desc: "Explore the Extension resource of the visualstudio/v20171101preview 
 
 The response to an extension resource GET request.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create an extension resource
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var extension = new AzureRM.Visualstudio.V20171101Preview.Extension("extension", new AzureRM.Visualstudio.V20171101Preview.ExtensionArgs
+        {
+            AccountResourceName = "ExampleAccount",
+            ExtensionResourceName = "ms.example",
+            Location = "Central US",
+            Plan = new AzureRM.Visualstudio.V20171101Preview.Inputs.ExtensionResourcePlanArgs
+            {
+                Name = "ExamplePlan",
+                Product = "ExampleExtensionName",
+                PromotionCode = "",
+                Publisher = "ExampleExtensionPublisher",
+                Version = "1.0",
+            },
+            ResourceGroupName = "VS-Example-Group",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+extension = azurerm.visualstudio.v20171101preview.Extension("extension",
+    account_resource_name="ExampleAccount",
+    extension_resource_name="ms.example",
+    location="Central US",
+    plan={
+        "name": "ExamplePlan",
+        "product": "ExampleExtensionName",
+        "promotionCode": "",
+        "publisher": "ExampleExtensionPublisher",
+        "version": "1.0",
+    },
+    resource_group_name="VS-Example-Group",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const extension = new azurerm.visualstudio.v20171101preview.Extension("extension", {
+    accountResourceName: "ExampleAccount",
+    extensionResourceName: "ms.example",
+    location: "Central US",
+    plan: {
+        name: "ExamplePlan",
+        product: "ExampleExtensionName",
+        promotionCode: "",
+        publisher: "ExampleExtensionPublisher",
+        version: "1.0",
+    },
+    resourceGroupName: "VS-Example-Group",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Extension Resource {#create}

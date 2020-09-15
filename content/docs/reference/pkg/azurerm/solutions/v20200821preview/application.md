@@ -12,6 +12,76 @@ meta_desc: "Explore the Application resource of the solutions/v20200821preview m
 
 Information about managed application.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update managed application
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var application = new AzureRM.Solutions.V20200821Preview.Application("application", new AzureRM.Solutions.V20200821Preview.ApplicationArgs
+        {
+            ApplicationDefinitionId = "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myAppDef",
+            ApplicationName = "myManagedApplication",
+            Kind = "ServiceCatalog",
+            ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
+            ResourceGroupName = "rg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+application = azurerm.solutions.v20200821preview.Application("application",
+    application_definition_id="/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myAppDef",
+    application_name="myManagedApplication",
+    kind="ServiceCatalog",
+    managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
+    resource_group_name="rg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const application = new azurerm.solutions.v20200821preview.Application("application", {
+    applicationDefinitionId: "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myAppDef",
+    applicationName: "myManagedApplication",
+    kind: "ServiceCatalog",
+    managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
+    resourceGroupName: "rg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Application Resource {#create}

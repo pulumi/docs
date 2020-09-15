@@ -12,6 +12,93 @@ meta_desc: "Explore the DataController resource of the azuredata/v20190724previe
 
 Data controller resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Updates a dataControllers tags.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataController = new AzureRM.AzureData.V20190724Preview.DataController("dataController", new AzureRM.AzureData.V20190724Preview.DataControllerArgs
+        {
+            DataControllerName = "testdataController",
+            Location = "northeurope",
+            OnPremiseProperty = new AzureRM.AzureData.V20190724Preview.Inputs.OnPremisePropertyArgs
+            {
+                Id = "12345678-1234-1234-ab12-1a2b3c4d5e6f",
+                PublicSigningKey = "publicOnPremSigningKey",
+            },
+            ResourceGroupName = "testrg",
+            Tags = 
+            {
+                { "mytag", "myval" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+data_controller = azurerm.azuredata.v20190724preview.DataController("dataController",
+    data_controller_name="testdataController",
+    location="northeurope",
+    on_premise_property={
+        "id": "12345678-1234-1234-ab12-1a2b3c4d5e6f",
+        "publicSigningKey": "publicOnPremSigningKey",
+    },
+    resource_group_name="testrg",
+    tags={
+        "mytag": "myval",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataController = new azurerm.azuredata.v20190724preview.DataController("dataController", {
+    dataControllerName: "testdataController",
+    location: "northeurope",
+    onPremiseProperty: {
+        id: "12345678-1234-1234-ab12-1a2b3c4d5e6f",
+        publicSigningKey: "publicOnPremSigningKey",
+    },
+    resourceGroupName: "testrg",
+    tags: {
+        mytag: "myval",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DataController Resource {#create}

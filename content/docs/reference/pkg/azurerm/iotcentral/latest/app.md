@@ -12,6 +12,89 @@ meta_desc: "Explore the App resource of the iotcentral/latest module, including 
 
 The IoT Central application.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Apps_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var app = new AzureRM.IoTCentral.Latest.App("app", new AzureRM.IoTCentral.Latest.AppArgs
+        {
+            DisplayName = "My IoT Central App",
+            Location = "westus",
+            ResourceGroupName = "resRg",
+            ResourceName = "myIoTCentralApp",
+            Sku = new AzureRM.IoTCentral.Latest.Inputs.AppSkuInfoArgs
+            {
+                Name = "F1",
+            },
+            Subdomain = "my-iot-central-app",
+            Template = "iotc-default@1.0.0",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+app = azurerm.iotcentral.latest.App("app",
+    display_name="My IoT Central App",
+    location="westus",
+    resource_group_name="resRg",
+    resource_name="myIoTCentralApp",
+    sku={
+        "name": "F1",
+    },
+    subdomain="my-iot-central-app",
+    template="iotc-default@1.0.0")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const app = new azurerm.iotcentral.latest.App("app", {
+    displayName: "My IoT Central App",
+    location: "westus",
+    resourceGroupName: "resRg",
+    resourceName: "myIoTCentralApp",
+    sku: {
+        name: "F1",
+    },
+    subdomain: "my-iot-central-app",
+    template: "iotc-default@1.0.0",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a App Resource {#create}

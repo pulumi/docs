@@ -12,6 +12,70 @@ meta_desc: "Explore the ManagementConfiguration resource of the operationsmanage
 
 The container for solution.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ManagementConfigurationCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managementConfiguration = new AzureRM.OperationsManagement.V20151101Preview.ManagementConfiguration("managementConfiguration", new AzureRM.OperationsManagement.V20151101Preview.ManagementConfigurationArgs
+        {
+            Location = "East US",
+            ManagementConfigurationName = "managementConfiguration1",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+management_configuration = azurerm.operationsmanagement.v20151101preview.ManagementConfiguration("managementConfiguration",
+    location="East US",
+    management_configuration_name="managementConfiguration1",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managementConfiguration = new azurerm.operationsmanagement.v20151101preview.ManagementConfiguration("managementConfiguration", {
+    location: "East US",
+    managementConfigurationName: "managementConfiguration1",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagementConfiguration Resource {#create}

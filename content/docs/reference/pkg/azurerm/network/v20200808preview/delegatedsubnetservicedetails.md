@@ -12,6 +12,76 @@ meta_desc: "Explore the DelegatedSubnetServiceDetails resource of the network/v2
 
 Delegated subnet details
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### put delegated subnet
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var delegatedSubnetServiceDetails = new AzureRM.Network.V20200808Preview.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails", new AzureRM.Network.V20200808Preview.DelegatedSubnetServiceDetailsArgs
+        {
+            ControllerID = "a182cbcf-e8ea-4175-ac2b-ad36a73f9801",
+            ResourceGroupName = "TestRG",
+            ResourceName = "delegated1",
+            SubnetName = "testsubnet",
+            VnetName = "testvnet",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+delegated_subnet_service_details = azurerm.network.v20200808preview.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails",
+    controller_id="a182cbcf-e8ea-4175-ac2b-ad36a73f9801",
+    resource_group_name="TestRG",
+    resource_name="delegated1",
+    subnet_name="testsubnet",
+    vnet_name="testvnet")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const delegatedSubnetServiceDetails = new azurerm.network.v20200808preview.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails", {
+    controllerID: "a182cbcf-e8ea-4175-ac2b-ad36a73f9801",
+    resourceGroupName: "TestRG",
+    resourceName: "delegated1",
+    subnetName: "testsubnet",
+    vnetName: "testvnet",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DelegatedSubnetServiceDetails Resource {#create}

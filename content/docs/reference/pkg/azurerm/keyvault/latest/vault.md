@@ -12,6 +12,129 @@ meta_desc: "Explore the Vault resource of the keyvault/latest module, including 
 
 Resource information with extended details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a new vault or update an existing vault
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vault = new AzureRM.KeyVault.Latest.Vault("vault", new AzureRM.KeyVault.Latest.VaultArgs
+        {
+            Location = "westus",
+            ResourceGroupName = "sample-resource-group",
+            VaultName = "sample-vault",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+vault = azurerm.keyvault.latest.Vault("vault",
+    location="westus",
+    resource_group_name="sample-resource-group",
+    vault_name="sample-vault")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const vault = new azurerm.keyvault.latest.Vault("vault", {
+    location: "westus",
+    resourceGroupName: "sample-resource-group",
+    vaultName: "sample-vault",
+});
+
+```
+
+{{% /example %}}
+
+### Create or update a vault with network acls
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vault = new AzureRM.KeyVault.Latest.Vault("vault", new AzureRM.KeyVault.Latest.VaultArgs
+        {
+            Location = "westus",
+            ResourceGroupName = "sample-resource-group",
+            VaultName = "sample-vault",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+vault = azurerm.keyvault.latest.Vault("vault",
+    location="westus",
+    resource_group_name="sample-resource-group",
+    vault_name="sample-vault")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const vault = new azurerm.keyvault.latest.Vault("vault", {
+    location: "westus",
+    resourceGroupName: "sample-resource-group",
+    vaultName: "sample-vault",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Vault Resource {#create}

@@ -12,6 +12,76 @@ meta_desc: "Explore the FirewallRule resource of the cache/latest module, includ
 
 A firewall rule on a redis cache has a name, and describes a contiguous range of IP addresses permitted to connect
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### RedisCacheFirewallRuleCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var firewallRule = new AzureRM.Cache.Latest.FirewallRule("firewallRule", new AzureRM.Cache.Latest.FirewallRuleArgs
+        {
+            CacheName = "cache1",
+            EndIP = "192.168.1.4",
+            ResourceGroupName = "rg1",
+            RuleName = "rule1",
+            StartIP = "192.168.1.1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+firewall_rule = azurerm.cache.latest.FirewallRule("firewallRule",
+    cache_name="cache1",
+    end_ip="192.168.1.4",
+    resource_group_name="rg1",
+    rule_name="rule1",
+    start_ip="192.168.1.1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const firewallRule = new azurerm.cache.latest.FirewallRule("firewallRule", {
+    cacheName: "cache1",
+    endIP: "192.168.1.4",
+    resourceGroupName: "rg1",
+    ruleName: "rule1",
+    startIP: "192.168.1.1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FirewallRule Resource {#create}

@@ -12,6 +12,73 @@ meta_desc: "Explore the NotificationHubAuthorizationRule resource of the notific
 
 Description of a Namespace AuthorizationRules.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### NotificationHubAuthorizationRuleCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var notificationHubAuthorizationRule = new AzureRM.NotificationHubs.Latest.NotificationHubAuthorizationRule("notificationHubAuthorizationRule", new AzureRM.NotificationHubs.Latest.NotificationHubAuthorizationRuleArgs
+        {
+            AuthorizationRuleName = "DefaultListenSharedAccessSignature",
+            NamespaceName = "nh-sdk-ns",
+            NotificationHubName = "nh-sdk-hub",
+            ResourceGroupName = "5ktrial",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+notification_hub_authorization_rule = azurerm.notificationhubs.latest.NotificationHubAuthorizationRule("notificationHubAuthorizationRule",
+    authorization_rule_name="DefaultListenSharedAccessSignature",
+    namespace_name="nh-sdk-ns",
+    notification_hub_name="nh-sdk-hub",
+    resource_group_name="5ktrial")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const notificationHubAuthorizationRule = new azurerm.notificationhubs.latest.NotificationHubAuthorizationRule("notificationHubAuthorizationRule", {
+    authorizationRuleName: "DefaultListenSharedAccessSignature",
+    namespaceName: "nh-sdk-ns",
+    notificationHubName: "nh-sdk-hub",
+    resourceGroupName: "5ktrial",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NotificationHubAuthorizationRule Resource {#create}

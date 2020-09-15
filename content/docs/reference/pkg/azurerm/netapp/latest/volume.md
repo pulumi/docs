@@ -12,6 +12,91 @@ meta_desc: "Explore the Volume resource of the netapp/latest module, including e
 
 Volume resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Volumes_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var volume = new AzureRM.NetApp.Latest.Volume("volume", new AzureRM.NetApp.Latest.VolumeArgs
+        {
+            AccountName = "account1",
+            CreationToken = "my-unique-file-path",
+            Location = "eastus",
+            PoolName = "pool1",
+            ResourceGroupName = "myRG",
+            ServiceLevel = "Premium",
+            SubnetId = "/subscriptions/9760acf5-4638-11e7-9bdb-020073ca7778/resourceGroups/myRP/providers/Microsoft.Network/virtualNetworks/testvnet3/subnets/testsubnet3",
+            ThroughputMibps = 128,
+            UsageThreshold = 107374182400,
+            VolumeName = "volume1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+volume = azurerm.netapp.latest.Volume("volume",
+    account_name="account1",
+    creation_token="my-unique-file-path",
+    location="eastus",
+    pool_name="pool1",
+    resource_group_name="myRG",
+    service_level="Premium",
+    subnet_id="/subscriptions/9760acf5-4638-11e7-9bdb-020073ca7778/resourceGroups/myRP/providers/Microsoft.Network/virtualNetworks/testvnet3/subnets/testsubnet3",
+    throughput_mibps=128,
+    usage_threshold=107374182400,
+    volume_name="volume1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const volume = new azurerm.netapp.latest.Volume("volume", {
+    accountName: "account1",
+    creationToken: "my-unique-file-path",
+    location: "eastus",
+    poolName: "pool1",
+    resourceGroupName: "myRG",
+    serviceLevel: "Premium",
+    subnetId: "/subscriptions/9760acf5-4638-11e7-9bdb-020073ca7778/resourceGroups/myRP/providers/Microsoft.Network/virtualNetworks/testvnet3/subnets/testsubnet3",
+    throughputMibps: 128,
+    usageThreshold: 107374182400,
+    volumeName: "volume1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Volume Resource {#create}

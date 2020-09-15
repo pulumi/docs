@@ -12,6 +12,125 @@ meta_desc: "Explore the PeerAsn resource of the peering/latest module, including
 
 The essential information related to the peer's ASN.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a peer ASN
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var peerAsn = new AzureRM.Peering.Latest.PeerAsn("peerAsn", new AzureRM.Peering.Latest.PeerAsnArgs
+        {
+            PeerAsn = 65000,
+            PeerAsnName = "peerAsnName",
+            PeerContactDetail = 
+            {
+                new AzureRM.Peering.Latest.Inputs.ContactDetailArgs
+                {
+                    Email = "noc@contoso.com",
+                    Phone = "+1 (234) 567-8999",
+                    Role = "Noc",
+                },
+                new AzureRM.Peering.Latest.Inputs.ContactDetailArgs
+                {
+                    Email = "abc@contoso.com",
+                    Phone = "+1 (234) 567-8900",
+                    Role = "Policy",
+                },
+                new AzureRM.Peering.Latest.Inputs.ContactDetailArgs
+                {
+                    Email = "xyz@contoso.com",
+                    Phone = "+1 (234) 567-8900",
+                    Role = "Technical",
+                },
+            },
+            PeerName = "Contoso",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+peer_asn = azurerm.peering.latest.PeerAsn("peerAsn",
+    peer_asn=65000,
+    peer_asn_name="peerAsnName",
+    peer_contact_detail=[
+        {
+            "email": "noc@contoso.com",
+            "phone": "+1 (234) 567-8999",
+            "role": "Noc",
+        },
+        {
+            "email": "abc@contoso.com",
+            "phone": "+1 (234) 567-8900",
+            "role": "Policy",
+        },
+        {
+            "email": "xyz@contoso.com",
+            "phone": "+1 (234) 567-8900",
+            "role": "Technical",
+        },
+    ],
+    peer_name="Contoso")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const peerAsn = new azurerm.peering.latest.PeerAsn("peerAsn", {
+    peerAsn: 65000,
+    peerAsnName: "peerAsnName",
+    peerContactDetail: [
+        {
+            email: "noc@contoso.com",
+            phone: "+1 (234) 567-8999",
+            role: "Noc",
+        },
+        {
+            email: "abc@contoso.com",
+            phone: "+1 (234) 567-8900",
+            role: "Policy",
+        },
+        {
+            email: "xyz@contoso.com",
+            phone: "+1 (234) 567-8900",
+            role: "Technical",
+        },
+    ],
+    peerName: "Contoso",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PeerAsn Resource {#create}

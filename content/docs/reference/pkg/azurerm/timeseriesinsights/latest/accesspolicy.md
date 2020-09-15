@@ -12,6 +12,82 @@ meta_desc: "Explore the AccessPolicy resource of the timeseriesinsights/latest m
 
 An access policy is used to grant users and applications access to the environment. Roles are assigned to service principals in Azure Active Directory. These roles define the actions the principal can perform through the Time Series Insights data plane APIs.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### AccessPoliciesCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var accessPolicy = new AzureRM.TimeSeriesInsights.Latest.AccessPolicy("accessPolicy", new AzureRM.TimeSeriesInsights.Latest.AccessPolicyArgs
+        {
+            AccessPolicyName = "ap1",
+            Description = "some description",
+            EnvironmentName = "env1",
+            PrincipalObjectId = "aGuid",
+            ResourceGroupName = "rg1",
+            Roles = 
+            {
+                "Reader",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+access_policy = azurerm.timeseriesinsights.latest.AccessPolicy("accessPolicy",
+    access_policy_name="ap1",
+    description="some description",
+    environment_name="env1",
+    principal_object_id="aGuid",
+    resource_group_name="rg1",
+    roles=["Reader"])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const accessPolicy = new azurerm.timeseriesinsights.latest.AccessPolicy("accessPolicy", {
+    accessPolicyName: "ap1",
+    description: "some description",
+    environmentName: "env1",
+    principalObjectId: "aGuid",
+    resourceGroupName: "rg1",
+    roles: ["Reader"],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AccessPolicy Resource {#create}

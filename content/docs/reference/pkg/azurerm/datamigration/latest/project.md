@@ -12,6 +12,79 @@ meta_desc: "Explore the Project resource of the datamigration/latest module, inc
 
 A project resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Projects_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = new AzureRM.DataMigration.Latest.Project("project", new AzureRM.DataMigration.Latest.ProjectArgs
+        {
+            GroupName = "DmsSdkRg",
+            Location = "southcentralus",
+            ProjectName = "DmsSdkProject",
+            ServiceName = "DmsSdkService",
+            SourcePlatform = "SQL",
+            TargetPlatform = "SQLDB",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+project = azurerm.datamigration.latest.Project("project",
+    group_name="DmsSdkRg",
+    location="southcentralus",
+    project_name="DmsSdkProject",
+    service_name="DmsSdkService",
+    source_platform="SQL",
+    target_platform="SQLDB")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const project = new azurerm.datamigration.latest.Project("project", {
+    groupName: "DmsSdkRg",
+    location: "southcentralus",
+    projectName: "DmsSdkProject",
+    serviceName: "DmsSdkService",
+    sourcePlatform: "SQL",
+    targetPlatform: "SQLDB",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Project Resource {#create}

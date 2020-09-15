@@ -12,6 +12,123 @@ meta_desc: "Explore the AlertRule resource of the insights/latest module, includ
 
 The alert rule resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update an alert rule
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var alertRule = new AzureRM.Insights.Latest.AlertRule("alertRule", new AzureRM.Insights.Latest.AlertRuleArgs
+        {
+            Actions = {},
+            Condition = 
+            {
+                { "dataSource", 
+                {
+                    { "metricName", "Requests" },
+                    { "odata.type", "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource" },
+                    { "resourceUri", "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest" },
+                } },
+                { "odata.type", "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition" },
+                { "operator", "GreaterThan" },
+                { "threshold", 3 },
+                { "timeAggregation", "Total" },
+                { "windowSize", "PT5M" },
+            },
+            Description = "Pura Vida",
+            IsEnabled = true,
+            Location = "West US",
+            Name = "chiricutin",
+            ResourceGroupName = "Rac46PostSwapRG",
+            RuleName = "chiricutin",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+alert_rule = azurerm.insights.latest.AlertRule("alertRule",
+    actions=[],
+    condition={
+        "dataSource": {
+            "metricName": "Requests",
+            "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
+            "resourceUri": "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest",
+        },
+        "odata.type": "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
+        "operator": "GreaterThan",
+        "threshold": 3,
+        "timeAggregation": "Total",
+        "windowSize": "PT5M",
+    },
+    description="Pura Vida",
+    is_enabled=True,
+    location="West US",
+    name="chiricutin",
+    resource_group_name="Rac46PostSwapRG",
+    rule_name="chiricutin",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const alertRule = new azurerm.insights.latest.AlertRule("alertRule", {
+    actions: [],
+    condition: {
+        dataSource: {
+            metricName: "Requests",
+            "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
+            resourceUri: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest",
+        },
+        "odata.type": "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
+        operator: "GreaterThan",
+        threshold: 3,
+        timeAggregation: "Total",
+        windowSize: "PT5M",
+    },
+    description: "Pura Vida",
+    isEnabled: true,
+    location: "West US",
+    name: "chiricutin",
+    resourceGroupName: "Rac46PostSwapRG",
+    ruleName: "chiricutin",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AlertRule Resource {#create}

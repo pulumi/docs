@@ -12,6 +12,70 @@ meta_desc: "Explore the SharedPrivateLinkResource resource of the search/latest 
 
 Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### SharedPrivateLinkResourceCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sharedPrivateLinkResource = new AzureRM.Search.Latest.SharedPrivateLinkResource("sharedPrivateLinkResource", new AzureRM.Search.Latest.SharedPrivateLinkResourceArgs
+        {
+            ResourceGroupName = "rg1",
+            SearchServiceName = "mysearchservice",
+            SharedPrivateLinkResourceName = "testResource",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+shared_private_link_resource = azurerm.search.latest.SharedPrivateLinkResource("sharedPrivateLinkResource",
+    resource_group_name="rg1",
+    search_service_name="mysearchservice",
+    shared_private_link_resource_name="testResource")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sharedPrivateLinkResource = new azurerm.search.latest.SharedPrivateLinkResource("sharedPrivateLinkResource", {
+    resourceGroupName: "rg1",
+    searchServiceName: "mysearchservice",
+    sharedPrivateLinkResourceName: "testResource",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SharedPrivateLinkResource Resource {#create}

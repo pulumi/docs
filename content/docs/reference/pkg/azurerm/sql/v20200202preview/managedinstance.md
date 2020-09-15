@@ -12,6 +12,225 @@ meta_desc: "Explore the ManagedInstance resource of the sql/v20200202preview mod
 
 An Azure SQL managed instance.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create managed instance with all properties
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedInstance = new AzureRM.Sql.V20200202Preview.ManagedInstance("managedInstance", new AzureRM.Sql.V20200202Preview.ManagedInstanceArgs
+        {
+            AdministratorLogin = "dummylogin",
+            AdministratorLoginPassword = "Un53cuRE!",
+            Collation = "SQL_Latin1_General_CP1_CI_AS",
+            DnsZonePartner = "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testinstance",
+            InstancePoolId = "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/instancePools/pool1",
+            LicenseType = "LicenseIncluded",
+            Location = "Japan East",
+            MaintenanceConfigurationId = "/subscriptions/ab0e51c0-83c0-4380-8ae9-025516df392f/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_WestEurope_MI_Mon_Fri_10PM_6AM",
+            ManagedInstanceName = "testinstance",
+            ProxyOverride = "Redirect",
+            PublicDataEndpointEnabled = false,
+            ResourceGroupName = "testrg",
+            Sku = new AzureRM.Sql.V20200202Preview.Inputs.SkuArgs
+            {
+                Name = "GP_Gen5",
+                Tier = "GeneralPurpose",
+            },
+            StorageAccountType = "GRS",
+            StorageSizeInGB = 1024,
+            SubnetId = "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+            Tags = 
+            {
+                { "tagKey1", "TagValue1" },
+            },
+            TimezoneId = "UTC",
+            VCores = 8,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_instance = azurerm.sql.v20200202preview.ManagedInstance("managedInstance",
+    administrator_login="dummylogin",
+    administrator_login_password="Un53cuRE!",
+    collation="SQL_Latin1_General_CP1_CI_AS",
+    dns_zone_partner="/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testinstance",
+    instance_pool_id="/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/instancePools/pool1",
+    license_type="LicenseIncluded",
+    location="Japan East",
+    maintenance_configuration_id="/subscriptions/ab0e51c0-83c0-4380-8ae9-025516df392f/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_WestEurope_MI_Mon_Fri_10PM_6AM",
+    managed_instance_name="testinstance",
+    proxy_override="Redirect",
+    public_data_endpoint_enabled=False,
+    resource_group_name="testrg",
+    sku={
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+    },
+    storage_account_type="GRS",
+    storage_size_in_gb=1024,
+    subnet_id="/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+    tags={
+        "tagKey1": "TagValue1",
+    },
+    timezone_id="UTC",
+    v_cores=8)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedInstance = new azurerm.sql.v20200202preview.ManagedInstance("managedInstance", {
+    administratorLogin: "dummylogin",
+    administratorLoginPassword: "Un53cuRE!",
+    collation: "SQL_Latin1_General_CP1_CI_AS",
+    dnsZonePartner: "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testinstance",
+    instancePoolId: "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/instancePools/pool1",
+    licenseType: "LicenseIncluded",
+    location: "Japan East",
+    maintenanceConfigurationId: "/subscriptions/ab0e51c0-83c0-4380-8ae9-025516df392f/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_WestEurope_MI_Mon_Fri_10PM_6AM",
+    managedInstanceName: "testinstance",
+    proxyOverride: "Redirect",
+    publicDataEndpointEnabled: false,
+    resourceGroupName: "testrg",
+    sku: {
+        name: "GP_Gen5",
+        tier: "GeneralPurpose",
+    },
+    storageAccountType: "GRS",
+    storageSizeInGB: 1024,
+    subnetId: "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+    tags: {
+        tagKey1: "TagValue1",
+    },
+    timezoneId: "UTC",
+    vCores: 8,
+});
+
+```
+
+{{% /example %}}
+
+### Create managed instance with minimal properties
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedInstance = new AzureRM.Sql.V20200202Preview.ManagedInstance("managedInstance", new AzureRM.Sql.V20200202Preview.ManagedInstanceArgs
+        {
+            AdministratorLogin = "dummylogin",
+            AdministratorLoginPassword = "Un53cuRE!",
+            LicenseType = "LicenseIncluded",
+            Location = "Japan East",
+            ManagedInstanceName = "testinstance",
+            ResourceGroupName = "testrg",
+            Sku = new AzureRM.Sql.V20200202Preview.Inputs.SkuArgs
+            {
+                Name = "GP_Gen4",
+                Tier = "GeneralPurpose",
+            },
+            StorageSizeInGB = 1024,
+            SubnetId = "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+            VCores = 8,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_instance = azurerm.sql.v20200202preview.ManagedInstance("managedInstance",
+    administrator_login="dummylogin",
+    administrator_login_password="Un53cuRE!",
+    license_type="LicenseIncluded",
+    location="Japan East",
+    managed_instance_name="testinstance",
+    resource_group_name="testrg",
+    sku={
+        "name": "GP_Gen4",
+        "tier": "GeneralPurpose",
+    },
+    storage_size_in_gb=1024,
+    subnet_id="/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+    v_cores=8)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedInstance = new azurerm.sql.v20200202preview.ManagedInstance("managedInstance", {
+    administratorLogin: "dummylogin",
+    administratorLoginPassword: "Un53cuRE!",
+    licenseType: "LicenseIncluded",
+    location: "Japan East",
+    managedInstanceName: "testinstance",
+    resourceGroupName: "testrg",
+    sku: {
+        name: "GP_Gen4",
+        tier: "GeneralPurpose",
+    },
+    storageSizeInGB: 1024,
+    subnetId: "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+    vCores: 8,
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagedInstance Resource {#create}

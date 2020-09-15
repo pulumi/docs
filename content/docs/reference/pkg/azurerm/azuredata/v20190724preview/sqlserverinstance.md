@@ -12,6 +12,95 @@ meta_desc: "Explore the SqlServerInstance resource of the azuredata/v20190724pre
 
 A SqlServerInstance.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Updates a SQL Server Instance tags.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlServerInstance = new AzureRM.AzureData.V20190724Preview.SqlServerInstance("sqlServerInstance", new AzureRM.AzureData.V20190724Preview.SqlServerInstanceArgs
+        {
+            ContainerResourceId = "Arc Machine Name",
+            Edition = "Developer",
+            Location = "northeurope",
+            ResourceGroupName = "testrg",
+            SqlServerInstanceName = "testsqlServerInstance",
+            Status = "Connected",
+            Tags = 
+            {
+                { "mytag", "myval" },
+            },
+            VCore = "4",
+            Version = "SQL Server 2017",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sql_server_instance = azurerm.azuredata.v20190724preview.SqlServerInstance("sqlServerInstance",
+    container_resource_id="Arc Machine Name",
+    edition="Developer",
+    location="northeurope",
+    resource_group_name="testrg",
+    sql_server_instance_name="testsqlServerInstance",
+    status="Connected",
+    tags={
+        "mytag": "myval",
+    },
+    v_core="4",
+    version="SQL Server 2017")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sqlServerInstance = new azurerm.azuredata.v20190724preview.SqlServerInstance("sqlServerInstance", {
+    containerResourceId: "Arc Machine Name",
+    edition: "Developer",
+    location: "northeurope",
+    resourceGroupName: "testrg",
+    sqlServerInstanceName: "testsqlServerInstance",
+    status: "Connected",
+    tags: {
+        mytag: "myval",
+    },
+    vCore: "4",
+    version: "SQL Server 2017",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SqlServerInstance Resource {#create}

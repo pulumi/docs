@@ -12,6 +12,108 @@ meta_desc: "Explore the EventHub resource of the eventhub/latest module, includi
 
 Single item in List or Get Event Hub operation
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### EventHubCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var eventHub = new AzureRM.EventHub.Latest.EventHub("eventHub", new AzureRM.EventHub.Latest.EventHubArgs
+        {
+            CaptureDescription = new AzureRM.EventHub.Latest.Inputs.CaptureDescriptionArgs
+            {
+                Destination = new AzureRM.EventHub.Latest.Inputs.DestinationArgs
+                {
+                    Name = "EventHubArchive.AzureBlockBlob",
+                },
+                Enabled = true,
+                Encoding = "Avro",
+                IntervalInSeconds = 120,
+                SizeLimitInBytes = 10485763,
+            },
+            EventHubName = "sdk-EventHub-6547",
+            MessageRetentionInDays = 4,
+            NamespaceName = "sdk-Namespace-5357",
+            PartitionCount = 4,
+            ResourceGroupName = "Default-NotificationHubs-AustraliaEast",
+            Status = "Active",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+event_hub = azurerm.eventhub.latest.EventHub("eventHub",
+    capture_description={
+        "destination": {
+            "name": "EventHubArchive.AzureBlockBlob",
+        },
+        "enabled": True,
+        "encoding": "Avro",
+        "intervalInSeconds": 120,
+        "sizeLimitInBytes": 10485763,
+    },
+    event_hub_name="sdk-EventHub-6547",
+    message_retention_in_days=4,
+    namespace_name="sdk-Namespace-5357",
+    partition_count=4,
+    resource_group_name="Default-NotificationHubs-AustraliaEast",
+    status="Active")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const eventHub = new azurerm.eventhub.latest.EventHub("eventHub", {
+    captureDescription: {
+        destination: {
+            name: "EventHubArchive.AzureBlockBlob",
+        },
+        enabled: true,
+        encoding: "Avro",
+        intervalInSeconds: 120,
+        sizeLimitInBytes: 10485763,
+    },
+    eventHubName: "sdk-EventHub-6547",
+    messageRetentionInDays: 4,
+    namespaceName: "sdk-Namespace-5357",
+    partitionCount: 4,
+    resourceGroupName: "Default-NotificationHubs-AustraliaEast",
+    status: "Active",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EventHub Resource {#create}

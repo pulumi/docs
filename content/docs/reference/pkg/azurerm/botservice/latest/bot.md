@@ -12,6 +12,99 @@ meta_desc: "Explore the Bot resource of the botservice/latest module, including 
 
 Bot resource definition
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Bot
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bot = new AzureRM.BotService.Latest.Bot("bot", new AzureRM.BotService.Latest.BotArgs
+        {
+            Etag = "etag1",
+            Kind = "sdk",
+            Location = "West US",
+            ResourceGroupName = "OneResourceGroupName",
+            ResourceName = "samplebotname",
+            Sku = new AzureRM.BotService.Latest.Inputs.SkuArgs
+            {
+                Name = "S1",
+            },
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+bot = azurerm.botservice.latest.Bot("bot",
+    etag="etag1",
+    kind="sdk",
+    location="West US",
+    resource_group_name="OneResourceGroupName",
+    resource_name="samplebotname",
+    sku={
+        "name": "S1",
+    },
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const bot = new azurerm.botservice.latest.Bot("bot", {
+    etag: "etag1",
+    kind: "sdk",
+    location: "West US",
+    resourceGroupName: "OneResourceGroupName",
+    resourceName: "samplebotname",
+    sku: {
+        name: "S1",
+    },
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Bot Resource {#create}

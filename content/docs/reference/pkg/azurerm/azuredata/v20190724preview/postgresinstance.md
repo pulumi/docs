@@ -12,6 +12,67 @@ meta_desc: "Explore the PostgresInstance resource of the azuredata/v20190724prev
 
 A Postgres Instance.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates a postgres Instance.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var postgresInstance = new AzureRM.AzureData.V20190724Preview.PostgresInstance("postgresInstance", new AzureRM.AzureData.V20190724Preview.PostgresInstanceArgs
+        {
+            PostgresInstanceName = "testpostgresInstance",
+            ResourceGroupName = "testrg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+postgres_instance = azurerm.azuredata.v20190724preview.PostgresInstance("postgresInstance",
+    postgres_instance_name="testpostgresInstance",
+    resource_group_name="testrg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const postgresInstance = new azurerm.azuredata.v20190724preview.PostgresInstance("postgresInstance", {
+    postgresInstanceName: "testpostgresInstance",
+    resourceGroupName: "testrg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PostgresInstance Resource {#create}

@@ -12,6 +12,76 @@ meta_desc: "Explore the TransactionNode resource of the blockchain/v20180601prev
 
 Payload of the transaction node which is the request/response of the resource provider.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### TransactionNodes_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var transactionNode = new AzureRM.Blockchain.V20180601Preview.TransactionNode("transactionNode", new AzureRM.Blockchain.V20180601Preview.TransactionNodeArgs
+        {
+            BlockchainMemberName = "contosemember1",
+            Location = "southeastasia",
+            Password = "1234abcdEFG1",
+            ResourceGroupName = "mygroup",
+            TransactionNodeName = "txnode2",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+transaction_node = azurerm.blockchain.v20180601preview.TransactionNode("transactionNode",
+    blockchain_member_name="contosemember1",
+    location="southeastasia",
+    password="1234abcdEFG1",
+    resource_group_name="mygroup",
+    transaction_node_name="txnode2")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const transactionNode = new azurerm.blockchain.v20180601preview.TransactionNode("transactionNode", {
+    blockchainMemberName: "contosemember1",
+    location: "southeastasia",
+    password: "1234abcdEFG1",
+    resourceGroupName: "mygroup",
+    transactionNodeName: "txnode2",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TransactionNode Resource {#create}

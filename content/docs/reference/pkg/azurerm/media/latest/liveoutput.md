@@ -12,6 +12,95 @@ meta_desc: "Explore the LiveOutput resource of the media/latest module, includin
 
 The Live Output.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a LiveOutput
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var liveOutput = new AzureRM.Media.Latest.LiveOutput("liveOutput", new AzureRM.Media.Latest.LiveOutputArgs
+        {
+            AccountName = "slitestmedia10",
+            ArchiveWindowLength = "PT5M",
+            AssetName = "6f3264f5-a189-48b4-a29a-a40f22575212",
+            Description = "test live output 1",
+            Hls = new AzureRM.Media.Latest.Inputs.HlsArgs
+            {
+                FragmentsPerTsSegment = 5,
+            },
+            LiveEventName = "myLiveEvent1",
+            LiveOutputName = "myLiveOutput1",
+            ManifestName = "testmanifest",
+            ResourceGroupName = "mediaresources",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+live_output = azurerm.media.latest.LiveOutput("liveOutput",
+    account_name="slitestmedia10",
+    archive_window_length="PT5M",
+    asset_name="6f3264f5-a189-48b4-a29a-a40f22575212",
+    description="test live output 1",
+    hls={
+        "fragmentsPerTsSegment": 5,
+    },
+    live_event_name="myLiveEvent1",
+    live_output_name="myLiveOutput1",
+    manifest_name="testmanifest",
+    resource_group_name="mediaresources")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const liveOutput = new azurerm.media.latest.LiveOutput("liveOutput", {
+    accountName: "slitestmedia10",
+    archiveWindowLength: "PT5M",
+    assetName: "6f3264f5-a189-48b4-a29a-a40f22575212",
+    description: "test live output 1",
+    hls: {
+        fragmentsPerTsSegment: 5,
+    },
+    liveEventName: "myLiveEvent1",
+    liveOutputName: "myLiveOutput1",
+    manifestName: "testmanifest",
+    resourceGroupName: "mediaresources",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LiveOutput Resource {#create}

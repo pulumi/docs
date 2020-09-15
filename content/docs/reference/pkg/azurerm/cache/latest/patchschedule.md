@@ -12,6 +12,106 @@ meta_desc: "Explore the PatchSchedule resource of the cache/latest module, inclu
 
 Response to put/get patch schedules for Redis cache.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### RedisCachePatchSchedulesCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var patchSchedule = new AzureRM.Cache.Latest.PatchSchedule("patchSchedule", new AzureRM.Cache.Latest.PatchScheduleArgs
+        {
+            Default = "default",
+            Name = "cache1",
+            ResourceGroupName = "rg1",
+            ScheduleEntries = 
+            {
+                new AzureRM.Cache.Latest.Inputs.ScheduleEntryArgs
+                {
+                    DayOfWeek = "Monday",
+                    MaintenanceWindow = "PT5H",
+                    StartHourUtc = 12,
+                },
+                new AzureRM.Cache.Latest.Inputs.ScheduleEntryArgs
+                {
+                    DayOfWeek = "Tuesday",
+                    StartHourUtc = 12,
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+patch_schedule = azurerm.cache.latest.PatchSchedule("patchSchedule",
+    default="default",
+    name="cache1",
+    resource_group_name="rg1",
+    schedule_entries=[
+        {
+            "dayOfWeek": "Monday",
+            "maintenanceWindow": "PT5H",
+            "startHourUtc": 12,
+        },
+        {
+            "dayOfWeek": "Tuesday",
+            "startHourUtc": 12,
+        },
+    ])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const patchSchedule = new azurerm.cache.latest.PatchSchedule("patchSchedule", {
+    "default": "default",
+    name: "cache1",
+    resourceGroupName: "rg1",
+    scheduleEntries: [
+        {
+            dayOfWeek: "Monday",
+            maintenanceWindow: "PT5H",
+            startHourUtc: 12,
+        },
+        {
+            dayOfWeek: "Tuesday",
+            startHourUtc: 12,
+        },
+    ],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PatchSchedule Resource {#create}

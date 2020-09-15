@@ -12,6 +12,89 @@ meta_desc: "Explore the IotHubResource resource of the devices/latest module, in
 
 The description of the IoT hub.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### IotHubResource_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var iotHubResource = new AzureRM.Devices.Latest.IotHubResource("iotHubResource", new AzureRM.Devices.Latest.IotHubResourceArgs
+        {
+            Etag = "AAAAAAFD6M4=",
+            Location = "centraluseuap",
+            ResourceGroupName = "myResourceGroup",
+            ResourceName = "testHub",
+            Sku = new AzureRM.Devices.Latest.Inputs.IotHubSkuInfoArgs
+            {
+                Capacity = 1,
+                Name = "S1",
+            },
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+iot_hub_resource = azurerm.devices.latest.IotHubResource("iotHubResource",
+    etag="AAAAAAFD6M4=",
+    location="centraluseuap",
+    resource_group_name="myResourceGroup",
+    resource_name="testHub",
+    sku={
+        "capacity": 1,
+        "name": "S1",
+    },
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const iotHubResource = new azurerm.devices.latest.IotHubResource("iotHubResource", {
+    etag: "AAAAAAFD6M4=",
+    location: "centraluseuap",
+    resourceGroupName: "myResourceGroup",
+    resourceName: "testHub",
+    sku: {
+        capacity: 1,
+        name: "S1",
+    },
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IotHubResource Resource {#create}

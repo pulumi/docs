@@ -12,6 +12,70 @@ meta_desc: "Explore the Factory resource of the datafactory/latest module, inclu
 
 Factory resource type.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Factories_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var factory = new AzureRM.DataFactory.Latest.Factory("factory", new AzureRM.DataFactory.Latest.FactoryArgs
+        {
+            FactoryName = "exampleFactoryName",
+            Location = "East US",
+            ResourceGroupName = "exampleResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+factory = azurerm.datafactory.latest.Factory("factory",
+    factory_name="exampleFactoryName",
+    location="East US",
+    resource_group_name="exampleResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const factory = new azurerm.datafactory.latest.Factory("factory", {
+    factoryName: "exampleFactoryName",
+    location: "East US",
+    resourceGroupName: "exampleResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Factory Resource {#create}

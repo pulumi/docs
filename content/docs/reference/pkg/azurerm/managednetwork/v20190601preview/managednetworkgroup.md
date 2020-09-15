@@ -12,6 +12,116 @@ meta_desc: "Explore the ManagedNetworkGroup resource of the managednetwork/v2019
 
 The Managed Network Group resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ManagementNetworkGroupsPut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedNetworkGroup = new AzureRM.ManagedNetwork.V20190601Preview.ManagedNetworkGroup("managedNetworkGroup", new AzureRM.ManagedNetwork.V20190601Preview.ManagedNetworkGroupArgs
+        {
+            ManagedNetworkGroupName = "myManagedNetworkGroup1",
+            ManagedNetworkName = "myManagedNetwork",
+            ManagementGroups = {},
+            ResourceGroupName = "myResourceGroup",
+            Subnets = 
+            {
+                new AzureRM.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                {
+                    Id = "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA/subnets/subnetA",
+                },
+            },
+            Subscriptions = {},
+            VirtualNetworks = 
+            {
+                new AzureRM.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                {
+                    Id = "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
+                },
+                new AzureRM.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                {
+                    Id = "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_network_group = azurerm.managednetwork.v20190601preview.ManagedNetworkGroup("managedNetworkGroup",
+    managed_network_group_name="myManagedNetworkGroup1",
+    managed_network_name="myManagedNetwork",
+    management_groups=[],
+    resource_group_name="myResourceGroup",
+    subnets=[{
+        "id": "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA/subnets/subnetA",
+    }],
+    subscriptions=[],
+    virtual_networks=[
+        {
+            "id": "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
+        },
+        {
+            "id": "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
+        },
+    ])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedNetworkGroup = new azurerm.managednetwork.v20190601preview.ManagedNetworkGroup("managedNetworkGroup", {
+    managedNetworkGroupName: "myManagedNetworkGroup1",
+    managedNetworkName: "myManagedNetwork",
+    managementGroups: [],
+    resourceGroupName: "myResourceGroup",
+    subnets: [{
+        id: "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA/subnets/subnetA",
+    }],
+    subscriptions: [],
+    virtualNetworks: [
+        {
+            id: "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
+        },
+        {
+            id: "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
+        },
+    ],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagedNetworkGroup Resource {#create}

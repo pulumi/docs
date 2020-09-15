@@ -12,6 +12,82 @@ meta_desc: "Explore the Backup resource of the netapp/latest module, including e
 
 Backup of a Volume
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Backups_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var backup = new AzureRM.NetApp.Latest.Backup("backup", new AzureRM.NetApp.Latest.BackupArgs
+        {
+            AccountName = "account1",
+            BackupName = "backup1",
+            Label = "myLabel",
+            Location = "eastus",
+            PoolName = "pool1",
+            ResourceGroupName = "myRG",
+            VolumeName = "volume1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+backup = azurerm.netapp.latest.Backup("backup",
+    account_name="account1",
+    backup_name="backup1",
+    label="myLabel",
+    location="eastus",
+    pool_name="pool1",
+    resource_group_name="myRG",
+    volume_name="volume1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const backup = new azurerm.netapp.latest.Backup("backup", {
+    accountName: "account1",
+    backupName: "backup1",
+    label: "myLabel",
+    location: "eastus",
+    poolName: "pool1",
+    resourceGroupName: "myRG",
+    volumeName: "volume1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Backup Resource {#create}

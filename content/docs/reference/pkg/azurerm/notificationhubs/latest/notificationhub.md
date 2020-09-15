@@ -12,6 +12,73 @@ meta_desc: "Explore the NotificationHub resource of the notificationhubs/latest 
 
 Description of a NotificationHub Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### NotificationHubCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var notificationHub = new AzureRM.NotificationHubs.Latest.NotificationHub("notificationHub", new AzureRM.NotificationHubs.Latest.NotificationHubArgs
+        {
+            Location = "eastus",
+            NamespaceName = "nh-sdk-ns",
+            NotificationHubName = "nh-sdk-hub",
+            ResourceGroupName = "5ktrial",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+notification_hub = azurerm.notificationhubs.latest.NotificationHub("notificationHub",
+    location="eastus",
+    namespace_name="nh-sdk-ns",
+    notification_hub_name="nh-sdk-hub",
+    resource_group_name="5ktrial")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const notificationHub = new azurerm.notificationhubs.latest.NotificationHub("notificationHub", {
+    location: "eastus",
+    namespaceName: "nh-sdk-ns",
+    notificationHubName: "nh-sdk-hub",
+    resourceGroupName: "5ktrial",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NotificationHub Resource {#create}

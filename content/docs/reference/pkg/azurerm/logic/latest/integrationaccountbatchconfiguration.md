@@ -12,6 +12,73 @@ meta_desc: "Explore the IntegrationAccountBatchConfiguration resource of the log
 
 The batch configuration resource definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a batch configuration
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var integrationAccountBatchConfiguration = new AzureRM.Logic.Latest.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration", new AzureRM.Logic.Latest.IntegrationAccountBatchConfigurationArgs
+        {
+            BatchConfigurationName = "testBatchConfiguration",
+            IntegrationAccountName = "testIntegrationAccount",
+            Location = "westus",
+            ResourceGroupName = "testResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+integration_account_batch_configuration = azurerm.logic.latest.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration",
+    batch_configuration_name="testBatchConfiguration",
+    integration_account_name="testIntegrationAccount",
+    location="westus",
+    resource_group_name="testResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const integrationAccountBatchConfiguration = new azurerm.logic.latest.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration", {
+    batchConfigurationName: "testBatchConfiguration",
+    integrationAccountName: "testIntegrationAccount",
+    location: "westus",
+    resourceGroupName: "testResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IntegrationAccountBatchConfiguration Resource {#create}

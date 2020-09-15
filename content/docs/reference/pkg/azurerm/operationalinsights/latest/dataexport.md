@@ -12,6 +12,76 @@ meta_desc: "Explore the DataExport resource of the operationalinsights/latest mo
 
 The top level data export resource container.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### DataExportCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataExport = new AzureRM.OperationalInsights.Latest.DataExport("dataExport", new AzureRM.OperationalInsights.Latest.DataExportArgs
+        {
+            DataExportName = "export1",
+            ResourceGroupName = "RgTest1",
+            TableNames = 
+            {
+                "Heartbeat",
+            },
+            WorkspaceName = "DeWnTest1234",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+data_export = azurerm.operationalinsights.latest.DataExport("dataExport",
+    data_export_name="export1",
+    resource_group_name="RgTest1",
+    table_names=["Heartbeat"],
+    workspace_name="DeWnTest1234")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataExport = new azurerm.operationalinsights.latest.DataExport("dataExport", {
+    dataExportName: "export1",
+    resourceGroupName: "RgTest1",
+    tableNames: ["Heartbeat"],
+    workspaceName: "DeWnTest1234",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DataExport Resource {#create}

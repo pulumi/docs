@@ -12,6 +12,90 @@ meta_desc: "Explore the Account resource of the maps/v20200201preview module, in
 
 An Azure resource which represents access to a suite of Maps REST APIs.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateAccount
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var account = new AzureRM.Maps.V20200201Preview.Account("account", new AzureRM.Maps.V20200201Preview.AccountArgs
+        {
+            AccountName = "myMapsAccount",
+            Location = "global",
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Maps.V20200201Preview.Inputs.SkuArgs
+            {
+                Name = "S0",
+            },
+            Tags = 
+            {
+                { "test", "true" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+account = azurerm.maps.v20200201preview.Account("account",
+    account_name="myMapsAccount",
+    location="global",
+    resource_group_name="myResourceGroup",
+    sku={
+        "name": "S0",
+    },
+    tags={
+        "test": "true",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const account = new azurerm.maps.v20200201preview.Account("account", {
+    accountName: "myMapsAccount",
+    location: "global",
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        name: "S0",
+    },
+    tags: {
+        test: "true",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Account Resource {#create}

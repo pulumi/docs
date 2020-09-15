@@ -12,6 +12,73 @@ meta_desc: "Explore the ProtectionContainer resource of the recoveryservices/lat
 
 Base class for container with backup items. Containers with specific workloads are derived from this class.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### RegisterAzure Storage ProtectionContainers
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var protectionContainer = new AzureRM.RecoveryServices.Latest.ProtectionContainer("protectionContainer", new AzureRM.RecoveryServices.Latest.ProtectionContainerArgs
+        {
+            ContainerName = "VMAppContainer;Compute;testRG;testSQL",
+            FabricName = "Azure",
+            ResourceGroupName = "test-rg",
+            VaultName = "testvault",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+protection_container = azurerm.recoveryservices.latest.ProtectionContainer("protectionContainer",
+    container_name="VMAppContainer;Compute;testRG;testSQL",
+    fabric_name="Azure",
+    resource_group_name="test-rg",
+    vault_name="testvault")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const protectionContainer = new azurerm.recoveryservices.latest.ProtectionContainer("protectionContainer", {
+    containerName: "VMAppContainer;Compute;testRG;testSQL",
+    fabricName: "Azure",
+    resourceGroupName: "test-rg",
+    vaultName: "testvault",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ProtectionContainer Resource {#create}

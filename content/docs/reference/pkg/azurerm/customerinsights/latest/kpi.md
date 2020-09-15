@@ -12,6 +12,146 @@ meta_desc: "Explore the Kpi resource of the customerinsights/latest module, incl
 
 The KPI resource format.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Kpi_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var kpi = new AzureRM.CustomerInsights.Latest.Kpi("kpi", new AzureRM.CustomerInsights.Latest.KpiArgs
+        {
+            Aliases = 
+            {
+                new AzureRM.CustomerInsights.Latest.Inputs.KpiAliasArgs
+                {
+                    AliasName = "alias",
+                    Expression = "Id+4",
+                },
+            },
+            CalculationWindow = "Day",
+            Description = 
+            {
+                { "en-us", "Kpi Description" },
+            },
+            DisplayName = 
+            {
+                { "en-us", "Kpi DisplayName" },
+            },
+            EntityType = "Profile",
+            EntityTypeName = "testProfile2327128",
+            Expression = "SavingAccountBalance",
+            Function = "Sum",
+            GroupBy = 
+            {
+                "SavingAccountBalance",
+            },
+            HubName = "sdkTestHub",
+            KpiName = "kpiTest45453647",
+            ResourceGroupName = "TestHubRG",
+            ThresHolds = new AzureRM.CustomerInsights.Latest.Inputs.KpiThresholdsArgs
+            {
+                IncreasingKpi = true,
+                LowerLimit = 5,
+                UpperLimit = 50,
+            },
+            Unit = "unit",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+kpi = azurerm.customerinsights.latest.Kpi("kpi",
+    aliases=[{
+        "aliasName": "alias",
+        "expression": "Id+4",
+    }],
+    calculation_window="Day",
+    description={
+        "en-us": "Kpi Description",
+    },
+    display_name={
+        "en-us": "Kpi DisplayName",
+    },
+    entity_type="Profile",
+    entity_type_name="testProfile2327128",
+    expression="SavingAccountBalance",
+    function="Sum",
+    group_by=["SavingAccountBalance"],
+    hub_name="sdkTestHub",
+    kpi_name="kpiTest45453647",
+    resource_group_name="TestHubRG",
+    thres_holds={
+        "increasingKpi": True,
+        "lowerLimit": 5,
+        "upperLimit": 50,
+    },
+    unit="unit")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const kpi = new azurerm.customerinsights.latest.Kpi("kpi", {
+    aliases: [{
+        aliasName: "alias",
+        expression: "Id+4",
+    }],
+    calculationWindow: "Day",
+    description: {
+        "en-us": "Kpi Description",
+    },
+    displayName: {
+        "en-us": "Kpi DisplayName",
+    },
+    entityType: "Profile",
+    entityTypeName: "testProfile2327128",
+    expression: "SavingAccountBalance",
+    "function": "Sum",
+    groupBy: ["SavingAccountBalance"],
+    hubName: "sdkTestHub",
+    kpiName: "kpiTest45453647",
+    resourceGroupName: "TestHubRG",
+    thresHolds: {
+        increasingKpi: true,
+        lowerLimit: 5,
+        upperLimit: 50,
+    },
+    unit: "unit",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Kpi Resource {#create}

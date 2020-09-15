@@ -12,6 +12,99 @@ meta_desc: "Explore the Connection resource of the automation/latest module, inc
 
 Definition of the connection.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update connection
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var connection = new AzureRM.Automation.Latest.Connection("connection", new AzureRM.Automation.Latest.ConnectionArgs
+        {
+            AutomationAccountName = "myAutomationAccount28",
+            ConnectionName = "mysConnection",
+            ConnectionType = new AzureRM.Automation.Latest.Inputs.ConnectionTypeAssociationPropertyArgs
+            {
+                Name = "Azure",
+            },
+            Description = "my description goes here",
+            FieldDefinitionValues = 
+            {
+                { "AutomationCertificateName", "mysCertificateName" },
+                { "SubscriptionID", "subid" },
+            },
+            Name = "mysConnection",
+            ResourceGroupName = "rg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+connection = azurerm.automation.latest.Connection("connection",
+    automation_account_name="myAutomationAccount28",
+    connection_name="mysConnection",
+    connection_type={
+        "name": "Azure",
+    },
+    description="my description goes here",
+    field_definition_values={
+        "AutomationCertificateName": "mysCertificateName",
+        "SubscriptionID": "subid",
+    },
+    name="mysConnection",
+    resource_group_name="rg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const connection = new azurerm.automation.latest.Connection("connection", {
+    automationAccountName: "myAutomationAccount28",
+    connectionName: "mysConnection",
+    connectionType: {
+        name: "Azure",
+    },
+    description: "my description goes here",
+    fieldDefinitionValues: {
+        AutomationCertificateName: "mysCertificateName",
+        SubscriptionID: "subid",
+    },
+    name: "mysConnection",
+    resourceGroupName: "rg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Connection Resource {#create}

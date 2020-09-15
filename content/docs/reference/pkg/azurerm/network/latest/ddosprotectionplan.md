@@ -12,6 +12,70 @@ meta_desc: "Explore the DdosProtectionPlan resource of the network/latest module
 
 A DDoS protection plan in a resource group.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create DDoS protection plan
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ddosProtectionPlan = new AzureRM.Network.Latest.DdosProtectionPlan("ddosProtectionPlan", new AzureRM.Network.Latest.DdosProtectionPlanArgs
+        {
+            DdosProtectionPlanName = "test-plan",
+            Location = "westus",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+ddos_protection_plan = azurerm.network.latest.DdosProtectionPlan("ddosProtectionPlan",
+    ddos_protection_plan_name="test-plan",
+    location="westus",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const ddosProtectionPlan = new azurerm.network.latest.DdosProtectionPlan("ddosProtectionPlan", {
+    ddosProtectionPlanName: "test-plan",
+    location: "westus",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DdosProtectionPlan Resource {#create}

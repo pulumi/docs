@@ -12,6 +12,169 @@ meta_desc: "Explore the ApiOperation resource of the apimanagement/v20191201prev
 
 Api Operation details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateApiOperation
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiOperation = new AzureRM.ApiManagement.V20191201Preview.ApiOperation("apiOperation", new AzureRM.ApiManagement.V20191201Preview.ApiOperationArgs
+        {
+            ApiId = "PetStoreTemplate2",
+            Description = "This can only be done by the logged in user.",
+            DisplayName = "createUser2",
+            Method = "POST",
+            OperationId = "newoperations",
+            Request = new AzureRM.ApiManagement.V20191201Preview.Inputs.RequestContractArgs
+            {
+                Description = "Created user object",
+                Headers = {},
+                QueryParameters = {},
+                Representations = 
+                {
+                    new AzureRM.ApiManagement.V20191201Preview.Inputs.RepresentationContractArgs
+                    {
+                        ContentType = "application/json",
+                        SchemaId = "592f6c1d0af5840ca8897f0c",
+                        TypeName = "User",
+                    },
+                },
+            },
+            ResourceGroupName = "rg1",
+            Responses = 
+            {
+                new AzureRM.ApiManagement.V20191201Preview.Inputs.ResponseContractArgs
+                {
+                    Description = "successful operation",
+                    Headers = {},
+                    Representations = 
+                    {
+                        new AzureRM.ApiManagement.V20191201Preview.Inputs.RepresentationContractArgs
+                        {
+                            ContentType = "application/xml",
+                        },
+                        new AzureRM.ApiManagement.V20191201Preview.Inputs.RepresentationContractArgs
+                        {
+                            ContentType = "application/json",
+                        },
+                    },
+                    StatusCode = 200,
+                },
+            },
+            ServiceName = "apimService1",
+            TemplateParameters = {},
+            UrlTemplate = "/user1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api_operation = azurerm.apimanagement.v20191201preview.ApiOperation("apiOperation",
+    api_id="PetStoreTemplate2",
+    description="This can only be done by the logged in user.",
+    display_name="createUser2",
+    method="POST",
+    operation_id="newoperations",
+    request={
+        "description": "Created user object",
+        "headers": [],
+        "queryParameters": [],
+        "representations": [{
+            "contentType": "application/json",
+            "schemaId": "592f6c1d0af5840ca8897f0c",
+            "typeName": "User",
+        }],
+    },
+    resource_group_name="rg1",
+    responses=[{
+        "description": "successful operation",
+        "headers": [],
+        "representations": [
+            {
+                "contentType": "application/xml",
+            },
+            {
+                "contentType": "application/json",
+            },
+        ],
+        "statusCode": 200,
+    }],
+    service_name="apimService1",
+    template_parameters=[],
+    url_template="/user1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const apiOperation = new azurerm.apimanagement.v20191201preview.ApiOperation("apiOperation", {
+    apiId: "PetStoreTemplate2",
+    description: "This can only be done by the logged in user.",
+    displayName: "createUser2",
+    method: "POST",
+    operationId: "newoperations",
+    request: {
+        description: "Created user object",
+        headers: [],
+        queryParameters: [],
+        representations: [{
+            contentType: "application/json",
+            schemaId: "592f6c1d0af5840ca8897f0c",
+            typeName: "User",
+        }],
+    },
+    resourceGroupName: "rg1",
+    responses: [{
+        description: "successful operation",
+        headers: [],
+        representations: [
+            {
+                contentType: "application/xml",
+            },
+            {
+                contentType: "application/json",
+            },
+        ],
+        statusCode: 200,
+    }],
+    serviceName: "apimService1",
+    templateParameters: [],
+    urlTemplate: "/user1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApiOperation Resource {#create}

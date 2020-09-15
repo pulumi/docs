@@ -12,6 +12,223 @@ meta_desc: "Explore the VendorSkus resource of the hybridnetwork/v20200101previe
 
 Sku sub resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update the sku of Vendor resource
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vendorSkus = new AzureRM.HybridNetwork.V20200101Preview.VendorSkus("vendorSkus", new AzureRM.HybridNetwork.V20200101Preview.VendorSkusArgs
+        {
+            DeploymentMode = "PrivateEdgeZone",
+            ManagedApplicationTemplate = ,
+            Preview = true,
+            SkuName = "TestSku",
+            VendorName = "TestVendor",
+            VirtualNetworkFunctionTemplate = new AzureRM.HybridNetwork.V20200101Preview.Inputs.VirtualNetworkFunctionTemplateArgs
+            {
+                VirutalNetworkFunctionRoleConfigurations = 
+                {
+                    new AzureRM.HybridNetwork.V20200101Preview.Inputs.VirtualNetworkFunctionRoleConfigurationArgs
+                    {
+                        ImageReference = new AzureRM.HybridNetwork.V20200101Preview.Inputs.ImageReferenceArgs
+                        {
+                            OsType = "Linux",
+                            SasUri = "https://<yourstorage>.blob.core.windows.net/<yourcontainer>/<yourfile>?sp=rl&st=st>Z&se=<se>Z&sv=<sv>&sr=b&sig=<signature>",
+                            VhdName = "vhdName",
+                            VhdType = "VHD",
+                        },
+                        NetworkInterfaces = 
+                        {
+                            new AzureRM.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceArgs
+                            {
+                                IpConfigurations = 
+                                {
+                                    new AzureRM.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceIPConfigurationArgs
+                                    {
+                                        Gateway = "",
+                                        IpAddress = "",
+                                        IpAllocationMethod = "Dynamic",
+                                        IpVersion = "IPv4",
+                                        Subnet = "",
+                                    },
+                                },
+                                MacAddress = "",
+                                NetworkInterfaceName = "nic1",
+                                VmSwitchType = "Wan",
+                            },
+                            new AzureRM.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceArgs
+                            {
+                                IpConfigurations = 
+                                {
+                                    new AzureRM.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceIPConfigurationArgs
+                                    {
+                                        Gateway = "",
+                                        IpAddress = "",
+                                        IpAllocationMethod = "Dynamic",
+                                        IpVersion = "IPv4",
+                                        Subnet = "",
+                                    },
+                                },
+                                MacAddress = "",
+                                NetworkInterfaceName = "nic2",
+                                VmSwitchType = "Management",
+                            },
+                        },
+                        OsProfile = new AzureRM.HybridNetwork.V20200101Preview.Inputs.OsProfileArgs
+                        {
+                            AdminPassword = "dummypassword",
+                            AdminUsername = "dummyuser",
+                        },
+                        RoleName = "test",
+                        RoleType = "VirtualMachine",
+                        VirtualMachineSize = "Standard_D3_v2",
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+vendor_skus = azurerm.hybridnetwork.v20200101preview.VendorSkus("vendorSkus",
+    deployment_mode="PrivateEdgeZone",
+    managed_application_template={},
+    preview=True,
+    sku_name="TestSku",
+    vendor_name="TestVendor",
+    virtual_network_function_template={
+        "virutalNetworkFunctionRoleConfigurations": [{
+            "imageReference": {
+                "osType": "Linux",
+                "sasUri": "https://<yourstorage>.blob.core.windows.net/<yourcontainer>/<yourfile>?sp=rl&st=st>Z&se=<se>Z&sv=<sv>&sr=b&sig=<signature>",
+                "vhdName": "vhdName",
+                "vhdType": "VHD",
+            },
+            "networkInterfaces": [
+                {
+                    "ipConfigurations": [{
+                        "gateway": "",
+                        "ipAddress": "",
+                        "ipAllocationMethod": "Dynamic",
+                        "ipVersion": "IPv4",
+                        "subnet": "",
+                    }],
+                    "macAddress": "",
+                    "networkInterfaceName": "nic1",
+                    "vmSwitchType": "Wan",
+                },
+                {
+                    "ipConfigurations": [{
+                        "gateway": "",
+                        "ipAddress": "",
+                        "ipAllocationMethod": "Dynamic",
+                        "ipVersion": "IPv4",
+                        "subnet": "",
+                    }],
+                    "macAddress": "",
+                    "networkInterfaceName": "nic2",
+                    "vmSwitchType": "Management",
+                },
+            ],
+            "osProfile": {
+                "adminPassword": "dummypassword",
+                "adminUsername": "dummyuser",
+            },
+            "roleName": "test",
+            "roleType": "VirtualMachine",
+            "virtualMachineSize": "Standard_D3_v2",
+        }],
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const vendorSkus = new azurerm.hybridnetwork.v20200101preview.VendorSkus("vendorSkus", {
+    deploymentMode: "PrivateEdgeZone",
+    managedApplicationTemplate: {},
+    preview: true,
+    skuName: "TestSku",
+    vendorName: "TestVendor",
+    virtualNetworkFunctionTemplate: {
+        virutalNetworkFunctionRoleConfigurations: [{
+            imageReference: {
+                osType: "Linux",
+                sasUri: "https://<yourstorage>.blob.core.windows.net/<yourcontainer>/<yourfile>?sp=rl&st=st>Z&se=<se>Z&sv=<sv>&sr=b&sig=<signature>",
+                vhdName: "vhdName",
+                vhdType: "VHD",
+            },
+            networkInterfaces: [
+                {
+                    ipConfigurations: [{
+                        gateway: "",
+                        ipAddress: "",
+                        ipAllocationMethod: "Dynamic",
+                        ipVersion: "IPv4",
+                        subnet: "",
+                    }],
+                    macAddress: "",
+                    networkInterfaceName: "nic1",
+                    vmSwitchType: "Wan",
+                },
+                {
+                    ipConfigurations: [{
+                        gateway: "",
+                        ipAddress: "",
+                        ipAllocationMethod: "Dynamic",
+                        ipVersion: "IPv4",
+                        subnet: "",
+                    }],
+                    macAddress: "",
+                    networkInterfaceName: "nic2",
+                    vmSwitchType: "Management",
+                },
+            ],
+            osProfile: {
+                adminPassword: "dummypassword",
+                adminUsername: "dummyuser",
+            },
+            roleName: "test",
+            roleType: "VirtualMachine",
+            virtualMachineSize: "Standard_D3_v2",
+        }],
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VendorSkus Resource {#create}

@@ -12,6 +12,70 @@ meta_desc: "Explore the PublishedBlueprint resource of the management/v20171111p
 
 Represents a published Blueprint.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PublishedBlueprint_Publish
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var publishedBlueprint = new AzureRM.Management.V20171111Preview.PublishedBlueprint("publishedBlueprint", new AzureRM.Management.V20171111Preview.PublishedBlueprintArgs
+        {
+            BlueprintName = "simpleBlueprint",
+            ManagementGroupName = "ContosoOnlineGroup",
+            VersionId = "v2",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+published_blueprint = azurerm.management.v20171111preview.PublishedBlueprint("publishedBlueprint",
+    blueprint_name="simpleBlueprint",
+    management_group_name="ContosoOnlineGroup",
+    version_id="v2")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const publishedBlueprint = new azurerm.management.v20171111preview.PublishedBlueprint("publishedBlueprint", {
+    blueprintName: "simpleBlueprint",
+    managementGroupName: "ContosoOnlineGroup",
+    versionId: "v2",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PublishedBlueprint Resource {#create}

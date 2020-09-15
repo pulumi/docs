@@ -12,6 +12,3981 @@ meta_desc: "Explore the VirtualMachineScaleSet resource of the compute/latest mo
 
 Describes a Virtual Machine Scale Set.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a custom-image scale set from an unmanaged generalized os image.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "westus",
+            Overprovision = true,
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_D1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadWrite",
+                        CreateOption = "FromImage",
+                        Image = new AzureRM.Compute.Latest.Inputs.VirtualHardDiskArgs
+                        {
+                            Uri = "http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/{existing-generalized-os-image-blob-name}.vhd",
+                        },
+                        Name = "osDisk",
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="westus",
+    overprovision=True,
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 3,
+        "name": "Standard_D1_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Manual",
+    },
+    virtual_machine_profile={
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminPassword": "{your-password}",
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+        },
+        "storageProfile": {
+            "osDisk": {
+                "caching": "ReadWrite",
+                "createOption": "FromImage",
+                "image": {
+                    "uri": "http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/{existing-generalized-os-image-blob-name}.vhd",
+                },
+                "name": "osDisk",
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "westus",
+    overprovision: true,
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_D1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        storageProfile: {
+            osDisk: {
+                caching: "ReadWrite",
+                createOption: "FromImage",
+                image: {
+                    uri: "http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/{existing-generalized-os-image-blob-name}.vhd",
+                },
+                name: "osDisk",
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
+### Create a platform-image scale set with unmanaged os disks.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "westus",
+            Overprovision = true,
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_D1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    ImageReference = new AzureRM.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "WindowsServer",
+                        Publisher = "MicrosoftWindowsServer",
+                        Sku = "2016-Datacenter",
+                        Version = "latest",
+                    },
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadWrite",
+                        CreateOption = "FromImage",
+                        Name = "osDisk",
+                        VhdContainers = 
+                        {
+                            "http://{existing-storage-account-name-0}.blob.core.windows.net/vhdContainer",
+                            "http://{existing-storage-account-name-1}.blob.core.windows.net/vhdContainer",
+                            "http://{existing-storage-account-name-2}.blob.core.windows.net/vhdContainer",
+                            "http://{existing-storage-account-name-3}.blob.core.windows.net/vhdContainer",
+                            "http://{existing-storage-account-name-4}.blob.core.windows.net/vhdContainer",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="westus",
+    overprovision=True,
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 3,
+        "name": "Standard_D1_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Manual",
+    },
+    virtual_machine_profile={
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminPassword": "{your-password}",
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+        },
+        "storageProfile": {
+            "imageReference": {
+                "offer": "WindowsServer",
+                "publisher": "MicrosoftWindowsServer",
+                "sku": "2016-Datacenter",
+                "version": "latest",
+            },
+            "osDisk": {
+                "caching": "ReadWrite",
+                "createOption": "FromImage",
+                "name": "osDisk",
+                "vhdContainers": [
+                    "http://{existing-storage-account-name-0}.blob.core.windows.net/vhdContainer",
+                    "http://{existing-storage-account-name-1}.blob.core.windows.net/vhdContainer",
+                    "http://{existing-storage-account-name-2}.blob.core.windows.net/vhdContainer",
+                    "http://{existing-storage-account-name-3}.blob.core.windows.net/vhdContainer",
+                    "http://{existing-storage-account-name-4}.blob.core.windows.net/vhdContainer",
+                ],
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "westus",
+    overprovision: true,
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_D1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        storageProfile: {
+            imageReference: {
+                offer: "WindowsServer",
+                publisher: "MicrosoftWindowsServer",
+                sku: "2016-Datacenter",
+                version: "latest",
+            },
+            osDisk: {
+                caching: "ReadWrite",
+                createOption: "FromImage",
+                name: "osDisk",
+                vhdContainers: [
+                    "http://{existing-storage-account-name-0}.blob.core.windows.net/vhdContainer",
+                    "http://{existing-storage-account-name-1}.blob.core.windows.net/vhdContainer",
+                    "http://{existing-storage-account-name-2}.blob.core.windows.net/vhdContainer",
+                    "http://{existing-storage-account-name-3}.blob.core.windows.net/vhdContainer",
+                    "http://{existing-storage-account-name-4}.blob.core.windows.net/vhdContainer",
+                ],
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
+### Create a scale set from a custom image.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "westus",
+            Overprovision = true,
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_D1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    ImageReference = new AzureRM.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+                    },
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadWrite",
+                        CreateOption = "FromImage",
+                        ManagedDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        {
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="westus",
+    overprovision=True,
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 3,
+        "name": "Standard_D1_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Manual",
+    },
+    virtual_machine_profile={
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminPassword": "{your-password}",
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+        },
+        "storageProfile": {
+            "imageReference": {
+                "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+            },
+            "osDisk": {
+                "caching": "ReadWrite",
+                "createOption": "FromImage",
+                "managedDisk": {
+                    "storageAccountType": "Standard_LRS",
+                },
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "westus",
+    overprovision: true,
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_D1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        storageProfile: {
+            imageReference: {
+                id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+            },
+            osDisk: {
+                caching: "ReadWrite",
+                createOption: "FromImage",
+                managedDisk: {
+                    storageAccountType: "Standard_LRS",
+                },
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
+### Create a scale set with DiskEncryptionSet resource in os disk and data disk.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "westus",
+            Overprovision = true,
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_DS1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    DataDisks = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetDataDiskArgs
+                        {
+                            Caching = "ReadWrite",
+                            CreateOption = "Empty",
+                            DiskSizeGB = 1023,
+                            Lun = 0,
+                            ManagedDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                            {
+                                DiskEncryptionSet = new AzureRM.Compute.Latest.Inputs.DiskEncryptionSetParametersArgs
+                                {
+                                    Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+                                },
+                                StorageAccountType = "Standard_LRS",
+                            },
+                        },
+                    },
+                    ImageReference = new AzureRM.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+                    },
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadWrite",
+                        CreateOption = "FromImage",
+                        ManagedDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        {
+                            DiskEncryptionSet = new AzureRM.Compute.Latest.Inputs.DiskEncryptionSetParametersArgs
+                            {
+                                Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+                            },
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="westus",
+    overprovision=True,
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 3,
+        "name": "Standard_DS1_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Manual",
+    },
+    virtual_machine_profile={
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminPassword": "{your-password}",
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+        },
+        "storageProfile": {
+            "dataDisks": [{
+                "caching": "ReadWrite",
+                "createOption": "Empty",
+                "diskSizeGB": 1023,
+                "lun": 0,
+                "managedDisk": {
+                    "diskEncryptionSet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+                    },
+                    "storageAccountType": "Standard_LRS",
+                },
+            }],
+            "imageReference": {
+                "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+            },
+            "osDisk": {
+                "caching": "ReadWrite",
+                "createOption": "FromImage",
+                "managedDisk": {
+                    "diskEncryptionSet": {
+                        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+                    },
+                    "storageAccountType": "Standard_LRS",
+                },
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "westus",
+    overprovision: true,
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_DS1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        storageProfile: {
+            dataDisks: [{
+                caching: "ReadWrite",
+                createOption: "Empty",
+                diskSizeGB: 1023,
+                lun: 0,
+                managedDisk: {
+                    diskEncryptionSet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+                    },
+                    storageAccountType: "Standard_LRS",
+                },
+            }],
+            imageReference: {
+                id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+            },
+            osDisk: {
+                caching: "ReadWrite",
+                createOption: "FromImage",
+                managedDisk: {
+                    diskEncryptionSet: {
+                        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+                    },
+                    storageAccountType: "Standard_LRS",
+                },
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
+### Create a scale set with Host Encryption using encryptionAtHost property.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "westus",
+            Overprovision = true,
+            Plan = new AzureRM.Compute.Latest.Inputs.PlanArgs
+            {
+                Name = "windows2016",
+                Product = "windows-data-science-vm",
+                Publisher = "microsoft-ads",
+            },
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_DS1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                SecurityProfile = new AzureRM.Compute.Latest.Inputs.SecurityProfileArgs
+                {
+                    EncryptionAtHost = true,
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    ImageReference = new AzureRM.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "windows-data-science-vm",
+                        Publisher = "microsoft-ads",
+                        Sku = "windows2016",
+                        Version = "latest",
+                    },
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadOnly",
+                        CreateOption = "FromImage",
+                        ManagedDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        {
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="westus",
+    overprovision=True,
+    plan={
+        "name": "windows2016",
+        "product": "windows-data-science-vm",
+        "publisher": "microsoft-ads",
+    },
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 3,
+        "name": "Standard_DS1_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Manual",
+    },
+    virtual_machine_profile={
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminPassword": "{your-password}",
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+        },
+        "securityProfile": {
+            "encryptionAtHost": True,
+        },
+        "storageProfile": {
+            "imageReference": {
+                "offer": "windows-data-science-vm",
+                "publisher": "microsoft-ads",
+                "sku": "windows2016",
+                "version": "latest",
+            },
+            "osDisk": {
+                "caching": "ReadOnly",
+                "createOption": "FromImage",
+                "managedDisk": {
+                    "storageAccountType": "Standard_LRS",
+                },
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "westus",
+    overprovision: true,
+    plan: {
+        name: "windows2016",
+        product: "windows-data-science-vm",
+        publisher: "microsoft-ads",
+    },
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_DS1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        securityProfile: {
+            encryptionAtHost: true,
+        },
+        storageProfile: {
+            imageReference: {
+                offer: "windows-data-science-vm",
+                publisher: "microsoft-ads",
+                sku: "windows2016",
+                version: "latest",
+            },
+            osDisk: {
+                caching: "ReadOnly",
+                createOption: "FromImage",
+                managedDisk: {
+                    storageAccountType: "Standard_LRS",
+                },
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
+### Create a scale set with a marketplace image plan.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "westus",
+            Overprovision = true,
+            Plan = new AzureRM.Compute.Latest.Inputs.PlanArgs
+            {
+                Name = "windows2016",
+                Product = "windows-data-science-vm",
+                Publisher = "microsoft-ads",
+            },
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_D1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    ImageReference = new AzureRM.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "windows-data-science-vm",
+                        Publisher = "microsoft-ads",
+                        Sku = "windows2016",
+                        Version = "latest",
+                    },
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadWrite",
+                        CreateOption = "FromImage",
+                        ManagedDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        {
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="westus",
+    overprovision=True,
+    plan={
+        "name": "windows2016",
+        "product": "windows-data-science-vm",
+        "publisher": "microsoft-ads",
+    },
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 3,
+        "name": "Standard_D1_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Manual",
+    },
+    virtual_machine_profile={
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminPassword": "{your-password}",
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+        },
+        "storageProfile": {
+            "imageReference": {
+                "offer": "windows-data-science-vm",
+                "publisher": "microsoft-ads",
+                "sku": "windows2016",
+                "version": "latest",
+            },
+            "osDisk": {
+                "caching": "ReadWrite",
+                "createOption": "FromImage",
+                "managedDisk": {
+                    "storageAccountType": "Standard_LRS",
+                },
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "westus",
+    overprovision: true,
+    plan: {
+        name: "windows2016",
+        product: "windows-data-science-vm",
+        publisher: "microsoft-ads",
+    },
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_D1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        storageProfile: {
+            imageReference: {
+                offer: "windows-data-science-vm",
+                publisher: "microsoft-ads",
+                sku: "windows2016",
+                version: "latest",
+            },
+            osDisk: {
+                caching: "ReadWrite",
+                createOption: "FromImage",
+                managedDisk: {
+                    storageAccountType: "Standard_LRS",
+                },
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
+### Create a scale set with an azure application gateway.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "westus",
+            Overprovision = true,
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_D1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    ImageReference = new AzureRM.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "WindowsServer",
+                        Publisher = "MicrosoftWindowsServer",
+                        Sku = "2016-Datacenter",
+                        Version = "latest",
+                    },
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadWrite",
+                        CreateOption = "FromImage",
+                        ManagedDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        {
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="westus",
+    overprovision=True,
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 3,
+        "name": "Standard_D1_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Manual",
+    },
+    virtual_machine_profile={
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminPassword": "{your-password}",
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+        },
+        "storageProfile": {
+            "imageReference": {
+                "offer": "WindowsServer",
+                "publisher": "MicrosoftWindowsServer",
+                "sku": "2016-Datacenter",
+                "version": "latest",
+            },
+            "osDisk": {
+                "caching": "ReadWrite",
+                "createOption": "FromImage",
+                "managedDisk": {
+                    "storageAccountType": "Standard_LRS",
+                },
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "westus",
+    overprovision: true,
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_D1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        storageProfile: {
+            imageReference: {
+                offer: "WindowsServer",
+                publisher: "MicrosoftWindowsServer",
+                sku: "2016-Datacenter",
+                version: "latest",
+            },
+            osDisk: {
+                caching: "ReadWrite",
+                createOption: "FromImage",
+                managedDisk: {
+                    storageAccountType: "Standard_LRS",
+                },
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
+### Create a scale set with an azure load balancer.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "westus",
+            Overprovision = true,
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_D1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    ImageReference = new AzureRM.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "WindowsServer",
+                        Publisher = "MicrosoftWindowsServer",
+                        Sku = "2016-Datacenter",
+                        Version = "latest",
+                    },
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadWrite",
+                        CreateOption = "FromImage",
+                        ManagedDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        {
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="westus",
+    overprovision=True,
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 3,
+        "name": "Standard_D1_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Manual",
+    },
+    virtual_machine_profile={
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminPassword": "{your-password}",
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+        },
+        "storageProfile": {
+            "imageReference": {
+                "offer": "WindowsServer",
+                "publisher": "MicrosoftWindowsServer",
+                "sku": "2016-Datacenter",
+                "version": "latest",
+            },
+            "osDisk": {
+                "caching": "ReadWrite",
+                "createOption": "FromImage",
+                "managedDisk": {
+                    "storageAccountType": "Standard_LRS",
+                },
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "westus",
+    overprovision: true,
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_D1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        storageProfile: {
+            imageReference: {
+                offer: "WindowsServer",
+                publisher: "MicrosoftWindowsServer",
+                sku: "2016-Datacenter",
+                version: "latest",
+            },
+            osDisk: {
+                caching: "ReadWrite",
+                createOption: "FromImage",
+                managedDisk: {
+                    storageAccountType: "Standard_LRS",
+                },
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
+### Create a scale set with automatic repairs enabled
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            AutomaticRepairsPolicy = new AzureRM.Compute.Latest.Inputs.AutomaticRepairsPolicyArgs
+            {
+                Enabled = true,
+                GracePeriod = "PT30M",
+            },
+            Location = "westus",
+            Overprovision = true,
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_D1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    ImageReference = new AzureRM.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "WindowsServer",
+                        Publisher = "MicrosoftWindowsServer",
+                        Sku = "2016-Datacenter",
+                        Version = "latest",
+                    },
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadWrite",
+                        CreateOption = "FromImage",
+                        ManagedDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        {
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    automatic_repairs_policy={
+        "enabled": True,
+        "gracePeriod": "PT30M",
+    },
+    location="westus",
+    overprovision=True,
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 3,
+        "name": "Standard_D1_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Manual",
+    },
+    virtual_machine_profile={
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminPassword": "{your-password}",
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+        },
+        "storageProfile": {
+            "imageReference": {
+                "offer": "WindowsServer",
+                "publisher": "MicrosoftWindowsServer",
+                "sku": "2016-Datacenter",
+                "version": "latest",
+            },
+            "osDisk": {
+                "caching": "ReadWrite",
+                "createOption": "FromImage",
+                "managedDisk": {
+                    "storageAccountType": "Standard_LRS",
+                },
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    automaticRepairsPolicy: {
+        enabled: true,
+        gracePeriod: "PT30M",
+    },
+    location: "westus",
+    overprovision: true,
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_D1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        storageProfile: {
+            imageReference: {
+                offer: "WindowsServer",
+                publisher: "MicrosoftWindowsServer",
+                sku: "2016-Datacenter",
+                version: "latest",
+            },
+            osDisk: {
+                caching: "ReadWrite",
+                createOption: "FromImage",
+                managedDisk: {
+                    storageAccountType: "Standard_LRS",
+                },
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
+### Create a scale set with boot diagnostics.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "westus",
+            Overprovision = true,
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_D1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                DiagnosticsProfile = new AzureRM.Compute.Latest.Inputs.DiagnosticsProfileArgs
+                {
+                    BootDiagnostics = new AzureRM.Compute.Latest.Inputs.BootDiagnosticsArgs
+                    {
+                        Enabled = true,
+                        StorageUri = "http://{existing-storage-account-name}.blob.core.windows.net",
+                    },
+                },
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    ImageReference = new AzureRM.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "WindowsServer",
+                        Publisher = "MicrosoftWindowsServer",
+                        Sku = "2016-Datacenter",
+                        Version = "latest",
+                    },
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadWrite",
+                        CreateOption = "FromImage",
+                        ManagedDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        {
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="westus",
+    overprovision=True,
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 3,
+        "name": "Standard_D1_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Manual",
+    },
+    virtual_machine_profile={
+        "diagnosticsProfile": {
+            "bootDiagnostics": {
+                "enabled": True,
+                "storageUri": "http://{existing-storage-account-name}.blob.core.windows.net",
+            },
+        },
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminPassword": "{your-password}",
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+        },
+        "storageProfile": {
+            "imageReference": {
+                "offer": "WindowsServer",
+                "publisher": "MicrosoftWindowsServer",
+                "sku": "2016-Datacenter",
+                "version": "latest",
+            },
+            "osDisk": {
+                "caching": "ReadWrite",
+                "createOption": "FromImage",
+                "managedDisk": {
+                    "storageAccountType": "Standard_LRS",
+                },
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "westus",
+    overprovision: true,
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_D1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        diagnosticsProfile: {
+            bootDiagnostics: {
+                enabled: true,
+                storageUri: "http://{existing-storage-account-name}.blob.core.windows.net",
+            },
+        },
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        storageProfile: {
+            imageReference: {
+                offer: "WindowsServer",
+                publisher: "MicrosoftWindowsServer",
+                sku: "2016-Datacenter",
+                version: "latest",
+            },
+            osDisk: {
+                caching: "ReadWrite",
+                createOption: "FromImage",
+                managedDisk: {
+                    storageAccountType: "Standard_LRS",
+                },
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
+### Create a scale set with empty data disks on each vm.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "westus",
+            Overprovision = true,
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_D2_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    DataDisks = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetDataDiskArgs
+                        {
+                            CreateOption = "Empty",
+                            DiskSizeGB = 1023,
+                            Lun = 0,
+                        },
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetDataDiskArgs
+                        {
+                            CreateOption = "Empty",
+                            DiskSizeGB = 1023,
+                            Lun = 1,
+                        },
+                    },
+                    ImageReference = new AzureRM.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "WindowsServer",
+                        Publisher = "MicrosoftWindowsServer",
+                        Sku = "2016-Datacenter",
+                        Version = "latest",
+                    },
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadWrite",
+                        CreateOption = "FromImage",
+                        DiskSizeGB = 512,
+                        ManagedDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        {
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="westus",
+    overprovision=True,
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 3,
+        "name": "Standard_D2_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Manual",
+    },
+    virtual_machine_profile={
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminPassword": "{your-password}",
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+        },
+        "storageProfile": {
+            "dataDisks": [
+                {
+                    "createOption": "Empty",
+                    "diskSizeGB": 1023,
+                    "lun": 0,
+                },
+                {
+                    "createOption": "Empty",
+                    "diskSizeGB": 1023,
+                    "lun": 1,
+                },
+            ],
+            "imageReference": {
+                "offer": "WindowsServer",
+                "publisher": "MicrosoftWindowsServer",
+                "sku": "2016-Datacenter",
+                "version": "latest",
+            },
+            "osDisk": {
+                "caching": "ReadWrite",
+                "createOption": "FromImage",
+                "diskSizeGB": 512,
+                "managedDisk": {
+                    "storageAccountType": "Standard_LRS",
+                },
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "westus",
+    overprovision: true,
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_D2_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        storageProfile: {
+            dataDisks: [
+                {
+                    createOption: "Empty",
+                    diskSizeGB: 1023,
+                    lun: 0,
+                },
+                {
+                    createOption: "Empty",
+                    diskSizeGB: 1023,
+                    lun: 1,
+                },
+            ],
+            imageReference: {
+                offer: "WindowsServer",
+                publisher: "MicrosoftWindowsServer",
+                sku: "2016-Datacenter",
+                version: "latest",
+            },
+            osDisk: {
+                caching: "ReadWrite",
+                createOption: "FromImage",
+                diskSizeGB: 512,
+                managedDisk: {
+                    storageAccountType: "Standard_LRS",
+                },
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
+### Create a scale set with ephemeral os disks using placement property.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "westus",
+            Overprovision = true,
+            Plan = new AzureRM.Compute.Latest.Inputs.PlanArgs
+            {
+                Name = "windows2016",
+                Product = "windows-data-science-vm",
+                Publisher = "microsoft-ads",
+            },
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_DS1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    ImageReference = new AzureRM.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "windows-data-science-vm",
+                        Publisher = "microsoft-ads",
+                        Sku = "windows2016",
+                        Version = "latest",
+                    },
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadOnly",
+                        CreateOption = "FromImage",
+                        DiffDiskSettings = new AzureRM.Compute.Latest.Inputs.DiffDiskSettingsArgs
+                        {
+                            Option = "Local",
+                            Placement = "ResourceDisk",
+                        },
+                        ManagedDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        {
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="westus",
+    overprovision=True,
+    plan={
+        "name": "windows2016",
+        "product": "windows-data-science-vm",
+        "publisher": "microsoft-ads",
+    },
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 3,
+        "name": "Standard_DS1_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Manual",
+    },
+    virtual_machine_profile={
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminPassword": "{your-password}",
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+        },
+        "storageProfile": {
+            "imageReference": {
+                "offer": "windows-data-science-vm",
+                "publisher": "microsoft-ads",
+                "sku": "windows2016",
+                "version": "latest",
+            },
+            "osDisk": {
+                "caching": "ReadOnly",
+                "createOption": "FromImage",
+                "diffDiskSettings": {
+                    "option": "Local",
+                    "placement": "ResourceDisk",
+                },
+                "managedDisk": {
+                    "storageAccountType": "Standard_LRS",
+                },
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "westus",
+    overprovision: true,
+    plan: {
+        name: "windows2016",
+        product: "windows-data-science-vm",
+        publisher: "microsoft-ads",
+    },
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_DS1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        storageProfile: {
+            imageReference: {
+                offer: "windows-data-science-vm",
+                publisher: "microsoft-ads",
+                sku: "windows2016",
+                version: "latest",
+            },
+            osDisk: {
+                caching: "ReadOnly",
+                createOption: "FromImage",
+                diffDiskSettings: {
+                    option: "Local",
+                    placement: "ResourceDisk",
+                },
+                managedDisk: {
+                    storageAccountType: "Standard_LRS",
+                },
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
+### Create a scale set with ephemeral os disks.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "westus",
+            Overprovision = true,
+            Plan = new AzureRM.Compute.Latest.Inputs.PlanArgs
+            {
+                Name = "windows2016",
+                Product = "windows-data-science-vm",
+                Publisher = "microsoft-ads",
+            },
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_DS1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    ImageReference = new AzureRM.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "windows-data-science-vm",
+                        Publisher = "microsoft-ads",
+                        Sku = "windows2016",
+                        Version = "latest",
+                    },
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadOnly",
+                        CreateOption = "FromImage",
+                        DiffDiskSettings = new AzureRM.Compute.Latest.Inputs.DiffDiskSettingsArgs
+                        {
+                            Option = "Local",
+                        },
+                        ManagedDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        {
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="westus",
+    overprovision=True,
+    plan={
+        "name": "windows2016",
+        "product": "windows-data-science-vm",
+        "publisher": "microsoft-ads",
+    },
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 3,
+        "name": "Standard_DS1_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Manual",
+    },
+    virtual_machine_profile={
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminPassword": "{your-password}",
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+        },
+        "storageProfile": {
+            "imageReference": {
+                "offer": "windows-data-science-vm",
+                "publisher": "microsoft-ads",
+                "sku": "windows2016",
+                "version": "latest",
+            },
+            "osDisk": {
+                "caching": "ReadOnly",
+                "createOption": "FromImage",
+                "diffDiskSettings": {
+                    "option": "Local",
+                },
+                "managedDisk": {
+                    "storageAccountType": "Standard_LRS",
+                },
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "westus",
+    overprovision: true,
+    plan: {
+        name: "windows2016",
+        product: "windows-data-science-vm",
+        publisher: "microsoft-ads",
+    },
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_DS1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        storageProfile: {
+            imageReference: {
+                offer: "windows-data-science-vm",
+                publisher: "microsoft-ads",
+                sku: "windows2016",
+                version: "latest",
+            },
+            osDisk: {
+                caching: "ReadOnly",
+                createOption: "FromImage",
+                diffDiskSettings: {
+                    option: "Local",
+                },
+                managedDisk: {
+                    storageAccountType: "Standard_LRS",
+                },
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
+### Create a scale set with extension time budget.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "westus",
+            Overprovision = true,
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_D1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                DiagnosticsProfile = new AzureRM.Compute.Latest.Inputs.DiagnosticsProfileArgs
+                {
+                    BootDiagnostics = new AzureRM.Compute.Latest.Inputs.BootDiagnosticsArgs
+                    {
+                        Enabled = true,
+                        StorageUri = "http://{existing-storage-account-name}.blob.core.windows.net",
+                    },
+                },
+                ExtensionProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetExtensionProfileArgs
+                {
+                    Extensions = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetExtensionArgs
+                        {
+                            Name = "{extension-name}",
+                        },
+                    },
+                    ExtensionsTimeBudget = "PT1H20M",
+                },
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    ImageReference = new AzureRM.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "WindowsServer",
+                        Publisher = "MicrosoftWindowsServer",
+                        Sku = "2016-Datacenter",
+                        Version = "latest",
+                    },
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadWrite",
+                        CreateOption = "FromImage",
+                        ManagedDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        {
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="westus",
+    overprovision=True,
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 3,
+        "name": "Standard_D1_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Manual",
+    },
+    virtual_machine_profile={
+        "diagnosticsProfile": {
+            "bootDiagnostics": {
+                "enabled": True,
+                "storageUri": "http://{existing-storage-account-name}.blob.core.windows.net",
+            },
+        },
+        "extensionProfile": {
+            "extensions": [{
+                "name": "{extension-name}",
+            }],
+            "extensionsTimeBudget": "PT1H20M",
+        },
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminPassword": "{your-password}",
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+        },
+        "storageProfile": {
+            "imageReference": {
+                "offer": "WindowsServer",
+                "publisher": "MicrosoftWindowsServer",
+                "sku": "2016-Datacenter",
+                "version": "latest",
+            },
+            "osDisk": {
+                "caching": "ReadWrite",
+                "createOption": "FromImage",
+                "managedDisk": {
+                    "storageAccountType": "Standard_LRS",
+                },
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "westus",
+    overprovision: true,
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_D1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        diagnosticsProfile: {
+            bootDiagnostics: {
+                enabled: true,
+                storageUri: "http://{existing-storage-account-name}.blob.core.windows.net",
+            },
+        },
+        extensionProfile: {
+            extensions: [{
+                name: "{extension-name}",
+            }],
+            extensionsTimeBudget: "PT1H20M",
+        },
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        storageProfile: {
+            imageReference: {
+                offer: "WindowsServer",
+                publisher: "MicrosoftWindowsServer",
+                sku: "2016-Datacenter",
+                version: "latest",
+            },
+            osDisk: {
+                caching: "ReadWrite",
+                createOption: "FromImage",
+                managedDisk: {
+                    storageAccountType: "Standard_LRS",
+                },
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
+### Create a scale set with managed boot diagnostics.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "westus",
+            Overprovision = true,
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_D1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                DiagnosticsProfile = new AzureRM.Compute.Latest.Inputs.DiagnosticsProfileArgs
+                {
+                    BootDiagnostics = new AzureRM.Compute.Latest.Inputs.BootDiagnosticsArgs
+                    {
+                        Enabled = true,
+                    },
+                },
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    ImageReference = new AzureRM.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "WindowsServer",
+                        Publisher = "MicrosoftWindowsServer",
+                        Sku = "2016-Datacenter",
+                        Version = "latest",
+                    },
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadWrite",
+                        CreateOption = "FromImage",
+                        ManagedDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        {
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="westus",
+    overprovision=True,
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 3,
+        "name": "Standard_D1_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Manual",
+    },
+    virtual_machine_profile={
+        "diagnosticsProfile": {
+            "bootDiagnostics": {
+                "enabled": True,
+            },
+        },
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminPassword": "{your-password}",
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+        },
+        "storageProfile": {
+            "imageReference": {
+                "offer": "WindowsServer",
+                "publisher": "MicrosoftWindowsServer",
+                "sku": "2016-Datacenter",
+                "version": "latest",
+            },
+            "osDisk": {
+                "caching": "ReadWrite",
+                "createOption": "FromImage",
+                "managedDisk": {
+                    "storageAccountType": "Standard_LRS",
+                },
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "westus",
+    overprovision: true,
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_D1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        diagnosticsProfile: {
+            bootDiagnostics: {
+                enabled: true,
+            },
+        },
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        storageProfile: {
+            imageReference: {
+                offer: "WindowsServer",
+                publisher: "MicrosoftWindowsServer",
+                sku: "2016-Datacenter",
+                version: "latest",
+            },
+            osDisk: {
+                caching: "ReadWrite",
+                createOption: "FromImage",
+                managedDisk: {
+                    storageAccountType: "Standard_LRS",
+                },
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
+### Create a scale set with password authentication.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "westus",
+            Overprovision = true,
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_D1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    ImageReference = new AzureRM.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "WindowsServer",
+                        Publisher = "MicrosoftWindowsServer",
+                        Sku = "2016-Datacenter",
+                        Version = "latest",
+                    },
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadWrite",
+                        CreateOption = "FromImage",
+                        ManagedDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        {
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="westus",
+    overprovision=True,
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 3,
+        "name": "Standard_D1_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Manual",
+    },
+    virtual_machine_profile={
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminPassword": "{your-password}",
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+        },
+        "storageProfile": {
+            "imageReference": {
+                "offer": "WindowsServer",
+                "publisher": "MicrosoftWindowsServer",
+                "sku": "2016-Datacenter",
+                "version": "latest",
+            },
+            "osDisk": {
+                "caching": "ReadWrite",
+                "createOption": "FromImage",
+                "managedDisk": {
+                    "storageAccountType": "Standard_LRS",
+                },
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "westus",
+    overprovision: true,
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_D1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        storageProfile: {
+            imageReference: {
+                offer: "WindowsServer",
+                publisher: "MicrosoftWindowsServer",
+                sku: "2016-Datacenter",
+                version: "latest",
+            },
+            osDisk: {
+                caching: "ReadWrite",
+                createOption: "FromImage",
+                managedDisk: {
+                    storageAccountType: "Standard_LRS",
+                },
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
+### Create a scale set with premium storage.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "westus",
+            Overprovision = true,
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_D1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    ImageReference = new AzureRM.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "WindowsServer",
+                        Publisher = "MicrosoftWindowsServer",
+                        Sku = "2016-Datacenter",
+                        Version = "latest",
+                    },
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadWrite",
+                        CreateOption = "FromImage",
+                        ManagedDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        {
+                            StorageAccountType = "Premium_LRS",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="westus",
+    overprovision=True,
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 3,
+        "name": "Standard_D1_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Manual",
+    },
+    virtual_machine_profile={
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminPassword": "{your-password}",
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+        },
+        "storageProfile": {
+            "imageReference": {
+                "offer": "WindowsServer",
+                "publisher": "MicrosoftWindowsServer",
+                "sku": "2016-Datacenter",
+                "version": "latest",
+            },
+            "osDisk": {
+                "caching": "ReadWrite",
+                "createOption": "FromImage",
+                "managedDisk": {
+                    "storageAccountType": "Premium_LRS",
+                },
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "westus",
+    overprovision: true,
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_D1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        storageProfile: {
+            imageReference: {
+                offer: "WindowsServer",
+                publisher: "MicrosoftWindowsServer",
+                sku: "2016-Datacenter",
+                version: "latest",
+            },
+            osDisk: {
+                caching: "ReadWrite",
+                createOption: "FromImage",
+                managedDisk: {
+                    storageAccountType: "Premium_LRS",
+                },
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
+### Create a scale set with ssh authentication.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "westus",
+            Overprovision = true,
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_D1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                    LinuxConfiguration = new AzureRM.Compute.Latest.Inputs.LinuxConfigurationArgs
+                    {
+                        DisablePasswordAuthentication = true,
+                        Ssh = new AzureRM.Compute.Latest.Inputs.SshConfigurationArgs
+                        {
+                            PublicKeys = 
+                            {
+                                new AzureRM.Compute.Latest.Inputs.SshPublicKeyArgs
+                                {
+                                    KeyData = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeClRAk2ipUs/l5voIsDC5q9RI+YSRd1Bvd/O+axgY4WiBzG+4FwJWZm/mLLe5DoOdHQwmU2FrKXZSW4w2sYE70KeWnrFViCOX5MTVvJgPE8ClugNl8RWth/tU849DvM9sT7vFgfVSHcAS2yDRyDlueii+8nF2ym8XWAPltFVCyLHRsyBp5YPqK8JFYIa1eybKsY3hEAxRCA+/7bq8et+Gj3coOsuRmrehav7rE6N12Pb80I6ofa6SM5XNYq4Xk0iYNx7R3kdz0Jj9XgZYWjAHjJmT0gTRoOnt6upOuxK7xI/ykWrllgpXrCPu3Ymz+c+ujaqcxDopnAl2lmf69/J1",
+                                    Path = "/home/{your-username}/.ssh/authorized_keys",
+                                },
+                            },
+                        },
+                    },
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    ImageReference = new AzureRM.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "WindowsServer",
+                        Publisher = "MicrosoftWindowsServer",
+                        Sku = "2016-Datacenter",
+                        Version = "latest",
+                    },
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadWrite",
+                        CreateOption = "FromImage",
+                        ManagedDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        {
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="westus",
+    overprovision=True,
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 3,
+        "name": "Standard_D1_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Manual",
+    },
+    virtual_machine_profile={
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+            "linuxConfiguration": {
+                "disablePasswordAuthentication": True,
+                "ssh": {
+                    "publicKeys": [{
+                        "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeClRAk2ipUs/l5voIsDC5q9RI+YSRd1Bvd/O+axgY4WiBzG+4FwJWZm/mLLe5DoOdHQwmU2FrKXZSW4w2sYE70KeWnrFViCOX5MTVvJgPE8ClugNl8RWth/tU849DvM9sT7vFgfVSHcAS2yDRyDlueii+8nF2ym8XWAPltFVCyLHRsyBp5YPqK8JFYIa1eybKsY3hEAxRCA+/7bq8et+Gj3coOsuRmrehav7rE6N12Pb80I6ofa6SM5XNYq4Xk0iYNx7R3kdz0Jj9XgZYWjAHjJmT0gTRoOnt6upOuxK7xI/ykWrllgpXrCPu3Ymz+c+ujaqcxDopnAl2lmf69/J1",
+                        "path": "/home/{your-username}/.ssh/authorized_keys",
+                    }],
+                },
+            },
+        },
+        "storageProfile": {
+            "imageReference": {
+                "offer": "WindowsServer",
+                "publisher": "MicrosoftWindowsServer",
+                "sku": "2016-Datacenter",
+                "version": "latest",
+            },
+            "osDisk": {
+                "caching": "ReadWrite",
+                "createOption": "FromImage",
+                "managedDisk": {
+                    "storageAccountType": "Standard_LRS",
+                },
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "westus",
+    overprovision: true,
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_D1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+            linuxConfiguration: {
+                disablePasswordAuthentication: true,
+                ssh: {
+                    publicKeys: [{
+                        keyData: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeClRAk2ipUs/l5voIsDC5q9RI+YSRd1Bvd/O+axgY4WiBzG+4FwJWZm/mLLe5DoOdHQwmU2FrKXZSW4w2sYE70KeWnrFViCOX5MTVvJgPE8ClugNl8RWth/tU849DvM9sT7vFgfVSHcAS2yDRyDlueii+8nF2ym8XWAPltFVCyLHRsyBp5YPqK8JFYIa1eybKsY3hEAxRCA+/7bq8et+Gj3coOsuRmrehav7rE6N12Pb80I6ofa6SM5XNYq4Xk0iYNx7R3kdz0Jj9XgZYWjAHjJmT0gTRoOnt6upOuxK7xI/ykWrllgpXrCPu3Ymz+c+ujaqcxDopnAl2lmf69/J1",
+                        path: "/home/{your-username}/.ssh/authorized_keys",
+                    }],
+                },
+            },
+        },
+        storageProfile: {
+            imageReference: {
+                offer: "WindowsServer",
+                publisher: "MicrosoftWindowsServer",
+                sku: "2016-Datacenter",
+                version: "latest",
+            },
+            osDisk: {
+                caching: "ReadWrite",
+                createOption: "FromImage",
+                managedDisk: {
+                    storageAccountType: "Standard_LRS",
+                },
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
+### Create a scale set with terminate scheduled events enabled.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "westus",
+            Overprovision = true,
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_D1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                ScheduledEventsProfile = new AzureRM.Compute.Latest.Inputs.ScheduledEventsProfileArgs
+                {
+                    TerminateNotificationProfile = new AzureRM.Compute.Latest.Inputs.TerminateNotificationProfileArgs
+                    {
+                        Enable = true,
+                        NotBeforeTimeout = "PT5M",
+                    },
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    ImageReference = new AzureRM.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "WindowsServer",
+                        Publisher = "MicrosoftWindowsServer",
+                        Sku = "2016-Datacenter",
+                        Version = "latest",
+                    },
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadWrite",
+                        CreateOption = "FromImage",
+                        ManagedDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        {
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="westus",
+    overprovision=True,
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 3,
+        "name": "Standard_D1_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Manual",
+    },
+    virtual_machine_profile={
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminPassword": "{your-password}",
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+        },
+        "scheduledEventsProfile": {
+            "terminateNotificationProfile": {
+                "enable": True,
+                "notBeforeTimeout": "PT5M",
+            },
+        },
+        "storageProfile": {
+            "imageReference": {
+                "offer": "WindowsServer",
+                "publisher": "MicrosoftWindowsServer",
+                "sku": "2016-Datacenter",
+                "version": "latest",
+            },
+            "osDisk": {
+                "caching": "ReadWrite",
+                "createOption": "FromImage",
+                "managedDisk": {
+                    "storageAccountType": "Standard_LRS",
+                },
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "westus",
+    overprovision: true,
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_D1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        scheduledEventsProfile: {
+            terminateNotificationProfile: {
+                enable: true,
+                notBeforeTimeout: "PT5M",
+            },
+        },
+        storageProfile: {
+            imageReference: {
+                offer: "WindowsServer",
+                publisher: "MicrosoftWindowsServer",
+                sku: "2016-Datacenter",
+                version: "latest",
+            },
+            osDisk: {
+                caching: "ReadWrite",
+                createOption: "FromImage",
+                managedDisk: {
+                    storageAccountType: "Standard_LRS",
+                },
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
+### Create a scale set with virtual machines in different zones.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureRM.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureRM.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "centralus",
+            Overprovision = true,
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 2,
+                Name = "Standard_A1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureRM.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Automatic",
+            },
+            VirtualMachineProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                NetworkProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            Name = "{vmss-name}",
+                        },
+                    },
+                },
+                OsProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                StorageProfile = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    DataDisks = 
+                    {
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetDataDiskArgs
+                        {
+                            CreateOption = "Empty",
+                            DiskSizeGB = 1023,
+                            Lun = 0,
+                        },
+                        new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetDataDiskArgs
+                        {
+                            CreateOption = "Empty",
+                            DiskSizeGB = 1023,
+                            Lun = 1,
+                        },
+                    },
+                    ImageReference = new AzureRM.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "WindowsServer",
+                        Publisher = "MicrosoftWindowsServer",
+                        Sku = "2016-Datacenter",
+                        Version = "latest",
+                    },
+                    OsDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadWrite",
+                        CreateOption = "FromImage",
+                        DiskSizeGB = 512,
+                        ManagedDisk = new AzureRM.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        {
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+            Zones = 
+            {
+                "1",
+                "3",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set = azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="centralus",
+    overprovision=True,
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 2,
+        "name": "Standard_A1_v2",
+        "tier": "Standard",
+    },
+    upgrade_policy={
+        "mode": "Automatic",
+    },
+    virtual_machine_profile={
+        "networkProfile": {
+            "networkInterfaceConfigurations": [{
+                "name": "{vmss-name}",
+            }],
+        },
+        "osProfile": {
+            "adminPassword": "{your-password}",
+            "adminUsername": "{your-username}",
+            "computerNamePrefix": "{vmss-name}",
+        },
+        "storageProfile": {
+            "dataDisks": [
+                {
+                    "createOption": "Empty",
+                    "diskSizeGB": 1023,
+                    "lun": 0,
+                },
+                {
+                    "createOption": "Empty",
+                    "diskSizeGB": 1023,
+                    "lun": 1,
+                },
+            ],
+            "imageReference": {
+                "offer": "WindowsServer",
+                "publisher": "MicrosoftWindowsServer",
+                "sku": "2016-Datacenter",
+                "version": "latest",
+            },
+            "osDisk": {
+                "caching": "ReadWrite",
+                "createOption": "FromImage",
+                "diskSizeGB": 512,
+                "managedDisk": {
+                    "storageAccountType": "Standard_LRS",
+                },
+            },
+        },
+    },
+    vm_scale_set_name="{vmss-name}",
+    zones=[
+        "1",
+        "3",
+    ])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSet = new azurerm.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "centralus",
+    overprovision: true,
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 2,
+        name: "Standard_A1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Automatic",
+    },
+    virtualMachineProfile: {
+        networkProfile: {
+            networkInterfaceConfigurations: [{
+                name: "{vmss-name}",
+            }],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        storageProfile: {
+            dataDisks: [
+                {
+                    createOption: "Empty",
+                    diskSizeGB: 1023,
+                    lun: 0,
+                },
+                {
+                    createOption: "Empty",
+                    diskSizeGB: 1023,
+                    lun: 1,
+                },
+            ],
+            imageReference: {
+                offer: "WindowsServer",
+                publisher: "MicrosoftWindowsServer",
+                sku: "2016-Datacenter",
+                version: "latest",
+            },
+            osDisk: {
+                caching: "ReadWrite",
+                createOption: "FromImage",
+                diskSizeGB: 512,
+                managedDisk: {
+                    storageAccountType: "Standard_LRS",
+                },
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+    zones: [
+        "1",
+        "3",
+    ],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualMachineScaleSet Resource {#create}

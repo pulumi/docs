@@ -12,6 +12,50 @@ meta_desc: "Explore the Table resource of the storage/v20200801preview module, i
 
 Properties of the table, including Id, resource name, resource type.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### TableOperationPut
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+table = .("table",
+    account_name="sto328",
+    resource_group_name="res3376",
+    table_name="table6185")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const table = new .("table", {
+    accountName: "sto328",
+    resourceGroupName: "res3376",
+    tableName: "table6185",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Table Resource {#create}

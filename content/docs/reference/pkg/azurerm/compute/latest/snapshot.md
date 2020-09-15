@@ -12,6 +12,230 @@ meta_desc: "Explore the Snapshot resource of the compute/latest module, includin
 
 Snapshot resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a snapshot by importing an unmanaged blob from a different subscription.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var snapshot = new AzureRM.Compute.Latest.Snapshot("snapshot", new AzureRM.Compute.Latest.SnapshotArgs
+        {
+            CreationData = new AzureRM.Compute.Latest.Inputs.CreationDataArgs
+            {
+                CreateOption = "Import",
+                SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+                StorageAccountId = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
+            },
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            SnapshotName = "mySnapshot1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+snapshot = azurerm.compute.latest.Snapshot("snapshot",
+    creation_data={
+        "createOption": "Import",
+        "sourceUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+        "storageAccountId": "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
+    },
+    location="West US",
+    resource_group_name="myResourceGroup",
+    snapshot_name="mySnapshot1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const snapshot = new azurerm.compute.latest.Snapshot("snapshot", {
+    creationData: {
+        createOption: "Import",
+        sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+        storageAccountId: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
+    },
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    snapshotName: "mySnapshot1",
+});
+
+```
+
+{{% /example %}}
+
+### Create a snapshot by importing an unmanaged blob from the same subscription.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var snapshot = new AzureRM.Compute.Latest.Snapshot("snapshot", new AzureRM.Compute.Latest.SnapshotArgs
+        {
+            CreationData = new AzureRM.Compute.Latest.Inputs.CreationDataArgs
+            {
+                CreateOption = "Import",
+                SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+            },
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            SnapshotName = "mySnapshot1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+snapshot = azurerm.compute.latest.Snapshot("snapshot",
+    creation_data={
+        "createOption": "Import",
+        "sourceUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+    },
+    location="West US",
+    resource_group_name="myResourceGroup",
+    snapshot_name="mySnapshot1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const snapshot = new azurerm.compute.latest.Snapshot("snapshot", {
+    creationData: {
+        createOption: "Import",
+        sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+    },
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    snapshotName: "mySnapshot1",
+});
+
+```
+
+{{% /example %}}
+
+### Create a snapshot from an existing snapshot in the same or a different subscription.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var snapshot = new AzureRM.Compute.Latest.Snapshot("snapshot", new AzureRM.Compute.Latest.SnapshotArgs
+        {
+            CreationData = new AzureRM.Compute.Latest.Inputs.CreationDataArgs
+            {
+                CreateOption = "Copy",
+                SourceResourceId = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1",
+            },
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            SnapshotName = "mySnapshot2",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+snapshot = azurerm.compute.latest.Snapshot("snapshot",
+    creation_data={
+        "createOption": "Copy",
+        "sourceResourceId": "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1",
+    },
+    location="West US",
+    resource_group_name="myResourceGroup",
+    snapshot_name="mySnapshot2")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const snapshot = new azurerm.compute.latest.Snapshot("snapshot", {
+    creationData: {
+        createOption: "Copy",
+        sourceResourceId: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1",
+    },
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    snapshotName: "mySnapshot2",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Snapshot Resource {#create}

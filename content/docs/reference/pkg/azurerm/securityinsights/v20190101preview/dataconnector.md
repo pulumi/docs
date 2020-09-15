@@ -12,6 +12,79 @@ meta_desc: "Explore the DataConnector resource of the securityinsights/v20190101
 
 Data connector.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates an Office365 data connector.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataConnector = new AzureRM.SecurityInsights.V20190101Preview.DataConnector("dataConnector", new AzureRM.SecurityInsights.V20190101Preview.DataConnectorArgs
+        {
+            DataConnectorId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+            Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+            Kind = "Office365",
+            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
+            ResourceGroupName = "myRg",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+data_connector = azurerm.securityinsights.v20190101preview.DataConnector("dataConnector",
+    data_connector_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+    etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    kind="Office365",
+    operational_insights_resource_provider="Microsoft.OperationalInsights",
+    resource_group_name="myRg",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataConnector = new azurerm.securityinsights.v20190101preview.DataConnector("dataConnector", {
+    dataConnectorId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+    etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    kind: "Office365",
+    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
+    resourceGroupName: "myRg",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DataConnector Resource {#create}

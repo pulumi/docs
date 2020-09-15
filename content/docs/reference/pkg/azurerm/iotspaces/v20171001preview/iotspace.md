@@ -12,6 +12,80 @@ meta_desc: "Explore the IoTSpace resource of the iotspaces/v20171001preview modu
 
 The description of the IoTSpaces service.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Put an IoT spaces service
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ioTSpace = new AzureRM.IoTSpaces.V20171001Preview.IoTSpace("ioTSpace", new AzureRM.IoTSpaces.V20171001Preview.IoTSpaceArgs
+        {
+            Location = "string",
+            ResourceGroupName = "resRg",
+            ResourceName = "myIoTSpacesService",
+            Sku = new AzureRM.IoTSpaces.V20171001Preview.Inputs.IoTSpacesSkuInfoArgs
+            {
+                Name = "F1",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+io_t_space = azurerm.iotspaces.v20171001preview.IoTSpace("ioTSpace",
+    location="string",
+    resource_group_name="resRg",
+    resource_name="myIoTSpacesService",
+    sku={
+        "name": "F1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const ioTSpace = new azurerm.iotspaces.v20171001preview.IoTSpace("ioTSpace", {
+    location: "string",
+    resourceGroupName: "resRg",
+    resourceName: "myIoTSpacesService",
+    sku: {
+        name: "F1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IoTSpace Resource {#create}

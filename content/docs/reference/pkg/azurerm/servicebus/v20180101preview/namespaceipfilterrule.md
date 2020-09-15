@@ -12,6 +12,79 @@ meta_desc: "Explore the NamespaceIpFilterRule resource of the servicebus/v201801
 
 Single item in a List or Get IpFilterRules operation
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### NameSpaceIpFilterRuleCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var namespaceIpFilterRule = new AzureRM.ServiceBus.V20180101Preview.NamespaceIpFilterRule("namespaceIpFilterRule", new AzureRM.ServiceBus.V20180101Preview.NamespaceIpFilterRuleArgs
+        {
+            Action = "Accept",
+            FilterName = "sdk-IPFilterRules-7337",
+            IpFilterRuleName = "sdk-IPFilterRules-7337",
+            IpMask = "13.78.143.246/32",
+            NamespaceName = "sdk-Namespace-5232",
+            ResourceGroupName = "ResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+namespace_ip_filter_rule = azurerm.servicebus.v20180101preview.NamespaceIpFilterRule("namespaceIpFilterRule",
+    action="Accept",
+    filter_name="sdk-IPFilterRules-7337",
+    ip_filter_rule_name="sdk-IPFilterRules-7337",
+    ip_mask="13.78.143.246/32",
+    namespace_name="sdk-Namespace-5232",
+    resource_group_name="ResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const namespaceIpFilterRule = new azurerm.servicebus.v20180101preview.NamespaceIpFilterRule("namespaceIpFilterRule", {
+    action: "Accept",
+    filterName: "sdk-IPFilterRules-7337",
+    ipFilterRuleName: "sdk-IPFilterRules-7337",
+    ipMask: "13.78.143.246/32",
+    namespaceName: "sdk-Namespace-5232",
+    resourceGroupName: "ResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NamespaceIpFilterRule Resource {#create}

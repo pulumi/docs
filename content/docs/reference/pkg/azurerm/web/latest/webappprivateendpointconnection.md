@@ -12,6 +12,86 @@ meta_desc: "Explore the WebAppPrivateEndpointConnection resource of the web/late
 
 Private Endpoint Connection ARM resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Approves or rejects a private endpoint connection for a site.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var webAppPrivateEndpointConnection = new AzureRM.Web.Latest.WebAppPrivateEndpointConnection("webAppPrivateEndpointConnection", new AzureRM.Web.Latest.WebAppPrivateEndpointConnectionArgs
+        {
+            Name = "testSite",
+            PrivateEndpointConnectionName = "connection",
+            PrivateLinkServiceConnectionState = new AzureRM.Web.Latest.Inputs.PrivateLinkConnectionStateArgs
+            {
+                ActionsRequired = "",
+                Description = "Approved by admin.",
+                Status = "Approved",
+            },
+            ResourceGroupName = "rg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+web_app_private_endpoint_connection = azurerm.web.latest.WebAppPrivateEndpointConnection("webAppPrivateEndpointConnection",
+    name="testSite",
+    private_endpoint_connection_name="connection",
+    private_link_service_connection_state={
+        "actionsRequired": "",
+        "description": "Approved by admin.",
+        "status": "Approved",
+    },
+    resource_group_name="rg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const webAppPrivateEndpointConnection = new azurerm.web.latest.WebAppPrivateEndpointConnection("webAppPrivateEndpointConnection", {
+    name: "testSite",
+    privateEndpointConnectionName: "connection",
+    privateLinkServiceConnectionState: {
+        actionsRequired: "",
+        description: "Approved by admin.",
+        status: "Approved",
+    },
+    resourceGroupName: "rg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a WebAppPrivateEndpointConnection Resource {#create}

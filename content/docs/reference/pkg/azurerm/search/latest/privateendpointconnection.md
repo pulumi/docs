@@ -12,6 +12,70 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the search/latest 
 
 Describes an existing Private Endpoint connection to the Azure Cognitive Search service.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PrivateEndpointConnectionUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpointConnection = new AzureRM.Search.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureRM.Search.Latest.PrivateEndpointConnectionArgs
+        {
+            PrivateEndpointConnectionName = "testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546",
+            ResourceGroupName = "rg1",
+            SearchServiceName = "mysearchservice",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_endpoint_connection = azurerm.search.latest.PrivateEndpointConnection("privateEndpointConnection",
+    private_endpoint_connection_name="testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546",
+    resource_group_name="rg1",
+    search_service_name="mysearchservice")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateEndpointConnection = new azurerm.search.latest.PrivateEndpointConnection("privateEndpointConnection", {
+    privateEndpointConnectionName: "testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546",
+    resourceGroupName: "rg1",
+    searchServiceName: "mysearchservice",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateEndpointConnection Resource {#create}

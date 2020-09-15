@@ -12,6 +12,970 @@ meta_desc: "Explore the Image resource of the compute/latest module, including e
 
 The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a virtual machine image from a blob with DiskEncryptionSet resource.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var image = new AzureRM.Compute.Latest.Image("image", new AzureRM.Compute.Latest.ImageArgs
+        {
+            ImageName = "myImage",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureRM.Compute.Latest.Inputs.ImageStorageProfileArgs
+            {
+                OsDisk = new AzureRM.Compute.Latest.Inputs.ImageOSDiskArgs
+                {
+                    BlobUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+                    DiskEncryptionSet = new AzureRM.Compute.Latest.Inputs.DiskEncryptionSetParametersArgs
+                    {
+                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+                    },
+                    OsState = "Generalized",
+                    OsType = "Linux",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+image = azurerm.compute.latest.Image("image",
+    image_name="myImage",
+    location="West US",
+    resource_group_name="myResourceGroup",
+    storage_profile={
+        "osDisk": {
+            "blobUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+            "diskEncryptionSet": {
+                "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+            },
+            "osState": "Generalized",
+            "osType": "Linux",
+        },
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const image = new azurerm.compute.latest.Image("image", {
+    imageName: "myImage",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        osDisk: {
+            blobUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+            diskEncryptionSet: {
+                id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+            },
+            osState: "Generalized",
+            osType: "Linux",
+        },
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create a virtual machine image from a blob.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var image = new AzureRM.Compute.Latest.Image("image", new AzureRM.Compute.Latest.ImageArgs
+        {
+            ImageName = "myImage",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureRM.Compute.Latest.Inputs.ImageStorageProfileArgs
+            {
+                OsDisk = new AzureRM.Compute.Latest.Inputs.ImageOSDiskArgs
+                {
+                    BlobUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+                    OsState = "Generalized",
+                    OsType = "Linux",
+                },
+                ZoneResilient = true,
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+image = azurerm.compute.latest.Image("image",
+    image_name="myImage",
+    location="West US",
+    resource_group_name="myResourceGroup",
+    storage_profile={
+        "osDisk": {
+            "blobUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+            "osState": "Generalized",
+            "osType": "Linux",
+        },
+        "zoneResilient": True,
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const image = new azurerm.compute.latest.Image("image", {
+    imageName: "myImage",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        osDisk: {
+            blobUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+            osState: "Generalized",
+            osType: "Linux",
+        },
+        zoneResilient: true,
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create a virtual machine image from a managed disk with DiskEncryptionSet resource.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var image = new AzureRM.Compute.Latest.Image("image", new AzureRM.Compute.Latest.ImageArgs
+        {
+            ImageName = "myImage",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureRM.Compute.Latest.Inputs.ImageStorageProfileArgs
+            {
+                OsDisk = new AzureRM.Compute.Latest.Inputs.ImageOSDiskArgs
+                {
+                    DiskEncryptionSet = new AzureRM.Compute.Latest.Inputs.DiskEncryptionSetParametersArgs
+                    {
+                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+                    },
+                    ManagedDisk = new AzureRM.Compute.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+                    },
+                    OsState = "Generalized",
+                    OsType = "Linux",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+image = azurerm.compute.latest.Image("image",
+    image_name="myImage",
+    location="West US",
+    resource_group_name="myResourceGroup",
+    storage_profile={
+        "osDisk": {
+            "diskEncryptionSet": {
+                "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+            },
+            "managedDisk": {
+                "id": "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+            },
+            "osState": "Generalized",
+            "osType": "Linux",
+        },
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const image = new azurerm.compute.latest.Image("image", {
+    imageName: "myImage",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        osDisk: {
+            diskEncryptionSet: {
+                id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+            },
+            managedDisk: {
+                id: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+            },
+            osState: "Generalized",
+            osType: "Linux",
+        },
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create a virtual machine image from a managed disk.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var image = new AzureRM.Compute.Latest.Image("image", new AzureRM.Compute.Latest.ImageArgs
+        {
+            ImageName = "myImage",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureRM.Compute.Latest.Inputs.ImageStorageProfileArgs
+            {
+                OsDisk = new AzureRM.Compute.Latest.Inputs.ImageOSDiskArgs
+                {
+                    ManagedDisk = new AzureRM.Compute.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+                    },
+                    OsState = "Generalized",
+                    OsType = "Linux",
+                },
+                ZoneResilient = true,
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+image = azurerm.compute.latest.Image("image",
+    image_name="myImage",
+    location="West US",
+    resource_group_name="myResourceGroup",
+    storage_profile={
+        "osDisk": {
+            "managedDisk": {
+                "id": "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+            },
+            "osState": "Generalized",
+            "osType": "Linux",
+        },
+        "zoneResilient": True,
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const image = new azurerm.compute.latest.Image("image", {
+    imageName: "myImage",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        osDisk: {
+            managedDisk: {
+                id: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+            },
+            osState: "Generalized",
+            osType: "Linux",
+        },
+        zoneResilient: true,
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create a virtual machine image from a snapshot with DiskEncryptionSet resource.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var image = new AzureRM.Compute.Latest.Image("image", new AzureRM.Compute.Latest.ImageArgs
+        {
+            ImageName = "myImage",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureRM.Compute.Latest.Inputs.ImageStorageProfileArgs
+            {
+                OsDisk = new AzureRM.Compute.Latest.Inputs.ImageOSDiskArgs
+                {
+                    DiskEncryptionSet = new AzureRM.Compute.Latest.Inputs.DiskEncryptionSetParametersArgs
+                    {
+                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+                    },
+                    OsState = "Generalized",
+                    OsType = "Linux",
+                    Snapshot = new AzureRM.Compute.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+image = azurerm.compute.latest.Image("image",
+    image_name="myImage",
+    location="West US",
+    resource_group_name="myResourceGroup",
+    storage_profile={
+        "osDisk": {
+            "diskEncryptionSet": {
+                "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+            },
+            "osState": "Generalized",
+            "osType": "Linux",
+            "snapshot": {
+                "id": "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+            },
+        },
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const image = new azurerm.compute.latest.Image("image", {
+    imageName: "myImage",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        osDisk: {
+            diskEncryptionSet: {
+                id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+            },
+            osState: "Generalized",
+            osType: "Linux",
+            snapshot: {
+                id: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+            },
+        },
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create a virtual machine image from a snapshot.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var image = new AzureRM.Compute.Latest.Image("image", new AzureRM.Compute.Latest.ImageArgs
+        {
+            ImageName = "myImage",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureRM.Compute.Latest.Inputs.ImageStorageProfileArgs
+            {
+                OsDisk = new AzureRM.Compute.Latest.Inputs.ImageOSDiskArgs
+                {
+                    OsState = "Generalized",
+                    OsType = "Linux",
+                    Snapshot = new AzureRM.Compute.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+                    },
+                },
+                ZoneResilient = false,
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+image = azurerm.compute.latest.Image("image",
+    image_name="myImage",
+    location="West US",
+    resource_group_name="myResourceGroup",
+    storage_profile={
+        "osDisk": {
+            "osState": "Generalized",
+            "osType": "Linux",
+            "snapshot": {
+                "id": "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+            },
+        },
+        "zoneResilient": False,
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const image = new azurerm.compute.latest.Image("image", {
+    imageName: "myImage",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        osDisk: {
+            osState: "Generalized",
+            osType: "Linux",
+            snapshot: {
+                id: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+            },
+        },
+        zoneResilient: false,
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create a virtual machine image from an existing virtual machine.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var image = new AzureRM.Compute.Latest.Image("image", new AzureRM.Compute.Latest.ImageArgs
+        {
+            ImageName = "myImage",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            SourceVirtualMachine = new AzureRM.Compute.Latest.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+image = azurerm.compute.latest.Image("image",
+    image_name="myImage",
+    location="West US",
+    resource_group_name="myResourceGroup",
+    source_virtual_machine={
+        "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const image = new azurerm.compute.latest.Image("image", {
+    imageName: "myImage",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    sourceVirtualMachine: {
+        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create a virtual machine image that includes a data disk from a blob.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var image = new AzureRM.Compute.Latest.Image("image", new AzureRM.Compute.Latest.ImageArgs
+        {
+            ImageName = "myImage",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureRM.Compute.Latest.Inputs.ImageStorageProfileArgs
+            {
+                DataDisks = 
+                {
+                    new AzureRM.Compute.Latest.Inputs.ImageDataDiskArgs
+                    {
+                        BlobUri = "https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd",
+                        Lun = 1,
+                    },
+                },
+                OsDisk = new AzureRM.Compute.Latest.Inputs.ImageOSDiskArgs
+                {
+                    BlobUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+                    OsState = "Generalized",
+                    OsType = "Linux",
+                },
+                ZoneResilient = false,
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+image = azurerm.compute.latest.Image("image",
+    image_name="myImage",
+    location="West US",
+    resource_group_name="myResourceGroup",
+    storage_profile={
+        "dataDisks": [{
+            "blobUri": "https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd",
+            "lun": 1,
+        }],
+        "osDisk": {
+            "blobUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+            "osState": "Generalized",
+            "osType": "Linux",
+        },
+        "zoneResilient": False,
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const image = new azurerm.compute.latest.Image("image", {
+    imageName: "myImage",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        dataDisks: [{
+            blobUri: "https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd",
+            lun: 1,
+        }],
+        osDisk: {
+            blobUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+            osState: "Generalized",
+            osType: "Linux",
+        },
+        zoneResilient: false,
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create a virtual machine image that includes a data disk from a managed disk.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var image = new AzureRM.Compute.Latest.Image("image", new AzureRM.Compute.Latest.ImageArgs
+        {
+            ImageName = "myImage",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureRM.Compute.Latest.Inputs.ImageStorageProfileArgs
+            {
+                DataDisks = 
+                {
+                    new AzureRM.Compute.Latest.Inputs.ImageDataDiskArgs
+                    {
+                        Lun = 1,
+                        ManagedDisk = new AzureRM.Compute.Latest.Inputs.SubResourceArgs
+                        {
+                            Id = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2",
+                        },
+                    },
+                },
+                OsDisk = new AzureRM.Compute.Latest.Inputs.ImageOSDiskArgs
+                {
+                    ManagedDisk = new AzureRM.Compute.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+                    },
+                    OsState = "Generalized",
+                    OsType = "Linux",
+                },
+                ZoneResilient = false,
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+image = azurerm.compute.latest.Image("image",
+    image_name="myImage",
+    location="West US",
+    resource_group_name="myResourceGroup",
+    storage_profile={
+        "dataDisks": [{
+            "lun": 1,
+            "managedDisk": {
+                "id": "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2",
+            },
+        }],
+        "osDisk": {
+            "managedDisk": {
+                "id": "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+            },
+            "osState": "Generalized",
+            "osType": "Linux",
+        },
+        "zoneResilient": False,
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const image = new azurerm.compute.latest.Image("image", {
+    imageName: "myImage",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        dataDisks: [{
+            lun: 1,
+            managedDisk: {
+                id: "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2",
+            },
+        }],
+        osDisk: {
+            managedDisk: {
+                id: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+            },
+            osState: "Generalized",
+            osType: "Linux",
+        },
+        zoneResilient: false,
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create a virtual machine image that includes a data disk from a snapshot.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var image = new AzureRM.Compute.Latest.Image("image", new AzureRM.Compute.Latest.ImageArgs
+        {
+            ImageName = "myImage",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureRM.Compute.Latest.Inputs.ImageStorageProfileArgs
+            {
+                DataDisks = 
+                {
+                    new AzureRM.Compute.Latest.Inputs.ImageDataDiskArgs
+                    {
+                        Lun = 1,
+                        Snapshot = new AzureRM.Compute.Latest.Inputs.SubResourceArgs
+                        {
+                            Id = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2",
+                        },
+                    },
+                },
+                OsDisk = new AzureRM.Compute.Latest.Inputs.ImageOSDiskArgs
+                {
+                    OsState = "Generalized",
+                    OsType = "Linux",
+                    Snapshot = new AzureRM.Compute.Latest.Inputs.SubResourceArgs
+                    {
+                        Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+                    },
+                },
+                ZoneResilient = true,
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+image = azurerm.compute.latest.Image("image",
+    image_name="myImage",
+    location="West US",
+    resource_group_name="myResourceGroup",
+    storage_profile={
+        "dataDisks": [{
+            "lun": 1,
+            "snapshot": {
+                "id": "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2",
+            },
+        }],
+        "osDisk": {
+            "osState": "Generalized",
+            "osType": "Linux",
+            "snapshot": {
+                "id": "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+            },
+        },
+        "zoneResilient": True,
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const image = new azurerm.compute.latest.Image("image", {
+    imageName: "myImage",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        dataDisks: [{
+            lun: 1,
+            snapshot: {
+                id: "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2",
+            },
+        }],
+        osDisk: {
+            osState: "Generalized",
+            osType: "Linux",
+            snapshot: {
+                id: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+            },
+        },
+        zoneResilient: true,
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Image Resource {#create}

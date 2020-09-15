@@ -12,6 +12,129 @@ meta_desc: "Explore the Dataset resource of the datafactory/latest module, inclu
 
 Dataset resource type.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Datasets_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataset = new AzureRM.DataFactory.Latest.Dataset("dataset", new AzureRM.DataFactory.Latest.DatasetArgs
+        {
+            DatasetName = "exampleDataset",
+            FactoryName = "exampleFactoryName",
+            ResourceGroupName = "exampleResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+dataset = azurerm.datafactory.latest.Dataset("dataset",
+    dataset_name="exampleDataset",
+    factory_name="exampleFactoryName",
+    resource_group_name="exampleResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataset = new azurerm.datafactory.latest.Dataset("dataset", {
+    datasetName: "exampleDataset",
+    factoryName: "exampleFactoryName",
+    resourceGroupName: "exampleResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+### Datasets_Update
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataset = new AzureRM.DataFactory.Latest.Dataset("dataset", new AzureRM.DataFactory.Latest.DatasetArgs
+        {
+            DatasetName = "exampleDataset",
+            FactoryName = "exampleFactoryName",
+            ResourceGroupName = "exampleResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+dataset = azurerm.datafactory.latest.Dataset("dataset",
+    dataset_name="exampleDataset",
+    factory_name="exampleFactoryName",
+    resource_group_name="exampleResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataset = new azurerm.datafactory.latest.Dataset("dataset", {
+    datasetName: "exampleDataset",
+    factoryName: "exampleFactoryName",
+    resourceGroupName: "exampleResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Dataset Resource {#create}

@@ -12,6 +12,76 @@ meta_desc: "Explore the GuestDiagnosticsSettingsAssociation resource of the insi
 
 Virtual machine guest diagnostic settings resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update an guest diagnostic settings association
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var guestDiagnosticsSettingsAssociation = new AzureRM.Insights.V20180601Preview.GuestDiagnosticsSettingsAssociation("guestDiagnosticsSettingsAssociation", new AzureRM.Insights.V20180601Preview.GuestDiagnosticsSettingsAssociationArgs
+        {
+            AssociationName = "healthSystemMachineConfigAssociation",
+            GuestDiagnosticSettingsName = "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-Association-ResourceGroup/providers/providers/microsoft.insights/guestDiagnosticSettings/vmSettingForSecurity",
+            Location = "Global",
+            ResourceUri = "subscriptions/8498f01b-8064-4e37-856e-318f3c6c685f/resourceGroups/healthsystem/providers/Microsoft.Compute/virtualMachines/eastussojai",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+guest_diagnostics_settings_association = azurerm.insights.v20180601preview.GuestDiagnosticsSettingsAssociation("guestDiagnosticsSettingsAssociation",
+    association_name="healthSystemMachineConfigAssociation",
+    guest_diagnostic_settings_name="/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-Association-ResourceGroup/providers/providers/microsoft.insights/guestDiagnosticSettings/vmSettingForSecurity",
+    location="Global",
+    resource_uri="subscriptions/8498f01b-8064-4e37-856e-318f3c6c685f/resourceGroups/healthsystem/providers/Microsoft.Compute/virtualMachines/eastussojai",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const guestDiagnosticsSettingsAssociation = new azurerm.insights.v20180601preview.GuestDiagnosticsSettingsAssociation("guestDiagnosticsSettingsAssociation", {
+    associationName: "healthSystemMachineConfigAssociation",
+    guestDiagnosticSettingsName: "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-Association-ResourceGroup/providers/providers/microsoft.insights/guestDiagnosticSettings/vmSettingForSecurity",
+    location: "Global",
+    resourceUri: "subscriptions/8498f01b-8064-4e37-856e-318f3c6c685f/resourceGroups/healthsystem/providers/Microsoft.Compute/virtualMachines/eastussojai",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GuestDiagnosticsSettingsAssociation Resource {#create}

@@ -12,6 +12,96 @@ meta_desc: "Explore the Experiment resource of the network/latest module, includ
 
 Defines the properties of an Experiment
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates an Experiment
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var experiment = new AzureRM.Network.Latest.Experiment("experiment", new AzureRM.Network.Latest.ExperimentArgs
+        {
+            Description = "this is my first experiment!",
+            EnabledState = "Enabled",
+            EndpointA = new AzureRM.Network.Latest.Inputs.EndpointArgs
+            {
+                Name = "endpoint A",
+            },
+            EndpointB = new AzureRM.Network.Latest.Inputs.EndpointArgs
+            {
+                Name = "endpoint B",
+            },
+            ExperimentName = "MyExperiment",
+            ProfileName = "MyProfile",
+            ResourceGroupName = "MyResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+experiment = azurerm.network.latest.Experiment("experiment",
+    description="this is my first experiment!",
+    enabled_state="Enabled",
+    endpoint_a={
+        "name": "endpoint A",
+    },
+    endpoint_b={
+        "name": "endpoint B",
+    },
+    experiment_name="MyExperiment",
+    profile_name="MyProfile",
+    resource_group_name="MyResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const experiment = new azurerm.network.latest.Experiment("experiment", {
+    description: "this is my first experiment!",
+    enabledState: "Enabled",
+    endpointA: {
+        name: "endpoint A",
+    },
+    endpointB: {
+        name: "endpoint B",
+    },
+    experimentName: "MyExperiment",
+    profileName: "MyProfile",
+    resourceGroupName: "MyResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Experiment Resource {#create}

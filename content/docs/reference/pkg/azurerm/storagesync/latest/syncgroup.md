@@ -12,6 +12,70 @@ meta_desc: "Explore the SyncGroup resource of the storagesync/latest module, inc
 
 Sync Group object.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### SyncGroups_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var syncGroup = new AzureRM.StorageSync.Latest.SyncGroup("syncGroup", new AzureRM.StorageSync.Latest.SyncGroupArgs
+        {
+            ResourceGroupName = "SampleResourceGroup_1",
+            StorageSyncServiceName = "SampleStorageSyncService_1",
+            SyncGroupName = "SampleSyncGroup_1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sync_group = azurerm.storagesync.latest.SyncGroup("syncGroup",
+    resource_group_name="SampleResourceGroup_1",
+    storage_sync_service_name="SampleStorageSyncService_1",
+    sync_group_name="SampleSyncGroup_1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const syncGroup = new azurerm.storagesync.latest.SyncGroup("syncGroup", {
+    resourceGroupName: "SampleResourceGroup_1",
+    storageSyncServiceName: "SampleStorageSyncService_1",
+    syncGroupName: "SampleSyncGroup_1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SyncGroup Resource {#create}

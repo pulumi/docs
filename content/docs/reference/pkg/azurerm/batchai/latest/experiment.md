@@ -12,6 +12,70 @@ meta_desc: "Explore the Experiment resource of the batchai/latest module, includ
 
 Experiment information.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create an experiment
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var experiment = new AzureRM.BatchAI.Latest.Experiment("experiment", new AzureRM.BatchAI.Latest.ExperimentArgs
+        {
+            ExperimentName = "demo_experiment",
+            ResourceGroupName = "demo_resource_group",
+            WorkspaceName = "demo_workspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+experiment = azurerm.batchai.latest.Experiment("experiment",
+    experiment_name="demo_experiment",
+    resource_group_name="demo_resource_group",
+    workspace_name="demo_workspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const experiment = new azurerm.batchai.latest.Experiment("experiment", {
+    experimentName: "demo_experiment",
+    resourceGroupName: "demo_resource_group",
+    workspaceName: "demo_workspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Experiment Resource {#create}

@@ -12,6 +12,108 @@ meta_desc: "Explore the CustomResourceProvider resource of the customproviders/v
 
 A manifest file that defines the custom resource provider resources.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update the custom resource provider
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var customResourceProvider = new AzureRM.CustomProviders.V20180901Preview.CustomResourceProvider("customResourceProvider", new AzureRM.CustomProviders.V20180901Preview.CustomResourceProviderArgs
+        {
+            Actions = 
+            {
+                new AzureRM.CustomProviders.V20180901Preview.Inputs.CustomRPActionRouteDefinitionArgs
+                {
+                    Endpoint = "https://mytestendpoint/",
+                    Name = "TestAction",
+                    RoutingType = "Proxy",
+                },
+            },
+            Location = "eastus",
+            ResourceGroupName = "testRG",
+            ResourceProviderName = "newrp",
+            ResourceTypes = 
+            {
+                new AzureRM.CustomProviders.V20180901Preview.Inputs.CustomRPResourceTypeRouteDefinitionArgs
+                {
+                    Endpoint = "https://mytestendpoint2/",
+                    Name = "TestResource",
+                    RoutingType = "Proxy,Cache",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+custom_resource_provider = azurerm.customproviders.v20180901preview.CustomResourceProvider("customResourceProvider",
+    actions=[{
+        "endpoint": "https://mytestendpoint/",
+        "name": "TestAction",
+        "routingType": "Proxy",
+    }],
+    location="eastus",
+    resource_group_name="testRG",
+    resource_provider_name="newrp",
+    resource_types=[{
+        "endpoint": "https://mytestendpoint2/",
+        "name": "TestResource",
+        "routingType": "Proxy,Cache",
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const customResourceProvider = new azurerm.customproviders.v20180901preview.CustomResourceProvider("customResourceProvider", {
+    actions: [{
+        endpoint: "https://mytestendpoint/",
+        name: "TestAction",
+        routingType: "Proxy",
+    }],
+    location: "eastus",
+    resourceGroupName: "testRG",
+    resourceProviderName: "newrp",
+    resourceTypes: [{
+        endpoint: "https://mytestendpoint2/",
+        name: "TestResource",
+        routingType: "Proxy,Cache",
+    }],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CustomResourceProvider Resource {#create}

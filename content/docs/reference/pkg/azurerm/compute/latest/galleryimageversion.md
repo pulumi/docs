@@ -12,6 +12,541 @@ meta_desc: "Explore the GalleryImageVersion resource of the compute/latest modul
 
 Specifies information about the gallery image version that you want to create or update.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a simple Gallery Image Version (Managed Image as source).
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var galleryImageVersion = new AzureRM.Compute.Latest.GalleryImageVersion("galleryImageVersion", new AzureRM.Compute.Latest.GalleryImageVersionArgs
+        {
+            GalleryImageName = "myGalleryImageName",
+            GalleryImageVersionName = "1.0.0",
+            GalleryName = "myGalleryName",
+            Location = "West US",
+            PublishingProfile = new AzureRM.Compute.Latest.Inputs.GalleryImageVersionPublishingProfileArgs
+            {
+                TargetRegions = 
+                {
+                    new AzureRM.Compute.Latest.Inputs.TargetRegionArgs
+                    {
+                        Encryption = new AzureRM.Compute.Latest.Inputs.EncryptionImagesArgs
+                        {
+                            DataDiskImages = 
+                            {
+                                new AzureRM.Compute.Latest.Inputs.DataDiskImageEncryptionArgs
+                                {
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
+                                    Lun = 0,
+                                },
+                                new AzureRM.Compute.Latest.Inputs.DataDiskImageEncryptionArgs
+                                {
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                                    Lun = 1,
+                                },
+                            },
+                            OsDiskImage = new AzureRM.Compute.Latest.Inputs.OSDiskImageEncryptionArgs
+                            {
+                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                            },
+                        },
+                        Name = "West US",
+                        RegionalReplicaCount = 1,
+                    },
+                    new AzureRM.Compute.Latest.Inputs.TargetRegionArgs
+                    {
+                        Name = "East US",
+                        RegionalReplicaCount = 2,
+                        StorageAccountType = "Standard_ZRS",
+                    },
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureRM.Compute.Latest.Inputs.GalleryImageVersionStorageProfileArgs
+            {
+                Source = new AzureRM.Compute.Latest.Inputs.GalleryArtifactVersionSourceArgs
+                {
+                    Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+gallery_image_version = azurerm.compute.latest.GalleryImageVersion("galleryImageVersion",
+    gallery_image_name="myGalleryImageName",
+    gallery_image_version_name="1.0.0",
+    gallery_name="myGalleryName",
+    location="West US",
+    publishing_profile={
+        "targetRegions": [
+            {
+                "encryption": {
+                    "dataDiskImages": [
+                        {
+                            "diskEncryptionSetId": "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
+                            "lun": 0,
+                        },
+                        {
+                            "diskEncryptionSetId": "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                            "lun": 1,
+                        },
+                    ],
+                    "osDiskImage": {
+                        "diskEncryptionSetId": "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                    },
+                },
+                "name": "West US",
+                "regionalReplicaCount": 1,
+            },
+            {
+                "name": "East US",
+                "regionalReplicaCount": 2,
+                "storageAccountType": "Standard_ZRS",
+            },
+        ],
+    },
+    resource_group_name="myResourceGroup",
+    storage_profile={
+        "source": {
+            "id": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}",
+        },
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const galleryImageVersion = new azurerm.compute.latest.GalleryImageVersion("galleryImageVersion", {
+    galleryImageName: "myGalleryImageName",
+    galleryImageVersionName: "1.0.0",
+    galleryName: "myGalleryName",
+    location: "West US",
+    publishingProfile: {
+        targetRegions: [
+            {
+                encryption: {
+                    dataDiskImages: [
+                        {
+                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
+                            lun: 0,
+                        },
+                        {
+                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                            lun: 1,
+                        },
+                    ],
+                    osDiskImage: {
+                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                    },
+                },
+                name: "West US",
+                regionalReplicaCount: 1,
+            },
+            {
+                name: "East US",
+                regionalReplicaCount: 2,
+                storageAccountType: "Standard_ZRS",
+            },
+        ],
+    },
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        source: {
+            id: "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}",
+        },
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create or update a simple Gallery Image Version using snapshots as a source.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var galleryImageVersion = new AzureRM.Compute.Latest.GalleryImageVersion("galleryImageVersion", new AzureRM.Compute.Latest.GalleryImageVersionArgs
+        {
+            GalleryImageName = "myGalleryImageName",
+            GalleryImageVersionName = "1.0.0",
+            GalleryName = "myGalleryName",
+            Location = "West US",
+            PublishingProfile = new AzureRM.Compute.Latest.Inputs.GalleryImageVersionPublishingProfileArgs
+            {
+                TargetRegions = 
+                {
+                    new AzureRM.Compute.Latest.Inputs.TargetRegionArgs
+                    {
+                        Encryption = new AzureRM.Compute.Latest.Inputs.EncryptionImagesArgs
+                        {
+                            DataDiskImages = 
+                            {
+                                new AzureRM.Compute.Latest.Inputs.DataDiskImageEncryptionArgs
+                                {
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
+                                    Lun = 1,
+                                },
+                            },
+                            OsDiskImage = new AzureRM.Compute.Latest.Inputs.OSDiskImageEncryptionArgs
+                            {
+                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                            },
+                        },
+                        Name = "West US",
+                        RegionalReplicaCount = 1,
+                    },
+                    new AzureRM.Compute.Latest.Inputs.TargetRegionArgs
+                    {
+                        Name = "East US",
+                        RegionalReplicaCount = 2,
+                        StorageAccountType = "Standard_ZRS",
+                    },
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureRM.Compute.Latest.Inputs.GalleryImageVersionStorageProfileArgs
+            {
+                DataDiskImages = 
+                {
+                    new AzureRM.Compute.Latest.Inputs.GalleryDataDiskImageArgs
+                    {
+                        HostCaching = "None",
+                        Lun = 1,
+                        Source = new AzureRM.Compute.Latest.Inputs.GalleryArtifactVersionSourceArgs
+                        {
+                            Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}",
+                        },
+                    },
+                },
+                OsDiskImage = new AzureRM.Compute.Latest.Inputs.GalleryOSDiskImageArgs
+                {
+                    HostCaching = "ReadOnly",
+                    Source = new AzureRM.Compute.Latest.Inputs.GalleryArtifactVersionSourceArgs
+                    {
+                        Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}",
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+gallery_image_version = azurerm.compute.latest.GalleryImageVersion("galleryImageVersion",
+    gallery_image_name="myGalleryImageName",
+    gallery_image_version_name="1.0.0",
+    gallery_name="myGalleryName",
+    location="West US",
+    publishing_profile={
+        "targetRegions": [
+            {
+                "encryption": {
+                    "dataDiskImages": [{
+                        "diskEncryptionSetId": "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
+                        "lun": 1,
+                    }],
+                    "osDiskImage": {
+                        "diskEncryptionSetId": "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                    },
+                },
+                "name": "West US",
+                "regionalReplicaCount": 1,
+            },
+            {
+                "name": "East US",
+                "regionalReplicaCount": 2,
+                "storageAccountType": "Standard_ZRS",
+            },
+        ],
+    },
+    resource_group_name="myResourceGroup",
+    storage_profile={
+        "dataDiskImages": [{
+            "hostCaching": "None",
+            "lun": 1,
+            "source": {
+                "id": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}",
+            },
+        }],
+        "osDiskImage": {
+            "hostCaching": "ReadOnly",
+            "source": {
+                "id": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}",
+            },
+        },
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const galleryImageVersion = new azurerm.compute.latest.GalleryImageVersion("galleryImageVersion", {
+    galleryImageName: "myGalleryImageName",
+    galleryImageVersionName: "1.0.0",
+    galleryName: "myGalleryName",
+    location: "West US",
+    publishingProfile: {
+        targetRegions: [
+            {
+                encryption: {
+                    dataDiskImages: [{
+                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
+                        lun: 1,
+                    }],
+                    osDiskImage: {
+                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                    },
+                },
+                name: "West US",
+                regionalReplicaCount: 1,
+            },
+            {
+                name: "East US",
+                regionalReplicaCount: 2,
+                storageAccountType: "Standard_ZRS",
+            },
+        ],
+    },
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        dataDiskImages: [{
+            hostCaching: "None",
+            lun: 1,
+            source: {
+                id: "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}",
+            },
+        }],
+        osDiskImage: {
+            hostCaching: "ReadOnly",
+            source: {
+                id: "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}",
+            },
+        },
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create or update a simple Gallery Image Version using vhd as a source.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var galleryImageVersion = new AzureRM.Compute.Latest.GalleryImageVersion("galleryImageVersion", new AzureRM.Compute.Latest.GalleryImageVersionArgs
+        {
+            GalleryImageName = "myGalleryImageName",
+            GalleryImageVersionName = "1.0.0",
+            GalleryName = "myGalleryName",
+            Location = "West US",
+            PublishingProfile = new AzureRM.Compute.Latest.Inputs.GalleryImageVersionPublishingProfileArgs
+            {
+                TargetRegions = 
+                {
+                    new AzureRM.Compute.Latest.Inputs.TargetRegionArgs
+                    {
+                        Encryption = new AzureRM.Compute.Latest.Inputs.EncryptionImagesArgs
+                        {
+                            DataDiskImages = 
+                            {
+                                new AzureRM.Compute.Latest.Inputs.DataDiskImageEncryptionArgs
+                                {
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
+                                    Lun = 1,
+                                },
+                            },
+                            OsDiskImage = new AzureRM.Compute.Latest.Inputs.OSDiskImageEncryptionArgs
+                            {
+                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                            },
+                        },
+                        Name = "West US",
+                        RegionalReplicaCount = 1,
+                    },
+                    new AzureRM.Compute.Latest.Inputs.TargetRegionArgs
+                    {
+                        Name = "East US",
+                        RegionalReplicaCount = 2,
+                        StorageAccountType = "Standard_ZRS",
+                    },
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureRM.Compute.Latest.Inputs.GalleryImageVersionStorageProfileArgs
+            {
+                Source = new AzureRM.Compute.Latest.Inputs.GalleryArtifactVersionSourceArgs
+                {
+                    Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
+                    Uri = "https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+gallery_image_version = azurerm.compute.latest.GalleryImageVersion("galleryImageVersion",
+    gallery_image_name="myGalleryImageName",
+    gallery_image_version_name="1.0.0",
+    gallery_name="myGalleryName",
+    location="West US",
+    publishing_profile={
+        "targetRegions": [
+            {
+                "encryption": {
+                    "dataDiskImages": [{
+                        "diskEncryptionSetId": "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
+                        "lun": 1,
+                    }],
+                    "osDiskImage": {
+                        "diskEncryptionSetId": "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                    },
+                },
+                "name": "West US",
+                "regionalReplicaCount": 1,
+            },
+            {
+                "name": "East US",
+                "regionalReplicaCount": 2,
+                "storageAccountType": "Standard_ZRS",
+            },
+        ],
+    },
+    resource_group_name="myResourceGroup",
+    storage_profile={
+        "source": {
+            "id": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
+            "uri": "https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
+        },
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const galleryImageVersion = new azurerm.compute.latest.GalleryImageVersion("galleryImageVersion", {
+    galleryImageName: "myGalleryImageName",
+    galleryImageVersionName: "1.0.0",
+    galleryName: "myGalleryName",
+    location: "West US",
+    publishingProfile: {
+        targetRegions: [
+            {
+                encryption: {
+                    dataDiskImages: [{
+                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
+                        lun: 1,
+                    }],
+                    osDiskImage: {
+                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
+                    },
+                },
+                name: "West US",
+                regionalReplicaCount: 1,
+            },
+            {
+                name: "East US",
+                regionalReplicaCount: 2,
+                storageAccountType: "Standard_ZRS",
+            },
+        ],
+    },
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        source: {
+            id: "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
+            uri: "https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
+        },
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GalleryImageVersion Resource {#create}

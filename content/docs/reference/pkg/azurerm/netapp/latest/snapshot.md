@@ -12,6 +12,79 @@ meta_desc: "Explore the Snapshot resource of the netapp/latest module, including
 
 Snapshot of a Volume
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Snapshots_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var snapshot = new AzureRM.NetApp.Latest.Snapshot("snapshot", new AzureRM.NetApp.Latest.SnapshotArgs
+        {
+            AccountName = "account1",
+            Location = "eastus",
+            PoolName = "pool1",
+            ResourceGroupName = "myRG",
+            SnapshotName = "snapshot1",
+            VolumeName = "volume1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+snapshot = azurerm.netapp.latest.Snapshot("snapshot",
+    account_name="account1",
+    location="eastus",
+    pool_name="pool1",
+    resource_group_name="myRG",
+    snapshot_name="snapshot1",
+    volume_name="volume1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const snapshot = new azurerm.netapp.latest.Snapshot("snapshot", {
+    accountName: "account1",
+    location: "eastus",
+    poolName: "pool1",
+    resourceGroupName: "myRG",
+    snapshotName: "snapshot1",
+    volumeName: "volume1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Snapshot Resource {#create}

@@ -13,6 +13,1184 @@ meta_desc: "Explore the Task resource of the containerregistry/v20190601preview 
 The task that has the ARM resource and task properties.
 The task will have all information to schedule a run against it.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Tasks_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var task = new AzureRM.ContainerRegistry.V20190601Preview.Task("task", new AzureRM.ContainerRegistry.V20190601Preview.TaskArgs
+        {
+            AgentConfiguration = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.AgentPropertiesArgs
+            {
+                Cpu = 2,
+            },
+            Identity = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.IdentityPropertiesArgs
+            {
+                Type = "SystemAssigned",
+            },
+            IsSystemTask = false,
+            Location = "eastus",
+            LogTemplate = "acr/tasks:{{.Run.OS}}",
+            Platform = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.PlatformPropertiesArgs
+            {
+                Architecture = "amd64",
+                Os = "Linux",
+            },
+            RegistryName = "myRegistry",
+            ResourceGroupName = "myResourceGroup",
+            Status = "Enabled",
+            Step = 
+            {
+                { "arguments", 
+                {
+                    new AzureRM.ContainerRegistry.V20190601Preview.Inputs.ArgumentArgs
+                    {
+                        IsSecret = false,
+                        Name = "mytestargument",
+                        Value = "mytestvalue",
+                    },
+                    new AzureRM.ContainerRegistry.V20190601Preview.Inputs.ArgumentArgs
+                    {
+                        IsSecret = true,
+                        Name = "mysecrettestargument",
+                        Value = "mysecrettestvalue",
+                    },
+                } },
+                { "contextPath", "src" },
+                { "dockerFilePath", "src/DockerFile" },
+                { "imageNames", 
+                {
+                    "azurerest:testtag",
+                } },
+                { "isPushEnabled", true },
+                { "noCache", false },
+                { "type", "Docker" },
+            },
+            Tags = 
+            {
+                { "testkey", "value" },
+            },
+            TaskName = "mytTask",
+            Trigger = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.TriggerPropertiesArgs
+            {
+                BaseImageTrigger = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.BaseImageTriggerArgs
+                {
+                    BaseImageTriggerType = "Runtime",
+                    Name = "myBaseImageTrigger",
+                    UpdateTriggerEndpoint = "https://user:pass@mycicd.webhook.com?token=foo",
+                    UpdateTriggerPayloadType = "Token",
+                },
+                SourceTriggers = 
+                {
+                    new AzureRM.ContainerRegistry.V20190601Preview.Inputs.SourceTriggerArgs
+                    {
+                        Name = "mySourceTrigger",
+                        SourceRepository = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.SourcePropertiesArgs
+                        {
+                            Branch = "master",
+                            RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
+                            SourceControlAuthProperties = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.AuthInfoArgs
+                            {
+                                Token = "xxxxx",
+                                TokenType = "PAT",
+                            },
+                            SourceControlType = "Github",
+                        },
+                        SourceTriggerEvents = 
+                        {
+                            "commit",
+                        },
+                    },
+                },
+                TimerTriggers = 
+                {
+                    new AzureRM.ContainerRegistry.V20190601Preview.Inputs.TimerTriggerArgs
+                    {
+                        Name = "myTimerTrigger",
+                        Schedule = "30 9 * * 1-5",
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+task = azurerm.containerregistry.v20190601preview.Task("task",
+    agent_configuration={
+        "cpu": 2,
+    },
+    identity={
+        "type": "SystemAssigned",
+    },
+    is_system_task=False,
+    location="eastus",
+    log_template="acr/tasks:{{.Run.OS}}",
+    platform={
+        "architecture": "amd64",
+        "os": "Linux",
+    },
+    registry_name="myRegistry",
+    resource_group_name="myResourceGroup",
+    status="Enabled",
+    step={
+        "arguments": [
+            {
+                "isSecret": False,
+                "name": "mytestargument",
+                "value": "mytestvalue",
+            },
+            {
+                "isSecret": True,
+                "name": "mysecrettestargument",
+                "value": "mysecrettestvalue",
+            },
+        ],
+        "contextPath": "src",
+        "dockerFilePath": "src/DockerFile",
+        "imageNames": ["azurerest:testtag"],
+        "isPushEnabled": True,
+        "noCache": False,
+        "type": "Docker",
+    },
+    tags={
+        "testkey": "value",
+    },
+    task_name="mytTask",
+    trigger={
+        "baseImageTrigger": {
+            "baseImageTriggerType": "Runtime",
+            "name": "myBaseImageTrigger",
+            "updateTriggerEndpoint": "https://user:pass@mycicd.webhook.com?token=foo",
+            "updateTriggerPayloadType": "Token",
+        },
+        "sourceTriggers": [{
+            "name": "mySourceTrigger",
+            "sourceRepository": {
+                "branch": "master",
+                "repositoryUrl": "https://github.com/Azure/azure-rest-api-specs",
+                "sourceControlAuthProperties": {
+                    "token": "xxxxx",
+                    "tokenType": "PAT",
+                },
+                "sourceControlType": "Github",
+            },
+            "sourceTriggerEvents": ["commit"],
+        }],
+        "timerTriggers": [{
+            "name": "myTimerTrigger",
+            "schedule": "30 9 * * 1-5",
+        }],
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const task = new azurerm.containerregistry.v20190601preview.Task("task", {
+    agentConfiguration: {
+        cpu: 2,
+    },
+    identity: {
+        type: "SystemAssigned",
+    },
+    isSystemTask: false,
+    location: "eastus",
+    logTemplate: "acr/tasks:{{.Run.OS}}",
+    platform: {
+        architecture: "amd64",
+        os: "Linux",
+    },
+    registryName: "myRegistry",
+    resourceGroupName: "myResourceGroup",
+    status: "Enabled",
+    step: {
+        arguments: [
+            {
+                isSecret: false,
+                name: "mytestargument",
+                value: "mytestvalue",
+            },
+            {
+                isSecret: true,
+                name: "mysecrettestargument",
+                value: "mysecrettestvalue",
+            },
+        ],
+        contextPath: "src",
+        dockerFilePath: "src/DockerFile",
+        imageNames: ["azurerest:testtag"],
+        isPushEnabled: true,
+        noCache: false,
+        type: "Docker",
+    },
+    tags: {
+        testkey: "value",
+    },
+    taskName: "mytTask",
+    trigger: {
+        baseImageTrigger: {
+            baseImageTriggerType: "Runtime",
+            name: "myBaseImageTrigger",
+            updateTriggerEndpoint: "https://user:pass@mycicd.webhook.com?token=foo",
+            updateTriggerPayloadType: "Token",
+        },
+        sourceTriggers: [{
+            name: "mySourceTrigger",
+            sourceRepository: {
+                branch: "master",
+                repositoryUrl: "https://github.com/Azure/azure-rest-api-specs",
+                sourceControlAuthProperties: {
+                    token: "xxxxx",
+                    tokenType: "PAT",
+                },
+                sourceControlType: "Github",
+            },
+            sourceTriggerEvents: ["commit"],
+        }],
+        timerTriggers: [{
+            name: "myTimerTrigger",
+            schedule: "30 9 * * 1-5",
+        }],
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Tasks_Create_QuickTask
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var task = new AzureRM.ContainerRegistry.V20190601Preview.Task("task", new AzureRM.ContainerRegistry.V20190601Preview.TaskArgs
+        {
+            IsSystemTask = true,
+            Location = "eastus",
+            LogTemplate = "acr/tasks:{{.Run.OS}}",
+            RegistryName = "myRegistry",
+            ResourceGroupName = "myResourceGroup",
+            Status = "Enabled",
+            Tags = 
+            {
+                { "testkey", "value" },
+            },
+            TaskName = "quicktask",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+task = azurerm.containerregistry.v20190601preview.Task("task",
+    is_system_task=True,
+    location="eastus",
+    log_template="acr/tasks:{{.Run.OS}}",
+    registry_name="myRegistry",
+    resource_group_name="myResourceGroup",
+    status="Enabled",
+    tags={
+        "testkey": "value",
+    },
+    task_name="quicktask")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const task = new azurerm.containerregistry.v20190601preview.Task("task", {
+    isSystemTask: true,
+    location: "eastus",
+    logTemplate: "acr/tasks:{{.Run.OS}}",
+    registryName: "myRegistry",
+    resourceGroupName: "myResourceGroup",
+    status: "Enabled",
+    tags: {
+        testkey: "value",
+    },
+    taskName: "quicktask",
+});
+
+```
+
+{{% /example %}}
+
+### Tasks_Create_WithSystemAndUserIdentities
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var task = new AzureRM.ContainerRegistry.V20190601Preview.Task("task", new AzureRM.ContainerRegistry.V20190601Preview.TaskArgs
+        {
+            AgentConfiguration = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.AgentPropertiesArgs
+            {
+                Cpu = 2,
+            },
+            Identity = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.IdentityPropertiesArgs
+            {
+                Type = "SystemAssigned, UserAssigned",
+                UserAssignedIdentities = 
+                {
+                    { "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2",  },
+                },
+            },
+            IsSystemTask = false,
+            Location = "eastus",
+            Platform = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.PlatformPropertiesArgs
+            {
+                Architecture = "amd64",
+                Os = "Linux",
+            },
+            RegistryName = "myRegistry",
+            ResourceGroupName = "myResourceGroup",
+            Status = "Enabled",
+            Step = 
+            {
+                { "arguments", 
+                {
+                    new AzureRM.ContainerRegistry.V20190601Preview.Inputs.ArgumentArgs
+                    {
+                        IsSecret = false,
+                        Name = "mytestargument",
+                        Value = "mytestvalue",
+                    },
+                    new AzureRM.ContainerRegistry.V20190601Preview.Inputs.ArgumentArgs
+                    {
+                        IsSecret = true,
+                        Name = "mysecrettestargument",
+                        Value = "mysecrettestvalue",
+                    },
+                } },
+                { "contextPath", "src" },
+                { "dockerFilePath", "src/DockerFile" },
+                { "imageNames", 
+                {
+                    "azurerest:testtag",
+                } },
+                { "isPushEnabled", true },
+                { "noCache", false },
+                { "type", "Docker" },
+            },
+            Tags = 
+            {
+                { "testkey", "value" },
+            },
+            TaskName = "mytTask",
+            Trigger = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.TriggerPropertiesArgs
+            {
+                BaseImageTrigger = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.BaseImageTriggerArgs
+                {
+                    BaseImageTriggerType = "Runtime",
+                    Name = "myBaseImageTrigger",
+                    UpdateTriggerEndpoint = "https://user:pass@mycicd.webhook.com?token=foo",
+                    UpdateTriggerPayloadType = "Default",
+                },
+                SourceTriggers = 
+                {
+                    new AzureRM.ContainerRegistry.V20190601Preview.Inputs.SourceTriggerArgs
+                    {
+                        Name = "mySourceTrigger",
+                        SourceRepository = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.SourcePropertiesArgs
+                        {
+                            Branch = "master",
+                            RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
+                            SourceControlAuthProperties = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.AuthInfoArgs
+                            {
+                                Token = "xxxxx",
+                                TokenType = "PAT",
+                            },
+                            SourceControlType = "Github",
+                        },
+                        SourceTriggerEvents = 
+                        {
+                            "commit",
+                        },
+                    },
+                },
+                TimerTriggers = 
+                {
+                    new AzureRM.ContainerRegistry.V20190601Preview.Inputs.TimerTriggerArgs
+                    {
+                        Name = "myTimerTrigger",
+                        Schedule = "30 9 * * 1-5",
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+task = azurerm.containerregistry.v20190601preview.Task("task",
+    agent_configuration={
+        "cpu": 2,
+    },
+    identity={
+        "type": "SystemAssigned, UserAssigned",
+        "userAssignedIdentities": {
+            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": {},
+        },
+    },
+    is_system_task=False,
+    location="eastus",
+    platform={
+        "architecture": "amd64",
+        "os": "Linux",
+    },
+    registry_name="myRegistry",
+    resource_group_name="myResourceGroup",
+    status="Enabled",
+    step={
+        "arguments": [
+            {
+                "isSecret": False,
+                "name": "mytestargument",
+                "value": "mytestvalue",
+            },
+            {
+                "isSecret": True,
+                "name": "mysecrettestargument",
+                "value": "mysecrettestvalue",
+            },
+        ],
+        "contextPath": "src",
+        "dockerFilePath": "src/DockerFile",
+        "imageNames": ["azurerest:testtag"],
+        "isPushEnabled": True,
+        "noCache": False,
+        "type": "Docker",
+    },
+    tags={
+        "testkey": "value",
+    },
+    task_name="mytTask",
+    trigger={
+        "baseImageTrigger": {
+            "baseImageTriggerType": "Runtime",
+            "name": "myBaseImageTrigger",
+            "updateTriggerEndpoint": "https://user:pass@mycicd.webhook.com?token=foo",
+            "updateTriggerPayloadType": "Default",
+        },
+        "sourceTriggers": [{
+            "name": "mySourceTrigger",
+            "sourceRepository": {
+                "branch": "master",
+                "repositoryUrl": "https://github.com/Azure/azure-rest-api-specs",
+                "sourceControlAuthProperties": {
+                    "token": "xxxxx",
+                    "tokenType": "PAT",
+                },
+                "sourceControlType": "Github",
+            },
+            "sourceTriggerEvents": ["commit"],
+        }],
+        "timerTriggers": [{
+            "name": "myTimerTrigger",
+            "schedule": "30 9 * * 1-5",
+        }],
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const task = new azurerm.containerregistry.v20190601preview.Task("task", {
+    agentConfiguration: {
+        cpu: 2,
+    },
+    identity: {
+        type: "SystemAssigned, UserAssigned",
+        userAssignedIdentities: {
+            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": {},
+        },
+    },
+    isSystemTask: false,
+    location: "eastus",
+    platform: {
+        architecture: "amd64",
+        os: "Linux",
+    },
+    registryName: "myRegistry",
+    resourceGroupName: "myResourceGroup",
+    status: "Enabled",
+    step: {
+        arguments: [
+            {
+                isSecret: false,
+                name: "mytestargument",
+                value: "mytestvalue",
+            },
+            {
+                isSecret: true,
+                name: "mysecrettestargument",
+                value: "mysecrettestvalue",
+            },
+        ],
+        contextPath: "src",
+        dockerFilePath: "src/DockerFile",
+        imageNames: ["azurerest:testtag"],
+        isPushEnabled: true,
+        noCache: false,
+        type: "Docker",
+    },
+    tags: {
+        testkey: "value",
+    },
+    taskName: "mytTask",
+    trigger: {
+        baseImageTrigger: {
+            baseImageTriggerType: "Runtime",
+            name: "myBaseImageTrigger",
+            updateTriggerEndpoint: "https://user:pass@mycicd.webhook.com?token=foo",
+            updateTriggerPayloadType: "Default",
+        },
+        sourceTriggers: [{
+            name: "mySourceTrigger",
+            sourceRepository: {
+                branch: "master",
+                repositoryUrl: "https://github.com/Azure/azure-rest-api-specs",
+                sourceControlAuthProperties: {
+                    token: "xxxxx",
+                    tokenType: "PAT",
+                },
+                sourceControlType: "Github",
+            },
+            sourceTriggerEvents: ["commit"],
+        }],
+        timerTriggers: [{
+            name: "myTimerTrigger",
+            schedule: "30 9 * * 1-5",
+        }],
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Tasks_Create_WithUserIdentities
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var task = new AzureRM.ContainerRegistry.V20190601Preview.Task("task", new AzureRM.ContainerRegistry.V20190601Preview.TaskArgs
+        {
+            AgentConfiguration = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.AgentPropertiesArgs
+            {
+                Cpu = 2,
+            },
+            Identity = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.IdentityPropertiesArgs
+            {
+                Type = "UserAssigned",
+                UserAssignedIdentities = 
+                {
+                    { "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1",  },
+                    { "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2",  },
+                },
+            },
+            IsSystemTask = false,
+            Location = "eastus",
+            Platform = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.PlatformPropertiesArgs
+            {
+                Architecture = "amd64",
+                Os = "Linux",
+            },
+            RegistryName = "myRegistry",
+            ResourceGroupName = "myResourceGroup",
+            Status = "Enabled",
+            Step = 
+            {
+                { "arguments", 
+                {
+                    new AzureRM.ContainerRegistry.V20190601Preview.Inputs.ArgumentArgs
+                    {
+                        IsSecret = false,
+                        Name = "mytestargument",
+                        Value = "mytestvalue",
+                    },
+                    new AzureRM.ContainerRegistry.V20190601Preview.Inputs.ArgumentArgs
+                    {
+                        IsSecret = true,
+                        Name = "mysecrettestargument",
+                        Value = "mysecrettestvalue",
+                    },
+                } },
+                { "contextPath", "src" },
+                { "dockerFilePath", "src/DockerFile" },
+                { "imageNames", 
+                {
+                    "azurerest:testtag",
+                } },
+                { "isPushEnabled", true },
+                { "noCache", false },
+                { "type", "Docker" },
+            },
+            Tags = 
+            {
+                { "testkey", "value" },
+            },
+            TaskName = "mytTask",
+            Trigger = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.TriggerPropertiesArgs
+            {
+                BaseImageTrigger = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.BaseImageTriggerArgs
+                {
+                    BaseImageTriggerType = "Runtime",
+                    Name = "myBaseImageTrigger",
+                    UpdateTriggerEndpoint = "https://user:pass@mycicd.webhook.com?token=foo",
+                    UpdateTriggerPayloadType = "Default",
+                },
+                SourceTriggers = 
+                {
+                    new AzureRM.ContainerRegistry.V20190601Preview.Inputs.SourceTriggerArgs
+                    {
+                        Name = "mySourceTrigger",
+                        SourceRepository = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.SourcePropertiesArgs
+                        {
+                            Branch = "master",
+                            RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
+                            SourceControlAuthProperties = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.AuthInfoArgs
+                            {
+                                Token = "xxxxx",
+                                TokenType = "PAT",
+                            },
+                            SourceControlType = "Github",
+                        },
+                        SourceTriggerEvents = 
+                        {
+                            "commit",
+                        },
+                    },
+                },
+                TimerTriggers = 
+                {
+                    new AzureRM.ContainerRegistry.V20190601Preview.Inputs.TimerTriggerArgs
+                    {
+                        Name = "myTimerTrigger",
+                        Schedule = "30 9 * * 1-5",
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+task = azurerm.containerregistry.v20190601preview.Task("task",
+    agent_configuration={
+        "cpu": 2,
+    },
+    identity={
+        "type": "UserAssigned",
+        "userAssignedIdentities": {
+            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": {},
+            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": {},
+        },
+    },
+    is_system_task=False,
+    location="eastus",
+    platform={
+        "architecture": "amd64",
+        "os": "Linux",
+    },
+    registry_name="myRegistry",
+    resource_group_name="myResourceGroup",
+    status="Enabled",
+    step={
+        "arguments": [
+            {
+                "isSecret": False,
+                "name": "mytestargument",
+                "value": "mytestvalue",
+            },
+            {
+                "isSecret": True,
+                "name": "mysecrettestargument",
+                "value": "mysecrettestvalue",
+            },
+        ],
+        "contextPath": "src",
+        "dockerFilePath": "src/DockerFile",
+        "imageNames": ["azurerest:testtag"],
+        "isPushEnabled": True,
+        "noCache": False,
+        "type": "Docker",
+    },
+    tags={
+        "testkey": "value",
+    },
+    task_name="mytTask",
+    trigger={
+        "baseImageTrigger": {
+            "baseImageTriggerType": "Runtime",
+            "name": "myBaseImageTrigger",
+            "updateTriggerEndpoint": "https://user:pass@mycicd.webhook.com?token=foo",
+            "updateTriggerPayloadType": "Default",
+        },
+        "sourceTriggers": [{
+            "name": "mySourceTrigger",
+            "sourceRepository": {
+                "branch": "master",
+                "repositoryUrl": "https://github.com/Azure/azure-rest-api-specs",
+                "sourceControlAuthProperties": {
+                    "token": "xxxxx",
+                    "tokenType": "PAT",
+                },
+                "sourceControlType": "Github",
+            },
+            "sourceTriggerEvents": ["commit"],
+        }],
+        "timerTriggers": [{
+            "name": "myTimerTrigger",
+            "schedule": "30 9 * * 1-5",
+        }],
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const task = new azurerm.containerregistry.v20190601preview.Task("task", {
+    agentConfiguration: {
+        cpu: 2,
+    },
+    identity: {
+        type: "UserAssigned",
+        userAssignedIdentities: {
+            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": {},
+            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": {},
+        },
+    },
+    isSystemTask: false,
+    location: "eastus",
+    platform: {
+        architecture: "amd64",
+        os: "Linux",
+    },
+    registryName: "myRegistry",
+    resourceGroupName: "myResourceGroup",
+    status: "Enabled",
+    step: {
+        arguments: [
+            {
+                isSecret: false,
+                name: "mytestargument",
+                value: "mytestvalue",
+            },
+            {
+                isSecret: true,
+                name: "mysecrettestargument",
+                value: "mysecrettestvalue",
+            },
+        ],
+        contextPath: "src",
+        dockerFilePath: "src/DockerFile",
+        imageNames: ["azurerest:testtag"],
+        isPushEnabled: true,
+        noCache: false,
+        type: "Docker",
+    },
+    tags: {
+        testkey: "value",
+    },
+    taskName: "mytTask",
+    trigger: {
+        baseImageTrigger: {
+            baseImageTriggerType: "Runtime",
+            name: "myBaseImageTrigger",
+            updateTriggerEndpoint: "https://user:pass@mycicd.webhook.com?token=foo",
+            updateTriggerPayloadType: "Default",
+        },
+        sourceTriggers: [{
+            name: "mySourceTrigger",
+            sourceRepository: {
+                branch: "master",
+                repositoryUrl: "https://github.com/Azure/azure-rest-api-specs",
+                sourceControlAuthProperties: {
+                    token: "xxxxx",
+                    tokenType: "PAT",
+                },
+                sourceControlType: "Github",
+            },
+            sourceTriggerEvents: ["commit"],
+        }],
+        timerTriggers: [{
+            name: "myTimerTrigger",
+            schedule: "30 9 * * 1-5",
+        }],
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Tasks_Create_WithUserIdentities_WithSystemIdentity
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var task = new AzureRM.ContainerRegistry.V20190601Preview.Task("task", new AzureRM.ContainerRegistry.V20190601Preview.TaskArgs
+        {
+            AgentConfiguration = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.AgentPropertiesArgs
+            {
+                Cpu = 2,
+            },
+            Identity = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.IdentityPropertiesArgs
+            {
+                Type = "SystemAssigned",
+            },
+            IsSystemTask = false,
+            Location = "eastus",
+            Platform = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.PlatformPropertiesArgs
+            {
+                Architecture = "amd64",
+                Os = "Linux",
+            },
+            RegistryName = "myRegistry",
+            ResourceGroupName = "myResourceGroup",
+            Status = "Enabled",
+            Step = 
+            {
+                { "arguments", 
+                {
+                    new AzureRM.ContainerRegistry.V20190601Preview.Inputs.ArgumentArgs
+                    {
+                        IsSecret = false,
+                        Name = "mytestargument",
+                        Value = "mytestvalue",
+                    },
+                    new AzureRM.ContainerRegistry.V20190601Preview.Inputs.ArgumentArgs
+                    {
+                        IsSecret = true,
+                        Name = "mysecrettestargument",
+                        Value = "mysecrettestvalue",
+                    },
+                } },
+                { "contextPath", "src" },
+                { "dockerFilePath", "src/DockerFile" },
+                { "imageNames", 
+                {
+                    "azurerest:testtag",
+                } },
+                { "isPushEnabled", true },
+                { "noCache", false },
+                { "type", "Docker" },
+            },
+            Tags = 
+            {
+                { "testkey", "value" },
+            },
+            TaskName = "mytTask",
+            Trigger = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.TriggerPropertiesArgs
+            {
+                BaseImageTrigger = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.BaseImageTriggerArgs
+                {
+                    BaseImageTriggerType = "Runtime",
+                    Name = "myBaseImageTrigger",
+                },
+                SourceTriggers = 
+                {
+                    new AzureRM.ContainerRegistry.V20190601Preview.Inputs.SourceTriggerArgs
+                    {
+                        Name = "mySourceTrigger",
+                        SourceRepository = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.SourcePropertiesArgs
+                        {
+                            Branch = "master",
+                            RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
+                            SourceControlAuthProperties = new AzureRM.ContainerRegistry.V20190601Preview.Inputs.AuthInfoArgs
+                            {
+                                Token = "xxxxx",
+                                TokenType = "PAT",
+                            },
+                            SourceControlType = "Github",
+                        },
+                        SourceTriggerEvents = 
+                        {
+                            "commit",
+                        },
+                    },
+                },
+                TimerTriggers = 
+                {
+                    new AzureRM.ContainerRegistry.V20190601Preview.Inputs.TimerTriggerArgs
+                    {
+                        Name = "myTimerTrigger",
+                        Schedule = "30 9 * * 1-5",
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+task = azurerm.containerregistry.v20190601preview.Task("task",
+    agent_configuration={
+        "cpu": 2,
+    },
+    identity={
+        "type": "SystemAssigned",
+    },
+    is_system_task=False,
+    location="eastus",
+    platform={
+        "architecture": "amd64",
+        "os": "Linux",
+    },
+    registry_name="myRegistry",
+    resource_group_name="myResourceGroup",
+    status="Enabled",
+    step={
+        "arguments": [
+            {
+                "isSecret": False,
+                "name": "mytestargument",
+                "value": "mytestvalue",
+            },
+            {
+                "isSecret": True,
+                "name": "mysecrettestargument",
+                "value": "mysecrettestvalue",
+            },
+        ],
+        "contextPath": "src",
+        "dockerFilePath": "src/DockerFile",
+        "imageNames": ["azurerest:testtag"],
+        "isPushEnabled": True,
+        "noCache": False,
+        "type": "Docker",
+    },
+    tags={
+        "testkey": "value",
+    },
+    task_name="mytTask",
+    trigger={
+        "baseImageTrigger": {
+            "baseImageTriggerType": "Runtime",
+            "name": "myBaseImageTrigger",
+        },
+        "sourceTriggers": [{
+            "name": "mySourceTrigger",
+            "sourceRepository": {
+                "branch": "master",
+                "repositoryUrl": "https://github.com/Azure/azure-rest-api-specs",
+                "sourceControlAuthProperties": {
+                    "token": "xxxxx",
+                    "tokenType": "PAT",
+                },
+                "sourceControlType": "Github",
+            },
+            "sourceTriggerEvents": ["commit"],
+        }],
+        "timerTriggers": [{
+            "name": "myTimerTrigger",
+            "schedule": "30 9 * * 1-5",
+        }],
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const task = new azurerm.containerregistry.v20190601preview.Task("task", {
+    agentConfiguration: {
+        cpu: 2,
+    },
+    identity: {
+        type: "SystemAssigned",
+    },
+    isSystemTask: false,
+    location: "eastus",
+    platform: {
+        architecture: "amd64",
+        os: "Linux",
+    },
+    registryName: "myRegistry",
+    resourceGroupName: "myResourceGroup",
+    status: "Enabled",
+    step: {
+        arguments: [
+            {
+                isSecret: false,
+                name: "mytestargument",
+                value: "mytestvalue",
+            },
+            {
+                isSecret: true,
+                name: "mysecrettestargument",
+                value: "mysecrettestvalue",
+            },
+        ],
+        contextPath: "src",
+        dockerFilePath: "src/DockerFile",
+        imageNames: ["azurerest:testtag"],
+        isPushEnabled: true,
+        noCache: false,
+        type: "Docker",
+    },
+    tags: {
+        testkey: "value",
+    },
+    taskName: "mytTask",
+    trigger: {
+        baseImageTrigger: {
+            baseImageTriggerType: "Runtime",
+            name: "myBaseImageTrigger",
+        },
+        sourceTriggers: [{
+            name: "mySourceTrigger",
+            sourceRepository: {
+                branch: "master",
+                repositoryUrl: "https://github.com/Azure/azure-rest-api-specs",
+                sourceControlAuthProperties: {
+                    token: "xxxxx",
+                    tokenType: "PAT",
+                },
+                sourceControlType: "Github",
+            },
+            sourceTriggerEvents: ["commit"],
+        }],
+        timerTriggers: [{
+            name: "myTimerTrigger",
+            schedule: "30 9 * * 1-5",
+        }],
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Task Resource {#create}

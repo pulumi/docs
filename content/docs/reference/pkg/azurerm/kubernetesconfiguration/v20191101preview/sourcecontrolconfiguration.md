@@ -12,6 +12,110 @@ meta_desc: "Explore the SourceControlConfiguration resource of the kubernetescon
 
 The SourceControl Configuration object.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Source Control Configuration
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sourceControlConfiguration = new AzureRM.KubernetesConfiguration.V20191101Preview.SourceControlConfiguration("sourceControlConfiguration", new AzureRM.KubernetesConfiguration.V20191101Preview.SourceControlConfigurationArgs
+        {
+            ClusterName = "clusterName1",
+            ClusterResourceName = "connectedClusters",
+            ClusterRp = "Microsoft.Kubernetes",
+            EnableHelmOperator = "true",
+            HelmOperatorProperties = new AzureRM.KubernetesConfiguration.V20191101Preview.Inputs.HelmOperatorPropertiesArgs
+            {
+                ChartValues = "--set git.ssh.secretName=flux-git-deploy --set tillerNamespace=kube-system",
+                ChartVersion = "0.3.0",
+            },
+            OperatorInstanceName = "SRSGitHubFluxOp-01",
+            OperatorNamespace = "SRS_Namespace",
+            OperatorParams = "--git-email=xyzgituser@users.srs.github.com",
+            OperatorScope = "namespace",
+            OperatorType = "Flux",
+            RepositoryUrl = "git@github.com:k8sdeveloper425/flux-get-started",
+            ResourceGroupName = "rg1",
+            SourceControlConfigurationName = "SRS_GitHubConfig",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+source_control_configuration = azurerm.kubernetesconfiguration.v20191101preview.SourceControlConfiguration("sourceControlConfiguration",
+    cluster_name="clusterName1",
+    cluster_resource_name="connectedClusters",
+    cluster_rp="Microsoft.Kubernetes",
+    enable_helm_operator="true",
+    helm_operator_properties={
+        "chartValues": "--set git.ssh.secretName=flux-git-deploy --set tillerNamespace=kube-system",
+        "chartVersion": "0.3.0",
+    },
+    operator_instance_name="SRSGitHubFluxOp-01",
+    operator_namespace="SRS_Namespace",
+    operator_params="--git-email=xyzgituser@users.srs.github.com",
+    operator_scope="namespace",
+    operator_type="Flux",
+    repository_url="git@github.com:k8sdeveloper425/flux-get-started",
+    resource_group_name="rg1",
+    source_control_configuration_name="SRS_GitHubConfig")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sourceControlConfiguration = new azurerm.kubernetesconfiguration.v20191101preview.SourceControlConfiguration("sourceControlConfiguration", {
+    clusterName: "clusterName1",
+    clusterResourceName: "connectedClusters",
+    clusterRp: "Microsoft.Kubernetes",
+    enableHelmOperator: "true",
+    helmOperatorProperties: {
+        chartValues: "--set git.ssh.secretName=flux-git-deploy --set tillerNamespace=kube-system",
+        chartVersion: "0.3.0",
+    },
+    operatorInstanceName: "SRSGitHubFluxOp-01",
+    operatorNamespace: "SRS_Namespace",
+    operatorParams: "--git-email=xyzgituser@users.srs.github.com",
+    operatorScope: "namespace",
+    operatorType: "Flux",
+    repositoryUrl: "git@github.com:k8sdeveloper425/flux-get-started",
+    resourceGroupName: "rg1",
+    sourceControlConfigurationName: "SRS_GitHubConfig",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SourceControlConfiguration Resource {#create}

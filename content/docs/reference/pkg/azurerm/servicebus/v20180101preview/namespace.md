@@ -12,6 +12,96 @@ meta_desc: "Explore the Namespace resource of the servicebus/v20180101preview mo
 
 Description of a namespace resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### NameSpaceCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @namespace = new AzureRM.ServiceBus.V20180101Preview.Namespace("namespace", new AzureRM.ServiceBus.V20180101Preview.NamespaceArgs
+        {
+            Location = "South Central US",
+            NamespaceName = "sdk-Namespace2924",
+            ResourceGroupName = "ArunMonocle",
+            Sku = new AzureRM.ServiceBus.V20180101Preview.Inputs.SBSkuArgs
+            {
+                Name = "Standard",
+                Tier = "Standard",
+            },
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+namespace = azurerm.servicebus.v20180101preview.Namespace("namespace",
+    location="South Central US",
+    namespace_name="sdk-Namespace2924",
+    resource_group_name="ArunMonocle",
+    sku={
+        "name": "Standard",
+        "tier": "Standard",
+    },
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const namespace = new azurerm.servicebus.v20180101preview.Namespace("namespace", {
+    location: "South Central US",
+    namespaceName: "sdk-Namespace2924",
+    resourceGroupName: "ArunMonocle",
+    sku: {
+        name: "Standard",
+        tier: "Standard",
+    },
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Namespace Resource {#create}

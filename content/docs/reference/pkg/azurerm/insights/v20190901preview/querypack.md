@@ -12,6 +12,139 @@ meta_desc: "Explore the QueryPack resource of the insights/v20190901preview modu
 
 An Log Analytics QueryPack definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### QueryPackCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var queryPack = new AzureRM.Insights.V20190901Preview.QueryPack("queryPack", new AzureRM.Insights.V20190901Preview.QueryPackArgs
+        {
+            Location = "South Central US",
+            QueryPackName = "my-querypack",
+            ResourceGroupName = "my-resource-group",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+query_pack = azurerm.insights.v20190901preview.QueryPack("queryPack",
+    location="South Central US",
+    query_pack_name="my-querypack",
+    resource_group_name="my-resource-group")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const queryPack = new azurerm.insights.v20190901preview.QueryPack("queryPack", {
+    location: "South Central US",
+    queryPackName: "my-querypack",
+    resourceGroupName: "my-resource-group",
+});
+
+```
+
+{{% /example %}}
+
+### QueryPackUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var queryPack = new AzureRM.Insights.V20190901Preview.QueryPack("queryPack", new AzureRM.Insights.V20190901Preview.QueryPackArgs
+        {
+            Location = "South Central US",
+            QueryPackName = "my-querypack",
+            ResourceGroupName = "my-resource-group",
+            Tags = 
+            {
+                { "Tag1", "Value1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+query_pack = azurerm.insights.v20190901preview.QueryPack("queryPack",
+    location="South Central US",
+    query_pack_name="my-querypack",
+    resource_group_name="my-resource-group",
+    tags={
+        "Tag1": "Value1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const queryPack = new azurerm.insights.v20190901preview.QueryPack("queryPack", {
+    location: "South Central US",
+    queryPackName: "my-querypack",
+    resourceGroupName: "my-resource-group",
+    tags: {
+        Tag1: "Value1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a QueryPack Resource {#create}

@@ -12,6 +12,70 @@ meta_desc: "Explore the NamespaceAuthorizationRule resource of the notificationh
 
 Description of a Namespace AuthorizationRules.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### NameSpaceAuthorizationRuleCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var namespaceAuthorizationRule = new AzureRM.NotificationHubs.Latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", new AzureRM.NotificationHubs.Latest.NamespaceAuthorizationRuleArgs
+        {
+            AuthorizationRuleName = "sdk-AuthRules-1788",
+            NamespaceName = "nh-sdk-ns",
+            ResourceGroupName = "5ktrial",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+namespace_authorization_rule = azurerm.notificationhubs.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule",
+    authorization_rule_name="sdk-AuthRules-1788",
+    namespace_name="nh-sdk-ns",
+    resource_group_name="5ktrial")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const namespaceAuthorizationRule = new azurerm.notificationhubs.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
+    authorizationRuleName: "sdk-AuthRules-1788",
+    namespaceName: "nh-sdk-ns",
+    resourceGroupName: "5ktrial",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NamespaceAuthorizationRule Resource {#create}

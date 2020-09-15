@@ -12,6 +12,96 @@ meta_desc: "Explore the EnterpriseChannel resource of the botservice/latest modu
 
 Enterprise Channel resource definition
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Enterprise Channel
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var enterpriseChannel = new AzureRM.BotService.Latest.EnterpriseChannel("enterpriseChannel", new AzureRM.BotService.Latest.EnterpriseChannelArgs
+        {
+            Etag = "etag1",
+            Location = "West US",
+            ResourceGroupName = "OneResourceGroupName",
+            ResourceName = "contoso-dl",
+            Sku = new AzureRM.BotService.Latest.Inputs.SkuArgs
+            {
+                Name = "S1",
+            },
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+enterprise_channel = azurerm.botservice.latest.EnterpriseChannel("enterpriseChannel",
+    etag="etag1",
+    location="West US",
+    resource_group_name="OneResourceGroupName",
+    resource_name="contoso-dl",
+    sku={
+        "name": "S1",
+    },
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const enterpriseChannel = new azurerm.botservice.latest.EnterpriseChannel("enterpriseChannel", {
+    etag: "etag1",
+    location: "West US",
+    resourceGroupName: "OneResourceGroupName",
+    resourceName: "contoso-dl",
+    sku: {
+        name: "S1",
+    },
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EnterpriseChannel Resource {#create}

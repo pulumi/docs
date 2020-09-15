@@ -12,6 +12,86 @@ meta_desc: "Explore the RegistrationDefinition resource of the managedservices/l
 
 Registration definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Put Registration Definition
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var registrationDefinition = new AzureRM.ManagedServices.Latest.RegistrationDefinition("registrationDefinition", new AzureRM.ManagedServices.Latest.RegistrationDefinitionArgs
+        {
+            Plan = new AzureRM.ManagedServices.Latest.Inputs.PlanArgs
+            {
+                Name = "addesai-plan",
+                Product = "test",
+                Publisher = "marketplace-test",
+                Version = "1.0.0",
+            },
+            RegistrationDefinitionId = "26c128c2-fefa-4340-9bb1-6e081c90ada2",
+            Scope = "subscription/0afefe50-734e-4610-8a82-a144ahf49dea",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+registration_definition = azurerm.managedservices.latest.RegistrationDefinition("registrationDefinition",
+    plan={
+        "name": "addesai-plan",
+        "product": "test",
+        "publisher": "marketplace-test",
+        "version": "1.0.0",
+    },
+    registration_definition_id="26c128c2-fefa-4340-9bb1-6e081c90ada2",
+    scope="subscription/0afefe50-734e-4610-8a82-a144ahf49dea")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const registrationDefinition = new azurerm.managedservices.latest.RegistrationDefinition("registrationDefinition", {
+    plan: {
+        name: "addesai-plan",
+        product: "test",
+        publisher: "marketplace-test",
+        version: "1.0.0",
+    },
+    registrationDefinitionId: "26c128c2-fefa-4340-9bb1-6e081c90ada2",
+    scope: "subscription/0afefe50-734e-4610-8a82-a144ahf49dea",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RegistrationDefinition Resource {#create}

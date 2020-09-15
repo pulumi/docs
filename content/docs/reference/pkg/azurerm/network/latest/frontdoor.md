@@ -12,6 +12,178 @@ meta_desc: "Explore the FrontDoor resource of the network/latest module, includi
 
 Front Door represents a collection of backend endpoints to route traffic to along with rules that specify how traffic is sent there.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update specific Front Door
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var frontDoor = new AzureRM.Network.Latest.FrontDoor("frontDoor", new AzureRM.Network.Latest.FrontDoorArgs
+        {
+            BackendPools = 
+            {
+                new AzureRM.Network.Latest.Inputs.BackendPoolArgs
+                {
+                    Name = "backendPool1",
+                },
+            },
+            BackendPoolsSettings = new AzureRM.Network.Latest.Inputs.BackendPoolsSettingsArgs
+            {
+                EnforceCertificateNameCheck = "Enabled",
+                SendRecvTimeoutSeconds = 60,
+            },
+            EnabledState = "Enabled",
+            FrontDoorName = "frontDoor1",
+            FrontendEndpoints = 
+            {
+                new AzureRM.Network.Latest.Inputs.FrontendEndpointArgs
+                {
+                    Name = "frontendEndpoint1",
+                },
+                new AzureRM.Network.Latest.Inputs.FrontendEndpointArgs
+                {
+                    Name = "default",
+                },
+            },
+            HealthProbeSettings = 
+            {
+                new AzureRM.Network.Latest.Inputs.HealthProbeSettingsModelArgs
+                {
+                    Name = "healthProbeSettings1",
+                },
+            },
+            LoadBalancingSettings = 
+            {
+                new AzureRM.Network.Latest.Inputs.LoadBalancingSettingsModelArgs
+                {
+                    Name = "loadBalancingSettings1",
+                },
+            },
+            Location = "westus",
+            ResourceGroupName = "rg1",
+            RoutingRules = 
+            {
+                new AzureRM.Network.Latest.Inputs.RoutingRuleArgs
+                {
+                    Name = "routingRule1",
+                },
+            },
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+front_door = azurerm.network.latest.FrontDoor("frontDoor",
+    backend_pools=[{
+        "name": "backendPool1",
+    }],
+    backend_pools_settings={
+        "enforceCertificateNameCheck": "Enabled",
+        "sendRecvTimeoutSeconds": 60,
+    },
+    enabled_state="Enabled",
+    front_door_name="frontDoor1",
+    frontend_endpoints=[
+        {
+            "name": "frontendEndpoint1",
+        },
+        {
+            "name": "default",
+        },
+    ],
+    health_probe_settings=[{
+        "name": "healthProbeSettings1",
+    }],
+    load_balancing_settings=[{
+        "name": "loadBalancingSettings1",
+    }],
+    location="westus",
+    resource_group_name="rg1",
+    routing_rules=[{
+        "name": "routingRule1",
+    }],
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const frontDoor = new azurerm.network.latest.FrontDoor("frontDoor", {
+    backendPools: [{
+        name: "backendPool1",
+    }],
+    backendPoolsSettings: {
+        enforceCertificateNameCheck: "Enabled",
+        sendRecvTimeoutSeconds: 60,
+    },
+    enabledState: "Enabled",
+    frontDoorName: "frontDoor1",
+    frontendEndpoints: [
+        {
+            name: "frontendEndpoint1",
+        },
+        {
+            name: "default",
+        },
+    ],
+    healthProbeSettings: [{
+        name: "healthProbeSettings1",
+    }],
+    loadBalancingSettings: [{
+        name: "loadBalancingSettings1",
+    }],
+    location: "westus",
+    resourceGroupName: "rg1",
+    routingRules: [{
+        name: "routingRule1",
+    }],
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FrontDoor Resource {#create}

@@ -12,6 +12,76 @@ meta_desc: "Explore the CloudConnector resource of the costmanagement/v20190301p
 
 The Connector model definition
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CloudConnector_Put
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cloudConnector = new AzureRM.CostManagement.V20190301Preview.CloudConnector("cloudConnector", new AzureRM.CostManagement.V20190301Preview.CloudConnectorArgs
+        {
+            ConnectorName = "aws-123456789012",
+            CredentialsKey = "arn:aws:iam::123456789012:role/AzureCostManagementRole",
+            CredentialsSecret = "external-id",
+            DisplayName = "AWS-Consolidated-1",
+            ReportId = "HourlyWithResources",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cloud_connector = azurerm.costmanagement.v20190301preview.CloudConnector("cloudConnector",
+    connector_name="aws-123456789012",
+    credentials_key="arn:aws:iam::123456789012:role/AzureCostManagementRole",
+    credentials_secret="external-id",
+    display_name="AWS-Consolidated-1",
+    report_id="HourlyWithResources")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cloudConnector = new azurerm.costmanagement.v20190301preview.CloudConnector("cloudConnector", {
+    connectorName: "aws-123456789012",
+    credentialsKey: "arn:aws:iam::123456789012:role/AzureCostManagementRole",
+    credentialsSecret: "external-id",
+    displayName: "AWS-Consolidated-1",
+    reportId: "HourlyWithResources",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CloudConnector Resource {#create}

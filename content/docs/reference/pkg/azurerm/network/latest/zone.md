@@ -12,6 +12,80 @@ meta_desc: "Explore the Zone resource of the network/latest module, including ex
 
 Describes a DNS zone.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create zone
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var zone = new AzureRM.Network.Latest.Zone("zone", new AzureRM.Network.Latest.ZoneArgs
+        {
+            Location = "Global",
+            ResourceGroupName = "rg1",
+            Tags = 
+            {
+                { "key1", "value1" },
+            },
+            ZoneName = "zone1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+zone = azurerm.network.latest.Zone("zone",
+    location="Global",
+    resource_group_name="rg1",
+    tags={
+        "key1": "value1",
+    },
+    zone_name="zone1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const zone = new azurerm.network.latest.Zone("zone", {
+    location: "Global",
+    resourceGroupName: "rg1",
+    tags: {
+        key1: "value1",
+    },
+    zoneName: "zone1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Zone Resource {#create}

@@ -12,6 +12,86 @@ meta_desc: "Explore the VirtualWan resource of the network/latest module, includ
 
 VirtualWAN Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### VirtualWANCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualWan = new AzureRM.Network.Latest.VirtualWan("virtualWan", new AzureRM.Network.Latest.VirtualWanArgs
+        {
+            DisableVpnEncryption = false,
+            Location = "West US",
+            ResourceGroupName = "rg1",
+            Tags = 
+            {
+                { "key1", "value1" },
+            },
+            Type = "Basic",
+            VirtualWANName = "wan1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_wan = azurerm.network.latest.VirtualWan("virtualWan",
+    disable_vpn_encryption=False,
+    location="West US",
+    resource_group_name="rg1",
+    tags={
+        "key1": "value1",
+    },
+    type="Basic",
+    virtual_wan_name="wan1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualWan = new azurerm.network.latest.VirtualWan("virtualWan", {
+    disableVpnEncryption: false,
+    location: "West US",
+    resourceGroupName: "rg1",
+    tags: {
+        key1: "value1",
+    },
+    type: "Basic",
+    virtualWANName: "wan1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualWan Resource {#create}

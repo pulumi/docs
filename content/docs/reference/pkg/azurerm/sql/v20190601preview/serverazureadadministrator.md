@@ -12,6 +12,82 @@ meta_desc: "Explore the ServerAzureADAdministrator resource of the sql/v20190601
 
 Azure Active Directory administrator.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates an existing Azure Active Directory administrator.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serverAzureADAdministrator = new AzureRM.Sql.V20190601Preview.ServerAzureADAdministrator("serverAzureADAdministrator", new AzureRM.Sql.V20190601Preview.ServerAzureADAdministratorArgs
+        {
+            AdministratorName = "ActiveDirectory",
+            AdministratorType = "ActiveDirectory",
+            Login = "bob@contoso.com",
+            ResourceGroupName = "sqlcrudtest-4799",
+            ServerName = "sqlcrudtest-6440",
+            Sid = "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+            TenantId = "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server_azure_ad_administrator = azurerm.sql.v20190601preview.ServerAzureADAdministrator("serverAzureADAdministrator",
+    administrator_name="ActiveDirectory",
+    administrator_type="ActiveDirectory",
+    login="bob@contoso.com",
+    resource_group_name="sqlcrudtest-4799",
+    server_name="sqlcrudtest-6440",
+    sid="c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+    tenant_id="c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const serverAzureADAdministrator = new azurerm.sql.v20190601preview.ServerAzureADAdministrator("serverAzureADAdministrator", {
+    administratorName: "ActiveDirectory",
+    administratorType: "ActiveDirectory",
+    login: "bob@contoso.com",
+    resourceGroupName: "sqlcrudtest-4799",
+    serverName: "sqlcrudtest-6440",
+    sid: "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+    tenantId: "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServerAzureADAdministrator Resource {#create}

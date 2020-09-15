@@ -12,6 +12,70 @@ meta_desc: "Explore the DomainTopic resource of the eventgrid/latest module, inc
 
 Domain Topic.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### DomainTopics_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var domainTopic = new AzureRM.EventGrid.Latest.DomainTopic("domainTopic", new AzureRM.EventGrid.Latest.DomainTopicArgs
+        {
+            DomainName = "exampledomain1",
+            DomainTopicName = "exampledomaintopic1",
+            ResourceGroupName = "examplerg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+domain_topic = azurerm.eventgrid.latest.DomainTopic("domainTopic",
+    domain_name="exampledomain1",
+    domain_topic_name="exampledomaintopic1",
+    resource_group_name="examplerg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const domainTopic = new azurerm.eventgrid.latest.DomainTopic("domainTopic", {
+    domainName: "exampledomain1",
+    domainTopicName: "exampledomaintopic1",
+    resourceGroupName: "examplerg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DomainTopic Resource {#create}

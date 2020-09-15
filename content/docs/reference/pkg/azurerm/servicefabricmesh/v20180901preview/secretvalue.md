@@ -12,6 +12,73 @@ meta_desc: "Explore the SecretValue resource of the servicefabricmesh/v20180901p
 
 This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateSecretValue
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var secretValue = new AzureRM.ServiceFabricMesh.V20180901Preview.SecretValue("secretValue", new AzureRM.ServiceFabricMesh.V20180901Preview.SecretValueArgs
+        {
+            ResourceGroupName = "sbz_demo",
+            SecretResourceName = "dbConnectionString",
+            SecretValueResourceName = "v1",
+            Value = "mongodb://contoso123:0Fc3IolnL12312asdfawejunASDF@asdfYXX2t8a97kghVcUzcDv98hawelufhawefafnoQRGwNj2nMPL1Y9qsIr9Srdw==@contoso123.documents.azure.com:10255/mydatabase?ssl=true",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+secret_value = azurerm.servicefabricmesh.v20180901preview.SecretValue("secretValue",
+    resource_group_name="sbz_demo",
+    secret_resource_name="dbConnectionString",
+    secret_value_resource_name="v1",
+    value="mongodb://contoso123:0Fc3IolnL12312asdfawejunASDF@asdfYXX2t8a97kghVcUzcDv98hawelufhawefafnoQRGwNj2nMPL1Y9qsIr9Srdw==@contoso123.documents.azure.com:10255/mydatabase?ssl=true")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const secretValue = new azurerm.servicefabricmesh.v20180901preview.SecretValue("secretValue", {
+    resourceGroupName: "sbz_demo",
+    secretResourceName: "dbConnectionString",
+    secretValueResourceName: "v1",
+    value: "mongodb://contoso123:0Fc3IolnL12312asdfawejunASDF@asdfYXX2t8a97kghVcUzcDv98hawelufhawefafnoQRGwNj2nMPL1Y9qsIr9Srdw==@contoso123.documents.azure.com:10255/mydatabase?ssl=true",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SecretValue Resource {#create}

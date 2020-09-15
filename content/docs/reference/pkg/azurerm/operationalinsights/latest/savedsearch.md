@@ -12,6 +12,104 @@ meta_desc: "Explore the SavedSearch resource of the operationalinsights/latest m
 
 Value object for saved search results.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### SavedSearchCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var savedSearch = new AzureRM.OperationalInsights.Latest.SavedSearch("savedSearch", new AzureRM.OperationalInsights.Latest.SavedSearchArgs
+        {
+            Category = "Saved Search Test Category",
+            DisplayName = "Create or Update Saved Search Test",
+            FunctionAlias = "heartbeat_func",
+            FunctionParameters = "a:int=1",
+            Query = "Heartbeat | summarize Count() by Computer | take a",
+            ResourceGroupName = "TestRG",
+            SavedSearchId = "00000000-0000-0000-0000-00000000000",
+            Tags = 
+            {
+                new AzureRM.OperationalInsights.Latest.Inputs.TagArgs
+                {
+                    Name = "Group",
+                    Value = "Computer",
+                },
+            },
+            Version = 2,
+            WorkspaceName = "TestWS",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+saved_search = azurerm.operationalinsights.latest.SavedSearch("savedSearch",
+    category="Saved Search Test Category",
+    display_name="Create or Update Saved Search Test",
+    function_alias="heartbeat_func",
+    function_parameters="a:int=1",
+    query="Heartbeat | summarize Count() by Computer | take a",
+    resource_group_name="TestRG",
+    saved_search_id="00000000-0000-0000-0000-00000000000",
+    tags=[{
+        "name": "Group",
+        "value": "Computer",
+    }],
+    version=2,
+    workspace_name="TestWS")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const savedSearch = new azurerm.operationalinsights.latest.SavedSearch("savedSearch", {
+    category: "Saved Search Test Category",
+    displayName: "Create or Update Saved Search Test",
+    functionAlias: "heartbeat_func",
+    functionParameters: "a:int=1",
+    query: "Heartbeat | summarize Count() by Computer | take a",
+    resourceGroupName: "TestRG",
+    savedSearchId: "00000000-0000-0000-0000-00000000000",
+    tags: [{
+        name: "Group",
+        value: "Computer",
+    }],
+    version: 2,
+    workspaceName: "TestWS",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SavedSearch Resource {#create}

@@ -12,6 +12,70 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the devices/latest
 
 The private endpoint connection of an IotHub
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PrivateEndpointConnection_Update
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpointConnection = new AzureRM.Devices.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureRM.Devices.Latest.PrivateEndpointConnectionArgs
+        {
+            PrivateEndpointConnectionName = "myPrivateEndpointConnection",
+            ResourceGroupName = "myResourceGroup",
+            ResourceName = "testHub",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_endpoint_connection = azurerm.devices.latest.PrivateEndpointConnection("privateEndpointConnection",
+    private_endpoint_connection_name="myPrivateEndpointConnection",
+    resource_group_name="myResourceGroup",
+    resource_name="testHub")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateEndpointConnection = new azurerm.devices.latest.PrivateEndpointConnection("privateEndpointConnection", {
+    privateEndpointConnectionName: "myPrivateEndpointConnection",
+    resourceGroupName: "myResourceGroup",
+    resourceName: "testHub",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateEndpointConnection Resource {#create}

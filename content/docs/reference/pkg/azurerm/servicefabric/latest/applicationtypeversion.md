@@ -12,6 +12,76 @@ meta_desc: "Explore the ApplicationTypeVersion resource of the servicefabric/lat
 
 An application type version resource for the specified application type name resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Put an application type version
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var applicationTypeVersion = new AzureRM.ServiceFabric.Latest.ApplicationTypeVersion("applicationTypeVersion", new AzureRM.ServiceFabric.Latest.ApplicationTypeVersionArgs
+        {
+            AppPackageUrl = "http://fakelink.test.com/MyAppType",
+            ApplicationTypeName = "myAppType",
+            ClusterName = "myCluster",
+            ResourceGroupName = "resRg",
+            Version = "1.0",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+application_type_version = azurerm.servicefabric.latest.ApplicationTypeVersion("applicationTypeVersion",
+    app_package_url="http://fakelink.test.com/MyAppType",
+    application_type_name="myAppType",
+    cluster_name="myCluster",
+    resource_group_name="resRg",
+    version="1.0")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const applicationTypeVersion = new azurerm.servicefabric.latest.ApplicationTypeVersion("applicationTypeVersion", {
+    appPackageUrl: "http://fakelink.test.com/MyAppType",
+    applicationTypeName: "myAppType",
+    clusterName: "myCluster",
+    resourceGroupName: "resRg",
+    version: "1.0",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApplicationTypeVersion Resource {#create}

@@ -12,6 +12,165 @@ meta_desc: "Explore the SyncGroup resource of the sql/v20190601preview module, i
 
 An Azure SQL Database sync group.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a sync group
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var syncGroup = new AzureRM.Sql.V20190601Preview.SyncGroup("syncGroup", new AzureRM.Sql.V20190601Preview.SyncGroupArgs
+        {
+            ConflictResolutionPolicy = "HubWin",
+            DatabaseName = "syncgroupcrud-4328",
+            HubDatabaseUserName = "hubUser",
+            Interval = -1,
+            ResourceGroupName = "syncgroupcrud-65440",
+            ServerName = "syncgroupcrud-8475",
+            SyncDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+            SyncGroupName = "syncgroupcrud-3187",
+            UsePrivateLinkConnection = false,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sync_group = azurerm.sql.v20190601preview.SyncGroup("syncGroup",
+    conflict_resolution_policy="HubWin",
+    database_name="syncgroupcrud-4328",
+    hub_database_user_name="hubUser",
+    interval=-1,
+    resource_group_name="syncgroupcrud-65440",
+    server_name="syncgroupcrud-8475",
+    sync_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+    sync_group_name="syncgroupcrud-3187",
+    use_private_link_connection=False)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const syncGroup = new azurerm.sql.v20190601preview.SyncGroup("syncGroup", {
+    conflictResolutionPolicy: "HubWin",
+    databaseName: "syncgroupcrud-4328",
+    hubDatabaseUserName: "hubUser",
+    interval: -1,
+    resourceGroupName: "syncgroupcrud-65440",
+    serverName: "syncgroupcrud-8475",
+    syncDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+    syncGroupName: "syncgroupcrud-3187",
+    usePrivateLinkConnection: false,
+});
+
+```
+
+{{% /example %}}
+
+### Update a sync group
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var syncGroup = new AzureRM.Sql.V20190601Preview.SyncGroup("syncGroup", new AzureRM.Sql.V20190601Preview.SyncGroupArgs
+        {
+            ConflictResolutionPolicy = "HubWin",
+            DatabaseName = "syncgroupcrud-4328",
+            HubDatabaseUserName = "hubUser",
+            Interval = -1,
+            ResourceGroupName = "syncgroupcrud-65440",
+            ServerName = "syncgroupcrud-8475",
+            SyncDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+            SyncGroupName = "syncgroupcrud-3187",
+            UsePrivateLinkConnection = false,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sync_group = azurerm.sql.v20190601preview.SyncGroup("syncGroup",
+    conflict_resolution_policy="HubWin",
+    database_name="syncgroupcrud-4328",
+    hub_database_user_name="hubUser",
+    interval=-1,
+    resource_group_name="syncgroupcrud-65440",
+    server_name="syncgroupcrud-8475",
+    sync_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+    sync_group_name="syncgroupcrud-3187",
+    use_private_link_connection=False)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const syncGroup = new azurerm.sql.v20190601preview.SyncGroup("syncGroup", {
+    conflictResolutionPolicy: "HubWin",
+    databaseName: "syncgroupcrud-4328",
+    hubDatabaseUserName: "hubUser",
+    interval: -1,
+    resourceGroupName: "syncgroupcrud-65440",
+    serverName: "syncgroupcrud-8475",
+    syncDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+    syncGroupName: "syncgroupcrud-3187",
+    usePrivateLinkConnection: false,
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SyncGroup Resource {#create}

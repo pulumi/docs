@@ -12,6 +12,73 @@ meta_desc: "Explore the ManagedInstanceAzureADOnlyAuthentication resource of the
 
 Azure Active Directory only authentication.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates Azure Active Directory only authentication object.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedInstanceAzureADOnlyAuthentication = new AzureRM.Sql.V20200202Preview.ManagedInstanceAzureADOnlyAuthentication("managedInstanceAzureADOnlyAuthentication", new AzureRM.Sql.V20200202Preview.ManagedInstanceAzureADOnlyAuthenticationArgs
+        {
+            AuthenticationName = "Default",
+            AzureADOnlyAuthentication = false,
+            ManagedInstanceName = "managedInstance",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_instance_azure_ad_only_authentication = azurerm.sql.v20200202preview.ManagedInstanceAzureADOnlyAuthentication("managedInstanceAzureADOnlyAuthentication",
+    authentication_name="Default",
+    azure_ad_only_authentication=False,
+    managed_instance_name="managedInstance",
+    resource_group_name="Default-SQL-SouthEastAsia")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedInstanceAzureADOnlyAuthentication = new azurerm.sql.v20200202preview.ManagedInstanceAzureADOnlyAuthentication("managedInstanceAzureADOnlyAuthentication", {
+    authenticationName: "Default",
+    azureADOnlyAuthentication: false,
+    managedInstanceName: "managedInstance",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagedInstanceAzureADOnlyAuthentication Resource {#create}

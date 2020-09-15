@@ -12,6 +12,117 @@ meta_desc: "Explore the Share resource of the databoxedge/v20200501preview modul
 
 Represents a share on the  Data Box Edge/Gateway device.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### SharePut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var share = new AzureRM.DataBoxEdge.V20200501Preview.Share("share", new AzureRM.DataBoxEdge.V20200501Preview.ShareArgs
+        {
+            AccessProtocol = "SMB",
+            AzureContainerInfo = new AzureRM.DataBoxEdge.V20200501Preview.Inputs.AzureContainerInfoArgs
+            {
+                ContainerName = "testContainerSMB",
+                DataFormat = "BlockBlob",
+                StorageAccountCredentialId = "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/sac1",
+            },
+            DataPolicy = "Cloud",
+            Description = "",
+            DeviceName = "testedgedevice",
+            MonitoringStatus = "Enabled",
+            Name = "smbshare",
+            ResourceGroupName = "GroupForEdgeAutomation",
+            ShareStatus = "Online",
+            UserAccessRights = 
+            {
+                new AzureRM.DataBoxEdge.V20200501Preview.Inputs.UserAccessRightArgs
+                {
+                    AccessType = "Change",
+                    UserId = "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/users/user2",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+share = azurerm.databoxedge.v20200501preview.Share("share",
+    access_protocol="SMB",
+    azure_container_info={
+        "containerName": "testContainerSMB",
+        "dataFormat": "BlockBlob",
+        "storageAccountCredentialId": "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/sac1",
+    },
+    data_policy="Cloud",
+    description="",
+    device_name="testedgedevice",
+    monitoring_status="Enabled",
+    name="smbshare",
+    resource_group_name="GroupForEdgeAutomation",
+    share_status="Online",
+    user_access_rights=[{
+        "accessType": "Change",
+        "userId": "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/users/user2",
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const share = new azurerm.databoxedge.v20200501preview.Share("share", {
+    accessProtocol: "SMB",
+    azureContainerInfo: {
+        containerName: "testContainerSMB",
+        dataFormat: "BlockBlob",
+        storageAccountCredentialId: "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/sac1",
+    },
+    dataPolicy: "Cloud",
+    description: "",
+    deviceName: "testedgedevice",
+    monitoringStatus: "Enabled",
+    name: "smbshare",
+    resourceGroupName: "GroupForEdgeAutomation",
+    shareStatus: "Online",
+    userAccessRights: [{
+        accessType: "Change",
+        userId: "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/users/user2",
+    }],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Share Resource {#create}

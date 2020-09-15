@@ -12,6 +12,70 @@ meta_desc: "Explore the VendorSkuPreview resource of the hybridnetwork/v20200101
 
 Customer subscription which can use a sku.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates preview subscription of vendor sku sub resource
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vendorSkuPreview = new AzureRM.HybridNetwork.V20200101Preview.VendorSkuPreview("vendorSkuPreview", new AzureRM.HybridNetwork.V20200101Preview.VendorSkuPreviewArgs
+        {
+            PreviewSubscription = "previewSub",
+            SkuName = "TestSku",
+            VendorName = "TestVendor",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+vendor_sku_preview = azurerm.hybridnetwork.v20200101preview.VendorSkuPreview("vendorSkuPreview",
+    preview_subscription="previewSub",
+    sku_name="TestSku",
+    vendor_name="TestVendor")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const vendorSkuPreview = new azurerm.hybridnetwork.v20200101preview.VendorSkuPreview("vendorSkuPreview", {
+    previewSubscription: "previewSub",
+    skuName: "TestSku",
+    vendorName: "TestVendor",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VendorSkuPreview Resource {#create}

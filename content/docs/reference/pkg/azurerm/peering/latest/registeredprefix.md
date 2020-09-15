@@ -12,6 +12,73 @@ meta_desc: "Explore the RegisteredPrefix resource of the peering/latest module, 
 
 The customer's prefix that is registered by the peering service provider.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a registered prefix for the peering
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var registeredPrefix = new AzureRM.Peering.Latest.RegisteredPrefix("registeredPrefix", new AzureRM.Peering.Latest.RegisteredPrefixArgs
+        {
+            PeeringName = "peeringName",
+            Prefix = "10.22.20.0/24",
+            RegisteredPrefixName = "registeredPrefixName",
+            ResourceGroupName = "rgName",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+registered_prefix = azurerm.peering.latest.RegisteredPrefix("registeredPrefix",
+    peering_name="peeringName",
+    prefix="10.22.20.0/24",
+    registered_prefix_name="registeredPrefixName",
+    resource_group_name="rgName")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const registeredPrefix = new azurerm.peering.latest.RegisteredPrefix("registeredPrefix", {
+    peeringName: "peeringName",
+    prefix: "10.22.20.0/24",
+    registeredPrefixName: "registeredPrefixName",
+    resourceGroupName: "rgName",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RegisteredPrefix Resource {#create}

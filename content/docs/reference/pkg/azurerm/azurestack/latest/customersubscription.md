@@ -12,6 +12,73 @@ meta_desc: "Explore the CustomerSubscription resource of the azurestack/latest m
 
 Customer subscription.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates a new customer subscription under a registration.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var customerSubscription = new AzureRM.AzureStack.Latest.CustomerSubscription("customerSubscription", new AzureRM.AzureStack.Latest.CustomerSubscriptionArgs
+        {
+            CustomerSubscriptionName = "E09A4E93-29A7-4EBA-A6D4-76202383F07F",
+            RegistrationName = "testregistration",
+            ResourceGroup = "azurestack",
+            TenantId = "dbab3982-796f-4d03-9908-044c08aef8a2",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+customer_subscription = azurerm.azurestack.latest.CustomerSubscription("customerSubscription",
+    customer_subscription_name="E09A4E93-29A7-4EBA-A6D4-76202383F07F",
+    registration_name="testregistration",
+    resource_group="azurestack",
+    tenant_id="dbab3982-796f-4d03-9908-044c08aef8a2")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const customerSubscription = new azurerm.azurestack.latest.CustomerSubscription("customerSubscription", {
+    customerSubscriptionName: "E09A4E93-29A7-4EBA-A6D4-76202383F07F",
+    registrationName: "testregistration",
+    resourceGroup: "azurestack",
+    tenantId: "dbab3982-796f-4d03-9908-044c08aef8a2",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CustomerSubscription Resource {#create}

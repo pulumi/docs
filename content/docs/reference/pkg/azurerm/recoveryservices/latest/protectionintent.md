@@ -12,6 +12,73 @@ meta_desc: "Explore the ProtectionIntent resource of the recoveryservices/latest
 
 Base class for backup ProtectionIntent.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or Update Azure Vm Protection Intent
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var protectionIntent = new AzureRM.RecoveryServices.Latest.ProtectionIntent("protectionIntent", new AzureRM.RecoveryServices.Latest.ProtectionIntentArgs
+        {
+            FabricName = "Azure",
+            IntentObjectName = "vm;iaasvmcontainerv2;chamsrgtest;chamscandel",
+            ResourceGroupName = "myRG",
+            VaultName = "myVault",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+protection_intent = azurerm.recoveryservices.latest.ProtectionIntent("protectionIntent",
+    fabric_name="Azure",
+    intent_object_name="vm;iaasvmcontainerv2;chamsrgtest;chamscandel",
+    resource_group_name="myRG",
+    vault_name="myVault")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const protectionIntent = new azurerm.recoveryservices.latest.ProtectionIntent("protectionIntent", {
+    fabricName: "Azure",
+    intentObjectName: "vm;iaasvmcontainerv2;chamsrgtest;chamscandel",
+    resourceGroupName: "myRG",
+    vaultName: "myVault",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ProtectionIntent Resource {#create}

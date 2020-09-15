@@ -12,6 +12,83 @@ meta_desc: "Explore the LinkedStorageAccount resource of the operationalinsights
 
 Linked storage accounts top level resource container.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### LinkedStorageAccountsCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var linkedStorageAccount = new AzureRM.OperationalInsights.Latest.LinkedStorageAccount("linkedStorageAccount", new AzureRM.OperationalInsights.Latest.LinkedStorageAccountArgs
+        {
+            DataSourceType = "CustomLogs",
+            ResourceGroupName = "mms-eus",
+            StorageAccountIds = 
+            {
+                "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageA",
+                "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageB",
+            },
+            WorkspaceName = "testLinkStorageAccountsWS",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+linked_storage_account = azurerm.operationalinsights.latest.LinkedStorageAccount("linkedStorageAccount",
+    data_source_type="CustomLogs",
+    resource_group_name="mms-eus",
+    storage_account_ids=[
+        "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageA",
+        "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageB",
+    ],
+    workspace_name="testLinkStorageAccountsWS")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const linkedStorageAccount = new azurerm.operationalinsights.latest.LinkedStorageAccount("linkedStorageAccount", {
+    dataSourceType: "CustomLogs",
+    resourceGroupName: "mms-eus",
+    storageAccountIds: [
+        "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageA",
+        "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageB",
+    ],
+    workspaceName: "testLinkStorageAccountsWS",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LinkedStorageAccount Resource {#create}

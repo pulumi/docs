@@ -12,6 +12,76 @@ meta_desc: "Explore the EventSource resource of the timeseriesinsights/latest mo
 
 An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateEventHubEventSource
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var eventSource = new AzureRM.TimeSeriesInsights.Latest.EventSource("eventSource", new AzureRM.TimeSeriesInsights.Latest.EventSourceArgs
+        {
+            EnvironmentName = "env1",
+            EventSourceName = "es1",
+            Kind = "Microsoft.EventHub",
+            Location = "West US",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+event_source = azurerm.timeseriesinsights.latest.EventSource("eventSource",
+    environment_name="env1",
+    event_source_name="es1",
+    kind="Microsoft.EventHub",
+    location="West US",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const eventSource = new azurerm.timeseriesinsights.latest.EventSource("eventSource", {
+    environmentName: "env1",
+    eventSourceName: "es1",
+    kind: "Microsoft.EventHub",
+    location: "West US",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EventSource Resource {#create}

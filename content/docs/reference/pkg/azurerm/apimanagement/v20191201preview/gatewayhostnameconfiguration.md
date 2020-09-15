@@ -12,6 +12,82 @@ meta_desc: "Explore the GatewayHostnameConfiguration resource of the apimanageme
 
 Gateway hostname configuration details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateGatewayHostnameConfiguration
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var gatewayHostnameConfiguration = new AzureRM.ApiManagement.V20191201Preview.GatewayHostnameConfiguration("gatewayHostnameConfiguration", new AzureRM.ApiManagement.V20191201Preview.GatewayHostnameConfigurationArgs
+        {
+            CertificateId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/certificates/cert1",
+            GatewayId = "gw1",
+            HcId = "default",
+            Hostname = "*",
+            NegotiateClientCertificate = false,
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+gateway_hostname_configuration = azurerm.apimanagement.v20191201preview.GatewayHostnameConfiguration("gatewayHostnameConfiguration",
+    certificate_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/certificates/cert1",
+    gateway_id="gw1",
+    hc_id="default",
+    hostname="*",
+    negotiate_client_certificate=False,
+    resource_group_name="rg1",
+    service_name="apimService1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const gatewayHostnameConfiguration = new azurerm.apimanagement.v20191201preview.GatewayHostnameConfiguration("gatewayHostnameConfiguration", {
+    certificateId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/certificates/cert1",
+    gatewayId: "gw1",
+    hcId: "default",
+    hostname: "*",
+    negotiateClientCertificate: false,
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GatewayHostnameConfiguration Resource {#create}

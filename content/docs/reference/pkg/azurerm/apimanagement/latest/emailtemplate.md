@@ -12,6 +12,73 @@ meta_desc: "Explore the EmailTemplate resource of the apimanagement/latest modul
 
 Email Template details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateEmailTemplate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var emailTemplate = new AzureRM.ApiManagement.Latest.EmailTemplate("emailTemplate", new AzureRM.ApiManagement.Latest.EmailTemplateArgs
+        {
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Subject = "Your request for $IssueName was successfully received.",
+            TemplateName = "newIssueNotificationMessage",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+email_template = azurerm.apimanagement.latest.EmailTemplate("emailTemplate",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    subject="Your request for $IssueName was successfully received.",
+    template_name="newIssueNotificationMessage")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const emailTemplate = new azurerm.apimanagement.latest.EmailTemplate("emailTemplate", {
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    subject: `Your request for $IssueName was successfully received.`,
+    templateName: "newIssueNotificationMessage",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EmailTemplate Resource {#create}

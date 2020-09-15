@@ -12,6 +12,73 @@ meta_desc: "Explore the ReplicationvCenter resource of the recoveryservices/late
 
 vCenter definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Add vCenter.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var replicationvCenter = new AzureRM.RecoveryServices.Latest.ReplicationvCenter("replicationvCenter", new AzureRM.RecoveryServices.Latest.ReplicationvCenterArgs
+        {
+            FabricName = "MadhaviFabric",
+            ResourceGroupName = "MadhaviVRG",
+            ResourceName = "MadhaviVault",
+            VCenterName = "esx-78",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+replicationv_center = azurerm.recoveryservices.latest.ReplicationvCenter("replicationvCenter",
+    fabric_name="MadhaviFabric",
+    resource_group_name="MadhaviVRG",
+    resource_name="MadhaviVault",
+    v_center_name="esx-78")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const replicationvCenter = new azurerm.recoveryservices.latest.ReplicationvCenter("replicationvCenter", {
+    fabricName: "MadhaviFabric",
+    resourceGroupName: "MadhaviVRG",
+    resourceName: "MadhaviVault",
+    vCenterName: "esx-78",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ReplicationvCenter Resource {#create}

@@ -12,6 +12,50 @@ meta_desc: "Explore the PrivateEndpoint resource of the streamanalytics/v2020030
 
 Complete information about the private endpoint.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a private endpoint
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+private_endpoint = .("privateEndpoint",
+    cluster_name="testcluster",
+    private_endpoint_name="testpe",
+    resource_group_name="sjrg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const privateEndpoint = new .("privateEndpoint", {
+    clusterName: "testcluster",
+    privateEndpointName: "testpe",
+    resourceGroupName: "sjrg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateEndpoint Resource {#create}

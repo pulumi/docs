@@ -12,6 +12,73 @@ meta_desc: "Explore the ComponentLinkedStorageAccount resource of the insights/v
 
 An Application Insights component linked storage accounts
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ComponentLinkedStorageAccountsCreateAndUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var componentLinkedStorageAccount = new AzureRM.Insights.V20200301Preview.ComponentLinkedStorageAccount("componentLinkedStorageAccount", new AzureRM.Insights.V20200301Preview.ComponentLinkedStorageAccountArgs
+        {
+            LinkedStorageAccount = "/subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupName/providers/Microsoft.Storage/storageAccounts/storageaccountname",
+            ResourceGroupName = "someResourceGroupName",
+            ResourceName = "myComponent",
+            StorageType = "ServiceProfiler",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+component_linked_storage_account = azurerm.insights.v20200301preview.ComponentLinkedStorageAccount("componentLinkedStorageAccount",
+    linked_storage_account="/subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupName/providers/Microsoft.Storage/storageAccounts/storageaccountname",
+    resource_group_name="someResourceGroupName",
+    resource_name="myComponent",
+    storage_type="ServiceProfiler")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const componentLinkedStorageAccount = new azurerm.insights.v20200301preview.ComponentLinkedStorageAccount("componentLinkedStorageAccount", {
+    linkedStorageAccount: "/subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupName/providers/Microsoft.Storage/storageAccounts/storageaccountname",
+    resourceGroupName: "someResourceGroupName",
+    resourceName: "myComponent",
+    storageType: "ServiceProfiler",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ComponentLinkedStorageAccount Resource {#create}

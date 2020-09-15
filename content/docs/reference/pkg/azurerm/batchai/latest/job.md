@@ -12,6 +12,154 @@ meta_desc: "Explore the Job resource of the batchai/latest module, including exa
 
 Information about a Job.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a job
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var job = new AzureRM.BatchAI.Latest.Job("job", new AzureRM.BatchAI.Latest.JobArgs
+        {
+            Cluster = new AzureRM.BatchAI.Latest.Inputs.ResourceIdArgs
+            {
+                Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspace/demo_workspace/clusters/demo_cluster",
+            },
+            ContainerSettings = new AzureRM.BatchAI.Latest.Inputs.ContainerSettingsArgs
+            {
+                ImageSourceRegistry = new AzureRM.BatchAI.Latest.Inputs.ImageSourceRegistryArgs
+                {
+                    Image = "ubuntu",
+                },
+            },
+            CustomToolkitSettings = new AzureRM.BatchAI.Latest.Inputs.CustomToolkitSettingsArgs
+            {
+                CommandLine = "echo hi | tee $AZ_BATCHAI_OUTPUT_OUTPUTS/hi.txt",
+            },
+            ExperimentName = "demo_experiment",
+            InputDirectories = 
+            {
+                new AzureRM.BatchAI.Latest.Inputs.InputDirectoryArgs
+                {
+                    Id = "INPUT",
+                    Path = "$AZ_BATCHAI_MOUNT_ROOT/azfiles/input",
+                },
+            },
+            JobName = "demo_job",
+            NodeCount = 1,
+            OutputDirectories = 
+            {
+                new AzureRM.BatchAI.Latest.Inputs.OutputDirectoryArgs
+                {
+                    Id = "OUTPUTS",
+                    PathPrefix = "$AZ_BATCHAI_MOUNT_ROOT/azfiles/",
+                    PathSuffix = "files",
+                },
+            },
+            ResourceGroupName = "demo_resource_group",
+            SchedulingPriority = "normal",
+            StdOutErrPathPrefix = "$AZ_BATCHAI_MOUNT_ROOT/azfiles",
+            WorkspaceName = "demo_workspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+job = azurerm.batchai.latest.Job("job",
+    cluster={
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspace/demo_workspace/clusters/demo_cluster",
+    },
+    container_settings={
+        "imageSourceRegistry": {
+            "image": "ubuntu",
+        },
+    },
+    custom_toolkit_settings={
+        "commandLine": "echo hi | tee $AZ_BATCHAI_OUTPUT_OUTPUTS/hi.txt",
+    },
+    experiment_name="demo_experiment",
+    input_directories=[{
+        "id": "INPUT",
+        "path": "$AZ_BATCHAI_MOUNT_ROOT/azfiles/input",
+    }],
+    job_name="demo_job",
+    node_count=1,
+    output_directories=[{
+        "id": "OUTPUTS",
+        "pathPrefix": "$AZ_BATCHAI_MOUNT_ROOT/azfiles/",
+        "pathSuffix": "files",
+    }],
+    resource_group_name="demo_resource_group",
+    scheduling_priority="normal",
+    std_out_err_path_prefix="$AZ_BATCHAI_MOUNT_ROOT/azfiles",
+    workspace_name="demo_workspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const job = new azurerm.batchai.latest.Job("job", {
+    cluster: {
+        id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspace/demo_workspace/clusters/demo_cluster",
+    },
+    containerSettings: {
+        imageSourceRegistry: {
+            image: "ubuntu",
+        },
+    },
+    customToolkitSettings: {
+        commandLine: `echo hi | tee $AZ_BATCHAI_OUTPUT_OUTPUTS/hi.txt`,
+    },
+    experimentName: "demo_experiment",
+    inputDirectories: [{
+        id: "INPUT",
+        path: `$AZ_BATCHAI_MOUNT_ROOT/azfiles/input`,
+    }],
+    jobName: "demo_job",
+    nodeCount: 1,
+    outputDirectories: [{
+        id: "OUTPUTS",
+        pathPrefix: `$AZ_BATCHAI_MOUNT_ROOT/azfiles/`,
+        pathSuffix: "files",
+    }],
+    resourceGroupName: "demo_resource_group",
+    schedulingPriority: "normal",
+    stdOutErrPathPrefix: `$AZ_BATCHAI_MOUNT_ROOT/azfiles`,
+    workspaceName: "demo_workspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Job Resource {#create}

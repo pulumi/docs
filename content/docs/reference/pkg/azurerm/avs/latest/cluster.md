@@ -12,6 +12,83 @@ meta_desc: "Explore the Cluster resource of the avs/latest module, including exa
 
 A cluster resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Clusters_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cluster = new AzureRM.AVS.Latest.Cluster("cluster", new AzureRM.AVS.Latest.ClusterArgs
+        {
+            ClusterName = "cluster1",
+            ClusterSize = 3,
+            PrivateCloudName = "cloud1",
+            ResourceGroupName = "group1",
+            Sku = new AzureRM.AVS.Latest.Inputs.SkuArgs
+            {
+                Name = "AV20",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cluster = azurerm.avs.latest.Cluster("cluster",
+    cluster_name="cluster1",
+    cluster_size=3,
+    private_cloud_name="cloud1",
+    resource_group_name="group1",
+    sku={
+        "name": "AV20",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cluster = new azurerm.avs.latest.Cluster("cluster", {
+    clusterName: "cluster1",
+    clusterSize: 3,
+    privateCloudName: "cloud1",
+    resourceGroupName: "group1",
+    sku: {
+        name: "AV20",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}

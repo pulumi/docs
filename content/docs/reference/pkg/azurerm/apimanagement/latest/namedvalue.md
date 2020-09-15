@@ -12,6 +12,92 @@ meta_desc: "Explore the NamedValue resource of the apimanagement/latest module, 
 
 NamedValue details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateNamedValue
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var namedValue = new AzureRM.ApiManagement.Latest.NamedValue("namedValue", new AzureRM.ApiManagement.Latest.NamedValueArgs
+        {
+            DisplayName = "prop3name",
+            NamedValueId = "testprop2",
+            ResourceGroupName = "rg1",
+            Secret = false,
+            ServiceName = "apimService1",
+            Tags = 
+            {
+                "foo",
+                "bar",
+            },
+            Value = "propValue",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+named_value = azurerm.apimanagement.latest.NamedValue("namedValue",
+    display_name="prop3name",
+    named_value_id="testprop2",
+    resource_group_name="rg1",
+    secret=False,
+    service_name="apimService1",
+    tags=[
+        "foo",
+        "bar",
+    ],
+    value="propValue")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const namedValue = new azurerm.apimanagement.latest.NamedValue("namedValue", {
+    displayName: "prop3name",
+    namedValueId: "testprop2",
+    resourceGroupName: "rg1",
+    secret: false,
+    serviceName: "apimService1",
+    tags: [
+        "foo",
+        "bar",
+    ],
+    value: "propValue",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NamedValue Resource {#create}

@@ -12,6 +12,73 @@ meta_desc: "Explore the MaintenanceConfiguration resource of the maintenance/lat
 
 Maintenance configuration record type
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### MaintenanceConfigurations_CreateOrUpdateForResource
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var maintenanceConfiguration = new AzureRM.Maintenance.Latest.MaintenanceConfiguration("maintenanceConfiguration", new AzureRM.Maintenance.Latest.MaintenanceConfigurationArgs
+        {
+            Location = "westus2",
+            Namespace = "Microsoft.Maintenance",
+            ResourceGroupName = "examplerg",
+            ResourceName = "configuration1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+maintenance_configuration = azurerm.maintenance.latest.MaintenanceConfiguration("maintenanceConfiguration",
+    location="westus2",
+    namespace="Microsoft.Maintenance",
+    resource_group_name="examplerg",
+    resource_name="configuration1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const maintenanceConfiguration = new azurerm.maintenance.latest.MaintenanceConfiguration("maintenanceConfiguration", {
+    location: "westus2",
+    namespace: "Microsoft.Maintenance",
+    resourceGroupName: "examplerg",
+    resourceName: "configuration1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MaintenanceConfiguration Resource {#create}

@@ -12,6 +12,92 @@ meta_desc: "Explore the VNetPeering resource of the databricks/latest module, in
 
 Peerings in a VirtualNetwork resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create vNet Peering for Workspace
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vNetPeering = new AzureRM.Databricks.Latest.VNetPeering("vNetPeering", new AzureRM.Databricks.Latest.VNetPeeringArgs
+        {
+            AllowForwardedTraffic = false,
+            AllowGatewayTransit = false,
+            AllowVirtualNetworkAccess = true,
+            PeeringName = "vNetPeeringTest",
+            RemoteVirtualNetwork = new AzureRM.Databricks.Latest.Inputs.VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs
+            {
+                Id = "/subscriptions/0140911e-1040-48da-8bc9-b99fb3dd88a6/resourceGroups/subramantest/providers/Microsoft.Network/virtualNetworks/subramanvnet",
+            },
+            ResourceGroupName = "rg",
+            UseRemoteGateways = false,
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+v_net_peering = azurerm.databricks.latest.VNetPeering("vNetPeering",
+    allow_forwarded_traffic=False,
+    allow_gateway_transit=False,
+    allow_virtual_network_access=True,
+    peering_name="vNetPeeringTest",
+    remote_virtual_network={
+        "id": "/subscriptions/0140911e-1040-48da-8bc9-b99fb3dd88a6/resourceGroups/subramantest/providers/Microsoft.Network/virtualNetworks/subramanvnet",
+    },
+    resource_group_name="rg",
+    use_remote_gateways=False,
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const vNetPeering = new azurerm.databricks.latest.VNetPeering("vNetPeering", {
+    allowForwardedTraffic: false,
+    allowGatewayTransit: false,
+    allowVirtualNetworkAccess: true,
+    peeringName: "vNetPeeringTest",
+    remoteVirtualNetwork: {
+        id: "/subscriptions/0140911e-1040-48da-8bc9-b99fb3dd88a6/resourceGroups/subramantest/providers/Microsoft.Network/virtualNetworks/subramanvnet",
+    },
+    resourceGroupName: "rg",
+    useRemoteGateways: false,
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VNetPeering Resource {#create}

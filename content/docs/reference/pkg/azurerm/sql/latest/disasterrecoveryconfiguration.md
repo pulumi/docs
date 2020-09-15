@@ -12,6 +12,70 @@ meta_desc: "Explore the DisasterRecoveryConfiguration resource of the sql/latest
 
 Represents a disaster recovery configuration.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Update a disaster recovery configuration
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disasterRecoveryConfiguration = new AzureRM.Sql.Latest.DisasterRecoveryConfiguration("disasterRecoveryConfiguration", new AzureRM.Sql.Latest.DisasterRecoveryConfigurationArgs
+        {
+            DisasterRecoveryConfigurationName = "Default",
+            ResourceGroupName = "sqlcrudtest-4799",
+            ServerName = "sqlcrudtest-5961",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+disaster_recovery_configuration = azurerm.sql.latest.DisasterRecoveryConfiguration("disasterRecoveryConfiguration",
+    disaster_recovery_configuration_name="Default",
+    resource_group_name="sqlcrudtest-4799",
+    server_name="sqlcrudtest-5961")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const disasterRecoveryConfiguration = new azurerm.sql.latest.DisasterRecoveryConfiguration("disasterRecoveryConfiguration", {
+    disasterRecoveryConfigurationName: "Default",
+    resourceGroupName: "sqlcrudtest-4799",
+    serverName: "sqlcrudtest-5961",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DisasterRecoveryConfiguration Resource {#create}

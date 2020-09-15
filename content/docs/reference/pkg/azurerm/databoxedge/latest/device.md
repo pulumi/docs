@@ -12,6 +12,86 @@ meta_desc: "Explore the Device resource of the databoxedge/latest module, includ
 
 The Data Box Edge/Gateway device.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### DataBoxEdgeDevicePut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var device = new AzureRM.DataBoxEdge.Latest.Device("device", new AzureRM.DataBoxEdge.Latest.DeviceArgs
+        {
+            DeviceName = "testedgedevice",
+            Location = "eastus",
+            ResourceGroupName = "GroupForEdgeAutomation",
+            Sku = new AzureRM.DataBoxEdge.Latest.Inputs.SkuArgs
+            {
+                Name = "Edge",
+                Tier = "Standard",
+            },
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+device = azurerm.databoxedge.latest.Device("device",
+    device_name="testedgedevice",
+    location="eastus",
+    resource_group_name="GroupForEdgeAutomation",
+    sku={
+        "name": "Edge",
+        "tier": "Standard",
+    },
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const device = new azurerm.databoxedge.latest.Device("device", {
+    deviceName: "testedgedevice",
+    location: "eastus",
+    resourceGroupName: "GroupForEdgeAutomation",
+    sku: {
+        name: "Edge",
+        tier: "Standard",
+    },
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Device Resource {#create}

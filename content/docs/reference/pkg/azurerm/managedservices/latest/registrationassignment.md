@@ -12,6 +12,67 @@ meta_desc: "Explore the RegistrationAssignment resource of the managedservices/l
 
 Registration assignment.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Put Registration Assignment
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var registrationAssignment = new AzureRM.ManagedServices.Latest.RegistrationAssignment("registrationAssignment", new AzureRM.ManagedServices.Latest.RegistrationAssignmentArgs
+        {
+            RegistrationAssignmentId = "26c128c2-fefa-4340-9bb1-6e081c90ada2",
+            Scope = "subscription/0afefe50-734e-4610-8a82-a144ahf49dea",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+registration_assignment = azurerm.managedservices.latest.RegistrationAssignment("registrationAssignment",
+    registration_assignment_id="26c128c2-fefa-4340-9bb1-6e081c90ada2",
+    scope="subscription/0afefe50-734e-4610-8a82-a144ahf49dea")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const registrationAssignment = new azurerm.managedservices.latest.RegistrationAssignment("registrationAssignment", {
+    registrationAssignmentId: "26c128c2-fefa-4340-9bb1-6e081c90ada2",
+    scope: "subscription/0afefe50-734e-4610-8a82-a144ahf49dea",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RegistrationAssignment Resource {#create}

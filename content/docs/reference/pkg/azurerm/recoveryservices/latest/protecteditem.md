@@ -12,6 +12,141 @@ meta_desc: "Explore the ProtectedItem resource of the recoveryservices/latest mo
 
 Base class for backup items.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Enable Protection on Azure IaasVm
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var protectedItem = new AzureRM.RecoveryServices.Latest.ProtectedItem("protectedItem", new AzureRM.RecoveryServices.Latest.ProtectedItemArgs
+        {
+            ContainerName = "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
+            FabricName = "Azure",
+            ProtectedItemName = "VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
+            ResourceGroupName = "SwaggerTestRg",
+            VaultName = "NetSDKTestRsVault",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+protected_item = azurerm.recoveryservices.latest.ProtectedItem("protectedItem",
+    container_name="IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
+    fabric_name="Azure",
+    protected_item_name="VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
+    resource_group_name="SwaggerTestRg",
+    vault_name="NetSDKTestRsVault")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const protectedItem = new azurerm.recoveryservices.latest.ProtectedItem("protectedItem", {
+    containerName: "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
+    fabricName: "Azure",
+    protectedItemName: "VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
+    resourceGroupName: "SwaggerTestRg",
+    vaultName: "NetSDKTestRsVault",
+});
+
+```
+
+{{% /example %}}
+
+### Stop Protection with retain data on Azure IaasVm
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var protectedItem = new AzureRM.RecoveryServices.Latest.ProtectedItem("protectedItem", new AzureRM.RecoveryServices.Latest.ProtectedItemArgs
+        {
+            ContainerName = "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
+            FabricName = "Azure",
+            ProtectedItemName = "VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
+            ResourceGroupName = "SwaggerTestRg",
+            VaultName = "NetSDKTestRsVault",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+protected_item = azurerm.recoveryservices.latest.ProtectedItem("protectedItem",
+    container_name="IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
+    fabric_name="Azure",
+    protected_item_name="VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
+    resource_group_name="SwaggerTestRg",
+    vault_name="NetSDKTestRsVault")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const protectedItem = new azurerm.recoveryservices.latest.ProtectedItem("protectedItem", {
+    containerName: "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
+    fabricName: "Azure",
+    protectedItemName: "VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
+    resourceGroupName: "SwaggerTestRg",
+    vaultName: "NetSDKTestRsVault",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ProtectedItem Resource {#create}

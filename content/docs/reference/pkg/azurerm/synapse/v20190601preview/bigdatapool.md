@@ -12,6 +12,143 @@ meta_desc: "Explore the BigDataPool resource of the synapse/v20190601preview mod
 
 A Big Data pool
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a Big Data pool
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bigDataPool = new AzureRM.Synapse.V20190601Preview.BigDataPool("bigDataPool", new AzureRM.Synapse.V20190601Preview.BigDataPoolArgs
+        {
+            AutoPause = new AzureRM.Synapse.V20190601Preview.Inputs.AutoPausePropertiesArgs
+            {
+                DelayInMinutes = 15,
+                Enabled = true,
+            },
+            AutoScale = new AzureRM.Synapse.V20190601Preview.Inputs.AutoScalePropertiesArgs
+            {
+                Enabled = true,
+                MaxNodeCount = 50,
+                MinNodeCount = 3,
+            },
+            BigDataPoolName = "ExamplePool",
+            DefaultSparkLogFolder = "/logs",
+            LibraryRequirements = new AzureRM.Synapse.V20190601Preview.Inputs.LibraryRequirementsArgs
+            {
+                Content = "",
+                Filename = "requirements.txt",
+            },
+            Location = "West US 2",
+            NodeCount = 4,
+            NodeSize = "Medium",
+            NodeSizeFamily = "MemoryOptimized",
+            ResourceGroupName = "ExampleResourceGroup",
+            SparkEventsFolder = "/events",
+            SparkVersion = "2.4",
+            Tags = 
+            {
+                { "key", "value" },
+            },
+            WorkspaceName = "ExampleWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+big_data_pool = azurerm.synapse.v20190601preview.BigDataPool("bigDataPool",
+    auto_pause={
+        "delayInMinutes": 15,
+        "enabled": True,
+    },
+    auto_scale={
+        "enabled": True,
+        "maxNodeCount": 50,
+        "minNodeCount": 3,
+    },
+    big_data_pool_name="ExamplePool",
+    default_spark_log_folder="/logs",
+    library_requirements={
+        "content": "",
+        "filename": "requirements.txt",
+    },
+    location="West US 2",
+    node_count=4,
+    node_size="Medium",
+    node_size_family="MemoryOptimized",
+    resource_group_name="ExampleResourceGroup",
+    spark_events_folder="/events",
+    spark_version="2.4",
+    tags={
+        "key": "value",
+    },
+    workspace_name="ExampleWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const bigDataPool = new azurerm.synapse.v20190601preview.BigDataPool("bigDataPool", {
+    autoPause: {
+        delayInMinutes: 15,
+        enabled: true,
+    },
+    autoScale: {
+        enabled: true,
+        maxNodeCount: 50,
+        minNodeCount: 3,
+    },
+    bigDataPoolName: "ExamplePool",
+    defaultSparkLogFolder: "/logs",
+    libraryRequirements: {
+        content: "",
+        filename: "requirements.txt",
+    },
+    location: "West US 2",
+    nodeCount: 4,
+    nodeSize: "Medium",
+    nodeSizeFamily: "MemoryOptimized",
+    resourceGroupName: "ExampleResourceGroup",
+    sparkEventsFolder: "/events",
+    sparkVersion: "2.4",
+    tags: {
+        key: "value",
+    },
+    workspaceName: "ExampleWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BigDataPool Resource {#create}

@@ -12,6 +12,92 @@ meta_desc: "Explore the ExpressRouteConnection resource of the network/latest mo
 
 ExpressRouteConnection resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ExpressRouteConnectionCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var expressRouteConnection = new AzureRM.Network.Latest.ExpressRouteConnection("expressRouteConnection", new AzureRM.Network.Latest.ExpressRouteConnectionArgs
+        {
+            AuthorizationKey = "authorizationKey",
+            ConnectionName = "connectionName",
+            ExpressRouteCircuitPeering = new AzureRM.Network.Latest.Inputs.ExpressRouteCircuitPeeringIdArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteCircuits/circuitName/peerings/AzurePrivatePeering",
+            },
+            ExpressRouteGatewayName = "gateway-2",
+            Id = "/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteGateways/gateway-2/expressRouteConnections/connectionName",
+            Name = "connectionName",
+            ResourceGroupName = "resourceGroupName",
+            RoutingWeight = 2,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+express_route_connection = azurerm.network.latest.ExpressRouteConnection("expressRouteConnection",
+    authorization_key="authorizationKey",
+    connection_name="connectionName",
+    express_route_circuit_peering={
+        "id": "/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteCircuits/circuitName/peerings/AzurePrivatePeering",
+    },
+    express_route_gateway_name="gateway-2",
+    id="/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteGateways/gateway-2/expressRouteConnections/connectionName",
+    name="connectionName",
+    resource_group_name="resourceGroupName",
+    routing_weight=2)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const expressRouteConnection = new azurerm.network.latest.ExpressRouteConnection("expressRouteConnection", {
+    authorizationKey: "authorizationKey",
+    connectionName: "connectionName",
+    expressRouteCircuitPeering: {
+        id: "/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteCircuits/circuitName/peerings/AzurePrivatePeering",
+    },
+    expressRouteGatewayName: "gateway-2",
+    id: "/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteGateways/gateway-2/expressRouteConnections/connectionName",
+    name: "connectionName",
+    resourceGroupName: "resourceGroupName",
+    routingWeight: 2,
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ExpressRouteConnection Resource {#create}

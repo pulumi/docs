@@ -12,6 +12,70 @@ meta_desc: "Explore the NetworkWatcher resource of the network/latest module, in
 
 Network watcher in a resource group.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create network watcher
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var networkWatcher = new AzureRM.Network.Latest.NetworkWatcher("networkWatcher", new AzureRM.Network.Latest.NetworkWatcherArgs
+        {
+            Location = "eastus",
+            NetworkWatcherName = "nw1",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+network_watcher = azurerm.network.latest.NetworkWatcher("networkWatcher",
+    location="eastus",
+    network_watcher_name="nw1",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const networkWatcher = new azurerm.network.latest.NetworkWatcher("networkWatcher", {
+    location: "eastus",
+    networkWatcherName: "nw1",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkWatcher Resource {#create}

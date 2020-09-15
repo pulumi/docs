@@ -12,6 +12,128 @@ meta_desc: "Explore the Dashboard resource of the portal/v20200901preview module
 
 The shared dashboard resource definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a Dashboard
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+dashboard = .("dashboard",
+    dashboard_name="testDashboard",
+    lenses=[
+        {
+            "order": 1,
+            "parts": [
+                {
+                    "position": {
+                        "colSpan": 3,
+                        "rowSpan": 4,
+                        "x": 1,
+                        "y": 2,
+                    },
+                },
+                {
+                    "position": {
+                        "colSpan": 6,
+                        "rowSpan": 6,
+                        "x": 5,
+                        "y": 5,
+                    },
+                },
+            ],
+        },
+        {
+            "order": 2,
+            "parts": [],
+        },
+    ],
+    location="eastus",
+    metadata={
+        "metadata": {
+            "ColSpan": 2,
+            "RowSpan": 1,
+            "X": 4,
+            "Y": 3,
+        },
+    },
+    resource_group_name="testRG",
+    tags={
+        "aKey": "aValue",
+        "anotherKey": "anotherValue",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const dashboard = new .("dashboard", {
+    dashboardName: "testDashboard",
+    lenses: [
+        {
+            order: 1,
+            parts: [
+                {
+                    position: {
+                        colSpan: 3,
+                        rowSpan: 4,
+                        x: 1,
+                        y: 2,
+                    },
+                },
+                {
+                    position: {
+                        colSpan: 6,
+                        rowSpan: 6,
+                        x: 5,
+                        y: 5,
+                    },
+                },
+            ],
+        },
+        {
+            order: 2,
+            parts: [],
+        },
+    ],
+    location: "eastus",
+    metadata: {
+        metadata: {
+            ColSpan: 2,
+            RowSpan: 1,
+            X: 4,
+            Y: 3,
+        },
+    },
+    resourceGroupName: "testRG",
+    tags: {
+        aKey: "aValue",
+        anotherKey: "anotherValue",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Dashboard Resource {#create}

@@ -12,6 +12,141 @@ meta_desc: "Explore the MongoDBResourceMongoDBCollection resource of the documen
 
 An Azure Cosmos DB MongoDB collection.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CosmosDBMongoDBCollectionCreateUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mongoDBResourceMongoDBCollection = new AzureRM.DocumentDB.V20200601Preview.MongoDBResourceMongoDBCollection("mongoDBResourceMongoDBCollection", new AzureRM.DocumentDB.V20200601Preview.MongoDBResourceMongoDBCollectionArgs
+        {
+            AccountName = "ddb1",
+            CollectionName = "collectionName",
+            DatabaseName = "databaseName",
+            Location = "West US",
+            Options = ,
+            Resource = new AzureRM.DocumentDB.V20200601Preview.Inputs.MongoDBCollectionResourceArgs
+            {
+                AnalyticalStorageTtl = 500,
+                Id = "collectionName",
+                Indexes = 
+                {
+                    new AzureRM.DocumentDB.V20200601Preview.Inputs.MongoIndexArgs
+                    {
+                        Key = new AzureRM.DocumentDB.V20200601Preview.Inputs.MongoIndexKeysArgs
+                        {
+                            Keys = 
+                            {
+                                "testKey",
+                            },
+                        },
+                        Options = new AzureRM.DocumentDB.V20200601Preview.Inputs.MongoIndexOptionsArgs
+                        {
+                            ExpireAfterSeconds = 100,
+                            Unique = true,
+                        },
+                    },
+                },
+                ShardKey = 
+                {
+                    { "testKey", "Hash" },
+                },
+            },
+            ResourceGroupName = "rg1",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+mongo_db_resource_mongo_db_collection = azurerm.documentdb.v20200601preview.MongoDBResourceMongoDBCollection("mongoDBResourceMongoDBCollection",
+    account_name="ddb1",
+    collection_name="collectionName",
+    database_name="databaseName",
+    location="West US",
+    options={},
+    resource={
+        "analyticalStorageTtl": 500,
+        "id": "collectionName",
+        "indexes": [{
+            "key": {
+                "keys": ["testKey"],
+            },
+            "options": {
+                "expireAfterSeconds": 100,
+                "unique": True,
+            },
+        }],
+        "shardKey": {
+            "testKey": "Hash",
+        },
+    },
+    resource_group_name="rg1",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const mongoDBResourceMongoDBCollection = new azurerm.documentdb.v20200601preview.MongoDBResourceMongoDBCollection("mongoDBResourceMongoDBCollection", {
+    accountName: "ddb1",
+    collectionName: "collectionName",
+    databaseName: "databaseName",
+    location: "West US",
+    options: {},
+    resource: {
+        analyticalStorageTtl: 500,
+        id: "collectionName",
+        indexes: [{
+            key: {
+                keys: ["testKey"],
+            },
+            options: {
+                expireAfterSeconds: 100,
+                unique: true,
+            },
+        }],
+        shardKey: {
+            testKey: "Hash",
+        },
+    },
+    resourceGroupName: "rg1",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MongoDBResourceMongoDBCollection Resource {#create}

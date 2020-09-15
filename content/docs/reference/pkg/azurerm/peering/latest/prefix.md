@@ -12,6 +12,76 @@ meta_desc: "Explore the Prefix resource of the peering/latest module, including 
 
 The peering service prefix class.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a prefix for the peering service
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var prefix = new AzureRM.Peering.Latest.Prefix("prefix", new AzureRM.Peering.Latest.PrefixArgs
+        {
+            PeeringServiceName = "peeringServiceName",
+            PeeringServicePrefixKey = "00000000-0000-0000-0000-000000000000",
+            Prefix = "192.168.1.0/24",
+            PrefixName = "peeringServicePrefixName",
+            ResourceGroupName = "rgName",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+prefix = azurerm.peering.latest.Prefix("prefix",
+    peering_service_name="peeringServiceName",
+    peering_service_prefix_key="00000000-0000-0000-0000-000000000000",
+    prefix="192.168.1.0/24",
+    prefix_name="peeringServicePrefixName",
+    resource_group_name="rgName")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const prefix = new azurerm.peering.latest.Prefix("prefix", {
+    peeringServiceName: "peeringServiceName",
+    peeringServicePrefixKey: "00000000-0000-0000-0000-000000000000",
+    prefix: "192.168.1.0/24",
+    prefixName: "peeringServicePrefixName",
+    resourceGroupName: "rgName",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Prefix Resource {#create}

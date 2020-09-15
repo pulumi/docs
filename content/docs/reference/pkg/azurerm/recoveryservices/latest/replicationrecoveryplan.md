@@ -12,6 +12,70 @@ meta_desc: "Explore the ReplicationRecoveryPlan resource of the recoveryservices
 
 Recovery plan details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates a recovery plan with the given details.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var replicationRecoveryPlan = new AzureRM.RecoveryServices.Latest.ReplicationRecoveryPlan("replicationRecoveryPlan", new AzureRM.RecoveryServices.Latest.ReplicationRecoveryPlanArgs
+        {
+            RecoveryPlanName = "RPtest1",
+            ResourceGroupName = "resourceGroupPS1",
+            ResourceName = "vault1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+replication_recovery_plan = azurerm.recoveryservices.latest.ReplicationRecoveryPlan("replicationRecoveryPlan",
+    recovery_plan_name="RPtest1",
+    resource_group_name="resourceGroupPS1",
+    resource_name="vault1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const replicationRecoveryPlan = new azurerm.recoveryservices.latest.ReplicationRecoveryPlan("replicationRecoveryPlan", {
+    recoveryPlanName: "RPtest1",
+    resourceGroupName: "resourceGroupPS1",
+    resourceName: "vault1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ReplicationRecoveryPlan Resource {#create}

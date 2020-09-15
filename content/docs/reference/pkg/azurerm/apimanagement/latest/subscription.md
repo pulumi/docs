@@ -12,6 +12,79 @@ meta_desc: "Explore the Subscription resource of the apimanagement/latest module
 
 Subscription details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateSubscription
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var subscription = new AzureRM.ApiManagement.Latest.Subscription("subscription", new AzureRM.ApiManagement.Latest.SubscriptionArgs
+        {
+            DisplayName = "testsub",
+            OwnerId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/57127d485157a511ace86ae7",
+            ResourceGroupName = "rg1",
+            Scope = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/products/5600b59475ff190048060002",
+            ServiceName = "apimService1",
+            Sid = "testsub",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+subscription = azurerm.apimanagement.latest.Subscription("subscription",
+    display_name="testsub",
+    owner_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/57127d485157a511ace86ae7",
+    resource_group_name="rg1",
+    scope="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/products/5600b59475ff190048060002",
+    service_name="apimService1",
+    sid="testsub")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const subscription = new azurerm.apimanagement.latest.Subscription("subscription", {
+    displayName: "testsub",
+    ownerId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/57127d485157a511ace86ae7",
+    resourceGroupName: "rg1",
+    scope: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/products/5600b59475ff190048060002",
+    serviceName: "apimService1",
+    sid: "testsub",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Subscription Resource {#create}

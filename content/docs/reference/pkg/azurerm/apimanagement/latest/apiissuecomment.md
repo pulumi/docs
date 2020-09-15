@@ -12,6 +12,85 @@ meta_desc: "Explore the ApiIssueComment resource of the apimanagement/latest mod
 
 Issue Comment Contract details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateApiIssueComment
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiIssueComment = new AzureRM.ApiManagement.Latest.ApiIssueComment("apiIssueComment", new AzureRM.ApiManagement.Latest.ApiIssueCommentArgs
+        {
+            ApiId = "57d1f7558aa04f15146d9d8a",
+            CommentId = "599e29ab193c3c0bd0b3e2fb",
+            CreatedDate = "2018-02-01T22:21:20.467Z",
+            IssueId = "57d2ef278aa04f0ad01d6cdc",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Text = "Issue comment.",
+            UserId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api_issue_comment = azurerm.apimanagement.latest.ApiIssueComment("apiIssueComment",
+    api_id="57d1f7558aa04f15146d9d8a",
+    comment_id="599e29ab193c3c0bd0b3e2fb",
+    created_date="2018-02-01T22:21:20.467Z",
+    issue_id="57d2ef278aa04f0ad01d6cdc",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    text="Issue comment.",
+    user_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const apiIssueComment = new azurerm.apimanagement.latest.ApiIssueComment("apiIssueComment", {
+    apiId: "57d1f7558aa04f15146d9d8a",
+    commentId: "599e29ab193c3c0bd0b3e2fb",
+    createdDate: "2018-02-01T22:21:20.467Z",
+    issueId: "57d2ef278aa04f0ad01d6cdc",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    text: "Issue comment.",
+    userId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApiIssueComment Resource {#create}

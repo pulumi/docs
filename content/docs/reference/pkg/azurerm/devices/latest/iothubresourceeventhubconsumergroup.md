@@ -12,6 +12,73 @@ meta_desc: "Explore the IotHubResourceEventHubConsumerGroup resource of the devi
 
 The properties of the EventHubConsumerGroupInfo object.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### IotHubResource_CreateEventHubConsumerGroup
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var iotHubResourceEventHubConsumerGroup = new AzureRM.Devices.Latest.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", new AzureRM.Devices.Latest.IotHubResourceEventHubConsumerGroupArgs
+        {
+            EventHubEndpointName = "events",
+            Name = "test",
+            ResourceGroupName = "myResourceGroup",
+            ResourceName = "testHub",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+iot_hub_resource_event_hub_consumer_group = azurerm.devices.latest.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup",
+    event_hub_endpoint_name="events",
+    name="test",
+    resource_group_name="myResourceGroup",
+    resource_name="testHub")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const iotHubResourceEventHubConsumerGroup = new azurerm.devices.latest.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", {
+    eventHubEndpointName: "events",
+    name: "test",
+    resourceGroupName: "myResourceGroup",
+    resourceName: "testHub",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IotHubResourceEventHubConsumerGroup Resource {#create}

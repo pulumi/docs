@@ -12,6 +12,185 @@ meta_desc: "Explore the PrivateLinkForAzureAd resource of the aadiam/v20200301pr
 
 PrivateLink Policy configuration object.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### privateLinkPolicyCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateLinkForAzureAd = new AzureRM.Aadiam.V20200301Preview.PrivateLinkForAzureAd("privateLinkForAzureAd", new AzureRM.Aadiam.V20200301Preview.PrivateLinkForAzureAdArgs
+        {
+            AllTenants = false,
+            Name = "myOrgPrivateLinkPolicy",
+            OwnerTenantId = "950f8bca-bf4d-4a41-ad10-034e792a243d",
+            PolicyName = "ddb1",
+            ResourceGroup = "myOrgVnetRG",
+            ResourceGroupName = "rg1",
+            ResourceName = "myOrgVnetPrivateLink",
+            SubscriptionId = "57849194-ea1f-470b-abda-d195b25634c1",
+            Tenants = 
+            {
+                "3616657d-1c80-41ae-9d83-2a2776f2c9be",
+                "727b6ef1-18ab-4627-ac95-3f9cd945ed87",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_link_for_azure_ad = azurerm.aadiam.v20200301preview.PrivateLinkForAzureAd("privateLinkForAzureAd",
+    all_tenants=False,
+    name="myOrgPrivateLinkPolicy",
+    owner_tenant_id="950f8bca-bf4d-4a41-ad10-034e792a243d",
+    policy_name="ddb1",
+    resource_group="myOrgVnetRG",
+    resource_group_name="rg1",
+    resource_name="myOrgVnetPrivateLink",
+    subscription_id="57849194-ea1f-470b-abda-d195b25634c1",
+    tenants=[
+        "3616657d-1c80-41ae-9d83-2a2776f2c9be",
+        "727b6ef1-18ab-4627-ac95-3f9cd945ed87",
+    ])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateLinkForAzureAd = new azurerm.aadiam.v20200301preview.PrivateLinkForAzureAd("privateLinkForAzureAd", {
+    allTenants: false,
+    name: "myOrgPrivateLinkPolicy",
+    ownerTenantId: "950f8bca-bf4d-4a41-ad10-034e792a243d",
+    policyName: "ddb1",
+    resourceGroup: "myOrgVnetRG",
+    resourceGroupName: "rg1",
+    resourceName: "myOrgVnetPrivateLink",
+    subscriptionId: "57849194-ea1f-470b-abda-d195b25634c1",
+    tenants: [
+        "3616657d-1c80-41ae-9d83-2a2776f2c9be",
+        "727b6ef1-18ab-4627-ac95-3f9cd945ed87",
+    ],
+});
+
+```
+
+{{% /example %}}
+
+### privateLinkPolicyMinCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateLinkForAzureAd = new AzureRM.Aadiam.V20200301Preview.PrivateLinkForAzureAd("privateLinkForAzureAd", new AzureRM.Aadiam.V20200301Preview.PrivateLinkForAzureAdArgs
+        {
+            AllTenants = false,
+            Name = "myOrgPrivateLinkPolicy",
+            OwnerTenantId = "950f8bca-bf4d-4a41-ad10-034e792a243d",
+            PolicyName = "ddb1",
+            ResourceGroup = "myOrgVnetRG",
+            ResourceGroupName = "rg1",
+            ResourceName = "myOrgVnetPrivateLink",
+            SubscriptionId = "57849194-ea1f-470b-abda-d195b25634c1",
+            Tenants = 
+            {
+                "3616657d-1c80-41ae-9d83-2a2776f2c9be",
+                "727b6ef1-18ab-4627-ac95-3f9cd945ed87",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_link_for_azure_ad = azurerm.aadiam.v20200301preview.PrivateLinkForAzureAd("privateLinkForAzureAd",
+    all_tenants=False,
+    name="myOrgPrivateLinkPolicy",
+    owner_tenant_id="950f8bca-bf4d-4a41-ad10-034e792a243d",
+    policy_name="ddb1",
+    resource_group="myOrgVnetRG",
+    resource_group_name="rg1",
+    resource_name="myOrgVnetPrivateLink",
+    subscription_id="57849194-ea1f-470b-abda-d195b25634c1",
+    tenants=[
+        "3616657d-1c80-41ae-9d83-2a2776f2c9be",
+        "727b6ef1-18ab-4627-ac95-3f9cd945ed87",
+    ])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateLinkForAzureAd = new azurerm.aadiam.v20200301preview.PrivateLinkForAzureAd("privateLinkForAzureAd", {
+    allTenants: false,
+    name: "myOrgPrivateLinkPolicy",
+    ownerTenantId: "950f8bca-bf4d-4a41-ad10-034e792a243d",
+    policyName: "ddb1",
+    resourceGroup: "myOrgVnetRG",
+    resourceGroupName: "rg1",
+    resourceName: "myOrgVnetPrivateLink",
+    subscriptionId: "57849194-ea1f-470b-abda-d195b25634c1",
+    tenants: [
+        "3616657d-1c80-41ae-9d83-2a2776f2c9be",
+        "727b6ef1-18ab-4627-ac95-3f9cd945ed87",
+    ],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateLinkForAzureAd Resource {#create}

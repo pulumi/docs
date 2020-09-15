@@ -12,6 +12,164 @@ meta_desc: "Explore the ElasticPool resource of the sql/v20171001preview module,
 
 An elastic pool.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update elastic pool with all parameter
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var elasticPool = new AzureRM.Sql.V20171001Preview.ElasticPool("elasticPool", new AzureRM.Sql.V20171001Preview.ElasticPoolArgs
+        {
+            ElasticPoolName = "sqlcrudtest-8102",
+            Location = "Japan East",
+            PerDatabaseSettings = new AzureRM.Sql.V20171001Preview.Inputs.ElasticPoolPerDatabaseSettingsArgs
+            {
+                MaxCapacity = 2,
+                MinCapacity = 0.25,
+            },
+            ResourceGroupName = "sqlcrudtest-2369",
+            ServerName = "sqlcrudtest-8069",
+            Sku = new AzureRM.Sql.V20171001Preview.Inputs.SkuArgs
+            {
+                Capacity = 2,
+                Name = "GP_Gen4_2",
+                Tier = "GeneralPurpose",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+elastic_pool = azurerm.sql.v20171001preview.ElasticPool("elasticPool",
+    elastic_pool_name="sqlcrudtest-8102",
+    location="Japan East",
+    per_database_settings={
+        "maxCapacity": 2,
+        "minCapacity": 0.25,
+    },
+    resource_group_name="sqlcrudtest-2369",
+    server_name="sqlcrudtest-8069",
+    sku={
+        "capacity": 2,
+        "name": "GP_Gen4_2",
+        "tier": "GeneralPurpose",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const elasticPool = new azurerm.sql.v20171001preview.ElasticPool("elasticPool", {
+    elasticPoolName: "sqlcrudtest-8102",
+    location: "Japan East",
+    perDatabaseSettings: {
+        maxCapacity: 2,
+        minCapacity: 0.25,
+    },
+    resourceGroupName: "sqlcrudtest-2369",
+    serverName: "sqlcrudtest-8069",
+    sku: {
+        capacity: 2,
+        name: "GP_Gen4_2",
+        tier: "GeneralPurpose",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create or update elastic pool with minimum parameters
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var elasticPool = new AzureRM.Sql.V20171001Preview.ElasticPool("elasticPool", new AzureRM.Sql.V20171001Preview.ElasticPoolArgs
+        {
+            ElasticPoolName = "sqlcrudtest-8102",
+            Location = "Japan East",
+            ResourceGroupName = "sqlcrudtest-2369",
+            ServerName = "sqlcrudtest-8069",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+elastic_pool = azurerm.sql.v20171001preview.ElasticPool("elasticPool",
+    elastic_pool_name="sqlcrudtest-8102",
+    location="Japan East",
+    resource_group_name="sqlcrudtest-2369",
+    server_name="sqlcrudtest-8069")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const elasticPool = new azurerm.sql.v20171001preview.ElasticPool("elasticPool", {
+    elasticPoolName: "sqlcrudtest-8102",
+    location: "Japan East",
+    resourceGroupName: "sqlcrudtest-2369",
+    serverName: "sqlcrudtest-8069",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ElasticPool Resource {#create}

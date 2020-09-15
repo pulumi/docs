@@ -12,6 +12,79 @@ meta_desc: "Explore the Account resource of the visualstudio/v20171101preview mo
 
 The response to an account resource GET request.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create an account resource
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var account = new AzureRM.Visualstudio.V20171101Preview.Account("account", new AzureRM.Visualstudio.V20171101Preview.AccountArgs
+        {
+            AccountName = "Example",
+            Location = "Central US",
+            OperationType = "create",
+            ResourceGroupName = "VS-Example-Group",
+            ResourceName = "Example",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+account = azurerm.visualstudio.v20171101preview.Account("account",
+    account_name="Example",
+    location="Central US",
+    operation_type="create",
+    resource_group_name="VS-Example-Group",
+    resource_name="Example",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const account = new azurerm.visualstudio.v20171101preview.Account("account", {
+    accountName: "Example",
+    location: "Central US",
+    operationType: "create",
+    resourceGroupName: "VS-Example-Group",
+    resourceName: "Example",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Account Resource {#create}

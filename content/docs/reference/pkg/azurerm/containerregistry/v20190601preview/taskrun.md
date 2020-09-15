@@ -13,6 +13,108 @@ meta_desc: "Explore the TaskRun resource of the containerregistry/v20190601previ
 The task run that has the ARM resource and properties.
 The task run will have the information of request and result of a run.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### TaskRuns_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var taskRun = new AzureRM.ContainerRegistry.V20190601Preview.TaskRun("taskRun", new AzureRM.ContainerRegistry.V20190601Preview.TaskRunArgs
+        {
+            ForceUpdateTag = "test",
+            RegistryName = "myRegistry",
+            ResourceGroupName = "myResourceGroup",
+            RunRequest = 
+            {
+                { "credentials",  },
+                { "encodedTaskContent", "c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K" },
+                { "encodedValuesContent", "Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==" },
+                { "platform", new AzureRM.ContainerRegistry.V20190601Preview.Inputs.PlatformPropertiesArgs
+                {
+                    Architecture = "amd64",
+                    Os = "Linux",
+                } },
+                { "type", "EncodedTaskRunRequest" },
+                { "values", {} },
+            },
+            TaskRunName = "myRun",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+task_run = azurerm.containerregistry.v20190601preview.TaskRun("taskRun",
+    force_update_tag="test",
+    registry_name="myRegistry",
+    resource_group_name="myResourceGroup",
+    run_request={
+        "credentials": {},
+        "encodedTaskContent": "c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K",
+        "encodedValuesContent": "Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==",
+        "platform": {
+            "architecture": "amd64",
+            "os": "Linux",
+        },
+        "type": "EncodedTaskRunRequest",
+        "values": [],
+    },
+    task_run_name="myRun")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const taskRun = new azurerm.containerregistry.v20190601preview.TaskRun("taskRun", {
+    forceUpdateTag: "test",
+    registryName: "myRegistry",
+    resourceGroupName: "myResourceGroup",
+    runRequest: {
+        credentials: {},
+        encodedTaskContent: "c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K",
+        encodedValuesContent: "Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==",
+        platform: {
+            architecture: "amd64",
+            os: "Linux",
+        },
+        type: "EncodedTaskRunRequest",
+        values: [],
+    },
+    taskRunName: "myRun",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TaskRun Resource {#create}

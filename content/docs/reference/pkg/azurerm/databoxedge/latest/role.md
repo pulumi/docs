@@ -12,6 +12,73 @@ meta_desc: "Explore the Role resource of the databoxedge/latest module, includin
 
 Compute role.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### RolePut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var role = new AzureRM.DataBoxEdge.Latest.Role("role", new AzureRM.DataBoxEdge.Latest.RoleArgs
+        {
+            DeviceName = "testedgedevice",
+            Kind = "IOT",
+            Name = "IoTRole1",
+            ResourceGroupName = "GroupForEdgeAutomation",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+role = azurerm.databoxedge.latest.Role("role",
+    device_name="testedgedevice",
+    kind="IOT",
+    name="IoTRole1",
+    resource_group_name="GroupForEdgeAutomation")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const role = new azurerm.databoxedge.latest.Role("role", {
+    deviceName: "testedgedevice",
+    kind: "IOT",
+    name: "IoTRole1",
+    resourceGroupName: "GroupForEdgeAutomation",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Role Resource {#create}

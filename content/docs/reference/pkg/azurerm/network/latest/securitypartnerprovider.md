@@ -12,6 +12,93 @@ meta_desc: "Explore the SecurityPartnerProvider resource of the network/latest m
 
 Security Partner Provider resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Security Partner Provider
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var securityPartnerProvider = new AzureRM.Network.Latest.SecurityPartnerProvider("securityPartnerProvider", new AzureRM.Network.Latest.SecurityPartnerProviderArgs
+        {
+            Location = "West US",
+            ResourceGroupName = "rg1",
+            SecurityPartnerProviderName = "securityPartnerProvider",
+            SecurityProviderName = "ZScaler",
+            Tags = 
+            {
+                { "key1", "value1" },
+            },
+            VirtualHub = new AzureRM.Network.Latest.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+security_partner_provider = azurerm.network.latest.SecurityPartnerProvider("securityPartnerProvider",
+    location="West US",
+    resource_group_name="rg1",
+    security_partner_provider_name="securityPartnerProvider",
+    security_provider_name="ZScaler",
+    tags={
+        "key1": "value1",
+    },
+    virtual_hub={
+        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const securityPartnerProvider = new azurerm.network.latest.SecurityPartnerProvider("securityPartnerProvider", {
+    location: "West US",
+    resourceGroupName: "rg1",
+    securityPartnerProviderName: "securityPartnerProvider",
+    securityProviderName: "ZScaler",
+    tags: {
+        key1: "value1",
+    },
+    virtualHub: {
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SecurityPartnerProvider Resource {#create}

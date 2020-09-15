@@ -12,6 +12,92 @@ meta_desc: "Explore the DedicatedHostGroup resource of the compute/latest module
 
 Specifies information about the dedicated host group that the dedicated hosts should be assigned to. <br><br> Currently, a dedicated host can only be added to a dedicated host group at creation time. An existing dedicated host cannot be added to another dedicated host group.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a dedicated host group.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dedicatedHostGroup = new AzureRM.Compute.Latest.DedicatedHostGroup("dedicatedHostGroup", new AzureRM.Compute.Latest.DedicatedHostGroupArgs
+        {
+            HostGroupName = "myDedicatedHostGroup",
+            Location = "westus",
+            PlatformFaultDomainCount = 3,
+            ResourceGroupName = "myResourceGroup",
+            SupportAutomaticPlacement = true,
+            Tags = 
+            {
+                { "department", "finance" },
+            },
+            Zones = 
+            {
+                "1",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+dedicated_host_group = azurerm.compute.latest.DedicatedHostGroup("dedicatedHostGroup",
+    host_group_name="myDedicatedHostGroup",
+    location="westus",
+    platform_fault_domain_count=3,
+    resource_group_name="myResourceGroup",
+    support_automatic_placement=True,
+    tags={
+        "department": "finance",
+    },
+    zones=["1"])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dedicatedHostGroup = new azurerm.compute.latest.DedicatedHostGroup("dedicatedHostGroup", {
+    hostGroupName: "myDedicatedHostGroup",
+    location: "westus",
+    platformFaultDomainCount: 3,
+    resourceGroupName: "myResourceGroup",
+    supportAutomaticPlacement: true,
+    tags: {
+        department: "finance",
+    },
+    zones: ["1"],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DedicatedHostGroup Resource {#create}

@@ -12,6 +12,194 @@ meta_desc: "Explore the VirtualNetworkFunction resource of the hybridnetwork/v20
 
 Hybrid network virtual network function resource response.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create hybrid network virtual network function resource
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualNetworkFunction = new AzureRM.HybridNetwork.V20200101Preview.VirtualNetworkFunction("virtualNetworkFunction", new AzureRM.HybridNetwork.V20200101Preview.VirtualNetworkFunctionArgs
+        {
+            Device = new AzureRM.HybridNetwork.V20200101Preview.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/devices/testDevice",
+            },
+            Location = "eastus",
+            ManagedApplicationParameters = ,
+            ResourceGroupName = "rg",
+            SkuName = "testSku",
+            VendorName = "testVendor",
+            VirtualNetworkFunctionName = "testVnf",
+            VirtualNetworkFunctionUserConfigurations = 
+            {
+                new AzureRM.HybridNetwork.V20200101Preview.Inputs.VirtualNetworkFunctionUserConfigurationArgs
+                {
+                    NetworkInterfaces = 
+                    {
+                        new AzureRM.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceArgs
+                        {
+                            IpConfigurations = 
+                            {
+                                new AzureRM.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceIPConfigurationArgs
+                                {
+                                    Gateway = "",
+                                    IpAddress = "",
+                                    IpAllocationMethod = "Dynamic",
+                                    IpVersion = "IPv4",
+                                    Subnet = "",
+                                },
+                            },
+                            MacAddress = "",
+                            NetworkInterfaceName = "nic1",
+                            VmSwitchType = "Management",
+                        },
+                        new AzureRM.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceArgs
+                        {
+                            IpConfigurations = 
+                            {
+                                new AzureRM.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceIPConfigurationArgs
+                                {
+                                    Gateway = "",
+                                    IpAddress = "",
+                                    IpAllocationMethod = "Dynamic",
+                                    IpVersion = "IPv4",
+                                    Subnet = "",
+                                },
+                            },
+                            MacAddress = "DC-97-F8-79-16-7D",
+                            NetworkInterfaceName = "nic2",
+                            VmSwitchType = "Wan",
+                        },
+                    },
+                    RoleName = "testRole",
+                    UserDataParameters = ,
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_network_function = azurerm.hybridnetwork.v20200101preview.VirtualNetworkFunction("virtualNetworkFunction",
+    device={
+        "id": "/subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/devices/testDevice",
+    },
+    location="eastus",
+    managed_application_parameters={},
+    resource_group_name="rg",
+    sku_name="testSku",
+    vendor_name="testVendor",
+    virtual_network_function_name="testVnf",
+    virtual_network_function_user_configurations=[{
+        "networkInterfaces": [
+            {
+                "ipConfigurations": [{
+                    "gateway": "",
+                    "ipAddress": "",
+                    "ipAllocationMethod": "Dynamic",
+                    "ipVersion": "IPv4",
+                    "subnet": "",
+                }],
+                "macAddress": "",
+                "networkInterfaceName": "nic1",
+                "vmSwitchType": "Management",
+            },
+            {
+                "ipConfigurations": [{
+                    "gateway": "",
+                    "ipAddress": "",
+                    "ipAllocationMethod": "Dynamic",
+                    "ipVersion": "IPv4",
+                    "subnet": "",
+                }],
+                "macAddress": "DC-97-F8-79-16-7D",
+                "networkInterfaceName": "nic2",
+                "vmSwitchType": "Wan",
+            },
+        ],
+        "roleName": "testRole",
+        "userDataParameters": {},
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualNetworkFunction = new azurerm.hybridnetwork.v20200101preview.VirtualNetworkFunction("virtualNetworkFunction", {
+    device: {
+        id: "/subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/devices/testDevice",
+    },
+    location: "eastus",
+    managedApplicationParameters: {},
+    resourceGroupName: "rg",
+    skuName: "testSku",
+    vendorName: "testVendor",
+    virtualNetworkFunctionName: "testVnf",
+    virtualNetworkFunctionUserConfigurations: [{
+        networkInterfaces: [
+            {
+                ipConfigurations: [{
+                    gateway: "",
+                    ipAddress: "",
+                    ipAllocationMethod: "Dynamic",
+                    ipVersion: "IPv4",
+                    subnet: "",
+                }],
+                macAddress: "",
+                networkInterfaceName: "nic1",
+                vmSwitchType: "Management",
+            },
+            {
+                ipConfigurations: [{
+                    gateway: "",
+                    ipAddress: "",
+                    ipAllocationMethod: "Dynamic",
+                    ipVersion: "IPv4",
+                    subnet: "",
+                }],
+                macAddress: "DC-97-F8-79-16-7D",
+                networkInterfaceName: "nic2",
+                vmSwitchType: "Wan",
+            },
+        ],
+        roleName: "testRole",
+        userDataParameters: {},
+    }],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualNetworkFunction Resource {#create}

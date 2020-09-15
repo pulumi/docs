@@ -12,6 +12,312 @@ meta_desc: "Explore the ManagementPolicy resource of the storage/latest module, 
 
 The Get Storage Account ManagementPolicies operation response.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### StorageAccountSetManagementPolicies
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managementPolicy = new AzureRM.Storage.Latest.ManagementPolicy("managementPolicy", new AzureRM.Storage.Latest.ManagementPolicyArgs
+        {
+            AccountName = "sto9699",
+            ManagementPolicyName = "default",
+            Policy = new AzureRM.Storage.Latest.Inputs.ManagementPolicySchemaArgs
+            {
+                Rules = 
+                {
+                    new AzureRM.Storage.Latest.Inputs.ManagementPolicyRuleArgs
+                    {
+                        Definition = new AzureRM.Storage.Latest.Inputs.ManagementPolicyDefinitionArgs
+                        {
+                            Actions = new AzureRM.Storage.Latest.Inputs.ManagementPolicyActionArgs
+                            {
+                                BaseBlob = new AzureRM.Storage.Latest.Inputs.ManagementPolicyBaseBlobArgs
+                                {
+                                    Delete = new AzureRM.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    {
+                                        DaysAfterModificationGreaterThan = 1000,
+                                    },
+                                    TierToArchive = new AzureRM.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    {
+                                        DaysAfterModificationGreaterThan = 90,
+                                    },
+                                    TierToCool = new AzureRM.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    {
+                                        DaysAfterModificationGreaterThan = 30,
+                                    },
+                                },
+                                Snapshot = new AzureRM.Storage.Latest.Inputs.ManagementPolicySnapShotArgs
+                                {
+                                    Delete = new AzureRM.Storage.Latest.Inputs.DateAfterCreationArgs
+                                    {
+                                        DaysAfterCreationGreaterThan = 30,
+                                    },
+                                },
+                            },
+                            Filters = new AzureRM.Storage.Latest.Inputs.ManagementPolicyFilterArgs
+                            {
+                                BlobTypes = 
+                                {
+                                    "blockBlob",
+                                },
+                                PrefixMatch = 
+                                {
+                                    "olcmtestcontainer1",
+                                },
+                            },
+                        },
+                        Enabled = true,
+                        Name = "olcmtest1",
+                        Type = "Lifecycle",
+                    },
+                    new AzureRM.Storage.Latest.Inputs.ManagementPolicyRuleArgs
+                    {
+                        Definition = new AzureRM.Storage.Latest.Inputs.ManagementPolicyDefinitionArgs
+                        {
+                            Actions = new AzureRM.Storage.Latest.Inputs.ManagementPolicyActionArgs
+                            {
+                                BaseBlob = new AzureRM.Storage.Latest.Inputs.ManagementPolicyBaseBlobArgs
+                                {
+                                    Delete = new AzureRM.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    {
+                                        DaysAfterModificationGreaterThan = 1000,
+                                    },
+                                    TierToArchive = new AzureRM.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    {
+                                        DaysAfterModificationGreaterThan = 90,
+                                    },
+                                    TierToCool = new AzureRM.Storage.Latest.Inputs.DateAfterModificationArgs
+                                    {
+                                        DaysAfterModificationGreaterThan = 30,
+                                    },
+                                },
+                            },
+                            Filters = new AzureRM.Storage.Latest.Inputs.ManagementPolicyFilterArgs
+                            {
+                                BlobIndexMatch = 
+                                {
+                                    new AzureRM.Storage.Latest.Inputs.TagFilterArgs
+                                    {
+                                        Name = "tag1",
+                                        Op = "==",
+                                        Value = "val1",
+                                    },
+                                    new AzureRM.Storage.Latest.Inputs.TagFilterArgs
+                                    {
+                                        Name = "tag2",
+                                        Op = "==",
+                                        Value = "val2",
+                                    },
+                                },
+                                BlobTypes = 
+                                {
+                                    "blockBlob",
+                                },
+                                PrefixMatch = 
+                                {
+                                    "olcmtestcontainer2",
+                                },
+                            },
+                        },
+                        Enabled = true,
+                        Name = "olcmtest2",
+                        Type = "Lifecycle",
+                    },
+                },
+            },
+            ResourceGroupName = "res7687",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+management_policy = azurerm.storage.latest.ManagementPolicy("managementPolicy",
+    account_name="sto9699",
+    management_policy_name="default",
+    policy={
+        "rules": [
+            {
+                "definition": {
+                    "actions": {
+                        "baseBlob": {
+                            "delete": {
+                                "daysAfterModificationGreaterThan": 1000,
+                            },
+                            "tierToArchive": {
+                                "daysAfterModificationGreaterThan": 90,
+                            },
+                            "tierToCool": {
+                                "daysAfterModificationGreaterThan": 30,
+                            },
+                        },
+                        "snapshot": {
+                            "delete": {
+                                "daysAfterCreationGreaterThan": 30,
+                            },
+                        },
+                    },
+                    "filters": {
+                        "blobTypes": ["blockBlob"],
+                        "prefixMatch": ["olcmtestcontainer1"],
+                    },
+                },
+                "enabled": True,
+                "name": "olcmtest1",
+                "type": "Lifecycle",
+            },
+            {
+                "definition": {
+                    "actions": {
+                        "baseBlob": {
+                            "delete": {
+                                "daysAfterModificationGreaterThan": 1000,
+                            },
+                            "tierToArchive": {
+                                "daysAfterModificationGreaterThan": 90,
+                            },
+                            "tierToCool": {
+                                "daysAfterModificationGreaterThan": 30,
+                            },
+                        },
+                    },
+                    "filters": {
+                        "blobIndexMatch": [
+                            {
+                                "name": "tag1",
+                                "op": "==",
+                                "value": "val1",
+                            },
+                            {
+                                "name": "tag2",
+                                "op": "==",
+                                "value": "val2",
+                            },
+                        ],
+                        "blobTypes": ["blockBlob"],
+                        "prefixMatch": ["olcmtestcontainer2"],
+                    },
+                },
+                "enabled": True,
+                "name": "olcmtest2",
+                "type": "Lifecycle",
+            },
+        ],
+    },
+    resource_group_name="res7687")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managementPolicy = new azurerm.storage.latest.ManagementPolicy("managementPolicy", {
+    accountName: "sto9699",
+    managementPolicyName: "default",
+    policy: {
+        rules: [
+            {
+                definition: {
+                    actions: {
+                        baseBlob: {
+                            "delete": {
+                                daysAfterModificationGreaterThan: 1000,
+                            },
+                            tierToArchive: {
+                                daysAfterModificationGreaterThan: 90,
+                            },
+                            tierToCool: {
+                                daysAfterModificationGreaterThan: 30,
+                            },
+                        },
+                        snapshot: {
+                            "delete": {
+                                daysAfterCreationGreaterThan: 30,
+                            },
+                        },
+                    },
+                    filters: {
+                        blobTypes: ["blockBlob"],
+                        prefixMatch: ["olcmtestcontainer1"],
+                    },
+                },
+                enabled: true,
+                name: "olcmtest1",
+                type: "Lifecycle",
+            },
+            {
+                definition: {
+                    actions: {
+                        baseBlob: {
+                            "delete": {
+                                daysAfterModificationGreaterThan: 1000,
+                            },
+                            tierToArchive: {
+                                daysAfterModificationGreaterThan: 90,
+                            },
+                            tierToCool: {
+                                daysAfterModificationGreaterThan: 30,
+                            },
+                        },
+                    },
+                    filters: {
+                        blobIndexMatch: [
+                            {
+                                name: "tag1",
+                                op: "==",
+                                value: "val1",
+                            },
+                            {
+                                name: "tag2",
+                                op: "==",
+                                value: "val2",
+                            },
+                        ],
+                        blobTypes: ["blockBlob"],
+                        prefixMatch: ["olcmtestcontainer2"],
+                    },
+                },
+                enabled: true,
+                name: "olcmtest2",
+                type: "Lifecycle",
+            },
+        ],
+    },
+    resourceGroupName: "res7687",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagementPolicy Resource {#create}

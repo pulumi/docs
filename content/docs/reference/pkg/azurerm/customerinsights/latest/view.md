@@ -12,6 +12,86 @@ meta_desc: "Explore the View resource of the customerinsights/latest module, inc
 
 The view resource format.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Views_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var view = new AzureRM.CustomerInsights.Latest.View("view", new AzureRM.CustomerInsights.Latest.ViewArgs
+        {
+            Definition = "{\\\"isProfileType\\\":false,\\\"profileTypes\\\":[],\\\"widgets\\\":[],\\\"style\\\":[]}",
+            DisplayName = 
+            {
+                { "en", "some name" },
+            },
+            HubName = "sdkTestHub",
+            ResourceGroupName = "TestHubRG",
+            UserId = "testUser",
+            ViewName = "testView",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+view = azurerm.customerinsights.latest.View("view",
+    definition="{\\\"isProfileType\\\":false,\\\"profileTypes\\\":[],\\\"widgets\\\":[],\\\"style\\\":[]}",
+    display_name={
+        "en": "some name",
+    },
+    hub_name="sdkTestHub",
+    resource_group_name="TestHubRG",
+    user_id="testUser",
+    view_name="testView")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const view = new azurerm.customerinsights.latest.View("view", {
+    definition: "{\\\"isProfileType\\\":false,\\\"profileTypes\\\":[],\\\"widgets\\\":[],\\\"style\\\":[]}",
+    displayName: {
+        en: "some name",
+    },
+    hubName: "sdkTestHub",
+    resourceGroupName: "TestHubRG",
+    userId: "testUser",
+    viewName: "testView",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a View Resource {#create}

@@ -12,6 +12,73 @@ meta_desc: "Explore the Secret resource of the servicefabricmesh/v20180901previe
 
 This type describes a secret resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateOrUpdateSecret
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var secret = new AzureRM.ServiceFabricMesh.V20180901Preview.Secret("secret", new AzureRM.ServiceFabricMesh.V20180901Preview.SecretArgs
+        {
+            Location = "EastUS",
+            ResourceGroupName = "sbz_demo",
+            SecretResourceName = "dbConnectionString",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+secret = azurerm.servicefabricmesh.v20180901preview.Secret("secret",
+    location="EastUS",
+    resource_group_name="sbz_demo",
+    secret_resource_name="dbConnectionString",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const secret = new azurerm.servicefabricmesh.v20180901preview.Secret("secret", {
+    location: "EastUS",
+    resourceGroupName: "sbz_demo",
+    secretResourceName: "dbConnectionString",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Secret Resource {#create}

@@ -11,6 +11,73 @@ meta_desc: "Explore the HyperVCollector resource of the migrate/latest module, i
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### HyperVCollectors_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hyperVCollector = new AzureRM.Migrate.Latest.HyperVCollector("hyperVCollector", new AzureRM.Migrate.Latest.HyperVCollectorArgs
+        {
+            ETag = "\"00000981-0000-0300-0000-5d74cd5f0000\"",
+            HyperVCollectorName = "migrateprojectce73collector",
+            ProjectName = "migrateprojectce73project",
+            ResourceGroupName = "contosoithyperv",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+hyper_v_collector = azurerm.migrate.latest.HyperVCollector("hyperVCollector",
+    e_tag="\"00000981-0000-0300-0000-5d74cd5f0000\"",
+    hyper_v_collector_name="migrateprojectce73collector",
+    project_name="migrateprojectce73project",
+    resource_group_name="contosoithyperv")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const hyperVCollector = new azurerm.migrate.latest.HyperVCollector("hyperVCollector", {
+    eTag: "\"00000981-0000-0300-0000-5d74cd5f0000\"",
+    hyperVCollectorName: "migrateprojectce73collector",
+    projectName: "migrateprojectce73project",
+    resourceGroupName: "contosoithyperv",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a HyperVCollector Resource {#create}

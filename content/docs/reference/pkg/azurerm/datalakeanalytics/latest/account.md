@@ -12,6 +12,159 @@ meta_desc: "Explore the Account resource of the datalakeanalytics/latest module,
 
 A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates the specified Data Lake Analytics account. This supplies the user with computation services for Data Lake Analytics workloads.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var account = new AzureRM.DataLakeAnalytics.Latest.Account("account", new AzureRM.DataLakeAnalytics.Latest.AccountArgs
+        {
+            AccountName = "contosoadla",
+            ComputePolicies = 
+            {
+                new AzureRM.DataLakeAnalytics.Latest.Inputs.CreateComputePolicyWithAccountParametersArgs
+                {
+                    Name = "test_policy",
+                },
+            },
+            DataLakeStoreAccounts = 
+            {
+                new AzureRM.DataLakeAnalytics.Latest.Inputs.AddDataLakeStoreWithAccountParametersArgs
+                {
+                    Name = "test_adls",
+                },
+            },
+            DefaultDataLakeStoreAccount = "test_adls",
+            FirewallAllowAzureIps = "Enabled",
+            FirewallRules = 
+            {
+                new AzureRM.DataLakeAnalytics.Latest.Inputs.CreateFirewallRuleWithAccountParametersArgs
+                {
+                    Name = "test_rule",
+                },
+            },
+            FirewallState = "Enabled",
+            Location = "eastus2",
+            MaxDegreeOfParallelism = 30,
+            MaxDegreeOfParallelismPerJob = 1,
+            MaxJobCount = 3,
+            MinPriorityPerJob = 1,
+            NewTier = "Consumption",
+            QueryStoreRetention = 30,
+            ResourceGroupName = "contosorg",
+            StorageAccounts = 
+            {
+                new AzureRM.DataLakeAnalytics.Latest.Inputs.AddStorageAccountWithAccountParametersArgs
+                {
+                    Name = "test_storage",
+                },
+            },
+            Tags = 
+            {
+                { "test_key", "test_value" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+account = azurerm.datalakeanalytics.latest.Account("account",
+    account_name="contosoadla",
+    compute_policies=[{
+        "name": "test_policy",
+    }],
+    data_lake_store_accounts=[{
+        "name": "test_adls",
+    }],
+    default_data_lake_store_account="test_adls",
+    firewall_allow_azure_ips="Enabled",
+    firewall_rules=[{
+        "name": "test_rule",
+    }],
+    firewall_state="Enabled",
+    location="eastus2",
+    max_degree_of_parallelism=30,
+    max_degree_of_parallelism_per_job=1,
+    max_job_count=3,
+    min_priority_per_job=1,
+    new_tier="Consumption",
+    query_store_retention=30,
+    resource_group_name="contosorg",
+    storage_accounts=[{
+        "name": "test_storage",
+    }],
+    tags={
+        "test_key": "test_value",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const account = new azurerm.datalakeanalytics.latest.Account("account", {
+    accountName: "contosoadla",
+    computePolicies: [{
+        name: "test_policy",
+    }],
+    dataLakeStoreAccounts: [{
+        name: "test_adls",
+    }],
+    defaultDataLakeStoreAccount: "test_adls",
+    firewallAllowAzureIps: "Enabled",
+    firewallRules: [{
+        name: "test_rule",
+    }],
+    firewallState: "Enabled",
+    location: "eastus2",
+    maxDegreeOfParallelism: 30,
+    maxDegreeOfParallelismPerJob: 1,
+    maxJobCount: 3,
+    minPriorityPerJob: 1,
+    newTier: "Consumption",
+    queryStoreRetention: 30,
+    resourceGroupName: "contosorg",
+    storageAccounts: [{
+        name: "test_storage",
+    }],
+    tags: {
+        test_key: "test_value",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Account Resource {#create}

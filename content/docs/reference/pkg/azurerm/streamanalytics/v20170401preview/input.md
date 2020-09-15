@@ -12,6 +12,167 @@ meta_desc: "Explore the Input resource of the streamanalytics/v20170401preview m
 
 An input object, containing all information associated with the named input. All inputs are contained under a streaming job.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a reference blob input with CSV serialization
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+input = .("input",
+    input_name="input7225",
+    job_name="sj9597",
+    resource_group_name="sjrg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const input = new .("input", {
+    inputName: "input7225",
+    jobName: "sj9597",
+    resourceGroupName: "sjrg",
+});
+
+```
+
+{{% /example %}}
+
+### Create a stream Event Hub input with JSON serialization
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+input = .("input",
+    input_name="input7425",
+    job_name="sj197",
+    resource_group_name="sjrg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const input = new .("input", {
+    inputName: "input7425",
+    jobName: "sj197",
+    resourceGroupName: "sjrg",
+});
+
+```
+
+{{% /example %}}
+
+### Create a stream IoT Hub input with Avro serialization
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+input = .("input",
+    input_name="input7970",
+    job_name="sj9742",
+    resource_group_name="sjrg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const input = new .("input", {
+    inputName: "input7970",
+    jobName: "sj9742",
+    resourceGroupName: "sjrg",
+});
+
+```
+
+{{% /example %}}
+
+### Create a stream blob input with CSV serialization
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+input = .("input",
+    input_name="input8899",
+    job_name="sj6695",
+    resource_group_name="sjrg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const input = new .("input", {
+    inputName: "input8899",
+    jobName: "sj6695",
+    resourceGroupName: "sjrg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Input Resource {#create}

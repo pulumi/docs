@@ -12,6 +12,86 @@ meta_desc: "Explore the Workspace resource of the machinelearningexperimentation
 
 An object that represents a machine learning team account workspace.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### WorkspaceCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workspace = new AzureRM.MachineLearningExperimentation.V20170501Preview.Workspace("workspace", new AzureRM.MachineLearningExperimentation.V20170501Preview.WorkspaceArgs
+        {
+            AccountName = "testaccount",
+            FriendlyName = "testName",
+            Location = "East US",
+            ResourceGroupName = "myResourceGroup",
+            Tags = 
+            {
+                { "tagKey1", "TagValue1" },
+            },
+            WorkspaceName = "testworkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+workspace = azurerm.machinelearningexperimentation.v20170501preview.Workspace("workspace",
+    account_name="testaccount",
+    friendly_name="testName",
+    location="East US",
+    resource_group_name="myResourceGroup",
+    tags={
+        "tagKey1": "TagValue1",
+    },
+    workspace_name="testworkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const workspace = new azurerm.machinelearningexperimentation.v20170501preview.Workspace("workspace", {
+    accountName: "testaccount",
+    friendlyName: "testName",
+    location: "East US",
+    resourceGroupName: "myResourceGroup",
+    tags: {
+        tagKey1: "TagValue1",
+    },
+    workspaceName: "testworkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Workspace Resource {#create}

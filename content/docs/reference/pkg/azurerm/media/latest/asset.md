@@ -12,6 +12,76 @@ meta_desc: "Explore the Asset resource of the media/latest module, including exa
 
 An Asset.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create an Asset
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var asset = new AzureRM.Media.Latest.Asset("asset", new AzureRM.Media.Latest.AssetArgs
+        {
+            AccountName = "contosomedia",
+            AssetName = "ClimbingMountLogan",
+            Description = "A documentary showing the ascent of Mount Logan",
+            ResourceGroupName = "contoso",
+            StorageAccountName = "storage0",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+asset = azurerm.media.latest.Asset("asset",
+    account_name="contosomedia",
+    asset_name="ClimbingMountLogan",
+    description="A documentary showing the ascent of Mount Logan",
+    resource_group_name="contoso",
+    storage_account_name="storage0")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const asset = new azurerm.media.latest.Asset("asset", {
+    accountName: "contosomedia",
+    assetName: "ClimbingMountLogan",
+    description: "A documentary showing the ascent of Mount Logan",
+    resourceGroupName: "contoso",
+    storageAccountName: "storage0",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Asset Resource {#create}

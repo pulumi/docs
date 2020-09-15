@@ -12,6 +12,76 @@ meta_desc: "Explore the VirtualHubBgpConnection resource of the network/latest m
 
 Virtual Appliance Site resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### VirtualHubRouteTableV2Put
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualHubBgpConnection = new AzureRM.Network.Latest.VirtualHubBgpConnection("virtualHubBgpConnection", new AzureRM.Network.Latest.VirtualHubBgpConnectionArgs
+        {
+            ConnectionName = "conn1",
+            PeerAsn = 20000,
+            PeerIp = "192.168.1.5",
+            ResourceGroupName = "rg1",
+            VirtualHubName = "hub1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_hub_bgp_connection = azurerm.network.latest.VirtualHubBgpConnection("virtualHubBgpConnection",
+    connection_name="conn1",
+    peer_asn=20000,
+    peer_ip="192.168.1.5",
+    resource_group_name="rg1",
+    virtual_hub_name="hub1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualHubBgpConnection = new azurerm.network.latest.VirtualHubBgpConnection("virtualHubBgpConnection", {
+    connectionName: "conn1",
+    peerAsn: 20000,
+    peerIp: "192.168.1.5",
+    resourceGroupName: "rg1",
+    virtualHubName: "hub1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualHubBgpConnection Resource {#create}

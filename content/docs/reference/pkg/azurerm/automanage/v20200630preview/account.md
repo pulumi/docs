@@ -12,6 +12,90 @@ meta_desc: "Explore the Account resource of the automanage/v20200630preview modu
 
 Definition of the Automanage account.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update Automanage account
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var account = new AzureRM.Automanage.V20200630Preview.Account("account", new AzureRM.Automanage.V20200630Preview.AccountArgs
+        {
+            AccountName = "account",
+            Identity = new AzureRM.Automanage.V20200630Preview.Inputs.AccountIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Location = "East US",
+            ResourceGroupName = "resourceGroup",
+            Tags = 
+            {
+                { "Organization", "Administration" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+account = azurerm.automanage.v20200630preview.Account("account",
+    account_name="account",
+    identity={
+        "type": "SystemAssigned",
+    },
+    location="East US",
+    resource_group_name="resourceGroup",
+    tags={
+        "Organization": "Administration",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const account = new azurerm.automanage.v20200630preview.Account("account", {
+    accountName: "account",
+    identity: {
+        type: "SystemAssigned",
+    },
+    location: "East US",
+    resourceGroupName: "resourceGroup",
+    tags: {
+        Organization: "Administration",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Account Resource {#create}

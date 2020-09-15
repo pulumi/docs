@@ -12,6 +12,113 @@ meta_desc: "Explore the AlertsSuppressionRule resource of the security/v20190101
 
 Describes the suppression rule
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Update or create suppression rule for subscription
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var alertsSuppressionRule = new AzureRM.Security.V20190101Preview.AlertsSuppressionRule("alertsSuppressionRule", new AzureRM.Security.V20190101Preview.AlertsSuppressionRuleArgs
+        {
+            AlertType = "IpAnomaly",
+            AlertsSuppressionRuleName = "dismissIpAnomalyAlerts",
+            Comment = "Test VM",
+            ExpirationDateUtc = "2019-12-01T19:50:47.083633Z",
+            Reason = "FalsePositive",
+            State = "Enabled",
+            SuppressionAlertsScope = new AzureRM.Security.V20190101Preview.Inputs.SuppressionAlertsScopeArgs
+            {
+                AllOf = 
+                {
+                    new AzureRM.Security.V20190101Preview.Inputs.ScopeElementArgs
+                    {
+                        Field = "entities.ip.address",
+                    },
+                    new AzureRM.Security.V20190101Preview.Inputs.ScopeElementArgs
+                    {
+                        Field = "entities.process.commandline",
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+alerts_suppression_rule = azurerm.security.v20190101preview.AlertsSuppressionRule("alertsSuppressionRule",
+    alert_type="IpAnomaly",
+    alerts_suppression_rule_name="dismissIpAnomalyAlerts",
+    comment="Test VM",
+    expiration_date_utc="2019-12-01T19:50:47.083633Z",
+    reason="FalsePositive",
+    state="Enabled",
+    suppression_alerts_scope={
+        "allOf": [
+            {
+                "field": "entities.ip.address",
+            },
+            {
+                "field": "entities.process.commandline",
+            },
+        ],
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const alertsSuppressionRule = new azurerm.security.v20190101preview.AlertsSuppressionRule("alertsSuppressionRule", {
+    alertType: "IpAnomaly",
+    alertsSuppressionRuleName: "dismissIpAnomalyAlerts",
+    comment: "Test VM",
+    expirationDateUtc: "2019-12-01T19:50:47.083633Z",
+    reason: "FalsePositive",
+    state: "Enabled",
+    suppressionAlertsScope: {
+        allOf: [
+            {
+                field: "entities.ip.address",
+            },
+            {
+                field: "entities.process.commandline",
+            },
+        ],
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AlertsSuppressionRule Resource {#create}

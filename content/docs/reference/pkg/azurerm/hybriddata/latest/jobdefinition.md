@@ -12,6 +12,125 @@ meta_desc: "Explore the JobDefinition resource of the hybriddata/latest module, 
 
 Job Definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### JobDefinitions_CreateOrUpdatePUT83
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var jobDefinition = new AzureRM.HybridData.Latest.JobDefinition("jobDefinition", new AzureRM.HybridData.Latest.JobDefinitionArgs
+        {
+            DataManagerName = "TestAzureSDKOperations",
+            DataServiceInput = 
+            {
+                { "AzureStorageType", "Blob" },
+                { "BackupChoice", "UseExistingLatest" },
+                { "ContainerName", "containerfromtest" },
+                { "DeviceName", "8600-SHG0997877L71FC" },
+                { "FileNameFilter", "*" },
+                { "IsDirectoryMode", false },
+                { "RootDirectories", 
+                {
+                    "\\",
+                } },
+                { "VolumeNames", 
+                {
+                    "TestAutomation",
+                } },
+            },
+            DataServiceName = "DataTransformation",
+            DataSinkId = "/subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataStores/TestAzureStorage1",
+            DataSourceId = "/subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataStores/TestStorSimpleSource1",
+            JobDefinitionName = "jobdeffromtestcode1",
+            ResourceGroupName = "ResourceGroupForSDKTest",
+            RunLocation = "westus",
+            State = "Enabled",
+            UserConfirmation = "Required",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+job_definition = azurerm.hybriddata.latest.JobDefinition("jobDefinition",
+    data_manager_name="TestAzureSDKOperations",
+    data_service_input={
+        "AzureStorageType": "Blob",
+        "BackupChoice": "UseExistingLatest",
+        "ContainerName": "containerfromtest",
+        "DeviceName": "8600-SHG0997877L71FC",
+        "FileNameFilter": "*",
+        "IsDirectoryMode": False,
+        "RootDirectories": ["\\"],
+        "VolumeNames": ["TestAutomation"],
+    },
+    data_service_name="DataTransformation",
+    data_sink_id="/subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataStores/TestAzureStorage1",
+    data_source_id="/subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataStores/TestStorSimpleSource1",
+    job_definition_name="jobdeffromtestcode1",
+    resource_group_name="ResourceGroupForSDKTest",
+    run_location="westus",
+    state="Enabled",
+    user_confirmation="Required")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const jobDefinition = new azurerm.hybriddata.latest.JobDefinition("jobDefinition", {
+    dataManagerName: "TestAzureSDKOperations",
+    dataServiceInput: {
+        AzureStorageType: "Blob",
+        BackupChoice: "UseExistingLatest",
+        ContainerName: "containerfromtest",
+        DeviceName: "8600-SHG0997877L71FC",
+        FileNameFilter: "*",
+        IsDirectoryMode: false,
+        RootDirectories: ["\\"],
+        VolumeNames: ["TestAutomation"],
+    },
+    dataServiceName: "DataTransformation",
+    dataSinkId: "/subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataStores/TestAzureStorage1",
+    dataSourceId: "/subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataStores/TestStorSimpleSource1",
+    jobDefinitionName: "jobdeffromtestcode1",
+    resourceGroupName: "ResourceGroupForSDKTest",
+    runLocation: "westus",
+    state: "Enabled",
+    userConfirmation: "Required",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a JobDefinition Resource {#create}

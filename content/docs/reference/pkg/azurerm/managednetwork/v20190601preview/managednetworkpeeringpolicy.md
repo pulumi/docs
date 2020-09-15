@@ -12,6 +12,70 @@ meta_desc: "Explore the ManagedNetworkPeeringPolicy resource of the managednetwo
 
 The Managed Network Peering Policy resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ManagedNetworkPeeringPoliciesPut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedNetworkPeeringPolicy = new AzureRM.ManagedNetwork.V20190601Preview.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy", new AzureRM.ManagedNetwork.V20190601Preview.ManagedNetworkPeeringPolicyArgs
+        {
+            ManagedNetworkName = "myManagedNetwork",
+            ManagedNetworkPeeringPolicyName = "myHubAndSpoke",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_network_peering_policy = azurerm.managednetwork.v20190601preview.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy",
+    managed_network_name="myManagedNetwork",
+    managed_network_peering_policy_name="myHubAndSpoke",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedNetworkPeeringPolicy = new azurerm.managednetwork.v20190601preview.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy", {
+    managedNetworkName: "myManagedNetwork",
+    managedNetworkPeeringPolicyName: "myHubAndSpoke",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagedNetworkPeeringPolicy Resource {#create}

@@ -12,6 +12,153 @@ meta_desc: "Explore the DomainService resource of the aad/latest module, includi
 
 Domain service.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Domain Service
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var domainService = new AzureRM.Aad.Latest.DomainService("domainService", new AzureRM.Aad.Latest.DomainServiceArgs
+        {
+            DomainName = "TestDomainService.com",
+            DomainSecuritySettings = new AzureRM.Aad.Latest.Inputs.DomainSecuritySettingsArgs
+            {
+                NtlmV1 = "Enabled",
+                SyncNtlmPasswords = "Enabled",
+                TlsV1 = "Disabled",
+            },
+            DomainServiceName = "TestDomainService.com",
+            FilteredSync = "Enabled",
+            LdapsSettings = new AzureRM.Aad.Latest.Inputs.LdapsSettingsArgs
+            {
+                ExternalAccess = "Enabled",
+                Ldaps = "Enabled",
+                PfxCertificate = "MIIDPDCCAiSgAwIBAgIQQUI9P6tq2p9OFIJa7DLNvTANBgkqhkiG9w0BAQsFADAgMR4w...",
+                PfxCertificatePassword = "Password01",
+            },
+            Location = "West US",
+            NotificationSettings = new AzureRM.Aad.Latest.Inputs.NotificationSettingsArgs
+            {
+                AdditionalRecipients = 
+                {
+                    "jicha@microsoft.com",
+                    "caalmont@microsoft.com",
+                },
+                NotifyDcAdmins = "Enabled",
+                NotifyGlobalAdmins = "Enabled",
+            },
+            ReplicaSets = 
+            {
+                new AzureRM.Aad.Latest.Inputs.ReplicaSetArgs
+                {
+                    Location = "West US",
+                    SubnetId = "/subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/TestNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/TestVnetWUS/subnets/TestSubnetWUS",
+                },
+            },
+            ResourceGroupName = "TestResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+domain_service = azurerm.aad.latest.DomainService("domainService",
+    domain_name="TestDomainService.com",
+    domain_security_settings={
+        "ntlmV1": "Enabled",
+        "syncNtlmPasswords": "Enabled",
+        "tlsV1": "Disabled",
+    },
+    domain_service_name="TestDomainService.com",
+    filtered_sync="Enabled",
+    ldaps_settings={
+        "externalAccess": "Enabled",
+        "ldaps": "Enabled",
+        "pfxCertificate": "MIIDPDCCAiSgAwIBAgIQQUI9P6tq2p9OFIJa7DLNvTANBgkqhkiG9w0BAQsFADAgMR4w...",
+        "pfxCertificatePassword": "Password01",
+    },
+    location="West US",
+    notification_settings={
+        "additionalRecipients": [
+            "jicha@microsoft.com",
+            "caalmont@microsoft.com",
+        ],
+        "notifyDcAdmins": "Enabled",
+        "notifyGlobalAdmins": "Enabled",
+    },
+    replica_sets=[{
+        "location": "West US",
+        "subnetId": "/subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/TestNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/TestVnetWUS/subnets/TestSubnetWUS",
+    }],
+    resource_group_name="TestResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const domainService = new azurerm.aad.latest.DomainService("domainService", {
+    domainName: "TestDomainService.com",
+    domainSecuritySettings: {
+        ntlmV1: "Enabled",
+        syncNtlmPasswords: "Enabled",
+        tlsV1: "Disabled",
+    },
+    domainServiceName: "TestDomainService.com",
+    filteredSync: "Enabled",
+    ldapsSettings: {
+        externalAccess: "Enabled",
+        ldaps: "Enabled",
+        pfxCertificate: "MIIDPDCCAiSgAwIBAgIQQUI9P6tq2p9OFIJa7DLNvTANBgkqhkiG9w0BAQsFADAgMR4w...",
+        pfxCertificatePassword: "Password01",
+    },
+    location: "West US",
+    notificationSettings: {
+        additionalRecipients: [
+            "jicha@microsoft.com",
+            "caalmont@microsoft.com",
+        ],
+        notifyDcAdmins: "Enabled",
+        notifyGlobalAdmins: "Enabled",
+    },
+    replicaSets: [{
+        location: "West US",
+        subnetId: "/subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/TestNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/TestVnetWUS/subnets/TestSubnetWUS",
+    }],
+    resourceGroupName: "TestResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DomainService Resource {#create}

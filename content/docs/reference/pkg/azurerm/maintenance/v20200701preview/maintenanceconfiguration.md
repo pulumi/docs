@@ -12,6 +12,79 @@ meta_desc: "Explore the MaintenanceConfiguration resource of the maintenance/v20
 
 Maintenance configuration record type
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### MaintenanceConfigurations_CreateOrUpdateForResource
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var maintenanceConfiguration = new AzureRM.Maintenance.V20200701Preview.MaintenanceConfiguration("maintenanceConfiguration", new AzureRM.Maintenance.V20200701Preview.MaintenanceConfigurationArgs
+        {
+            Location = "westus2",
+            MaintenanceScope = "OSImage",
+            Namespace = "Microsoft.Maintenance",
+            ResourceGroupName = "examplerg",
+            ResourceName = "configuration1",
+            Visibility = "Custom",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+maintenance_configuration = azurerm.maintenance.v20200701preview.MaintenanceConfiguration("maintenanceConfiguration",
+    location="westus2",
+    maintenance_scope="OSImage",
+    namespace="Microsoft.Maintenance",
+    resource_group_name="examplerg",
+    resource_name="configuration1",
+    visibility="Custom")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const maintenanceConfiguration = new azurerm.maintenance.v20200701preview.MaintenanceConfiguration("maintenanceConfiguration", {
+    location: "westus2",
+    maintenanceScope: "OSImage",
+    namespace: "Microsoft.Maintenance",
+    resourceGroupName: "examplerg",
+    resourceName: "configuration1",
+    visibility: "Custom",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MaintenanceConfiguration Resource {#create}

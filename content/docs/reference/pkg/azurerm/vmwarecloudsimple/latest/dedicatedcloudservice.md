@@ -12,6 +12,73 @@ meta_desc: "Explore the DedicatedCloudService resource of the vmwarecloudsimple/
 
 Dedicated cloud service model
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateDedicatedCloudService
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dedicatedCloudService = new AzureRM.VMwareCloudSimple.Latest.DedicatedCloudService("dedicatedCloudService", new AzureRM.VMwareCloudSimple.Latest.DedicatedCloudServiceArgs
+        {
+            DedicatedCloudServiceName = "myService",
+            GatewaySubnet = "10.0.0.0",
+            Location = "westus",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+dedicated_cloud_service = azurerm.vmwarecloudsimple.latest.DedicatedCloudService("dedicatedCloudService",
+    dedicated_cloud_service_name="myService",
+    gateway_subnet="10.0.0.0",
+    location="westus",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dedicatedCloudService = new azurerm.vmwarecloudsimple.latest.DedicatedCloudService("dedicatedCloudService", {
+    dedicatedCloudServiceName: "myService",
+    gatewaySubnet: "10.0.0.0",
+    location: "westus",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DedicatedCloudService Resource {#create}

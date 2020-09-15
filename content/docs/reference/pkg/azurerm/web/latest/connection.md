@@ -12,6 +12,67 @@ meta_desc: "Explore the Connection resource of the web/latest module, including 
 
 API connection
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Replace a connection
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var connection = new AzureRM.Web.Latest.Connection("connection", new AzureRM.Web.Latest.ConnectionArgs
+        {
+            ConnectionName = "testManagedApi",
+            ResourceGroupName = "testResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+connection = azurerm.web.latest.Connection("connection",
+    connection_name="testManagedApi",
+    resource_group_name="testResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const connection = new azurerm.web.latest.Connection("connection", {
+    connectionName: "testManagedApi",
+    resourceGroupName: "testResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Connection Resource {#create}

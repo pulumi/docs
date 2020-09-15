@@ -12,6 +12,76 @@ meta_desc: "Explore the ManagedInstanceKey resource of the sql/v20171001preview 
 
 A managed instance key.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates a managed instance key
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedInstanceKey = new AzureRM.Sql.V20171001Preview.ManagedInstanceKey("managedInstanceKey", new AzureRM.Sql.V20171001Preview.ManagedInstanceKeyArgs
+        {
+            KeyName = "someVault_someKey_01234567890123456789012345678901",
+            ManagedInstanceName = "sqlcrudtest-4645",
+            ResourceGroupName = "sqlcrudtest-7398",
+            ServerKeyType = "AzureKeyVault",
+            Uri = "https://someVault.vault.azure.net/keys/someKey/01234567890123456789012345678901",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_instance_key = azurerm.sql.v20171001preview.ManagedInstanceKey("managedInstanceKey",
+    key_name="someVault_someKey_01234567890123456789012345678901",
+    managed_instance_name="sqlcrudtest-4645",
+    resource_group_name="sqlcrudtest-7398",
+    server_key_type="AzureKeyVault",
+    uri="https://someVault.vault.azure.net/keys/someKey/01234567890123456789012345678901")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedInstanceKey = new azurerm.sql.v20171001preview.ManagedInstanceKey("managedInstanceKey", {
+    keyName: "someVault_someKey_01234567890123456789012345678901",
+    managedInstanceName: "sqlcrudtest-4645",
+    resourceGroupName: "sqlcrudtest-7398",
+    serverKeyType: "AzureKeyVault",
+    uri: "https://someVault.vault.azure.net/keys/someKey/01234567890123456789012345678901",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagedInstanceKey Resource {#create}

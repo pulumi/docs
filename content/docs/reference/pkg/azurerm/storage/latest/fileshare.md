@@ -12,6 +12,194 @@ meta_desc: "Explore the FileShare resource of the storage/latest module, includi
 
 Properties of the file share, including Id, resource name, resource type, Etag.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create NFS Shares
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fileShare = new AzureRM.Storage.Latest.FileShare("fileShare", new AzureRM.Storage.Latest.FileShareArgs
+        {
+            AccountName = "sto666",
+            EnabledProtocols = "NFS",
+            ResourceGroupName = "res346",
+            ShareName = "share1235",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+file_share = azurerm.storage.latest.FileShare("fileShare",
+    account_name="sto666",
+    enabled_protocols="NFS",
+    resource_group_name="res346",
+    share_name="share1235")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const fileShare = new azurerm.storage.latest.FileShare("fileShare", {
+    accountName: "sto666",
+    enabledProtocols: "NFS",
+    resourceGroupName: "res346",
+    shareName: "share1235",
+});
+
+```
+
+{{% /example %}}
+
+### PutShares
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fileShare = new AzureRM.Storage.Latest.FileShare("fileShare", new AzureRM.Storage.Latest.FileShareArgs
+        {
+            AccountName = "sto328",
+            ResourceGroupName = "res3376",
+            ShareName = "share6185",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+file_share = azurerm.storage.latest.FileShare("fileShare",
+    account_name="sto328",
+    resource_group_name="res3376",
+    share_name="share6185")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const fileShare = new azurerm.storage.latest.FileShare("fileShare", {
+    accountName: "sto328",
+    resourceGroupName: "res3376",
+    shareName: "share6185",
+});
+
+```
+
+{{% /example %}}
+
+### PutShares with Access Tier
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fileShare = new AzureRM.Storage.Latest.FileShare("fileShare", new AzureRM.Storage.Latest.FileShareArgs
+        {
+            AccessTier = "Hot",
+            AccountName = "sto666",
+            ResourceGroupName = "res346",
+            ShareName = "share1235",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+file_share = azurerm.storage.latest.FileShare("fileShare",
+    access_tier="Hot",
+    account_name="sto666",
+    resource_group_name="res346",
+    share_name="share1235")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const fileShare = new azurerm.storage.latest.FileShare("fileShare", {
+    accessTier: "Hot",
+    accountName: "sto666",
+    resourceGroupName: "res346",
+    shareName: "share1235",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FileShare Resource {#create}

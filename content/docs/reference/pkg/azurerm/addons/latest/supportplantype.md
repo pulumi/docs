@@ -12,6 +12,67 @@ meta_desc: "Explore the SupportPlanType resource of the addons/latest module, in
 
 The status of the Canonical support plan.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### SupportPlanTypes_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var supportPlanType = new AzureRM.Addons.Latest.SupportPlanType("supportPlanType", new AzureRM.Addons.Latest.SupportPlanTypeArgs
+        {
+            PlanTypeName = "Standard",
+            ProviderName = "Canonical",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+support_plan_type = azurerm.addons.latest.SupportPlanType("supportPlanType",
+    plan_type_name="Standard",
+    provider_name="Canonical")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const supportPlanType = new azurerm.addons.latest.SupportPlanType("supportPlanType", {
+    planTypeName: "Standard",
+    providerName: "Canonical",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SupportPlanType Resource {#create}

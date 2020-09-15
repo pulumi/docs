@@ -12,6 +12,73 @@ meta_desc: "Explore the ServerCommunicationLink resource of the sql/latest modul
 
 Server communication link.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a server communication link
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serverCommunicationLink = new AzureRM.Sql.Latest.ServerCommunicationLink("serverCommunicationLink", new AzureRM.Sql.Latest.ServerCommunicationLinkArgs
+        {
+            CommunicationLinkName = "link1",
+            PartnerServer = "sqldcrudtest-test",
+            ResourceGroupName = "sqlcrudtest-7398",
+            ServerName = "sqlcrudtest-4645",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server_communication_link = azurerm.sql.latest.ServerCommunicationLink("serverCommunicationLink",
+    communication_link_name="link1",
+    partner_server="sqldcrudtest-test",
+    resource_group_name="sqlcrudtest-7398",
+    server_name="sqlcrudtest-4645")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const serverCommunicationLink = new azurerm.sql.latest.ServerCommunicationLink("serverCommunicationLink", {
+    communicationLinkName: "link1",
+    partnerServer: "sqldcrudtest-test",
+    resourceGroupName: "sqlcrudtest-7398",
+    serverName: "sqlcrudtest-4645",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServerCommunicationLink Resource {#create}

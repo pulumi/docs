@@ -12,6 +12,76 @@ meta_desc: "Explore the Database resource of the dbforpostgresql/v20171201previe
 
 Represents a Database.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### DatabaseCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureRM.DBforPostgreSQL.V20171201Preview.Database("database", new AzureRM.DBforPostgreSQL.V20171201Preview.DatabaseArgs
+        {
+            Charset = "UTF8",
+            Collation = "English_United States.1252",
+            DatabaseName = "db1",
+            ResourceGroupName = "TestGroup",
+            ServerName = "testserver",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database = azurerm.dbforpostgresql.v20171201preview.Database("database",
+    charset="UTF8",
+    collation="English_United States.1252",
+    database_name="db1",
+    resource_group_name="TestGroup",
+    server_name="testserver")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const database = new azurerm.dbforpostgresql.v20171201preview.Database("database", {
+    charset: "UTF8",
+    collation: "English_United States.1252",
+    databaseName: "db1",
+    resourceGroupName: "TestGroup",
+    serverName: "testserver",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Database Resource {#create}

@@ -12,6 +12,158 @@ meta_desc: "Explore the PublicIPPrefix resource of the network/latest module, in
 
 Public IP prefix resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create public IP prefix allocation method
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var publicIPPrefix = new AzureRM.Network.Latest.PublicIPPrefix("publicIPPrefix", new AzureRM.Network.Latest.PublicIPPrefixArgs
+        {
+            Location = "westus",
+            PrefixLength = 30,
+            PublicIPAddressVersion = "IPv4",
+            PublicIpPrefixName = "test-ipprefix",
+            ResourceGroupName = "rg1",
+            Sku = new AzureRM.Network.Latest.Inputs.PublicIPPrefixSkuArgs
+            {
+                Name = "Standard",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+public_ip_prefix = azurerm.network.latest.PublicIPPrefix("publicIPPrefix",
+    location="westus",
+    prefix_length=30,
+    public_ip_address_version="IPv4",
+    public_ip_prefix_name="test-ipprefix",
+    resource_group_name="rg1",
+    sku={
+        "name": "Standard",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const publicIPPrefix = new azurerm.network.latest.PublicIPPrefix("publicIPPrefix", {
+    location: "westus",
+    prefixLength: 30,
+    publicIPAddressVersion: "IPv4",
+    publicIpPrefixName: "test-ipprefix",
+    resourceGroupName: "rg1",
+    sku: {
+        name: "Standard",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create public IP prefix defaults
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var publicIPPrefix = new AzureRM.Network.Latest.PublicIPPrefix("publicIPPrefix", new AzureRM.Network.Latest.PublicIPPrefixArgs
+        {
+            Location = "westus",
+            PrefixLength = 30,
+            PublicIpPrefixName = "test-ipprefix",
+            ResourceGroupName = "rg1",
+            Sku = new AzureRM.Network.Latest.Inputs.PublicIPPrefixSkuArgs
+            {
+                Name = "Standard",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+public_ip_prefix = azurerm.network.latest.PublicIPPrefix("publicIPPrefix",
+    location="westus",
+    prefix_length=30,
+    public_ip_prefix_name="test-ipprefix",
+    resource_group_name="rg1",
+    sku={
+        "name": "Standard",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const publicIPPrefix = new azurerm.network.latest.PublicIPPrefix("publicIPPrefix", {
+    location: "westus",
+    prefixLength: 30,
+    publicIpPrefixName: "test-ipprefix",
+    resourceGroupName: "rg1",
+    sku: {
+        name: "Standard",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PublicIPPrefix Resource {#create}

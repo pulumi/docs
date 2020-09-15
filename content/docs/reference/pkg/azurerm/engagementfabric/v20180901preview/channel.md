@@ -12,6 +12,99 @@ meta_desc: "Explore the Channel resource of the engagementfabric/v20180901previe
 
 The EngagementFabric channel
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ChannelsCreateOrUpdateExample
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var channel = new AzureRM.EngagementFabric.V20180901Preview.Channel("channel", new AzureRM.EngagementFabric.V20180901Preview.ChannelArgs
+        {
+            AccountName = "ExampleAccount",
+            ChannelFunctions = 
+            {
+                "MockFunction1",
+                "MockFunction2",
+            },
+            ChannelName = "ExampleChannel",
+            ChannelType = "MockChannel",
+            Credentials = 
+            {
+                { "AppId", "exampleApp" },
+                { "AppKey", "exampleAppKey" },
+            },
+            ResourceGroupName = "ExampleRg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+channel = azurerm.engagementfabric.v20180901preview.Channel("channel",
+    account_name="ExampleAccount",
+    channel_functions=[
+        "MockFunction1",
+        "MockFunction2",
+    ],
+    channel_name="ExampleChannel",
+    channel_type="MockChannel",
+    credentials={
+        "AppId": "exampleApp",
+        "AppKey": "exampleAppKey",
+    },
+    resource_group_name="ExampleRg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const channel = new azurerm.engagementfabric.v20180901preview.Channel("channel", {
+    accountName: "ExampleAccount",
+    channelFunctions: [
+        "MockFunction1",
+        "MockFunction2",
+    ],
+    channelName: "ExampleChannel",
+    channelType: "MockChannel",
+    credentials: {
+        AppId: "exampleApp",
+        AppKey: "exampleAppKey",
+    },
+    resourceGroupName: "ExampleRg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Channel Resource {#create}

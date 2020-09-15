@@ -12,6 +12,85 @@ meta_desc: "Explore the Watcher resource of the automation/latest module, includ
 
 Definition of the watcher type.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update watcher
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var watcher = new AzureRM.Automation.Latest.Watcher("watcher", new AzureRM.Automation.Latest.WatcherArgs
+        {
+            AutomationAccountName = "MyTestAutomationAccount",
+            Description = "This is a test watcher.",
+            ExecutionFrequencyInSeconds = 60,
+            ResourceGroupName = "rg",
+            ScriptName = "MyTestWatcherRunbook",
+            ScriptRunOn = "MyTestHybridWorkerGroup",
+            Tags = ,
+            WatcherName = "MyTestWatcher",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+watcher = azurerm.automation.latest.Watcher("watcher",
+    automation_account_name="MyTestAutomationAccount",
+    description="This is a test watcher.",
+    execution_frequency_in_seconds=60,
+    resource_group_name="rg",
+    script_name="MyTestWatcherRunbook",
+    script_run_on="MyTestHybridWorkerGroup",
+    tags={},
+    watcher_name="MyTestWatcher")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const watcher = new azurerm.automation.latest.Watcher("watcher", {
+    automationAccountName: "MyTestAutomationAccount",
+    description: "This is a test watcher.",
+    executionFrequencyInSeconds: 60,
+    resourceGroupName: "rg",
+    scriptName: "MyTestWatcherRunbook",
+    scriptRunOn: "MyTestHybridWorkerGroup",
+    tags: {},
+    watcherName: "MyTestWatcher",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Watcher Resource {#create}

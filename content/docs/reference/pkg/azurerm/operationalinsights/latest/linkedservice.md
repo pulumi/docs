@@ -12,6 +12,73 @@ meta_desc: "Explore the LinkedService resource of the operationalinsights/latest
 
 The top level Linked service resource container.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### LinkedServicesCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var linkedService = new AzureRM.OperationalInsights.Latest.LinkedService("linkedService", new AzureRM.OperationalInsights.Latest.LinkedServiceArgs
+        {
+            LinkedServiceName = "Cluster",
+            ResourceGroupName = "mms-eus",
+            WorkspaceName = "TestLinkWS",
+            WriteAccessResourceId = "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/clusters/testcluster",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+linked_service = azurerm.operationalinsights.latest.LinkedService("linkedService",
+    linked_service_name="Cluster",
+    resource_group_name="mms-eus",
+    workspace_name="TestLinkWS",
+    write_access_resource_id="/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/clusters/testcluster")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const linkedService = new azurerm.operationalinsights.latest.LinkedService("linkedService", {
+    linkedServiceName: "Cluster",
+    resourceGroupName: "mms-eus",
+    workspaceName: "TestLinkWS",
+    writeAccessResourceId: "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/clusters/testcluster",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LinkedService Resource {#create}

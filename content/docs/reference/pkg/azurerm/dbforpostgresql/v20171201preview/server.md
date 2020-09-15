@@ -12,6 +12,353 @@ meta_desc: "Explore the Server resource of the dbforpostgresql/v20171201preview 
 
 Represents a server.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a database as a point in time restore
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new AzureRM.DBforPostgreSQL.V20171201Preview.Server("server", new AzureRM.DBforPostgreSQL.V20171201Preview.ServerArgs
+        {
+            Location = "brazilsouth",
+            ResourceGroupName = "TargetResourceGroup",
+            ServerName = "targetserver",
+            Sku = new AzureRM.DBforPostgreSQL.V20171201Preview.Inputs.SkuArgs
+            {
+                Capacity = 2,
+                Family = "Gen4",
+                Name = "B_Gen4_2",
+                Tier = "Basic",
+            },
+            Tags = 
+            {
+                { "ElasticServer", "1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server = azurerm.dbforpostgresql.v20171201preview.Server("server",
+    location="brazilsouth",
+    resource_group_name="TargetResourceGroup",
+    server_name="targetserver",
+    sku={
+        "capacity": 2,
+        "family": "Gen4",
+        "name": "B_Gen4_2",
+        "tier": "Basic",
+    },
+    tags={
+        "ElasticServer": "1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const server = new azurerm.dbforpostgresql.v20171201preview.Server("server", {
+    location: "brazilsouth",
+    resourceGroupName: "TargetResourceGroup",
+    serverName: "targetserver",
+    sku: {
+        capacity: 2,
+        family: "Gen4",
+        name: "B_Gen4_2",
+        tier: "Basic",
+    },
+    tags: {
+        ElasticServer: "1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create a new server
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new AzureRM.DBforPostgreSQL.V20171201Preview.Server("server", new AzureRM.DBforPostgreSQL.V20171201Preview.ServerArgs
+        {
+            Location = "westus",
+            ResourceGroupName = "TestGroup",
+            ServerName = "pgtestsvc4",
+            Sku = new AzureRM.DBforPostgreSQL.V20171201Preview.Inputs.SkuArgs
+            {
+                Capacity = 2,
+                Family = "Gen5",
+                Name = "B_Gen5_2",
+                Tier = "Basic",
+            },
+            Tags = 
+            {
+                { "ElasticServer", "1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server = azurerm.dbforpostgresql.v20171201preview.Server("server",
+    location="westus",
+    resource_group_name="TestGroup",
+    server_name="pgtestsvc4",
+    sku={
+        "capacity": 2,
+        "family": "Gen5",
+        "name": "B_Gen5_2",
+        "tier": "Basic",
+    },
+    tags={
+        "ElasticServer": "1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const server = new azurerm.dbforpostgresql.v20171201preview.Server("server", {
+    location: "westus",
+    resourceGroupName: "TestGroup",
+    serverName: "pgtestsvc4",
+    sku: {
+        capacity: 2,
+        family: "Gen5",
+        name: "B_Gen5_2",
+        tier: "Basic",
+    },
+    tags: {
+        ElasticServer: "1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create a replica server
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new AzureRM.DBforPostgreSQL.V20171201Preview.Server("server", new AzureRM.DBforPostgreSQL.V20171201Preview.ServerArgs
+        {
+            Location = "westcentralus",
+            ResourceGroupName = "TestGroup_WestCentralUS",
+            ServerName = "testserver-replica1",
+            Sku = new AzureRM.DBforPostgreSQL.V20171201Preview.Inputs.SkuArgs
+            {
+                Capacity = 2,
+                Family = "Gen5",
+                Name = "GP_Gen5_2",
+                Tier = "GeneralPurpose",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server = azurerm.dbforpostgresql.v20171201preview.Server("server",
+    location="westcentralus",
+    resource_group_name="TestGroup_WestCentralUS",
+    server_name="testserver-replica1",
+    sku={
+        "capacity": 2,
+        "family": "Gen5",
+        "name": "GP_Gen5_2",
+        "tier": "GeneralPurpose",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const server = new azurerm.dbforpostgresql.v20171201preview.Server("server", {
+    location: "westcentralus",
+    resourceGroupName: "TestGroup_WestCentralUS",
+    serverName: "testserver-replica1",
+    sku: {
+        capacity: 2,
+        family: "Gen5",
+        name: "GP_Gen5_2",
+        tier: "GeneralPurpose",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create a server as a geo restore
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new AzureRM.DBforPostgreSQL.V20171201Preview.Server("server", new AzureRM.DBforPostgreSQL.V20171201Preview.ServerArgs
+        {
+            Location = "Japan West",
+            ResourceGroupName = "TargetResourceGroup",
+            ServerName = "targetserver",
+            Sku = new AzureRM.DBforPostgreSQL.V20171201Preview.Inputs.SkuArgs
+            {
+                Capacity = 2,
+                Family = "Gen4",
+                Name = "GP_Gen4_2",
+                Tier = "GeneralPurpose",
+            },
+            Tags = 
+            {
+                { "ElasticServer", "1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server = azurerm.dbforpostgresql.v20171201preview.Server("server",
+    location="Japan West",
+    resource_group_name="TargetResourceGroup",
+    server_name="targetserver",
+    sku={
+        "capacity": 2,
+        "family": "Gen4",
+        "name": "GP_Gen4_2",
+        "tier": "GeneralPurpose",
+    },
+    tags={
+        "ElasticServer": "1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const server = new azurerm.dbforpostgresql.v20171201preview.Server("server", {
+    location: "Japan West",
+    resourceGroupName: "TargetResourceGroup",
+    serverName: "targetserver",
+    sku: {
+        capacity: 2,
+        family: "Gen4",
+        name: "GP_Gen4_2",
+        tier: "GeneralPurpose",
+    },
+    tags: {
+        ElasticServer: "1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Server Resource {#create}

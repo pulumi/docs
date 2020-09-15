@@ -11,6 +11,142 @@ meta_desc: "Explore the Queue resource of the storage/latest module, including e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### QueueOperationPut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var queue = new AzureRM.Storage.Latest.Queue("queue", new AzureRM.Storage.Latest.QueueArgs
+        {
+            AccountName = "sto328",
+            QueueName = "queue6185",
+            ResourceGroupName = "res3376",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+queue = azurerm.storage.latest.Queue("queue",
+    account_name="sto328",
+    queue_name="queue6185",
+    resource_group_name="res3376")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const queue = new azurerm.storage.latest.Queue("queue", {
+    accountName: "sto328",
+    queueName: "queue6185",
+    resourceGroupName: "res3376",
+});
+
+```
+
+{{% /example %}}
+
+### QueueOperationPutWithMetadata
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var queue = new AzureRM.Storage.Latest.Queue("queue", new AzureRM.Storage.Latest.QueueArgs
+        {
+            AccountName = "sto328",
+            Metadata = 
+            {
+                { "sample1", "meta1" },
+                { "sample2", "meta2" },
+            },
+            QueueName = "queue6185",
+            ResourceGroupName = "res3376",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+queue = azurerm.storage.latest.Queue("queue",
+    account_name="sto328",
+    metadata={
+        "sample1": "meta1",
+        "sample2": "meta2",
+    },
+    queue_name="queue6185",
+    resource_group_name="res3376")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const queue = new azurerm.storage.latest.Queue("queue", {
+    accountName: "sto328",
+    metadata: {
+        sample1: "meta1",
+        sample2: "meta2",
+    },
+    queueName: "queue6185",
+    resourceGroupName: "res3376",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Queue Resource {#create}

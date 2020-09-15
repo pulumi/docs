@@ -12,6 +12,76 @@ meta_desc: "Explore the VirtualNetworkRule resource of the dbforpostgresql/lates
 
 A virtual network rule.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a virtual network rule
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualNetworkRule = new AzureRM.DBforPostgreSQL.Latest.VirtualNetworkRule("virtualNetworkRule", new AzureRM.DBforPostgreSQL.Latest.VirtualNetworkRuleArgs
+        {
+            IgnoreMissingVnetServiceEndpoint = false,
+            ResourceGroupName = "TestGroup",
+            ServerName = "vnet-test-svr",
+            VirtualNetworkRuleName = "vnet-firewall-rule",
+            VirtualNetworkSubnetId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_network_rule = azurerm.dbforpostgresql.latest.VirtualNetworkRule("virtualNetworkRule",
+    ignore_missing_vnet_service_endpoint=False,
+    resource_group_name="TestGroup",
+    server_name="vnet-test-svr",
+    virtual_network_rule_name="vnet-firewall-rule",
+    virtual_network_subnet_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualNetworkRule = new azurerm.dbforpostgresql.latest.VirtualNetworkRule("virtualNetworkRule", {
+    ignoreMissingVnetServiceEndpoint: false,
+    resourceGroupName: "TestGroup",
+    serverName: "vnet-test-svr",
+    virtualNetworkRuleName: "vnet-firewall-rule",
+    virtualNetworkSubnetId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualNetworkRule Resource {#create}

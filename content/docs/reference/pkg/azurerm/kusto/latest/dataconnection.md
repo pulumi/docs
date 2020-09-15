@@ -12,6 +12,79 @@ meta_desc: "Explore the DataConnection resource of the kusto/latest module, incl
 
 Class representing an data connection.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### KustoDataConnectionsCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataConnection = new AzureRM.Kusto.Latest.DataConnection("dataConnection", new AzureRM.Kusto.Latest.DataConnectionArgs
+        {
+            ClusterName = "kustoclusterrptest4",
+            DataConnectionName = "DataConnections8",
+            DatabaseName = "KustoDatabase8",
+            Kind = "EventHub",
+            Location = "westus",
+            ResourceGroupName = "kustorptest",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+data_connection = azurerm.kusto.latest.DataConnection("dataConnection",
+    cluster_name="kustoclusterrptest4",
+    data_connection_name="DataConnections8",
+    database_name="KustoDatabase8",
+    kind="EventHub",
+    location="westus",
+    resource_group_name="kustorptest")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataConnection = new azurerm.kusto.latest.DataConnection("dataConnection", {
+    clusterName: "kustoclusterrptest4",
+    dataConnectionName: "DataConnections8",
+    databaseName: "KustoDatabase8",
+    kind: "EventHub",
+    location: "westus",
+    resourceGroupName: "kustorptest",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DataConnection Resource {#create}

@@ -12,6 +12,263 @@ meta_desc: "Explore the Budget resource of the consumption/latest module, includ
 
 A budget resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateOrUpdateBudget
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var budget = new AzureRM.Consumption.Latest.Budget("budget", new AzureRM.Consumption.Latest.BudgetArgs
+        {
+            Amount = 100.65,
+            BudgetName = "TestBudget",
+            Category = "Cost",
+            ETag = "\"1d34d016a593709\"",
+            Filter = new AzureRM.Consumption.Latest.Inputs.BudgetFilterArgs
+            {
+                And = 
+                {
+                    new AzureRM.Consumption.Latest.Inputs.BudgetFilterPropertiesArgs
+                    {
+                        Dimensions = new AzureRM.Consumption.Latest.Inputs.BudgetComparisonExpressionArgs
+                        {
+                            Name = "ResourceId",
+                            Operator = "In",
+                            Values = 
+                            {
+                                "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Compute/virtualMachines/MSVM2",
+                                "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Compute/virtualMachines/platformcloudplatformGeneric1",
+                            },
+                        },
+                    },
+                    new AzureRM.Consumption.Latest.Inputs.BudgetFilterPropertiesArgs
+                    {
+                        Tags = new AzureRM.Consumption.Latest.Inputs.BudgetComparisonExpressionArgs
+                        {
+                            Name = "category",
+                            Operator = "In",
+                            Values = 
+                            {
+                                "Dev",
+                                "Prod",
+                            },
+                        },
+                    },
+                    new AzureRM.Consumption.Latest.Inputs.BudgetFilterPropertiesArgs
+                    {
+                        Tags = new AzureRM.Consumption.Latest.Inputs.BudgetComparisonExpressionArgs
+                        {
+                            Name = "department",
+                            Operator = "In",
+                            Values = 
+                            {
+                                "engineering",
+                                "sales",
+                            },
+                        },
+                    },
+                },
+            },
+            Notifications = 
+            {
+                { "Actual_GreaterThan_80_Percent", new AzureRM.Consumption.Latest.Inputs.NotificationArgs
+                {
+                    ContactEmails = 
+                    {
+                        "johndoe@contoso.com",
+                        "janesmith@contoso.com",
+                    },
+                    ContactGroups = 
+                    {
+                        "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/microsoft.insights/actionGroups/SampleActionGroup",
+                    },
+                    ContactRoles = 
+                    {
+                        "Contributor",
+                        "Reader",
+                    },
+                    Enabled = true,
+                    Operator = "GreaterThan",
+                    Threshold = 80,
+                    ThresholdType = "Actual",
+                } },
+            },
+            Scope = "subscriptions/00000000-0000-0000-0000-000000000000",
+            TimeGrain = "Monthly",
+            TimePeriod = new AzureRM.Consumption.Latest.Inputs.BudgetTimePeriodArgs
+            {
+                EndDate = "2018-10-31T00:00:00Z",
+                StartDate = "2017-10-01T00:00:00Z",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+budget = azurerm.consumption.latest.Budget("budget",
+    amount=100.65,
+    budget_name="TestBudget",
+    category="Cost",
+    e_tag="\"1d34d016a593709\"",
+    filter={
+        "and": [
+            {
+                "dimensions": {
+                    "name": "ResourceId",
+                    "operator": "In",
+                    "values": [
+                        "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Compute/virtualMachines/MSVM2",
+                        "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Compute/virtualMachines/platformcloudplatformGeneric1",
+                    ],
+                },
+            },
+            {
+                "tags": {
+                    "name": "category",
+                    "operator": "In",
+                    "values": [
+                        "Dev",
+                        "Prod",
+                    ],
+                },
+            },
+            {
+                "tags": {
+                    "name": "department",
+                    "operator": "In",
+                    "values": [
+                        "engineering",
+                        "sales",
+                    ],
+                },
+            },
+        ],
+    },
+    notifications={
+        "Actual_GreaterThan_80_Percent": {
+            "contactEmails": [
+                "johndoe@contoso.com",
+                "janesmith@contoso.com",
+            ],
+            "contactGroups": ["/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/microsoft.insights/actionGroups/SampleActionGroup"],
+            "contactRoles": [
+                "Contributor",
+                "Reader",
+            ],
+            "enabled": True,
+            "operator": "GreaterThan",
+            "threshold": 80,
+            "thresholdType": "Actual",
+        },
+    },
+    scope="subscriptions/00000000-0000-0000-0000-000000000000",
+    time_grain="Monthly",
+    time_period={
+        "endDate": "2018-10-31T00:00:00Z",
+        "startDate": "2017-10-01T00:00:00Z",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const budget = new azurerm.consumption.latest.Budget("budget", {
+    amount: 100.65,
+    budgetName: "TestBudget",
+    category: "Cost",
+    eTag: "\"1d34d016a593709\"",
+    filter: {
+        and: [
+            {
+                dimensions: {
+                    name: "ResourceId",
+                    operator: "In",
+                    values: [
+                        "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Compute/virtualMachines/MSVM2",
+                        "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Compute/virtualMachines/platformcloudplatformGeneric1",
+                    ],
+                },
+            },
+            {
+                tags: {
+                    name: "category",
+                    operator: "In",
+                    values: [
+                        "Dev",
+                        "Prod",
+                    ],
+                },
+            },
+            {
+                tags: {
+                    name: "department",
+                    operator: "In",
+                    values: [
+                        "engineering",
+                        "sales",
+                    ],
+                },
+            },
+        ],
+    },
+    notifications: {
+        Actual_GreaterThan_80_Percent: {
+            contactEmails: [
+                "johndoe@contoso.com",
+                "janesmith@contoso.com",
+            ],
+            contactGroups: ["/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/microsoft.insights/actionGroups/SampleActionGroup"],
+            contactRoles: [
+                "Contributor",
+                "Reader",
+            ],
+            enabled: true,
+            operator: "GreaterThan",
+            threshold: 80,
+            thresholdType: "Actual",
+        },
+    },
+    scope: "subscriptions/00000000-0000-0000-0000-000000000000",
+    timeGrain: "Monthly",
+    timePeriod: {
+        endDate: "2018-10-31T00:00:00Z",
+        startDate: "2017-10-01T00:00:00Z",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Budget Resource {#create}

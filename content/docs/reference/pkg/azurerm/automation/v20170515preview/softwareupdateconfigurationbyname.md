@@ -12,6 +12,306 @@ meta_desc: "Explore the SoftwareUpdateConfigurationByName resource of the automa
 
 Software update configuration properties.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create software update configuration
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var softwareUpdateConfigurationByName = new AzureRM.Automation.V20170515Preview.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", new AzureRM.Automation.V20170515Preview.SoftwareUpdateConfigurationByNameArgs
+        {
+            AutomationAccountName = "myaccount",
+            ResourceGroupName = "mygroup",
+            ScheduleInfo = new AzureRM.Automation.V20170515Preview.Inputs.SchedulePropertiesArgs
+            {
+                AdvancedSchedule = new AzureRM.Automation.V20170515Preview.Inputs.AdvancedScheduleArgs
+                {
+                    WeekDays = 
+                    {
+                        "Monday",
+                        "Thursday",
+                    },
+                },
+                ExpiryTime = "2018-11-09T11:22:57+00:00",
+                Frequency = "Hour",
+                Interval = 1,
+                StartTime = "2017-10-19T12:22:57+00:00",
+                TimeZone = "America/Los_Angeles",
+            },
+            SoftwareUpdateConfigurationName = "testpatch",
+            Tasks = new AzureRM.Automation.V20170515Preview.Inputs.SoftwareUpdateConfigurationTasksArgs
+            {
+                PostTask = new AzureRM.Automation.V20170515Preview.Inputs.TaskPropertiesArgs
+                {
+                    Source = "GetCache",
+                },
+                PreTask = new AzureRM.Automation.V20170515Preview.Inputs.TaskPropertiesArgs
+                {
+                    Parameters = 
+                    {
+                        { "COMPUTERNAME", "Computer1" },
+                    },
+                    Source = "HelloWorld",
+                },
+            },
+            UpdateConfiguration = new AzureRM.Automation.V20170515Preview.Inputs.UpdateConfigurationArgs
+            {
+                AzureVirtualMachines = 
+                {
+                    "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-01",
+                    "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-02",
+                    "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-03",
+                },
+                Duration = "PT2H0M",
+                NonAzureComputerNames = 
+                {
+                    "box1.contoso.com",
+                    "box2.contoso.com",
+                },
+                OperatingSystem = "Windows",
+                Targets = new AzureRM.Automation.V20170515Preview.Inputs.TargetPropertiesArgs
+                {
+                    AzureQueries = 
+                    {
+                        new AzureRM.Automation.V20170515Preview.Inputs.AzureQueryPropertiesArgs
+                        {
+                            Locations = 
+                            {
+                                "Japan East",
+                                "UK South",
+                            },
+                            Scope = 
+                            {
+                                "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources",
+                                "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067",
+                            },
+                            TagSettings = new AzureRM.Automation.V20170515Preview.Inputs.TagSettingsPropertiesArgs
+                            {
+                                FilterOperator = "All",
+                                Tags = {},
+                            },
+                        },
+                    },
+                    NonAzureQueries = 
+                    {
+                        new AzureRM.Automation.V20170515Preview.Inputs.NonAzureQueryPropertiesArgs
+                        {
+                            FunctionAlias = "SavedSearch1",
+                            WorkspaceId = "WorkspaceId1",
+                        },
+                        new AzureRM.Automation.V20170515Preview.Inputs.NonAzureQueryPropertiesArgs
+                        {
+                            FunctionAlias = "SavedSearch2",
+                            WorkspaceId = "WorkspaceId2",
+                        },
+                    },
+                },
+                Windows = new AzureRM.Automation.V20170515Preview.Inputs.WindowsPropertiesArgs
+                {
+                    ExcludedKbNumbers = 
+                    {
+                        "168934",
+                        "168973",
+                    },
+                    IncludedUpdateClassifications = "Critical",
+                    RebootSetting = "IfRequired",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+software_update_configuration_by_name = azurerm.automation.v20170515preview.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName",
+    automation_account_name="myaccount",
+    resource_group_name="mygroup",
+    schedule_info={
+        "advancedSchedule": {
+            "weekDays": [
+                "Monday",
+                "Thursday",
+            ],
+        },
+        "expiryTime": "2018-11-09T11:22:57+00:00",
+        "frequency": "Hour",
+        "interval": 1,
+        "startTime": "2017-10-19T12:22:57+00:00",
+        "timeZone": "America/Los_Angeles",
+    },
+    software_update_configuration_name="testpatch",
+    tasks={
+        "postTask": {
+            "source": "GetCache",
+        },
+        "preTask": {
+            "parameters": {
+                "COMPUTERNAME": "Computer1",
+            },
+            "source": "HelloWorld",
+        },
+    },
+    update_configuration={
+        "azureVirtualMachines": [
+            "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-01",
+            "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-02",
+            "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-03",
+        ],
+        "duration": "PT2H0M",
+        "nonAzureComputerNames": [
+            "box1.contoso.com",
+            "box2.contoso.com",
+        ],
+        "operatingSystem": "Windows",
+        "targets": {
+            "azureQueries": [{
+                "locations": [
+                    "Japan East",
+                    "UK South",
+                ],
+                "scope": [
+                    "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources",
+                    "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067",
+                ],
+                "tagSettings": {
+                    "filterOperator": "All",
+                    "tags": [],
+                },
+            }],
+            "nonAzureQueries": [
+                {
+                    "functionAlias": "SavedSearch1",
+                    "workspaceId": "WorkspaceId1",
+                },
+                {
+                    "functionAlias": "SavedSearch2",
+                    "workspaceId": "WorkspaceId2",
+                },
+            ],
+        },
+        "windows": {
+            "excludedKbNumbers": [
+                "168934",
+                "168973",
+            ],
+            "includedUpdateClassifications": "Critical",
+            "rebootSetting": "IfRequired",
+        },
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const softwareUpdateConfigurationByName = new azurerm.automation.v20170515preview.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", {
+    automationAccountName: "myaccount",
+    resourceGroupName: "mygroup",
+    scheduleInfo: {
+        advancedSchedule: {
+            weekDays: [
+                "Monday",
+                "Thursday",
+            ],
+        },
+        expiryTime: "2018-11-09T11:22:57+00:00",
+        frequency: "Hour",
+        interval: 1,
+        startTime: "2017-10-19T12:22:57+00:00",
+        timeZone: "America/Los_Angeles",
+    },
+    softwareUpdateConfigurationName: "testpatch",
+    tasks: {
+        postTask: {
+            source: "GetCache",
+        },
+        preTask: {
+            parameters: {
+                COMPUTERNAME: "Computer1",
+            },
+            source: "HelloWorld",
+        },
+    },
+    updateConfiguration: {
+        azureVirtualMachines: [
+            "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-01",
+            "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-02",
+            "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-03",
+        ],
+        duration: "PT2H0M",
+        nonAzureComputerNames: [
+            "box1.contoso.com",
+            "box2.contoso.com",
+        ],
+        operatingSystem: "Windows",
+        targets: {
+            azureQueries: [{
+                locations: [
+                    "Japan East",
+                    "UK South",
+                ],
+                scope: [
+                    "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources",
+                    "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067",
+                ],
+                tagSettings: {
+                    filterOperator: "All",
+                    tags: [],
+                },
+            }],
+            nonAzureQueries: [
+                {
+                    functionAlias: "SavedSearch1",
+                    workspaceId: "WorkspaceId1",
+                },
+                {
+                    functionAlias: "SavedSearch2",
+                    workspaceId: "WorkspaceId2",
+                },
+            ],
+        },
+        windows: {
+            excludedKbNumbers: [
+                "168934",
+                "168973",
+            ],
+            includedUpdateClassifications: "Critical",
+            rebootSetting: "IfRequired",
+        },
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SoftwareUpdateConfigurationByName Resource {#create}

@@ -12,6 +12,85 @@ meta_desc: "Explore the Certificate resource of the automation/latest module, in
 
 Definition of the certificate.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a certificate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var certificate = new AzureRM.Automation.Latest.Certificate("certificate", new AzureRM.Automation.Latest.CertificateArgs
+        {
+            AutomationAccountName = "myAutomationAccount18",
+            Base64Value = "base 64 value of cert",
+            CertificateName = "testCert",
+            Description = "Sample Cert",
+            IsExportable = false,
+            Name = "testCert",
+            ResourceGroupName = "rg",
+            Thumbprint = "thumbprint of cert",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+certificate = azurerm.automation.latest.Certificate("certificate",
+    automation_account_name="myAutomationAccount18",
+    base64_value="base 64 value of cert",
+    certificate_name="testCert",
+    description="Sample Cert",
+    is_exportable=False,
+    name="testCert",
+    resource_group_name="rg",
+    thumbprint="thumbprint of cert")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const certificate = new azurerm.automation.latest.Certificate("certificate", {
+    automationAccountName: "myAutomationAccount18",
+    base64Value: "base 64 value of cert",
+    certificateName: "testCert",
+    description: "Sample Cert",
+    isExportable: false,
+    name: "testCert",
+    resourceGroupName: "rg",
+    thumbprint: "thumbprint of cert",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Certificate Resource {#create}

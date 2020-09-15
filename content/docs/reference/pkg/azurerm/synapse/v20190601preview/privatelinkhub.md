@@ -12,6 +12,80 @@ meta_desc: "Explore the PrivateLinkHub resource of the synapse/v20190601preview 
 
 A privateLinkHub
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a privateLinkHub
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateLinkHub = new AzureRM.Synapse.V20190601Preview.PrivateLinkHub("privateLinkHub", new AzureRM.Synapse.V20190601Preview.PrivateLinkHubArgs
+        {
+            Location = "East US",
+            PrivateLinkHubName = "privateLinkHub1",
+            ResourceGroupName = "resourceGroup1",
+            Tags = 
+            {
+                { "key", "value" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_link_hub = azurerm.synapse.v20190601preview.PrivateLinkHub("privateLinkHub",
+    location="East US",
+    private_link_hub_name="privateLinkHub1",
+    resource_group_name="resourceGroup1",
+    tags={
+        "key": "value",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateLinkHub = new azurerm.synapse.v20190601preview.PrivateLinkHub("privateLinkHub", {
+    location: "East US",
+    privateLinkHubName: "privateLinkHub1",
+    resourceGroupName: "resourceGroup1",
+    tags: {
+        key: "value",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateLinkHub Resource {#create}

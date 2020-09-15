@@ -12,6 +12,106 @@ meta_desc: "Explore the PartnerTopicEventSubscription resource of the eventgrid/
 
 Event Subscription
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PartnerTopicEventSubscriptions_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var partnerTopicEventSubscription = new AzureRM.EventGrid.V20200401Preview.PartnerTopicEventSubscription("partnerTopicEventSubscription", new AzureRM.EventGrid.V20200401Preview.PartnerTopicEventSubscriptionArgs
+        {
+            Destination = 
+            {
+                { "endpointType", "WebHook" },
+                { "properties", 
+                {
+                    { "endpointUrl", "https://requestb.in/15ksip71" },
+                } },
+            },
+            EventSubscriptionName = "exampleEventSubscriptionName1",
+            Filter = new AzureRM.EventGrid.V20200401Preview.Inputs.EventSubscriptionFilterArgs
+            {
+                IsSubjectCaseSensitive = false,
+                SubjectBeginsWith = "ExamplePrefix",
+                SubjectEndsWith = "ExampleSuffix",
+            },
+            PartnerTopicName = "examplePartnerTopic1",
+            ResourceGroupName = "examplerg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+partner_topic_event_subscription = azurerm.eventgrid.v20200401preview.PartnerTopicEventSubscription("partnerTopicEventSubscription",
+    destination={
+        "endpointType": "WebHook",
+        "properties": {
+            "endpointUrl": "https://requestb.in/15ksip71",
+        },
+    },
+    event_subscription_name="exampleEventSubscriptionName1",
+    filter={
+        "isSubjectCaseSensitive": False,
+        "subjectBeginsWith": "ExamplePrefix",
+        "subjectEndsWith": "ExampleSuffix",
+    },
+    partner_topic_name="examplePartnerTopic1",
+    resource_group_name="examplerg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const partnerTopicEventSubscription = new azurerm.eventgrid.v20200401preview.PartnerTopicEventSubscription("partnerTopicEventSubscription", {
+    destination: {
+        endpointType: "WebHook",
+        properties: {
+            endpointUrl: "https://requestb.in/15ksip71",
+        },
+    },
+    eventSubscriptionName: "exampleEventSubscriptionName1",
+    filter: {
+        isSubjectCaseSensitive: false,
+        subjectBeginsWith: "ExamplePrefix",
+        subjectEndsWith: "ExampleSuffix",
+    },
+    partnerTopicName: "examplePartnerTopic1",
+    resourceGroupName: "examplerg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PartnerTopicEventSubscription Resource {#create}

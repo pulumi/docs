@@ -12,6 +12,73 @@ meta_desc: "Explore the TemplateSpec resource of the resources/v20190601preview 
 
 Template Spec object.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### TemplateSpecsCreateUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var templateSpec = new AzureRM.Resources.V20190601Preview.TemplateSpec("templateSpec", new AzureRM.Resources.V20190601Preview.TemplateSpecArgs
+        {
+            Description = "A very simple Template Spec",
+            Location = "eastus",
+            ResourceGroupName = "templateSpecRG",
+            TemplateSpecName = "simpleTemplateSpec",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+template_spec = azurerm.resources.v20190601preview.TemplateSpec("templateSpec",
+    description="A very simple Template Spec",
+    location="eastus",
+    resource_group_name="templateSpecRG",
+    template_spec_name="simpleTemplateSpec")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const templateSpec = new azurerm.resources.v20190601preview.TemplateSpec("templateSpec", {
+    description: "A very simple Template Spec",
+    location: "eastus",
+    resourceGroupName: "templateSpecRG",
+    templateSpecName: "simpleTemplateSpec",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TemplateSpec Resource {#create}

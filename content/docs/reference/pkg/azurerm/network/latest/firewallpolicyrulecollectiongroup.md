@@ -12,6 +12,267 @@ meta_desc: "Explore the FirewallPolicyRuleCollectionGroup resource of the networ
 
 Rule Collection Group resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create FirewallPolicyRuleCollectionGroup
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var firewallPolicyRuleCollectionGroup = new AzureRM.Network.Latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureRM.Network.Latest.FirewallPolicyRuleCollectionGroupArgs
+        {
+            FirewallPolicyName = "firewallPolicy",
+            Priority = 110,
+            ResourceGroupName = "rg1",
+            RuleCollectionGroupName = "ruleCollectionGroup1",
+            RuleCollections = 
+            {
+                new AzureRM.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionArgs
+                {
+                    Action = new AzureRM.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
+                    {
+                        Type = "Deny",
+                    },
+                    Name = "Example-Filter-Rule-Collection",
+                    RuleCollectionType = "FirewallPolicyFilterRuleCollection",
+                    Rules = 
+                    {
+                        
+                        {
+                            { "destinationAddresses", 
+                            {
+                                "*",
+                            } },
+                            { "destinationPorts", 
+                            {
+                                "*",
+                            } },
+                            { "ipProtocols", 
+                            {
+                                "TCP",
+                            } },
+                            { "name", "network-rule1" },
+                            { "ruleType", "NetworkRule" },
+                            { "sourceAddresses", 
+                            {
+                                "10.1.25.0/24",
+                            } },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+firewall_policy_rule_collection_group = azurerm.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
+    firewall_policy_name="firewallPolicy",
+    priority=110,
+    resource_group_name="rg1",
+    rule_collection_group_name="ruleCollectionGroup1",
+    rule_collections=[{
+        "action": {
+            "type": "Deny",
+        },
+        "name": "Example-Filter-Rule-Collection",
+        "ruleCollectionType": "FirewallPolicyFilterRuleCollection",
+        "rules": [{
+            "destinationAddresses": ["*"],
+            "destinationPorts": ["*"],
+            "ipProtocols": ["TCP"],
+            "name": "network-rule1",
+            "ruleType": "NetworkRule",
+            "sourceAddresses": ["10.1.25.0/24"],
+        }],
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const firewallPolicyRuleCollectionGroup = new azurerm.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
+    firewallPolicyName: "firewallPolicy",
+    priority: 110,
+    resourceGroupName: "rg1",
+    ruleCollectionGroupName: "ruleCollectionGroup1",
+    ruleCollections: [{
+        action: {
+            type: "Deny",
+        },
+        name: "Example-Filter-Rule-Collection",
+        ruleCollectionType: "FirewallPolicyFilterRuleCollection",
+        rules: [{
+            destinationAddresses: ["*"],
+            destinationPorts: ["*"],
+            ipProtocols: ["TCP"],
+            name: "network-rule1",
+            ruleType: "NetworkRule",
+            sourceAddresses: ["10.1.25.0/24"],
+        }],
+    }],
+});
+
+```
+
+{{% /example %}}
+
+### Create FirewallPolicyRuleCollectionGroup With IpGroups
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var firewallPolicyRuleCollectionGroup = new AzureRM.Network.Latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureRM.Network.Latest.FirewallPolicyRuleCollectionGroupArgs
+        {
+            FirewallPolicyName = "firewallPolicy",
+            Priority = 110,
+            ResourceGroupName = "rg1",
+            RuleCollectionGroupName = "ruleCollectionGroup1",
+            RuleCollections = 
+            {
+                new AzureRM.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionArgs
+                {
+                    Action = new AzureRM.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
+                    {
+                        Type = "Deny",
+                    },
+                    Name = "Example-Filter-Rule-Collection",
+                    RuleCollectionType = "FirewallPolicyFilterRuleCollection",
+                    Rules = 
+                    {
+                        
+                        {
+                            { "destinationIpGroups", 
+                            {
+                                "/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2",
+                            } },
+                            { "destinationPorts", 
+                            {
+                                "*",
+                            } },
+                            { "ipProtocols", 
+                            {
+                                "TCP",
+                            } },
+                            { "name", "network-1" },
+                            { "ruleType", "NetworkRule" },
+                            { "sourceIpGroups", 
+                            {
+                                "/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1",
+                            } },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+firewall_policy_rule_collection_group = azurerm.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
+    firewall_policy_name="firewallPolicy",
+    priority=110,
+    resource_group_name="rg1",
+    rule_collection_group_name="ruleCollectionGroup1",
+    rule_collections=[{
+        "action": {
+            "type": "Deny",
+        },
+        "name": "Example-Filter-Rule-Collection",
+        "ruleCollectionType": "FirewallPolicyFilterRuleCollection",
+        "rules": [{
+            "destinationIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
+            "destinationPorts": ["*"],
+            "ipProtocols": ["TCP"],
+            "name": "network-1",
+            "ruleType": "NetworkRule",
+            "sourceIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1"],
+        }],
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const firewallPolicyRuleCollectionGroup = new azurerm.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
+    firewallPolicyName: "firewallPolicy",
+    priority: 110,
+    resourceGroupName: "rg1",
+    ruleCollectionGroupName: "ruleCollectionGroup1",
+    ruleCollections: [{
+        action: {
+            type: "Deny",
+        },
+        name: "Example-Filter-Rule-Collection",
+        ruleCollectionType: "FirewallPolicyFilterRuleCollection",
+        rules: [{
+            destinationIpGroups: ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
+            destinationPorts: ["*"],
+            ipProtocols: ["TCP"],
+            name: "network-1",
+            ruleType: "NetworkRule",
+            sourceIpGroups: ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1"],
+        }],
+    }],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FirewallPolicyRuleCollectionGroup Resource {#create}

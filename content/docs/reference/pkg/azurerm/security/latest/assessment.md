@@ -12,6 +12,87 @@ meta_desc: "Explore the Assessment resource of the security/latest module, inclu
 
 Security assessment on a resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create security recommendation task on a resource
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var assessment = new AzureRM.Security.Latest.Assessment("assessment", new AzureRM.Security.Latest.AssessmentArgs
+        {
+            AssessmentName = "8bb8be0a-6010-4789-812f-e4d661c4ed0e",
+            ResourceDetails = 
+            {
+                { "source", "Azure" },
+            },
+            ResourceId = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss2",
+            Status = new AzureRM.Security.Latest.Inputs.AssessmentStatusArgs
+            {
+                Code = "Healthy",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+assessment = azurerm.security.latest.Assessment("assessment",
+    assessment_name="8bb8be0a-6010-4789-812f-e4d661c4ed0e",
+    resource_details={
+        "source": "Azure",
+    },
+    resource_id="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss2",
+    status={
+        "code": "Healthy",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const assessment = new azurerm.security.latest.Assessment("assessment", {
+    assessmentName: "8bb8be0a-6010-4789-812f-e4d661c4ed0e",
+    resourceDetails: {
+        source: "Azure",
+    },
+    resourceId: "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss2",
+    status: {
+        code: "Healthy",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Assessment Resource {#create}

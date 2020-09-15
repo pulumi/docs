@@ -12,6 +12,96 @@ meta_desc: "Explore the EventChannel resource of the eventgrid/v20200401preview 
 
 Event Channel.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### EventChannels_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var eventChannel = new AzureRM.EventGrid.V20200401Preview.EventChannel("eventChannel", new AzureRM.EventGrid.V20200401Preview.EventChannelArgs
+        {
+            Destination = new AzureRM.EventGrid.V20200401Preview.Inputs.EventChannelDestinationArgs
+            {
+                AzureSubscriptionId = "5b4b650e-28b9-4790-b3ab-ddbd88d727c4",
+                PartnerTopicName = "examplePartnerTopic1",
+                ResourceGroup = "examplerg2",
+            },
+            EventChannelName = "exampleEventChannelName1",
+            PartnerNamespaceName = "examplePartnerNamespaceName1",
+            ResourceGroupName = "examplerg",
+            Source = new AzureRM.EventGrid.V20200401Preview.Inputs.EventChannelSourceArgs
+            {
+                Source = "ContosoCorp.Accounts.User1",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+event_channel = azurerm.eventgrid.v20200401preview.EventChannel("eventChannel",
+    destination={
+        "azureSubscriptionId": "5b4b650e-28b9-4790-b3ab-ddbd88d727c4",
+        "partnerTopicName": "examplePartnerTopic1",
+        "resourceGroup": "examplerg2",
+    },
+    event_channel_name="exampleEventChannelName1",
+    partner_namespace_name="examplePartnerNamespaceName1",
+    resource_group_name="examplerg",
+    source={
+        "source": "ContosoCorp.Accounts.User1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const eventChannel = new azurerm.eventgrid.v20200401preview.EventChannel("eventChannel", {
+    destination: {
+        azureSubscriptionId: "5b4b650e-28b9-4790-b3ab-ddbd88d727c4",
+        partnerTopicName: "examplePartnerTopic1",
+        resourceGroup: "examplerg2",
+    },
+    eventChannelName: "exampleEventChannelName1",
+    partnerNamespaceName: "examplePartnerNamespaceName1",
+    resourceGroupName: "examplerg",
+    source: {
+        source: "ContosoCorp.Accounts.User1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EventChannel Resource {#create}

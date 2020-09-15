@@ -12,6 +12,76 @@ meta_desc: "Explore the ReplicationMigrationItem resource of the recoveryservice
 
 Migration item.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Enables migration.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var replicationMigrationItem = new AzureRM.RecoveryServices.Latest.ReplicationMigrationItem("replicationMigrationItem", new AzureRM.RecoveryServices.Latest.ReplicationMigrationItemArgs
+        {
+            FabricName = "vmwarefabric1",
+            MigrationItemName = "virtualmachine1",
+            ProtectionContainerName = "vmwareContainer1",
+            ResourceGroupName = "resourcegroup1",
+            ResourceName = "migrationvault",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+replication_migration_item = azurerm.recoveryservices.latest.ReplicationMigrationItem("replicationMigrationItem",
+    fabric_name="vmwarefabric1",
+    migration_item_name="virtualmachine1",
+    protection_container_name="vmwareContainer1",
+    resource_group_name="resourcegroup1",
+    resource_name="migrationvault")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const replicationMigrationItem = new azurerm.recoveryservices.latest.ReplicationMigrationItem("replicationMigrationItem", {
+    fabricName: "vmwarefabric1",
+    migrationItemName: "virtualmachine1",
+    protectionContainerName: "vmwareContainer1",
+    resourceGroupName: "resourcegroup1",
+    resourceName: "migrationvault",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ReplicationMigrationItem Resource {#create}

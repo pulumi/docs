@@ -12,6 +12,61 @@ meta_desc: "Explore the SecurityContact resource of the security/v20200101previe
 
 Contact details and configurations for notifications coming from Azure Security Center.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create security contact data
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var securityContact = new AzureRM.Security.V20200101Preview.SecurityContact("securityContact", new AzureRM.Security.V20200101Preview.SecurityContactArgs
+        {
+            SecurityContactName = "default",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+security_contact = azurerm.security.v20200101preview.SecurityContact("securityContact", security_contact_name="default")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const securityContact = new azurerm.security.v20200101preview.SecurityContact("securityContact", {securityContactName: "default"});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SecurityContact Resource {#create}

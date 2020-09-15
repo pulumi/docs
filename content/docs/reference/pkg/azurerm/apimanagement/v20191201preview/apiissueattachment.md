@@ -12,6 +12,85 @@ meta_desc: "Explore the ApiIssueAttachment resource of the apimanagement/v201912
 
 Issue Attachment Contract details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateApiIssueAttachment
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiIssueAttachment = new AzureRM.ApiManagement.V20191201Preview.ApiIssueAttachment("apiIssueAttachment", new AzureRM.ApiManagement.V20191201Preview.ApiIssueAttachmentArgs
+        {
+            ApiId = "57d1f7558aa04f15146d9d8a",
+            AttachmentId = "57d2ef278aa04f0888cba3f3",
+            Content = "IEJhc2U2NA==",
+            ContentFormat = "image/jpeg",
+            IssueId = "57d2ef278aa04f0ad01d6cdc",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Title = "Issue attachment.",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api_issue_attachment = azurerm.apimanagement.v20191201preview.ApiIssueAttachment("apiIssueAttachment",
+    api_id="57d1f7558aa04f15146d9d8a",
+    attachment_id="57d2ef278aa04f0888cba3f3",
+    content="IEJhc2U2NA==",
+    content_format="image/jpeg",
+    issue_id="57d2ef278aa04f0ad01d6cdc",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    title="Issue attachment.")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const apiIssueAttachment = new azurerm.apimanagement.v20191201preview.ApiIssueAttachment("apiIssueAttachment", {
+    apiId: "57d1f7558aa04f15146d9d8a",
+    attachmentId: "57d2ef278aa04f0888cba3f3",
+    content: "IEJhc2U2NA==",
+    contentFormat: "image/jpeg",
+    issueId: "57d2ef278aa04f0ad01d6cdc",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    title: "Issue attachment.",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApiIssueAttachment Resource {#create}

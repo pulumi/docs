@@ -12,6 +12,144 @@ meta_desc: "Explore the Group resource of the apimanagement/v20191201preview mod
 
 Contract details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateGroup
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @group = new AzureRM.ApiManagement.V20191201Preview.Group("group", new AzureRM.ApiManagement.V20191201Preview.GroupArgs
+        {
+            DisplayName = "temp group",
+            GroupId = "tempgroup",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+group = azurerm.apimanagement.v20191201preview.Group("group",
+    display_name="temp group",
+    group_id="tempgroup",
+    resource_group_name="rg1",
+    service_name="apimService1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const group = new azurerm.apimanagement.v20191201preview.Group("group", {
+    displayName: "temp group",
+    groupId: "tempgroup",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+});
+
+```
+
+{{% /example %}}
+
+### ApiManagementCreateGroupExternal
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @group = new AzureRM.ApiManagement.V20191201Preview.Group("group", new AzureRM.ApiManagement.V20191201Preview.GroupArgs
+        {
+            Description = "new group to test",
+            DisplayName = "NewGroup (samiraad.onmicrosoft.com)",
+            ExternalId = "aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d",
+            GroupId = "aadGroup",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Type = "external",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+group = azurerm.apimanagement.v20191201preview.Group("group",
+    description="new group to test",
+    display_name="NewGroup (samiraad.onmicrosoft.com)",
+    external_id="aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d",
+    group_id="aadGroup",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    type="external")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const group = new azurerm.apimanagement.v20191201preview.Group("group", {
+    description: "new group to test",
+    displayName: "NewGroup (samiraad.onmicrosoft.com)",
+    externalId: "aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d",
+    groupId: "aadGroup",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    type: "external",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Group Resource {#create}

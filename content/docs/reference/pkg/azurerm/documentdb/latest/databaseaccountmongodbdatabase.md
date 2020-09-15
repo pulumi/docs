@@ -12,6 +12,83 @@ meta_desc: "Explore the DatabaseAccountMongoDBDatabase resource of the documentd
 
 An Azure Cosmos DB MongoDB database.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CosmosDBMongoDBDatabaseCreateUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var databaseAccountMongoDBDatabase = new AzureRM.DocumentDB.Latest.DatabaseAccountMongoDBDatabase("databaseAccountMongoDBDatabase", new AzureRM.DocumentDB.Latest.DatabaseAccountMongoDBDatabaseArgs
+        {
+            AccountName = "ddb1",
+            DatabaseName = "databaseName",
+            Options = ,
+            Resource = new AzureRM.DocumentDB.Latest.Inputs.MongoDBDatabaseResourceArgs
+            {
+                Id = "updatedDatabaseName",
+            },
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database_account_mongo_db_database = azurerm.documentdb.latest.DatabaseAccountMongoDBDatabase("databaseAccountMongoDBDatabase",
+    account_name="ddb1",
+    database_name="databaseName",
+    options={},
+    resource={
+        "id": "updatedDatabaseName",
+    },
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const databaseAccountMongoDBDatabase = new azurerm.documentdb.latest.DatabaseAccountMongoDBDatabase("databaseAccountMongoDBDatabase", {
+    accountName: "ddb1",
+    databaseName: "databaseName",
+    options: {},
+    resource: {
+        id: "updatedDatabaseName",
+    },
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DatabaseAccountMongoDBDatabase Resource {#create}

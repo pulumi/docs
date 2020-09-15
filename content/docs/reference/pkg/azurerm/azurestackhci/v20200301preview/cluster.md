@@ -12,6 +12,76 @@ meta_desc: "Explore the Cluster resource of the azurestackhci/v20200301preview m
 
 Cluster details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### GetClusters
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cluster = new AzureRM.AzureStackHCI.V20200301Preview.Cluster("cluster", new AzureRM.AzureStackHCI.V20200301Preview.ClusterArgs
+        {
+            AadClientId = "24a6e53d-04e5-44d2-b7cc-1b732a847dfc",
+            AadTenantId = "7e589cc1-a8b6-4dff-91bd-5ec0fa18db94",
+            ClusterName = "myCluster",
+            Location = "East US",
+            ResourceGroupName = "test-rg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cluster = azurerm.azurestackhci.v20200301preview.Cluster("cluster",
+    aad_client_id="24a6e53d-04e5-44d2-b7cc-1b732a847dfc",
+    aad_tenant_id="7e589cc1-a8b6-4dff-91bd-5ec0fa18db94",
+    cluster_name="myCluster",
+    location="East US",
+    resource_group_name="test-rg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cluster = new azurerm.azurestackhci.v20200301preview.Cluster("cluster", {
+    aadClientId: "24a6e53d-04e5-44d2-b7cc-1b732a847dfc",
+    aadTenantId: "7e589cc1-a8b6-4dff-91bd-5ec0fa18db94",
+    clusterName: "myCluster",
+    location: "East US",
+    resourceGroupName: "test-rg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}

@@ -12,6 +12,76 @@ meta_desc: "Explore the BillingRoleAssignmentByBillingAccount resource of the bi
 
 The role assignment
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PutEnrollmentAdministratorRoleAssignment
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var billingRoleAssignmentByBillingAccount = new AzureRM.Billing.V20191001Preview.BillingRoleAssignmentByBillingAccount("billingRoleAssignmentByBillingAccount", new AzureRM.Billing.V20191001Preview.BillingRoleAssignmentByBillingAccountArgs
+        {
+            BillingAccountName = "{billingAccountName}",
+            BillingRoleAssignmentName = "{billingRoleAssignmentName}",
+            PrincipalId = "99a1a759-30dd-42c2-828c-db398826bb67",
+            PrincipalTenantId = "7ca289b9-c32d-4f01-8566-7ff93261d76f",
+            RoleDefinitionId = "/providers/Microsoft.Billing/billingAccounts/7898901/billingRoleDefinitions/9f1983cb-2574-400c-87e9-34cf8e2280db",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+billing_role_assignment_by_billing_account = azurerm.billing.v20191001preview.BillingRoleAssignmentByBillingAccount("billingRoleAssignmentByBillingAccount",
+    billing_account_name="{billingAccountName}",
+    billing_role_assignment_name="{billingRoleAssignmentName}",
+    principal_id="99a1a759-30dd-42c2-828c-db398826bb67",
+    principal_tenant_id="7ca289b9-c32d-4f01-8566-7ff93261d76f",
+    role_definition_id="/providers/Microsoft.Billing/billingAccounts/7898901/billingRoleDefinitions/9f1983cb-2574-400c-87e9-34cf8e2280db")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const billingRoleAssignmentByBillingAccount = new azurerm.billing.v20191001preview.BillingRoleAssignmentByBillingAccount("billingRoleAssignmentByBillingAccount", {
+    billingAccountName: "{billingAccountName}",
+    billingRoleAssignmentName: "{billingRoleAssignmentName}",
+    principalId: "99a1a759-30dd-42c2-828c-db398826bb67",
+    principalTenantId: "7ca289b9-c32d-4f01-8566-7ff93261d76f",
+    roleDefinitionId: "/providers/Microsoft.Billing/billingAccounts/7898901/billingRoleDefinitions/9f1983cb-2574-400c-87e9-34cf8e2280db",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BillingRoleAssignmentByBillingAccount Resource {#create}

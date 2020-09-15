@@ -12,6 +12,70 @@ meta_desc: "Explore the Authorization resource of the avs/latest module, includi
 
 ExpressRoute Circuit Authorization
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Authorizations_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var authorization = new AzureRM.AVS.Latest.Authorization("authorization", new AzureRM.AVS.Latest.AuthorizationArgs
+        {
+            AuthorizationName = "authorization1",
+            PrivateCloudName = "cloud1",
+            ResourceGroupName = "group1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+authorization = azurerm.avs.latest.Authorization("authorization",
+    authorization_name="authorization1",
+    private_cloud_name="cloud1",
+    resource_group_name="group1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const authorization = new azurerm.avs.latest.Authorization("authorization", {
+    authorizationName: "authorization1",
+    privateCloudName: "cloud1",
+    resourceGroupName: "group1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Authorization Resource {#create}

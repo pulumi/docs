@@ -12,6 +12,50 @@ meta_desc: "Explore the IotDpsResourcePrivateEndpointConnection resource of the 
 
 The private endpoint connection of a provisioning service
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PrivateEndpointConnection_CreateOrUpdate
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+iot_dps_resource_private_endpoint_connection = .("iotDpsResourcePrivateEndpointConnection",
+    private_endpoint_connection_name="myPrivateEndpointConnection",
+    resource_group_name="myResourceGroup",
+    resource_name="myFirstProvisioningService")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const iotDpsResourcePrivateEndpointConnection = new .("iotDpsResourcePrivateEndpointConnection", {
+    privateEndpointConnectionName: "myPrivateEndpointConnection",
+    resourceGroupName: "myResourceGroup",
+    resourceName: "myFirstProvisioningService",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IotDpsResourcePrivateEndpointConnection Resource {#create}

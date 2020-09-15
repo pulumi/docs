@@ -12,6 +12,92 @@ meta_desc: "Explore the SqlManagedInstance resource of the azuredata/v20190724pr
 
 A SqlManagedInstance.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Updates a SQL Managed Instance tags.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlManagedInstance = new AzureRM.AzureData.V20190724Preview.SqlManagedInstance("sqlManagedInstance", new AzureRM.AzureData.V20190724Preview.SqlManagedInstanceArgs
+        {
+            Admin = "Admin user",
+            EndTime = "Instance end time",
+            InstanceEndpoint = "The on premise instance endpoint",
+            Location = "northeurope",
+            ResourceGroupName = "testrg",
+            SqlManagedInstanceName = "testsqlManagedInstance",
+            StartTime = "Instance start time",
+            Tags = 
+            {
+                { "mytag", "myval" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sql_managed_instance = azurerm.azuredata.v20190724preview.SqlManagedInstance("sqlManagedInstance",
+    admin="Admin user",
+    end_time="Instance end time",
+    instance_endpoint="The on premise instance endpoint",
+    location="northeurope",
+    resource_group_name="testrg",
+    sql_managed_instance_name="testsqlManagedInstance",
+    start_time="Instance start time",
+    tags={
+        "mytag": "myval",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sqlManagedInstance = new azurerm.azuredata.v20190724preview.SqlManagedInstance("sqlManagedInstance", {
+    admin: "Admin user",
+    endTime: "Instance end time",
+    instanceEndpoint: "The on premise instance endpoint",
+    location: "northeurope",
+    resourceGroupName: "testrg",
+    sqlManagedInstanceName: "testsqlManagedInstance",
+    startTime: "Instance start time",
+    tags: {
+        mytag: "myval",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SqlManagedInstance Resource {#create}

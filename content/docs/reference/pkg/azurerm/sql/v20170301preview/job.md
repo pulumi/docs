@@ -12,6 +12,160 @@ meta_desc: "Explore the Job resource of the sql/v20170301preview module, includi
 
 A job.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a job with all properties specified
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var job = new AzureRM.Sql.V20170301Preview.Job("job", new AzureRM.Sql.V20170301Preview.JobArgs
+        {
+            Description = "my favourite job",
+            JobAgentName = "agent1",
+            JobName = "job1",
+            ResourceGroupName = "group1",
+            Schedule = new AzureRM.Sql.V20170301Preview.Inputs.JobScheduleArgs
+            {
+                Enabled = true,
+                EndTime = "2015-09-24T23:59:59Z",
+                Interval = "PT5M",
+                StartTime = "2015-09-24T18:30:01Z",
+                Type = "Recurring",
+            },
+            ServerName = "server1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+job = azurerm.sql.v20170301preview.Job("job",
+    description="my favourite job",
+    job_agent_name="agent1",
+    job_name="job1",
+    resource_group_name="group1",
+    schedule={
+        "enabled": True,
+        "endTime": "2015-09-24T23:59:59Z",
+        "interval": "PT5M",
+        "startTime": "2015-09-24T18:30:01Z",
+        "type": "Recurring",
+    },
+    server_name="server1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const job = new azurerm.sql.v20170301preview.Job("job", {
+    description: "my favourite job",
+    jobAgentName: "agent1",
+    jobName: "job1",
+    resourceGroupName: "group1",
+    schedule: {
+        enabled: true,
+        endTime: "2015-09-24T23:59:59Z",
+        interval: "PT5M",
+        startTime: "2015-09-24T18:30:01Z",
+        type: "Recurring",
+    },
+    serverName: "server1",
+});
+
+```
+
+{{% /example %}}
+
+### Create a job with default properties
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var job = new AzureRM.Sql.V20170301Preview.Job("job", new AzureRM.Sql.V20170301Preview.JobArgs
+        {
+            JobAgentName = "agent1",
+            JobName = "job1",
+            ResourceGroupName = "group1",
+            ServerName = "server1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+job = azurerm.sql.v20170301preview.Job("job",
+    job_agent_name="agent1",
+    job_name="job1",
+    resource_group_name="group1",
+    server_name="server1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const job = new azurerm.sql.v20170301preview.Job("job", {
+    jobAgentName: "agent1",
+    jobName: "job1",
+    resourceGroupName: "group1",
+    serverName: "server1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Job Resource {#create}

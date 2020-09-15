@@ -12,6 +12,93 @@ meta_desc: "Explore the SignalRPrivateEndpointConnection resource of the signalr
 
 A private endpoint connection to SignalR resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### SignalRPrivateEndpointConnections_Update
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var signalRPrivateEndpointConnection = new AzureRM.SignalRService.Latest.SignalRPrivateEndpointConnection("signalRPrivateEndpointConnection", new AzureRM.SignalRService.Latest.SignalRPrivateEndpointConnectionArgs
+        {
+            PrivateEndpoint = new AzureRM.SignalRService.Latest.Inputs.PrivateEndpointArgs
+            {
+                Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpoint",
+            },
+            PrivateEndpointConnectionName = "mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
+            PrivateLinkServiceConnectionState = new AzureRM.SignalRService.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
+            {
+                ActionsRequired = "None",
+                Status = "Approved",
+            },
+            ResourceGroupName = "myResourceGroup",
+            ResourceName = "mySignalRService",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+signal_r_private_endpoint_connection = azurerm.signalrservice.latest.SignalRPrivateEndpointConnection("signalRPrivateEndpointConnection",
+    private_endpoint={
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpoint",
+    },
+    private_endpoint_connection_name="mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
+    private_link_service_connection_state={
+        "actionsRequired": "None",
+        "status": "Approved",
+    },
+    resource_group_name="myResourceGroup",
+    resource_name="mySignalRService")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const signalRPrivateEndpointConnection = new azurerm.signalrservice.latest.SignalRPrivateEndpointConnection("signalRPrivateEndpointConnection", {
+    privateEndpoint: {
+        id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpoint",
+    },
+    privateEndpointConnectionName: "mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
+    privateLinkServiceConnectionState: {
+        actionsRequired: "None",
+        status: "Approved",
+    },
+    resourceGroupName: "myResourceGroup",
+    resourceName: "mySignalRService",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SignalRPrivateEndpointConnection Resource {#create}

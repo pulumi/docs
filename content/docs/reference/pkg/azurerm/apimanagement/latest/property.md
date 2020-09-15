@@ -12,6 +12,92 @@ meta_desc: "Explore the Property resource of the apimanagement/latest module, in
 
 Property details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateProperty
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var property = new AzureRM.ApiManagement.Latest.Property("property", new AzureRM.ApiManagement.Latest.PropertyArgs
+        {
+            DisplayName = "prop3name",
+            PropId = "testprop2",
+            ResourceGroupName = "rg1",
+            Secret = true,
+            ServiceName = "apimService1",
+            Tags = 
+            {
+                "foo",
+                "bar",
+            },
+            Value = "propValue",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+property = azurerm.apimanagement.latest.Property("property",
+    display_name="prop3name",
+    prop_id="testprop2",
+    resource_group_name="rg1",
+    secret=True,
+    service_name="apimService1",
+    tags=[
+        "foo",
+        "bar",
+    ],
+    value="propValue")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const property = new azurerm.apimanagement.latest.Property("property", {
+    displayName: "prop3name",
+    propId: "testprop2",
+    resourceGroupName: "rg1",
+    secret: true,
+    serviceName: "apimService1",
+    tags: [
+        "foo",
+        "bar",
+    ],
+    value: "propValue",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Property Resource {#create}

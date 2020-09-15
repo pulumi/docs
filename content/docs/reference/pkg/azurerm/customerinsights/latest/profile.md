@@ -12,6 +12,240 @@ meta_desc: "Explore the Profile resource of the customerinsights/latest module, 
 
 The profile resource format.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Profiles_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var profile = new AzureRM.CustomerInsights.Latest.Profile("profile", new AzureRM.CustomerInsights.Latest.ProfileArgs
+        {
+            ApiEntitySetName = "TestProfileType396",
+            Fields = 
+            {
+                new AzureRM.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
+                {
+                    FieldName = "Id",
+                    FieldType = "Edm.String",
+                    IsArray = false,
+                    IsRequired = true,
+                },
+                new AzureRM.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
+                {
+                    FieldName = "ProfileId",
+                    FieldType = "Edm.String",
+                    IsArray = false,
+                    IsRequired = true,
+                },
+                new AzureRM.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
+                {
+                    FieldName = "LastName",
+                    FieldType = "Edm.String",
+                    IsArray = false,
+                    IsRequired = true,
+                },
+                new AzureRM.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
+                {
+                    FieldName = "TestProfileType396",
+                    FieldType = "Edm.String",
+                    IsArray = false,
+                    IsRequired = true,
+                },
+                new AzureRM.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
+                {
+                    FieldName = "SavingAccountBalance",
+                    FieldType = "Edm.Int32",
+                    IsArray = false,
+                    IsRequired = true,
+                },
+            },
+            HubName = "sdkTestHub",
+            LargeImage = "\\\\Images\\\\LargeImage",
+            MediumImage = "\\\\Images\\\\MediumImage",
+            ProfileName = "TestProfileType396",
+            ResourceGroupName = "TestHubRG",
+            SchemaItemTypeLink = "SchemaItemTypeLink",
+            SmallImage = "\\\\Images\\\\smallImage",
+            StrongIds = 
+            {
+                new AzureRM.CustomerInsights.Latest.Inputs.StrongIdArgs
+                {
+                    KeyPropertyNames = 
+                    {
+                        "Id",
+                        "SavingAccountBalance",
+                    },
+                    StrongIdName = "Id",
+                },
+                new AzureRM.CustomerInsights.Latest.Inputs.StrongIdArgs
+                {
+                    KeyPropertyNames = 
+                    {
+                        "ProfileId",
+                        "LastName",
+                    },
+                    StrongIdName = "ProfileId",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+profile = azurerm.customerinsights.latest.Profile("profile",
+    api_entity_set_name="TestProfileType396",
+    fields=[
+        {
+            "fieldName": "Id",
+            "fieldType": "Edm.String",
+            "isArray": False,
+            "isRequired": True,
+        },
+        {
+            "fieldName": "ProfileId",
+            "fieldType": "Edm.String",
+            "isArray": False,
+            "isRequired": True,
+        },
+        {
+            "fieldName": "LastName",
+            "fieldType": "Edm.String",
+            "isArray": False,
+            "isRequired": True,
+        },
+        {
+            "fieldName": "TestProfileType396",
+            "fieldType": "Edm.String",
+            "isArray": False,
+            "isRequired": True,
+        },
+        {
+            "fieldName": "SavingAccountBalance",
+            "fieldType": "Edm.Int32",
+            "isArray": False,
+            "isRequired": True,
+        },
+    ],
+    hub_name="sdkTestHub",
+    large_image="\\\\Images\\\\LargeImage",
+    medium_image="\\\\Images\\\\MediumImage",
+    profile_name="TestProfileType396",
+    resource_group_name="TestHubRG",
+    schema_item_type_link="SchemaItemTypeLink",
+    small_image="\\\\Images\\\\smallImage",
+    strong_ids=[
+        {
+            "keyPropertyNames": [
+                "Id",
+                "SavingAccountBalance",
+            ],
+            "strongIdName": "Id",
+        },
+        {
+            "keyPropertyNames": [
+                "ProfileId",
+                "LastName",
+            ],
+            "strongIdName": "ProfileId",
+        },
+    ])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const profile = new azurerm.customerinsights.latest.Profile("profile", {
+    apiEntitySetName: "TestProfileType396",
+    fields: [
+        {
+            fieldName: "Id",
+            fieldType: "Edm.String",
+            isArray: false,
+            isRequired: true,
+        },
+        {
+            fieldName: "ProfileId",
+            fieldType: "Edm.String",
+            isArray: false,
+            isRequired: true,
+        },
+        {
+            fieldName: "LastName",
+            fieldType: "Edm.String",
+            isArray: false,
+            isRequired: true,
+        },
+        {
+            fieldName: "TestProfileType396",
+            fieldType: "Edm.String",
+            isArray: false,
+            isRequired: true,
+        },
+        {
+            fieldName: "SavingAccountBalance",
+            fieldType: "Edm.Int32",
+            isArray: false,
+            isRequired: true,
+        },
+    ],
+    hubName: "sdkTestHub",
+    largeImage: "\\\\Images\\\\LargeImage",
+    mediumImage: "\\\\Images\\\\MediumImage",
+    profileName: "TestProfileType396",
+    resourceGroupName: "TestHubRG",
+    schemaItemTypeLink: "SchemaItemTypeLink",
+    smallImage: "\\\\Images\\\\smallImage",
+    strongIds: [
+        {
+            keyPropertyNames: [
+                "Id",
+                "SavingAccountBalance",
+            ],
+            strongIdName: "Id",
+        },
+        {
+            keyPropertyNames: [
+                "ProfileId",
+                "LastName",
+            ],
+            strongIdName: "ProfileId",
+        },
+    ],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Profile Resource {#create}

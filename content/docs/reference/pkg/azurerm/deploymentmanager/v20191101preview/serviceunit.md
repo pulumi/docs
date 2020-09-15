@@ -12,6 +12,185 @@ meta_desc: "Explore the ServiceUnit resource of the deploymentmanager/v20191101p
 
 Represents the response of a service unit resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create service unit using SAS URIs
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceUnit = new AzureRM.DeploymentManager.V20191101Preview.ServiceUnit("serviceUnit", new AzureRM.DeploymentManager.V20191101Preview.ServiceUnitArgs
+        {
+            Artifacts = new AzureRM.DeploymentManager.V20191101Preview.Inputs.ServiceUnitArtifactsArgs
+            {
+                ParametersUri = "https://mystorageaccount.blob.core.windows.net/myartifactsource/parameter/myTopologyUnit.parameters.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
+                TemplateUri = "https://mystorageaccount.blob.core.windows.net/myartifactsource/templates/myTopologyUnit.template.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
+            },
+            DeploymentMode = "Incremental",
+            Location = "centralus",
+            ResourceGroupName = "myResourceGroup",
+            ServiceName = "myService",
+            ServiceTopologyName = "myTopology",
+            ServiceUnitName = "myServiceUnit",
+            Tags = ,
+            TargetResourceGroup = "myDeploymentResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+service_unit = azurerm.deploymentmanager.v20191101preview.ServiceUnit("serviceUnit",
+    artifacts={
+        "parametersUri": "https://mystorageaccount.blob.core.windows.net/myartifactsource/parameter/myTopologyUnit.parameters.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
+        "templateUri": "https://mystorageaccount.blob.core.windows.net/myartifactsource/templates/myTopologyUnit.template.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
+    },
+    deployment_mode="Incremental",
+    location="centralus",
+    resource_group_name="myResourceGroup",
+    service_name="myService",
+    service_topology_name="myTopology",
+    service_unit_name="myServiceUnit",
+    tags={},
+    target_resource_group="myDeploymentResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const serviceUnit = new azurerm.deploymentmanager.v20191101preview.ServiceUnit("serviceUnit", {
+    artifacts: {
+        parametersUri: `https://mystorageaccount.blob.core.windows.net/myartifactsource/parameter/myTopologyUnit.parameters.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D`,
+        templateUri: `https://mystorageaccount.blob.core.windows.net/myartifactsource/templates/myTopologyUnit.template.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D`,
+    },
+    deploymentMode: "Incremental",
+    location: "centralus",
+    resourceGroupName: "myResourceGroup",
+    serviceName: "myService",
+    serviceTopologyName: "myTopology",
+    serviceUnitName: "myServiceUnit",
+    tags: {},
+    targetResourceGroup: "myDeploymentResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+### Create service unit using relative paths into the artifact source
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceUnit = new AzureRM.DeploymentManager.V20191101Preview.ServiceUnit("serviceUnit", new AzureRM.DeploymentManager.V20191101Preview.ServiceUnitArgs
+        {
+            Artifacts = new AzureRM.DeploymentManager.V20191101Preview.Inputs.ServiceUnitArtifactsArgs
+            {
+                ParametersArtifactSourceRelativePath = "parameter/myTopologyUnit.parameters.json",
+                TemplateArtifactSourceRelativePath = "templates/myTopologyUnit.template.json",
+            },
+            DeploymentMode = "Incremental",
+            Location = "centralus",
+            ResourceGroupName = "myResourceGroup",
+            ServiceName = "myService",
+            ServiceTopologyName = "myTopology",
+            ServiceUnitName = "myServiceUnit",
+            Tags = ,
+            TargetResourceGroup = "myDeploymentResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+service_unit = azurerm.deploymentmanager.v20191101preview.ServiceUnit("serviceUnit",
+    artifacts={
+        "parametersArtifactSourceRelativePath": "parameter/myTopologyUnit.parameters.json",
+        "templateArtifactSourceRelativePath": "templates/myTopologyUnit.template.json",
+    },
+    deployment_mode="Incremental",
+    location="centralus",
+    resource_group_name="myResourceGroup",
+    service_name="myService",
+    service_topology_name="myTopology",
+    service_unit_name="myServiceUnit",
+    tags={},
+    target_resource_group="myDeploymentResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const serviceUnit = new azurerm.deploymentmanager.v20191101preview.ServiceUnit("serviceUnit", {
+    artifacts: {
+        parametersArtifactSourceRelativePath: "parameter/myTopologyUnit.parameters.json",
+        templateArtifactSourceRelativePath: "templates/myTopologyUnit.template.json",
+    },
+    deploymentMode: "Incremental",
+    location: "centralus",
+    resourceGroupName: "myResourceGroup",
+    serviceName: "myService",
+    serviceTopologyName: "myTopology",
+    serviceUnitName: "myServiceUnit",
+    tags: {},
+    targetResourceGroup: "myDeploymentResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServiceUnit Resource {#create}

@@ -12,6 +12,70 @@ meta_desc: "Explore the Table resource of the storage/latest module, including e
 
 Properties of the table, including Id, resource name, resource type.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### TableOperationPut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var table = new AzureRM.Storage.Latest.Table("table", new AzureRM.Storage.Latest.TableArgs
+        {
+            AccountName = "sto328",
+            ResourceGroupName = "res3376",
+            TableName = "table6185",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+table = azurerm.storage.latest.Table("table",
+    account_name="sto328",
+    resource_group_name="res3376",
+    table_name="table6185")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const table = new azurerm.storage.latest.Table("table", {
+    accountName: "sto328",
+    resourceGroupName: "res3376",
+    tableName: "table6185",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Table Resource {#create}

@@ -12,6 +12,117 @@ meta_desc: "Explore the Order resource of the databoxedge/v20200501preview modul
 
 The order details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### OrderPut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var order = new AzureRM.DataBoxEdge.V20200501Preview.Order("order", new AzureRM.DataBoxEdge.V20200501Preview.OrderArgs
+        {
+            ContactInformation = new AzureRM.DataBoxEdge.V20200501Preview.Inputs.ContactDetailsArgs
+            {
+                CompanyName = "Microsoft",
+                ContactPerson = "John Mcclane",
+                EmailList = 
+                {
+                    "john@microsoft.com",
+                },
+                Phone = "(800) 426-9400",
+            },
+            DeviceName = "testedgedevice",
+            ResourceGroupName = "GroupForEdgeAutomation",
+            ShippingAddress = new AzureRM.DataBoxEdge.V20200501Preview.Inputs.AddressArgs
+            {
+                AddressLine1 = "Microsoft Corporation",
+                AddressLine2 = "One Microsoft Way",
+                AddressLine3 = "Redmond",
+                City = "WA",
+                Country = "USA",
+                PostalCode = "98052",
+                State = "WA",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+order = azurerm.databoxedge.v20200501preview.Order("order",
+    contact_information={
+        "companyName": "Microsoft",
+        "contactPerson": "John Mcclane",
+        "emailList": ["john@microsoft.com"],
+        "phone": "(800) 426-9400",
+    },
+    device_name="testedgedevice",
+    resource_group_name="GroupForEdgeAutomation",
+    shipping_address={
+        "addressLine1": "Microsoft Corporation",
+        "addressLine2": "One Microsoft Way",
+        "addressLine3": "Redmond",
+        "city": "WA",
+        "country": "USA",
+        "postalCode": "98052",
+        "state": "WA",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const order = new azurerm.databoxedge.v20200501preview.Order("order", {
+    contactInformation: {
+        companyName: "Microsoft",
+        contactPerson: "John Mcclane",
+        emailList: ["john@microsoft.com"],
+        phone: "(800) 426-9400",
+    },
+    deviceName: "testedgedevice",
+    resourceGroupName: "GroupForEdgeAutomation",
+    shippingAddress: {
+        addressLine1: "Microsoft Corporation",
+        addressLine2: "One Microsoft Way",
+        addressLine3: "Redmond",
+        city: "WA",
+        country: "USA",
+        postalCode: "98052",
+        state: "WA",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Order Resource {#create}

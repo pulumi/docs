@@ -12,6 +12,73 @@ meta_desc: "Explore the ManagerExtendedInfo resource of the storsimple/latest mo
 
 The extended info of the manager.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ManagersCreateExtendedInfo
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managerExtendedInfo = new AzureRM.StorSimple.Latest.ManagerExtendedInfo("managerExtendedInfo", new AzureRM.StorSimple.Latest.ManagerExtendedInfoArgs
+        {
+            Algorithm = "None",
+            IntegrityKey = "BIl+RHqO8PZ6DRvuXTTK7g==",
+            ManagerName = "ManagerForSDKTest2",
+            ResourceGroupName = "ResourceGroupForSDKTest",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+manager_extended_info = azurerm.storsimple.latest.ManagerExtendedInfo("managerExtendedInfo",
+    algorithm="None",
+    integrity_key="BIl+RHqO8PZ6DRvuXTTK7g==",
+    manager_name="ManagerForSDKTest2",
+    resource_group_name="ResourceGroupForSDKTest")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managerExtendedInfo = new azurerm.storsimple.latest.ManagerExtendedInfo("managerExtendedInfo", {
+    algorithm: "None",
+    integrityKey: "BIl+RHqO8PZ6DRvuXTTK7g==",
+    managerName: "ManagerForSDKTest2",
+    resourceGroupName: "ResourceGroupForSDKTest",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagerExtendedInfo Resource {#create}

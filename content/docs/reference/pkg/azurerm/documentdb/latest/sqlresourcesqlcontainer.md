@@ -12,6 +12,215 @@ meta_desc: "Explore the SqlResourceSqlContainer resource of the documentdb/lates
 
 An Azure Cosmos DB container.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CosmosDBSqlContainerCreateUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlResourceSqlContainer = new AzureRM.DocumentDB.Latest.SqlResourceSqlContainer("sqlResourceSqlContainer", new AzureRM.DocumentDB.Latest.SqlResourceSqlContainerArgs
+        {
+            AccountName = "ddb1",
+            ContainerName = "containerName",
+            DatabaseName = "databaseName",
+            Location = "West US",
+            Options = ,
+            Resource = new AzureRM.DocumentDB.Latest.Inputs.SqlContainerResourceArgs
+            {
+                ConflictResolutionPolicy = new AzureRM.DocumentDB.Latest.Inputs.ConflictResolutionPolicyArgs
+                {
+                    ConflictResolutionPath = "/path",
+                    Mode = "LastWriterWins",
+                },
+                DefaultTtl = 100,
+                Id = "containerName",
+                IndexingPolicy = new AzureRM.DocumentDB.Latest.Inputs.IndexingPolicyArgs
+                {
+                    Automatic = true,
+                    ExcludedPaths = {},
+                    IncludedPaths = 
+                    {
+                        new AzureRM.DocumentDB.Latest.Inputs.IncludedPathArgs
+                        {
+                            Indexes = 
+                            {
+                                new AzureRM.DocumentDB.Latest.Inputs.IndexesArgs
+                                {
+                                    DataType = "String",
+                                    Kind = "Range",
+                                    Precision = -1,
+                                },
+                                new AzureRM.DocumentDB.Latest.Inputs.IndexesArgs
+                                {
+                                    DataType = "Number",
+                                    Kind = "Range",
+                                    Precision = -1,
+                                },
+                            },
+                            Path = "/*",
+                        },
+                    },
+                    IndexingMode = "Consistent",
+                },
+                PartitionKey = new AzureRM.DocumentDB.Latest.Inputs.ContainerPartitionKeyArgs
+                {
+                    Kind = "Hash",
+                    Paths = 
+                    {
+                        "/AccountNumber",
+                    },
+                },
+                UniqueKeyPolicy = new AzureRM.DocumentDB.Latest.Inputs.UniqueKeyPolicyArgs
+                {
+                    UniqueKeys = 
+                    {
+                        new AzureRM.DocumentDB.Latest.Inputs.UniqueKeyArgs
+                        {
+                            Paths = 
+                            {
+                                "/testPath",
+                            },
+                        },
+                    },
+                },
+            },
+            ResourceGroupName = "rg1",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sql_resource_sql_container = azurerm.documentdb.latest.SqlResourceSqlContainer("sqlResourceSqlContainer",
+    account_name="ddb1",
+    container_name="containerName",
+    database_name="databaseName",
+    location="West US",
+    options={},
+    resource={
+        "conflictResolutionPolicy": {
+            "conflictResolutionPath": "/path",
+            "mode": "LastWriterWins",
+        },
+        "defaultTtl": 100,
+        "id": "containerName",
+        "indexingPolicy": {
+            "automatic": True,
+            "excludedPaths": [],
+            "includedPaths": [{
+                "indexes": [
+                    {
+                        "dataType": "String",
+                        "kind": "Range",
+                        "precision": -1,
+                    },
+                    {
+                        "dataType": "Number",
+                        "kind": "Range",
+                        "precision": -1,
+                    },
+                ],
+                "path": "/*",
+            }],
+            "indexingMode": "Consistent",
+        },
+        "partitionKey": {
+            "kind": "Hash",
+            "paths": ["/AccountNumber"],
+        },
+        "uniqueKeyPolicy": {
+            "uniqueKeys": [{
+                "paths": ["/testPath"],
+            }],
+        },
+    },
+    resource_group_name="rg1",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sqlResourceSqlContainer = new azurerm.documentdb.latest.SqlResourceSqlContainer("sqlResourceSqlContainer", {
+    accountName: "ddb1",
+    containerName: "containerName",
+    databaseName: "databaseName",
+    location: "West US",
+    options: {},
+    resource: {
+        conflictResolutionPolicy: {
+            conflictResolutionPath: "/path",
+            mode: "LastWriterWins",
+        },
+        defaultTtl: 100,
+        id: "containerName",
+        indexingPolicy: {
+            automatic: true,
+            excludedPaths: [],
+            includedPaths: [{
+                indexes: [
+                    {
+                        dataType: "String",
+                        kind: "Range",
+                        precision: -1,
+                    },
+                    {
+                        dataType: "Number",
+                        kind: "Range",
+                        precision: -1,
+                    },
+                ],
+                path: "/*",
+            }],
+            indexingMode: "Consistent",
+        },
+        partitionKey: {
+            kind: "Hash",
+            paths: ["/AccountNumber"],
+        },
+        uniqueKeyPolicy: {
+            uniqueKeys: [{
+                paths: ["/testPath"],
+            }],
+        },
+    },
+    resourceGroupName: "rg1",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SqlResourceSqlContainer Resource {#create}

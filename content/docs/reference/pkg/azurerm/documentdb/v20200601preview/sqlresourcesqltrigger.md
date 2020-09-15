@@ -12,6 +12,98 @@ meta_desc: "Explore the SqlResourceSqlTrigger resource of the documentdb/v202006
 
 An Azure Cosmos DB trigger.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CosmosDBSqlTriggerCreateUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlResourceSqlTrigger = new AzureRM.DocumentDB.V20200601Preview.SqlResourceSqlTrigger("sqlResourceSqlTrigger", new AzureRM.DocumentDB.V20200601Preview.SqlResourceSqlTriggerArgs
+        {
+            AccountName = "ddb1",
+            ContainerName = "containerName",
+            DatabaseName = "databaseName",
+            Options = ,
+            Resource = new AzureRM.DocumentDB.V20200601Preview.Inputs.SqlTriggerResourceArgs
+            {
+                Body = "body",
+                Id = "triggerName",
+                TriggerOperation = "triggerOperation",
+                TriggerType = "triggerType",
+            },
+            ResourceGroupName = "rg1",
+            TriggerName = "triggerName",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sql_resource_sql_trigger = azurerm.documentdb.v20200601preview.SqlResourceSqlTrigger("sqlResourceSqlTrigger",
+    account_name="ddb1",
+    container_name="containerName",
+    database_name="databaseName",
+    options={},
+    resource={
+        "body": "body",
+        "id": "triggerName",
+        "triggerOperation": "triggerOperation",
+        "triggerType": "triggerType",
+    },
+    resource_group_name="rg1",
+    trigger_name="triggerName")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sqlResourceSqlTrigger = new azurerm.documentdb.v20200601preview.SqlResourceSqlTrigger("sqlResourceSqlTrigger", {
+    accountName: "ddb1",
+    containerName: "containerName",
+    databaseName: "databaseName",
+    options: {},
+    resource: {
+        body: "body",
+        id: "triggerName",
+        triggerOperation: "triggerOperation",
+        triggerType: "triggerType",
+    },
+    resourceGroupName: "rg1",
+    triggerName: "triggerName",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SqlResourceSqlTrigger Resource {#create}

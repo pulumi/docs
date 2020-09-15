@@ -12,6 +12,93 @@ meta_desc: "Explore the Registry resource of the containerregistry/latest module
 
 An object that represents a container registry.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### RegistryCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var registry = new AzureRM.ContainerRegistry.Latest.Registry("registry", new AzureRM.ContainerRegistry.Latest.RegistryArgs
+        {
+            AdminUserEnabled = true,
+            Location = "westus",
+            RegistryName = "myRegistry",
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.ContainerRegistry.Latest.Inputs.SkuArgs
+            {
+                Name = "Standard",
+            },
+            Tags = 
+            {
+                { "key", "value" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+registry = azurerm.containerregistry.latest.Registry("registry",
+    admin_user_enabled=True,
+    location="westus",
+    registry_name="myRegistry",
+    resource_group_name="myResourceGroup",
+    sku={
+        "name": "Standard",
+    },
+    tags={
+        "key": "value",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const registry = new azurerm.containerregistry.latest.Registry("registry", {
+    adminUserEnabled: true,
+    location: "westus",
+    registryName: "myRegistry",
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        name: "Standard",
+    },
+    tags: {
+        key: "value",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Registry Resource {#create}

@@ -12,6 +12,230 @@ meta_desc: "Explore the JobTargetGroup resource of the sql/v20170301preview modu
 
 A group of job targets.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a target group with all properties.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var jobTargetGroup = new AzureRM.Sql.V20170301Preview.JobTargetGroup("jobTargetGroup", new AzureRM.Sql.V20170301Preview.JobTargetGroupArgs
+        {
+            JobAgentName = "agent1",
+            Members = 
+            {
+                new AzureRM.Sql.V20170301Preview.Inputs.JobTargetArgs
+                {
+                    DatabaseName = "database1",
+                    MembershipType = "Exclude",
+                    ServerName = "server1",
+                    Type = "SqlDatabase",
+                },
+                new AzureRM.Sql.V20170301Preview.Inputs.JobTargetArgs
+                {
+                    MembershipType = "Include",
+                    RefreshCredential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+                    ServerName = "server1",
+                    Type = "SqlServer",
+                },
+                new AzureRM.Sql.V20170301Preview.Inputs.JobTargetArgs
+                {
+                    ElasticPoolName = "pool1",
+                    MembershipType = "Include",
+                    RefreshCredential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+                    ServerName = "server2",
+                    Type = "SqlElasticPool",
+                },
+                new AzureRM.Sql.V20170301Preview.Inputs.JobTargetArgs
+                {
+                    DatabaseName = "database1",
+                    MembershipType = "Include",
+                    RefreshCredential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+                    ServerName = "server3",
+                    ShardMapName = "shardMap1",
+                    Type = "SqlShardMap",
+                },
+            },
+            ResourceGroupName = "group1",
+            ServerName = "server1",
+            TargetGroupName = "targetGroup1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+job_target_group = azurerm.sql.v20170301preview.JobTargetGroup("jobTargetGroup",
+    job_agent_name="agent1",
+    members=[
+        {
+            "databaseName": "database1",
+            "membershipType": "Exclude",
+            "serverName": "server1",
+            "type": "SqlDatabase",
+        },
+        {
+            "membershipType": "Include",
+            "refreshCredential": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+            "serverName": "server1",
+            "type": "SqlServer",
+        },
+        {
+            "elasticPoolName": "pool1",
+            "membershipType": "Include",
+            "refreshCredential": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+            "serverName": "server2",
+            "type": "SqlElasticPool",
+        },
+        {
+            "databaseName": "database1",
+            "membershipType": "Include",
+            "refreshCredential": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+            "serverName": "server3",
+            "shardMapName": "shardMap1",
+            "type": "SqlShardMap",
+        },
+    ],
+    resource_group_name="group1",
+    server_name="server1",
+    target_group_name="targetGroup1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const jobTargetGroup = new azurerm.sql.v20170301preview.JobTargetGroup("jobTargetGroup", {
+    jobAgentName: "agent1",
+    members: [
+        {
+            databaseName: "database1",
+            membershipType: "Exclude",
+            serverName: "server1",
+            type: "SqlDatabase",
+        },
+        {
+            membershipType: "Include",
+            refreshCredential: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+            serverName: "server1",
+            type: "SqlServer",
+        },
+        {
+            elasticPoolName: "pool1",
+            membershipType: "Include",
+            refreshCredential: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+            serverName: "server2",
+            type: "SqlElasticPool",
+        },
+        {
+            databaseName: "database1",
+            membershipType: "Include",
+            refreshCredential: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+            serverName: "server3",
+            shardMapName: "shardMap1",
+            type: "SqlShardMap",
+        },
+    ],
+    resourceGroupName: "group1",
+    serverName: "server1",
+    targetGroupName: "targetGroup1",
+});
+
+```
+
+{{% /example %}}
+
+### Create or update a target group with minimal properties.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var jobTargetGroup = new AzureRM.Sql.V20170301Preview.JobTargetGroup("jobTargetGroup", new AzureRM.Sql.V20170301Preview.JobTargetGroupArgs
+        {
+            JobAgentName = "agent1",
+            Members = {},
+            ResourceGroupName = "group1",
+            ServerName = "server1",
+            TargetGroupName = "targetGroup1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+job_target_group = azurerm.sql.v20170301preview.JobTargetGroup("jobTargetGroup",
+    job_agent_name="agent1",
+    members=[],
+    resource_group_name="group1",
+    server_name="server1",
+    target_group_name="targetGroup1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const jobTargetGroup = new azurerm.sql.v20170301preview.JobTargetGroup("jobTargetGroup", {
+    jobAgentName: "agent1",
+    members: [],
+    resourceGroupName: "group1",
+    serverName: "server1",
+    targetGroupName: "targetGroup1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a JobTargetGroup Resource {#create}

@@ -12,6 +12,92 @@ meta_desc: "Explore the SubscriptionDiagnosticSetting resource of the insights/v
 
 The subscription diagnostic setting resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or Updates the subscription diagnostic setting
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var subscriptionDiagnosticSetting = new AzureRM.Insights.V20170501Preview.SubscriptionDiagnosticSetting("subscriptionDiagnosticSetting", new AzureRM.Insights.V20170501Preview.SubscriptionDiagnosticSettingArgs
+        {
+            EventHubAuthorizationRuleId = "/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
+            EventHubName = "myeventhub",
+            Logs = 
+            {
+                new AzureRM.Insights.V20170501Preview.Inputs.SubscriptionLogSettingsArgs
+                {
+                    Category = "Security",
+                    Enabled = true,
+                },
+            },
+            Name = "ds4",
+            StorageAccountId = "/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1",
+            WorkspaceId = "",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+subscription_diagnostic_setting = azurerm.insights.v20170501preview.SubscriptionDiagnosticSetting("subscriptionDiagnosticSetting",
+    event_hub_authorization_rule_id="/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
+    event_hub_name="myeventhub",
+    logs=[{
+        "category": "Security",
+        "enabled": True,
+    }],
+    name="ds4",
+    storage_account_id="/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1",
+    workspace_id="")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const subscriptionDiagnosticSetting = new azurerm.insights.v20170501preview.SubscriptionDiagnosticSetting("subscriptionDiagnosticSetting", {
+    eventHubAuthorizationRuleId: "/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
+    eventHubName: "myeventhub",
+    logs: [{
+        category: "Security",
+        enabled: true,
+    }],
+    name: "ds4",
+    storageAccountId: "/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1",
+    workspaceId: "",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SubscriptionDiagnosticSetting Resource {#create}

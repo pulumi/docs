@@ -12,6 +12,86 @@ meta_desc: "Explore the IpAllocation resource of the network/latest module, incl
 
 IpAllocation resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create IpAllocation
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ipAllocation = new AzureRM.Network.Latest.IpAllocation("ipAllocation", new AzureRM.Network.Latest.IpAllocationArgs
+        {
+            AllocationTags = 
+            {
+                { "VNetID", "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/HypernetVnet1" },
+            },
+            IpAllocationName = "test-ipallocation",
+            Location = "centraluseuap",
+            Prefix = "3.2.5.0/24",
+            ResourceGroupName = "rg1",
+            Type = "Hypernet",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+ip_allocation = azurerm.network.latest.IpAllocation("ipAllocation",
+    allocation_tags={
+        "VNetID": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/HypernetVnet1",
+    },
+    ip_allocation_name="test-ipallocation",
+    location="centraluseuap",
+    prefix="3.2.5.0/24",
+    resource_group_name="rg1",
+    type="Hypernet")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const ipAllocation = new azurerm.network.latest.IpAllocation("ipAllocation", {
+    allocationTags: {
+        VNetID: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/HypernetVnet1",
+    },
+    ipAllocationName: "test-ipallocation",
+    location: "centraluseuap",
+    prefix: "3.2.5.0/24",
+    resourceGroupName: "rg1",
+    type: "Hypernet",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IpAllocation Resource {#create}

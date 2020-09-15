@@ -12,6 +12,175 @@ meta_desc: "Explore the Service resource of the appplatform/latest module, inclu
 
 Service resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Services_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var service = new AzureRM.AppPlatform.Latest.Service("service", new AzureRM.AppPlatform.Latest.ServiceArgs
+        {
+            Location = "eastus",
+            ResourceGroupName = "myResourceGroup",
+            ServiceName = "myservice",
+            Sku = new AzureRM.AppPlatform.Latest.Inputs.SkuArgs
+            {
+                Name = "S0",
+                Tier = "Standard",
+            },
+            Tags = 
+            {
+                { "key1", "value1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+service = azurerm.appplatform.latest.Service("service",
+    location="eastus",
+    resource_group_name="myResourceGroup",
+    service_name="myservice",
+    sku={
+        "name": "S0",
+        "tier": "Standard",
+    },
+    tags={
+        "key1": "value1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const service = new azurerm.appplatform.latest.Service("service", {
+    location: "eastus",
+    resourceGroupName: "myResourceGroup",
+    serviceName: "myservice",
+    sku: {
+        name: "S0",
+        tier: "Standard",
+    },
+    tags: {
+        key1: "value1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Services_CreateOrUpdate_VNetInjection
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var service = new AzureRM.AppPlatform.Latest.Service("service", new AzureRM.AppPlatform.Latest.ServiceArgs
+        {
+            Location = "eastus",
+            ResourceGroupName = "myResourceGroup",
+            ServiceName = "myservice",
+            Sku = new AzureRM.AppPlatform.Latest.Inputs.SkuArgs
+            {
+                Name = "S0",
+                Tier = "Standard",
+            },
+            Tags = 
+            {
+                { "key1", "value1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+service = azurerm.appplatform.latest.Service("service",
+    location="eastus",
+    resource_group_name="myResourceGroup",
+    service_name="myservice",
+    sku={
+        "name": "S0",
+        "tier": "Standard",
+    },
+    tags={
+        "key1": "value1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const service = new azurerm.appplatform.latest.Service("service", {
+    location: "eastus",
+    resourceGroupName: "myResourceGroup",
+    serviceName: "myservice",
+    sku: {
+        name: "S0",
+        tier: "Standard",
+    },
+    tags: {
+        key1: "value1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Service Resource {#create}

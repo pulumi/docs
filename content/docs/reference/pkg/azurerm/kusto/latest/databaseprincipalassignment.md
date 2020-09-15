@@ -12,6 +12,85 @@ meta_desc: "Explore the DatabasePrincipalAssignment resource of the kusto/latest
 
 Class representing a database principal assignment.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### KustoDatabasePrincipalAssignmentsCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var databasePrincipalAssignment = new AzureRM.Kusto.Latest.DatabasePrincipalAssignment("databasePrincipalAssignment", new AzureRM.Kusto.Latest.DatabasePrincipalAssignmentArgs
+        {
+            ClusterName = "kustoclusterrptest4",
+            DatabaseName = "Kustodatabase8",
+            PrincipalAssignmentName = "kustoprincipal1",
+            PrincipalId = "87654321-1234-1234-1234-123456789123",
+            PrincipalType = "App",
+            ResourceGroupName = "kustorptest",
+            Role = "Admin",
+            TenantId = "12345678-1234-1234-1234-123456789123",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database_principal_assignment = azurerm.kusto.latest.DatabasePrincipalAssignment("databasePrincipalAssignment",
+    cluster_name="kustoclusterrptest4",
+    database_name="Kustodatabase8",
+    principal_assignment_name="kustoprincipal1",
+    principal_id="87654321-1234-1234-1234-123456789123",
+    principal_type="App",
+    resource_group_name="kustorptest",
+    role="Admin",
+    tenant_id="12345678-1234-1234-1234-123456789123")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const databasePrincipalAssignment = new azurerm.kusto.latest.DatabasePrincipalAssignment("databasePrincipalAssignment", {
+    clusterName: "kustoclusterrptest4",
+    databaseName: "Kustodatabase8",
+    principalAssignmentName: "kustoprincipal1",
+    principalId: "87654321-1234-1234-1234-123456789123",
+    principalType: "App",
+    resourceGroupName: "kustorptest",
+    role: "Admin",
+    tenantId: "12345678-1234-1234-1234-123456789123",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DatabasePrincipalAssignment Resource {#create}

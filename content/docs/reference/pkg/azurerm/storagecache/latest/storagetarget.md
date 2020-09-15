@@ -12,6 +12,125 @@ meta_desc: "Explore the StorageTarget resource of the storagecache/latest module
 
 Type of the Storage Target.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### StorageTargets_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var storageTarget = new AzureRM.StorageCache.Latest.StorageTarget("storageTarget", new AzureRM.StorageCache.Latest.StorageTargetArgs
+        {
+            CacheName = "sc1",
+            Junctions = 
+            {
+                new AzureRM.StorageCache.Latest.Inputs.NamespaceJunctionArgs
+                {
+                    NamespacePath = "/path/on/cache",
+                    NfsExport = "exp1",
+                    TargetPath = "/path/on/exp1",
+                },
+                new AzureRM.StorageCache.Latest.Inputs.NamespaceJunctionArgs
+                {
+                    NamespacePath = "/path2/on/cache",
+                    NfsExport = "exp2",
+                    TargetPath = "/path2/on/exp2",
+                },
+            },
+            Nfs3 = new AzureRM.StorageCache.Latest.Inputs.Nfs3TargetArgs
+            {
+                Target = "10.0.44.44",
+                UsageModel = "READ_HEAVY_INFREQ",
+            },
+            ResourceGroupName = "scgroup",
+            StorageTargetName = "st1",
+            TargetType = "nfs3",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+storage_target = azurerm.storagecache.latest.StorageTarget("storageTarget",
+    cache_name="sc1",
+    junctions=[
+        {
+            "namespacePath": "/path/on/cache",
+            "nfsExport": "exp1",
+            "targetPath": "/path/on/exp1",
+        },
+        {
+            "namespacePath": "/path2/on/cache",
+            "nfsExport": "exp2",
+            "targetPath": "/path2/on/exp2",
+        },
+    ],
+    nfs3={
+        "target": "10.0.44.44",
+        "usageModel": "READ_HEAVY_INFREQ",
+    },
+    resource_group_name="scgroup",
+    storage_target_name="st1",
+    target_type="nfs3")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const storageTarget = new azurerm.storagecache.latest.StorageTarget("storageTarget", {
+    cacheName: "sc1",
+    junctions: [
+        {
+            namespacePath: "/path/on/cache",
+            nfsExport: "exp1",
+            targetPath: "/path/on/exp1",
+        },
+        {
+            namespacePath: "/path2/on/cache",
+            nfsExport: "exp2",
+            targetPath: "/path2/on/exp2",
+        },
+    ],
+    nfs3: {
+        target: "10.0.44.44",
+        usageModel: "READ_HEAVY_INFREQ",
+    },
+    resourceGroupName: "scgroup",
+    storageTargetName: "st1",
+    targetType: "nfs3",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a StorageTarget Resource {#create}

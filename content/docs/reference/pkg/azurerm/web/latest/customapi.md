@@ -12,6 +12,67 @@ meta_desc: "Explore the CustomApi resource of the web/latest module, including e
 
 A custom API
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Replace a custom API
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var customApi = new AzureRM.Web.Latest.CustomApi("customApi", new AzureRM.Web.Latest.CustomApiArgs
+        {
+            ApiName = "testCustomApi",
+            ResourceGroupName = "testResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+custom_api = azurerm.web.latest.CustomApi("customApi",
+    api_name="testCustomApi",
+    resource_group_name="testResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const customApi = new azurerm.web.latest.CustomApi("customApi", {
+    apiName: "testCustomApi",
+    resourceGroupName: "testResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CustomApi Resource {#create}

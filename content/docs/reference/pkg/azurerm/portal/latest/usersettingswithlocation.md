@@ -12,6 +12,67 @@ meta_desc: "Explore the UserSettingsWithLocation resource of the portal/latest m
 
 Response to get user settings
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PutUserSettings
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var userSettingsWithLocation = new AzureRM.Portal.Latest.UserSettingsWithLocation("userSettingsWithLocation", new AzureRM.Portal.Latest.UserSettingsWithLocationArgs
+        {
+            Location = "eastus",
+            UserSettingsName = "cloudconsole",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+user_settings_with_location = azurerm.portal.latest.UserSettingsWithLocation("userSettingsWithLocation",
+    location="eastus",
+    user_settings_name="cloudconsole")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const userSettingsWithLocation = new azurerm.portal.latest.UserSettingsWithLocation("userSettingsWithLocation", {
+    location: "eastus",
+    userSettingsName: "cloudconsole",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a UserSettingsWithLocation Resource {#create}

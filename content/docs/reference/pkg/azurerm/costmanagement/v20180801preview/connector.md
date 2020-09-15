@@ -12,6 +12,85 @@ meta_desc: "Explore the Connector resource of the costmanagement/v20180801previe
 
 The Connector model definition
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Connector_Put
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var connector = new AzureRM.CostManagement.V20180801Preview.Connector("connector", new AzureRM.CostManagement.V20180801Preview.ConnectorArgs
+        {
+            ConnectorName = "AWSBillingAccount",
+            CredentialsKey = "arn:aws:iam::123456789012:role/AzureCostManagementRole",
+            CredentialsSecret = "external-id",
+            DisplayName = "AWS-Consolidated-1",
+            Location = "westus",
+            ReportId = "HourlyWithResources",
+            ResourceGroupName = "rg1",
+            Status = "active",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+connector = azurerm.costmanagement.v20180801preview.Connector("connector",
+    connector_name="AWSBillingAccount",
+    credentials_key="arn:aws:iam::123456789012:role/AzureCostManagementRole",
+    credentials_secret="external-id",
+    display_name="AWS-Consolidated-1",
+    location="westus",
+    report_id="HourlyWithResources",
+    resource_group_name="rg1",
+    status="active")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const connector = new azurerm.costmanagement.v20180801preview.Connector("connector", {
+    connectorName: "AWSBillingAccount",
+    credentialsKey: "arn:aws:iam::123456789012:role/AzureCostManagementRole",
+    credentialsSecret: "external-id",
+    displayName: "AWS-Consolidated-1",
+    location: "westus",
+    reportId: "HourlyWithResources",
+    resourceGroupName: "rg1",
+    status: "active",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Connector Resource {#create}

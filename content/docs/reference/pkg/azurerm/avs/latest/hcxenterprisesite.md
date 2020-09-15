@@ -12,6 +12,70 @@ meta_desc: "Explore the HcxEnterpriseSite resource of the avs/latest module, inc
 
 An HCX Enterprise Site resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### HcxEnterpriseSites_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hcxEnterpriseSite = new AzureRM.AVS.Latest.HcxEnterpriseSite("hcxEnterpriseSite", new AzureRM.AVS.Latest.HcxEnterpriseSiteArgs
+        {
+            HcxEnterpriseSiteName = "site1",
+            PrivateCloudName = "cloud1",
+            ResourceGroupName = "group1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+hcx_enterprise_site = azurerm.avs.latest.HcxEnterpriseSite("hcxEnterpriseSite",
+    hcx_enterprise_site_name="site1",
+    private_cloud_name="cloud1",
+    resource_group_name="group1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const hcxEnterpriseSite = new azurerm.avs.latest.HcxEnterpriseSite("hcxEnterpriseSite", {
+    hcxEnterpriseSiteName: "site1",
+    privateCloudName: "cloud1",
+    resourceGroupName: "group1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a HcxEnterpriseSite Resource {#create}

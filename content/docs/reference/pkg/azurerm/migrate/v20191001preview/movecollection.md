@@ -12,6 +12,67 @@ meta_desc: "Explore the MoveCollection resource of the migrate/v20191001preview 
 
 Define the move collection.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### MoveCollections_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var moveCollection = new AzureRM.Migrate.V20191001Preview.MoveCollection("moveCollection", new AzureRM.Migrate.V20191001Preview.MoveCollectionArgs
+        {
+            MoveCollectionName = "movecollection1",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+move_collection = azurerm.migrate.v20191001preview.MoveCollection("moveCollection",
+    move_collection_name="movecollection1",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const moveCollection = new azurerm.migrate.v20191001preview.MoveCollection("moveCollection", {
+    moveCollectionName: "movecollection1",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MoveCollection Resource {#create}

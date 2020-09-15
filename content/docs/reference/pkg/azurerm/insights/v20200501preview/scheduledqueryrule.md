@@ -12,6 +12,581 @@ meta_desc: "Explore the ScheduledQueryRule resource of the insights/v20200501pre
 
 The scheduled query rule resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a scheduled query rule for Single Resource
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var scheduledQueryRule = new AzureRM.Insights.V20200501Preview.ScheduledQueryRule("scheduledQueryRule", new AzureRM.Insights.V20200501Preview.ScheduledQueryRuleArgs
+        {
+            Actions = 
+            {
+                new AzureRM.Insights.V20200501Preview.Inputs.ActionArgs
+                {
+                    ActionGroupId = "/subscriptions/1cf177ed-1330-4692-80ea-fd3d7783b147/resourcegroups/sqrapi/providers/microsoft.insights/actiongroups/myactiongroup",
+                    WebHookProperties = 
+                    {
+                        { "key11", "value11" },
+                        { "key12", "value12" },
+                    },
+                },
+            },
+            Criteria = new AzureRM.Insights.V20200501Preview.Inputs.ScheduledQueryRuleCriteriaArgs
+            {
+                AllOf = 
+                {
+                    new AzureRM.Insights.V20200501Preview.Inputs.ConditionArgs
+                    {
+                        Dimensions = 
+                        {
+                            new AzureRM.Insights.V20200501Preview.Inputs.DimensionArgs
+                            {
+                                Name = "ComputerIp",
+                                Operator = "Exclude",
+                                Values = 
+                                {
+                                    "192.168.1.1",
+                                },
+                            },
+                            new AzureRM.Insights.V20200501Preview.Inputs.DimensionArgs
+                            {
+                                Name = "OSType",
+                                Operator = "Include",
+                                Values = 
+                                {
+                                    "*",
+                                },
+                            },
+                        },
+                        FailingPeriods = new AzureRM.Insights.V20200501Preview.Inputs.ConditionFailingPeriodsArgs
+                        {
+                            MinFailingPeriodsToAlert = 1,
+                            NumberOfEvaluationPeriods = 1,
+                        },
+                        MetricMeasureColumn = "% Processor Time",
+                        Operator = "GreaterThan",
+                        Query = "Perf | where ObjectName == \"Processor\"",
+                        ResourceIdColumn = "resourceId",
+                        Threshold = 70,
+                        TimeAggregation = "Average",
+                    },
+                },
+            },
+            Description = "Performance rule",
+            Enabled = true,
+            EvaluationFrequency = "PT5M",
+            Location = "eastus",
+            MuteActionsDuration = "PT30M",
+            ResourceGroupName = "QueryResourceGroupName",
+            RuleName = "perf",
+            Scopes = 
+            {
+                "/subscriptions/aaf177ed-1330-a9f2-80ea-fd3d7783b147/resourceGroups/scopeResourceGroup1/providers/Microsoft.Compute/virtualMachines/vm1",
+            },
+            Severity = 4,
+            WindowSize = "PT10M",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+scheduled_query_rule = azurerm.insights.v20200501preview.ScheduledQueryRule("scheduledQueryRule",
+    actions=[{
+        "actionGroupId": "/subscriptions/1cf177ed-1330-4692-80ea-fd3d7783b147/resourcegroups/sqrapi/providers/microsoft.insights/actiongroups/myactiongroup",
+        "webHookProperties": {
+            "key11": "value11",
+            "key12": "value12",
+        },
+    }],
+    criteria={
+        "allOf": [{
+            "dimensions": [
+                {
+                    "name": "ComputerIp",
+                    "operator": "Exclude",
+                    "values": ["192.168.1.1"],
+                },
+                {
+                    "name": "OSType",
+                    "operator": "Include",
+                    "values": ["*"],
+                },
+            ],
+            "failingPeriods": {
+                "minFailingPeriodsToAlert": 1,
+                "numberOfEvaluationPeriods": 1,
+            },
+            "metricMeasureColumn": "% Processor Time",
+            "operator": "GreaterThan",
+            "query": "Perf | where ObjectName == \"Processor\"",
+            "resourceIdColumn": "resourceId",
+            "threshold": 70,
+            "timeAggregation": "Average",
+        }],
+    },
+    description="Performance rule",
+    enabled=True,
+    evaluation_frequency="PT5M",
+    location="eastus",
+    mute_actions_duration="PT30M",
+    resource_group_name="QueryResourceGroupName",
+    rule_name="perf",
+    scopes=["/subscriptions/aaf177ed-1330-a9f2-80ea-fd3d7783b147/resourceGroups/scopeResourceGroup1/providers/Microsoft.Compute/virtualMachines/vm1"],
+    severity=4,
+    window_size="PT10M")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const scheduledQueryRule = new azurerm.insights.v20200501preview.ScheduledQueryRule("scheduledQueryRule", {
+    actions: [{
+        actionGroupId: "/subscriptions/1cf177ed-1330-4692-80ea-fd3d7783b147/resourcegroups/sqrapi/providers/microsoft.insights/actiongroups/myactiongroup",
+        webHookProperties: {
+            key11: "value11",
+            key12: "value12",
+        },
+    }],
+    criteria: {
+        allOf: [{
+            dimensions: [
+                {
+                    name: "ComputerIp",
+                    operator: "Exclude",
+                    values: ["192.168.1.1"],
+                },
+                {
+                    name: "OSType",
+                    operator: "Include",
+                    values: ["*"],
+                },
+            ],
+            failingPeriods: {
+                minFailingPeriodsToAlert: 1,
+                numberOfEvaluationPeriods: 1,
+            },
+            metricMeasureColumn: `% Processor Time`,
+            operator: "GreaterThan",
+            query: "Perf | where ObjectName == \"Processor\"",
+            resourceIdColumn: "resourceId",
+            threshold: 70,
+            timeAggregation: "Average",
+        }],
+    },
+    description: "Performance rule",
+    enabled: true,
+    evaluationFrequency: "PT5M",
+    location: "eastus",
+    muteActionsDuration: "PT30M",
+    resourceGroupName: "QueryResourceGroupName",
+    ruleName: "perf",
+    scopes: ["/subscriptions/aaf177ed-1330-a9f2-80ea-fd3d7783b147/resourceGroups/scopeResourceGroup1/providers/Microsoft.Compute/virtualMachines/vm1"],
+    severity: 4,
+    windowSize: "PT10M",
+});
+
+```
+
+{{% /example %}}
+
+### Create or update a scheduled query rule on Resource group(s)
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var scheduledQueryRule = new AzureRM.Insights.V20200501Preview.ScheduledQueryRule("scheduledQueryRule", new AzureRM.Insights.V20200501Preview.ScheduledQueryRuleArgs
+        {
+            Actions = 
+            {
+                new AzureRM.Insights.V20200501Preview.Inputs.ActionArgs
+                {
+                    ActionGroupId = "/subscriptions/1cf177ed-1330-4692-80ea-fd3d7783b147/resourcegroups/sqrapi/providers/microsoft.insights/actiongroups/myactiongroup",
+                    WebHookProperties = 
+                    {
+                        { "key11", "value11" },
+                        { "key12", "value12" },
+                    },
+                },
+            },
+            Criteria = new AzureRM.Insights.V20200501Preview.Inputs.ScheduledQueryRuleCriteriaArgs
+            {
+                AllOf = 
+                {
+                    new AzureRM.Insights.V20200501Preview.Inputs.ConditionArgs
+                    {
+                        Dimensions = {},
+                        FailingPeriods = new AzureRM.Insights.V20200501Preview.Inputs.ConditionFailingPeriodsArgs
+                        {
+                            MinFailingPeriodsToAlert = 1,
+                            NumberOfEvaluationPeriods = 1,
+                        },
+                        Operator = "GreaterThan",
+                        Query = "Heartbeat",
+                        Threshold = 360,
+                        TimeAggregation = "Count",
+                    },
+                },
+            },
+            Description = "Health check rule",
+            Enabled = true,
+            EvaluationFrequency = "PT5M",
+            Location = "eastus",
+            MuteActionsDuration = "PT30M",
+            ResourceGroupName = "QueryResourceGroupName",
+            RuleName = "heartbeat",
+            Scopes = 
+            {
+                "/subscriptions/aaf177ed-1330-a9f2-80ea-fd3d7783b147/resourceGroups/scopeResourceGroup1",
+            },
+            Severity = 4,
+            TargetResourceTypes = 
+            {
+                "Microsoft.Compute/virtualMachines",
+            },
+            WindowSize = "PT10M",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+scheduled_query_rule = azurerm.insights.v20200501preview.ScheduledQueryRule("scheduledQueryRule",
+    actions=[{
+        "actionGroupId": "/subscriptions/1cf177ed-1330-4692-80ea-fd3d7783b147/resourcegroups/sqrapi/providers/microsoft.insights/actiongroups/myactiongroup",
+        "webHookProperties": {
+            "key11": "value11",
+            "key12": "value12",
+        },
+    }],
+    criteria={
+        "allOf": [{
+            "dimensions": [],
+            "failingPeriods": {
+                "minFailingPeriodsToAlert": 1,
+                "numberOfEvaluationPeriods": 1,
+            },
+            "operator": "GreaterThan",
+            "query": "Heartbeat",
+            "threshold": 360,
+            "timeAggregation": "Count",
+        }],
+    },
+    description="Health check rule",
+    enabled=True,
+    evaluation_frequency="PT5M",
+    location="eastus",
+    mute_actions_duration="PT30M",
+    resource_group_name="QueryResourceGroupName",
+    rule_name="heartbeat",
+    scopes=["/subscriptions/aaf177ed-1330-a9f2-80ea-fd3d7783b147/resourceGroups/scopeResourceGroup1"],
+    severity=4,
+    target_resource_types=["Microsoft.Compute/virtualMachines"],
+    window_size="PT10M")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const scheduledQueryRule = new azurerm.insights.v20200501preview.ScheduledQueryRule("scheduledQueryRule", {
+    actions: [{
+        actionGroupId: "/subscriptions/1cf177ed-1330-4692-80ea-fd3d7783b147/resourcegroups/sqrapi/providers/microsoft.insights/actiongroups/myactiongroup",
+        webHookProperties: {
+            key11: "value11",
+            key12: "value12",
+        },
+    }],
+    criteria: {
+        allOf: [{
+            dimensions: [],
+            failingPeriods: {
+                minFailingPeriodsToAlert: 1,
+                numberOfEvaluationPeriods: 1,
+            },
+            operator: "GreaterThan",
+            query: "Heartbeat",
+            threshold: 360,
+            timeAggregation: "Count",
+        }],
+    },
+    description: "Health check rule",
+    enabled: true,
+    evaluationFrequency: "PT5M",
+    location: "eastus",
+    muteActionsDuration: "PT30M",
+    resourceGroupName: "QueryResourceGroupName",
+    ruleName: "heartbeat",
+    scopes: ["/subscriptions/aaf177ed-1330-a9f2-80ea-fd3d7783b147/resourceGroups/scopeResourceGroup1"],
+    severity: 4,
+    targetResourceTypes: ["Microsoft.Compute/virtualMachines"],
+    windowSize: "PT10M",
+});
+
+```
+
+{{% /example %}}
+
+### Create or update a scheduled query rule on Subscription
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var scheduledQueryRule = new AzureRM.Insights.V20200501Preview.ScheduledQueryRule("scheduledQueryRule", new AzureRM.Insights.V20200501Preview.ScheduledQueryRuleArgs
+        {
+            Actions = 
+            {
+                new AzureRM.Insights.V20200501Preview.Inputs.ActionArgs
+                {
+                    ActionGroupId = "/subscriptions/1cf177ed-1330-4692-80ea-fd3d7783b147/resourcegroups/sqrapi/providers/microsoft.insights/actiongroups/myactiongroup",
+                    WebHookProperties = 
+                    {
+                        { "key11", "value11" },
+                        { "key12", "value12" },
+                    },
+                },
+            },
+            Criteria = new AzureRM.Insights.V20200501Preview.Inputs.ScheduledQueryRuleCriteriaArgs
+            {
+                AllOf = 
+                {
+                    new AzureRM.Insights.V20200501Preview.Inputs.ConditionArgs
+                    {
+                        Dimensions = 
+                        {
+                            new AzureRM.Insights.V20200501Preview.Inputs.DimensionArgs
+                            {
+                                Name = "ComputerIp",
+                                Operator = "Exclude",
+                                Values = 
+                                {
+                                    "192.168.1.1",
+                                },
+                            },
+                            new AzureRM.Insights.V20200501Preview.Inputs.DimensionArgs
+                            {
+                                Name = "OSType",
+                                Operator = "Include",
+                                Values = 
+                                {
+                                    "*",
+                                },
+                            },
+                        },
+                        FailingPeriods = new AzureRM.Insights.V20200501Preview.Inputs.ConditionFailingPeriodsArgs
+                        {
+                            MinFailingPeriodsToAlert = 1,
+                            NumberOfEvaluationPeriods = 1,
+                        },
+                        MetricMeasureColumn = "% Processor Time",
+                        Operator = "GreaterThan",
+                        Query = "Perf | where ObjectName == \"Processor\"",
+                        ResourceIdColumn = "resourceId",
+                        Threshold = 70,
+                        TimeAggregation = "Average",
+                    },
+                },
+            },
+            Description = "Performance rule",
+            Enabled = true,
+            EvaluationFrequency = "PT5M",
+            Location = "eastus",
+            MuteActionsDuration = "PT30M",
+            ResourceGroupName = "QueryResourceGroupName",
+            RuleName = "perf",
+            Scopes = 
+            {
+                "/subscriptions/aaf177ed-1330-a9f2-80ea-fd3d7783b147",
+            },
+            Severity = 4,
+            TargetResourceTypes = 
+            {
+                "Microsoft.Compute/virtualMachines",
+            },
+            WindowSize = "PT10M",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+scheduled_query_rule = azurerm.insights.v20200501preview.ScheduledQueryRule("scheduledQueryRule",
+    actions=[{
+        "actionGroupId": "/subscriptions/1cf177ed-1330-4692-80ea-fd3d7783b147/resourcegroups/sqrapi/providers/microsoft.insights/actiongroups/myactiongroup",
+        "webHookProperties": {
+            "key11": "value11",
+            "key12": "value12",
+        },
+    }],
+    criteria={
+        "allOf": [{
+            "dimensions": [
+                {
+                    "name": "ComputerIp",
+                    "operator": "Exclude",
+                    "values": ["192.168.1.1"],
+                },
+                {
+                    "name": "OSType",
+                    "operator": "Include",
+                    "values": ["*"],
+                },
+            ],
+            "failingPeriods": {
+                "minFailingPeriodsToAlert": 1,
+                "numberOfEvaluationPeriods": 1,
+            },
+            "metricMeasureColumn": "% Processor Time",
+            "operator": "GreaterThan",
+            "query": "Perf | where ObjectName == \"Processor\"",
+            "resourceIdColumn": "resourceId",
+            "threshold": 70,
+            "timeAggregation": "Average",
+        }],
+    },
+    description="Performance rule",
+    enabled=True,
+    evaluation_frequency="PT5M",
+    location="eastus",
+    mute_actions_duration="PT30M",
+    resource_group_name="QueryResourceGroupName",
+    rule_name="perf",
+    scopes=["/subscriptions/aaf177ed-1330-a9f2-80ea-fd3d7783b147"],
+    severity=4,
+    target_resource_types=["Microsoft.Compute/virtualMachines"],
+    window_size="PT10M")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const scheduledQueryRule = new azurerm.insights.v20200501preview.ScheduledQueryRule("scheduledQueryRule", {
+    actions: [{
+        actionGroupId: "/subscriptions/1cf177ed-1330-4692-80ea-fd3d7783b147/resourcegroups/sqrapi/providers/microsoft.insights/actiongroups/myactiongroup",
+        webHookProperties: {
+            key11: "value11",
+            key12: "value12",
+        },
+    }],
+    criteria: {
+        allOf: [{
+            dimensions: [
+                {
+                    name: "ComputerIp",
+                    operator: "Exclude",
+                    values: ["192.168.1.1"],
+                },
+                {
+                    name: "OSType",
+                    operator: "Include",
+                    values: ["*"],
+                },
+            ],
+            failingPeriods: {
+                minFailingPeriodsToAlert: 1,
+                numberOfEvaluationPeriods: 1,
+            },
+            metricMeasureColumn: `% Processor Time`,
+            operator: "GreaterThan",
+            query: "Perf | where ObjectName == \"Processor\"",
+            resourceIdColumn: "resourceId",
+            threshold: 70,
+            timeAggregation: "Average",
+        }],
+    },
+    description: "Performance rule",
+    enabled: true,
+    evaluationFrequency: "PT5M",
+    location: "eastus",
+    muteActionsDuration: "PT30M",
+    resourceGroupName: "QueryResourceGroupName",
+    ruleName: "perf",
+    scopes: ["/subscriptions/aaf177ed-1330-a9f2-80ea-fd3d7783b147"],
+    severity: 4,
+    targetResourceTypes: ["Microsoft.Compute/virtualMachines"],
+    windowSize: "PT10M",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ScheduledQueryRule Resource {#create}

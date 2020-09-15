@@ -12,6 +12,61 @@ meta_desc: "Explore the UserSettings resource of the portal/latest module, inclu
 
 Response to get user settings
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PutUserSettings
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var userSettings = new AzureRM.Portal.Latest.UserSettings("userSettings", new AzureRM.Portal.Latest.UserSettingsArgs
+        {
+            UserSettingsName = "cloudconsole",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+user_settings = azurerm.portal.latest.UserSettings("userSettings", user_settings_name="cloudconsole")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const userSettings = new azurerm.portal.latest.UserSettings("userSettings", {userSettingsName: "cloudconsole"});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a UserSettings Resource {#create}

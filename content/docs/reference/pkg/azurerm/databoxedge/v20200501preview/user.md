@@ -12,6 +12,89 @@ meta_desc: "Explore the User resource of the databoxedge/v20200501preview module
 
 Represents a user who has access to one or more shares on the Data Box Edge/Gateway device.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### UserPut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var user = new AzureRM.DataBoxEdge.V20200501Preview.User("user", new AzureRM.DataBoxEdge.V20200501Preview.UserArgs
+        {
+            DeviceName = "testedgedevice",
+            EncryptedPassword = new AzureRM.DataBoxEdge.V20200501Preview.Inputs.AsymmetricEncryptedSecretArgs
+            {
+                EncryptionAlgorithm = "None",
+                EncryptionCertThumbprint = "blah",
+                Value = "Password@1",
+            },
+            Name = "user1",
+            ResourceGroupName = "GroupForEdgeAutomation",
+            UserType = "Share",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+user = azurerm.databoxedge.v20200501preview.User("user",
+    device_name="testedgedevice",
+    encrypted_password={
+        "encryptionAlgorithm": "None",
+        "encryptionCertThumbprint": "blah",
+        "value": "Password@1",
+    },
+    name="user1",
+    resource_group_name="GroupForEdgeAutomation",
+    user_type="Share")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const user = new azurerm.databoxedge.v20200501preview.User("user", {
+    deviceName: "testedgedevice",
+    encryptedPassword: {
+        encryptionAlgorithm: "None",
+        encryptionCertThumbprint: "blah",
+        value: "Password@1",
+    },
+    name: "user1",
+    resourceGroupName: "GroupForEdgeAutomation",
+    userType: "Share",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a User Resource {#create}

@@ -12,6 +12,267 @@ meta_desc: "Explore the FirewallPolicyRuleGroup resource of the network/latest m
 
 Rule Group resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create FirewallPolicyRuleGroup
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var firewallPolicyRuleGroup = new AzureRM.Network.Latest.FirewallPolicyRuleGroup("firewallPolicyRuleGroup", new AzureRM.Network.Latest.FirewallPolicyRuleGroupArgs
+        {
+            FirewallPolicyName = "firewallPolicy",
+            Priority = 110,
+            ResourceGroupName = "rg1",
+            RuleGroupName = "ruleGroup1",
+            Rules = 
+            {
+                
+                {
+                    { "action", new AzureRM.Network.Latest.Inputs.FirewallPolicyNatRuleActionArgs
+                    {
+                        Type = "Deny",
+                    } },
+                    { "name", "Example-Filter-Rule" },
+                    { "ruleConditions", 
+                    {
+                        
+                        {
+                            { "destinationAddresses", 
+                            {
+                                "*",
+                            } },
+                            { "destinationPorts", 
+                            {
+                                "*",
+                            } },
+                            { "ipProtocols", 
+                            {
+                                "TCP",
+                            } },
+                            { "name", "network-condition1" },
+                            { "ruleConditionType", "NetworkRuleCondition" },
+                            { "sourceAddresses", 
+                            {
+                                "10.1.25.0/24",
+                            } },
+                        },
+                    } },
+                    { "ruleType", "FirewallPolicyFilterRule" },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+firewall_policy_rule_group = azurerm.network.latest.FirewallPolicyRuleGroup("firewallPolicyRuleGroup",
+    firewall_policy_name="firewallPolicy",
+    priority=110,
+    resource_group_name="rg1",
+    rule_group_name="ruleGroup1",
+    rules=[{
+        "action": {
+            "type": "Deny",
+        },
+        "name": "Example-Filter-Rule",
+        "ruleConditions": [{
+            "destinationAddresses": ["*"],
+            "destinationPorts": ["*"],
+            "ipProtocols": ["TCP"],
+            "name": "network-condition1",
+            "ruleConditionType": "NetworkRuleCondition",
+            "sourceAddresses": ["10.1.25.0/24"],
+        }],
+        "ruleType": "FirewallPolicyFilterRule",
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const firewallPolicyRuleGroup = new azurerm.network.latest.FirewallPolicyRuleGroup("firewallPolicyRuleGroup", {
+    firewallPolicyName: "firewallPolicy",
+    priority: 110,
+    resourceGroupName: "rg1",
+    ruleGroupName: "ruleGroup1",
+    rules: [{
+        action: {
+            type: "Deny",
+        },
+        name: "Example-Filter-Rule",
+        ruleConditions: [{
+            destinationAddresses: ["*"],
+            destinationPorts: ["*"],
+            ipProtocols: ["TCP"],
+            name: "network-condition1",
+            ruleConditionType: "NetworkRuleCondition",
+            sourceAddresses: ["10.1.25.0/24"],
+        }],
+        ruleType: "FirewallPolicyFilterRule",
+    }],
+});
+
+```
+
+{{% /example %}}
+
+### Create FirewallPolicyRuleGroup With IpGroups
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var firewallPolicyRuleGroup = new AzureRM.Network.Latest.FirewallPolicyRuleGroup("firewallPolicyRuleGroup", new AzureRM.Network.Latest.FirewallPolicyRuleGroupArgs
+        {
+            FirewallPolicyName = "firewallPolicy",
+            Priority = 110,
+            ResourceGroupName = "rg1",
+            RuleGroupName = "ruleGroup1",
+            Rules = 
+            {
+                
+                {
+                    { "action", new AzureRM.Network.Latest.Inputs.FirewallPolicyNatRuleActionArgs
+                    {
+                        Type = "Deny",
+                    } },
+                    { "name", "Example-Filter-Rule" },
+                    { "ruleConditions", 
+                    {
+                        
+                        {
+                            { "destinationIpGroups", 
+                            {
+                                "/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2",
+                            } },
+                            { "destinationPorts", 
+                            {
+                                "*",
+                            } },
+                            { "ipProtocols", 
+                            {
+                                "TCP",
+                            } },
+                            { "name", "network-condition1" },
+                            { "ruleConditionType", "NetworkRuleCondition" },
+                            { "sourceIpGroups", 
+                            {
+                                "/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1",
+                            } },
+                        },
+                    } },
+                    { "ruleType", "FirewallPolicyFilterRule" },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+firewall_policy_rule_group = azurerm.network.latest.FirewallPolicyRuleGroup("firewallPolicyRuleGroup",
+    firewall_policy_name="firewallPolicy",
+    priority=110,
+    resource_group_name="rg1",
+    rule_group_name="ruleGroup1",
+    rules=[{
+        "action": {
+            "type": "Deny",
+        },
+        "name": "Example-Filter-Rule",
+        "ruleConditions": [{
+            "destinationIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
+            "destinationPorts": ["*"],
+            "ipProtocols": ["TCP"],
+            "name": "network-condition1",
+            "ruleConditionType": "NetworkRuleCondition",
+            "sourceIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1"],
+        }],
+        "ruleType": "FirewallPolicyFilterRule",
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const firewallPolicyRuleGroup = new azurerm.network.latest.FirewallPolicyRuleGroup("firewallPolicyRuleGroup", {
+    firewallPolicyName: "firewallPolicy",
+    priority: 110,
+    resourceGroupName: "rg1",
+    ruleGroupName: "ruleGroup1",
+    rules: [{
+        action: {
+            type: "Deny",
+        },
+        name: "Example-Filter-Rule",
+        ruleConditions: [{
+            destinationIpGroups: ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
+            destinationPorts: ["*"],
+            ipProtocols: ["TCP"],
+            name: "network-condition1",
+            ruleConditionType: "NetworkRuleCondition",
+            sourceIpGroups: ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1"],
+        }],
+        ruleType: "FirewallPolicyFilterRule",
+    }],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FirewallPolicyRuleGroup Resource {#create}

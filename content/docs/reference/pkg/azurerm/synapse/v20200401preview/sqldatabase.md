@@ -12,6 +12,83 @@ meta_desc: "Explore the SqlDatabase resource of the synapse/v20200401preview mod
 
 A sql database resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates a sqldatabase.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlDatabase = new AzureRM.Synapse.V20200401Preview.SqlDatabase("sqlDatabase", new AzureRM.Synapse.V20200401Preview.SqlDatabaseArgs
+        {
+            Location = "westus",
+            ResourceGroupName = "rg_88eed28c-5243-4f02-8251-bfa1e69e7057",
+            SqlDatabaseName = "73164535-f22d-4daa-b014-1f23bbe361b7",
+            Tags = 
+            {
+                { "tag1", "val1" },
+            },
+            WorkspaceName = "srv_85d31a1e-718b-4bda-9e53-a91230dd4ce5",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sql_database = azurerm.synapse.v20200401preview.SqlDatabase("sqlDatabase",
+    location="westus",
+    resource_group_name="rg_88eed28c-5243-4f02-8251-bfa1e69e7057",
+    sql_database_name="73164535-f22d-4daa-b014-1f23bbe361b7",
+    tags={
+        "tag1": "val1",
+    },
+    workspace_name="srv_85d31a1e-718b-4bda-9e53-a91230dd4ce5")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sqlDatabase = new azurerm.synapse.v20200401preview.SqlDatabase("sqlDatabase", {
+    location: "westus",
+    resourceGroupName: "rg_88eed28c-5243-4f02-8251-bfa1e69e7057",
+    sqlDatabaseName: "73164535-f22d-4daa-b014-1f23bbe361b7",
+    tags: {
+        tag1: "val1",
+    },
+    workspaceName: "srv_85d31a1e-718b-4bda-9e53-a91230dd4ce5",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SqlDatabase Resource {#create}

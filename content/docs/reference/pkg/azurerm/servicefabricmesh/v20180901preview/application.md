@@ -12,6 +12,89 @@ meta_desc: "Explore the Application resource of the servicefabricmesh/v20180901p
 
 This type describes an application resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateOrUpdateApplication
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var application = new AzureRM.ServiceFabricMesh.V20180901Preview.Application("application", new AzureRM.ServiceFabricMesh.V20180901Preview.ApplicationArgs
+        {
+            ApplicationResourceName = "sampleApplication",
+            Description = "Service Fabric Mesh sample application.",
+            Location = "EastUS",
+            ResourceGroupName = "sbz_demo",
+            Services = 
+            {
+                new AzureRM.ServiceFabricMesh.V20180901Preview.Inputs.ServiceResourceDescriptionArgs
+                {
+                    Name = "helloWorldService",
+                },
+            },
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+application = azurerm.servicefabricmesh.v20180901preview.Application("application",
+    application_resource_name="sampleApplication",
+    description="Service Fabric Mesh sample application.",
+    location="EastUS",
+    resource_group_name="sbz_demo",
+    services=[{
+        "name": "helloWorldService",
+    }],
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const application = new azurerm.servicefabricmesh.v20180901preview.Application("application", {
+    applicationResourceName: "sampleApplication",
+    description: "Service Fabric Mesh sample application.",
+    location: "EastUS",
+    resourceGroupName: "sbz_demo",
+    services: [{
+        name: "helloWorldService",
+    }],
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Application Resource {#create}

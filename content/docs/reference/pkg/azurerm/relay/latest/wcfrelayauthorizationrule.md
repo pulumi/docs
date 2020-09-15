@@ -12,6 +12,86 @@ meta_desc: "Explore the WCFRelayAuthorizationRule resource of the relay/latest m
 
 Description of a namespace authorization rule.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### RelayAuthorizationRuleCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var wcfRelayAuthorizationRule = new AzureRM.Relay.Latest.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule", new AzureRM.Relay.Latest.WCFRelayAuthorizationRuleArgs
+        {
+            AuthorizationRuleName = "sdk-RelayAuthRules-01",
+            NamespaceName = "sdk-RelayNamespace-01",
+            RelayName = "sdk-Relay-wcf-01",
+            ResourceGroupName = "RG-eg",
+            Rights = 
+            {
+                "Listen",
+                "Send",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+wcf_relay_authorization_rule = azurerm.relay.latest.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule",
+    authorization_rule_name="sdk-RelayAuthRules-01",
+    namespace_name="sdk-RelayNamespace-01",
+    relay_name="sdk-Relay-wcf-01",
+    resource_group_name="RG-eg",
+    rights=[
+        "Listen",
+        "Send",
+    ])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const wcfRelayAuthorizationRule = new azurerm.relay.latest.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule", {
+    authorizationRuleName: "sdk-RelayAuthRules-01",
+    namespaceName: "sdk-RelayNamespace-01",
+    relayName: "sdk-Relay-wcf-01",
+    resourceGroupName: "RG-eg",
+    rights: [
+        "Listen",
+        "Send",
+    ],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a WCFRelayAuthorizationRule Resource {#create}

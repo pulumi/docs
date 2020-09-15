@@ -12,6 +12,92 @@ meta_desc: "Explore the Project resource of the machinelearningexperimentation/v
 
 An object that represents a machine learning project.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateProject
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = new AzureRM.MachineLearningExperimentation.V20170501Preview.Project("project", new AzureRM.MachineLearningExperimentation.V20170501Preview.ProjectArgs
+        {
+            AccountName = "testaccount",
+            FriendlyName = "testName",
+            Gitrepo = "https://github/abc",
+            Location = "East US",
+            ProjectName = "testProject",
+            ResourceGroupName = "myResourceGroup",
+            Tags = 
+            {
+                { "tagKey1", "TagValue1" },
+            },
+            WorkspaceName = "testworkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+project = azurerm.machinelearningexperimentation.v20170501preview.Project("project",
+    account_name="testaccount",
+    friendly_name="testName",
+    gitrepo="https://github/abc",
+    location="East US",
+    project_name="testProject",
+    resource_group_name="myResourceGroup",
+    tags={
+        "tagKey1": "TagValue1",
+    },
+    workspace_name="testworkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const project = new azurerm.machinelearningexperimentation.v20170501preview.Project("project", {
+    accountName: "testaccount",
+    friendlyName: "testName",
+    gitrepo: "https://github/abc",
+    location: "East US",
+    projectName: "testProject",
+    resourceGroupName: "myResourceGroup",
+    tags: {
+        tagKey1: "TagValue1",
+    },
+    workspaceName: "testworkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Project Resource {#create}

@@ -12,6 +12,79 @@ meta_desc: "Explore the JobCredential resource of the sql/v20170301preview modul
 
 A stored credential that can be used by a job to connect to target databases.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a credential
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var jobCredential = new AzureRM.Sql.V20170301Preview.JobCredential("jobCredential", new AzureRM.Sql.V20170301Preview.JobCredentialArgs
+        {
+            CredentialName = "cred1",
+            JobAgentName = "agent1",
+            Password = "<password>",
+            ResourceGroupName = "group1",
+            ServerName = "server1",
+            Username = "myuser",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+job_credential = azurerm.sql.v20170301preview.JobCredential("jobCredential",
+    credential_name="cred1",
+    job_agent_name="agent1",
+    password="<password>",
+    resource_group_name="group1",
+    server_name="server1",
+    username="myuser")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const jobCredential = new azurerm.sql.v20170301preview.JobCredential("jobCredential", {
+    credentialName: "cred1",
+    jobAgentName: "agent1",
+    password: "<password>",
+    resourceGroupName: "group1",
+    serverName: "server1",
+    username: "myuser",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a JobCredential Resource {#create}

@@ -12,6 +12,140 @@ meta_desc: "Explore the VirtualHubRouteTableV2 resource of the network/latest mo
 
 VirtualHubRouteTableV2 Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### VirtualHubRouteTableV2Put
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualHubRouteTableV2 = new AzureRM.Network.Latest.VirtualHubRouteTableV2("virtualHubRouteTableV2", new AzureRM.Network.Latest.VirtualHubRouteTableV2Args
+        {
+            AttachedConnections = 
+            {
+                "All_Vnets",
+            },
+            ResourceGroupName = "rg1",
+            RouteTableName = "virtualHubRouteTable1a",
+            Routes = 
+            {
+                new AzureRM.Network.Latest.Inputs.VirtualHubRouteV2Args
+                {
+                    DestinationType = "CIDR",
+                    Destinations = 
+                    {
+                        "20.10.0.0/16",
+                        "20.20.0.0/16",
+                    },
+                    NextHopType = "IPAddress",
+                    NextHops = 
+                    {
+                        "10.0.0.68",
+                    },
+                },
+                new AzureRM.Network.Latest.Inputs.VirtualHubRouteV2Args
+                {
+                    DestinationType = "CIDR",
+                    Destinations = 
+                    {
+                        "0.0.0.0/0",
+                    },
+                    NextHopType = "IPAddress",
+                    NextHops = 
+                    {
+                        "10.0.0.68",
+                    },
+                },
+            },
+            VirtualHubName = "virtualHub1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_hub_route_table_v2 = azurerm.network.latest.VirtualHubRouteTableV2("virtualHubRouteTableV2",
+    attached_connections=["All_Vnets"],
+    resource_group_name="rg1",
+    route_table_name="virtualHubRouteTable1a",
+    routes=[
+        {
+            "destinationType": "CIDR",
+            "destinations": [
+                "20.10.0.0/16",
+                "20.20.0.0/16",
+            ],
+            "nextHopType": "IPAddress",
+            "nextHops": ["10.0.0.68"],
+        },
+        {
+            "destinationType": "CIDR",
+            "destinations": ["0.0.0.0/0"],
+            "nextHopType": "IPAddress",
+            "nextHops": ["10.0.0.68"],
+        },
+    ],
+    virtual_hub_name="virtualHub1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualHubRouteTableV2 = new azurerm.network.latest.VirtualHubRouteTableV2("virtualHubRouteTableV2", {
+    attachedConnections: ["All_Vnets"],
+    resourceGroupName: "rg1",
+    routeTableName: "virtualHubRouteTable1a",
+    routes: [
+        {
+            destinationType: "CIDR",
+            destinations: [
+                "20.10.0.0/16",
+                "20.20.0.0/16",
+            ],
+            nextHopType: "IPAddress",
+            nextHops: ["10.0.0.68"],
+        },
+        {
+            destinationType: "CIDR",
+            destinations: ["0.0.0.0/0"],
+            nextHopType: "IPAddress",
+            nextHops: ["10.0.0.68"],
+        },
+    ],
+    virtualHubName: "virtualHub1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualHubRouteTableV2 Resource {#create}

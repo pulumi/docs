@@ -11,6 +11,92 @@ meta_desc: "Explore the Controller resource of the devspaces/latest module, incl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ControllersCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var controller = new AzureRM.DevSpaces.Latest.Controller("controller", new AzureRM.DevSpaces.Latest.ControllerArgs
+        {
+            Location = "eastus",
+            Name = "myControllerResource",
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.DevSpaces.Latest.Inputs.SkuArgs
+            {
+                Name = "S1",
+                Tier = "Standard",
+            },
+            Tags = ,
+            TargetContainerHostCredentialsBase64 = "QmFzZTY0IEVuY29kZWQgVmFsdWUK",
+            TargetContainerHostResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerService/managedClusters/myCluster",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+controller = azurerm.devspaces.latest.Controller("controller",
+    location="eastus",
+    name="myControllerResource",
+    resource_group_name="myResourceGroup",
+    sku={
+        "name": "S1",
+        "tier": "Standard",
+    },
+    tags={},
+    target_container_host_credentials_base64="QmFzZTY0IEVuY29kZWQgVmFsdWUK",
+    target_container_host_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerService/managedClusters/myCluster")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const controller = new azurerm.devspaces.latest.Controller("controller", {
+    location: "eastus",
+    name: "myControllerResource",
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        name: "S1",
+        tier: "Standard",
+    },
+    tags: {},
+    targetContainerHostCredentialsBase64: "QmFzZTY0IEVuY29kZWQgVmFsdWUK",
+    targetContainerHostResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerService/managedClusters/myCluster",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Controller Resource {#create}

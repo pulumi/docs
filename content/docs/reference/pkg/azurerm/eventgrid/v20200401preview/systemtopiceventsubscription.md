@@ -12,6 +12,106 @@ meta_desc: "Explore the SystemTopicEventSubscription resource of the eventgrid/v
 
 Event Subscription
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### SystemTopicEventSubscriptions_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var systemTopicEventSubscription = new AzureRM.EventGrid.V20200401Preview.SystemTopicEventSubscription("systemTopicEventSubscription", new AzureRM.EventGrid.V20200401Preview.SystemTopicEventSubscriptionArgs
+        {
+            Destination = 
+            {
+                { "endpointType", "WebHook" },
+                { "properties", 
+                {
+                    { "endpointUrl", "https://requestb.in/15ksip71" },
+                } },
+            },
+            EventSubscriptionName = "exampleEventSubscriptionName1",
+            Filter = new AzureRM.EventGrid.V20200401Preview.Inputs.EventSubscriptionFilterArgs
+            {
+                IsSubjectCaseSensitive = false,
+                SubjectBeginsWith = "ExamplePrefix",
+                SubjectEndsWith = "ExampleSuffix",
+            },
+            ResourceGroupName = "examplerg",
+            SystemTopicName = "exampleSystemTopic1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+system_topic_event_subscription = azurerm.eventgrid.v20200401preview.SystemTopicEventSubscription("systemTopicEventSubscription",
+    destination={
+        "endpointType": "WebHook",
+        "properties": {
+            "endpointUrl": "https://requestb.in/15ksip71",
+        },
+    },
+    event_subscription_name="exampleEventSubscriptionName1",
+    filter={
+        "isSubjectCaseSensitive": False,
+        "subjectBeginsWith": "ExamplePrefix",
+        "subjectEndsWith": "ExampleSuffix",
+    },
+    resource_group_name="examplerg",
+    system_topic_name="exampleSystemTopic1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const systemTopicEventSubscription = new azurerm.eventgrid.v20200401preview.SystemTopicEventSubscription("systemTopicEventSubscription", {
+    destination: {
+        endpointType: "WebHook",
+        properties: {
+            endpointUrl: "https://requestb.in/15ksip71",
+        },
+    },
+    eventSubscriptionName: "exampleEventSubscriptionName1",
+    filter: {
+        isSubjectCaseSensitive: false,
+        subjectBeginsWith: "ExamplePrefix",
+        subjectEndsWith: "ExampleSuffix",
+    },
+    resourceGroupName: "examplerg",
+    systemTopicName: "exampleSystemTopic1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SystemTopicEventSubscription Resource {#create}

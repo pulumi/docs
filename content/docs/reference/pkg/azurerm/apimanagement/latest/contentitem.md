@@ -12,6 +12,73 @@ meta_desc: "Explore the ContentItem resource of the apimanagement/latest module,
 
 Content type contract details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateContentItem
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var contentItem = new AzureRM.ApiManagement.Latest.ContentItem("contentItem", new AzureRM.ApiManagement.Latest.ContentItemArgs
+        {
+            ContentItemId = "4e3cf6a5-574a-ba08-1f23-2e7a38faa6d8",
+            ContentTypeId = "page",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+content_item = azurerm.apimanagement.latest.ContentItem("contentItem",
+    content_item_id="4e3cf6a5-574a-ba08-1f23-2e7a38faa6d8",
+    content_type_id="page",
+    resource_group_name="rg1",
+    service_name="apimService1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const contentItem = new azurerm.apimanagement.latest.ContentItem("contentItem", {
+    contentItemId: "4e3cf6a5-574a-ba08-1f23-2e7a38faa6d8",
+    contentTypeId: "page",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ContentItem Resource {#create}

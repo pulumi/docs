@@ -12,6 +12,118 @@ meta_desc: "Explore the OriginGroup resource of the cdn/latest module, including
 
 Origin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### OriginGroups_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var originGroup = new AzureRM.Cdn.Latest.OriginGroup("originGroup", new AzureRM.Cdn.Latest.OriginGroupArgs
+        {
+            EndpointName = "endpoint1",
+            HealthProbeSettings = new AzureRM.Cdn.Latest.Inputs.HealthProbeParametersArgs
+            {
+                ProbeIntervalInSeconds = 120,
+                ProbePath = "/health.aspx",
+                ProbeProtocol = "Http",
+                ProbeRequestType = "GET",
+            },
+            OriginGroupName = "origingroup1",
+            Origins = 
+            {
+                new AzureRM.Cdn.Latest.Inputs.ResourceReferenceArgs
+                {
+                    Id = "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
+                },
+            },
+            ProfileName = "profile1",
+            ResourceGroupName = "RG",
+            ResponseBasedOriginErrorDetectionSettings = new AzureRM.Cdn.Latest.Inputs.ResponseBasedOriginErrorDetectionParametersArgs
+            {
+                ResponseBasedDetectedErrorTypes = "TcpErrorsOnly",
+                ResponseBasedFailoverThresholdPercentage = 10,
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+origin_group = azurerm.cdn.latest.OriginGroup("originGroup",
+    endpoint_name="endpoint1",
+    health_probe_settings={
+        "probeIntervalInSeconds": 120,
+        "probePath": "/health.aspx",
+        "probeProtocol": "Http",
+        "probeRequestType": "GET",
+    },
+    origin_group_name="origingroup1",
+    origins=[{
+        "id": "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
+    }],
+    profile_name="profile1",
+    resource_group_name="RG",
+    response_based_origin_error_detection_settings={
+        "responseBasedDetectedErrorTypes": "TcpErrorsOnly",
+        "responseBasedFailoverThresholdPercentage": 10,
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const originGroup = new azurerm.cdn.latest.OriginGroup("originGroup", {
+    endpointName: "endpoint1",
+    healthProbeSettings: {
+        probeIntervalInSeconds: 120,
+        probePath: "/health.aspx",
+        probeProtocol: "Http",
+        probeRequestType: "GET",
+    },
+    originGroupName: "origingroup1",
+    origins: [{
+        id: "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
+    }],
+    profileName: "profile1",
+    resourceGroupName: "RG",
+    responseBasedOriginErrorDetectionSettings: {
+        responseBasedDetectedErrorTypes: "TcpErrorsOnly",
+        responseBasedFailoverThresholdPercentage: 10,
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a OriginGroup Resource {#create}

@@ -12,6 +12,70 @@ meta_desc: "Explore the SpatialAnchorsAccount resource of the mixedreality/lates
 
 SpatialAnchorsAccount Response.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create spatial anchor account
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var spatialAnchorsAccount = new AzureRM.MixedReality.Latest.SpatialAnchorsAccount("spatialAnchorsAccount", new AzureRM.MixedReality.Latest.SpatialAnchorsAccountArgs
+        {
+            AccountName = "MyAccount",
+            Location = "eastus2euap",
+            ResourceGroupName = "MyResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+spatial_anchors_account = azurerm.mixedreality.latest.SpatialAnchorsAccount("spatialAnchorsAccount",
+    account_name="MyAccount",
+    location="eastus2euap",
+    resource_group_name="MyResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const spatialAnchorsAccount = new azurerm.mixedreality.latest.SpatialAnchorsAccount("spatialAnchorsAccount", {
+    accountName: "MyAccount",
+    location: "eastus2euap",
+    resourceGroupName: "MyResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SpatialAnchorsAccount Resource {#create}

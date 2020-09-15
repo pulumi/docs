@@ -11,6 +11,97 @@ meta_desc: "Explore the Queue resource of the storage/v20200801preview module, i
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### QueueOperationPut
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+queue = .("queue",
+    account_name="sto328",
+    queue_name="queue6185",
+    resource_group_name="res3376")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const queue = new .("queue", {
+    accountName: "sto328",
+    queueName: "queue6185",
+    resourceGroupName: "res3376",
+});
+
+```
+
+{{% /example %}}
+
+### QueueOperationPutWithMetadata
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+queue = .("queue",
+    account_name="sto328",
+    metadata={
+        "sample1": "meta1",
+        "sample2": "meta2",
+    },
+    queue_name="queue6185",
+    resource_group_name="res3376")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const queue = new .("queue", {
+    accountName: "sto328",
+    metadata: {
+        sample1: "meta1",
+        sample2: "meta2",
+    },
+    queueName: "queue6185",
+    resourceGroupName: "res3376",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Queue Resource {#create}

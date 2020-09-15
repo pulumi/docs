@@ -12,6 +12,329 @@ meta_desc: "Explore the BatchAccount resource of the batch/latest module, includ
 
 Contains information about an Azure Batch account.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### BatchAccountCreate_BYOS
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var batchAccount = new AzureRM.Batch.Latest.BatchAccount("batchAccount", new AzureRM.Batch.Latest.BatchAccountArgs
+        {
+            AccountName = "sampleacct",
+            AutoStorage = new AzureRM.Batch.Latest.Inputs.AutoStorageBasePropertiesArgs
+            {
+                StorageAccountId = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+            },
+            KeyVaultReference = new AzureRM.Batch.Latest.Inputs.KeyVaultReferenceArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
+                Url = "http://sample.vault.azure.net/",
+            },
+            Location = "japaneast",
+            PoolAllocationMode = "UserSubscription",
+            ResourceGroupName = "default-azurebatch-japaneast",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+batch_account = azurerm.batch.latest.BatchAccount("batchAccount",
+    account_name="sampleacct",
+    auto_storage={
+        "storageAccountId": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+    },
+    key_vault_reference={
+        "id": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
+        "url": "http://sample.vault.azure.net/",
+    },
+    location="japaneast",
+    pool_allocation_mode="UserSubscription",
+    resource_group_name="default-azurebatch-japaneast")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const batchAccount = new azurerm.batch.latest.BatchAccount("batchAccount", {
+    accountName: "sampleacct",
+    autoStorage: {
+        storageAccountId: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+    },
+    keyVaultReference: {
+        id: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
+        url: "http://sample.vault.azure.net/",
+    },
+    location: "japaneast",
+    poolAllocationMode: "UserSubscription",
+    resourceGroupName: "default-azurebatch-japaneast",
+});
+
+```
+
+{{% /example %}}
+
+### BatchAccountCreate_Default
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var batchAccount = new AzureRM.Batch.Latest.BatchAccount("batchAccount", new AzureRM.Batch.Latest.BatchAccountArgs
+        {
+            AccountName = "sampleacct",
+            AutoStorage = new AzureRM.Batch.Latest.Inputs.AutoStorageBasePropertiesArgs
+            {
+                StorageAccountId = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+            },
+            Location = "japaneast",
+            ResourceGroupName = "default-azurebatch-japaneast",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+batch_account = azurerm.batch.latest.BatchAccount("batchAccount",
+    account_name="sampleacct",
+    auto_storage={
+        "storageAccountId": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+    },
+    location="japaneast",
+    resource_group_name="default-azurebatch-japaneast")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const batchAccount = new azurerm.batch.latest.BatchAccount("batchAccount", {
+    accountName: "sampleacct",
+    autoStorage: {
+        storageAccountId: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+    },
+    location: "japaneast",
+    resourceGroupName: "default-azurebatch-japaneast",
+});
+
+```
+
+{{% /example %}}
+
+### BatchAccountCreate_SystemAssignedIdentity
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var batchAccount = new AzureRM.Batch.Latest.BatchAccount("batchAccount", new AzureRM.Batch.Latest.BatchAccountArgs
+        {
+            AccountName = "sampleacct",
+            AutoStorage = new AzureRM.Batch.Latest.Inputs.AutoStorageBasePropertiesArgs
+            {
+                StorageAccountId = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+            },
+            Identity = new AzureRM.Batch.Latest.Inputs.BatchAccountIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Location = "japaneast",
+            ResourceGroupName = "default-azurebatch-japaneast",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+batch_account = azurerm.batch.latest.BatchAccount("batchAccount",
+    account_name="sampleacct",
+    auto_storage={
+        "storageAccountId": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+    },
+    identity={
+        "type": "SystemAssigned",
+    },
+    location="japaneast",
+    resource_group_name="default-azurebatch-japaneast")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const batchAccount = new azurerm.batch.latest.BatchAccount("batchAccount", {
+    accountName: "sampleacct",
+    autoStorage: {
+        storageAccountId: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+    },
+    identity: {
+        type: "SystemAssigned",
+    },
+    location: "japaneast",
+    resourceGroupName: "default-azurebatch-japaneast",
+});
+
+```
+
+{{% /example %}}
+
+### PrivateBatchAccountCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var batchAccount = new AzureRM.Batch.Latest.BatchAccount("batchAccount", new AzureRM.Batch.Latest.BatchAccountArgs
+        {
+            AccountName = "sampleacct",
+            AutoStorage = new AzureRM.Batch.Latest.Inputs.AutoStorageBasePropertiesArgs
+            {
+                StorageAccountId = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+            },
+            KeyVaultReference = new AzureRM.Batch.Latest.Inputs.KeyVaultReferenceArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
+                Url = "http://sample.vault.azure.net/",
+            },
+            Location = "japaneast",
+            PublicNetworkAccess = "Disabled",
+            ResourceGroupName = "default-azurebatch-japaneast",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+batch_account = azurerm.batch.latest.BatchAccount("batchAccount",
+    account_name="sampleacct",
+    auto_storage={
+        "storageAccountId": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+    },
+    key_vault_reference={
+        "id": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
+        "url": "http://sample.vault.azure.net/",
+    },
+    location="japaneast",
+    public_network_access="Disabled",
+    resource_group_name="default-azurebatch-japaneast")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const batchAccount = new azurerm.batch.latest.BatchAccount("batchAccount", {
+    accountName: "sampleacct",
+    autoStorage: {
+        storageAccountId: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+    },
+    keyVaultReference: {
+        id: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
+        url: "http://sample.vault.azure.net/",
+    },
+    location: "japaneast",
+    publicNetworkAccess: "Disabled",
+    resourceGroupName: "default-azurebatch-japaneast",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BatchAccount Resource {#create}

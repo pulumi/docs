@@ -12,6 +12,334 @@ meta_desc: "Explore the Server resource of the dbformariadb/v20180601preview mod
 
 Represents a server.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a database as a point in time restore
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new AzureRM.DBforMariaDB.V20180601Preview.Server("server", new AzureRM.DBforMariaDB.V20180601Preview.ServerArgs
+        {
+            Location = "brazilsouth",
+            ResourceGroupName = "TargetResourceGroup",
+            ServerName = "targetserver",
+            Sku = new AzureRM.DBforMariaDB.V20180601Preview.Inputs.SkuArgs
+            {
+                Capacity = 2,
+                Family = "Gen5",
+                Name = "GP_Gen5_2",
+                Tier = "GeneralPurpose",
+            },
+            Tags = 
+            {
+                { "ElasticServer", "1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server = azurerm.dbformariadb.v20180601preview.Server("server",
+    location="brazilsouth",
+    resource_group_name="TargetResourceGroup",
+    server_name="targetserver",
+    sku={
+        "capacity": 2,
+        "family": "Gen5",
+        "name": "GP_Gen5_2",
+        "tier": "GeneralPurpose",
+    },
+    tags={
+        "ElasticServer": "1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const server = new azurerm.dbformariadb.v20180601preview.Server("server", {
+    location: "brazilsouth",
+    resourceGroupName: "TargetResourceGroup",
+    serverName: "targetserver",
+    sku: {
+        capacity: 2,
+        family: "Gen5",
+        name: "GP_Gen5_2",
+        tier: "GeneralPurpose",
+    },
+    tags: {
+        ElasticServer: "1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create a new server
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new AzureRM.DBforMariaDB.V20180601Preview.Server("server", new AzureRM.DBforMariaDB.V20180601Preview.ServerArgs
+        {
+            Location = "westus",
+            ResourceGroupName = "testrg",
+            ServerName = "mariadbtestsvc4",
+            Sku = new AzureRM.DBforMariaDB.V20180601Preview.Inputs.SkuArgs
+            {
+                Capacity = 2,
+                Family = "Gen5",
+                Name = "GP_Gen5_2",
+                Tier = "GeneralPurpose",
+            },
+            Tags = 
+            {
+                { "ElasticServer", "1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server = azurerm.dbformariadb.v20180601preview.Server("server",
+    location="westus",
+    resource_group_name="testrg",
+    server_name="mariadbtestsvc4",
+    sku={
+        "capacity": 2,
+        "family": "Gen5",
+        "name": "GP_Gen5_2",
+        "tier": "GeneralPurpose",
+    },
+    tags={
+        "ElasticServer": "1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const server = new azurerm.dbformariadb.v20180601preview.Server("server", {
+    location: "westus",
+    resourceGroupName: "testrg",
+    serverName: "mariadbtestsvc4",
+    sku: {
+        capacity: 2,
+        family: "Gen5",
+        name: "GP_Gen5_2",
+        tier: "GeneralPurpose",
+    },
+    tags: {
+        ElasticServer: "1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create a replica server
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new AzureRM.DBforMariaDB.V20180601Preview.Server("server", new AzureRM.DBforMariaDB.V20180601Preview.ServerArgs
+        {
+            Location = "westus",
+            ResourceGroupName = "TargetResourceGroup",
+            ServerName = "targetserver",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server = azurerm.dbformariadb.v20180601preview.Server("server",
+    location="westus",
+    resource_group_name="TargetResourceGroup",
+    server_name="targetserver")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const server = new azurerm.dbformariadb.v20180601preview.Server("server", {
+    location: "westus",
+    resourceGroupName: "TargetResourceGroup",
+    serverName: "targetserver",
+});
+
+```
+
+{{% /example %}}
+
+### Create a server as a geo restore
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new AzureRM.DBforMariaDB.V20180601Preview.Server("server", new AzureRM.DBforMariaDB.V20180601Preview.ServerArgs
+        {
+            Location = "westus",
+            ResourceGroupName = "TargetResourceGroup",
+            ServerName = "targetserver",
+            Sku = new AzureRM.DBforMariaDB.V20180601Preview.Inputs.SkuArgs
+            {
+                Capacity = 2,
+                Family = "Gen5",
+                Name = "GP_Gen5_2",
+                Tier = "GeneralPurpose",
+            },
+            Tags = 
+            {
+                { "ElasticServer", "1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server = azurerm.dbformariadb.v20180601preview.Server("server",
+    location="westus",
+    resource_group_name="TargetResourceGroup",
+    server_name="targetserver",
+    sku={
+        "capacity": 2,
+        "family": "Gen5",
+        "name": "GP_Gen5_2",
+        "tier": "GeneralPurpose",
+    },
+    tags={
+        "ElasticServer": "1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const server = new azurerm.dbformariadb.v20180601preview.Server("server", {
+    location: "westus",
+    resourceGroupName: "TargetResourceGroup",
+    serverName: "targetserver",
+    sku: {
+        capacity: 2,
+        family: "Gen5",
+        name: "GP_Gen5_2",
+        tier: "GeneralPurpose",
+    },
+    tags: {
+        ElasticServer: "1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Server Resource {#create}

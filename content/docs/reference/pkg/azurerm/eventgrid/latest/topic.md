@@ -12,6 +12,119 @@ meta_desc: "Explore the Topic resource of the eventgrid/latest module, including
 
 EventGrid Topic
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Topics_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var topic = new AzureRM.EventGrid.Latest.Topic("topic", new AzureRM.EventGrid.Latest.TopicArgs
+        {
+            InboundIpRules = 
+            {
+                new AzureRM.EventGrid.Latest.Inputs.InboundIpRuleArgs
+                {
+                    Action = "Allow",
+                    IpMask = "12.18.30.15",
+                },
+                new AzureRM.EventGrid.Latest.Inputs.InboundIpRuleArgs
+                {
+                    Action = "Allow",
+                    IpMask = "12.18.176.1",
+                },
+            },
+            Location = "westus2",
+            PublicNetworkAccess = "Enabled",
+            ResourceGroupName = "examplerg",
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+            },
+            TopicName = "exampletopic1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+topic = azurerm.eventgrid.latest.Topic("topic",
+    inbound_ip_rules=[
+        {
+            "action": "Allow",
+            "ipMask": "12.18.30.15",
+        },
+        {
+            "action": "Allow",
+            "ipMask": "12.18.176.1",
+        },
+    ],
+    location="westus2",
+    public_network_access="Enabled",
+    resource_group_name="examplerg",
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+    },
+    topic_name="exampletopic1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const topic = new azurerm.eventgrid.latest.Topic("topic", {
+    inboundIpRules: [
+        {
+            action: "Allow",
+            ipMask: "12.18.30.15",
+        },
+        {
+            action: "Allow",
+            ipMask: "12.18.176.1",
+        },
+    ],
+    location: "westus2",
+    publicNetworkAccess: "Enabled",
+    resourceGroupName: "examplerg",
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+    },
+    topicName: "exampletopic1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Topic Resource {#create}

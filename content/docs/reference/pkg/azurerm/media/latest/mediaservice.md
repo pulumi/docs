@@ -12,6 +12,99 @@ meta_desc: "Explore the MediaService resource of the media/latest module, includ
 
 A Media Services account.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a Media Services account
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mediaService = new AzureRM.Media.Latest.MediaService("mediaService", new AzureRM.Media.Latest.MediaServiceArgs
+        {
+            AccountName = "contososports",
+            Location = "South Central US",
+            ResourceGroupName = "contoso",
+            StorageAccounts = 
+            {
+                new AzureRM.Media.Latest.Inputs.StorageAccountArgs
+                {
+                    Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Storage/storageAccounts/contososportsstore",
+                    Type = "Primary",
+                },
+            },
+            Tags = 
+            {
+                { "key1", "value1" },
+                { "key2", "value2" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+media_service = azurerm.media.latest.MediaService("mediaService",
+    account_name="contososports",
+    location="South Central US",
+    resource_group_name="contoso",
+    storage_accounts=[{
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Storage/storageAccounts/contososportsstore",
+        "type": "Primary",
+    }],
+    tags={
+        "key1": "value1",
+        "key2": "value2",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const mediaService = new azurerm.media.latest.MediaService("mediaService", {
+    accountName: "contososports",
+    location: "South Central US",
+    resourceGroupName: "contoso",
+    storageAccounts: [{
+        id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Storage/storageAccounts/contososportsstore",
+        type: "Primary",
+    }],
+    tags: {
+        key1: "value1",
+        key2: "value2",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MediaService Resource {#create}

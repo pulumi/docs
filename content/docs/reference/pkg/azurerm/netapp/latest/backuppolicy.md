@@ -12,6 +12,85 @@ meta_desc: "Explore the BackupPolicy resource of the netapp/latest module, inclu
 
 Backup policy information
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### BackupPolicies_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var backupPolicy = new AzureRM.NetApp.Latest.BackupPolicy("backupPolicy", new AzureRM.NetApp.Latest.BackupPolicyArgs
+        {
+            AccountName = "account1",
+            BackupPolicyName = "backupPolicyName",
+            DailyBackupsToKeep = 10,
+            Enabled = true,
+            Location = "westus",
+            MonthlyBackupsToKeep = 10,
+            ResourceGroupName = "myRG",
+            WeeklyBackupsToKeep = 10,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+backup_policy = azurerm.netapp.latest.BackupPolicy("backupPolicy",
+    account_name="account1",
+    backup_policy_name="backupPolicyName",
+    daily_backups_to_keep=10,
+    enabled=True,
+    location="westus",
+    monthly_backups_to_keep=10,
+    resource_group_name="myRG",
+    weekly_backups_to_keep=10)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const backupPolicy = new azurerm.netapp.latest.BackupPolicy("backupPolicy", {
+    accountName: "account1",
+    backupPolicyName: "backupPolicyName",
+    dailyBackupsToKeep: 10,
+    enabled: true,
+    location: "westus",
+    monthlyBackupsToKeep: 10,
+    resourceGroupName: "myRG",
+    weeklyBackupsToKeep: 10,
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BackupPolicy Resource {#create}

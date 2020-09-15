@@ -12,6 +12,80 @@ meta_desc: "Explore the IntegrationAccount resource of the logic/latest module, 
 
 The integration account.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update an integration account
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var integrationAccount = new AzureRM.Logic.Latest.IntegrationAccount("integrationAccount", new AzureRM.Logic.Latest.IntegrationAccountArgs
+        {
+            IntegrationAccountName = "testIntegrationAccount",
+            Location = "westus",
+            ResourceGroupName = "testResourceGroup",
+            Sku = new AzureRM.Logic.Latest.Inputs.IntegrationAccountSkuArgs
+            {
+                Name = "Standard",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+integration_account = azurerm.logic.latest.IntegrationAccount("integrationAccount",
+    integration_account_name="testIntegrationAccount",
+    location="westus",
+    resource_group_name="testResourceGroup",
+    sku={
+        "name": "Standard",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const integrationAccount = new azurerm.logic.latest.IntegrationAccount("integrationAccount", {
+    integrationAccountName: "testIntegrationAccount",
+    location: "westus",
+    resourceGroupName: "testResourceGroup",
+    sku: {
+        name: "Standard",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IntegrationAccount Resource {#create}

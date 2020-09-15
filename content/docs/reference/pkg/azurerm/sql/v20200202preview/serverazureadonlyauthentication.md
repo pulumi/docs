@@ -12,6 +12,73 @@ meta_desc: "Explore the ServerAzureADOnlyAuthentication resource of the sql/v202
 
 Azure Active Directory only authentication.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates Azure Active Directory only authentication object.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serverAzureADOnlyAuthentication = new AzureRM.Sql.V20200202Preview.ServerAzureADOnlyAuthentication("serverAzureADOnlyAuthentication", new AzureRM.Sql.V20200202Preview.ServerAzureADOnlyAuthenticationArgs
+        {
+            AuthenticationName = "Default",
+            AzureADOnlyAuthentication = false,
+            ResourceGroupName = "sqlcrudtest-4799",
+            ServerName = "sqlcrudtest-6440",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server_azure_ad_only_authentication = azurerm.sql.v20200202preview.ServerAzureADOnlyAuthentication("serverAzureADOnlyAuthentication",
+    authentication_name="Default",
+    azure_ad_only_authentication=False,
+    resource_group_name="sqlcrudtest-4799",
+    server_name="sqlcrudtest-6440")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const serverAzureADOnlyAuthentication = new azurerm.sql.v20200202preview.ServerAzureADOnlyAuthentication("serverAzureADOnlyAuthentication", {
+    authenticationName: "Default",
+    azureADOnlyAuthentication: false,
+    resourceGroupName: "sqlcrudtest-4799",
+    serverName: "sqlcrudtest-6440",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServerAzureADOnlyAuthentication Resource {#create}

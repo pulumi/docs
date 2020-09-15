@@ -12,6 +12,79 @@ meta_desc: "Explore the BillingRoleAssignmentByDepartment resource of the billin
 
 The role assignment
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PutEnrollmentDepartmentAdministratorRoleAssignment
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var billingRoleAssignmentByDepartment = new AzureRM.Billing.V20191001Preview.BillingRoleAssignmentByDepartment("billingRoleAssignmentByDepartment", new AzureRM.Billing.V20191001Preview.BillingRoleAssignmentByDepartmentArgs
+        {
+            BillingAccountName = "{billingAccountName}",
+            BillingRoleAssignmentName = "{billingRoleAssignmentName}",
+            DepartmentName = "{departmentName}",
+            PrincipalId = "99a1a759-30dd-42c2-828c-db398826bb67",
+            PrincipalTenantId = "7ca289b9-c32d-4f01-8566-7ff93261d76f",
+            RoleDefinitionId = "/providers/Microsoft.Billing/billingAccounts/7898901/departments/97603/billingRoleDefinitions/fb2cf67f-be5b-42e7-8025-4683c668f840",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+billing_role_assignment_by_department = azurerm.billing.v20191001preview.BillingRoleAssignmentByDepartment("billingRoleAssignmentByDepartment",
+    billing_account_name="{billingAccountName}",
+    billing_role_assignment_name="{billingRoleAssignmentName}",
+    department_name="{departmentName}",
+    principal_id="99a1a759-30dd-42c2-828c-db398826bb67",
+    principal_tenant_id="7ca289b9-c32d-4f01-8566-7ff93261d76f",
+    role_definition_id="/providers/Microsoft.Billing/billingAccounts/7898901/departments/97603/billingRoleDefinitions/fb2cf67f-be5b-42e7-8025-4683c668f840")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const billingRoleAssignmentByDepartment = new azurerm.billing.v20191001preview.BillingRoleAssignmentByDepartment("billingRoleAssignmentByDepartment", {
+    billingAccountName: "{billingAccountName}",
+    billingRoleAssignmentName: "{billingRoleAssignmentName}",
+    departmentName: "{departmentName}",
+    principalId: "99a1a759-30dd-42c2-828c-db398826bb67",
+    principalTenantId: "7ca289b9-c32d-4f01-8566-7ff93261d76f",
+    roleDefinitionId: "/providers/Microsoft.Billing/billingAccounts/7898901/departments/97603/billingRoleDefinitions/fb2cf67f-be5b-42e7-8025-4683c668f840",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BillingRoleAssignmentByDepartment Resource {#create}

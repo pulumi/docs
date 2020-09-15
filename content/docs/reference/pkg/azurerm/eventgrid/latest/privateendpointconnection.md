@@ -11,6 +11,89 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the eventgrid/late
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PrivateEndpointConnections_Update
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpointConnection = new AzureRM.EventGrid.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureRM.EventGrid.Latest.PrivateEndpointConnectionArgs
+        {
+            ParentName = "exampletopic1",
+            ParentType = "topics",
+            PrivateEndpointConnectionName = "BMTPE5.8A30D251-4C61-489D-A1AA-B37C4A329B8B",
+            PrivateLinkServiceConnectionState = new AzureRM.EventGrid.Latest.Inputs.ConnectionStateArgs
+            {
+                ActionsRequired = "None",
+                Description = "approving connection",
+                Status = "Approved",
+            },
+            ResourceGroupName = "examplerg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_endpoint_connection = azurerm.eventgrid.latest.PrivateEndpointConnection("privateEndpointConnection",
+    parent_name="exampletopic1",
+    parent_type="topics",
+    private_endpoint_connection_name="BMTPE5.8A30D251-4C61-489D-A1AA-B37C4A329B8B",
+    private_link_service_connection_state={
+        "actionsRequired": "None",
+        "description": "approving connection",
+        "status": "Approved",
+    },
+    resource_group_name="examplerg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateEndpointConnection = new azurerm.eventgrid.latest.PrivateEndpointConnection("privateEndpointConnection", {
+    parentName: "exampletopic1",
+    parentType: "topics",
+    privateEndpointConnectionName: "BMTPE5.8A30D251-4C61-489D-A1AA-B37C4A329B8B",
+    privateLinkServiceConnectionState: {
+        actionsRequired: "None",
+        description: "approving connection",
+        status: "Approved",
+    },
+    resourceGroupName: "examplerg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateEndpointConnection Resource {#create}

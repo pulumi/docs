@@ -12,6 +12,70 @@ meta_desc: "Explore the ReplicationPolicy resource of the recoveryservices/lates
 
 Protection profile details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates the policy.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var replicationPolicy = new AzureRM.RecoveryServices.Latest.ReplicationPolicy("replicationPolicy", new AzureRM.RecoveryServices.Latest.ReplicationPolicyArgs
+        {
+            PolicyName = "protectionprofile1",
+            ResourceGroupName = "resourceGroupPS1",
+            ResourceName = "vault1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+replication_policy = azurerm.recoveryservices.latest.ReplicationPolicy("replicationPolicy",
+    policy_name="protectionprofile1",
+    resource_group_name="resourceGroupPS1",
+    resource_name="vault1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const replicationPolicy = new azurerm.recoveryservices.latest.ReplicationPolicy("replicationPolicy", {
+    policyName: "protectionprofile1",
+    resourceGroupName: "resourceGroupPS1",
+    resourceName: "vault1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ReplicationPolicy Resource {#create}

@@ -12,6 +12,79 @@ meta_desc: "Explore the ApiVersionSet resource of the apimanagement/v20191201pre
 
 Api Version Set Contract details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateApiVersionSet
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiVersionSet = new AzureRM.ApiManagement.V20191201Preview.ApiVersionSet("apiVersionSet", new AzureRM.ApiManagement.V20191201Preview.ApiVersionSetArgs
+        {
+            Description = "Version configuration",
+            DisplayName = "api set 1",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            VersionSetId = "api1",
+            VersioningScheme = "Segment",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api_version_set = azurerm.apimanagement.v20191201preview.ApiVersionSet("apiVersionSet",
+    description="Version configuration",
+    display_name="api set 1",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    version_set_id="api1",
+    versioning_scheme="Segment")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const apiVersionSet = new azurerm.apimanagement.v20191201preview.ApiVersionSet("apiVersionSet", {
+    description: "Version configuration",
+    displayName: "api set 1",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    versionSetId: "api1",
+    versioningScheme: "Segment",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApiVersionSet Resource {#create}

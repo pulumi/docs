@@ -12,6 +12,636 @@ meta_desc: "Explore the ApiManagementService resource of the apimanagement/lates
 
 A single API Management service resource in List or Get response.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateMultiRegionServiceWithCustomHostname
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiManagementService = new AzureRM.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureRM.ApiManagement.Latest.ApiManagementServiceArgs
+        {
+            AdditionalLocations = 
+            {
+                new AzureRM.ApiManagement.Latest.Inputs.AdditionalLocationArgs
+                {
+                    DisableGateway = true,
+                    Location = "East US",
+                    Sku = new AzureRM.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
+                    {
+                        Capacity = 1,
+                        Name = "Premium",
+                    },
+                },
+            },
+            ApiVersionConstraint = new AzureRM.ApiManagement.Latest.Inputs.ApiVersionConstraintArgs
+            {
+                MinApiVersion = "2019-01-01",
+            },
+            HostnameConfigurations = 
+            {
+                new AzureRM.ApiManagement.Latest.Inputs.HostnameConfigurationArgs
+                {
+                    CertificatePassword = "Password",
+                    DefaultSslBinding = true,
+                    EncodedCertificate = "****** Base 64 Encoded Certificate ************",
+                    HostName = "gateway1.msitesting.net",
+                    Type = "Proxy",
+                },
+                new AzureRM.ApiManagement.Latest.Inputs.HostnameConfigurationArgs
+                {
+                    CertificatePassword = "Password",
+                    EncodedCertificate = "****** Base 64 Encoded Certificate ************",
+                    HostName = "mgmt.msitesting.net",
+                    Type = "Management",
+                },
+                new AzureRM.ApiManagement.Latest.Inputs.HostnameConfigurationArgs
+                {
+                    CertificatePassword = "Password",
+                    EncodedCertificate = "****** Base 64 Encoded Certificate ************",
+                    HostName = "portal1.msitesting.net",
+                    Type = "Portal",
+                },
+            },
+            Location = "West US",
+            PublisherEmail = "apim@autorestsdk.com",
+            PublisherName = "autorestsdk",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Sku = new AzureRM.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
+            {
+                Capacity = 1,
+                Name = "Premium",
+            },
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+                { "tag3", "value3" },
+            },
+            VirtualNetworkType = "None",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api_management_service = azurerm.apimanagement.latest.ApiManagementService("apiManagementService",
+    additional_locations=[{
+        "disableGateway": True,
+        "location": "East US",
+        "sku": {
+            "capacity": 1,
+            "name": "Premium",
+        },
+    }],
+    api_version_constraint={
+        "minApiVersion": "2019-01-01",
+    },
+    hostname_configurations=[
+        {
+            "certificatePassword": "Password",
+            "defaultSslBinding": True,
+            "encodedCertificate": "****** Base 64 Encoded Certificate ************",
+            "hostName": "gateway1.msitesting.net",
+            "type": "Proxy",
+        },
+        {
+            "certificatePassword": "Password",
+            "encodedCertificate": "****** Base 64 Encoded Certificate ************",
+            "hostName": "mgmt.msitesting.net",
+            "type": "Management",
+        },
+        {
+            "certificatePassword": "Password",
+            "encodedCertificate": "****** Base 64 Encoded Certificate ************",
+            "hostName": "portal1.msitesting.net",
+            "type": "Portal",
+        },
+    ],
+    location="West US",
+    publisher_email="apim@autorestsdk.com",
+    publisher_name="autorestsdk",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    sku={
+        "capacity": 1,
+        "name": "Premium",
+    },
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+        "tag3": "value3",
+    },
+    virtual_network_type="None")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const apiManagementService = new azurerm.apimanagement.latest.ApiManagementService("apiManagementService", {
+    additionalLocations: [{
+        disableGateway: true,
+        location: "East US",
+        sku: {
+            capacity: 1,
+            name: "Premium",
+        },
+    }],
+    apiVersionConstraint: {
+        minApiVersion: "2019-01-01",
+    },
+    hostnameConfigurations: [
+        {
+            certificatePassword: "Password",
+            defaultSslBinding: true,
+            encodedCertificate: "****** Base 64 Encoded Certificate ************",
+            hostName: "gateway1.msitesting.net",
+            type: "Proxy",
+        },
+        {
+            certificatePassword: "Password",
+            encodedCertificate: "****** Base 64 Encoded Certificate ************",
+            hostName: "mgmt.msitesting.net",
+            type: "Management",
+        },
+        {
+            certificatePassword: "Password",
+            encodedCertificate: "****** Base 64 Encoded Certificate ************",
+            hostName: "portal1.msitesting.net",
+            type: "Portal",
+        },
+    ],
+    location: "West US",
+    publisherEmail: "apim@autorestsdk.com",
+    publisherName: "autorestsdk",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    sku: {
+        capacity: 1,
+        name: "Premium",
+    },
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+        tag3: "value3",
+    },
+    virtualNetworkType: "None",
+});
+
+```
+
+{{% /example %}}
+
+### ApiManagementCreateService
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiManagementService = new AzureRM.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureRM.ApiManagement.Latest.ApiManagementServiceArgs
+        {
+            Location = "South Central US",
+            PublisherEmail = "foo@contoso.com",
+            PublisherName = "foo",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Sku = new AzureRM.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
+            {
+                Capacity = 1,
+                Name = "Developer",
+            },
+            Tags = 
+            {
+                { "Name", "Contoso" },
+                { "Test", "User" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api_management_service = azurerm.apimanagement.latest.ApiManagementService("apiManagementService",
+    location="South Central US",
+    publisher_email="foo@contoso.com",
+    publisher_name="foo",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    sku={
+        "capacity": 1,
+        "name": "Developer",
+    },
+    tags={
+        "Name": "Contoso",
+        "Test": "User",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const apiManagementService = new azurerm.apimanagement.latest.ApiManagementService("apiManagementService", {
+    location: "South Central US",
+    publisherEmail: "foo@contoso.com",
+    publisherName: "foo",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    sku: {
+        capacity: 1,
+        name: "Developer",
+    },
+    tags: {
+        Name: "Contoso",
+        Test: "User",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### ApiManagementCreateServiceHavingMsi
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiManagementService = new AzureRM.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureRM.ApiManagement.Latest.ApiManagementServiceArgs
+        {
+            Identity = new AzureRM.ApiManagement.Latest.Inputs.ApiManagementServiceIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Location = "West US",
+            PublisherEmail = "apim@autorestsdk.com",
+            PublisherName = "autorestsdk",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Sku = new AzureRM.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
+            {
+                Capacity = 0,
+                Name = "Consumption",
+            },
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+                { "tag3", "value3" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api_management_service = azurerm.apimanagement.latest.ApiManagementService("apiManagementService",
+    identity={
+        "type": "SystemAssigned",
+    },
+    location="West US",
+    publisher_email="apim@autorestsdk.com",
+    publisher_name="autorestsdk",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    sku={
+        "capacity": 0,
+        "name": "Consumption",
+    },
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+        "tag3": "value3",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const apiManagementService = new azurerm.apimanagement.latest.ApiManagementService("apiManagementService", {
+    identity: {
+        type: "SystemAssigned",
+    },
+    location: "West US",
+    publisherEmail: "apim@autorestsdk.com",
+    publisherName: "autorestsdk",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    sku: {
+        capacity: 0,
+        name: "Consumption",
+    },
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+        tag3: "value3",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### ApiManagementCreateServiceWithSystemCertificates
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiManagementService = new AzureRM.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureRM.ApiManagement.Latest.ApiManagementServiceArgs
+        {
+            Certificates = 
+            {
+                new AzureRM.ApiManagement.Latest.Inputs.CertificateConfigurationArgs
+                {
+                    CertificatePassword = "Password",
+                    EncodedCertificate = "*******Base64 encoded Certificate******************",
+                    StoreName = "CertificateAuthority",
+                },
+            },
+            Location = "Central US",
+            PublisherEmail = "apim@autorestsdk.com",
+            PublisherName = "autorestsdk",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Sku = new AzureRM.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
+            {
+                Capacity = 1,
+                Name = "Basic",
+            },
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+                { "tag3", "value3" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api_management_service = azurerm.apimanagement.latest.ApiManagementService("apiManagementService",
+    certificates=[{
+        "certificatePassword": "Password",
+        "encodedCertificate": "*******Base64 encoded Certificate******************",
+        "storeName": "CertificateAuthority",
+    }],
+    location="Central US",
+    publisher_email="apim@autorestsdk.com",
+    publisher_name="autorestsdk",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    sku={
+        "capacity": 1,
+        "name": "Basic",
+    },
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+        "tag3": "value3",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const apiManagementService = new azurerm.apimanagement.latest.ApiManagementService("apiManagementService", {
+    certificates: [{
+        certificatePassword: "Password",
+        encodedCertificate: "*******Base64 encoded Certificate******************",
+        storeName: "CertificateAuthority",
+    }],
+    location: "Central US",
+    publisherEmail: "apim@autorestsdk.com",
+    publisherName: "autorestsdk",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    sku: {
+        capacity: 1,
+        name: "Basic",
+    },
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+        tag3: "value3",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### ApiManagementCreateServiceWithUserAssignedIdentity
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiManagementService = new AzureRM.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureRM.ApiManagement.Latest.ApiManagementServiceArgs
+        {
+            Identity = new AzureRM.ApiManagement.Latest.Inputs.ApiManagementServiceIdentityArgs
+            {
+                Type = "UserAssigned",
+                UserAssignedIdentities = 
+                {
+                    { "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apimService1",  },
+                },
+            },
+            Location = "West US",
+            PublisherEmail = "apim@autorestsdk.com",
+            PublisherName = "autorestsdk",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Sku = new AzureRM.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
+            {
+                Capacity = 0,
+                Name = "Consumption",
+            },
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+                { "tag3", "value3" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api_management_service = azurerm.apimanagement.latest.ApiManagementService("apiManagementService",
+    identity={
+        "type": "UserAssigned",
+        "userAssignedIdentities": {
+            "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apimService1": {},
+        },
+    },
+    location="West US",
+    publisher_email="apim@autorestsdk.com",
+    publisher_name="autorestsdk",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    sku={
+        "capacity": 0,
+        "name": "Consumption",
+    },
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+        "tag3": "value3",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const apiManagementService = new azurerm.apimanagement.latest.ApiManagementService("apiManagementService", {
+    identity: {
+        type: "UserAssigned",
+        userAssignedIdentities: {
+            "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apimService1": {},
+        },
+    },
+    location: "West US",
+    publisherEmail: "apim@autorestsdk.com",
+    publisherName: "autorestsdk",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    sku: {
+        capacity: 0,
+        name: "Consumption",
+    },
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+        tag3: "value3",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApiManagementService Resource {#create}

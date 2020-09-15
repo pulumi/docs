@@ -12,6 +12,70 @@ meta_desc: "Explore the RemediationAtResourceGroup resource of the policyinsight
 
 The remediation definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create remediation at resource group scope
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var remediationAtResourceGroup = new AzureRM.PolicyInsights.Latest.RemediationAtResourceGroup("remediationAtResourceGroup", new AzureRM.PolicyInsights.Latest.RemediationAtResourceGroupArgs
+        {
+            PolicyAssignmentId = "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+            RemediationName = "storageRemediation",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+remediation_at_resource_group = azurerm.policyinsights.latest.RemediationAtResourceGroup("remediationAtResourceGroup",
+    policy_assignment_id="/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+    remediation_name="storageRemediation",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const remediationAtResourceGroup = new azurerm.policyinsights.latest.RemediationAtResourceGroup("remediationAtResourceGroup", {
+    policyAssignmentId: "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+    remediationName: "storageRemediation",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RemediationAtResourceGroup Resource {#create}

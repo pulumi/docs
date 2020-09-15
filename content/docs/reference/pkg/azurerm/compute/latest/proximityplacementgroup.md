@@ -12,6 +12,73 @@ meta_desc: "Explore the ProximityPlacementGroup resource of the compute/latest m
 
 Specifies information about the proximity placement group.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or Update a proximity placement group.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var proximityPlacementGroup = new AzureRM.Compute.Latest.ProximityPlacementGroup("proximityPlacementGroup", new AzureRM.Compute.Latest.ProximityPlacementGroupArgs
+        {
+            Location = "westus",
+            ProximityPlacementGroupName = "myProximityPlacementGroup",
+            ProximityPlacementGroupType = "Standard",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+proximity_placement_group = azurerm.compute.latest.ProximityPlacementGroup("proximityPlacementGroup",
+    location="westus",
+    proximity_placement_group_name="myProximityPlacementGroup",
+    proximity_placement_group_type="Standard",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const proximityPlacementGroup = new azurerm.compute.latest.ProximityPlacementGroup("proximityPlacementGroup", {
+    location: "westus",
+    proximityPlacementGroupName: "myProximityPlacementGroup",
+    proximityPlacementGroupType: "Standard",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ProximityPlacementGroup Resource {#create}

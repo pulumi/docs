@@ -12,6 +12,79 @@ meta_desc: "Explore the ProviderInstance resource of the hanaonazure/v20200207pr
 
 A provider instance associated with a SAP monitor.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a SAP Monitor
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var providerInstance = new AzureRM.HanaOnAzure.V20200207Preview.ProviderInstance("providerInstance", new AzureRM.HanaOnAzure.V20200207Preview.ProviderInstanceArgs
+        {
+            Metadata = "{\"key\":\"value\"}",
+            Properties = "{\"hostname\":\"10.0.0.10\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30015,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}",
+            ProviderInstanceName = "myProviderInstance",
+            ResourceGroupName = "myResourceGroup",
+            SapMonitorName = "mySapMonitor",
+            Type = "hana",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+provider_instance = azurerm.hanaonazure.v20200207preview.ProviderInstance("providerInstance",
+    metadata="{\"key\":\"value\"}",
+    properties="{\"hostname\":\"10.0.0.10\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30015,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}",
+    provider_instance_name="myProviderInstance",
+    resource_group_name="myResourceGroup",
+    sap_monitor_name="mySapMonitor",
+    type="hana")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const providerInstance = new azurerm.hanaonazure.v20200207preview.ProviderInstance("providerInstance", {
+    metadata: "{\"key\":\"value\"}",
+    properties: "{\"hostname\":\"10.0.0.10\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30015,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}",
+    providerInstanceName: "myProviderInstance",
+    resourceGroupName: "myResourceGroup",
+    sapMonitorName: "mySapMonitor",
+    type: "hana",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ProviderInstance Resource {#create}

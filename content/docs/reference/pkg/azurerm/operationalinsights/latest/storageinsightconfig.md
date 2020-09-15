@@ -12,6 +12,102 @@ meta_desc: "Explore the StorageInsightConfig resource of the operationalinsights
 
 The top level storage insight resource container.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### StorageInsightsCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var storageInsightConfig = new AzureRM.OperationalInsights.Latest.StorageInsightConfig("storageInsightConfig", new AzureRM.OperationalInsights.Latest.StorageInsightConfigArgs
+        {
+            Containers = 
+            {
+                "wad-iis-logfiles",
+            },
+            ResourceGroupName = "OIAutoRest5123",
+            StorageAccount = new AzureRM.OperationalInsights.Latest.Inputs.StorageAccountArgs
+            {
+                Id = "/subscriptions/00000000-0000-0000-0000-000000000005/resourcegroups/OIAutoRest6987/providers/microsoft.storage/storageaccounts/AzTestFakeSA9945",
+                Key = "1234",
+            },
+            StorageInsightName = "AzTestSI1110",
+            Tables = 
+            {
+                "WADWindowsEventLogsTable",
+                "LinuxSyslogVer2v0",
+            },
+            WorkspaceName = "aztest5048",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+storage_insight_config = azurerm.operationalinsights.latest.StorageInsightConfig("storageInsightConfig",
+    containers=["wad-iis-logfiles"],
+    resource_group_name="OIAutoRest5123",
+    storage_account={
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000005/resourcegroups/OIAutoRest6987/providers/microsoft.storage/storageaccounts/AzTestFakeSA9945",
+        "key": "1234",
+    },
+    storage_insight_name="AzTestSI1110",
+    tables=[
+        "WADWindowsEventLogsTable",
+        "LinuxSyslogVer2v0",
+    ],
+    workspace_name="aztest5048")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const storageInsightConfig = new azurerm.operationalinsights.latest.StorageInsightConfig("storageInsightConfig", {
+    containers: ["wad-iis-logfiles"],
+    resourceGroupName: "OIAutoRest5123",
+    storageAccount: {
+        id: "/subscriptions/00000000-0000-0000-0000-000000000005/resourcegroups/OIAutoRest6987/providers/microsoft.storage/storageaccounts/AzTestFakeSA9945",
+        key: "1234",
+    },
+    storageInsightName: "AzTestSI1110",
+    tables: [
+        "WADWindowsEventLogsTable",
+        "LinuxSyslogVer2v0",
+    ],
+    workspaceName: "aztest5048",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a StorageInsightConfig Resource {#create}

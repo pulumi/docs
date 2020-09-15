@@ -12,6 +12,372 @@ meta_desc: "Explore the Policy resource of the cdn/latest module, including exam
 
 Defines web application firewall policy for Azure CDN.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates specific policy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var policy = new AzureRM.Cdn.Latest.Policy("policy", new AzureRM.Cdn.Latest.PolicyArgs
+        {
+            CustomRules = new AzureRM.Cdn.Latest.Inputs.CustomRuleListArgs
+            {
+                Rules = 
+                {
+                    new AzureRM.Cdn.Latest.Inputs.CustomRuleArgs
+                    {
+                        Action = "Block",
+                        EnabledState = "Enabled",
+                        MatchConditions = 
+                        {
+                            new AzureRM.Cdn.Latest.Inputs.MatchConditionArgs
+                            {
+                                MatchValue = 
+                                {
+                                    "CH",
+                                },
+                                MatchVariable = "RemoteAddr",
+                                NegateCondition = false,
+                                Operator = "GeoMatch",
+                                Transforms = {},
+                            },
+                            new AzureRM.Cdn.Latest.Inputs.MatchConditionArgs
+                            {
+                                MatchValue = 
+                                {
+                                    "windows",
+                                },
+                                MatchVariable = "RequestHeader",
+                                NegateCondition = false,
+                                Operator = "Contains",
+                                Selector = "UserAgent",
+                                Transforms = {},
+                            },
+                            new AzureRM.Cdn.Latest.Inputs.MatchConditionArgs
+                            {
+                                MatchValue = 
+                                {
+                                    "<?php",
+                                    "?>",
+                                },
+                                MatchVariable = "QueryString",
+                                NegateCondition = false,
+                                Operator = "Contains",
+                                Selector = "search",
+                                Transforms = 
+                                {
+                                    "UrlDecode",
+                                    "Lowercase",
+                                },
+                            },
+                        },
+                        Name = "CustomRule1",
+                        Priority = 2,
+                    },
+                },
+            },
+            Location = "WestUs",
+            ManagedRules = new AzureRM.Cdn.Latest.Inputs.ManagedRuleSetListArgs
+            {
+                ManagedRuleSets = 
+                {
+                    new AzureRM.Cdn.Latest.Inputs.ManagedRuleSetArgs
+                    {
+                        RuleGroupOverrides = 
+                        {
+                            new AzureRM.Cdn.Latest.Inputs.ManagedRuleGroupOverrideArgs
+                            {
+                                RuleGroupName = "Group1",
+                                Rules = 
+                                {
+                                    new AzureRM.Cdn.Latest.Inputs.ManagedRuleOverrideArgs
+                                    {
+                                        Action = "Redirect",
+                                        EnabledState = "Enabled",
+                                        RuleId = "GROUP1-0001",
+                                    },
+                                    new AzureRM.Cdn.Latest.Inputs.ManagedRuleOverrideArgs
+                                    {
+                                        EnabledState = "Disabled",
+                                        RuleId = "GROUP1-0002",
+                                    },
+                                },
+                            },
+                        },
+                        RuleSetType = "DefaultRuleSet",
+                        RuleSetVersion = "preview-1.0",
+                    },
+                },
+            },
+            PolicyName = "MicrosoftCdnWafPolicy",
+            PolicySettings = new AzureRM.Cdn.Latest.Inputs.PolicySettingsArgs
+            {
+                DefaultCustomBlockResponseBody = "PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
+                DefaultCustomBlockResponseStatusCode = 200,
+                DefaultRedirectUrl = "http://www.bing.com",
+            },
+            RateLimitRules = new AzureRM.Cdn.Latest.Inputs.RateLimitRuleListArgs
+            {
+                Rules = 
+                {
+                    new AzureRM.Cdn.Latest.Inputs.RateLimitRuleArgs
+                    {
+                        Action = "Block",
+                        EnabledState = "Enabled",
+                        MatchConditions = 
+                        {
+                            new AzureRM.Cdn.Latest.Inputs.MatchConditionArgs
+                            {
+                                MatchValue = 
+                                {
+                                    "192.168.1.0/24",
+                                    "10.0.0.0/24",
+                                },
+                                MatchVariable = "RemoteAddr",
+                                NegateCondition = false,
+                                Operator = "IPMatch",
+                                Transforms = {},
+                            },
+                        },
+                        Name = "RateLimitRule1",
+                        Priority = 1,
+                        RateLimitDurationInMinutes = 0,
+                        RateLimitThreshold = 1000,
+                    },
+                },
+            },
+            ResourceGroupName = "rg1",
+            Sku = new AzureRM.Cdn.Latest.Inputs.SkuArgs
+            {
+                Name = "Standard_Microsoft",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+policy = azurerm.cdn.latest.Policy("policy",
+    custom_rules={
+        "rules": [{
+            "action": "Block",
+            "enabledState": "Enabled",
+            "matchConditions": [
+                {
+                    "matchValue": ["CH"],
+                    "matchVariable": "RemoteAddr",
+                    "negateCondition": False,
+                    "operator": "GeoMatch",
+                    "transforms": [],
+                },
+                {
+                    "matchValue": ["windows"],
+                    "matchVariable": "RequestHeader",
+                    "negateCondition": False,
+                    "operator": "Contains",
+                    "selector": "UserAgent",
+                    "transforms": [],
+                },
+                {
+                    "matchValue": [
+                        "<?php",
+                        "?>",
+                    ],
+                    "matchVariable": "QueryString",
+                    "negateCondition": False,
+                    "operator": "Contains",
+                    "selector": "search",
+                    "transforms": [
+                        "UrlDecode",
+                        "Lowercase",
+                    ],
+                },
+            ],
+            "name": "CustomRule1",
+            "priority": 2,
+        }],
+    },
+    location="WestUs",
+    managed_rules={
+        "managedRuleSets": [{
+            "ruleGroupOverrides": [{
+                "ruleGroupName": "Group1",
+                "rules": [
+                    {
+                        "action": "Redirect",
+                        "enabledState": "Enabled",
+                        "ruleId": "GROUP1-0001",
+                    },
+                    {
+                        "enabledState": "Disabled",
+                        "ruleId": "GROUP1-0002",
+                    },
+                ],
+            }],
+            "ruleSetType": "DefaultRuleSet",
+            "ruleSetVersion": "preview-1.0",
+        }],
+    },
+    policy_name="MicrosoftCdnWafPolicy",
+    policy_settings={
+        "defaultCustomBlockResponseBody": "PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
+        "defaultCustomBlockResponseStatusCode": 200,
+        "defaultRedirectUrl": "http://www.bing.com",
+    },
+    rate_limit_rules={
+        "rules": [{
+            "action": "Block",
+            "enabledState": "Enabled",
+            "matchConditions": [{
+                "matchValue": [
+                    "192.168.1.0/24",
+                    "10.0.0.0/24",
+                ],
+                "matchVariable": "RemoteAddr",
+                "negateCondition": False,
+                "operator": "IPMatch",
+                "transforms": [],
+            }],
+            "name": "RateLimitRule1",
+            "priority": 1,
+            "rateLimitDurationInMinutes": 0,
+            "rateLimitThreshold": 1000,
+        }],
+    },
+    resource_group_name="rg1",
+    sku={
+        "name": "Standard_Microsoft",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const policy = new azurerm.cdn.latest.Policy("policy", {
+    customRules: {
+        rules: [{
+            action: "Block",
+            enabledState: "Enabled",
+            matchConditions: [
+                {
+                    matchValue: ["CH"],
+                    matchVariable: "RemoteAddr",
+                    negateCondition: false,
+                    operator: "GeoMatch",
+                    transforms: [],
+                },
+                {
+                    matchValue: ["windows"],
+                    matchVariable: "RequestHeader",
+                    negateCondition: false,
+                    operator: "Contains",
+                    selector: "UserAgent",
+                    transforms: [],
+                },
+                {
+                    matchValue: [
+                        "<?php",
+                        "?>",
+                    ],
+                    matchVariable: "QueryString",
+                    negateCondition: false,
+                    operator: "Contains",
+                    selector: "search",
+                    transforms: [
+                        "UrlDecode",
+                        "Lowercase",
+                    ],
+                },
+            ],
+            name: "CustomRule1",
+            priority: 2,
+        }],
+    },
+    location: "WestUs",
+    managedRules: {
+        managedRuleSets: [{
+            ruleGroupOverrides: [{
+                ruleGroupName: "Group1",
+                rules: [
+                    {
+                        action: "Redirect",
+                        enabledState: "Enabled",
+                        ruleId: "GROUP1-0001",
+                    },
+                    {
+                        enabledState: "Disabled",
+                        ruleId: "GROUP1-0002",
+                    },
+                ],
+            }],
+            ruleSetType: "DefaultRuleSet",
+            ruleSetVersion: "preview-1.0",
+        }],
+    },
+    policyName: "MicrosoftCdnWafPolicy",
+    policySettings: {
+        defaultCustomBlockResponseBody: "PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
+        defaultCustomBlockResponseStatusCode: 200,
+        defaultRedirectUrl: "http://www.bing.com",
+    },
+    rateLimitRules: {
+        rules: [{
+            action: "Block",
+            enabledState: "Enabled",
+            matchConditions: [{
+                matchValue: [
+                    "192.168.1.0/24",
+                    "10.0.0.0/24",
+                ],
+                matchVariable: "RemoteAddr",
+                negateCondition: false,
+                operator: "IPMatch",
+                transforms: [],
+            }],
+            name: "RateLimitRule1",
+            priority: 1,
+            rateLimitDurationInMinutes: 0,
+            rateLimitThreshold: 1000,
+        }],
+    },
+    resourceGroupName: "rg1",
+    sku: {
+        name: "Standard_Microsoft",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Policy Resource {#create}

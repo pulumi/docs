@@ -12,6 +12,122 @@ meta_desc: "Explore the InstanceFailoverGroup resource of the sql/v20171001previ
 
 An instance failover group.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create failover group
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instanceFailoverGroup = new AzureRM.Sql.V20171001Preview.InstanceFailoverGroup("instanceFailoverGroup", new AzureRM.Sql.V20171001Preview.InstanceFailoverGroupArgs
+        {
+            FailoverGroupName = "failover-group-test-3",
+            LocationName = "Japan East",
+            ManagedInstancePairs = 
+            {
+                new AzureRM.Sql.V20171001Preview.Inputs.ManagedInstancePairInfoArgs
+                {
+                    PartnerManagedInstanceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-secondary-mngdInstance",
+                    PrimaryManagedInstanceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-primary-mngdInstance",
+                },
+            },
+            PartnerRegions = 
+            {
+                new AzureRM.Sql.V20171001Preview.Inputs.PartnerRegionInfoArgs
+                {
+                    Location = "Japan West",
+                },
+            },
+            ReadOnlyEndpoint = new AzureRM.Sql.V20171001Preview.Inputs.InstanceFailoverGroupReadOnlyEndpointArgs
+            {
+                FailoverPolicy = "Disabled",
+            },
+            ReadWriteEndpoint = new AzureRM.Sql.V20171001Preview.Inputs.InstanceFailoverGroupReadWriteEndpointArgs
+            {
+                FailoverPolicy = "Automatic",
+                FailoverWithDataLossGracePeriodMinutes = 480,
+            },
+            ResourceGroupName = "Default",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+instance_failover_group = azurerm.sql.v20171001preview.InstanceFailoverGroup("instanceFailoverGroup",
+    failover_group_name="failover-group-test-3",
+    location_name="Japan East",
+    managed_instance_pairs=[{
+        "partnerManagedInstanceId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-secondary-mngdInstance",
+        "primaryManagedInstanceId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-primary-mngdInstance",
+    }],
+    partner_regions=[{
+        "location": "Japan West",
+    }],
+    read_only_endpoint={
+        "failoverPolicy": "Disabled",
+    },
+    read_write_endpoint={
+        "failoverPolicy": "Automatic",
+        "failoverWithDataLossGracePeriodMinutes": 480,
+    },
+    resource_group_name="Default")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const instanceFailoverGroup = new azurerm.sql.v20171001preview.InstanceFailoverGroup("instanceFailoverGroup", {
+    failoverGroupName: "failover-group-test-3",
+    locationName: "Japan East",
+    managedInstancePairs: [{
+        partnerManagedInstanceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-secondary-mngdInstance",
+        primaryManagedInstanceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-primary-mngdInstance",
+    }],
+    partnerRegions: [{
+        location: "Japan West",
+    }],
+    readOnlyEndpoint: {
+        failoverPolicy: "Disabled",
+    },
+    readWriteEndpoint: {
+        failoverPolicy: "Automatic",
+        failoverWithDataLossGracePeriodMinutes: 480,
+    },
+    resourceGroupName: "Default",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a InstanceFailoverGroup Resource {#create}

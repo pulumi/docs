@@ -12,6 +12,80 @@ meta_desc: "Explore the Profile resource of the cdn/latest module, including exa
 
 CDN profile is a logical grouping of endpoints that share the same settings, such as CDN provider and pricing tier.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Profiles_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var profile = new AzureRM.Cdn.Latest.Profile("profile", new AzureRM.Cdn.Latest.ProfileArgs
+        {
+            Location = "WestCentralUs",
+            ProfileName = "profile1",
+            ResourceGroupName = "RG",
+            Sku = new AzureRM.Cdn.Latest.Inputs.SkuArgs
+            {
+                Name = "Standard_Verizon",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+profile = azurerm.cdn.latest.Profile("profile",
+    location="WestCentralUs",
+    profile_name="profile1",
+    resource_group_name="RG",
+    sku={
+        "name": "Standard_Verizon",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const profile = new azurerm.cdn.latest.Profile("profile", {
+    location: "WestCentralUs",
+    profileName: "profile1",
+    resourceGroupName: "RG",
+    sku: {
+        name: "Standard_Verizon",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Profile Resource {#create}

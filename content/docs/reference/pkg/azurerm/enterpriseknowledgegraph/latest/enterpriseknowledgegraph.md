@@ -12,6 +12,83 @@ meta_desc: "Explore the EnterpriseKnowledgeGraph resource of the enterpriseknowl
 
 EnterpriseKnowledgeGraph resource definition
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create EnterpriseKnowledgeGraph
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var enterpriseKnowledgeGraph = new AzureRM.EnterpriseKnowledgeGraph.Latest.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph", new AzureRM.EnterpriseKnowledgeGraph.Latest.EnterpriseKnowledgeGraphArgs
+        {
+            Location = "West US",
+            ResourceGroupName = "OneResourceGroupName",
+            ResourceName = "sampleekgname",
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+enterprise_knowledge_graph = azurerm.enterpriseknowledgegraph.latest.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph",
+    location="West US",
+    resource_group_name="OneResourceGroupName",
+    resource_name="sampleekgname",
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const enterpriseKnowledgeGraph = new azurerm.enterpriseknowledgegraph.latest.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph", {
+    location: "West US",
+    resourceGroupName: "OneResourceGroupName",
+    resourceName: "sampleekgname",
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EnterpriseKnowledgeGraph Resource {#create}

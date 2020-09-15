@@ -12,6 +12,223 @@ meta_desc: "Explore the AssetFilter resource of the media/latest module, includi
 
 An Asset Filter.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create an Asset Filter
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var assetFilter = new AzureRM.Media.Latest.AssetFilter("assetFilter", new AzureRM.Media.Latest.AssetFilterArgs
+        {
+            AccountName = "contosomedia",
+            AssetName = "ClimbingMountRainer",
+            FilterName = "newAssetFilter",
+            FirstQuality = new AzureRM.Media.Latest.Inputs.FirstQualityArgs
+            {
+                Bitrate = 128000,
+            },
+            PresentationTimeRange = new AzureRM.Media.Latest.Inputs.PresentationTimeRangeArgs
+            {
+                EndTimestamp = 170000000,
+                ForceEndTimestamp = false,
+                LiveBackoffDuration = 0,
+                PresentationWindowDuration = 9.223372036854776e+18,
+                StartTimestamp = 0,
+                Timescale = 10000000,
+            },
+            ResourceGroupName = "contoso",
+            Tracks = 
+            {
+                new AzureRM.Media.Latest.Inputs.FilterTrackSelectionArgs
+                {
+                    TrackSelections = 
+                    {
+                        new AzureRM.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
+                        {
+                            Operation = "Equal",
+                            Property = "Type",
+                            Value = "Audio",
+                        },
+                        new AzureRM.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
+                        {
+                            Operation = "NotEqual",
+                            Property = "Language",
+                            Value = "en",
+                        },
+                        new AzureRM.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
+                        {
+                            Operation = "NotEqual",
+                            Property = "FourCC",
+                            Value = "EC-3",
+                        },
+                    },
+                },
+                new AzureRM.Media.Latest.Inputs.FilterTrackSelectionArgs
+                {
+                    TrackSelections = 
+                    {
+                        new AzureRM.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
+                        {
+                            Operation = "Equal",
+                            Property = "Type",
+                            Value = "Video",
+                        },
+                        new AzureRM.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
+                        {
+                            Operation = "Equal",
+                            Property = "Bitrate",
+                            Value = "3000000-5000000",
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+asset_filter = azurerm.media.latest.AssetFilter("assetFilter",
+    account_name="contosomedia",
+    asset_name="ClimbingMountRainer",
+    filter_name="newAssetFilter",
+    first_quality={
+        "bitrate": 128000,
+    },
+    presentation_time_range={
+        "endTimestamp": 170000000,
+        "forceEndTimestamp": False,
+        "liveBackoffDuration": 0,
+        "presentationWindowDuration": 9.223372036854776e+18,
+        "startTimestamp": 0,
+        "timescale": 10000000,
+    },
+    resource_group_name="contoso",
+    tracks=[
+        {
+            "trackSelections": [
+                {
+                    "operation": "Equal",
+                    "property": "Type",
+                    "value": "Audio",
+                },
+                {
+                    "operation": "NotEqual",
+                    "property": "Language",
+                    "value": "en",
+                },
+                {
+                    "operation": "NotEqual",
+                    "property": "FourCC",
+                    "value": "EC-3",
+                },
+            ],
+        },
+        {
+            "trackSelections": [
+                {
+                    "operation": "Equal",
+                    "property": "Type",
+                    "value": "Video",
+                },
+                {
+                    "operation": "Equal",
+                    "property": "Bitrate",
+                    "value": "3000000-5000000",
+                },
+            ],
+        },
+    ])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const assetFilter = new azurerm.media.latest.AssetFilter("assetFilter", {
+    accountName: "contosomedia",
+    assetName: "ClimbingMountRainer",
+    filterName: "newAssetFilter",
+    firstQuality: {
+        bitrate: 128000,
+    },
+    presentationTimeRange: {
+        endTimestamp: 170000000,
+        forceEndTimestamp: false,
+        liveBackoffDuration: 0,
+        presentationWindowDuration: 9.223372036854776e+18,
+        startTimestamp: 0,
+        timescale: 10000000,
+    },
+    resourceGroupName: "contoso",
+    tracks: [
+        {
+            trackSelections: [
+                {
+                    operation: "Equal",
+                    property: "Type",
+                    value: "Audio",
+                },
+                {
+                    operation: "NotEqual",
+                    property: "Language",
+                    value: "en",
+                },
+                {
+                    operation: "NotEqual",
+                    property: "FourCC",
+                    value: "EC-3",
+                },
+            ],
+        },
+        {
+            trackSelections: [
+                {
+                    operation: "Equal",
+                    property: "Type",
+                    value: "Video",
+                },
+                {
+                    operation: "Equal",
+                    property: "Bitrate",
+                    value: "3000000-5000000",
+                },
+            ],
+        },
+    ],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AssetFilter Resource {#create}

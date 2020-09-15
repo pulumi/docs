@@ -12,6 +12,140 @@ meta_desc: "Explore the DiagnosticSetting resource of the insights/v20170501prev
 
 The diagnostic setting resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or Updates the diagnostic setting
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var diagnosticSetting = new AzureRM.Insights.V20170501Preview.DiagnosticSetting("diagnosticSetting", new AzureRM.Insights.V20170501Preview.DiagnosticSettingArgs
+        {
+            EventHubAuthorizationRuleId = "/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
+            EventHubName = "myeventhub",
+            LogAnalyticsDestinationType = "Dedicated",
+            Logs = 
+            {
+                new AzureRM.Insights.V20170501Preview.Inputs.LogSettingsArgs
+                {
+                    Category = "WorkflowRuntime",
+                    Enabled = true,
+                    RetentionPolicy = new AzureRM.Insights.V20170501Preview.Inputs.RetentionPolicyArgs
+                    {
+                        Days = 0,
+                        Enabled = false,
+                    },
+                },
+            },
+            Metrics = 
+            {
+                new AzureRM.Insights.V20170501Preview.Inputs.MetricSettingsArgs
+                {
+                    Category = "WorkflowMetrics",
+                    Enabled = true,
+                    RetentionPolicy = new AzureRM.Insights.V20170501Preview.Inputs.RetentionPolicyArgs
+                    {
+                        Days = 0,
+                        Enabled = false,
+                    },
+                },
+            },
+            Name = "mysetting",
+            ResourceUri = "subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourcegroups/viruela1/providers/microsoft.logic/workflows/viruela6",
+            StorageAccountId = "/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1",
+            WorkspaceId = "",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+diagnostic_setting = azurerm.insights.v20170501preview.DiagnosticSetting("diagnosticSetting",
+    event_hub_authorization_rule_id="/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
+    event_hub_name="myeventhub",
+    log_analytics_destination_type="Dedicated",
+    logs=[{
+        "category": "WorkflowRuntime",
+        "enabled": True,
+        "retentionPolicy": {
+            "days": 0,
+            "enabled": False,
+        },
+    }],
+    metrics=[{
+        "category": "WorkflowMetrics",
+        "enabled": True,
+        "retentionPolicy": {
+            "days": 0,
+            "enabled": False,
+        },
+    }],
+    name="mysetting",
+    resource_uri="subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourcegroups/viruela1/providers/microsoft.logic/workflows/viruela6",
+    storage_account_id="/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1",
+    workspace_id="")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const diagnosticSetting = new azurerm.insights.v20170501preview.DiagnosticSetting("diagnosticSetting", {
+    eventHubAuthorizationRuleId: "/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
+    eventHubName: "myeventhub",
+    logAnalyticsDestinationType: "Dedicated",
+    logs: [{
+        category: "WorkflowRuntime",
+        enabled: true,
+        retentionPolicy: {
+            days: 0,
+            enabled: false,
+        },
+    }],
+    metrics: [{
+        category: "WorkflowMetrics",
+        enabled: true,
+        retentionPolicy: {
+            days: 0,
+            enabled: false,
+        },
+    }],
+    name: "mysetting",
+    resourceUri: "subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourcegroups/viruela1/providers/microsoft.logic/workflows/viruela6",
+    storageAccountId: "/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1",
+    workspaceId: "",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DiagnosticSetting Resource {#create}

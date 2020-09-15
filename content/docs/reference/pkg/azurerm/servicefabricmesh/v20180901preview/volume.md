@@ -12,6 +12,95 @@ meta_desc: "Explore the Volume resource of the servicefabricmesh/v20180901previe
 
 This type describes a volume resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateOrUpdateVolume
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var volume = new AzureRM.ServiceFabricMesh.V20180901Preview.Volume("volume", new AzureRM.ServiceFabricMesh.V20180901Preview.VolumeArgs
+        {
+            AzureFileParameters = new AzureRM.ServiceFabricMesh.V20180901Preview.Inputs.VolumeProviderParametersAzureFileArgs
+            {
+                AccountKey = "provide-account-key-here",
+                AccountName = "sbzdemoaccount",
+                ShareName = "sharel",
+            },
+            Description = "Service Fabric Mesh sample volume.",
+            Location = "EastUS",
+            Provider = "SFAzureFile",
+            ResourceGroupName = "sbz_demo",
+            Tags = ,
+            VolumeResourceName = "sampleVolume",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+volume = azurerm.servicefabricmesh.v20180901preview.Volume("volume",
+    azure_file_parameters={
+        "accountKey": "provide-account-key-here",
+        "accountName": "sbzdemoaccount",
+        "shareName": "sharel",
+    },
+    description="Service Fabric Mesh sample volume.",
+    location="EastUS",
+    provider="SFAzureFile",
+    resource_group_name="sbz_demo",
+    tags={},
+    volume_resource_name="sampleVolume")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const volume = new azurerm.servicefabricmesh.v20180901preview.Volume("volume", {
+    azureFileParameters: {
+        accountKey: "provide-account-key-here",
+        accountName: "sbzdemoaccount",
+        shareName: "sharel",
+    },
+    description: "Service Fabric Mesh sample volume.",
+    location: "EastUS",
+    provider: "SFAzureFile",
+    resourceGroupName: "sbz_demo",
+    tags: {},
+    volumeResourceName: "sampleVolume",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Volume Resource {#create}

@@ -12,6 +12,131 @@ meta_desc: "Explore the HealthAlert resource of the alertsmanagement/v20200804pr
 
 The health alert resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateResourceHealthAlertRule
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var healthAlert = new AzureRM.AlertsManagement.V20200804Preview.HealthAlert("healthAlert", new AzureRM.AlertsManagement.V20200804Preview.HealthAlertArgs
+        {
+            Actions = 
+            {
+                new AzureRM.AlertsManagement.V20200804Preview.Inputs.HealthAlertActionArgs
+                {
+                    ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+                    WebHookProperties = 
+                    {
+                        { "key11", "value11" },
+                        { "key12", "value12" },
+                    },
+                },
+            },
+            Criteria = new AzureRM.AlertsManagement.V20200804Preview.Inputs.HealthAlertCriteriaArgs
+            {
+                AllOf = 
+                {
+                    new AzureRM.AlertsManagement.V20200804Preview.Inputs.VmGuestHealthAlertCriterionArgs
+                    {
+                        HealthMonitorName = "root",
+                        Namespace = "VmGuestHealth",
+                    },
+                },
+            },
+            Description = "This is the description of the rule1",
+            Enabled = true,
+            Location = "global",
+            ResourceGroupName = "gigtest",
+            RuleName = "highcpu",
+            Scopes = 
+            {
+                "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/Microsoft.Compute/virtualMachines/gigwadme",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+health_alert = azurerm.alertsmanagement.v20200804preview.HealthAlert("healthAlert",
+    actions=[{
+        "actionGroupId": "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        "webHookProperties": {
+            "key11": "value11",
+            "key12": "value12",
+        },
+    }],
+    criteria={
+        "allOf": [{
+            "healthMonitorName": "root",
+            "namespace": "VmGuestHealth",
+        }],
+    },
+    description="This is the description of the rule1",
+    enabled=True,
+    location="global",
+    resource_group_name="gigtest",
+    rule_name="highcpu",
+    scopes=["/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/Microsoft.Compute/virtualMachines/gigwadme"])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const healthAlert = new azurerm.alertsmanagement.v20200804preview.HealthAlert("healthAlert", {
+    actions: [{
+        actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        webHookProperties: {
+            key11: "value11",
+            key12: "value12",
+        },
+    }],
+    criteria: {
+        allOf: [{
+            healthMonitorName: "root",
+            namespace: "VmGuestHealth",
+        }],
+    },
+    description: "This is the description of the rule1",
+    enabled: true,
+    location: "global",
+    resourceGroupName: "gigtest",
+    ruleName: "highcpu",
+    scopes: ["/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/Microsoft.Compute/virtualMachines/gigwadme"],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a HealthAlert Resource {#create}

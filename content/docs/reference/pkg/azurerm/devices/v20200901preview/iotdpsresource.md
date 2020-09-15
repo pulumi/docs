@@ -12,6 +12,60 @@ meta_desc: "Explore the IotDpsResource resource of the devices/v20200901preview 
 
 The description of the provisioning service.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### DPSCreate
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+iot_dps_resource = .("iotDpsResource",
+    location="East US",
+    provisioning_service_name="myFirstProvisioningService",
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 1,
+        "name": "S1",
+    },
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const iotDpsResource = new .("iotDpsResource", {
+    location: "East US",
+    provisioningServiceName: "myFirstProvisioningService",
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 1,
+        name: "S1",
+    },
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IotDpsResource Resource {#create}

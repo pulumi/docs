@@ -12,6 +12,107 @@ meta_desc: "Explore the AssessmentMetadataInSubscription resource of the securit
 
 Security assessment metadata
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create security assessment metadata for subscription
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var assessmentMetadataInSubscription = new AzureRM.Security.Latest.AssessmentMetadataInSubscription("assessmentMetadataInSubscription", new AzureRM.Security.Latest.AssessmentMetadataInSubscriptionArgs
+        {
+            AssessmentMetadataName = "ca039e75-a276-4175-aebc-bcd41e4b14b7",
+            AssessmentType = "CustomerManaged",
+            Category = 
+            {
+                "Compute",
+            },
+            Description = "Install an endpoint protection solution on your virtual machines scale sets, to protect them from threats and vulnerabilities.",
+            DisplayName = "Install endpoint protection solution on virtual machine scale sets",
+            ImplementationEffort = "Low",
+            RemediationDescription = "To install an endpoint protection solution: 1.  <a href=\"https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-faq#how-do-i-turn-on-antimalware-in-my-virtual-machine-scale-set\">Follow the instructions in How do I turn on antimalware in my virtual machine scale set</a>",
+            Severity = "Medium",
+            Threats = 
+            {
+                "dataExfiltration",
+                "dataSpillage",
+                "maliciousInsider",
+            },
+            UserImpact = "Low",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+assessment_metadata_in_subscription = azurerm.security.latest.AssessmentMetadataInSubscription("assessmentMetadataInSubscription",
+    assessment_metadata_name="ca039e75-a276-4175-aebc-bcd41e4b14b7",
+    assessment_type="CustomerManaged",
+    category=["Compute"],
+    description="Install an endpoint protection solution on your virtual machines scale sets, to protect them from threats and vulnerabilities.",
+    display_name="Install endpoint protection solution on virtual machine scale sets",
+    implementation_effort="Low",
+    remediation_description="To install an endpoint protection solution: 1.  <a href=\"https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-faq#how-do-i-turn-on-antimalware-in-my-virtual-machine-scale-set\">Follow the instructions in How do I turn on antimalware in my virtual machine scale set</a>",
+    severity="Medium",
+    threats=[
+        "dataExfiltration",
+        "dataSpillage",
+        "maliciousInsider",
+    ],
+    user_impact="Low")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const assessmentMetadataInSubscription = new azurerm.security.latest.AssessmentMetadataInSubscription("assessmentMetadataInSubscription", {
+    assessmentMetadataName: "ca039e75-a276-4175-aebc-bcd41e4b14b7",
+    assessmentType: "CustomerManaged",
+    category: ["Compute"],
+    description: "Install an endpoint protection solution on your virtual machines scale sets, to protect them from threats and vulnerabilities.",
+    displayName: "Install endpoint protection solution on virtual machine scale sets",
+    implementationEffort: "Low",
+    remediationDescription: "To install an endpoint protection solution: 1.  <a href=\"https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-faq#how-do-i-turn-on-antimalware-in-my-virtual-machine-scale-set\">Follow the instructions in How do I turn on antimalware in my virtual machine scale set</a>",
+    severity: "Medium",
+    threats: [
+        "dataExfiltration",
+        "dataSpillage",
+        "maliciousInsider",
+    ],
+    userImpact: "Low",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AssessmentMetadataInSubscription Resource {#create}

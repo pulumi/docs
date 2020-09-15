@@ -12,6 +12,324 @@ meta_desc: "Explore the Channel resource of the botservice/latest module, includ
 
 Bot channel resource definition
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Alexa Bot
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var channel = new AzureRM.BotService.Latest.Channel("channel", new AzureRM.BotService.Latest.ChannelArgs
+        {
+            ChannelName = "AlexaChannel",
+            Location = "global",
+            Properties = 
+            {
+                { "alexaSkillId", "XAlexaSkillIdX" },
+                { "isEnabled", true },
+            },
+            ResourceGroupName = "OneResourceGroupName",
+            ResourceName = "samplebotname",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+channel = azurerm.botservice.latest.Channel("channel",
+    channel_name="AlexaChannel",
+    location="global",
+    properties={
+        "alexaSkillId": "XAlexaSkillIdX",
+        "isEnabled": True,
+    },
+    resource_group_name="OneResourceGroupName",
+    resource_name="samplebotname")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const channel = new azurerm.botservice.latest.Channel("channel", {
+    channelName: "AlexaChannel",
+    location: "global",
+    properties: {
+        alexaSkillId: "XAlexaSkillIdX",
+        isEnabled: true,
+    },
+    resourceGroupName: "OneResourceGroupName",
+    resourceName: "samplebotname",
+});
+
+```
+
+{{% /example %}}
+
+### Create Bot
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var channel = new AzureRM.BotService.Latest.Channel("channel", new AzureRM.BotService.Latest.ChannelArgs
+        {
+            ChannelName = "EmailChannel",
+            Location = "global",
+            Properties = 
+            {
+                { "emailAddress", "a@b.com" },
+                { "isEnabled", true },
+                { "password", "pwd" },
+            },
+            ResourceGroupName = "OneResourceGroupName",
+            ResourceName = "samplebotname",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+channel = azurerm.botservice.latest.Channel("channel",
+    channel_name="EmailChannel",
+    location="global",
+    properties={
+        "emailAddress": "a@b.com",
+        "isEnabled": True,
+        "password": "pwd",
+    },
+    resource_group_name="OneResourceGroupName",
+    resource_name="samplebotname")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const channel = new azurerm.botservice.latest.Channel("channel", {
+    channelName: "EmailChannel",
+    location: "global",
+    properties: {
+        emailAddress: "a@b.com",
+        isEnabled: true,
+        password: "pwd",
+    },
+    resourceGroupName: "OneResourceGroupName",
+    resourceName: "samplebotname",
+});
+
+```
+
+{{% /example %}}
+
+### Create DirectLine Speech Bot
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var channel = new AzureRM.BotService.Latest.Channel("channel", new AzureRM.BotService.Latest.ChannelArgs
+        {
+            ChannelName = "DirectLineSpeechChannel",
+            Location = "global",
+            Properties = 
+            {
+                { "cognitiveServicesSubscriptionId", "XcognitiveServicesSubscriptionIdX" },
+                { "isEnabled", true },
+            },
+            ResourceGroupName = "OneResourceGroupName",
+            ResourceName = "samplebotname",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+channel = azurerm.botservice.latest.Channel("channel",
+    channel_name="DirectLineSpeechChannel",
+    location="global",
+    properties={
+        "cognitiveServicesSubscriptionId": "XcognitiveServicesSubscriptionIdX",
+        "isEnabled": True,
+    },
+    resource_group_name="OneResourceGroupName",
+    resource_name="samplebotname")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const channel = new azurerm.botservice.latest.Channel("channel", {
+    channelName: "DirectLineSpeechChannel",
+    location: "global",
+    properties: {
+        cognitiveServicesSubscriptionId: "XcognitiveServicesSubscriptionIdX",
+        isEnabled: true,
+    },
+    resourceGroupName: "OneResourceGroupName",
+    resourceName: "samplebotname",
+});
+
+```
+
+{{% /example %}}
+
+### Create Line Bot
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var channel = new AzureRM.BotService.Latest.Channel("channel", new AzureRM.BotService.Latest.ChannelArgs
+        {
+            ChannelName = "LineChannel",
+            Location = "global",
+            Properties = 
+            {
+                { "lineRegistrations", 
+                {
+                    
+                    {
+                        { "channelAccessToken", "channelAccessToken" },
+                        { "channelSecret", "channelSecret" },
+                    },
+                } },
+            },
+            ResourceGroupName = "OneResourceGroupName",
+            ResourceName = "samplebotname",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+channel = azurerm.botservice.latest.Channel("channel",
+    channel_name="LineChannel",
+    location="global",
+    properties={
+        "lineRegistrations": [{
+            "channelAccessToken": "channelAccessToken",
+            "channelSecret": "channelSecret",
+        }],
+    },
+    resource_group_name="OneResourceGroupName",
+    resource_name="samplebotname")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const channel = new azurerm.botservice.latest.Channel("channel", {
+    channelName: "LineChannel",
+    location: "global",
+    properties: {
+        lineRegistrations: [{
+            channelAccessToken: "channelAccessToken",
+            channelSecret: "channelSecret",
+        }],
+    },
+    resourceGroupName: "OneResourceGroupName",
+    resourceName: "samplebotname",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Channel Resource {#create}

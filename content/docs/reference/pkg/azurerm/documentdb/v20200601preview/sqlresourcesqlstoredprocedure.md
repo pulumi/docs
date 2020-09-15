@@ -12,6 +12,92 @@ meta_desc: "Explore the SqlResourceSqlStoredProcedure resource of the documentdb
 
 An Azure Cosmos DB storedProcedure.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CosmosDBSqlStoredProcedureCreateUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlResourceSqlStoredProcedure = new AzureRM.DocumentDB.V20200601Preview.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure", new AzureRM.DocumentDB.V20200601Preview.SqlResourceSqlStoredProcedureArgs
+        {
+            AccountName = "ddb1",
+            ContainerName = "containerName",
+            DatabaseName = "databaseName",
+            Options = ,
+            Resource = new AzureRM.DocumentDB.V20200601Preview.Inputs.SqlStoredProcedureResourceArgs
+            {
+                Body = "body",
+                Id = "storedProcedureName",
+            },
+            ResourceGroupName = "rg1",
+            StoredProcedureName = "storedProcedureName",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sql_resource_sql_stored_procedure = azurerm.documentdb.v20200601preview.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure",
+    account_name="ddb1",
+    container_name="containerName",
+    database_name="databaseName",
+    options={},
+    resource={
+        "body": "body",
+        "id": "storedProcedureName",
+    },
+    resource_group_name="rg1",
+    stored_procedure_name="storedProcedureName")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sqlResourceSqlStoredProcedure = new azurerm.documentdb.v20200601preview.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure", {
+    accountName: "ddb1",
+    containerName: "containerName",
+    databaseName: "databaseName",
+    options: {},
+    resource: {
+        body: "body",
+        id: "storedProcedureName",
+    },
+    resourceGroupName: "rg1",
+    storedProcedureName: "storedProcedureName",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SqlResourceSqlStoredProcedure Resource {#create}

@@ -12,6 +12,82 @@ meta_desc: "Explore the Variable resource of the automation/latest module, inclu
 
 Definition of the variable.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a variable
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var variable = new AzureRM.Automation.Latest.Variable("variable", new AzureRM.Automation.Latest.VariableArgs
+        {
+            AutomationAccountName = "sampleAccount9",
+            Description = "my description",
+            IsEncrypted = false,
+            Name = "sampleVariable",
+            ResourceGroupName = "rg",
+            Value = "\"ComputerName.domain.com\"",
+            VariableName = "sampleVariable",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+variable = azurerm.automation.latest.Variable("variable",
+    automation_account_name="sampleAccount9",
+    description="my description",
+    is_encrypted=False,
+    name="sampleVariable",
+    resource_group_name="rg",
+    value="\"ComputerName.domain.com\"",
+    variable_name="sampleVariable")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const variable = new azurerm.automation.latest.Variable("variable", {
+    automationAccountName: "sampleAccount9",
+    description: "my description",
+    isEncrypted: false,
+    name: "sampleVariable",
+    resourceGroupName: "rg",
+    value: "\"ComputerName.domain.com\"",
+    variableName: "sampleVariable",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Variable Resource {#create}

@@ -12,6 +12,60 @@ meta_desc: "Explore the IotDefenderSetting resource of the security/v20200806pre
 
 IoT Defender settings
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update IoT Defender settings
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var iotDefenderSetting = new AzureRM.Security.V20200806Preview.IotDefenderSetting("iotDefenderSetting", new AzureRM.Security.V20200806Preview.IotDefenderSettingArgs
+        {
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+iot_defender_setting = azurerm.security.v20200806preview.IotDefenderSetting("iotDefenderSetting")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const iotDefenderSetting = new azurerm.security.v20200806preview.IotDefenderSetting("iotDefenderSetting", {});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IotDefenderSetting Resource {#create}

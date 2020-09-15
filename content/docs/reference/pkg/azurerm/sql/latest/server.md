@@ -12,6 +12,154 @@ meta_desc: "Explore the Server resource of the sql/latest module, including exam
 
 Represents a server.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create server max
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new AzureRM.Sql.Latest.Server("server", new AzureRM.Sql.Latest.ServerArgs
+        {
+            AdministratorLogin = "dummylogin",
+            AdministratorLoginPassword = "Un53cuRE!",
+            Location = "Japan East",
+            ResourceGroupName = "sqlcrudtest-7398",
+            ServerName = "sqlcrudtest-4645",
+            Tags = 
+            {
+                { "tagKey1", "TagValue1" },
+            },
+            Version = "12.0",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server = azurerm.sql.latest.Server("server",
+    administrator_login="dummylogin",
+    administrator_login_password="Un53cuRE!",
+    location="Japan East",
+    resource_group_name="sqlcrudtest-7398",
+    server_name="sqlcrudtest-4645",
+    tags={
+        "tagKey1": "TagValue1",
+    },
+    version="12.0")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const server = new azurerm.sql.latest.Server("server", {
+    administratorLogin: "dummylogin",
+    administratorLoginPassword: "Un53cuRE!",
+    location: "Japan East",
+    resourceGroupName: "sqlcrudtest-7398",
+    serverName: "sqlcrudtest-4645",
+    tags: {
+        tagKey1: "TagValue1",
+    },
+    version: "12.0",
+});
+
+```
+
+{{% /example %}}
+
+### Create server min
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new AzureRM.Sql.Latest.Server("server", new AzureRM.Sql.Latest.ServerArgs
+        {
+            AdministratorLogin = "dummylogin",
+            AdministratorLoginPassword = "Un53cuRE!",
+            Location = "Japan East",
+            ResourceGroupName = "sqlcrudtest-7398",
+            ServerName = "sqlcrudtest-4645",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server = azurerm.sql.latest.Server("server",
+    administrator_login="dummylogin",
+    administrator_login_password="Un53cuRE!",
+    location="Japan East",
+    resource_group_name="sqlcrudtest-7398",
+    server_name="sqlcrudtest-4645")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const server = new azurerm.sql.latest.Server("server", {
+    administratorLogin: "dummylogin",
+    administratorLoginPassword: "Un53cuRE!",
+    location: "Japan East",
+    resourceGroupName: "sqlcrudtest-7398",
+    serverName: "sqlcrudtest-4645",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Server Resource {#create}

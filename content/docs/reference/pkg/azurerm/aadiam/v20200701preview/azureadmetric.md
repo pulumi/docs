@@ -12,6 +12,73 @@ meta_desc: "Explore the AzureADMetric resource of the aadiam/v20200701preview mo
 
 AzureADMetrics resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### azureADMetricsCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var azureADMetric = new AzureRM.Aadiam.V20200701Preview.AzureADMetric("azureADMetric", new AzureRM.Aadiam.V20200701Preview.AzureADMetricArgs
+        {
+            AzureADMetricsName = "ddb1",
+            Location = "West US",
+            ResourceGroupName = "rg1",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+azure_ad_metric = azurerm.aadiam.v20200701preview.AzureADMetric("azureADMetric",
+    azure_ad_metrics_name="ddb1",
+    location="West US",
+    resource_group_name="rg1",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const azureADMetric = new azurerm.aadiam.v20200701preview.AzureADMetric("azureADMetric", {
+    azureADMetricsName: "ddb1",
+    location: "West US",
+    resourceGroupName: "rg1",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AzureADMetric Resource {#create}

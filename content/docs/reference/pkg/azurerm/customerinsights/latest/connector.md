@@ -12,6 +12,99 @@ meta_desc: "Explore the Connector resource of the customerinsights/latest module
 
 The connector resource format.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Connectors_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var connector = new AzureRM.CustomerInsights.Latest.Connector("connector", new AzureRM.CustomerInsights.Latest.ConnectorArgs
+        {
+            ConnectorName = "testConnector",
+            ConnectorProperties = 
+            {
+                { "connectionKeyVaultUrl", 
+                {
+                    { "organizationId", "XXX" },
+                    { "organizationUrl", "https://XXX.crmlivetie.com/" },
+                } },
+            },
+            ConnectorType = "AzureBlob",
+            Description = "Test connector",
+            DisplayName = "testConnector",
+            HubName = "sdkTestHub",
+            ResourceGroupName = "TestHubRG",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+connector = azurerm.customerinsights.latest.Connector("connector",
+    connector_name="testConnector",
+    connector_properties={
+        "connectionKeyVaultUrl": {
+            "organization_id": "XXX",
+            "organizationUrl": "https://XXX.crmlivetie.com/",
+        },
+    },
+    connector_type="AzureBlob",
+    description="Test connector",
+    display_name="testConnector",
+    hub_name="sdkTestHub",
+    resource_group_name="TestHubRG")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const connector = new azurerm.customerinsights.latest.Connector("connector", {
+    connectorName: "testConnector",
+    connectorProperties: {
+        connectionKeyVaultUrl: {
+            organizationId: "XXX",
+            organizationUrl: "https://XXX.crmlivetie.com/",
+        },
+    },
+    connectorType: "AzureBlob",
+    description: "Test connector",
+    displayName: "testConnector",
+    hubName: "sdkTestHub",
+    resourceGroupName: "TestHubRG",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Connector Resource {#create}

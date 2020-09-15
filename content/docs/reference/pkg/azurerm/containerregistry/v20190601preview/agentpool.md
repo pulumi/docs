@@ -13,6 +13,92 @@ meta_desc: "Explore the AgentPool resource of the containerregistry/v20190601pre
 The agentpool that has the ARM resource and properties.
 The agentpool will have all information to create an agent pool.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### AgentPools_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var agentPool = new AzureRM.ContainerRegistry.V20190601Preview.AgentPool("agentPool", new AzureRM.ContainerRegistry.V20190601Preview.AgentPoolArgs
+        {
+            AgentPoolName = "myAgentPool",
+            Count = 1,
+            Location = "WESTUS",
+            Os = "Linux",
+            RegistryName = "myRegistry",
+            ResourceGroupName = "myResourceGroup",
+            Tags = 
+            {
+                { "key", "value" },
+            },
+            Tier = "S1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+agent_pool = azurerm.containerregistry.v20190601preview.AgentPool("agentPool",
+    agent_pool_name="myAgentPool",
+    count=1,
+    location="WESTUS",
+    os="Linux",
+    registry_name="myRegistry",
+    resource_group_name="myResourceGroup",
+    tags={
+        "key": "value",
+    },
+    tier="S1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const agentPool = new azurerm.containerregistry.v20190601preview.AgentPool("agentPool", {
+    agentPoolName: "myAgentPool",
+    count: 1,
+    location: "WESTUS",
+    os: "Linux",
+    registryName: "myRegistry",
+    resourceGroupName: "myResourceGroup",
+    tags: {
+        key: "value",
+    },
+    tier: "S1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AgentPool Resource {#create}

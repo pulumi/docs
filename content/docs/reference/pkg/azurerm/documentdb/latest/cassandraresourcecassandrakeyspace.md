@@ -12,6 +12,89 @@ meta_desc: "Explore the CassandraResourceCassandraKeyspace resource of the docum
 
 An Azure Cosmos DB Cassandra keyspace.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CosmosDBCassandraKeyspaceCreateUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cassandraResourceCassandraKeyspace = new AzureRM.DocumentDB.Latest.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace", new AzureRM.DocumentDB.Latest.CassandraResourceCassandraKeyspaceArgs
+        {
+            AccountName = "ddb1",
+            KeyspaceName = "keyspaceName",
+            Location = "West US",
+            Options = ,
+            Resource = new AzureRM.DocumentDB.Latest.Inputs.CassandraKeyspaceResourceArgs
+            {
+                Id = "keyspaceName",
+            },
+            ResourceGroupName = "rg1",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cassandra_resource_cassandra_keyspace = azurerm.documentdb.latest.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace",
+    account_name="ddb1",
+    keyspace_name="keyspaceName",
+    location="West US",
+    options={},
+    resource={
+        "id": "keyspaceName",
+    },
+    resource_group_name="rg1",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cassandraResourceCassandraKeyspace = new azurerm.documentdb.latest.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace", {
+    accountName: "ddb1",
+    keyspaceName: "keyspaceName",
+    location: "West US",
+    options: {},
+    resource: {
+        id: "keyspaceName",
+    },
+    resourceGroupName: "rg1",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CassandraResourceCassandraKeyspace Resource {#create}

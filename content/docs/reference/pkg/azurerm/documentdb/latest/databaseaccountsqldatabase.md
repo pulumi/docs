@@ -12,6 +12,83 @@ meta_desc: "Explore the DatabaseAccountSqlDatabase resource of the documentdb/la
 
 An Azure Cosmos DB SQL database.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CosmosDBSqlDatabaseCreateUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var databaseAccountSqlDatabase = new AzureRM.DocumentDB.Latest.DatabaseAccountSqlDatabase("databaseAccountSqlDatabase", new AzureRM.DocumentDB.Latest.DatabaseAccountSqlDatabaseArgs
+        {
+            AccountName = "ddb1",
+            DatabaseName = "databaseName",
+            Options = ,
+            Resource = new AzureRM.DocumentDB.Latest.Inputs.SqlDatabaseResourceArgs
+            {
+                Id = "databaseName",
+            },
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database_account_sql_database = azurerm.documentdb.latest.DatabaseAccountSqlDatabase("databaseAccountSqlDatabase",
+    account_name="ddb1",
+    database_name="databaseName",
+    options={},
+    resource={
+        "id": "databaseName",
+    },
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const databaseAccountSqlDatabase = new azurerm.documentdb.latest.DatabaseAccountSqlDatabase("databaseAccountSqlDatabase", {
+    accountName: "ddb1",
+    databaseName: "databaseName",
+    options: {},
+    resource: {
+        id: "databaseName",
+    },
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DatabaseAccountSqlDatabase Resource {#create}

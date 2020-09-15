@@ -12,6 +12,199 @@ meta_desc: "Explore the Server resource of the dbforpostgresql/v20200214privatep
 
 Represents a server.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a database as a point in time restore
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new AzureRM.DBForPostgreSql.V20200214PrivatePreview.Server("server", new AzureRM.DBForPostgreSql.V20200214PrivatePreview.ServerArgs
+        {
+            CreateMode = "PointInTimeRestore",
+            Location = "westus",
+            PointInTimeUTC = "2020-06-30T23:41:49.000Z",
+            ResourceGroupName = "TestGroup",
+            ServerName = "pgtestsvc4",
+            SourceServerName = "sourcePgServerName",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server = azurerm.dbforpostgresql.v20200214privatepreview.Server("server",
+    create_mode="PointInTimeRestore",
+    location="westus",
+    point_in_time_utc="2020-06-30T23:41:49.000Z",
+    resource_group_name="TestGroup",
+    server_name="pgtestsvc4",
+    source_server_name="sourcePgServerName")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const server = new azurerm.dbforpostgresql.v20200214privatepreview.Server("server", {
+    createMode: "PointInTimeRestore",
+    location: "westus",
+    pointInTimeUTC: "2020-06-30T23:41:49.000Z",
+    resourceGroupName: "TestGroup",
+    serverName: "pgtestsvc4",
+    sourceServerName: "sourcePgServerName",
+});
+
+```
+
+{{% /example %}}
+
+### Create a new server
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new AzureRM.DBForPostgreSql.V20200214PrivatePreview.Server("server", new AzureRM.DBForPostgreSql.V20200214PrivatePreview.ServerArgs
+        {
+            AdministratorLogin = "cloudsa",
+            AdministratorLoginPassword = "password",
+            AvailabilityZone = "1",
+            DelegatedSubnetArguments = 
+            {
+                { "subnetArmResourceId", "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/test-vnet-subnet" },
+            },
+            HaEnabled = "Enabled",
+            Location = "westus",
+            ResourceGroupName = "testrg",
+            ServerName = "pgtestsvc4",
+            Sku = new AzureRM.DBForPostgreSql.V20200214PrivatePreview.Inputs.SkuArgs
+            {
+                Name = "Standard_D4s_v3",
+                Tier = "GeneralPurpose",
+            },
+            StorageProfile = new AzureRM.DBForPostgreSql.V20200214PrivatePreview.Inputs.StorageProfileArgs
+            {
+                BackupRetentionDays = 7,
+                StorageMB = 524288,
+            },
+            Tags = 
+            {
+                { "ElasticServer", "1" },
+            },
+            Version = "12",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server = azurerm.dbforpostgresql.v20200214privatepreview.Server("server",
+    administrator_login="cloudsa",
+    administrator_login_password="password",
+    availability_zone="1",
+    delegated_subnet_arguments={
+        "subnetArmResourceId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/test-vnet-subnet",
+    },
+    ha_enabled="Enabled",
+    location="westus",
+    resource_group_name="testrg",
+    server_name="pgtestsvc4",
+    sku={
+        "name": "Standard_D4s_v3",
+        "tier": "GeneralPurpose",
+    },
+    storage_profile={
+        "backupRetentionDays": 7,
+        "storageMB": 524288,
+    },
+    tags={
+        "ElasticServer": "1",
+    },
+    version="12")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const server = new azurerm.dbforpostgresql.v20200214privatepreview.Server("server", {
+    administratorLogin: "cloudsa",
+    administratorLoginPassword: "password",
+    availabilityZone: "1",
+    delegatedSubnetArguments: {
+        subnetArmResourceId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/test-vnet-subnet",
+    },
+    haEnabled: "Enabled",
+    location: "westus",
+    resourceGroupName: "testrg",
+    serverName: "pgtestsvc4",
+    sku: {
+        name: "Standard_D4s_v3",
+        tier: "GeneralPurpose",
+    },
+    storageProfile: {
+        backupRetentionDays: 7,
+        storageMB: 524288,
+    },
+    tags: {
+        ElasticServer: "1",
+    },
+    version: "12",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Server Resource {#create}

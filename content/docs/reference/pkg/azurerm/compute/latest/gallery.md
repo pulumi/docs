@@ -12,6 +12,145 @@ meta_desc: "Explore the Gallery resource of the compute/latest module, including
 
 Specifies information about the Shared Image Gallery that you want to create or update.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a simple gallery with sharing profile.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var gallery = new AzureRM.Compute.Latest.Gallery("gallery", new AzureRM.Compute.Latest.GalleryArgs
+        {
+            Description = "This is the gallery description.",
+            GalleryName = "myGalleryName",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            SharingProfile = 
+            {
+                { "permissions", "Groups" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+gallery = azurerm.compute.latest.Gallery("gallery",
+    description="This is the gallery description.",
+    gallery_name="myGalleryName",
+    location="West US",
+    resource_group_name="myResourceGroup",
+    sharing_profile={
+        "permissions": "Groups",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const gallery = new azurerm.compute.latest.Gallery("gallery", {
+    description: "This is the gallery description.",
+    galleryName: "myGalleryName",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    sharingProfile: {
+        permissions: "Groups",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create or update a simple gallery.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var gallery = new AzureRM.Compute.Latest.Gallery("gallery", new AzureRM.Compute.Latest.GalleryArgs
+        {
+            Description = "This is the gallery description.",
+            GalleryName = "myGalleryName",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+gallery = azurerm.compute.latest.Gallery("gallery",
+    description="This is the gallery description.",
+    gallery_name="myGalleryName",
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const gallery = new azurerm.compute.latest.Gallery("gallery", {
+    description: "This is the gallery description.",
+    galleryName: "myGalleryName",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Gallery Resource {#create}

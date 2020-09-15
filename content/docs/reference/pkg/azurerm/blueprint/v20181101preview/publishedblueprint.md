@@ -12,6 +12,129 @@ meta_desc: "Explore the PublishedBlueprint resource of the blueprint/v20181101pr
 
 Represents a published blueprint.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PublishedManagementGroupBlueprint_Publish
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var publishedBlueprint = new AzureRM.Blueprint.V20181101Preview.PublishedBlueprint("publishedBlueprint", new AzureRM.Blueprint.V20181101Preview.PublishedBlueprintArgs
+        {
+            BlueprintName = "simpleBlueprint",
+            ResourceScope = "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
+            VersionId = "v2",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+published_blueprint = azurerm.blueprint.v20181101preview.PublishedBlueprint("publishedBlueprint",
+    blueprint_name="simpleBlueprint",
+    resource_scope="providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
+    version_id="v2")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const publishedBlueprint = new azurerm.blueprint.v20181101preview.PublishedBlueprint("publishedBlueprint", {
+    blueprintName: "simpleBlueprint",
+    resourceScope: "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
+    versionId: "v2",
+});
+
+```
+
+{{% /example %}}
+
+### PublishedSubscriptionBlueprint_Publish
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var publishedBlueprint = new AzureRM.Blueprint.V20181101Preview.PublishedBlueprint("publishedBlueprint", new AzureRM.Blueprint.V20181101Preview.PublishedBlueprintArgs
+        {
+            BlueprintName = "simpleBlueprint",
+            ResourceScope = "subscriptions/00000000-0000-0000-0000-000000000000",
+            VersionId = "v2",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+published_blueprint = azurerm.blueprint.v20181101preview.PublishedBlueprint("publishedBlueprint",
+    blueprint_name="simpleBlueprint",
+    resource_scope="subscriptions/00000000-0000-0000-0000-000000000000",
+    version_id="v2")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const publishedBlueprint = new azurerm.blueprint.v20181101preview.PublishedBlueprint("publishedBlueprint", {
+    blueprintName: "simpleBlueprint",
+    resourceScope: "subscriptions/00000000-0000-0000-0000-000000000000",
+    versionId: "v2",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PublishedBlueprint Resource {#create}

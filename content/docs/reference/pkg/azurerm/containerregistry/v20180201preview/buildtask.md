@@ -12,6 +12,134 @@ meta_desc: "Explore the BuildTask resource of the containerregistry/v20180201pre
 
 The build task that has the resource properties and all build items. The build task will have all information to schedule a build against it.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### BuildTasks_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var buildTask = new AzureRM.ContainerRegistry.V20180201Preview.BuildTask("buildTask", new AzureRM.ContainerRegistry.V20180201Preview.BuildTaskArgs
+        {
+            Alias = "myalias",
+            BuildTaskName = "myBuildTask",
+            Location = "eastus",
+            Platform = new AzureRM.ContainerRegistry.V20180201Preview.Inputs.PlatformPropertiesArgs
+            {
+                Cpu = 2,
+                OsType = "Linux",
+            },
+            RegistryName = "myRegistry",
+            ResourceGroupName = "myResourceGroup",
+            SourceRepository = new AzureRM.ContainerRegistry.V20180201Preview.Inputs.SourceRepositoryPropertiesArgs
+            {
+                IsCommitTriggerEnabled = true,
+                RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
+                SourceControlAuthProperties = new AzureRM.ContainerRegistry.V20180201Preview.Inputs.SourceControlAuthInfoArgs
+                {
+                    Scope = "repo",
+                    Token = "xxxxxx",
+                    TokenType = "OAuth",
+                },
+                SourceControlType = "Github",
+            },
+            Status = "Enabled",
+            Tags = 
+            {
+                { "testkey", "value" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+build_task = azurerm.containerregistry.v20180201preview.BuildTask("buildTask",
+    alias="myalias",
+    build_task_name="myBuildTask",
+    location="eastus",
+    platform={
+        "cpu": 2,
+        "osType": "Linux",
+    },
+    registry_name="myRegistry",
+    resource_group_name="myResourceGroup",
+    source_repository={
+        "isCommitTriggerEnabled": True,
+        "repositoryUrl": "https://github.com/Azure/azure-rest-api-specs",
+        "sourceControlAuthProperties": {
+            "scope": "repo",
+            "token": "xxxxxx",
+            "tokenType": "OAuth",
+        },
+        "sourceControlType": "Github",
+    },
+    status="Enabled",
+    tags={
+        "testkey": "value",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const buildTask = new azurerm.containerregistry.v20180201preview.BuildTask("buildTask", {
+    alias: "myalias",
+    buildTaskName: "myBuildTask",
+    location: "eastus",
+    platform: {
+        cpu: 2,
+        osType: "Linux",
+    },
+    registryName: "myRegistry",
+    resourceGroupName: "myResourceGroup",
+    sourceRepository: {
+        isCommitTriggerEnabled: true,
+        repositoryUrl: "https://github.com/Azure/azure-rest-api-specs",
+        sourceControlAuthProperties: {
+            scope: "repo",
+            token: "xxxxxx",
+            tokenType: "OAuth",
+        },
+        sourceControlType: "Github",
+    },
+    status: "Enabled",
+    tags: {
+        testkey: "value",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BuildTask Resource {#create}

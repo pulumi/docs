@@ -12,6 +12,239 @@ meta_desc: "Explore the Rule resource of the servicebus/latest module, including
 
 Description of Rule Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### RulesCreateCorrelationFilter
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rule = new AzureRM.ServiceBus.Latest.Rule("rule", new AzureRM.ServiceBus.Latest.RuleArgs
+        {
+            CorrelationFilter = new AzureRM.ServiceBus.Latest.Inputs.CorrelationFilterArgs
+            {
+                Properties = 
+                {
+                    { "topicHint", "Crop" },
+                },
+            },
+            FilterType = "CorrelationFilter",
+            NamespaceName = "sdk-Namespace-1319",
+            ResourceGroupName = "resourceGroupName",
+            RuleName = "sdk-Rules-6571",
+            SubscriptionName = "sdk-Subscriptions-8691",
+            TopicName = "sdk-Topics-2081",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+rule = azurerm.servicebus.latest.Rule("rule",
+    correlation_filter={
+        "properties": {
+            "topicHint": "Crop",
+        },
+    },
+    filter_type="CorrelationFilter",
+    namespace_name="sdk-Namespace-1319",
+    resource_group_name="resourceGroupName",
+    rule_name="sdk-Rules-6571",
+    subscription_name="sdk-Subscriptions-8691",
+    topic_name="sdk-Topics-2081")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const rule = new azurerm.servicebus.latest.Rule("rule", {
+    correlationFilter: {
+        properties: {
+            topicHint: "Crop",
+        },
+    },
+    filterType: "CorrelationFilter",
+    namespaceName: "sdk-Namespace-1319",
+    resourceGroupName: "resourceGroupName",
+    ruleName: "sdk-Rules-6571",
+    subscriptionName: "sdk-Subscriptions-8691",
+    topicName: "sdk-Topics-2081",
+});
+
+```
+
+{{% /example %}}
+
+### RulesCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rule = new AzureRM.ServiceBus.Latest.Rule("rule", new AzureRM.ServiceBus.Latest.RuleArgs
+        {
+            NamespaceName = "sdk-Namespace-1319",
+            ResourceGroupName = "resourceGroupName",
+            RuleName = "sdk-Rules-6571",
+            SubscriptionName = "sdk-Subscriptions-8691",
+            TopicName = "sdk-Topics-2081",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+rule = azurerm.servicebus.latest.Rule("rule",
+    namespace_name="sdk-Namespace-1319",
+    resource_group_name="resourceGroupName",
+    rule_name="sdk-Rules-6571",
+    subscription_name="sdk-Subscriptions-8691",
+    topic_name="sdk-Topics-2081")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const rule = new azurerm.servicebus.latest.Rule("rule", {
+    namespaceName: "sdk-Namespace-1319",
+    resourceGroupName: "resourceGroupName",
+    ruleName: "sdk-Rules-6571",
+    subscriptionName: "sdk-Subscriptions-8691",
+    topicName: "sdk-Topics-2081",
+});
+
+```
+
+{{% /example %}}
+
+### RulesCreateSqlFilter
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rule = new AzureRM.ServiceBus.Latest.Rule("rule", new AzureRM.ServiceBus.Latest.RuleArgs
+        {
+            FilterType = "SqlFilter",
+            NamespaceName = "sdk-Namespace-1319",
+            ResourceGroupName = "resourceGroupName",
+            RuleName = "sdk-Rules-6571",
+            SqlFilter = new AzureRM.ServiceBus.Latest.Inputs.SqlFilterArgs
+            {
+                SqlExpression = "myproperty=test",
+            },
+            SubscriptionName = "sdk-Subscriptions-8691",
+            TopicName = "sdk-Topics-2081",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+rule = azurerm.servicebus.latest.Rule("rule",
+    filter_type="SqlFilter",
+    namespace_name="sdk-Namespace-1319",
+    resource_group_name="resourceGroupName",
+    rule_name="sdk-Rules-6571",
+    sql_filter={
+        "sqlExpression": "myproperty=test",
+    },
+    subscription_name="sdk-Subscriptions-8691",
+    topic_name="sdk-Topics-2081")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const rule = new azurerm.servicebus.latest.Rule("rule", {
+    filterType: "SqlFilter",
+    namespaceName: "sdk-Namespace-1319",
+    resourceGroupName: "resourceGroupName",
+    ruleName: "sdk-Rules-6571",
+    sqlFilter: {
+        sqlExpression: "myproperty=test",
+    },
+    subscriptionName: "sdk-Subscriptions-8691",
+    topicName: "sdk-Topics-2081",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Rule Resource {#create}

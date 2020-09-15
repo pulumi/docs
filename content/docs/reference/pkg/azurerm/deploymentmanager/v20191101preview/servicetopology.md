@@ -12,6 +12,138 @@ meta_desc: "Explore the ServiceTopology resource of the deploymentmanager/v20191
 
 The resource representation of a service topology.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a topology with Artifact Source
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceTopology = new AzureRM.DeploymentManager.V20191101Preview.ServiceTopology("serviceTopology", new AzureRM.DeploymentManager.V20191101Preview.ServiceTopologyArgs
+        {
+            ArtifactSourceId = "Microsoft.DeploymentManager/artifactSources/myArtifactSource",
+            Location = "centralus",
+            ResourceGroupName = "myResourceGroup",
+            ServiceTopologyName = "myTopology",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+service_topology = azurerm.deploymentmanager.v20191101preview.ServiceTopology("serviceTopology",
+    artifact_source_id="Microsoft.DeploymentManager/artifactSources/myArtifactSource",
+    location="centralus",
+    resource_group_name="myResourceGroup",
+    service_topology_name="myTopology",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const serviceTopology = new azurerm.deploymentmanager.v20191101preview.ServiceTopology("serviceTopology", {
+    artifactSourceId: "Microsoft.DeploymentManager/artifactSources/myArtifactSource",
+    location: "centralus",
+    resourceGroupName: "myResourceGroup",
+    serviceTopologyName: "myTopology",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+### Create a topology without Artifact Source
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceTopology = new AzureRM.DeploymentManager.V20191101Preview.ServiceTopology("serviceTopology", new AzureRM.DeploymentManager.V20191101Preview.ServiceTopologyArgs
+        {
+            Location = "centralus",
+            ResourceGroupName = "myResourceGroup",
+            ServiceTopologyName = "myTopology",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+service_topology = azurerm.deploymentmanager.v20191101preview.ServiceTopology("serviceTopology",
+    location="centralus",
+    resource_group_name="myResourceGroup",
+    service_topology_name="myTopology",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const serviceTopology = new azurerm.deploymentmanager.v20191101preview.ServiceTopology("serviceTopology", {
+    location: "centralus",
+    resourceGroupName: "myResourceGroup",
+    serviceTopologyName: "myTopology",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServiceTopology Resource {#create}

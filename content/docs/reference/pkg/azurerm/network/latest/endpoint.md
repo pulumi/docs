@@ -12,6 +12,392 @@ meta_desc: "Explore the Endpoint resource of the network/latest module, includin
 
 Class representing a Traffic Manager endpoint.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Endpoint-PUT-External-WithCustomHeaders
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var endpoint = new AzureRM.Network.Latest.Endpoint("endpoint", new AzureRM.Network.Latest.EndpointArgs
+        {
+            CustomHeaders = 
+            {
+                new AzureRM.Network.Latest.Inputs.EndpointPropertiesCustomHeadersArgs
+                {
+                    Name = "header-1",
+                    Value = "value-1",
+                },
+                new AzureRM.Network.Latest.Inputs.EndpointPropertiesCustomHeadersArgs
+                {
+                    Name = "header-2",
+                    Value = "value-2",
+                },
+            },
+            EndpointLocation = "North Europe",
+            EndpointName = "azsmnet7187",
+            EndpointStatus = "Enabled",
+            EndpointType = "ExternalEndpoints",
+            Name = "azsmnet7187",
+            ProfileName = "azsmnet6386",
+            ResourceGroupName = "azuresdkfornetautoresttrafficmanager1421",
+            Target = "foobar.contoso.com",
+            Type = "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+endpoint = azurerm.network.latest.Endpoint("endpoint",
+    custom_headers=[
+        {
+            "name": "header-1",
+            "value": "value-1",
+        },
+        {
+            "name": "header-2",
+            "value": "value-2",
+        },
+    ],
+    endpoint_location="North Europe",
+    endpoint_name="azsmnet7187",
+    endpoint_status="Enabled",
+    endpoint_type="ExternalEndpoints",
+    name="azsmnet7187",
+    profile_name="azsmnet6386",
+    resource_group_name="azuresdkfornetautoresttrafficmanager1421",
+    target="foobar.contoso.com",
+    type="Microsoft.network/TrafficManagerProfiles/ExternalEndpoints")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const endpoint = new azurerm.network.latest.Endpoint("endpoint", {
+    customHeaders: [
+        {
+            name: "header-1",
+            value: "value-1",
+        },
+        {
+            name: "header-2",
+            value: "value-2",
+        },
+    ],
+    endpointLocation: "North Europe",
+    endpointName: "azsmnet7187",
+    endpointStatus: "Enabled",
+    endpointType: "ExternalEndpoints",
+    name: "azsmnet7187",
+    profileName: "azsmnet6386",
+    resourceGroupName: "azuresdkfornetautoresttrafficmanager1421",
+    target: "foobar.contoso.com",
+    type: "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
+});
+
+```
+
+{{% /example %}}
+
+### Endpoint-PUT-External-WithGeoMapping
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var endpoint = new AzureRM.Network.Latest.Endpoint("endpoint", new AzureRM.Network.Latest.EndpointArgs
+        {
+            EndpointName = "My%20external%20endpoint",
+            EndpointStatus = "Enabled",
+            EndpointType = "ExternalEndpoints",
+            GeoMapping = 
+            {
+                "GEO-AS",
+                "GEO-AF",
+            },
+            Name = "My external endpoint",
+            ProfileName = "azuresdkfornetautoresttrafficmanager8224",
+            ResourceGroupName = "azuresdkfornetautoresttrafficmanager2191",
+            Target = "foobar.contoso.com",
+            Type = "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+endpoint = azurerm.network.latest.Endpoint("endpoint",
+    endpoint_name="My%20external%20endpoint",
+    endpoint_status="Enabled",
+    endpoint_type="ExternalEndpoints",
+    geo_mapping=[
+        "GEO-AS",
+        "GEO-AF",
+    ],
+    name="My external endpoint",
+    profile_name="azuresdkfornetautoresttrafficmanager8224",
+    resource_group_name="azuresdkfornetautoresttrafficmanager2191",
+    target="foobar.contoso.com",
+    type="Microsoft.network/TrafficManagerProfiles/ExternalEndpoints")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const endpoint = new azurerm.network.latest.Endpoint("endpoint", {
+    endpointName: `My%20external%20endpoint`,
+    endpointStatus: "Enabled",
+    endpointType: "ExternalEndpoints",
+    geoMapping: [
+        "GEO-AS",
+        "GEO-AF",
+    ],
+    name: "My external endpoint",
+    profileName: "azuresdkfornetautoresttrafficmanager8224",
+    resourceGroupName: "azuresdkfornetautoresttrafficmanager2191",
+    target: "foobar.contoso.com",
+    type: "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
+});
+
+```
+
+{{% /example %}}
+
+### Endpoint-PUT-External-WithLocation
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var endpoint = new AzureRM.Network.Latest.Endpoint("endpoint", new AzureRM.Network.Latest.EndpointArgs
+        {
+            EndpointLocation = "North Europe",
+            EndpointName = "azsmnet7187",
+            EndpointStatus = "Enabled",
+            EndpointType = "ExternalEndpoints",
+            Name = "azsmnet7187",
+            ProfileName = "azsmnet6386",
+            ResourceGroupName = "azuresdkfornetautoresttrafficmanager1421",
+            Target = "foobar.contoso.com",
+            Type = "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+endpoint = azurerm.network.latest.Endpoint("endpoint",
+    endpoint_location="North Europe",
+    endpoint_name="azsmnet7187",
+    endpoint_status="Enabled",
+    endpoint_type="ExternalEndpoints",
+    name="azsmnet7187",
+    profile_name="azsmnet6386",
+    resource_group_name="azuresdkfornetautoresttrafficmanager1421",
+    target="foobar.contoso.com",
+    type="Microsoft.network/TrafficManagerProfiles/ExternalEndpoints")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const endpoint = new azurerm.network.latest.Endpoint("endpoint", {
+    endpointLocation: "North Europe",
+    endpointName: "azsmnet7187",
+    endpointStatus: "Enabled",
+    endpointType: "ExternalEndpoints",
+    name: "azsmnet7187",
+    profileName: "azsmnet6386",
+    resourceGroupName: "azuresdkfornetautoresttrafficmanager1421",
+    target: "foobar.contoso.com",
+    type: "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
+});
+
+```
+
+{{% /example %}}
+
+### Endpoint-PUT-External-WithSubnetMapping
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var endpoint = new AzureRM.Network.Latest.Endpoint("endpoint", new AzureRM.Network.Latest.EndpointArgs
+        {
+            EndpointName = "My%20external%20endpoint",
+            EndpointStatus = "Enabled",
+            EndpointType = "ExternalEndpoints",
+            Name = "My external endpoint",
+            ProfileName = "azuresdkfornetautoresttrafficmanager8224",
+            ResourceGroupName = "azuresdkfornetautoresttrafficmanager2191",
+            Subnets = 
+            {
+                new AzureRM.Network.Latest.Inputs.EndpointPropertiesSubnetsArgs
+                {
+                    First = "1.2.3.0",
+                    Scope = 24,
+                },
+                new AzureRM.Network.Latest.Inputs.EndpointPropertiesSubnetsArgs
+                {
+                    First = "25.26.27.28",
+                    Last = "29.30.31.32",
+                },
+            },
+            Target = "foobar.contoso.com",
+            Type = "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+endpoint = azurerm.network.latest.Endpoint("endpoint",
+    endpoint_name="My%20external%20endpoint",
+    endpoint_status="Enabled",
+    endpoint_type="ExternalEndpoints",
+    name="My external endpoint",
+    profile_name="azuresdkfornetautoresttrafficmanager8224",
+    resource_group_name="azuresdkfornetautoresttrafficmanager2191",
+    subnets=[
+        {
+            "first": "1.2.3.0",
+            "scope": 24,
+        },
+        {
+            "first": "25.26.27.28",
+            "last": "29.30.31.32",
+        },
+    ],
+    target="foobar.contoso.com",
+    type="Microsoft.network/TrafficManagerProfiles/ExternalEndpoints")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const endpoint = new azurerm.network.latest.Endpoint("endpoint", {
+    endpointName: `My%20external%20endpoint`,
+    endpointStatus: "Enabled",
+    endpointType: "ExternalEndpoints",
+    name: "My external endpoint",
+    profileName: "azuresdkfornetautoresttrafficmanager8224",
+    resourceGroupName: "azuresdkfornetautoresttrafficmanager2191",
+    subnets: [
+        {
+            first: "1.2.3.0",
+            scope: 24,
+        },
+        {
+            first: "25.26.27.28",
+            last: "29.30.31.32",
+        },
+    ],
+    target: "foobar.contoso.com",
+    type: "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Endpoint Resource {#create}

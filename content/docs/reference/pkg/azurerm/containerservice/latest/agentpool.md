@@ -12,6 +12,463 @@ meta_desc: "Explore the AgentPool resource of the containerservice/latest module
 
 Agent Pool.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Agent Pool with Ephemeral OS Disk
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var agentPool = new AzureRM.ContainerService.Latest.AgentPool("agentPool", new AzureRM.ContainerService.Latest.AgentPoolArgs
+        {
+            AgentPoolName = "agentpool1",
+            Count = 3,
+            OrchestratorVersion = "",
+            OsDiskSizeGB = 64,
+            OsDiskType = "Ephemeral",
+            OsType = "Linux",
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            VmSize = "Standard_DS2_v2",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+agent_pool = azurerm.containerservice.latest.AgentPool("agentPool",
+    agent_pool_name="agentpool1",
+    count=3,
+    orchestrator_version="",
+    os_disk_size_gb=64,
+    os_disk_type="Ephemeral",
+    os_type="Linux",
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    vm_size="Standard_DS2_v2")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const agentPool = new azurerm.containerservice.latest.AgentPool("agentPool", {
+    agentPoolName: "agentpool1",
+    count: 3,
+    orchestratorVersion: "",
+    osDiskSizeGB: 64,
+    osDiskType: "Ephemeral",
+    osType: "Linux",
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    vmSize: "Standard_DS2_v2",
+});
+
+```
+
+{{% /example %}}
+
+### Create Agent Pool with PPG
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var agentPool = new AzureRM.ContainerService.Latest.AgentPool("agentPool", new AzureRM.ContainerService.Latest.AgentPoolArgs
+        {
+            AgentPoolName = "agentpool1",
+            Count = 3,
+            OrchestratorVersion = "",
+            OsType = "Linux",
+            ProximityPlacementGroupID = "/subscriptions/subid1/resourcegroups/rg1/providers//Microsoft.Compute/proximityPlacementGroups/ppg1",
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            VmSize = "Standard_DS2_v2",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+agent_pool = azurerm.containerservice.latest.AgentPool("agentPool",
+    agent_pool_name="agentpool1",
+    count=3,
+    orchestrator_version="",
+    os_type="Linux",
+    proximity_placement_group_id="/subscriptions/subid1/resourcegroups/rg1/providers//Microsoft.Compute/proximityPlacementGroups/ppg1",
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    vm_size="Standard_DS2_v2")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const agentPool = new azurerm.containerservice.latest.AgentPool("agentPool", {
+    agentPoolName: "agentpool1",
+    count: 3,
+    orchestratorVersion: "",
+    osType: "Linux",
+    proximityPlacementGroupID: "/subscriptions/subid1/resourcegroups/rg1/providers//Microsoft.Compute/proximityPlacementGroups/ppg1",
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    vmSize: "Standard_DS2_v2",
+});
+
+```
+
+{{% /example %}}
+
+### Create Spot Agent Pool
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var agentPool = new AzureRM.ContainerService.Latest.AgentPool("agentPool", new AzureRM.ContainerService.Latest.AgentPoolArgs
+        {
+            AgentPoolName = "agentpool1",
+            Count = 3,
+            NodeLabels = 
+            {
+                { "key1", "val1" },
+            },
+            NodeTaints = 
+            {
+                "Key1=Value1:NoSchedule",
+            },
+            OrchestratorVersion = "",
+            OsType = "Linux",
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            ScaleSetEvictionPolicy = "Delete",
+            ScaleSetPriority = "Spot",
+            Tags = 
+            {
+                { "name1", "val1" },
+            },
+            VmSize = "Standard_DS1_v2",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+agent_pool = azurerm.containerservice.latest.AgentPool("agentPool",
+    agent_pool_name="agentpool1",
+    count=3,
+    node_labels={
+        "key1": "val1",
+    },
+    node_taints=["Key1=Value1:NoSchedule"],
+    orchestrator_version="",
+    os_type="Linux",
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    scale_set_eviction_policy="Delete",
+    scale_set_priority="Spot",
+    tags={
+        "name1": "val1",
+    },
+    vm_size="Standard_DS1_v2")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const agentPool = new azurerm.containerservice.latest.AgentPool("agentPool", {
+    agentPoolName: "agentpool1",
+    count: 3,
+    nodeLabels: {
+        key1: "val1",
+    },
+    nodeTaints: ["Key1=Value1:NoSchedule"],
+    orchestratorVersion: "",
+    osType: "Linux",
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    scaleSetEvictionPolicy: "Delete",
+    scaleSetPriority: "Spot",
+    tags: {
+        name1: "val1",
+    },
+    vmSize: "Standard_DS1_v2",
+});
+
+```
+
+{{% /example %}}
+
+### Create/Update Agent Pool
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var agentPool = new AzureRM.ContainerService.Latest.AgentPool("agentPool", new AzureRM.ContainerService.Latest.AgentPoolArgs
+        {
+            AgentPoolName = "agentpool1",
+            Count = 3,
+            Mode = "User",
+            NodeLabels = 
+            {
+                { "key1", "val1" },
+            },
+            NodeTaints = 
+            {
+                "Key1=Value1:NoSchedule",
+            },
+            OrchestratorVersion = "",
+            OsType = "Linux",
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            ScaleSetEvictionPolicy = "Delete",
+            ScaleSetPriority = "Spot",
+            Tags = 
+            {
+                { "name1", "val1" },
+            },
+            VmSize = "Standard_DS1_v2",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+agent_pool = azurerm.containerservice.latest.AgentPool("agentPool",
+    agent_pool_name="agentpool1",
+    count=3,
+    mode="User",
+    node_labels={
+        "key1": "val1",
+    },
+    node_taints=["Key1=Value1:NoSchedule"],
+    orchestrator_version="",
+    os_type="Linux",
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    scale_set_eviction_policy="Delete",
+    scale_set_priority="Spot",
+    tags={
+        "name1": "val1",
+    },
+    vm_size="Standard_DS1_v2")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const agentPool = new azurerm.containerservice.latest.AgentPool("agentPool", {
+    agentPoolName: "agentpool1",
+    count: 3,
+    mode: "User",
+    nodeLabels: {
+        key1: "val1",
+    },
+    nodeTaints: ["Key1=Value1:NoSchedule"],
+    orchestratorVersion: "",
+    osType: "Linux",
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    scaleSetEvictionPolicy: "Delete",
+    scaleSetPriority: "Spot",
+    tags: {
+        name1: "val1",
+    },
+    vmSize: "Standard_DS1_v2",
+});
+
+```
+
+{{% /example %}}
+
+### Update Agent Pool
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var agentPool = new AzureRM.ContainerService.Latest.AgentPool("agentPool", new AzureRM.ContainerService.Latest.AgentPoolArgs
+        {
+            AgentPoolName = "agentpool1",
+            Count = 3,
+            EnableAutoScaling = true,
+            MaxCount = 2,
+            MinCount = 2,
+            NodeTaints = 
+            {
+                "Key1=Value1:NoSchedule",
+            },
+            OrchestratorVersion = "",
+            OsType = "Linux",
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            ScaleSetEvictionPolicy = "Delete",
+            ScaleSetPriority = "Spot",
+            VmSize = "Standard_DS1_v2",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+agent_pool = azurerm.containerservice.latest.AgentPool("agentPool",
+    agent_pool_name="agentpool1",
+    count=3,
+    enable_auto_scaling=True,
+    max_count=2,
+    min_count=2,
+    node_taints=["Key1=Value1:NoSchedule"],
+    orchestrator_version="",
+    os_type="Linux",
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    scale_set_eviction_policy="Delete",
+    scale_set_priority="Spot",
+    vm_size="Standard_DS1_v2")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const agentPool = new azurerm.containerservice.latest.AgentPool("agentPool", {
+    agentPoolName: "agentpool1",
+    count: 3,
+    enableAutoScaling: true,
+    maxCount: 2,
+    minCount: 2,
+    nodeTaints: ["Key1=Value1:NoSchedule"],
+    orchestratorVersion: "",
+    osType: "Linux",
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    scaleSetEvictionPolicy: "Delete",
+    scaleSetPriority: "Spot",
+    vmSize: "Standard_DS1_v2",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AgentPool Resource {#create}

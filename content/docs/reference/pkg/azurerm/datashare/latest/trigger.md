@@ -12,6 +12,76 @@ meta_desc: "Explore the Trigger resource of the datashare/latest module, includi
 
 A Trigger data transfer object.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Triggers_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var trigger = new AzureRM.DataShare.Latest.Trigger("trigger", new AzureRM.DataShare.Latest.TriggerArgs
+        {
+            AccountName = "Account1",
+            Kind = "ScheduleBased",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareSubscriptionName = "ShareSubscription1",
+            TriggerName = "Trigger1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+trigger = azurerm.datashare.latest.Trigger("trigger",
+    account_name="Account1",
+    kind="ScheduleBased",
+    resource_group_name="SampleResourceGroup",
+    share_subscription_name="ShareSubscription1",
+    trigger_name="Trigger1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const trigger = new azurerm.datashare.latest.Trigger("trigger", {
+    accountName: "Account1",
+    kind: "ScheduleBased",
+    resourceGroupName: "SampleResourceGroup",
+    shareSubscriptionName: "ShareSubscription1",
+    triggerName: "Trigger1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Trigger Resource {#create}

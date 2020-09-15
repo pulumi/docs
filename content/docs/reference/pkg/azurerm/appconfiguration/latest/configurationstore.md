@@ -12,6 +12,179 @@ meta_desc: "Explore the ConfigurationStore resource of the appconfiguration/late
 
 The configuration store along with all resource properties. The Configuration Store will have all information to begin utilizing it.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ConfigurationStores_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var configurationStore = new AzureRM.AppConfiguration.Latest.ConfigurationStore("configurationStore", new AzureRM.AppConfiguration.Latest.ConfigurationStoreArgs
+        {
+            ConfigStoreName = "contoso",
+            Location = "westus",
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.AppConfiguration.Latest.Inputs.SkuArgs
+            {
+                Name = "Standard",
+            },
+            Tags = 
+            {
+                { "myTag", "myTagValue" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+configuration_store = azurerm.appconfiguration.latest.ConfigurationStore("configurationStore",
+    config_store_name="contoso",
+    location="westus",
+    resource_group_name="myResourceGroup",
+    sku={
+        "name": "Standard",
+    },
+    tags={
+        "myTag": "myTagValue",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const configurationStore = new azurerm.appconfiguration.latest.ConfigurationStore("configurationStore", {
+    configStoreName: "contoso",
+    location: "westus",
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        name: "Standard",
+    },
+    tags: {
+        myTag: "myTagValue",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### ConfigurationStores_Create_WithIdentity
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var configurationStore = new AzureRM.AppConfiguration.Latest.ConfigurationStore("configurationStore", new AzureRM.AppConfiguration.Latest.ConfigurationStoreArgs
+        {
+            ConfigStoreName = "contoso",
+            Identity = new AzureRM.AppConfiguration.Latest.Inputs.ResourceIdentityArgs
+            {
+                Type = "SystemAssigned, UserAssigned",
+            },
+            Location = "westus",
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.AppConfiguration.Latest.Inputs.SkuArgs
+            {
+                Name = "Standard",
+            },
+            Tags = 
+            {
+                { "myTag", "myTagValue" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+configuration_store = azurerm.appconfiguration.latest.ConfigurationStore("configurationStore",
+    config_store_name="contoso",
+    identity={
+        "type": "SystemAssigned, UserAssigned",
+    },
+    location="westus",
+    resource_group_name="myResourceGroup",
+    sku={
+        "name": "Standard",
+    },
+    tags={
+        "myTag": "myTagValue",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const configurationStore = new azurerm.appconfiguration.latest.ConfigurationStore("configurationStore", {
+    configStoreName: "contoso",
+    identity: {
+        type: "SystemAssigned, UserAssigned",
+    },
+    location: "westus",
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        name: "Standard",
+    },
+    tags: {
+        myTag: "myTagValue",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ConfigurationStore Resource {#create}

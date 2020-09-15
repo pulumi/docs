@@ -12,6 +12,76 @@ meta_desc: "Explore the ConsumerGroup resource of the eventhub/latest module, in
 
 Single item in List or Get Consumer group operation
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ConsumerGroupCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var consumerGroup = new AzureRM.EventHub.Latest.ConsumerGroup("consumerGroup", new AzureRM.EventHub.Latest.ConsumerGroupArgs
+        {
+            ConsumerGroupName = "sdk-ConsumerGroup-5563",
+            EventHubName = "sdk-EventHub-6681",
+            NamespaceName = "sdk-Namespace-2661",
+            ResourceGroupName = "ArunMonocle",
+            UserMetadata = "New consumergroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+consumer_group = azurerm.eventhub.latest.ConsumerGroup("consumerGroup",
+    consumer_group_name="sdk-ConsumerGroup-5563",
+    event_hub_name="sdk-EventHub-6681",
+    namespace_name="sdk-Namespace-2661",
+    resource_group_name="ArunMonocle",
+    user_metadata="New consumergroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const consumerGroup = new azurerm.eventhub.latest.ConsumerGroup("consumerGroup", {
+    consumerGroupName: "sdk-ConsumerGroup-5563",
+    eventHubName: "sdk-EventHub-6681",
+    namespaceName: "sdk-Namespace-2661",
+    resourceGroupName: "ArunMonocle",
+    userMetadata: "New consumergroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ConsumerGroup Resource {#create}

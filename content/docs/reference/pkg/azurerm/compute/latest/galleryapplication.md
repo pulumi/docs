@@ -12,6 +12,88 @@ meta_desc: "Explore the GalleryApplication resource of the compute/latest module
 
 Specifies information about the gallery Application Definition that you want to create or update.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a simple gallery Application.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var galleryApplication = new AzureRM.Compute.Latest.GalleryApplication("galleryApplication", new AzureRM.Compute.Latest.GalleryApplicationArgs
+        {
+            Description = "This is the gallery application description.",
+            Eula = "This is the gallery application EULA.",
+            GalleryApplicationName = "myGalleryApplicationName",
+            GalleryName = "myGalleryName",
+            Location = "West US",
+            PrivacyStatementUri = "myPrivacyStatementUri}",
+            ReleaseNoteUri = "myReleaseNoteUri",
+            ResourceGroupName = "myResourceGroup",
+            SupportedOSType = "Windows",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+gallery_application = azurerm.compute.latest.GalleryApplication("galleryApplication",
+    description="This is the gallery application description.",
+    eula="This is the gallery application EULA.",
+    gallery_application_name="myGalleryApplicationName",
+    gallery_name="myGalleryName",
+    location="West US",
+    privacy_statement_uri="myPrivacyStatementUri}",
+    release_note_uri="myReleaseNoteUri",
+    resource_group_name="myResourceGroup",
+    supported_os_type="Windows")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const galleryApplication = new azurerm.compute.latest.GalleryApplication("galleryApplication", {
+    description: "This is the gallery application description.",
+    eula: "This is the gallery application EULA.",
+    galleryApplicationName: "myGalleryApplicationName",
+    galleryName: "myGalleryName",
+    location: "West US",
+    privacyStatementUri: "myPrivacyStatementUri}",
+    releaseNoteUri: "myReleaseNoteUri",
+    resourceGroupName: "myResourceGroup",
+    supportedOSType: "Windows",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GalleryApplication Resource {#create}

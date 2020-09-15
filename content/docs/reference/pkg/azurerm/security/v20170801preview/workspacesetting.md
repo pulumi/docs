@@ -12,6 +12,70 @@ meta_desc: "Explore the WorkspaceSetting resource of the security/v20170801previ
 
 Configures where to store the OMS agent data for workspaces under a scope
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a workspace setting data for subscription
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workspaceSetting = new AzureRM.Security.V20170801Preview.WorkspaceSetting("workspaceSetting", new AzureRM.Security.V20170801Preview.WorkspaceSettingArgs
+        {
+            Scope = "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23",
+            WorkspaceId = "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace",
+            WorkspaceSettingName = "default",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+workspace_setting = azurerm.security.v20170801preview.WorkspaceSetting("workspaceSetting",
+    scope="/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23",
+    workspace_id="/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace",
+    workspace_setting_name="default")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const workspaceSetting = new azurerm.security.v20170801preview.WorkspaceSetting("workspaceSetting", {
+    scope: "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23",
+    workspaceId: "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace",
+    workspaceSettingName: "default",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a WorkspaceSetting Resource {#create}

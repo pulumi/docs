@@ -12,6 +12,147 @@ meta_desc: "Explore the Query resource of the insights/v20190901preview module, 
 
 A Log Analytics QueryPack-Query definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### QueryPut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var query = new AzureRM.Insights.V20190901Preview.Query("query", new AzureRM.Insights.V20190901Preview.QueryArgs
+        {
+            Body = @"let newExceptionsTimeRange = 1d;
+let timeRangeToCheckBefore = 7d;
+exceptions
+| where timestamp < ago(timeRangeToCheckBefore)
+| summarize count() by problemId
+| join kind= rightanti (
+exceptions
+| where timestamp >= ago(newExceptionsTimeRange)
+| extend stack = tostring(details[0].rawStack)
+| summarize count(), dcount(user_AuthenticatedId), min(timestamp), max(timestamp), any(stack) by problemId  
+) on problemId 
+| order by  count_ desc
+",
+            Description = "my description",
+            DisplayName = "Exceptions - New in the last 24 hours",
+            Id = "a449f8af-8e64-4b3a-9b16-5a7165ff98c4",
+            QueryPackName = "my-querypack",
+            Related = new AzureRM.Insights.V20190901Preview.Inputs.LogAnalyticsQueryPackQueryPropertiesRelatedArgs
+            {
+                Categories = 
+                {
+                    "analytics",
+                },
+            },
+            ResourceGroupName = "my-resource-group",
+            Tags = 
+            {
+                { "my-label", 
+                {
+                    "label1",
+                } },
+                { "my-other-label", 
+                {
+                    "label2",
+                } },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+query = azurerm.insights.v20190901preview.Query("query",
+    body="""let newExceptionsTimeRange = 1d;
+let timeRangeToCheckBefore = 7d;
+exceptions
+| where timestamp < ago(timeRangeToCheckBefore)
+| summarize count() by problemId
+| join kind= rightanti (
+exceptions
+| where timestamp >= ago(newExceptionsTimeRange)
+| extend stack = tostring(details[0].rawStack)
+| summarize count(), dcount(user_AuthenticatedId), min(timestamp), max(timestamp), any(stack) by problemId  
+) on problemId 
+| order by  count_ desc
+""",
+    description="my description",
+    display_name="Exceptions - New in the last 24 hours",
+    id="a449f8af-8e64-4b3a-9b16-5a7165ff98c4",
+    query_pack_name="my-querypack",
+    related={
+        "categories": ["analytics"],
+    },
+    resource_group_name="my-resource-group",
+    tags={
+        "my-label": ["label1"],
+        "my-other-label": ["label2"],
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const query = new azurerm.insights.v20190901preview.Query("query", {
+    body: `let newExceptionsTimeRange = 1d;
+let timeRangeToCheckBefore = 7d;
+exceptions
+| where timestamp < ago(timeRangeToCheckBefore)
+| summarize count() by problemId
+| join kind= rightanti (
+exceptions
+| where timestamp >= ago(newExceptionsTimeRange)
+| extend stack = tostring(details[0].rawStack)
+| summarize count(), dcount(user_AuthenticatedId), min(timestamp), max(timestamp), any(stack) by problemId  
+) on problemId 
+| order by  count_ desc
+`,
+    description: "my description",
+    displayName: "Exceptions - New in the last 24 hours",
+    id: "a449f8af-8e64-4b3a-9b16-5a7165ff98c4",
+    queryPackName: "my-querypack",
+    related: {
+        categories: ["analytics"],
+    },
+    resourceGroupName: "my-resource-group",
+    tags: {
+        "my-label": ["label1"],
+        "my-other-label": ["label2"],
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Query Resource {#create}

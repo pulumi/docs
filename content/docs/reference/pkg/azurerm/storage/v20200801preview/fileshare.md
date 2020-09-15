@@ -12,6 +12,132 @@ meta_desc: "Explore the FileShare resource of the storage/v20200801preview modul
 
 Properties of the file share, including Id, resource name, resource type, Etag.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create NFS Shares
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+file_share = .("fileShare",
+    account_name="sto666",
+    enabled_protocols="NFS",
+    resource_group_name="res346",
+    share_name="share1235")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const fileShare = new .("fileShare", {
+    accountName: "sto666",
+    enabledProtocols: "NFS",
+    resourceGroupName: "res346",
+    shareName: "share1235",
+});
+
+```
+
+{{% /example %}}
+
+### PutShares
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+file_share = .("fileShare",
+    account_name="sto328",
+    resource_group_name="res3376",
+    share_name="share6185")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const fileShare = new .("fileShare", {
+    accountName: "sto328",
+    resourceGroupName: "res3376",
+    shareName: "share6185",
+});
+
+```
+
+{{% /example %}}
+
+### PutShares with Access Tier
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+file_share = .("fileShare",
+    access_tier="Hot",
+    account_name="sto666",
+    resource_group_name="res346",
+    share_name="share1235")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const fileShare = new .("fileShare", {
+    accessTier: "Hot",
+    accountName: "sto666",
+    resourceGroupName: "res346",
+    shareName: "share1235",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FileShare Resource {#create}

@@ -12,6 +12,86 @@ meta_desc: "Explore the PartnerNamespace resource of the eventgrid/v20200401prev
 
 EventGrid Partner Namespace.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PartnerNamespaces_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var partnerNamespace = new AzureRM.EventGrid.V20200401Preview.PartnerNamespace("partnerNamespace", new AzureRM.EventGrid.V20200401Preview.PartnerNamespaceArgs
+        {
+            Location = "westus",
+            PartnerNamespaceName = "examplePartnerNamespaceName1",
+            PartnerRegistrationFullyQualifiedId = "/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerRegistrations/ContosoCorpAccount1",
+            ResourceGroupName = "examplerg",
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+partner_namespace = azurerm.eventgrid.v20200401preview.PartnerNamespace("partnerNamespace",
+    location="westus",
+    partner_namespace_name="examplePartnerNamespaceName1",
+    partner_registration_fully_qualified_id="/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerRegistrations/ContosoCorpAccount1",
+    resource_group_name="examplerg",
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const partnerNamespace = new azurerm.eventgrid.v20200401preview.PartnerNamespace("partnerNamespace", {
+    location: "westus",
+    partnerNamespaceName: "examplePartnerNamespaceName1",
+    partnerRegistrationFullyQualifiedId: "/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerRegistrations/ContosoCorpAccount1",
+    resourceGroupName: "examplerg",
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PartnerNamespace Resource {#create}

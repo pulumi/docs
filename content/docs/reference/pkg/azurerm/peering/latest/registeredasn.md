@@ -12,6 +12,73 @@ meta_desc: "Explore the RegisteredAsn resource of the peering/latest module, inc
 
 The customer's ASN that is registered by the peering service provider.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a registered ASN for the peering
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var registeredAsn = new AzureRM.Peering.Latest.RegisteredAsn("registeredAsn", new AzureRM.Peering.Latest.RegisteredAsnArgs
+        {
+            Asn = 65000,
+            PeeringName = "peeringName",
+            RegisteredAsnName = "registeredAsnName",
+            ResourceGroupName = "rgName",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+registered_asn = azurerm.peering.latest.RegisteredAsn("registeredAsn",
+    asn=65000,
+    peering_name="peeringName",
+    registered_asn_name="registeredAsnName",
+    resource_group_name="rgName")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const registeredAsn = new azurerm.peering.latest.RegisteredAsn("registeredAsn", {
+    asn: 65000,
+    peeringName: "peeringName",
+    registeredAsnName: "registeredAsnName",
+    resourceGroupName: "rgName",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RegisteredAsn Resource {#create}

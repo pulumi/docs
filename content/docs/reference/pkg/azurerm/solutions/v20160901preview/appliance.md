@@ -12,6 +12,79 @@ meta_desc: "Explore the Appliance resource of the solutions/v20160901preview mod
 
 Information about appliance.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update appliance
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var appliance = new AzureRM.Solutions.V20160901Preview.Appliance("appliance", new AzureRM.Solutions.V20160901Preview.ApplianceArgs
+        {
+            ApplianceDefinitionId = "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applianceDefinitions/myAppDef",
+            ApplianceName = "myAppliance",
+            Kind = "ServiceCatalog",
+            Location = "East US 2",
+            ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
+            ResourceGroupName = "rg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+appliance = azurerm.solutions.v20160901preview.Appliance("appliance",
+    appliance_definition_id="/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applianceDefinitions/myAppDef",
+    appliance_name="myAppliance",
+    kind="ServiceCatalog",
+    location="East US 2",
+    managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
+    resource_group_name="rg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const appliance = new azurerm.solutions.v20160901preview.Appliance("appliance", {
+    applianceDefinitionId: "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applianceDefinitions/myAppDef",
+    applianceName: "myAppliance",
+    kind: "ServiceCatalog",
+    location: "East US 2",
+    managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
+    resourceGroupName: "rg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Appliance Resource {#create}

@@ -12,6 +12,79 @@ meta_desc: "Explore the ProductSetting resource of the securityinsights/v2019010
 
 The Setting.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Update EyesOn settings.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var productSetting = new AzureRM.SecurityInsights.V20190101Preview.ProductSetting("productSetting", new AzureRM.SecurityInsights.V20190101Preview.ProductSettingArgs
+        {
+            Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+            Kind = "EyesOn",
+            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
+            ResourceGroupName = "myRg",
+            SettingsName = "EyesOn",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+product_setting = azurerm.securityinsights.v20190101preview.ProductSetting("productSetting",
+    etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    kind="EyesOn",
+    operational_insights_resource_provider="Microsoft.OperationalInsights",
+    resource_group_name="myRg",
+    settings_name="EyesOn",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const productSetting = new azurerm.securityinsights.v20190101preview.ProductSetting("productSetting", {
+    etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    kind: "EyesOn",
+    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
+    resourceGroupName: "myRg",
+    settingsName: "EyesOn",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ProductSetting Resource {#create}

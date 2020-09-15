@@ -12,6 +12,133 @@ meta_desc: "Explore the ThreatIntelligenceIndicator resource of the securityinsi
 
 Threat intelligence resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Upsert the Threat Intelligence
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var threatIntelligenceIndicator = new AzureRM.SecurityInsights.V20190101Preview.ThreatIntelligenceIndicator("threatIntelligenceIndicator", new AzureRM.SecurityInsights.V20190101Preview.ThreatIntelligenceIndicatorArgs
+        {
+            Confidence = 78,
+            CreatedByRef = "contoso@contoso.com",
+            Description = "debugging indicators",
+            DisplayName = "new schema",
+            ExternalReferences = {},
+            GranularMarkings = {},
+            KillChainPhases = {},
+            Kind = "indicator",
+            Labels = {},
+            Modified = "",
+            Name = "d9cd6f0b-96b9-3984-17cd-a779d1e15a93",
+            OperationalInsightsResourceProvider = "Microsoft.OperationalIinsights",
+            Pattern = "[url:value = 'https://www.contoso.com']",
+            PatternType = "url",
+            ResourceGroupName = "myRg",
+            Revoked = false,
+            Source = "Azure Sentinel",
+            ThreatIntelligenceTags = 
+            {
+                "new schema",
+            },
+            ThreatTypes = 
+            {
+                "compromised",
+            },
+            ValidFrom = "2020-04-15T17:44:00.114052Z",
+            ValidUntil = "",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+threat_intelligence_indicator = azurerm.securityinsights.v20190101preview.ThreatIntelligenceIndicator("threatIntelligenceIndicator",
+    confidence=78,
+    created_by_ref="contoso@contoso.com",
+    description="debugging indicators",
+    display_name="new schema",
+    external_references=[],
+    granular_markings=[],
+    kill_chain_phases=[],
+    kind="indicator",
+    labels=[],
+    modified="",
+    name="d9cd6f0b-96b9-3984-17cd-a779d1e15a93",
+    operational_insights_resource_provider="Microsoft.OperationalIinsights",
+    pattern="[url:value = 'https://www.contoso.com']",
+    pattern_type="url",
+    resource_group_name="myRg",
+    revoked=False,
+    source="Azure Sentinel",
+    threat_intelligence_tags=["new schema"],
+    threat_types=["compromised"],
+    valid_from="2020-04-15T17:44:00.114052Z",
+    valid_until="",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const threatIntelligenceIndicator = new azurerm.securityinsights.v20190101preview.ThreatIntelligenceIndicator("threatIntelligenceIndicator", {
+    confidence: 78,
+    createdByRef: "contoso@contoso.com",
+    description: "debugging indicators",
+    displayName: "new schema",
+    externalReferences: [],
+    granularMarkings: [],
+    killChainPhases: [],
+    kind: "indicator",
+    labels: [],
+    modified: "",
+    name: "d9cd6f0b-96b9-3984-17cd-a779d1e15a93",
+    operationalInsightsResourceProvider: "Microsoft.OperationalIinsights",
+    pattern: "[url:value = 'https://www.contoso.com']",
+    patternType: "url",
+    resourceGroupName: "myRg",
+    revoked: false,
+    source: "Azure Sentinel",
+    threatIntelligenceTags: ["new schema"],
+    threatTypes: ["compromised"],
+    validFrom: "2020-04-15T17:44:00.114052Z",
+    validUntil: "",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ThreatIntelligenceIndicator Resource {#create}

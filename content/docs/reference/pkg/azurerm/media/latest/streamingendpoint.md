@@ -12,6 +12,174 @@ meta_desc: "Explore the StreamingEndpoint resource of the media/latest module, i
 
 The StreamingEndpoint.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a StreamingEndpoint
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var streamingEndpoint = new AzureRM.Media.Latest.StreamingEndpoint("streamingEndpoint", new AzureRM.Media.Latest.StreamingEndpointArgs
+        {
+            AccessControl = new AzureRM.Media.Latest.Inputs.StreamingEndpointAccessControlArgs
+            {
+                Akamai = new AzureRM.Media.Latest.Inputs.AkamaiAccessControlArgs
+                {
+                    AkamaiSignatureHeaderAuthenticationKeyList = 
+                    {
+                        new AzureRM.Media.Latest.Inputs.AkamaiSignatureHeaderAuthenticationKeyArgs
+                        {
+                            Base64Key = "dGVzdGlkMQ==",
+                            Expiration = "2029-12-31T16:00:00-08:00",
+                            Identifier = "id1",
+                        },
+                        new AzureRM.Media.Latest.Inputs.AkamaiSignatureHeaderAuthenticationKeyArgs
+                        {
+                            Base64Key = "dGVzdGlkMQ==",
+                            Expiration = "2030-12-31T16:00:00-08:00",
+                            Identifier = "id2",
+                        },
+                    },
+                },
+                Ip = new AzureRM.Media.Latest.Inputs.IPAccessControlArgs
+                {
+                    Allow = 
+                    {
+                        new AzureRM.Media.Latest.Inputs.IPRangeArgs
+                        {
+                            Address = "192.168.1.1",
+                            Name = "AllowedIp",
+                        },
+                    },
+                },
+            },
+            AccountName = "slitestmedia10",
+            AvailabilitySetName = "availableset",
+            CdnEnabled = false,
+            Description = "test event 1",
+            Location = "West US",
+            ResourceGroupName = "mediaresources",
+            ScaleUnits = 1,
+            StreamingEndpointName = "myStreamingEndpoint1",
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+streaming_endpoint = azurerm.media.latest.StreamingEndpoint("streamingEndpoint",
+    access_control={
+        "akamai": {
+            "akamaiSignatureHeaderAuthenticationKeyList": [
+                {
+                    "base64Key": "dGVzdGlkMQ==",
+                    "expiration": "2029-12-31T16:00:00-08:00",
+                    "identifier": "id1",
+                },
+                {
+                    "base64Key": "dGVzdGlkMQ==",
+                    "expiration": "2030-12-31T16:00:00-08:00",
+                    "identifier": "id2",
+                },
+            ],
+        },
+        "ip": {
+            "allow": [{
+                "address": "192.168.1.1",
+                "name": "AllowedIp",
+            }],
+        },
+    },
+    account_name="slitestmedia10",
+    availability_set_name="availableset",
+    cdn_enabled=False,
+    description="test event 1",
+    location="West US",
+    resource_group_name="mediaresources",
+    scale_units=1,
+    streaming_endpoint_name="myStreamingEndpoint1",
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const streamingEndpoint = new azurerm.media.latest.StreamingEndpoint("streamingEndpoint", {
+    accessControl: {
+        akamai: {
+            akamaiSignatureHeaderAuthenticationKeyList: [
+                {
+                    base64Key: "dGVzdGlkMQ==",
+                    expiration: "2029-12-31T16:00:00-08:00",
+                    identifier: "id1",
+                },
+                {
+                    base64Key: "dGVzdGlkMQ==",
+                    expiration: "2030-12-31T16:00:00-08:00",
+                    identifier: "id2",
+                },
+            ],
+        },
+        ip: {
+            allow: [{
+                address: "192.168.1.1",
+                name: "AllowedIp",
+            }],
+        },
+    },
+    accountName: "slitestmedia10",
+    availabilitySetName: "availableset",
+    cdnEnabled: false,
+    description: "test event 1",
+    location: "West US",
+    resourceGroupName: "mediaresources",
+    scaleUnits: 1,
+    streamingEndpointName: "myStreamingEndpoint1",
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a StreamingEndpoint Resource {#create}

@@ -12,6 +12,96 @@ meta_desc: "Explore the DedicatedHost resource of the compute/latest module, inc
 
 Specifies information about the Dedicated host.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a dedicated host .
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dedicatedHost = new AzureRM.Compute.Latest.DedicatedHost("dedicatedHost", new AzureRM.Compute.Latest.DedicatedHostArgs
+        {
+            HostGroupName = "myDedicatedHostGroup",
+            HostName = "myDedicatedHost",
+            Location = "westus",
+            PlatformFaultDomain = 1,
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.SkuArgs
+            {
+                Name = "DSv3-Type1",
+            },
+            Tags = 
+            {
+                { "department", "HR" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+dedicated_host = azurerm.compute.latest.DedicatedHost("dedicatedHost",
+    host_group_name="myDedicatedHostGroup",
+    host_name="myDedicatedHost",
+    location="westus",
+    platform_fault_domain=1,
+    resource_group_name="myResourceGroup",
+    sku={
+        "name": "DSv3-Type1",
+    },
+    tags={
+        "department": "HR",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dedicatedHost = new azurerm.compute.latest.DedicatedHost("dedicatedHost", {
+    hostGroupName: "myDedicatedHostGroup",
+    hostName: "myDedicatedHost",
+    location: "westus",
+    platformFaultDomain: 1,
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        name: "DSv3-Type1",
+    },
+    tags: {
+        department: "HR",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DedicatedHost Resource {#create}

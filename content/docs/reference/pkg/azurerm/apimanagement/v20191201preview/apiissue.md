@@ -12,6 +12,88 @@ meta_desc: "Explore the ApiIssue resource of the apimanagement/v20191201preview 
 
 Issue Contract details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateApiIssue
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiIssue = new AzureRM.ApiManagement.V20191201Preview.ApiIssue("apiIssue", new AzureRM.ApiManagement.V20191201Preview.ApiIssueArgs
+        {
+            ApiId = "57d1f7558aa04f15146d9d8a",
+            CreatedDate = "2018-02-01T22:21:20.467Z",
+            Description = "New API issue description",
+            IssueId = "57d2ef278aa04f0ad01d6cdc",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            State = "open",
+            Title = "New API issue",
+            UserId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api_issue = azurerm.apimanagement.v20191201preview.ApiIssue("apiIssue",
+    api_id="57d1f7558aa04f15146d9d8a",
+    created_date="2018-02-01T22:21:20.467Z",
+    description="New API issue description",
+    issue_id="57d2ef278aa04f0ad01d6cdc",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    state="open",
+    title="New API issue",
+    user_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const apiIssue = new azurerm.apimanagement.v20191201preview.ApiIssue("apiIssue", {
+    apiId: "57d1f7558aa04f15146d9d8a",
+    createdDate: "2018-02-01T22:21:20.467Z",
+    description: "New API issue description",
+    issueId: "57d2ef278aa04f0ad01d6cdc",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    state: "open",
+    title: "New API issue",
+    userId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApiIssue Resource {#create}

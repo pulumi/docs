@@ -12,6 +12,135 @@ meta_desc: "Explore the BlobContainer resource of the storage/latest module, inc
 
 Properties of the blob container, including Id, resource name, resource type, Etag.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PutContainerWithDefaultEncryptionScope
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var blobContainer = new AzureRM.Storage.Latest.BlobContainer("blobContainer", new AzureRM.Storage.Latest.BlobContainerArgs
+        {
+            AccountName = "sto328",
+            ContainerName = "container6185",
+            DefaultEncryptionScope = "encryptionscope185",
+            DenyEncryptionScopeOverride = true,
+            ResourceGroupName = "res3376",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+blob_container = azurerm.storage.latest.BlobContainer("blobContainer",
+    account_name="sto328",
+    container_name="container6185",
+    default_encryption_scope="encryptionscope185",
+    deny_encryption_scope_override=True,
+    resource_group_name="res3376")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const blobContainer = new azurerm.storage.latest.BlobContainer("blobContainer", {
+    accountName: "sto328",
+    containerName: "container6185",
+    defaultEncryptionScope: "encryptionscope185",
+    denyEncryptionScopeOverride: true,
+    resourceGroupName: "res3376",
+});
+
+```
+
+{{% /example %}}
+
+### PutContainers
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var blobContainer = new AzureRM.Storage.Latest.BlobContainer("blobContainer", new AzureRM.Storage.Latest.BlobContainerArgs
+        {
+            AccountName = "sto328",
+            ContainerName = "container6185",
+            ResourceGroupName = "res3376",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+blob_container = azurerm.storage.latest.BlobContainer("blobContainer",
+    account_name="sto328",
+    container_name="container6185",
+    resource_group_name="res3376")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const blobContainer = new azurerm.storage.latest.BlobContainer("blobContainer", {
+    accountName: "sto328",
+    containerName: "container6185",
+    resourceGroupName: "res3376",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BlobContainer Resource {#create}

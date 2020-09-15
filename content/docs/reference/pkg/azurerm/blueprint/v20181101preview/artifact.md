@@ -12,6 +12,383 @@ meta_desc: "Explore the Artifact resource of the blueprint/v20181101preview modu
 
 Represents a blueprint artifact.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### MG-ARMTemplateArtifact
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var artifact = new AzureRM.Blueprint.V20181101Preview.Artifact("artifact", new AzureRM.Blueprint.V20181101Preview.ArtifactArgs
+        {
+            ArtifactName = "storageTemplate",
+            BlueprintName = "simpleBlueprint",
+            Kind = "template",
+            ResourceScope = "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+artifact = azurerm.blueprint.v20181101preview.Artifact("artifact",
+    artifact_name="storageTemplate",
+    blueprint_name="simpleBlueprint",
+    kind="template",
+    resource_scope="providers/Microsoft.Management/managementGroups/ContosoOnlineGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const artifact = new azurerm.blueprint.v20181101preview.Artifact("artifact", {
+    artifactName: "storageTemplate",
+    blueprintName: "simpleBlueprint",
+    kind: "template",
+    resourceScope: "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
+});
+
+```
+
+{{% /example %}}
+
+### MG-PolicyAssignmentArtifact
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var artifact = new AzureRM.Blueprint.V20181101Preview.Artifact("artifact", new AzureRM.Blueprint.V20181101Preview.ArtifactArgs
+        {
+            ArtifactName = "costCenterPolicy",
+            BlueprintName = "simpleBlueprint",
+            Kind = "policyAssignment",
+            ResourceScope = "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+artifact = azurerm.blueprint.v20181101preview.Artifact("artifact",
+    artifact_name="costCenterPolicy",
+    blueprint_name="simpleBlueprint",
+    kind="policyAssignment",
+    resource_scope="providers/Microsoft.Management/managementGroups/ContosoOnlineGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const artifact = new azurerm.blueprint.v20181101preview.Artifact("artifact", {
+    artifactName: "costCenterPolicy",
+    blueprintName: "simpleBlueprint",
+    kind: "policyAssignment",
+    resourceScope: "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
+});
+
+```
+
+{{% /example %}}
+
+### MG-RoleAssignmentArtifact
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var artifact = new AzureRM.Blueprint.V20181101Preview.Artifact("artifact", new AzureRM.Blueprint.V20181101Preview.ArtifactArgs
+        {
+            ArtifactName = "ownerAssignment",
+            BlueprintName = "simpleBlueprint",
+            Kind = "roleAssignment",
+            ResourceScope = "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+artifact = azurerm.blueprint.v20181101preview.Artifact("artifact",
+    artifact_name="ownerAssignment",
+    blueprint_name="simpleBlueprint",
+    kind="roleAssignment",
+    resource_scope="providers/Microsoft.Management/managementGroups/ContosoOnlineGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const artifact = new azurerm.blueprint.v20181101preview.Artifact("artifact", {
+    artifactName: "ownerAssignment",
+    blueprintName: "simpleBlueprint",
+    kind: "roleAssignment",
+    resourceScope: "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
+});
+
+```
+
+{{% /example %}}
+
+### Sub-ARMTemplateArtifact
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var artifact = new AzureRM.Blueprint.V20181101Preview.Artifact("artifact", new AzureRM.Blueprint.V20181101Preview.ArtifactArgs
+        {
+            ArtifactName = "storageTemplate",
+            BlueprintName = "simpleBlueprint",
+            Kind = "template",
+            ResourceScope = "subscriptions/00000000-0000-0000-0000-000000000000",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+artifact = azurerm.blueprint.v20181101preview.Artifact("artifact",
+    artifact_name="storageTemplate",
+    blueprint_name="simpleBlueprint",
+    kind="template",
+    resource_scope="subscriptions/00000000-0000-0000-0000-000000000000")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const artifact = new azurerm.blueprint.v20181101preview.Artifact("artifact", {
+    artifactName: "storageTemplate",
+    blueprintName: "simpleBlueprint",
+    kind: "template",
+    resourceScope: "subscriptions/00000000-0000-0000-0000-000000000000",
+});
+
+```
+
+{{% /example %}}
+
+### Sub-PolicyAssignmentArtifact
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var artifact = new AzureRM.Blueprint.V20181101Preview.Artifact("artifact", new AzureRM.Blueprint.V20181101Preview.ArtifactArgs
+        {
+            ArtifactName = "costCenterPolicy",
+            BlueprintName = "simpleBlueprint",
+            Kind = "policyAssignment",
+            ResourceScope = "subscriptions/00000000-0000-0000-0000-000000000000",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+artifact = azurerm.blueprint.v20181101preview.Artifact("artifact",
+    artifact_name="costCenterPolicy",
+    blueprint_name="simpleBlueprint",
+    kind="policyAssignment",
+    resource_scope="subscriptions/00000000-0000-0000-0000-000000000000")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const artifact = new azurerm.blueprint.v20181101preview.Artifact("artifact", {
+    artifactName: "costCenterPolicy",
+    blueprintName: "simpleBlueprint",
+    kind: "policyAssignment",
+    resourceScope: "subscriptions/00000000-0000-0000-0000-000000000000",
+});
+
+```
+
+{{% /example %}}
+
+### Sub-RoleAssignmentArtifact
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var artifact = new AzureRM.Blueprint.V20181101Preview.Artifact("artifact", new AzureRM.Blueprint.V20181101Preview.ArtifactArgs
+        {
+            ArtifactName = "ownerAssignment",
+            BlueprintName = "simpleBlueprint",
+            Kind = "roleAssignment",
+            ResourceScope = "subscriptions/00000000-0000-0000-0000-000000000000",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+artifact = azurerm.blueprint.v20181101preview.Artifact("artifact",
+    artifact_name="ownerAssignment",
+    blueprint_name="simpleBlueprint",
+    kind="roleAssignment",
+    resource_scope="subscriptions/00000000-0000-0000-0000-000000000000")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const artifact = new azurerm.blueprint.v20181101preview.Artifact("artifact", {
+    artifactName: "ownerAssignment",
+    blueprintName: "simpleBlueprint",
+    kind: "roleAssignment",
+    resourceScope: "subscriptions/00000000-0000-0000-0000-000000000000",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Artifact Resource {#create}

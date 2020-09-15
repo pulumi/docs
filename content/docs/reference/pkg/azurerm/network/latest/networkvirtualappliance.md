@@ -12,6 +12,131 @@ meta_desc: "Explore the NetworkVirtualAppliance resource of the network/latest m
 
 NetworkVirtualAppliance Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create NetworkVirtualAppliance
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var networkVirtualAppliance = new AzureRM.Network.Latest.NetworkVirtualAppliance("networkVirtualAppliance", new AzureRM.Network.Latest.NetworkVirtualApplianceArgs
+        {
+            BootStrapConfigurationBlobs = 
+            {
+                "https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrbootstrapconfig",
+            },
+            CloudInitConfigurationBlobs = 
+            {
+                "https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig",
+            },
+            Identity = new AzureRM.Network.Latest.Inputs.ManagedServiceIdentityArgs
+            {
+                Type = "UserAssigned",
+            },
+            Location = "West US",
+            NetworkVirtualApplianceName = "nva",
+            NvaSku = new AzureRM.Network.Latest.Inputs.VirtualApplianceSkuPropertiesArgs
+            {
+                BundledScaleUnit = "1",
+                MarketPlaceVersion = "12.1",
+                Vendor = "Cisco SDWAN",
+            },
+            ResourceGroupName = "rg1",
+            Tags = 
+            {
+                { "key1", "value1" },
+            },
+            VirtualApplianceAsn = 10000,
+            VirtualHub = new AzureRM.Network.Latest.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+network_virtual_appliance = azurerm.network.latest.NetworkVirtualAppliance("networkVirtualAppliance",
+    boot_strap_configuration_blobs=["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrbootstrapconfig"],
+    cloud_init_configuration_blobs=["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig"],
+    identity={
+        "type": "UserAssigned",
+    },
+    location="West US",
+    network_virtual_appliance_name="nva",
+    nva_sku={
+        "bundledScaleUnit": "1",
+        "marketPlaceVersion": "12.1",
+        "vendor": "Cisco SDWAN",
+    },
+    resource_group_name="rg1",
+    tags={
+        "key1": "value1",
+    },
+    virtual_appliance_asn=10000,
+    virtual_hub={
+        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const networkVirtualAppliance = new azurerm.network.latest.NetworkVirtualAppliance("networkVirtualAppliance", {
+    bootStrapConfigurationBlobs: ["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrbootstrapconfig"],
+    cloudInitConfigurationBlobs: ["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig"],
+    identity: {
+        type: "UserAssigned",
+    },
+    location: "West US",
+    networkVirtualApplianceName: "nva",
+    nvaSku: {
+        bundledScaleUnit: "1",
+        marketPlaceVersion: "12.1",
+        vendor: "Cisco SDWAN",
+    },
+    resourceGroupName: "rg1",
+    tags: {
+        key1: "value1",
+    },
+    virtualApplianceAsn: 10000,
+    virtualHub: {
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkVirtualAppliance Resource {#create}

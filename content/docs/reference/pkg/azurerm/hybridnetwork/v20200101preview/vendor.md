@@ -12,6 +12,61 @@ meta_desc: "Explore the Vendor resource of the hybridnetwork/v20200101preview mo
 
 Vendor resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update Vendor resource
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vendor = new AzureRM.HybridNetwork.V20200101Preview.Vendor("vendor", new AzureRM.HybridNetwork.V20200101Preview.VendorArgs
+        {
+            VendorName = "TestVendor",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+vendor = azurerm.hybridnetwork.v20200101preview.Vendor("vendor", vendor_name="TestVendor")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const vendor = new azurerm.hybridnetwork.v20200101preview.Vendor("vendor", {vendorName: "TestVendor"});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Vendor Resource {#create}

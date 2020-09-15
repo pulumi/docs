@@ -12,6 +12,73 @@ meta_desc: "Explore the DpsCertificate resource of the devices/latest module, in
 
 The X509 Certificate.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### DPSCreateOrUpdateCertificate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dpsCertificate = new AzureRM.Devices.Latest.DpsCertificate("dpsCertificate", new AzureRM.Devices.Latest.DpsCertificateArgs
+        {
+            Certificate = "############################################",
+            CertificateName = "cert",
+            ProvisioningServiceName = "myFirstProvisioningService",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+dps_certificate = azurerm.devices.latest.DpsCertificate("dpsCertificate",
+    certificate="############################################",
+    certificate_name="cert",
+    provisioning_service_name="myFirstProvisioningService",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dpsCertificate = new azurerm.devices.latest.DpsCertificate("dpsCertificate", {
+    certificate: "############################################",
+    certificateName: "cert",
+    provisioningServiceName: "myFirstProvisioningService",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DpsCertificate Resource {#create}

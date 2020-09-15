@@ -12,6 +12,145 @@ meta_desc: "Explore the OperationalizationCluster resource of the machinelearnin
 
 Instance of an Azure ML Operationalization Cluster resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PUT Operationalization Cluster
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var operationalizationCluster = new AzureRM.MachineLearningCompute.V20170801Preview.OperationalizationCluster("operationalizationCluster", new AzureRM.MachineLearningCompute.V20170801Preview.OperationalizationClusterArgs
+        {
+            ClusterName = "myCluster",
+            ClusterType = "ACS",
+            ContainerService = new AzureRM.MachineLearningCompute.V20170801Preview.Inputs.AcsClusterPropertiesArgs
+            {
+                OrchestratorProperties = new AzureRM.MachineLearningCompute.V20170801Preview.Inputs.KubernetesClusterPropertiesArgs
+                {
+                    ServicePrincipal = new AzureRM.MachineLearningCompute.V20170801Preview.Inputs.ServicePrincipalPropertiesArgs
+                    {
+                        ClientId = "abcdefghijklmnopqrt",
+                        Secret = "uiuiwueiwuewiue",
+                    },
+                },
+                OrchestratorType = "Kubernetes",
+            },
+            Description = "My Operationalization Cluster",
+            GlobalServiceConfiguration = new AzureRM.MachineLearningCompute.V20170801Preview.Inputs.GlobalServiceConfigurationArgs
+            {
+                Ssl = new AzureRM.MachineLearningCompute.V20170801Preview.Inputs.SslConfigurationArgs
+                {
+                    Cert = "afjdklq2131casfakld=",
+                    Cname = "foo.bar.com",
+                    Key = "flksdafkldsajf=",
+                    Status = "Enabled",
+                },
+            },
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            Tags = 
+            {
+                { "key1", "alpha" },
+                { "key2", "beta" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+operationalization_cluster = azurerm.machinelearningcompute.v20170801preview.OperationalizationCluster("operationalizationCluster",
+    cluster_name="myCluster",
+    cluster_type="ACS",
+    container_service={
+        "orchestratorProperties": {
+            "servicePrincipal": {
+                "clientId": "abcdefghijklmnopqrt",
+                "secret": "uiuiwueiwuewiue",
+            },
+        },
+        "orchestratorType": "Kubernetes",
+    },
+    description="My Operationalization Cluster",
+    global_service_configuration={
+        "ssl": {
+            "cert": "afjdklq2131casfakld=",
+            "cname": "foo.bar.com",
+            "key": "flksdafkldsajf=",
+            "status": "Enabled",
+        },
+    },
+    location="West US",
+    resource_group_name="myResourceGroup",
+    tags={
+        "key1": "alpha",
+        "key2": "beta",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const operationalizationCluster = new azurerm.machinelearningcompute.v20170801preview.OperationalizationCluster("operationalizationCluster", {
+    clusterName: "myCluster",
+    clusterType: "ACS",
+    containerService: {
+        orchestratorProperties: {
+            servicePrincipal: {
+                clientId: "abcdefghijklmnopqrt",
+                secret: "uiuiwueiwuewiue",
+            },
+        },
+        orchestratorType: "Kubernetes",
+    },
+    description: "My Operationalization Cluster",
+    globalServiceConfiguration: {
+        ssl: {
+            cert: "afjdklq2131casfakld=",
+            cname: "foo.bar.com",
+            key: "flksdafkldsajf=",
+            status: "Enabled",
+        },
+    },
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    tags: {
+        key1: "alpha",
+        key2: "beta",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a OperationalizationCluster Resource {#create}

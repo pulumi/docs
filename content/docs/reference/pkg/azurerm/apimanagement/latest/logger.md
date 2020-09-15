@@ -12,6 +12,164 @@ meta_desc: "Explore the Logger resource of the apimanagement/latest module, incl
 
 Logger details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateAILogger
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var logger = new AzureRM.ApiManagement.Latest.Logger("logger", new AzureRM.ApiManagement.Latest.LoggerArgs
+        {
+            Credentials = 
+            {
+                { "instrumentationKey", "11................a1" },
+            },
+            Description = "adding a new logger",
+            LoggerId = "loggerId",
+            LoggerType = "applicationInsights",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+logger = azurerm.apimanagement.latest.Logger("logger",
+    credentials={
+        "instrumentation_key": "11................a1",
+    },
+    description="adding a new logger",
+    logger_id="loggerId",
+    logger_type="applicationInsights",
+    resource_group_name="rg1",
+    service_name="apimService1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const logger = new azurerm.apimanagement.latest.Logger("logger", {
+    credentials: {
+        instrumentationKey: "11................a1",
+    },
+    description: "adding a new logger",
+    loggerId: "loggerId",
+    loggerType: "applicationInsights",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+});
+
+```
+
+{{% /example %}}
+
+### ApiManagementCreateEHLogger
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var logger = new AzureRM.ApiManagement.Latest.Logger("logger", new AzureRM.ApiManagement.Latest.LoggerArgs
+        {
+            Credentials = 
+            {
+                { "connectionString", "Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********=" },
+                { "name", "hydraeventhub" },
+            },
+            Description = "adding a new logger",
+            LoggerId = "loggerId",
+            LoggerType = "azureEventHub",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+logger = azurerm.apimanagement.latest.Logger("logger",
+    credentials={
+        "connection_string": "Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********=",
+        "name": "hydraeventhub",
+    },
+    description="adding a new logger",
+    logger_id="loggerId",
+    logger_type="azureEventHub",
+    resource_group_name="rg1",
+    service_name="apimService1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const logger = new azurerm.apimanagement.latest.Logger("logger", {
+    credentials: {
+        connectionString: "Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********=",
+        name: "hydraeventhub",
+    },
+    description: "adding a new logger",
+    loggerId: "loggerId",
+    loggerType: "azureEventHub",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Logger Resource {#create}

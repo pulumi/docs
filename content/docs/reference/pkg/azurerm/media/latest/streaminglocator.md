@@ -12,6 +12,270 @@ meta_desc: "Explore the StreamingLocator resource of the media/latest module, in
 
 A Streaming Locator resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates a Streaming Locator with clear streaming
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var streamingLocator = new AzureRM.Media.Latest.StreamingLocator("streamingLocator", new AzureRM.Media.Latest.StreamingLocatorArgs
+        {
+            AccountName = "contosomedia",
+            AssetName = "ClimbingMountRainier",
+            ResourceGroupName = "contoso",
+            StreamingLocatorName = "UserCreatedClearStreamingLocator",
+            StreamingPolicyName = "clearStreamingPolicy",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+streaming_locator = azurerm.media.latest.StreamingLocator("streamingLocator",
+    account_name="contosomedia",
+    asset_name="ClimbingMountRainier",
+    resource_group_name="contoso",
+    streaming_locator_name="UserCreatedClearStreamingLocator",
+    streaming_policy_name="clearStreamingPolicy")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const streamingLocator = new azurerm.media.latest.StreamingLocator("streamingLocator", {
+    accountName: "contosomedia",
+    assetName: "ClimbingMountRainier",
+    resourceGroupName: "contoso",
+    streamingLocatorName: "UserCreatedClearStreamingLocator",
+    streamingPolicyName: "clearStreamingPolicy",
+});
+
+```
+
+{{% /example %}}
+
+### Creates a Streaming Locator with secure streaming
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var streamingLocator = new AzureRM.Media.Latest.StreamingLocator("streamingLocator", new AzureRM.Media.Latest.StreamingLocatorArgs
+        {
+            AccountName = "contosomedia",
+            AssetName = "ClimbingMountRainier",
+            EndTime = "2028-12-31T23:59:59.9999999Z",
+            ResourceGroupName = "contoso",
+            StartTime = "2018-03-01T00:00:00Z",
+            StreamingLocatorName = "UserCreatedSecureStreamingLocator",
+            StreamingPolicyName = "secureStreamingPolicy",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+streaming_locator = azurerm.media.latest.StreamingLocator("streamingLocator",
+    account_name="contosomedia",
+    asset_name="ClimbingMountRainier",
+    end_time="2028-12-31T23:59:59.9999999Z",
+    resource_group_name="contoso",
+    start_time="2018-03-01T00:00:00Z",
+    streaming_locator_name="UserCreatedSecureStreamingLocator",
+    streaming_policy_name="secureStreamingPolicy")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const streamingLocator = new azurerm.media.latest.StreamingLocator("streamingLocator", {
+    accountName: "contosomedia",
+    assetName: "ClimbingMountRainier",
+    endTime: "2028-12-31T23:59:59.9999999Z",
+    resourceGroupName: "contoso",
+    startTime: "2018-03-01T00:00:00Z",
+    streamingLocatorName: "UserCreatedSecureStreamingLocator",
+    streamingPolicyName: "secureStreamingPolicy",
+});
+
+```
+
+{{% /example %}}
+
+### Creates a Streaming Locator with user defined content keys
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var streamingLocator = new AzureRM.Media.Latest.StreamingLocator("streamingLocator", new AzureRM.Media.Latest.StreamingLocatorArgs
+        {
+            AccountName = "contosomedia",
+            AssetName = "ClimbingMountRainier",
+            ContentKeys = 
+            {
+                new AzureRM.Media.Latest.Inputs.StreamingLocatorContentKeyArgs
+                {
+                    Id = "60000000-0000-0000-0000-000000000001",
+                    LabelReferenceInStreamingPolicy = "aesDefaultKey",
+                    Value = "1UqLohAfWsEGkULYxHjYZg==",
+                },
+                new AzureRM.Media.Latest.Inputs.StreamingLocatorContentKeyArgs
+                {
+                    Id = "60000000-0000-0000-0000-000000000004",
+                    LabelReferenceInStreamingPolicy = "cencDefaultKey",
+                    Value = "4UqLohAfWsEGkULYxHjYZg==",
+                },
+                new AzureRM.Media.Latest.Inputs.StreamingLocatorContentKeyArgs
+                {
+                    Id = "60000000-0000-0000-0000-000000000007",
+                    LabelReferenceInStreamingPolicy = "cbcsDefaultKey",
+                    Value = "7UqLohAfWsEGkULYxHjYZg==",
+                },
+            },
+            ResourceGroupName = "contoso",
+            StreamingLocatorId = "90000000-0000-0000-0000-00000000000A",
+            StreamingLocatorName = "UserCreatedSecureStreamingLocatorWithUserDefinedContentKeys",
+            StreamingPolicyName = "secureStreamingPolicy",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+streaming_locator = azurerm.media.latest.StreamingLocator("streamingLocator",
+    account_name="contosomedia",
+    asset_name="ClimbingMountRainier",
+    content_keys=[
+        {
+            "id": "60000000-0000-0000-0000-000000000001",
+            "labelReferenceInStreamingPolicy": "aesDefaultKey",
+            "value": "1UqLohAfWsEGkULYxHjYZg==",
+        },
+        {
+            "id": "60000000-0000-0000-0000-000000000004",
+            "labelReferenceInStreamingPolicy": "cencDefaultKey",
+            "value": "4UqLohAfWsEGkULYxHjYZg==",
+        },
+        {
+            "id": "60000000-0000-0000-0000-000000000007",
+            "labelReferenceInStreamingPolicy": "cbcsDefaultKey",
+            "value": "7UqLohAfWsEGkULYxHjYZg==",
+        },
+    ],
+    resource_group_name="contoso",
+    streaming_locator_id="90000000-0000-0000-0000-00000000000A",
+    streaming_locator_name="UserCreatedSecureStreamingLocatorWithUserDefinedContentKeys",
+    streaming_policy_name="secureStreamingPolicy")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const streamingLocator = new azurerm.media.latest.StreamingLocator("streamingLocator", {
+    accountName: "contosomedia",
+    assetName: "ClimbingMountRainier",
+    contentKeys: [
+        {
+            id: "60000000-0000-0000-0000-000000000001",
+            labelReferenceInStreamingPolicy: "aesDefaultKey",
+            value: "1UqLohAfWsEGkULYxHjYZg==",
+        },
+        {
+            id: "60000000-0000-0000-0000-000000000004",
+            labelReferenceInStreamingPolicy: "cencDefaultKey",
+            value: "4UqLohAfWsEGkULYxHjYZg==",
+        },
+        {
+            id: "60000000-0000-0000-0000-000000000007",
+            labelReferenceInStreamingPolicy: "cbcsDefaultKey",
+            value: "7UqLohAfWsEGkULYxHjYZg==",
+        },
+    ],
+    resourceGroupName: "contoso",
+    streamingLocatorId: "90000000-0000-0000-0000-00000000000A",
+    streamingLocatorName: "UserCreatedSecureStreamingLocatorWithUserDefinedContentKeys",
+    streamingPolicyName: "secureStreamingPolicy",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a StreamingLocator Resource {#create}

@@ -12,6 +12,138 @@ meta_desc: "Explore the Pipeline resource of the devops/v20190701preview module,
 
 Azure DevOps Pipeline used to configure Continuous Integration (CI) & Continuous Delivery (CD) for Azure resources.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create an Azure pipeline to deploy a sample ASP.Net application to Azure web-app
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pipeline = new AzureRM.DevOps.V20190701Preview.Pipeline("pipeline", new AzureRM.DevOps.V20190701Preview.PipelineArgs
+        {
+            BootstrapConfiguration = new AzureRM.DevOps.V20190701Preview.Inputs.BootstrapConfigurationArgs
+            {
+                Template = new AzureRM.DevOps.V20190701Preview.Inputs.PipelineTemplateArgs
+                {
+                    Id = "ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",
+                    Parameters = 
+                    {
+                        { "appInsightLocation", "South India" },
+                        { "appServicePlan", "S1 Standard" },
+                        { "azureAuth", "{\"scheme\":\"ServicePrincipal\",\"parameters\":{\"tenantid\":\"{subscriptionTenantId}\",\"objectid\":\"{appObjectId}\",\"serviceprincipalid\":\"{appId}\",\"serviceprincipalkey\":\"{appSecret}\"}}" },
+                        { "location", "South India" },
+                        { "resourceGroup", "myAspNetWebAppPipeline-rg" },
+                        { "subscriptionId", "{subscriptionId}" },
+                        { "webAppName", "myAspNetWebApp" },
+                    },
+                },
+            },
+            Location = "South India",
+            Organization = new AzureRM.DevOps.V20190701Preview.Inputs.OrganizationReferenceArgs
+            {
+                Name = "myAspNetWebAppPipeline-org",
+            },
+            PipelineName = "myAspNetWebAppPipeline",
+            Project = new AzureRM.DevOps.V20190701Preview.Inputs.ProjectReferenceArgs
+            {
+                Name = "myAspNetWebAppPipeline-project",
+            },
+            ResourceGroupName = "myAspNetWebAppPipeline-rg",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+pipeline = azurerm.devops.v20190701preview.Pipeline("pipeline",
+    bootstrap_configuration={
+        "template": {
+            "id": "ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",
+            "parameters": {
+                "appInsightLocation": "South India",
+                "appServicePlan": "S1 Standard",
+                "azureAuth": "{\"scheme\":\"ServicePrincipal\",\"parameters\":{\"tenantid\":\"{subscriptionTenantId}\",\"objectid\":\"{appObjectId}\",\"serviceprincipalid\":\"{appId}\",\"serviceprincipalkey\":\"{appSecret}\"}}",
+                "location": "South India",
+                "resourceGroup": "myAspNetWebAppPipeline-rg",
+                "subscriptionId": "{subscriptionId}",
+                "webAppName": "myAspNetWebApp",
+            },
+        },
+    },
+    location="South India",
+    organization={
+        "name": "myAspNetWebAppPipeline-org",
+    },
+    pipeline_name="myAspNetWebAppPipeline",
+    project={
+        "name": "myAspNetWebAppPipeline-project",
+    },
+    resource_group_name="myAspNetWebAppPipeline-rg",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const pipeline = new azurerm.devops.v20190701preview.Pipeline("pipeline", {
+    bootstrapConfiguration: {
+        template: {
+            id: "ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",
+            parameters: {
+                appInsightLocation: "South India",
+                appServicePlan: "S1 Standard",
+                azureAuth: "{\"scheme\":\"ServicePrincipal\",\"parameters\":{\"tenantid\":\"{subscriptionTenantId}\",\"objectid\":\"{appObjectId}\",\"serviceprincipalid\":\"{appId}\",\"serviceprincipalkey\":\"{appSecret}\"}}",
+                location: "South India",
+                resourceGroup: "myAspNetWebAppPipeline-rg",
+                subscriptionId: "{subscriptionId}",
+                webAppName: "myAspNetWebApp",
+            },
+        },
+    },
+    location: "South India",
+    organization: {
+        name: "myAspNetWebAppPipeline-org",
+    },
+    pipelineName: "myAspNetWebAppPipeline",
+    project: {
+        name: "myAspNetWebAppPipeline-project",
+    },
+    resourceGroupName: "myAspNetWebAppPipeline-rg",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Pipeline Resource {#create}

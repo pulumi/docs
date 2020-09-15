@@ -12,6 +12,67 @@ meta_desc: "Explore the ConnectionGateway resource of the web/latest module, inc
 
 The gateway definition
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Replace a connection gateway definition
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var connectionGateway = new AzureRM.Web.Latest.ConnectionGateway("connectionGateway", new AzureRM.Web.Latest.ConnectionGatewayArgs
+        {
+            ConnectionGatewayName = "test123",
+            ResourceGroupName = "testResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+connection_gateway = azurerm.web.latest.ConnectionGateway("connectionGateway",
+    connection_gateway_name="test123",
+    resource_group_name="testResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const connectionGateway = new azurerm.web.latest.ConnectionGateway("connectionGateway", {
+    connectionGatewayName: "test123",
+    resourceGroupName: "testResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ConnectionGateway Resource {#create}

@@ -12,6 +12,118 @@ meta_desc: "Explore the AnalyticsItem resource of the insights/latest module, in
 
 Properties that define an Analytics item that is associated to an Application Insights component.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### AnalyticsItemPut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var analyticsItem = new AzureRM.Insights.Latest.AnalyticsItem("analyticsItem", new AzureRM.Insights.Latest.AnalyticsItemArgs
+        {
+            Content = @"let newExceptionsTimeRange = 1d;
+let timeRangeToCheckBefore = 7d;
+exceptions
+| where timestamp < ago(timeRangeToCheckBefore)
+| summarize count() by problemId
+| join kind= rightanti (
+exceptions
+| where timestamp >= ago(newExceptionsTimeRange)
+| extend stack = tostring(details[0].rawStack)
+| summarize count(), dcount(user_AuthenticatedId), min(timestamp), max(timestamp), any(stack) by problemId  
+) on problemId 
+| order by  count_ desc
+",
+            Name = "Exceptions - New in the last 24 hours",
+            ResourceGroupName = "my-resource-group",
+            ResourceName = "my-component",
+            Scope = "shared",
+            ScopePath = "analyticsItems",
+            Type = "query",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+analytics_item = azurerm.insights.latest.AnalyticsItem("analyticsItem",
+    content="""let newExceptionsTimeRange = 1d;
+let timeRangeToCheckBefore = 7d;
+exceptions
+| where timestamp < ago(timeRangeToCheckBefore)
+| summarize count() by problemId
+| join kind= rightanti (
+exceptions
+| where timestamp >= ago(newExceptionsTimeRange)
+| extend stack = tostring(details[0].rawStack)
+| summarize count(), dcount(user_AuthenticatedId), min(timestamp), max(timestamp), any(stack) by problemId  
+) on problemId 
+| order by  count_ desc
+""",
+    name="Exceptions - New in the last 24 hours",
+    resource_group_name="my-resource-group",
+    resource_name="my-component",
+    scope="shared",
+    scope_path="analyticsItems",
+    type="query")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const analyticsItem = new azurerm.insights.latest.AnalyticsItem("analyticsItem", {
+    content: `let newExceptionsTimeRange = 1d;
+let timeRangeToCheckBefore = 7d;
+exceptions
+| where timestamp < ago(timeRangeToCheckBefore)
+| summarize count() by problemId
+| join kind= rightanti (
+exceptions
+| where timestamp >= ago(newExceptionsTimeRange)
+| extend stack = tostring(details[0].rawStack)
+| summarize count(), dcount(user_AuthenticatedId), min(timestamp), max(timestamp), any(stack) by problemId  
+) on problemId 
+| order by  count_ desc
+`,
+    name: "Exceptions - New in the last 24 hours",
+    resourceGroupName: "my-resource-group",
+    resourceName: "my-component",
+    scope: "shared",
+    scopePath: "analyticsItems",
+    type: "query",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AnalyticsItem Resource {#create}

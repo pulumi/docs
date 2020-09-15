@@ -12,6 +12,293 @@ meta_desc: "Explore the DatabaseAccount resource of the documentdb/latest module
 
 An Azure Cosmos DB database account.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CosmosDBDatabaseAccountCreateMax
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var databaseAccount = new AzureRM.DocumentDB.Latest.DatabaseAccount("databaseAccount", new AzureRM.DocumentDB.Latest.DatabaseAccountArgs
+        {
+            AccountName = "ddb1",
+            ApiProperties = new AzureRM.DocumentDB.Latest.Inputs.ApiPropertiesArgs
+            {
+                ServerVersion = "3.2",
+            },
+            ConsistencyPolicy = new AzureRM.DocumentDB.Latest.Inputs.ConsistencyPolicyArgs
+            {
+                DefaultConsistencyLevel = "BoundedStaleness",
+                MaxIntervalInSeconds = 10,
+                MaxStalenessPrefix = 200,
+            },
+            Cors = 
+            {
+                new AzureRM.DocumentDB.Latest.Inputs.CorsPolicyArgs
+                {
+                    AllowedOrigins = "https://test",
+                },
+            },
+            DatabaseAccountOfferType = "Standard",
+            EnableAnalyticalStorage = true,
+            EnableFreeTier = false,
+            IpRules = 
+            {
+                new AzureRM.DocumentDB.Latest.Inputs.IpAddressOrRangeArgs
+                {
+                    IpAddressOrRange = "23.43.230.120",
+                },
+                new AzureRM.DocumentDB.Latest.Inputs.IpAddressOrRangeArgs
+                {
+                    IpAddressOrRange = "110.12.240.0/12",
+                },
+            },
+            IsVirtualNetworkFilterEnabled = true,
+            KeyVaultKeyUri = "https://myKeyVault.vault.azure.net",
+            Kind = "MongoDB",
+            Location = "westus",
+            Locations = 
+            {
+                new AzureRM.DocumentDB.Latest.Inputs.LocationArgs
+                {
+                    FailoverPriority = 0,
+                    IsZoneRedundant = false,
+                    LocationName = "southcentralus",
+                },
+                new AzureRM.DocumentDB.Latest.Inputs.LocationArgs
+                {
+                    FailoverPriority = 1,
+                    IsZoneRedundant = false,
+                    LocationName = "eastus",
+                },
+            },
+            ResourceGroupName = "rg1",
+            Tags = ,
+            VirtualNetworkRules = 
+            {
+                new AzureRM.DocumentDB.Latest.Inputs.VirtualNetworkRuleArgs
+                {
+                    Id = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+                    IgnoreMissingVNetServiceEndpoint = false,
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database_account = azurerm.documentdb.latest.DatabaseAccount("databaseAccount",
+    account_name="ddb1",
+    api_properties={
+        "serverVersion": "3.2",
+    },
+    consistency_policy={
+        "defaultConsistencyLevel": "BoundedStaleness",
+        "maxIntervalInSeconds": 10,
+        "maxStalenessPrefix": 200,
+    },
+    cors=[{
+        "allowedOrigins": "https://test",
+    }],
+    database_account_offer_type="Standard",
+    enable_analytical_storage=True,
+    enable_free_tier=False,
+    ip_rules=[
+        {
+            "ipAddressOrRange": "23.43.230.120",
+        },
+        {
+            "ipAddressOrRange": "110.12.240.0/12",
+        },
+    ],
+    is_virtual_network_filter_enabled=True,
+    key_vault_key_uri="https://myKeyVault.vault.azure.net",
+    kind="MongoDB",
+    location="westus",
+    locations=[
+        {
+            "failoverPriority": 0,
+            "isZoneRedundant": False,
+            "locationName": "southcentralus",
+        },
+        {
+            "failoverPriority": 1,
+            "isZoneRedundant": False,
+            "locationName": "eastus",
+        },
+    ],
+    resource_group_name="rg1",
+    tags={},
+    virtual_network_rules=[{
+        "id": "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+        "ignoreMissingVNetServiceEndpoint": False,
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const databaseAccount = new azurerm.documentdb.latest.DatabaseAccount("databaseAccount", {
+    accountName: "ddb1",
+    apiProperties: {
+        serverVersion: "3.2",
+    },
+    consistencyPolicy: {
+        defaultConsistencyLevel: "BoundedStaleness",
+        maxIntervalInSeconds: 10,
+        maxStalenessPrefix: 200,
+    },
+    cors: [{
+        allowedOrigins: "https://test",
+    }],
+    databaseAccountOfferType: "Standard",
+    enableAnalyticalStorage: true,
+    enableFreeTier: false,
+    ipRules: [
+        {
+            ipAddressOrRange: "23.43.230.120",
+        },
+        {
+            ipAddressOrRange: "110.12.240.0/12",
+        },
+    ],
+    isVirtualNetworkFilterEnabled: true,
+    keyVaultKeyUri: "https://myKeyVault.vault.azure.net",
+    kind: "MongoDB",
+    location: "westus",
+    locations: [
+        {
+            failoverPriority: 0,
+            isZoneRedundant: false,
+            locationName: "southcentralus",
+        },
+        {
+            failoverPriority: 1,
+            isZoneRedundant: false,
+            locationName: "eastus",
+        },
+    ],
+    resourceGroupName: "rg1",
+    tags: {},
+    virtualNetworkRules: [{
+        id: "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+        ignoreMissingVNetServiceEndpoint: false,
+    }],
+});
+
+```
+
+{{% /example %}}
+
+### CosmosDBDatabaseAccountCreateMin
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var databaseAccount = new AzureRM.DocumentDB.Latest.DatabaseAccount("databaseAccount", new AzureRM.DocumentDB.Latest.DatabaseAccountArgs
+        {
+            AccountName = "ddb1",
+            DatabaseAccountOfferType = "Standard",
+            Location = "westus",
+            Locations = 
+            {
+                new AzureRM.DocumentDB.Latest.Inputs.LocationArgs
+                {
+                    FailoverPriority = 0,
+                    IsZoneRedundant = false,
+                    LocationName = "southcentralus",
+                },
+            },
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database_account = azurerm.documentdb.latest.DatabaseAccount("databaseAccount",
+    account_name="ddb1",
+    database_account_offer_type="Standard",
+    location="westus",
+    locations=[{
+        "failoverPriority": 0,
+        "isZoneRedundant": False,
+        "locationName": "southcentralus",
+    }],
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const databaseAccount = new azurerm.documentdb.latest.DatabaseAccount("databaseAccount", {
+    accountName: "ddb1",
+    databaseAccountOfferType: "Standard",
+    location: "westus",
+    locations: [{
+        failoverPriority: 0,
+        isZoneRedundant: false,
+        locationName: "southcentralus",
+    }],
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DatabaseAccount Resource {#create}

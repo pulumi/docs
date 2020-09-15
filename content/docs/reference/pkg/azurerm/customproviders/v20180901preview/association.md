@@ -12,6 +12,70 @@ meta_desc: "Explore the Association resource of the customproviders/v20180901pre
 
 The resource definition of this association.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update an association
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var association = new AzureRM.CustomProviders.V20180901Preview.Association("association", new AzureRM.CustomProviders.V20180901Preview.AssociationArgs
+        {
+            AssociationName = "associationName",
+            Scope = "scope",
+            TargetResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/appRG/providers/Microsoft.Solutions/applications/applicationName",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+association = azurerm.customproviders.v20180901preview.Association("association",
+    association_name="associationName",
+    scope="scope",
+    target_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/appRG/providers/Microsoft.Solutions/applications/applicationName")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const association = new azurerm.customproviders.v20180901preview.Association("association", {
+    associationName: "associationName",
+    scope: "scope",
+    targetResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/appRG/providers/Microsoft.Solutions/applications/applicationName",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Association Resource {#create}

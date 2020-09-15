@@ -12,6 +12,70 @@ meta_desc: "Explore the ConfigurationProfileAssignment resource of the compute/v
 
 Configuration profile assignment is an association between a VM and automanage profile configuration.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update configuration profile assignment
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var configurationProfileAssignment = new AzureRM.Compute.V20200630Preview.ConfigurationProfileAssignment("configurationProfileAssignment", new AzureRM.Compute.V20200630Preview.ConfigurationProfileAssignmentArgs
+        {
+            ConfigurationProfileAssignmentName = "default",
+            ResourceGroupName = "myResourceGroupName",
+            VmName = "myVMName",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+configuration_profile_assignment = azurerm.compute.v20200630preview.ConfigurationProfileAssignment("configurationProfileAssignment",
+    configuration_profile_assignment_name="default",
+    resource_group_name="myResourceGroupName",
+    vm_name="myVMName")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const configurationProfileAssignment = new azurerm.compute.v20200630preview.ConfigurationProfileAssignment("configurationProfileAssignment", {
+    configurationProfileAssignmentName: "default",
+    resourceGroupName: "myResourceGroupName",
+    vmName: "myVMName",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ConfigurationProfileAssignment Resource {#create}

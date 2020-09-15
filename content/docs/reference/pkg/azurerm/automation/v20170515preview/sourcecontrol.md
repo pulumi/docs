@@ -12,6 +12,104 @@ meta_desc: "Explore the SourceControl resource of the automation/v20170515previe
 
 Definition of the source control.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a source control
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sourceControl = new AzureRM.Automation.V20170515Preview.SourceControl("sourceControl", new AzureRM.Automation.V20170515Preview.SourceControlArgs
+        {
+            AutoSync = true,
+            AutomationAccountName = "sampleAccount9",
+            Branch = "master",
+            Description = "my description",
+            FolderPath = "/folderOne/folderTwo",
+            PublishRunbook = true,
+            RepoUrl = "https://sampleUser.visualstudio.com/myProject/_git/myRepository",
+            ResourceGroupName = "rg",
+            SecurityToken = new AzureRM.Automation.V20170515Preview.Inputs.SourceControlSecurityTokenPropertiesArgs
+            {
+                AccessToken = "3a326f7a0dcd343ea58fee21f2fd5fb4c1234567",
+                TokenType = "PersonalAccessToken",
+            },
+            SourceControlName = "sampleSourceControl",
+            SourceType = "VsoGit",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+source_control = azurerm.automation.v20170515preview.SourceControl("sourceControl",
+    auto_sync=True,
+    automation_account_name="sampleAccount9",
+    branch="master",
+    description="my description",
+    folder_path="/folderOne/folderTwo",
+    publish_runbook=True,
+    repo_url="https://sampleUser.visualstudio.com/myProject/_git/myRepository",
+    resource_group_name="rg",
+    security_token={
+        "accessToken": "3a326f7a0dcd343ea58fee21f2fd5fb4c1234567",
+        "tokenType": "PersonalAccessToken",
+    },
+    source_control_name="sampleSourceControl",
+    source_type="VsoGit")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sourceControl = new azurerm.automation.v20170515preview.SourceControl("sourceControl", {
+    autoSync: true,
+    automationAccountName: "sampleAccount9",
+    branch: "master",
+    description: "my description",
+    folderPath: "/folderOne/folderTwo",
+    publishRunbook: true,
+    repoUrl: "https://sampleUser.visualstudio.com/myProject/_git/myRepository",
+    resourceGroupName: "rg",
+    securityToken: {
+        accessToken: "3a326f7a0dcd343ea58fee21f2fd5fb4c1234567",
+        tokenType: "PersonalAccessToken",
+    },
+    sourceControlName: "sampleSourceControl",
+    sourceType: "VsoGit",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SourceControl Resource {#create}

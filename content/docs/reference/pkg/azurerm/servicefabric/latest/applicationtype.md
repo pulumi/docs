@@ -12,6 +12,70 @@ meta_desc: "Explore the ApplicationType resource of the servicefabric/latest mod
 
 The application type name resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Put an application type
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var applicationType = new AzureRM.ServiceFabric.Latest.ApplicationType("applicationType", new AzureRM.ServiceFabric.Latest.ApplicationTypeArgs
+        {
+            ApplicationTypeName = "myAppType",
+            ClusterName = "myCluster",
+            ResourceGroupName = "resRg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+application_type = azurerm.servicefabric.latest.ApplicationType("applicationType",
+    application_type_name="myAppType",
+    cluster_name="myCluster",
+    resource_group_name="resRg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const applicationType = new azurerm.servicefabric.latest.ApplicationType("applicationType", {
+    applicationTypeName: "myAppType",
+    clusterName: "myCluster",
+    resourceGroupName: "resRg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApplicationType Resource {#create}

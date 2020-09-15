@@ -12,6 +12,210 @@ meta_desc: "Explore the DatabaseAccount resource of the documentdb/v20200601prev
 
 An Azure Cosmos DB database account.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CosmosDBDatabaseAccountCreateMax
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var databaseAccount = new AzureRM.DocumentDB.V20200601Preview.DatabaseAccount("databaseAccount", new AzureRM.DocumentDB.V20200601Preview.DatabaseAccountArgs
+        {
+            AccountName = "ddb1",
+            Identity = new AzureRM.DocumentDB.V20200601Preview.Inputs.ManagedServiceIdentityArgs
+            {
+                Type = "SystemAssigned,UserAssigned",
+            },
+            Kind = "MongoDB",
+            Location = "westus",
+            ResourceGroupName = "rg1",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database_account = azurerm.documentdb.v20200601preview.DatabaseAccount("databaseAccount",
+    account_name="ddb1",
+    identity={
+        "type": "SystemAssigned,UserAssigned",
+    },
+    kind="MongoDB",
+    location="westus",
+    resource_group_name="rg1",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const databaseAccount = new azurerm.documentdb.v20200601preview.DatabaseAccount("databaseAccount", {
+    accountName: "ddb1",
+    identity: {
+        type: "SystemAssigned,UserAssigned",
+    },
+    kind: "MongoDB",
+    location: "westus",
+    resourceGroupName: "rg1",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+### CosmosDBDatabaseAccountCreateMin
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var databaseAccount = new AzureRM.DocumentDB.V20200601Preview.DatabaseAccount("databaseAccount", new AzureRM.DocumentDB.V20200601Preview.DatabaseAccountArgs
+        {
+            AccountName = "ddb1",
+            Location = "westus",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database_account = azurerm.documentdb.v20200601preview.DatabaseAccount("databaseAccount",
+    account_name="ddb1",
+    location="westus",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const databaseAccount = new azurerm.documentdb.v20200601preview.DatabaseAccount("databaseAccount", {
+    accountName: "ddb1",
+    location: "westus",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+### CosmosDBRestoreDatabaseAccountCreateUpdate.json
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var databaseAccount = new AzureRM.DocumentDB.V20200601Preview.DatabaseAccount("databaseAccount", new AzureRM.DocumentDB.V20200601Preview.DatabaseAccountArgs
+        {
+            AccountName = "ddb1",
+            Kind = "GlobalDocumentDB",
+            Location = "westus",
+            ResourceGroupName = "rg1",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database_account = azurerm.documentdb.v20200601preview.DatabaseAccount("databaseAccount",
+    account_name="ddb1",
+    kind="GlobalDocumentDB",
+    location="westus",
+    resource_group_name="rg1",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const databaseAccount = new azurerm.documentdb.v20200601preview.DatabaseAccount("databaseAccount", {
+    accountName: "ddb1",
+    kind: "GlobalDocumentDB",
+    location: "westus",
+    resourceGroupName: "rg1",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DatabaseAccount Resource {#create}

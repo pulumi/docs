@@ -12,6 +12,79 @@ meta_desc: "Explore the Cache resource of the apimanagement/latest module, inclu
 
 Cache details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateCache
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cache = new AzureRM.ApiManagement.Latest.Cache("cache", new AzureRM.ApiManagement.Latest.CacheArgs
+        {
+            CacheId = "westindia",
+            ConnectionString = "contoso5.redis.cache.windows.net,ssl=true,password=...",
+            Description = "Redis cache instances in West India",
+            ResourceGroupName = "rg1",
+            ResourceId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/contoso5",
+            ServiceName = "apimService1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cache = azurerm.apimanagement.latest.Cache("cache",
+    cache_id="westindia",
+    connection_string="contoso5.redis.cache.windows.net,ssl=true,password=...",
+    description="Redis cache instances in West India",
+    resource_group_name="rg1",
+    resource_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/contoso5",
+    service_name="apimService1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cache = new azurerm.apimanagement.latest.Cache("cache", {
+    cacheId: "westindia",
+    connectionString: "contoso5.redis.cache.windows.net,ssl=true,password=...",
+    description: "Redis cache instances in West India",
+    resourceGroupName: "rg1",
+    resourceId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/contoso5",
+    serviceName: "apimService1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cache Resource {#create}

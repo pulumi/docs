@@ -12,6 +12,83 @@ meta_desc: "Explore the DatabaseAccountGremlinDatabase resource of the documentd
 
 An Azure Cosmos DB Gremlin database.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CosmosDBGremlinDatabaseCreateUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var databaseAccountGremlinDatabase = new AzureRM.DocumentDB.Latest.DatabaseAccountGremlinDatabase("databaseAccountGremlinDatabase", new AzureRM.DocumentDB.Latest.DatabaseAccountGremlinDatabaseArgs
+        {
+            AccountName = "ddb1",
+            DatabaseName = "databaseName",
+            Options = ,
+            Resource = new AzureRM.DocumentDB.Latest.Inputs.GremlinDatabaseResourceArgs
+            {
+                Id = "databaseName",
+            },
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database_account_gremlin_database = azurerm.documentdb.latest.DatabaseAccountGremlinDatabase("databaseAccountGremlinDatabase",
+    account_name="ddb1",
+    database_name="databaseName",
+    options={},
+    resource={
+        "id": "databaseName",
+    },
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const databaseAccountGremlinDatabase = new azurerm.documentdb.latest.DatabaseAccountGremlinDatabase("databaseAccountGremlinDatabase", {
+    accountName: "ddb1",
+    databaseName: "databaseName",
+    options: {},
+    resource: {
+        id: "databaseName",
+    },
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DatabaseAccountGremlinDatabase Resource {#create}

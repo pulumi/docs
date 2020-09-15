@@ -12,6 +12,96 @@ meta_desc: "Explore the Cache resource of the storagecache/latest module, includ
 
 A Cache instance. Follows Azure Resource Manager standards: https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/resource-api-reference.md
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Caches_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cache = new AzureRM.StorageCache.Latest.Cache("cache", new AzureRM.StorageCache.Latest.CacheArgs
+        {
+            CacheName = "sc1",
+            CacheSizeGB = 3072,
+            Location = "westus",
+            ResourceGroupName = "scgroup",
+            Sku = new AzureRM.StorageCache.Latest.Inputs.CacheSkuArgs
+            {
+                Name = "Standard_2G",
+            },
+            Subnet = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
+            Tags = 
+            {
+                { "Dept", "ContosoAds" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cache = azurerm.storagecache.latest.Cache("cache",
+    cache_name="sc1",
+    cache_size_gb=3072,
+    location="westus",
+    resource_group_name="scgroup",
+    sku={
+        "name": "Standard_2G",
+    },
+    subnet="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
+    tags={
+        "Dept": "ContosoAds",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cache = new azurerm.storagecache.latest.Cache("cache", {
+    cacheName: "sc1",
+    cacheSizeGB: 3072,
+    location: "westus",
+    resourceGroupName: "scgroup",
+    sku: {
+        name: "Standard_2G",
+    },
+    subnet: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
+    tags: {
+        Dept: "ContosoAds",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cache Resource {#create}

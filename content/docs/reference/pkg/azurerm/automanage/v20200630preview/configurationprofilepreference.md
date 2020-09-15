@@ -12,6 +12,80 @@ meta_desc: "Explore the ConfigurationProfilePreference resource of the automanag
 
 Definition of the configuration profile preference.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update configuration profile preference
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var configurationProfilePreference = new AzureRM.Automanage.V20200630Preview.ConfigurationProfilePreference("configurationProfilePreference", new AzureRM.Automanage.V20200630Preview.ConfigurationProfilePreferenceArgs
+        {
+            ConfigurationProfilePreferenceName = "defaultProfilePreference",
+            Location = "East US",
+            ResourceGroupName = "myResourceGroupName",
+            Tags = 
+            {
+                { "Organization", "Administration" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+configuration_profile_preference = azurerm.automanage.v20200630preview.ConfigurationProfilePreference("configurationProfilePreference",
+    configuration_profile_preference_name="defaultProfilePreference",
+    location="East US",
+    resource_group_name="myResourceGroupName",
+    tags={
+        "Organization": "Administration",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const configurationProfilePreference = new azurerm.automanage.v20200630preview.ConfigurationProfilePreference("configurationProfilePreference", {
+    configurationProfilePreferenceName: "defaultProfilePreference",
+    location: "East US",
+    resourceGroupName: "myResourceGroupName",
+    tags: {
+        Organization: "Administration",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ConfigurationProfilePreference Resource {#create}

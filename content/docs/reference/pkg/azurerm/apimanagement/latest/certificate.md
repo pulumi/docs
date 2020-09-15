@@ -12,6 +12,76 @@ meta_desc: "Explore the Certificate resource of the apimanagement/latest module,
 
 Certificate details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateCertificate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var certificate = new AzureRM.ApiManagement.Latest.Certificate("certificate", new AzureRM.ApiManagement.Latest.CertificateArgs
+        {
+            CertificateId = "tempcert",
+            Data = "****************Base 64 Encoded Certificate *******************************",
+            Password = "****Certificate Password******",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+certificate = azurerm.apimanagement.latest.Certificate("certificate",
+    certificate_id="tempcert",
+    data="****************Base 64 Encoded Certificate *******************************",
+    password="****Certificate Password******",
+    resource_group_name="rg1",
+    service_name="apimService1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const certificate = new azurerm.apimanagement.latest.Certificate("certificate", {
+    certificateId: "tempcert",
+    data: "****************Base 64 Encoded Certificate *******************************",
+    password: "****Certificate Password******",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Certificate Resource {#create}

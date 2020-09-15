@@ -12,6 +12,70 @@ meta_desc: "Explore the NotebookWorkspace resource of the documentdb/latest modu
 
 A notebook workspace resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CosmosDBNotebookWorkspaceCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var notebookWorkspace = new AzureRM.DocumentDB.Latest.NotebookWorkspace("notebookWorkspace", new AzureRM.DocumentDB.Latest.NotebookWorkspaceArgs
+        {
+            AccountName = "ddb1",
+            NotebookWorkspaceName = "default",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+notebook_workspace = azurerm.documentdb.latest.NotebookWorkspace("notebookWorkspace",
+    account_name="ddb1",
+    notebook_workspace_name="default",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const notebookWorkspace = new azurerm.documentdb.latest.NotebookWorkspace("notebookWorkspace", {
+    accountName: "ddb1",
+    notebookWorkspaceName: "default",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NotebookWorkspace Resource {#create}

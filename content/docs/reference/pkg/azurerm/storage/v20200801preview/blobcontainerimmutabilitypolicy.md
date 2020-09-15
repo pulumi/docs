@@ -12,6 +12,56 @@ meta_desc: "Explore the BlobContainerImmutabilityPolicy resource of the storage/
 
 The ImmutabilityPolicy property of a blob container, including Id, resource name, resource type, Etag.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateOrUpdateImmutabilityPolicy
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+blob_container_immutability_policy = .("blobContainerImmutabilityPolicy",
+    account_name="sto7069",
+    allow_protected_append_writes=True,
+    container_name="container6397",
+    immutability_period_since_creation_in_days=3,
+    immutability_policy_name="default",
+    resource_group_name="res1782")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const blobContainerImmutabilityPolicy = new .("blobContainerImmutabilityPolicy", {
+    accountName: "sto7069",
+    allowProtectedAppendWrites: true,
+    containerName: "container6397",
+    immutabilityPeriodSinceCreationInDays: 3,
+    immutabilityPolicyName: "default",
+    resourceGroupName: "res1782",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BlobContainerImmutabilityPolicy Resource {#create}

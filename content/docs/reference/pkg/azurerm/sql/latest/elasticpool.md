@@ -12,6 +12,150 @@ meta_desc: "Explore the ElasticPool resource of the sql/latest module, including
 
 Represents a database elastic pool.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create elastic pool max
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var elasticPool = new AzureRM.Sql.Latest.ElasticPool("elasticPool", new AzureRM.Sql.Latest.ElasticPoolArgs
+        {
+            DatabaseDtuMax = 5,
+            DatabaseDtuMin = 0,
+            Dtu = 50,
+            Edition = "Basic",
+            ElasticPoolName = "sqlcrudtest-8102",
+            Location = "Japan East",
+            ResourceGroupName = "sqlcrudtest-2369",
+            ServerName = "sqlcrudtest-8069",
+            StorageMB = 5000,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+elastic_pool = azurerm.sql.latest.ElasticPool("elasticPool",
+    database_dtu_max=5,
+    database_dtu_min=0,
+    dtu=50,
+    edition="Basic",
+    elastic_pool_name="sqlcrudtest-8102",
+    location="Japan East",
+    resource_group_name="sqlcrudtest-2369",
+    server_name="sqlcrudtest-8069",
+    storage_mb=5000)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const elasticPool = new azurerm.sql.latest.ElasticPool("elasticPool", {
+    databaseDtuMax: 5,
+    databaseDtuMin: 0,
+    dtu: 50,
+    edition: "Basic",
+    elasticPoolName: "sqlcrudtest-8102",
+    location: "Japan East",
+    resourceGroupName: "sqlcrudtest-2369",
+    serverName: "sqlcrudtest-8069",
+    storageMB: 5000,
+});
+
+```
+
+{{% /example %}}
+
+### Create elastic pool min
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var elasticPool = new AzureRM.Sql.Latest.ElasticPool("elasticPool", new AzureRM.Sql.Latest.ElasticPoolArgs
+        {
+            ElasticPoolName = "sqlcrudtest-8102",
+            Location = "Japan East",
+            ResourceGroupName = "sqlcrudtest-2369",
+            ServerName = "sqlcrudtest-8069",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+elastic_pool = azurerm.sql.latest.ElasticPool("elasticPool",
+    elastic_pool_name="sqlcrudtest-8102",
+    location="Japan East",
+    resource_group_name="sqlcrudtest-2369",
+    server_name="sqlcrudtest-8069")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const elasticPool = new azurerm.sql.latest.ElasticPool("elasticPool", {
+    elasticPoolName: "sqlcrudtest-8102",
+    location: "Japan East",
+    resourceGroupName: "sqlcrudtest-2369",
+    serverName: "sqlcrudtest-8069",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ElasticPool Resource {#create}

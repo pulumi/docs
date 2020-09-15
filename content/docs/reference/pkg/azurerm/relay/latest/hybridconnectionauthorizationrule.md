@@ -12,6 +12,86 @@ meta_desc: "Explore the HybridConnectionAuthorizationRule resource of the relay/
 
 Description of a namespace authorization rule.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### RelayHybridConnectionAuthorizationRuleCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hybridConnectionAuthorizationRule = new AzureRM.Relay.Latest.HybridConnectionAuthorizationRule("hybridConnectionAuthorizationRule", new AzureRM.Relay.Latest.HybridConnectionAuthorizationRuleArgs
+        {
+            AuthorizationRuleName = "sdk-RelayAuthRules-01",
+            HybridConnectionName = "sdk-Relay-Hybrid-01",
+            NamespaceName = "sdk-RelayNamespace-01",
+            ResourceGroupName = "RG-eg",
+            Rights = 
+            {
+                "Listen",
+                "Send",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+hybrid_connection_authorization_rule = azurerm.relay.latest.HybridConnectionAuthorizationRule("hybridConnectionAuthorizationRule",
+    authorization_rule_name="sdk-RelayAuthRules-01",
+    hybrid_connection_name="sdk-Relay-Hybrid-01",
+    namespace_name="sdk-RelayNamespace-01",
+    resource_group_name="RG-eg",
+    rights=[
+        "Listen",
+        "Send",
+    ])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const hybridConnectionAuthorizationRule = new azurerm.relay.latest.HybridConnectionAuthorizationRule("hybridConnectionAuthorizationRule", {
+    authorizationRuleName: "sdk-RelayAuthRules-01",
+    hybridConnectionName: "sdk-Relay-Hybrid-01",
+    namespaceName: "sdk-RelayNamespace-01",
+    resourceGroupName: "RG-eg",
+    rights: [
+        "Listen",
+        "Send",
+    ],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a HybridConnectionAuthorizationRule Resource {#create}

@@ -12,6 +12,70 @@ meta_desc: "Explore the ScopeAssignment resource of the managednetwork/v20190601
 
 The Managed Network resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ScopeAssignmentsPut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var scopeAssignment = new AzureRM.ManagedNetwork.V20190601Preview.ScopeAssignment("scopeAssignment", new AzureRM.ManagedNetwork.V20190601Preview.ScopeAssignmentArgs
+        {
+            AssignedManagedNetwork = "/subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork",
+            Scope = "subscriptions/subscriptionC",
+            ScopeAssignmentName = "subscriptionCAssignment",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+scope_assignment = azurerm.managednetwork.v20190601preview.ScopeAssignment("scopeAssignment",
+    assigned_managed_network="/subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork",
+    scope="subscriptions/subscriptionC",
+    scope_assignment_name="subscriptionCAssignment")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const scopeAssignment = new azurerm.managednetwork.v20190601preview.ScopeAssignment("scopeAssignment", {
+    assignedManagedNetwork: "/subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork",
+    scope: "subscriptions/subscriptionC",
+    scopeAssignmentName: "subscriptionCAssignment",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ScopeAssignment Resource {#create}

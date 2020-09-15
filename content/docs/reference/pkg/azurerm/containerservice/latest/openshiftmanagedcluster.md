@@ -12,6 +12,230 @@ meta_desc: "Explore the OpenShiftManagedCluster resource of the containerservice
 
 OpenShift Managed cluster.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create/Update OpenShift Managed Cluster
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var openShiftManagedCluster = new AzureRM.ContainerService.Latest.OpenShiftManagedCluster("openShiftManagedCluster", new AzureRM.ContainerService.Latest.OpenShiftManagedClusterArgs
+        {
+            AgentPoolProfiles = 
+            {
+                new AzureRM.ContainerService.Latest.Inputs.OpenShiftManagedClusterAgentPoolProfileArgs
+                {
+                    Count = 2,
+                    Name = "infra",
+                    OsType = "Linux",
+                    Role = "infra",
+                    SubnetCidr = "10.0.0.0/24",
+                    VmSize = "Standard_D4s_v3",
+                },
+                new AzureRM.ContainerService.Latest.Inputs.OpenShiftManagedClusterAgentPoolProfileArgs
+                {
+                    Count = 4,
+                    Name = "compute",
+                    OsType = "Linux",
+                    Role = "compute",
+                    SubnetCidr = "10.0.0.0/24",
+                    VmSize = "Standard_D4s_v3",
+                },
+            },
+            AuthProfile = new AzureRM.ContainerService.Latest.Inputs.OpenShiftManagedClusterAuthProfileArgs
+            {
+                IdentityProviders = 
+                {
+                    new AzureRM.ContainerService.Latest.Inputs.OpenShiftManagedClusterIdentityProviderArgs
+                    {
+                        Name = "Azure AD",
+                        Provider = new AzureRM.ContainerService.Latest.Inputs.OpenShiftManagedClusterAADIdentityProviderArgs
+                        {
+                            ClientId = "clientId",
+                            CustomerAdminGroupId = "customerAdminGroupId",
+                            Kind = "AADIdentityProvider",
+                            Secret = "secret",
+                            TenantId = "tenantId",
+                        },
+                    },
+                },
+            },
+            Location = "location1",
+            MasterPoolProfile = new AzureRM.ContainerService.Latest.Inputs.OpenShiftManagedClusterMasterPoolProfileArgs
+            {
+                Count = 3,
+                Name = "master",
+                OsType = "Linux",
+                SubnetCidr = "10.0.0.0/24",
+                VmSize = "Standard_D4s_v3",
+            },
+            NetworkProfile = new AzureRM.ContainerService.Latest.Inputs.NetworkProfileArgs
+            {
+                VnetCidr = "10.0.0.0/8",
+            },
+            OpenShiftVersion = "v3.11",
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            RouterProfiles = 
+            {
+                new AzureRM.ContainerService.Latest.Inputs.OpenShiftRouterProfileArgs
+                {
+                    Name = "default",
+                },
+            },
+            Tags = 
+            {
+                { "archv2", "" },
+                { "tier", "production" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+open_shift_managed_cluster = azurerm.containerservice.latest.OpenShiftManagedCluster("openShiftManagedCluster",
+    agent_pool_profiles=[
+        {
+            "count": 2,
+            "name": "infra",
+            "osType": "Linux",
+            "role": "infra",
+            "subnetCidr": "10.0.0.0/24",
+            "vmSize": "Standard_D4s_v3",
+        },
+        {
+            "count": 4,
+            "name": "compute",
+            "osType": "Linux",
+            "role": "compute",
+            "subnetCidr": "10.0.0.0/24",
+            "vmSize": "Standard_D4s_v3",
+        },
+    ],
+    auth_profile={
+        "identityProviders": [{
+            "name": "Azure AD",
+            "provider": {
+                "clientId": "clientId",
+                "customerAdminGroupId": "customerAdminGroupId",
+                "kind": "AADIdentityProvider",
+                "secret": "secret",
+                "tenantId": "tenantId",
+            },
+        }],
+    },
+    location="location1",
+    master_pool_profile={
+        "count": 3,
+        "name": "master",
+        "osType": "Linux",
+        "subnetCidr": "10.0.0.0/24",
+        "vmSize": "Standard_D4s_v3",
+    },
+    network_profile={
+        "vnetCidr": "10.0.0.0/8",
+    },
+    open_shift_version="v3.11",
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    router_profiles=[{
+        "name": "default",
+    }],
+    tags={
+        "archv2": "",
+        "tier": "production",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const openShiftManagedCluster = new azurerm.containerservice.latest.OpenShiftManagedCluster("openShiftManagedCluster", {
+    agentPoolProfiles: [
+        {
+            count: 2,
+            name: "infra",
+            osType: "Linux",
+            role: "infra",
+            subnetCidr: "10.0.0.0/24",
+            vmSize: "Standard_D4s_v3",
+        },
+        {
+            count: 4,
+            name: "compute",
+            osType: "Linux",
+            role: "compute",
+            subnetCidr: "10.0.0.0/24",
+            vmSize: "Standard_D4s_v3",
+        },
+    ],
+    authProfile: {
+        identityProviders: [{
+            name: "Azure AD",
+            provider: {
+                clientId: "clientId",
+                customerAdminGroupId: "customerAdminGroupId",
+                kind: "AADIdentityProvider",
+                secret: "secret",
+                tenantId: "tenantId",
+            },
+        }],
+    },
+    location: "location1",
+    masterPoolProfile: {
+        count: 3,
+        name: "master",
+        osType: "Linux",
+        subnetCidr: "10.0.0.0/24",
+        vmSize: "Standard_D4s_v3",
+    },
+    networkProfile: {
+        vnetCidr: "10.0.0.0/8",
+    },
+    openShiftVersion: "v3.11",
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    routerProfiles: [{
+        name: "default",
+    }],
+    tags: {
+        archv2: "",
+        tier: "production",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a OpenShiftManagedCluster Resource {#create}

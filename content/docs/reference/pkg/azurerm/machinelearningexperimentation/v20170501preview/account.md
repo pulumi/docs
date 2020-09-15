@@ -12,6 +12,99 @@ meta_desc: "Explore the Account resource of the machinelearningexperimentation/v
 
 An object that represents a machine learning team account.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### AccountCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var account = new AzureRM.MachineLearningExperimentation.V20170501Preview.Account("account", new AzureRM.MachineLearningExperimentation.V20170501Preview.AccountArgs
+        {
+            AccountName = "accountcrud5678",
+            KeyVaultId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.KeyVault/vaults/testkv",
+            Location = "East US",
+            ResourceGroupName = "accountcrud-1234",
+            StorageAccount = new AzureRM.MachineLearningExperimentation.V20170501Preview.Inputs.StorageAccountPropertiesArgs
+            {
+                AccessKey = "key",
+                StorageAccountId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount",
+            },
+            Tags = 
+            {
+                { "tagKey1", "TagValue1" },
+            },
+            VsoAccountId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/microsoft.visualstudio/account/vsotest",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+account = azurerm.machinelearningexperimentation.v20170501preview.Account("account",
+    account_name="accountcrud5678",
+    key_vault_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.KeyVault/vaults/testkv",
+    location="East US",
+    resource_group_name="accountcrud-1234",
+    storage_account={
+        "accessKey": "key",
+        "storageAccountId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount",
+    },
+    tags={
+        "tagKey1": "TagValue1",
+    },
+    vso_account_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/microsoft.visualstudio/account/vsotest")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const account = new azurerm.machinelearningexperimentation.v20170501preview.Account("account", {
+    accountName: "accountcrud5678",
+    keyVaultId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.KeyVault/vaults/testkv",
+    location: "East US",
+    resourceGroupName: "accountcrud-1234",
+    storageAccount: {
+        accessKey: "key",
+        storageAccountId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount",
+    },
+    tags: {
+        tagKey1: "TagValue1",
+    },
+    vsoAccountId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/microsoft.visualstudio/account/vsotest",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Account Resource {#create}

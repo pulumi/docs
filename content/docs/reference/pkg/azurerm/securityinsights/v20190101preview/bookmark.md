@@ -12,6 +12,127 @@ meta_desc: "Explore the Bookmark resource of the securityinsights/v20190101previ
 
 Represents a bookmark in Azure Security Insights.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates a bookmark.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bookmark = new AzureRM.SecurityInsights.V20190101Preview.Bookmark("bookmark", new AzureRM.SecurityInsights.V20190101Preview.BookmarkArgs
+        {
+            BookmarkId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+            Created = "2019-01-01T13:15:30Z",
+            CreatedBy = new AzureRM.SecurityInsights.V20190101Preview.Inputs.UserInfoArgs
+            {
+                ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
+            },
+            DisplayName = "My bookmark",
+            Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+            Labels = 
+            {
+                "Tag1",
+                "Tag2",
+            },
+            Notes = "Found a suspicious activity",
+            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
+            Query = "SecurityEvent | where TimeGenerated > ago(1d) and TimeGenerated < ago(2d)",
+            QueryResult = "Security Event query result",
+            ResourceGroupName = "myRg",
+            Updated = "2019-01-01T13:15:30Z",
+            UpdatedBy = new AzureRM.SecurityInsights.V20190101Preview.Inputs.UserInfoArgs
+            {
+                ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
+            },
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+bookmark = azurerm.securityinsights.v20190101preview.Bookmark("bookmark",
+    bookmark_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+    created="2019-01-01T13:15:30Z",
+    created_by={
+        "objectId": "2046feea-040d-4a46-9e2b-91c2941bfa70",
+    },
+    display_name="My bookmark",
+    etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    labels=[
+        "Tag1",
+        "Tag2",
+    ],
+    notes="Found a suspicious activity",
+    operational_insights_resource_provider="Microsoft.OperationalInsights",
+    query="SecurityEvent | where TimeGenerated > ago(1d) and TimeGenerated < ago(2d)",
+    query_result="Security Event query result",
+    resource_group_name="myRg",
+    updated="2019-01-01T13:15:30Z",
+    updated_by={
+        "objectId": "2046feea-040d-4a46-9e2b-91c2941bfa70",
+    },
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const bookmark = new azurerm.securityinsights.v20190101preview.Bookmark("bookmark", {
+    bookmarkId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+    created: "2019-01-01T13:15:30Z",
+    createdBy: {
+        objectId: "2046feea-040d-4a46-9e2b-91c2941bfa70",
+    },
+    displayName: "My bookmark",
+    etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    labels: [
+        "Tag1",
+        "Tag2",
+    ],
+    notes: "Found a suspicious activity",
+    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
+    query: "SecurityEvent | where TimeGenerated > ago(1d) and TimeGenerated < ago(2d)",
+    queryResult: "Security Event query result",
+    resourceGroupName: "myRg",
+    updated: "2019-01-01T13:15:30Z",
+    updatedBy: {
+        objectId: "2046feea-040d-4a46-9e2b-91c2941bfa70",
+    },
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Bookmark Resource {#create}

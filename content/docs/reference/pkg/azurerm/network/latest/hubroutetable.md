@@ -12,6 +12,121 @@ meta_desc: "Explore the HubRouteTable resource of the network/latest module, inc
 
 RouteTable resource in a virtual hub.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### RouteTablePut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hubRouteTable = new AzureRM.Network.Latest.HubRouteTable("hubRouteTable", new AzureRM.Network.Latest.HubRouteTableArgs
+        {
+            Labels = 
+            {
+                "label1",
+                "label2",
+            },
+            ResourceGroupName = "rg1",
+            RouteTableName = "hubRouteTable1",
+            Routes = 
+            {
+                new AzureRM.Network.Latest.Inputs.HubRouteArgs
+                {
+                    DestinationType = "CIDR",
+                    Destinations = 
+                    {
+                        "10.0.0.0/8",
+                        "20.0.0.0/8",
+                        "30.0.0.0/8",
+                    },
+                    Name = "route1",
+                    NextHop = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azureFirewall1",
+                    NextHopType = "ResourceId",
+                },
+            },
+            VirtualHubName = "virtualHub1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+hub_route_table = azurerm.network.latest.HubRouteTable("hubRouteTable",
+    labels=[
+        "label1",
+        "label2",
+    ],
+    resource_group_name="rg1",
+    route_table_name="hubRouteTable1",
+    routes=[{
+        "destinationType": "CIDR",
+        "destinations": [
+            "10.0.0.0/8",
+            "20.0.0.0/8",
+            "30.0.0.0/8",
+        ],
+        "name": "route1",
+        "nextHop": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azureFirewall1",
+        "nextHopType": "ResourceId",
+    }],
+    virtual_hub_name="virtualHub1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const hubRouteTable = new azurerm.network.latest.HubRouteTable("hubRouteTable", {
+    labels: [
+        "label1",
+        "label2",
+    ],
+    resourceGroupName: "rg1",
+    routeTableName: "hubRouteTable1",
+    routes: [{
+        destinationType: "CIDR",
+        destinations: [
+            "10.0.0.0/8",
+            "20.0.0.0/8",
+            "30.0.0.0/8",
+        ],
+        name: "route1",
+        nextHop: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azureFirewall1",
+        nextHopType: "ResourceId",
+    }],
+    virtualHubName: "virtualHub1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a HubRouteTable Resource {#create}

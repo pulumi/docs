@@ -12,6 +12,773 @@ meta_desc: "Explore the Disk resource of the compute/latest module, including ex
 
 Disk resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a managed disk and associate with disk access resource.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureRM.Compute.Latest.Disk("disk", new AzureRM.Compute.Latest.DiskArgs
+        {
+            CreationData = new AzureRM.Compute.Latest.Inputs.CreationDataArgs
+            {
+                CreateOption = "Empty",
+            },
+            DiskAccessId = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskAccesses/{existing-diskAccess-name}",
+            DiskName = "myDisk",
+            DiskSizeGB = 200,
+            Location = "West US",
+            NetworkAccessPolicy = "AllowPrivate",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+disk = azurerm.compute.latest.Disk("disk",
+    creation_data={
+        "createOption": "Empty",
+    },
+    disk_access_id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskAccesses/{existing-diskAccess-name}",
+    disk_name="myDisk",
+    disk_size_gb=200,
+    location="West US",
+    network_access_policy="AllowPrivate",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const disk = new azurerm.compute.latest.Disk("disk", {
+    creationData: {
+        createOption: "Empty",
+    },
+    diskAccessId: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskAccesses/{existing-diskAccess-name}",
+    diskName: "myDisk",
+    diskSizeGB: 200,
+    location: "West US",
+    networkAccessPolicy: "AllowPrivate",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+### Create a managed disk and associate with disk encryption set.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureRM.Compute.Latest.Disk("disk", new AzureRM.Compute.Latest.DiskArgs
+        {
+            CreationData = new AzureRM.Compute.Latest.Inputs.CreationDataArgs
+            {
+                CreateOption = "Empty",
+            },
+            DiskName = "myDisk",
+            DiskSizeGB = 200,
+            Encryption = new AzureRM.Compute.Latest.Inputs.EncryptionArgs
+            {
+                DiskEncryptionSetId = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+            },
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+disk = azurerm.compute.latest.Disk("disk",
+    creation_data={
+        "createOption": "Empty",
+    },
+    disk_name="myDisk",
+    disk_size_gb=200,
+    encryption={
+        "diskEncryptionSetId": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+    },
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const disk = new azurerm.compute.latest.Disk("disk", {
+    creationData: {
+        createOption: "Empty",
+    },
+    diskName: "myDisk",
+    diskSizeGB: 200,
+    encryption: {
+        diskEncryptionSetId: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+    },
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+### Create a managed disk by copying a snapshot.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureRM.Compute.Latest.Disk("disk", new AzureRM.Compute.Latest.DiskArgs
+        {
+            CreationData = new AzureRM.Compute.Latest.Inputs.CreationDataArgs
+            {
+                CreateOption = "Copy",
+                SourceResourceId = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+            },
+            DiskName = "myDisk",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+disk = azurerm.compute.latest.Disk("disk",
+    creation_data={
+        "createOption": "Copy",
+        "sourceResourceId": "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+    },
+    disk_name="myDisk",
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const disk = new azurerm.compute.latest.Disk("disk", {
+    creationData: {
+        createOption: "Copy",
+        sourceResourceId: "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+    },
+    diskName: "myDisk",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+### Create a managed disk by importing an unmanaged blob from a different subscription.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureRM.Compute.Latest.Disk("disk", new AzureRM.Compute.Latest.DiskArgs
+        {
+            CreationData = new AzureRM.Compute.Latest.Inputs.CreationDataArgs
+            {
+                CreateOption = "Import",
+                SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+                StorageAccountId = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
+            },
+            DiskName = "myDisk",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+disk = azurerm.compute.latest.Disk("disk",
+    creation_data={
+        "createOption": "Import",
+        "sourceUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+        "storageAccountId": "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
+    },
+    disk_name="myDisk",
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const disk = new azurerm.compute.latest.Disk("disk", {
+    creationData: {
+        createOption: "Import",
+        sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+        storageAccountId: "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
+    },
+    diskName: "myDisk",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+### Create a managed disk by importing an unmanaged blob from the same subscription.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureRM.Compute.Latest.Disk("disk", new AzureRM.Compute.Latest.DiskArgs
+        {
+            CreationData = new AzureRM.Compute.Latest.Inputs.CreationDataArgs
+            {
+                CreateOption = "Import",
+                SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+            },
+            DiskName = "myDisk",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+disk = azurerm.compute.latest.Disk("disk",
+    creation_data={
+        "createOption": "Import",
+        "sourceUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+    },
+    disk_name="myDisk",
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const disk = new azurerm.compute.latest.Disk("disk", {
+    creationData: {
+        createOption: "Import",
+        sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+    },
+    diskName: "myDisk",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+### Create a managed disk from a platform image.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureRM.Compute.Latest.Disk("disk", new AzureRM.Compute.Latest.DiskArgs
+        {
+            CreationData = new AzureRM.Compute.Latest.Inputs.CreationDataArgs
+            {
+                CreateOption = "FromImage",
+                ImageReference = new AzureRM.Compute.Latest.Inputs.ImageDiskReferenceArgs
+                {
+                    Id = "/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}",
+                },
+            },
+            DiskName = "myDisk",
+            Location = "West US",
+            OsType = "Windows",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+disk = azurerm.compute.latest.Disk("disk",
+    creation_data={
+        "createOption": "FromImage",
+        "imageReference": {
+            "id": "/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}",
+        },
+    },
+    disk_name="myDisk",
+    location="West US",
+    os_type="Windows",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const disk = new azurerm.compute.latest.Disk("disk", {
+    creationData: {
+        createOption: "FromImage",
+        imageReference: {
+            id: "/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}",
+        },
+    },
+    diskName: "myDisk",
+    location: "West US",
+    osType: "Windows",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+### Create a managed disk from an existing managed disk in the same or different subscription.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureRM.Compute.Latest.Disk("disk", new AzureRM.Compute.Latest.DiskArgs
+        {
+            CreationData = new AzureRM.Compute.Latest.Inputs.CreationDataArgs
+            {
+                CreateOption = "Copy",
+                SourceResourceId = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1",
+            },
+            DiskName = "myDisk2",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+disk = azurerm.compute.latest.Disk("disk",
+    creation_data={
+        "createOption": "Copy",
+        "sourceResourceId": "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1",
+    },
+    disk_name="myDisk2",
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const disk = new azurerm.compute.latest.Disk("disk", {
+    creationData: {
+        createOption: "Copy",
+        sourceResourceId: "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1",
+    },
+    diskName: "myDisk2",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+### Create a managed upload disk.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureRM.Compute.Latest.Disk("disk", new AzureRM.Compute.Latest.DiskArgs
+        {
+            CreationData = new AzureRM.Compute.Latest.Inputs.CreationDataArgs
+            {
+                CreateOption = "Upload",
+                UploadSizeBytes = 10737418752,
+            },
+            DiskName = "myDisk",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+disk = azurerm.compute.latest.Disk("disk",
+    creation_data={
+        "createOption": "Upload",
+        "uploadSizeBytes": 10737418752,
+    },
+    disk_name="myDisk",
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const disk = new azurerm.compute.latest.Disk("disk", {
+    creationData: {
+        createOption: "Upload",
+        uploadSizeBytes: 10737418752,
+    },
+    diskName: "myDisk",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+### Create an empty managed disk.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureRM.Compute.Latest.Disk("disk", new AzureRM.Compute.Latest.DiskArgs
+        {
+            CreationData = new AzureRM.Compute.Latest.Inputs.CreationDataArgs
+            {
+                CreateOption = "Empty",
+            },
+            DiskName = "myDisk",
+            DiskSizeGB = 200,
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+disk = azurerm.compute.latest.Disk("disk",
+    creation_data={
+        "createOption": "Empty",
+    },
+    disk_name="myDisk",
+    disk_size_gb=200,
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const disk = new azurerm.compute.latest.Disk("disk", {
+    creationData: {
+        createOption: "Empty",
+    },
+    diskName: "myDisk",
+    diskSizeGB: 200,
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+### Create an ultra managed disk with logicalSectorSize 512E
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureRM.Compute.Latest.Disk("disk", new AzureRM.Compute.Latest.DiskArgs
+        {
+            CreationData = new AzureRM.Compute.Latest.Inputs.CreationDataArgs
+            {
+                CreateOption = "Empty",
+                LogicalSectorSize = 512,
+            },
+            DiskName = "myDisk",
+            DiskSizeGB = 200,
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Compute.Latest.Inputs.DiskSkuArgs
+            {
+                Name = "UltraSSD_LRS",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+disk = azurerm.compute.latest.Disk("disk",
+    creation_data={
+        "createOption": "Empty",
+        "logicalSectorSize": 512,
+    },
+    disk_name="myDisk",
+    disk_size_gb=200,
+    location="West US",
+    resource_group_name="myResourceGroup",
+    sku={
+        "name": "UltraSSD_LRS",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const disk = new azurerm.compute.latest.Disk("disk", {
+    creationData: {
+        createOption: "Empty",
+        logicalSectorSize: 512,
+    },
+    diskName: "myDisk",
+    diskSizeGB: 200,
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        name: "UltraSSD_LRS",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Disk Resource {#create}

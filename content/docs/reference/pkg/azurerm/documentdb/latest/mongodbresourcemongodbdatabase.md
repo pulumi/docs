@@ -12,6 +12,89 @@ meta_desc: "Explore the MongoDBResourceMongoDBDatabase resource of the documentd
 
 An Azure Cosmos DB MongoDB database.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CosmosDBMongoDBDatabaseCreateUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mongoDBResourceMongoDBDatabase = new AzureRM.DocumentDB.Latest.MongoDBResourceMongoDBDatabase("mongoDBResourceMongoDBDatabase", new AzureRM.DocumentDB.Latest.MongoDBResourceMongoDBDatabaseArgs
+        {
+            AccountName = "ddb1",
+            DatabaseName = "databaseName",
+            Location = "West US",
+            Options = ,
+            Resource = new AzureRM.DocumentDB.Latest.Inputs.MongoDBDatabaseResourceArgs
+            {
+                Id = "databaseName",
+            },
+            ResourceGroupName = "rg1",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+mongo_db_resource_mongo_db_database = azurerm.documentdb.latest.MongoDBResourceMongoDBDatabase("mongoDBResourceMongoDBDatabase",
+    account_name="ddb1",
+    database_name="databaseName",
+    location="West US",
+    options={},
+    resource={
+        "id": "databaseName",
+    },
+    resource_group_name="rg1",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const mongoDBResourceMongoDBDatabase = new azurerm.documentdb.latest.MongoDBResourceMongoDBDatabase("mongoDBResourceMongoDBDatabase", {
+    accountName: "ddb1",
+    databaseName: "databaseName",
+    location: "West US",
+    options: {},
+    resource: {
+        id: "databaseName",
+    },
+    resourceGroupName: "rg1",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MongoDBResourceMongoDBDatabase Resource {#create}

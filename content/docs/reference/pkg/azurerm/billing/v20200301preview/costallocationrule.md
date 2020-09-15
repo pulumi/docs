@@ -12,6 +12,123 @@ meta_desc: "Explore the CostAllocationRule resource of the billing/v20200301prev
 
 The cost allocation rule model definition
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CostAllocationRulesCreateResourceGroup
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var costAllocationRule = new AzureRM.Billing.V20200301Preview.CostAllocationRule("costAllocationRule", new AzureRM.Billing.V20200301Preview.CostAllocationRuleArgs
+        {
+            BillingAccountId = "100",
+            RuleName = "testRule",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cost_allocation_rule = azurerm.billing.v20200301preview.CostAllocationRule("costAllocationRule",
+    billing_account_id="100",
+    rule_name="testRule")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const costAllocationRule = new azurerm.billing.v20200301preview.CostAllocationRule("costAllocationRule", {
+    billingAccountId: "100",
+    ruleName: "testRule",
+});
+
+```
+
+{{% /example %}}
+
+### CostAllocationRulesCreateTag
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var costAllocationRule = new AzureRM.Billing.V20200301Preview.CostAllocationRule("costAllocationRule", new AzureRM.Billing.V20200301Preview.CostAllocationRuleArgs
+        {
+            BillingAccountId = "100",
+            RuleName = "testRule",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cost_allocation_rule = azurerm.billing.v20200301preview.CostAllocationRule("costAllocationRule",
+    billing_account_id="100",
+    rule_name="testRule")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const costAllocationRule = new azurerm.billing.v20200301preview.CostAllocationRule("costAllocationRule", {
+    billingAccountId: "100",
+    ruleName: "testRule",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CostAllocationRule Resource {#create}

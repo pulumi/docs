@@ -12,6 +12,155 @@ meta_desc: "Explore the ActivityLogAlert resource of the insights/latest module,
 
 An activity log alert resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update an activity log alert
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var activityLogAlert = new AzureRM.Insights.Latest.ActivityLogAlert("activityLogAlert", new AzureRM.Insights.Latest.ActivityLogAlertArgs
+        {
+            Actions = new AzureRM.Insights.Latest.Inputs.ActivityLogAlertActionListArgs
+            {
+                ActionGroups = 
+                {
+                    new AzureRM.Insights.Latest.Inputs.ActivityLogAlertActionGroupArgs
+                    {
+                        ActionGroupId = "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ActionGroups/providers/microsoft.insights/actionGroups/SampleActionGroup",
+                        WebhookProperties = 
+                        {
+                            { "sampleWebhookProperty", "samplePropertyValue" },
+                        },
+                    },
+                },
+            },
+            ActivityLogAlertName = "SampleActivityLogAlert",
+            Condition = new AzureRM.Insights.Latest.Inputs.ActivityLogAlertAllOfConditionArgs
+            {
+                AllOf = 
+                {
+                    new AzureRM.Insights.Latest.Inputs.ActivityLogAlertLeafConditionArgs
+                    {
+                        Equals = "Administrative",
+                        Field = "Category",
+                    },
+                    new AzureRM.Insights.Latest.Inputs.ActivityLogAlertLeafConditionArgs
+                    {
+                        Equals = "Error",
+                        Field = "Level",
+                    },
+                },
+            },
+            Description = "Sample activity log alert description",
+            Enabled = true,
+            Location = "Global",
+            ResourceGroupName = "Default-ActivityLogAlerts",
+            Scopes = 
+            {
+                "subscriptions/187f412d-1758-44d9-b052-169e2564721d",
+            },
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+activity_log_alert = azurerm.insights.latest.ActivityLogAlert("activityLogAlert",
+    actions={
+        "actionGroups": [{
+            "actionGroupId": "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ActionGroups/providers/microsoft.insights/actionGroups/SampleActionGroup",
+            "webhookProperties": {
+                "sampleWebhookProperty": "samplePropertyValue",
+            },
+        }],
+    },
+    activity_log_alert_name="SampleActivityLogAlert",
+    condition={
+        "allOf": [
+            {
+                "equals": "Administrative",
+                "field": "Category",
+            },
+            {
+                "equals": "Error",
+                "field": "Level",
+            },
+        ],
+    },
+    description="Sample activity log alert description",
+    enabled=True,
+    location="Global",
+    resource_group_name="Default-ActivityLogAlerts",
+    scopes=["subscriptions/187f412d-1758-44d9-b052-169e2564721d"],
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const activityLogAlert = new azurerm.insights.latest.ActivityLogAlert("activityLogAlert", {
+    actions: {
+        actionGroups: [{
+            actionGroupId: "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ActionGroups/providers/microsoft.insights/actionGroups/SampleActionGroup",
+            webhookProperties: {
+                sampleWebhookProperty: "samplePropertyValue",
+            },
+        }],
+    },
+    activityLogAlertName: "SampleActivityLogAlert",
+    condition: {
+        allOf: [
+            {
+                equals: "Administrative",
+                field: "Category",
+            },
+            {
+                equals: "Error",
+                field: "Level",
+            },
+        ],
+    },
+    description: "Sample activity log alert description",
+    enabled: true,
+    location: "Global",
+    resourceGroupName: "Default-ActivityLogAlerts",
+    scopes: ["subscriptions/187f412d-1758-44d9-b052-169e2564721d"],
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ActivityLogAlert Resource {#create}

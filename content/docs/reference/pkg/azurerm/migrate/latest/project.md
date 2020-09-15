@@ -12,6 +12,76 @@ meta_desc: "Explore the Project resource of the migrate/latest module, including
 
 Azure Migrate Project.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Projects_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = new AzureRM.Migrate.Latest.Project("project", new AzureRM.Migrate.Latest.ProjectArgs
+        {
+            ETag = "",
+            Location = "West Europe",
+            ProjectName = "abGoyalProject2",
+            ResourceGroupName = "abgoyal-westEurope",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+project = azurerm.migrate.latest.Project("project",
+    e_tag="",
+    location="West Europe",
+    project_name="abGoyalProject2",
+    resource_group_name="abgoyal-westEurope",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const project = new azurerm.migrate.latest.Project("project", {
+    eTag: "",
+    location: "West Europe",
+    projectName: "abGoyalProject2",
+    resourceGroupName: "abgoyal-westEurope",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Project Resource {#create}

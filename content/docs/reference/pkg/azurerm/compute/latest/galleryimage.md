@@ -12,6 +12,98 @@ meta_desc: "Explore the GalleryImage resource of the compute/latest module, incl
 
 Specifies information about the gallery image definition that you want to create or update.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a simple gallery image.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var galleryImage = new AzureRM.Compute.Latest.GalleryImage("galleryImage", new AzureRM.Compute.Latest.GalleryImageArgs
+        {
+            GalleryImageName = "myGalleryImageName",
+            GalleryName = "myGalleryName",
+            HyperVGeneration = "V1",
+            Identifier = new AzureRM.Compute.Latest.Inputs.GalleryImageIdentifierArgs
+            {
+                Offer = "myOfferName",
+                Publisher = "myPublisherName",
+                Sku = "mySkuName",
+            },
+            Location = "West US",
+            OsState = "Generalized",
+            OsType = "Windows",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+gallery_image = azurerm.compute.latest.GalleryImage("galleryImage",
+    gallery_image_name="myGalleryImageName",
+    gallery_name="myGalleryName",
+    hyper_v_generation="V1",
+    identifier={
+        "offer": "myOfferName",
+        "publisher": "myPublisherName",
+        "sku": "mySkuName",
+    },
+    location="West US",
+    os_state="Generalized",
+    os_type="Windows",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const galleryImage = new azurerm.compute.latest.GalleryImage("galleryImage", {
+    galleryImageName: "myGalleryImageName",
+    galleryName: "myGalleryName",
+    hyperVGeneration: "V1",
+    identifier: {
+        offer: "myOfferName",
+        publisher: "myPublisherName",
+        sku: "mySkuName",
+    },
+    location: "West US",
+    osState: "Generalized",
+    osType: "Windows",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GalleryImage Resource {#create}

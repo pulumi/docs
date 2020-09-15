@@ -12,6 +12,76 @@ meta_desc: "Explore the Container resource of the databoxedge/v20200501preview m
 
 Represents a container on the  Data Box Edge/Gateway device.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ContainerPut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var container = new AzureRM.DataBoxEdge.V20200501Preview.Container("container", new AzureRM.DataBoxEdge.V20200501Preview.ContainerArgs
+        {
+            ContainerName = "blobcontainer1",
+            DataFormat = "BlockBlob",
+            DeviceName = "testedgedevice",
+            ResourceGroupName = "GroupForEdgeAutomation",
+            StorageAccountName = "storageaccount1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+container = azurerm.databoxedge.v20200501preview.Container("container",
+    container_name="blobcontainer1",
+    data_format="BlockBlob",
+    device_name="testedgedevice",
+    resource_group_name="GroupForEdgeAutomation",
+    storage_account_name="storageaccount1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const container = new azurerm.databoxedge.v20200501preview.Container("container", {
+    containerName: "blobcontainer1",
+    dataFormat: "BlockBlob",
+    deviceName: "testedgedevice",
+    resourceGroupName: "GroupForEdgeAutomation",
+    storageAccountName: "storageaccount1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Container Resource {#create}

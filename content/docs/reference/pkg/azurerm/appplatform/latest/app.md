@@ -12,6 +12,73 @@ meta_desc: "Explore the App resource of the appplatform/latest module, including
 
 App resource payload
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Apps_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var app = new AzureRM.AppPlatform.Latest.App("app", new AzureRM.AppPlatform.Latest.AppArgs
+        {
+            AppName = "myapp",
+            Location = "eastus",
+            ResourceGroupName = "myResourceGroup",
+            ServiceName = "myservice",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+app = azurerm.appplatform.latest.App("app",
+    app_name="myapp",
+    location="eastus",
+    resource_group_name="myResourceGroup",
+    service_name="myservice")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const app = new azurerm.appplatform.latest.App("app", {
+    appName: "myapp",
+    location: "eastus",
+    resourceGroupName: "myResourceGroup",
+    serviceName: "myservice",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a App Resource {#create}

@@ -12,6 +12,73 @@ meta_desc: "Explore the SshPublicKey resource of the compute/latest module, incl
 
 Specifies information about the SSH public key.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a new SSH public key resource.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sshPublicKey = new AzureRM.Compute.Latest.SshPublicKey("sshPublicKey", new AzureRM.Compute.Latest.SshPublicKeyArgs
+        {
+            Location = "westus",
+            PublicKey = "{ssh-rsa public key}",
+            ResourceGroupName = "myResourceGroup",
+            SshPublicKeyName = "mySshPublicKeyName",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+ssh_public_key = azurerm.compute.latest.SshPublicKey("sshPublicKey",
+    location="westus",
+    public_key="{ssh-rsa public key}",
+    resource_group_name="myResourceGroup",
+    ssh_public_key_name="mySshPublicKeyName")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sshPublicKey = new azurerm.compute.latest.SshPublicKey("sshPublicKey", {
+    location: "westus",
+    publicKey: "{ssh-rsa public key}",
+    resourceGroupName: "myResourceGroup",
+    sshPublicKeyName: "mySshPublicKeyName",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SshPublicKey Resource {#create}

@@ -12,6 +12,89 @@ meta_desc: "Explore the BackupPolicy resource of the storsimple/latest module, i
 
 The backup policy.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### BackupPoliciesCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var backupPolicy = new AzureRM.StorSimple.Latest.BackupPolicy("backupPolicy", new AzureRM.StorSimple.Latest.BackupPolicyArgs
+        {
+            BackupPolicyName = "BkUpPolicy01ForSDKTest",
+            DeviceName = "Device05ForSDKTest",
+            Kind = "Series8000",
+            ManagerName = "ManagerForSDKTest1",
+            ResourceGroupName = "ResourceGroupForSDKTest",
+            VolumeIds = 
+            {
+                "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/volumeContainerForSDKTest/volumes/Clonedvolume1",
+                "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/volumeContainerForSDKTest/volumes/volume1",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+backup_policy = azurerm.storsimple.latest.BackupPolicy("backupPolicy",
+    backup_policy_name="BkUpPolicy01ForSDKTest",
+    device_name="Device05ForSDKTest",
+    kind="Series8000",
+    manager_name="ManagerForSDKTest1",
+    resource_group_name="ResourceGroupForSDKTest",
+    volume_ids=[
+        "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/volumeContainerForSDKTest/volumes/Clonedvolume1",
+        "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/volumeContainerForSDKTest/volumes/volume1",
+    ])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const backupPolicy = new azurerm.storsimple.latest.BackupPolicy("backupPolicy", {
+    backupPolicyName: "BkUpPolicy01ForSDKTest",
+    deviceName: "Device05ForSDKTest",
+    kind: "Series8000",
+    managerName: "ManagerForSDKTest1",
+    resourceGroupName: "ResourceGroupForSDKTest",
+    volumeIds: [
+        "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/volumeContainerForSDKTest/volumes/Clonedvolume1",
+        "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/volumeContainerForSDKTest/volumes/volume1",
+    ],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BackupPolicy Resource {#create}

@@ -12,6 +12,176 @@ meta_desc: "Explore the PolicyDefinitionAtManagementGroup resource of the manage
 
 The policy definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a policy definition at management group level
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var policyDefinitionAtManagementGroup = new AzureRM.Management.Latest.PolicyDefinitionAtManagementGroup("policyDefinitionAtManagementGroup", new AzureRM.Management.Latest.PolicyDefinitionAtManagementGroupArgs
+        {
+            Description = "Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
+            DisplayName = "Enforce resource naming convention",
+            ManagementGroupId = "MyManagementGroup",
+            Metadata = 
+            {
+                { "category", "Naming" },
+            },
+            Mode = "All",
+            Parameters = 
+            {
+                { "prefix", new AzureRM.Management.Latest.Inputs.ParameterDefinitionsValueArgs
+                {
+                    Metadata = new AzureRM.Management.Latest.Inputs.ParameterDefinitionsValueMetadataArgs
+                    {
+                        Description = "Resource name prefix",
+                        DisplayName = "Prefix",
+                    },
+                    Type = "String",
+                } },
+                { "suffix", new AzureRM.Management.Latest.Inputs.ParameterDefinitionsValueArgs
+                {
+                    Metadata = new AzureRM.Management.Latest.Inputs.ParameterDefinitionsValueMetadataArgs
+                    {
+                        Description = "Resource name suffix",
+                        DisplayName = "Suffix",
+                    },
+                    Type = "String",
+                } },
+            },
+            PolicyDefinitionName = "ResourceNaming",
+            PolicyRule = 
+            {
+                { "if", 
+                {
+                    { "not", 
+                    {
+                        { "field", "name" },
+                        { "like", "[concat(parameters('prefix'), '*', parameters('suffix'))]" },
+                    } },
+                } },
+                { "then", 
+                {
+                    { "effect", "deny" },
+                } },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+policy_definition_at_management_group = azurerm.management.latest.PolicyDefinitionAtManagementGroup("policyDefinitionAtManagementGroup",
+    description="Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
+    display_name="Enforce resource naming convention",
+    management_group_id="MyManagementGroup",
+    metadata={
+        "category": "Naming",
+    },
+    mode="All",
+    parameters={
+        "prefix": {
+            "metadata": {
+                "description": "Resource name prefix",
+                "displayName": "Prefix",
+            },
+            "type": "String",
+        },
+        "suffix": {
+            "metadata": {
+                "description": "Resource name suffix",
+                "displayName": "Suffix",
+            },
+            "type": "String",
+        },
+    },
+    policy_definition_name="ResourceNaming",
+    policy_rule={
+        "if": {
+            "not_": {
+                "field": "name",
+                "like": "[concat(parameters('prefix'), '*', parameters('suffix'))]",
+            },
+        },
+        "then": {
+            "effect": "deny",
+        },
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const policyDefinitionAtManagementGroup = new azurerm.management.latest.PolicyDefinitionAtManagementGroup("policyDefinitionAtManagementGroup", {
+    description: "Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
+    displayName: "Enforce resource naming convention",
+    managementGroupId: "MyManagementGroup",
+    metadata: {
+        category: "Naming",
+    },
+    mode: "All",
+    parameters: {
+        prefix: {
+            metadata: {
+                description: "Resource name prefix",
+                displayName: "Prefix",
+            },
+            type: "String",
+        },
+        suffix: {
+            metadata: {
+                description: "Resource name suffix",
+                displayName: "Suffix",
+            },
+            type: "String",
+        },
+    },
+    policyDefinitionName: "ResourceNaming",
+    policyRule: {
+        "if": {
+            not: {
+                field: "name",
+                like: "[concat(parameters('prefix'), '*', parameters('suffix'))]",
+            },
+        },
+        then: {
+            effect: "deny",
+        },
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PolicyDefinitionAtManagementGroup Resource {#create}

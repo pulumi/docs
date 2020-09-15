@@ -12,6 +12,442 @@ meta_desc: "Explore the Workspace resource of the databricks/latest module, incl
 
 Information about workspace.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a workspace which is ready for Customer-Managed Key (CMK) encryption
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workspace = new AzureRM.Databricks.Latest.Workspace("workspace", new AzureRM.Databricks.Latest.WorkspaceArgs
+        {
+            Location = "westus",
+            ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
+            Parameters = new AzureRM.Databricks.Latest.Inputs.WorkspaceCustomParametersArgs
+            {
+                PrepareEncryption = new AzureRM.Databricks.Latest.Inputs.WorkspaceCustomBooleanParameterArgs
+                {
+                    Value = true,
+                },
+            },
+            ResourceGroupName = "rg",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+workspace = azurerm.databricks.latest.Workspace("workspace",
+    location="westus",
+    managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
+    parameters={
+        "prepareEncryption": {
+            "value": True,
+        },
+    },
+    resource_group_name="rg",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const workspace = new azurerm.databricks.latest.Workspace("workspace", {
+    location: "westus",
+    managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
+    parameters: {
+        prepareEncryption: {
+            value: true,
+        },
+    },
+    resourceGroupName: "rg",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+### Create or update workspace
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workspace = new AzureRM.Databricks.Latest.Workspace("workspace", new AzureRM.Databricks.Latest.WorkspaceArgs
+        {
+            Location = "westus",
+            ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
+            ResourceGroupName = "rg",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+workspace = azurerm.databricks.latest.Workspace("workspace",
+    location="westus",
+    managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
+    resource_group_name="rg",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const workspace = new azurerm.databricks.latest.Workspace("workspace", {
+    location: "westus",
+    managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
+    resourceGroupName: "rg",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+### Create or update workspace with custom parameters
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workspace = new AzureRM.Databricks.Latest.Workspace("workspace", new AzureRM.Databricks.Latest.WorkspaceArgs
+        {
+            Location = "westus",
+            ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
+            Parameters = new AzureRM.Databricks.Latest.Inputs.WorkspaceCustomParametersArgs
+            {
+                CustomPrivateSubnetName = new AzureRM.Databricks.Latest.Inputs.WorkspaceCustomStringParameterArgs
+                {
+                    Value = "myPrivateSubnet",
+                },
+                CustomPublicSubnetName = new AzureRM.Databricks.Latest.Inputs.WorkspaceCustomStringParameterArgs
+                {
+                    Value = "myPublicSubnet",
+                },
+                CustomVirtualNetworkId = new AzureRM.Databricks.Latest.Inputs.WorkspaceCustomStringParameterArgs
+                {
+                    Value = "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myNetwork",
+                },
+            },
+            ResourceGroupName = "rg",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+workspace = azurerm.databricks.latest.Workspace("workspace",
+    location="westus",
+    managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
+    parameters={
+        "customPrivateSubnetName": {
+            "value": "myPrivateSubnet",
+        },
+        "customPublicSubnetName": {
+            "value": "myPublicSubnet",
+        },
+        "customVirtualNetworkId": {
+            "value": "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myNetwork",
+        },
+    },
+    resource_group_name="rg",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const workspace = new azurerm.databricks.latest.Workspace("workspace", {
+    location: "westus",
+    managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
+    parameters: {
+        customPrivateSubnetName: {
+            value: "myPrivateSubnet",
+        },
+        customPublicSubnetName: {
+            value: "myPublicSubnet",
+        },
+        customVirtualNetworkId: {
+            value: "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myNetwork",
+        },
+    },
+    resourceGroupName: "rg",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+### Enable Customer-Managed Key (CMK) encryption on a workspace which is prepared for encryption
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workspace = new AzureRM.Databricks.Latest.Workspace("workspace", new AzureRM.Databricks.Latest.WorkspaceArgs
+        {
+            Location = "westus",
+            ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
+            Parameters = new AzureRM.Databricks.Latest.Inputs.WorkspaceCustomParametersArgs
+            {
+                Encryption = new AzureRM.Databricks.Latest.Inputs.WorkspaceEncryptionParameterArgs
+                {
+                    Value = new AzureRM.Databricks.Latest.Inputs.EncryptionArgs
+                    {
+                        KeyName = "myKeyName",
+                        KeySource = "Microsoft.Keyvault",
+                        KeyVaultUri = "https://myKeyVault.vault.azure.net/",
+                        KeyVersion = "00000000000000000000000000000000",
+                    },
+                },
+                PrepareEncryption = new AzureRM.Databricks.Latest.Inputs.WorkspaceCustomBooleanParameterArgs
+                {
+                    Value = true,
+                },
+            },
+            ResourceGroupName = "rg",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+workspace = azurerm.databricks.latest.Workspace("workspace",
+    location="westus",
+    managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
+    parameters={
+        "encryption": {
+            "value": {
+                "keyName": "myKeyName",
+                "keySource": "Microsoft.Keyvault",
+                "keyVaultUri": "https://myKeyVault.vault.azure.net/",
+                "keyVersion": "00000000000000000000000000000000",
+            },
+        },
+        "prepareEncryption": {
+            "value": True,
+        },
+    },
+    resource_group_name="rg",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const workspace = new azurerm.databricks.latest.Workspace("workspace", {
+    location: "westus",
+    managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
+    parameters: {
+        encryption: {
+            value: {
+                keyName: "myKeyName",
+                keySource: "Microsoft.Keyvault",
+                keyVaultUri: "https://myKeyVault.vault.azure.net/",
+                keyVersion: "00000000000000000000000000000000",
+            },
+        },
+        prepareEncryption: {
+            value: true,
+        },
+    },
+    resourceGroupName: "rg",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+### Revert Customer-Managed Key (CMK) encryption to Microsoft Managed Keys encryption on a workspace
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workspace = new AzureRM.Databricks.Latest.Workspace("workspace", new AzureRM.Databricks.Latest.WorkspaceArgs
+        {
+            Location = "westus",
+            ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
+            Parameters = new AzureRM.Databricks.Latest.Inputs.WorkspaceCustomParametersArgs
+            {
+                Encryption = new AzureRM.Databricks.Latest.Inputs.WorkspaceEncryptionParameterArgs
+                {
+                    Value = new AzureRM.Databricks.Latest.Inputs.EncryptionArgs
+                    {
+                        KeySource = "Default",
+                    },
+                },
+            },
+            ResourceGroupName = "rg",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+workspace = azurerm.databricks.latest.Workspace("workspace",
+    location="westus",
+    managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
+    parameters={
+        "encryption": {
+            "value": {
+                "keySource": "Default",
+            },
+        },
+    },
+    resource_group_name="rg",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const workspace = new azurerm.databricks.latest.Workspace("workspace", {
+    location: "westus",
+    managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
+    parameters: {
+        encryption: {
+            value: {
+                keySource: "Default",
+            },
+        },
+    },
+    resourceGroupName: "rg",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Workspace Resource {#create}

@@ -12,6 +12,48 @@ meta_desc: "Explore the TenantConfiguration resource of the portal/v20200901prev
 
 Tenant configuration.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update Tenant configuration
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+tenant_configuration = .("tenantConfiguration",
+    configuration_name="default",
+    enforce_private_markdown_storage=True)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const tenantConfiguration = new .("tenantConfiguration", {
+    configurationName: "default",
+    enforcePrivateMarkdownStorage: true,
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TenantConfiguration Resource {#create}

@@ -12,6 +12,73 @@ meta_desc: "Explore the Deployment resource of the appplatform/latest module, in
 
 Deployment resource payload
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Deployments_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var deployment = new AzureRM.AppPlatform.Latest.Deployment("deployment", new AzureRM.AppPlatform.Latest.DeploymentArgs
+        {
+            AppName = "myapp",
+            DeploymentName = "mydeployment",
+            ResourceGroupName = "myResourceGroup",
+            ServiceName = "myservice",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+deployment = azurerm.appplatform.latest.Deployment("deployment",
+    app_name="myapp",
+    deployment_name="mydeployment",
+    resource_group_name="myResourceGroup",
+    service_name="myservice")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const deployment = new azurerm.appplatform.latest.Deployment("deployment", {
+    appName: "myapp",
+    deploymentName: "mydeployment",
+    resourceGroupName: "myResourceGroup",
+    serviceName: "myservice",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Deployment Resource {#create}

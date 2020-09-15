@@ -12,6 +12,90 @@ meta_desc: "Explore the Vault resource of the recoveryservices/latest module, in
 
 Resource information, as returned by the resource provider.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create of Update Recovery Services vault
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vault = new AzureRM.RecoveryServices.Latest.Vault("vault", new AzureRM.RecoveryServices.Latest.VaultArgs
+        {
+            Identity = new AzureRM.RecoveryServices.Latest.Inputs.IdentityDataArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Location = "West US",
+            ResourceGroupName = "Default-RecoveryServices-ResourceGroup",
+            Sku = new AzureRM.RecoveryServices.Latest.Inputs.SkuArgs
+            {
+                Name = "Standard",
+            },
+            VaultName = "swaggerExample",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+vault = azurerm.recoveryservices.latest.Vault("vault",
+    identity={
+        "type": "SystemAssigned",
+    },
+    location="West US",
+    resource_group_name="Default-RecoveryServices-ResourceGroup",
+    sku={
+        "name": "Standard",
+    },
+    vault_name="swaggerExample")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const vault = new azurerm.recoveryservices.latest.Vault("vault", {
+    identity: {
+        type: "SystemAssigned",
+    },
+    location: "West US",
+    resourceGroupName: "Default-RecoveryServices-ResourceGroup",
+    sku: {
+        name: "Standard",
+    },
+    vaultName: "swaggerExample",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Vault Resource {#create}

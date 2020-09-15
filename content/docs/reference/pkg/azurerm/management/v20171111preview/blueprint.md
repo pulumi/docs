@@ -12,6 +12,167 @@ meta_desc: "Explore the Blueprint resource of the management/v20171111preview mo
 
 Represents a Blueprint definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Blueprint
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var blueprint = new AzureRM.Management.V20171111Preview.Blueprint("blueprint", new AzureRM.Management.V20171111Preview.BlueprintArgs
+        {
+            BlueprintName = "simpleBlueprint",
+            Description = "blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
+            ManagementGroupName = "ContosoOnlineGroup",
+            Parameters = 
+            {
+                { "costCenter", new AzureRM.Management.V20171111Preview.Inputs.ParameterDefinitionArgs
+                {
+                    Metadata = 
+                    {
+                        { "displayName", "force cost center tag for all resources under given subscription." },
+                    },
+                    Type = "string",
+                } },
+                { "owners", new AzureRM.Management.V20171111Preview.Inputs.ParameterDefinitionArgs
+                {
+                    Metadata = 
+                    {
+                        { "displayName", "assign owners to subscription along with blueprint assignment." },
+                    },
+                    Type = "array",
+                } },
+                { "storageAccountType", new AzureRM.Management.V20171111Preview.Inputs.ParameterDefinitionArgs
+                {
+                    Metadata = 
+                    {
+                        { "displayName", "storage account type." },
+                    },
+                    Type = "string",
+                } },
+            },
+            ResourceGroups = 
+            {
+                { "storageRG", new AzureRM.Management.V20171111Preview.Inputs.ResourceGroupDefinitionArgs
+                {
+                    Metadata = 
+                    {
+                        { "description", "Contains storageAccounts that collect all shoebox logs." },
+                        { "displayName", "storage resource group" },
+                    },
+                } },
+            },
+            TargetScope = "subscription",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+blueprint = azurerm.management.v20171111preview.Blueprint("blueprint",
+    blueprint_name="simpleBlueprint",
+    description="blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
+    management_group_name="ContosoOnlineGroup",
+    parameters={
+        "costCenter": {
+            "metadata": {
+                "displayName": "force cost center tag for all resources under given subscription.",
+            },
+            "type": "string",
+        },
+        "owners": {
+            "metadata": {
+                "displayName": "assign owners to subscription along with blueprint assignment.",
+            },
+            "type": "array",
+        },
+        "storageAccountType": {
+            "metadata": {
+                "displayName": "storage account type.",
+            },
+            "type": "string",
+        },
+    },
+    resource_groups={
+        "storageRG": {
+            "metadata": {
+                "description": "Contains storageAccounts that collect all shoebox logs.",
+                "displayName": "storage resource group",
+            },
+        },
+    },
+    target_scope="subscription")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const blueprint = new azurerm.management.v20171111preview.Blueprint("blueprint", {
+    blueprintName: "simpleBlueprint",
+    description: "blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
+    managementGroupName: "ContosoOnlineGroup",
+    parameters: {
+        costCenter: {
+            metadata: {
+                displayName: "force cost center tag for all resources under given subscription.",
+            },
+            type: "string",
+        },
+        owners: {
+            metadata: {
+                displayName: "assign owners to subscription along with blueprint assignment.",
+            },
+            type: "array",
+        },
+        storageAccountType: {
+            metadata: {
+                displayName: "storage account type.",
+            },
+            type: "string",
+        },
+    },
+    resourceGroups: {
+        storageRG: {
+            metadata: {
+                description: "Contains storageAccounts that collect all shoebox logs.",
+                displayName: "storage resource group",
+            },
+        },
+    },
+    targetScope: "subscription",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Blueprint Resource {#create}

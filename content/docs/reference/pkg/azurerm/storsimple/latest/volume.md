@@ -12,6 +12,94 @@ meta_desc: "Explore the Volume resource of the storsimple/latest module, includi
 
 The volume.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### VolumesCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var volume = new AzureRM.StorSimple.Latest.Volume("volume", new AzureRM.StorSimple.Latest.VolumeArgs
+        {
+            AccessControlRecordIds = 
+            {
+                "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/accessControlRecords/ACR2",
+            },
+            DeviceName = "Device05ForSDKTest",
+            ManagerName = "ManagerForSDKTest1",
+            MonitoringStatus = "Enabled",
+            ResourceGroupName = "ResourceGroupForSDKTest",
+            SizeInBytes = 5368709120,
+            VolumeContainerName = "VolumeContainerForSDKTest",
+            VolumeName = "Volume1ForSDKTest",
+            VolumeStatus = "Offline",
+            VolumeType = "Tiered",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+volume = azurerm.storsimple.latest.Volume("volume",
+    access_control_record_ids=["/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/accessControlRecords/ACR2"],
+    device_name="Device05ForSDKTest",
+    manager_name="ManagerForSDKTest1",
+    monitoring_status="Enabled",
+    resource_group_name="ResourceGroupForSDKTest",
+    size_in_bytes=5368709120,
+    volume_container_name="VolumeContainerForSDKTest",
+    volume_name="Volume1ForSDKTest",
+    volume_status="Offline",
+    volume_type="Tiered")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const volume = new azurerm.storsimple.latest.Volume("volume", {
+    accessControlRecordIds: ["/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/accessControlRecords/ACR2"],
+    deviceName: "Device05ForSDKTest",
+    managerName: "ManagerForSDKTest1",
+    monitoringStatus: "Enabled",
+    resourceGroupName: "ResourceGroupForSDKTest",
+    sizeInBytes: 5368709120,
+    volumeContainerName: "VolumeContainerForSDKTest",
+    volumeName: "Volume1ForSDKTest",
+    volumeStatus: "Offline",
+    volumeType: "Tiered",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Volume Resource {#create}

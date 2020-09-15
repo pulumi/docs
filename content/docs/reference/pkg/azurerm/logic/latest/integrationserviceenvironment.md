@@ -12,6 +12,83 @@ meta_desc: "Explore the IntegrationServiceEnvironment resource of the logic/late
 
 The integration service environment.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update an integration service environment
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var integrationServiceEnvironment = new AzureRM.Logic.Latest.IntegrationServiceEnvironment("integrationServiceEnvironment", new AzureRM.Logic.Latest.IntegrationServiceEnvironmentArgs
+        {
+            IntegrationServiceEnvironmentName = "testIntegrationServiceEnvironment",
+            Location = "brazilsouth",
+            ResourceGroup = "testResourceGroup",
+            Sku = new AzureRM.Logic.Latest.Inputs.IntegrationServiceEnvironmentSkuArgs
+            {
+                Capacity = 2,
+                Name = "Premium",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+integration_service_environment = azurerm.logic.latest.IntegrationServiceEnvironment("integrationServiceEnvironment",
+    integration_service_environment_name="testIntegrationServiceEnvironment",
+    location="brazilsouth",
+    resource_group="testResourceGroup",
+    sku={
+        "capacity": 2,
+        "name": "Premium",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const integrationServiceEnvironment = new azurerm.logic.latest.IntegrationServiceEnvironment("integrationServiceEnvironment", {
+    integrationServiceEnvironmentName: "testIntegrationServiceEnvironment",
+    location: "brazilsouth",
+    resourceGroup: "testResourceGroup",
+    sku: {
+        capacity: 2,
+        name: "Premium",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IntegrationServiceEnvironment Resource {#create}

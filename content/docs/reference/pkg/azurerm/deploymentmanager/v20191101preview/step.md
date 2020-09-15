@@ -12,6 +12,135 @@ meta_desc: "Explore the Step resource of the deploymentmanager/v20191101preview 
 
 The resource representation of a rollout step.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create health check step
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var step = new AzureRM.DeploymentManager.V20191101Preview.Step("step", new AzureRM.DeploymentManager.V20191101Preview.StepArgs
+        {
+            Location = "centralus",
+            ResourceGroupName = "myResourceGroup",
+            StepName = "healthCheckStep",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+step = azurerm.deploymentmanager.v20191101preview.Step("step",
+    location="centralus",
+    resource_group_name="myResourceGroup",
+    step_name="healthCheckStep",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const step = new azurerm.deploymentmanager.v20191101preview.Step("step", {
+    location: "centralus",
+    resourceGroupName: "myResourceGroup",
+    stepName: "healthCheckStep",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+### Create wait step
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var step = new AzureRM.DeploymentManager.V20191101Preview.Step("step", new AzureRM.DeploymentManager.V20191101Preview.StepArgs
+        {
+            Location = "centralus",
+            ResourceGroupName = "myResourceGroup",
+            StepName = "waitStep",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+step = azurerm.deploymentmanager.v20191101preview.Step("step",
+    location="centralus",
+    resource_group_name="myResourceGroup",
+    step_name="waitStep",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const step = new azurerm.deploymentmanager.v20191101preview.Step("step", {
+    location: "centralus",
+    resourceGroupName: "myResourceGroup",
+    stepName: "waitStep",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Step Resource {#create}

@@ -12,6 +12,561 @@ meta_desc: "Explore the SqlVirtualMachine resource of the sqlvirtualmachine/v201
 
 A SQL virtual machine.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates a SQL virtual machine and joins it to a SQL virtual machine group.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlVirtualMachine = new AzureRM.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureRM.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
+        {
+            Location = "northeurope",
+            ResourceGroupName = "testrg",
+            SqlVirtualMachineGroupResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup",
+            SqlVirtualMachineName = "testvm",
+            VirtualMachineResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm2",
+            WsfcDomainCredentials = new AzureRM.SqlVirtualMachine.V20170301Preview.Inputs.WsfcDomainCredentialsArgs
+            {
+                ClusterBootstrapAccountPassword = "<Password>",
+                ClusterOperatorAccountPassword = "<Password>",
+                SqlServiceAccountPassword = "<Password>",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sql_virtual_machine = azurerm.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
+    location="northeurope",
+    resource_group_name="testrg",
+    sql_virtual_machine_group_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup",
+    sql_virtual_machine_name="testvm",
+    virtual_machine_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm2",
+    wsfc_domain_credentials={
+        "clusterBootstrapAccountPassword": "<Password>",
+        "clusterOperatorAccountPassword": "<Password>",
+        "sqlServiceAccountPassword": "<Password>",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sqlVirtualMachine = new azurerm.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
+    location: "northeurope",
+    resourceGroupName: "testrg",
+    sqlVirtualMachineGroupResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup",
+    sqlVirtualMachineName: "testvm",
+    virtualMachineResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm2",
+    wsfcDomainCredentials: {
+        clusterBootstrapAccountPassword: "<Password>",
+        clusterOperatorAccountPassword: "<Password>",
+        sqlServiceAccountPassword: "<Password>",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Creates or updates a SQL virtual machine for Storage Configuration Settings to EXTEND Data, Log or TempDB storage pool.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlVirtualMachine = new AzureRM.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureRM.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
+        {
+            Location = "northeurope",
+            ResourceGroupName = "testrg",
+            SqlVirtualMachineName = "testvm",
+            StorageConfigurationSettings = new AzureRM.SqlVirtualMachine.V20170301Preview.Inputs.StorageConfigurationSettingsArgs
+            {
+                DiskConfigurationType = "EXTEND",
+                SqlDataSettings = new AzureRM.SqlVirtualMachine.V20170301Preview.Inputs.SQLStorageSettingsArgs
+                {
+                    Luns = 
+                    {
+                        2,
+                    },
+                },
+            },
+            VirtualMachineResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sql_virtual_machine = azurerm.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
+    location="northeurope",
+    resource_group_name="testrg",
+    sql_virtual_machine_name="testvm",
+    storage_configuration_settings={
+        "diskConfigurationType": "EXTEND",
+        "sqlDataSettings": {
+            "luns": [2],
+        },
+    },
+    virtual_machine_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sqlVirtualMachine = new azurerm.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
+    location: "northeurope",
+    resourceGroupName: "testrg",
+    sqlVirtualMachineName: "testvm",
+    storageConfigurationSettings: {
+        diskConfigurationType: "EXTEND",
+        sqlDataSettings: {
+            luns: [2],
+        },
+    },
+    virtualMachineResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm",
+});
+
+```
+
+{{% /example %}}
+
+### Creates or updates a SQL virtual machine for Storage Configuration Settings to NEW Data, Log and TempDB storage pool.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlVirtualMachine = new AzureRM.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureRM.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
+        {
+            Location = "northeurope",
+            ResourceGroupName = "testrg",
+            SqlVirtualMachineName = "testvm",
+            StorageConfigurationSettings = new AzureRM.SqlVirtualMachine.V20170301Preview.Inputs.StorageConfigurationSettingsArgs
+            {
+                DiskConfigurationType = "NEW",
+                SqlDataSettings = new AzureRM.SqlVirtualMachine.V20170301Preview.Inputs.SQLStorageSettingsArgs
+                {
+                    DefaultFilePath = "F:\\folderpath\\",
+                    Luns = 
+                    {
+                        0,
+                    },
+                },
+                SqlLogSettings = new AzureRM.SqlVirtualMachine.V20170301Preview.Inputs.SQLStorageSettingsArgs
+                {
+                    DefaultFilePath = "G:\\folderpath\\",
+                    Luns = 
+                    {
+                        1,
+                    },
+                },
+                SqlTempDbSettings = new AzureRM.SqlVirtualMachine.V20170301Preview.Inputs.SQLStorageSettingsArgs
+                {
+                    DefaultFilePath = "D:\\TEMP",
+                },
+                StorageWorkloadType = "OLTP",
+            },
+            VirtualMachineResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sql_virtual_machine = azurerm.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
+    location="northeurope",
+    resource_group_name="testrg",
+    sql_virtual_machine_name="testvm",
+    storage_configuration_settings={
+        "diskConfigurationType": "NEW",
+        "sqlDataSettings": {
+            "defaultFilePath": "F:\\folderpath\\",
+            "luns": [0],
+        },
+        "sqlLogSettings": {
+            "defaultFilePath": "G:\\folderpath\\",
+            "luns": [1],
+        },
+        "sqlTempDbSettings": {
+            "defaultFilePath": "D:\\TEMP",
+        },
+        "storageWorkloadType": "OLTP",
+    },
+    virtual_machine_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sqlVirtualMachine = new azurerm.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
+    location: "northeurope",
+    resourceGroupName: "testrg",
+    sqlVirtualMachineName: "testvm",
+    storageConfigurationSettings: {
+        diskConfigurationType: "NEW",
+        sqlDataSettings: {
+            defaultFilePath: "F:\\folderpath\\",
+            luns: [0],
+        },
+        sqlLogSettings: {
+            defaultFilePath: "G:\\folderpath\\",
+            luns: [1],
+        },
+        sqlTempDbSettings: {
+            defaultFilePath: "D:\\TEMP",
+        },
+        storageWorkloadType: "OLTP",
+    },
+    virtualMachineResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm",
+});
+
+```
+
+{{% /example %}}
+
+### Creates or updates a SQL virtual machine with max parameters.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlVirtualMachine = new AzureRM.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureRM.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
+        {
+            AutoBackupSettings = new AzureRM.SqlVirtualMachine.V20170301Preview.Inputs.AutoBackupSettingsArgs
+            {
+                BackupScheduleType = "Manual",
+                BackupSystemDbs = true,
+                Enable = true,
+                EnableEncryption = true,
+                FullBackupFrequency = "Daily",
+                FullBackupStartTime = 6,
+                FullBackupWindowHours = 11,
+                LogBackupFrequency = 10,
+                Password = "<Password>",
+                RetentionPeriod = 17,
+                StorageAccessKey = "<primary storage access key>",
+                StorageAccountUrl = "https://teststorage.blob.core.windows.net/",
+            },
+            AutoPatchingSettings = new AzureRM.SqlVirtualMachine.V20170301Preview.Inputs.AutoPatchingSettingsArgs
+            {
+                DayOfWeek = "Sunday",
+                Enable = true,
+                MaintenanceWindowDuration = 60,
+                MaintenanceWindowStartingHour = 2,
+            },
+            KeyVaultCredentialSettings = new AzureRM.SqlVirtualMachine.V20170301Preview.Inputs.KeyVaultCredentialSettingsArgs
+            {
+                Enable = false,
+            },
+            Location = "northeurope",
+            ResourceGroupName = "testrg",
+            ServerConfigurationsManagementSettings = new AzureRM.SqlVirtualMachine.V20170301Preview.Inputs.ServerConfigurationsManagementSettingsArgs
+            {
+                AdditionalFeaturesServerConfigurations = new AzureRM.SqlVirtualMachine.V20170301Preview.Inputs.AdditionalFeaturesServerConfigurationsArgs
+                {
+                    IsRServicesEnabled = false,
+                },
+                SqlConnectivityUpdateSettings = new AzureRM.SqlVirtualMachine.V20170301Preview.Inputs.SqlConnectivityUpdateSettingsArgs
+                {
+                    ConnectivityType = "PRIVATE",
+                    Port = 1433,
+                    SqlAuthUpdatePassword = "<password>",
+                    SqlAuthUpdateUserName = "sqllogin",
+                },
+                SqlStorageUpdateSettings = new AzureRM.SqlVirtualMachine.V20170301Preview.Inputs.SqlStorageUpdateSettingsArgs
+                {
+                    DiskConfigurationType = "NEW",
+                    DiskCount = 1,
+                    StartingDeviceId = 2,
+                },
+                SqlWorkloadTypeUpdateSettings = new AzureRM.SqlVirtualMachine.V20170301Preview.Inputs.SqlWorkloadTypeUpdateSettingsArgs
+                {
+                    SqlWorkloadType = "OLTP",
+                },
+            },
+            SqlImageSku = "Enterprise",
+            SqlManagement = "Full",
+            SqlServerLicenseType = "PAYG",
+            SqlVirtualMachineName = "testvm",
+            VirtualMachineResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sql_virtual_machine = azurerm.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
+    auto_backup_settings={
+        "backupScheduleType": "Manual",
+        "backupSystemDbs": True,
+        "enable": True,
+        "enableEncryption": True,
+        "fullBackupFrequency": "Daily",
+        "fullBackupStartTime": 6,
+        "fullBackupWindowHours": 11,
+        "logBackupFrequency": 10,
+        "password": "<Password>",
+        "retentionPeriod": 17,
+        "storageAccessKey": "<primary storage access key>",
+        "storageAccountUrl": "https://teststorage.blob.core.windows.net/",
+    },
+    auto_patching_settings={
+        "dayOfWeek": "Sunday",
+        "enable": True,
+        "maintenanceWindowDuration": 60,
+        "maintenanceWindowStartingHour": 2,
+    },
+    key_vault_credential_settings={
+        "enable": False,
+    },
+    location="northeurope",
+    resource_group_name="testrg",
+    server_configurations_management_settings={
+        "additionalFeaturesServerConfigurations": {
+            "isRServicesEnabled": False,
+        },
+        "sqlConnectivityUpdateSettings": {
+            "connectivityType": "PRIVATE",
+            "port": 1433,
+            "sqlAuthUpdatePassword": "<password>",
+            "sqlAuthUpdateUserName": "sqllogin",
+        },
+        "sqlStorageUpdateSettings": {
+            "diskConfigurationType": "NEW",
+            "diskCount": 1,
+            "startingDeviceId": 2,
+        },
+        "sqlWorkloadTypeUpdateSettings": {
+            "sqlWorkloadType": "OLTP",
+        },
+    },
+    sql_image_sku="Enterprise",
+    sql_management="Full",
+    sql_server_license_type="PAYG",
+    sql_virtual_machine_name="testvm",
+    virtual_machine_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sqlVirtualMachine = new azurerm.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
+    autoBackupSettings: {
+        backupScheduleType: "Manual",
+        backupSystemDbs: true,
+        enable: true,
+        enableEncryption: true,
+        fullBackupFrequency: "Daily",
+        fullBackupStartTime: 6,
+        fullBackupWindowHours: 11,
+        logBackupFrequency: 10,
+        password: "<Password>",
+        retentionPeriod: 17,
+        storageAccessKey: "<primary storage access key>",
+        storageAccountUrl: "https://teststorage.blob.core.windows.net/",
+    },
+    autoPatchingSettings: {
+        dayOfWeek: "Sunday",
+        enable: true,
+        maintenanceWindowDuration: 60,
+        maintenanceWindowStartingHour: 2,
+    },
+    keyVaultCredentialSettings: {
+        enable: false,
+    },
+    location: "northeurope",
+    resourceGroupName: "testrg",
+    serverConfigurationsManagementSettings: {
+        additionalFeaturesServerConfigurations: {
+            isRServicesEnabled: false,
+        },
+        sqlConnectivityUpdateSettings: {
+            connectivityType: "PRIVATE",
+            port: 1433,
+            sqlAuthUpdatePassword: "<password>",
+            sqlAuthUpdateUserName: "sqllogin",
+        },
+        sqlStorageUpdateSettings: {
+            diskConfigurationType: "NEW",
+            diskCount: 1,
+            startingDeviceId: 2,
+        },
+        sqlWorkloadTypeUpdateSettings: {
+            sqlWorkloadType: "OLTP",
+        },
+    },
+    sqlImageSku: "Enterprise",
+    sqlManagement: "Full",
+    sqlServerLicenseType: "PAYG",
+    sqlVirtualMachineName: "testvm",
+    virtualMachineResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm",
+});
+
+```
+
+{{% /example %}}
+
+### Creates or updates a SQL virtual machine with min parameters.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlVirtualMachine = new AzureRM.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureRM.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
+        {
+            Location = "northeurope",
+            ResourceGroupName = "testrg",
+            SqlVirtualMachineName = "testvm",
+            VirtualMachineResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sql_virtual_machine = azurerm.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
+    location="northeurope",
+    resource_group_name="testrg",
+    sql_virtual_machine_name="testvm",
+    virtual_machine_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sqlVirtualMachine = new azurerm.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
+    location: "northeurope",
+    resourceGroupName: "testrg",
+    sqlVirtualMachineName: "testvm",
+    virtualMachineResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SqlVirtualMachine Resource {#create}

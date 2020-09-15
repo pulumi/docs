@@ -12,6 +12,188 @@ meta_desc: "Explore the ManagementPolicy resource of the storage/v20200801previe
 
 The Get Storage Account ManagementPolicies operation response.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### StorageAccountSetManagementPolicies
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+management_policy = .("managementPolicy",
+    account_name="sto9699",
+    management_policy_name="default",
+    policy={
+        "rules": [
+            {
+                "definition": {
+                    "actions": {
+                        "baseBlob": {
+                            "delete": {
+                                "daysAfterModificationGreaterThan": 1000,
+                            },
+                            "tierToArchive": {
+                                "daysAfterModificationGreaterThan": 90,
+                            },
+                            "tierToCool": {
+                                "daysAfterModificationGreaterThan": 30,
+                            },
+                        },
+                        "snapshot": {
+                            "delete": {
+                                "daysAfterCreationGreaterThan": 30,
+                            },
+                        },
+                    },
+                    "filters": {
+                        "blobTypes": ["blockBlob"],
+                        "prefixMatch": ["olcmtestcontainer1"],
+                    },
+                },
+                "enabled": True,
+                "name": "olcmtest1",
+                "type": "Lifecycle",
+            },
+            {
+                "definition": {
+                    "actions": {
+                        "baseBlob": {
+                            "delete": {
+                                "daysAfterModificationGreaterThan": 1000,
+                            },
+                            "tierToArchive": {
+                                "daysAfterModificationGreaterThan": 90,
+                            },
+                            "tierToCool": {
+                                "daysAfterModificationGreaterThan": 30,
+                            },
+                        },
+                    },
+                    "filters": {
+                        "blobIndexMatch": [
+                            {
+                                "name": "tag1",
+                                "op": "==",
+                                "value": "val1",
+                            },
+                            {
+                                "name": "tag2",
+                                "op": "==",
+                                "value": "val2",
+                            },
+                        ],
+                        "blobTypes": ["blockBlob"],
+                        "prefixMatch": ["olcmtestcontainer2"],
+                    },
+                },
+                "enabled": True,
+                "name": "olcmtest2",
+                "type": "Lifecycle",
+            },
+        ],
+    },
+    resource_group_name="res7687")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const managementPolicy = new .("managementPolicy", {
+    accountName: "sto9699",
+    managementPolicyName: "default",
+    policy: {
+        rules: [
+            {
+                definition: {
+                    actions: {
+                        baseBlob: {
+                            "delete": {
+                                daysAfterModificationGreaterThan: 1000,
+                            },
+                            tierToArchive: {
+                                daysAfterModificationGreaterThan: 90,
+                            },
+                            tierToCool: {
+                                daysAfterModificationGreaterThan: 30,
+                            },
+                        },
+                        snapshot: {
+                            "delete": {
+                                daysAfterCreationGreaterThan: 30,
+                            },
+                        },
+                    },
+                    filters: {
+                        blobTypes: ["blockBlob"],
+                        prefixMatch: ["olcmtestcontainer1"],
+                    },
+                },
+                enabled: true,
+                name: "olcmtest1",
+                type: "Lifecycle",
+            },
+            {
+                definition: {
+                    actions: {
+                        baseBlob: {
+                            "delete": {
+                                daysAfterModificationGreaterThan: 1000,
+                            },
+                            tierToArchive: {
+                                daysAfterModificationGreaterThan: 90,
+                            },
+                            tierToCool: {
+                                daysAfterModificationGreaterThan: 30,
+                            },
+                        },
+                    },
+                    filters: {
+                        blobIndexMatch: [
+                            {
+                                name: "tag1",
+                                op: "==",
+                                value: "val1",
+                            },
+                            {
+                                name: "tag2",
+                                op: "==",
+                                value: "val2",
+                            },
+                        ],
+                        blobTypes: ["blockBlob"],
+                        prefixMatch: ["olcmtestcontainer2"],
+                    },
+                },
+                enabled: true,
+                name: "olcmtest2",
+                type: "Lifecycle",
+            },
+        ],
+    },
+    resourceGroupName: "res7687",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagementPolicy Resource {#create}

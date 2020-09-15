@@ -12,6 +12,110 @@ meta_desc: "Explore the StorageAccount resource of the storage/v20200801preview 
 
 The storage account.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### StorageAccountCreate
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+storage_account = .("storageAccount",
+    account_name="sto4445",
+    allow_blob_public_access=False,
+    encryption={
+        "keySource": "Microsoft.Storage",
+        "requireInfrastructureEncryption": False,
+        "services": {
+            "blob": {
+                "enabled": True,
+                "keyType": "Account",
+            },
+            "file": {
+                "enabled": True,
+                "keyType": "Account",
+            },
+        },
+    },
+    is_hns_enabled=True,
+    kind="Storage",
+    location="eastus",
+    minimum_tls_version="TLS1_2",
+    resource_group_name="res9101",
+    routing_preference={
+        "publishInternetEndpoints": True,
+        "publishMicrosoftEndpoints": True,
+        "routingChoice": "MicrosoftRouting",
+    },
+    sku={
+        "name": "Standard_GRS",
+    },
+    tags={
+        "key1": "value1",
+        "key2": "value2",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const storageAccount = new .("storageAccount", {
+    accountName: "sto4445",
+    allowBlobPublicAccess: false,
+    encryption: {
+        keySource: "Microsoft.Storage",
+        requireInfrastructureEncryption: false,
+        services: {
+            blob: {
+                enabled: true,
+                keyType: "Account",
+            },
+            file: {
+                enabled: true,
+                keyType: "Account",
+            },
+        },
+    },
+    isHnsEnabled: true,
+    kind: "Storage",
+    location: "eastus",
+    minimumTlsVersion: "TLS1_2",
+    resourceGroupName: "res9101",
+    routingPreference: {
+        publishInternetEndpoints: true,
+        publishMicrosoftEndpoints: true,
+        routingChoice: "MicrosoftRouting",
+    },
+    sku: {
+        name: "Standard_GRS",
+    },
+    tags: {
+        key1: "value1",
+        key2: "value2",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a StorageAccount Resource {#create}

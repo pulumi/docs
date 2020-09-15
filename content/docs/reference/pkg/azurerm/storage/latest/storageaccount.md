@@ -12,6 +12,167 @@ meta_desc: "Explore the StorageAccount resource of the storage/latest module, in
 
 The storage account.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### StorageAccountCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var storageAccount = new AzureRM.Storage.Latest.StorageAccount("storageAccount", new AzureRM.Storage.Latest.StorageAccountArgs
+        {
+            AccountName = "sto4445",
+            AllowBlobPublicAccess = false,
+            Encryption = new AzureRM.Storage.Latest.Inputs.EncryptionArgs
+            {
+                KeySource = "Microsoft.Storage",
+                RequireInfrastructureEncryption = false,
+                Services = new AzureRM.Storage.Latest.Inputs.EncryptionServicesArgs
+                {
+                    Blob = new AzureRM.Storage.Latest.Inputs.EncryptionServiceArgs
+                    {
+                        Enabled = true,
+                        KeyType = "Account",
+                    },
+                    File = new AzureRM.Storage.Latest.Inputs.EncryptionServiceArgs
+                    {
+                        Enabled = true,
+                        KeyType = "Account",
+                    },
+                },
+            },
+            IsHnsEnabled = true,
+            Kind = "Storage",
+            Location = "eastus",
+            MinimumTlsVersion = "TLS1_2",
+            ResourceGroupName = "res9101",
+            RoutingPreference = new AzureRM.Storage.Latest.Inputs.RoutingPreferenceArgs
+            {
+                PublishInternetEndpoints = true,
+                PublishMicrosoftEndpoints = true,
+                RoutingChoice = "MicrosoftRouting",
+            },
+            Sku = new AzureRM.Storage.Latest.Inputs.SkuArgs
+            {
+                Name = "Standard_GRS",
+            },
+            Tags = 
+            {
+                { "key1", "value1" },
+                { "key2", "value2" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+storage_account = azurerm.storage.latest.StorageAccount("storageAccount",
+    account_name="sto4445",
+    allow_blob_public_access=False,
+    encryption={
+        "keySource": "Microsoft.Storage",
+        "requireInfrastructureEncryption": False,
+        "services": {
+            "blob": {
+                "enabled": True,
+                "keyType": "Account",
+            },
+            "file": {
+                "enabled": True,
+                "keyType": "Account",
+            },
+        },
+    },
+    is_hns_enabled=True,
+    kind="Storage",
+    location="eastus",
+    minimum_tls_version="TLS1_2",
+    resource_group_name="res9101",
+    routing_preference={
+        "publishInternetEndpoints": True,
+        "publishMicrosoftEndpoints": True,
+        "routingChoice": "MicrosoftRouting",
+    },
+    sku={
+        "name": "Standard_GRS",
+    },
+    tags={
+        "key1": "value1",
+        "key2": "value2",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const storageAccount = new azurerm.storage.latest.StorageAccount("storageAccount", {
+    accountName: "sto4445",
+    allowBlobPublicAccess: false,
+    encryption: {
+        keySource: "Microsoft.Storage",
+        requireInfrastructureEncryption: false,
+        services: {
+            blob: {
+                enabled: true,
+                keyType: "Account",
+            },
+            file: {
+                enabled: true,
+                keyType: "Account",
+            },
+        },
+    },
+    isHnsEnabled: true,
+    kind: "Storage",
+    location: "eastus",
+    minimumTlsVersion: "TLS1_2",
+    resourceGroupName: "res9101",
+    routingPreference: {
+        publishInternetEndpoints: true,
+        publishMicrosoftEndpoints: true,
+        routingChoice: "MicrosoftRouting",
+    },
+    sku: {
+        name: "Standard_GRS",
+    },
+    tags: {
+        key1: "value1",
+        key2: "value2",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a StorageAccount Resource {#create}

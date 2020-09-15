@@ -12,6 +12,79 @@ meta_desc: "Explore the StorageDomain resource of the storsimple/latest module, 
 
 The storage domain.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### StorageDomainsCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var storageDomain = new AzureRM.StorSimple.Latest.StorageDomain("storageDomain", new AzureRM.StorSimple.Latest.StorageDomainArgs
+        {
+            EncryptionStatus = "Disabled",
+            ManagerName = "hAzureSDKOperations",
+            ResourceGroupName = "ResourceGroupForSDKTest",
+            StorageAccountCredentialIds = 
+            {
+                "/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/storageAccountCredentials/sacforsdktest",
+            },
+            StorageDomainName = "sd-fs-HSDK-4XY4FI2IVG",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+storage_domain = azurerm.storsimple.latest.StorageDomain("storageDomain",
+    encryption_status="Disabled",
+    manager_name="hAzureSDKOperations",
+    resource_group_name="ResourceGroupForSDKTest",
+    storage_account_credential_ids=["/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/storageAccountCredentials/sacforsdktest"],
+    storage_domain_name="sd-fs-HSDK-4XY4FI2IVG")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const storageDomain = new azurerm.storsimple.latest.StorageDomain("storageDomain", {
+    encryptionStatus: "Disabled",
+    managerName: "hAzureSDKOperations",
+    resourceGroupName: "ResourceGroupForSDKTest",
+    storageAccountCredentialIds: ["/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/storageAccountCredentials/sacforsdktest"],
+    storageDomainName: "sd-fs-HSDK-4XY4FI2IVG",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a StorageDomain Resource {#create}

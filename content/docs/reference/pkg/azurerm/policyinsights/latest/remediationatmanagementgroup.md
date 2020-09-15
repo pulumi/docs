@@ -12,6 +12,73 @@ meta_desc: "Explore the RemediationAtManagementGroup resource of the policyinsig
 
 The remediation definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create remediation at management group scope
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var remediationAtManagementGroup = new AzureRM.PolicyInsights.Latest.RemediationAtManagementGroup("remediationAtManagementGroup", new AzureRM.PolicyInsights.Latest.RemediationAtManagementGroupArgs
+        {
+            ManagementGroupId = "financeMg",
+            ManagementGroupsNamespace = "Microsoft.Management",
+            PolicyAssignmentId = "/providers/microsoft.management/managementGroups/financeMg/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+            RemediationName = "storageRemediation",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+remediation_at_management_group = azurerm.policyinsights.latest.RemediationAtManagementGroup("remediationAtManagementGroup",
+    management_group_id="financeMg",
+    management_groups_namespace="Microsoft.Management",
+    policy_assignment_id="/providers/microsoft.management/managementGroups/financeMg/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+    remediation_name="storageRemediation")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const remediationAtManagementGroup = new azurerm.policyinsights.latest.RemediationAtManagementGroup("remediationAtManagementGroup", {
+    managementGroupId: "financeMg",
+    managementGroupsNamespace: "Microsoft.Management",
+    policyAssignmentId: "/providers/microsoft.management/managementGroups/financeMg/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+    remediationName: "storageRemediation",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RemediationAtManagementGroup Resource {#create}

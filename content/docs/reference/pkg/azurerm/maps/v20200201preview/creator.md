@@ -12,6 +12,83 @@ meta_desc: "Explore the Creator resource of the maps/v20200201preview module, in
 
 An Azure resource which represents Maps Creator product and provides ability to manage private location data.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreatePrivateAtlas
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var creator = new AzureRM.Maps.V20200201Preview.Creator("creator", new AzureRM.Maps.V20200201Preview.CreatorArgs
+        {
+            AccountName = "myMapsAccount",
+            CreatorName = "myCreator",
+            Location = "unitedstates",
+            ResourceGroupName = "myResourceGroup",
+            Tags = 
+            {
+                { "test", "true" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+creator = azurerm.maps.v20200201preview.Creator("creator",
+    account_name="myMapsAccount",
+    creator_name="myCreator",
+    location="unitedstates",
+    resource_group_name="myResourceGroup",
+    tags={
+        "test": "true",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const creator = new azurerm.maps.v20200201preview.Creator("creator", {
+    accountName: "myMapsAccount",
+    creatorName: "myCreator",
+    location: "unitedstates",
+    resourceGroupName: "myResourceGroup",
+    tags: {
+        test: "true",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Creator Resource {#create}

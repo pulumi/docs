@@ -12,6 +12,82 @@ meta_desc: "Explore the Pool resource of the netapp/latest module, including exa
 
 Capacity pool resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Pools_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new AzureRM.NetApp.Latest.Pool("pool", new AzureRM.NetApp.Latest.PoolArgs
+        {
+            AccountName = "account1",
+            Location = "eastus",
+            PoolName = "pool1",
+            QosType = "Auto",
+            ResourceGroupName = "myRG",
+            ServiceLevel = "Premium",
+            Size = 4398046511104,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+pool = azurerm.netapp.latest.Pool("pool",
+    account_name="account1",
+    location="eastus",
+    pool_name="pool1",
+    qos_type="Auto",
+    resource_group_name="myRG",
+    service_level="Premium",
+    size=4398046511104)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const pool = new azurerm.netapp.latest.Pool("pool", {
+    accountName: "account1",
+    location: "eastus",
+    poolName: "pool1",
+    qosType: "Auto",
+    resourceGroupName: "myRG",
+    serviceLevel: "Premium",
+    size: 4398046511104,
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Pool Resource {#create}

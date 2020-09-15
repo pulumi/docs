@@ -12,6 +12,128 @@ meta_desc: "Explore the BandwidthSetting resource of the storsimple/latest modul
 
 The bandwidth setting.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### BandwidthSettingsCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bandwidthSetting = new AzureRM.StorSimple.Latest.BandwidthSetting("bandwidthSetting", new AzureRM.StorSimple.Latest.BandwidthSettingArgs
+        {
+            BandwidthSettingName = "BWSForTest",
+            ManagerName = "ManagerForSDKTest1",
+            ResourceGroupName = "ResourceGroupForSDKTest",
+            Schedules = 
+            {
+                new AzureRM.StorSimple.Latest.Inputs.BandwidthScheduleArgs
+                {
+                    Days = 
+                    {
+                        "Saturday",
+                        "Sunday",
+                    },
+                    RateInMbps = 10,
+                    Start = new AzureRM.StorSimple.Latest.Inputs.TimeArgs
+                    {
+                        Hours = 10,
+                        Minutes = 0,
+                        Seconds = 0,
+                    },
+                    Stop = new AzureRM.StorSimple.Latest.Inputs.TimeArgs
+                    {
+                        Hours = 20,
+                        Minutes = 0,
+                        Seconds = 0,
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+bandwidth_setting = azurerm.storsimple.latest.BandwidthSetting("bandwidthSetting",
+    bandwidth_setting_name="BWSForTest",
+    manager_name="ManagerForSDKTest1",
+    resource_group_name="ResourceGroupForSDKTest",
+    schedules=[{
+        "days": [
+            "Saturday",
+            "Sunday",
+        ],
+        "rateInMbps": 10,
+        "start": {
+            "hours": 10,
+            "minutes": 0,
+            "seconds": 0,
+        },
+        "stop": {
+            "hours": 20,
+            "minutes": 0,
+            "seconds": 0,
+        },
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const bandwidthSetting = new azurerm.storsimple.latest.BandwidthSetting("bandwidthSetting", {
+    bandwidthSettingName: "BWSForTest",
+    managerName: "ManagerForSDKTest1",
+    resourceGroupName: "ResourceGroupForSDKTest",
+    schedules: [{
+        days: [
+            "Saturday",
+            "Sunday",
+        ],
+        rateInMbps: 10,
+        start: {
+            hours: 10,
+            minutes: 0,
+            seconds: 0,
+        },
+        stop: {
+            hours: 20,
+            minutes: 0,
+            seconds: 0,
+        },
+    }],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BandwidthSetting Resource {#create}

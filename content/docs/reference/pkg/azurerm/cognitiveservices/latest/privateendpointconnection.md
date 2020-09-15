@@ -12,6 +12,70 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the cognitiveservi
 
 The Private Endpoint Connection resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PutPrivateEndpointConnection
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpointConnection = new AzureRM.CognitiveServices.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureRM.CognitiveServices.Latest.PrivateEndpointConnectionArgs
+        {
+            AccountName = "sto9699",
+            PrivateEndpointConnectionName = "{privateEndpointConnectionName}",
+            ResourceGroupName = "res7687",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_endpoint_connection = azurerm.cognitiveservices.latest.PrivateEndpointConnection("privateEndpointConnection",
+    account_name="sto9699",
+    private_endpoint_connection_name="{privateEndpointConnectionName}",
+    resource_group_name="res7687")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateEndpointConnection = new azurerm.cognitiveservices.latest.PrivateEndpointConnection("privateEndpointConnection", {
+    accountName: "sto9699",
+    privateEndpointConnectionName: "{privateEndpointConnectionName}",
+    resourceGroupName: "res7687",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateEndpointConnection Resource {#create}

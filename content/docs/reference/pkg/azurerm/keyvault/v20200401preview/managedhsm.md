@@ -12,6 +12,96 @@ meta_desc: "Explore the ManagedHsm resource of the keyvault/v20200401preview mod
 
 Resource information with extended details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a new managed HSM Pool or update an existing managed HSM Pool
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedHsm = new AzureRM.KeyVault.V20200401Preview.ManagedHsm("managedHsm", new AzureRM.KeyVault.V20200401Preview.ManagedHsmArgs
+        {
+            Location = "westus",
+            Name = "hsm1",
+            ResourceGroupName = "hsm-group",
+            Sku = new AzureRM.KeyVault.V20200401Preview.Inputs.ManagedHsmSkuArgs
+            {
+                Family = "B",
+                Name = "Standard_B1",
+            },
+            Tags = 
+            {
+                { "Dept", "hsm" },
+                { "Environment", "dogfood" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_hsm = azurerm.keyvault.v20200401preview.ManagedHsm("managedHsm",
+    location="westus",
+    name="hsm1",
+    resource_group_name="hsm-group",
+    sku={
+        "family": "B",
+        "name": "Standard_B1",
+    },
+    tags={
+        "Dept": "hsm",
+        "Environment": "dogfood",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedHsm = new azurerm.keyvault.v20200401preview.ManagedHsm("managedHsm", {
+    location: "westus",
+    name: "hsm1",
+    resourceGroupName: "hsm-group",
+    sku: {
+        family: "B",
+        name: "Standard_B1",
+    },
+    tags: {
+        Dept: "hsm",
+        Environment: "dogfood",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagedHsm Resource {#create}

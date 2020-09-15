@@ -12,6 +12,94 @@ meta_desc: "Explore the Application resource of the desktopvirtualization/v20191
 
 Schema for Application properties.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Application_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var application = new AzureRM.DesktopVirtualization.V20191210Preview.Application("application", new AzureRM.DesktopVirtualization.V20191210Preview.ApplicationArgs
+        {
+            ApplicationGroupName = "applicationGroup1",
+            ApplicationName = "application1",
+            CommandLineArguments = "arguments",
+            CommandLineSetting = "Allow",
+            Description = "des1",
+            FilePath = "path",
+            FriendlyName = "friendly",
+            IconIndex = 1,
+            IconPath = "icon",
+            ResourceGroupName = "resourceGroup1",
+            ShowInPortal = true,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+application = azurerm.desktopvirtualization.v20191210preview.Application("application",
+    application_group_name="applicationGroup1",
+    application_name="application1",
+    command_line_arguments="arguments",
+    command_line_setting="Allow",
+    description="des1",
+    file_path="path",
+    friendly_name="friendly",
+    icon_index=1,
+    icon_path="icon",
+    resource_group_name="resourceGroup1",
+    show_in_portal=True)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const application = new azurerm.desktopvirtualization.v20191210preview.Application("application", {
+    applicationGroupName: "applicationGroup1",
+    applicationName: "application1",
+    commandLineArguments: "arguments",
+    commandLineSetting: "Allow",
+    description: "des1",
+    filePath: "path",
+    friendlyName: "friendly",
+    iconIndex: 1,
+    iconPath: "icon",
+    resourceGroupName: "resourceGroup1",
+    showInPortal: true,
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Application Resource {#create}

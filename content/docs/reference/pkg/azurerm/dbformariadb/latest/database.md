@@ -12,6 +12,76 @@ meta_desc: "Explore the Database resource of the dbformariadb/latest module, inc
 
 Represents a Database.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### DatabaseCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureRM.DBforMariaDB.Latest.Database("database", new AzureRM.DBforMariaDB.Latest.DatabaseArgs
+        {
+            Charset = "utf8",
+            Collation = "utf8_general_ci",
+            DatabaseName = "db1",
+            ResourceGroupName = "TestGroup",
+            ServerName = "testserver",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database = azurerm.dbformariadb.latest.Database("database",
+    charset="utf8",
+    collation="utf8_general_ci",
+    database_name="db1",
+    resource_group_name="TestGroup",
+    server_name="testserver")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const database = new azurerm.dbformariadb.latest.Database("database", {
+    charset: "utf8",
+    collation: "utf8_general_ci",
+    databaseName: "db1",
+    resourceGroupName: "TestGroup",
+    serverName: "testserver",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Database Resource {#create}

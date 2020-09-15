@@ -12,6 +12,255 @@ meta_desc: "Explore the Application resource of the servicefabric/latest module,
 
 The application resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Put an application with maximum parameters
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var application = new AzureRM.ServiceFabric.Latest.Application("application", new AzureRM.ServiceFabric.Latest.ApplicationArgs
+        {
+            ApplicationName = "myApp",
+            ClusterName = "myCluster",
+            MaximumNodes = 3,
+            Metrics = 
+            {
+                new AzureRM.ServiceFabric.Latest.Inputs.ApplicationMetricDescriptionArgs
+                {
+                    MaximumCapacity = 3,
+                    Name = "metric1",
+                    ReservationCapacity = 1,
+                    TotalApplicationCapacity = 5,
+                },
+            },
+            MinimumNodes = 1,
+            Parameters = 
+            {
+                { "param1", "value1" },
+            },
+            RemoveApplicationCapacity = false,
+            ResourceGroupName = "resRg",
+            TypeName = "myAppType",
+            TypeVersion = "1.0",
+            UpgradePolicy = new AzureRM.ServiceFabric.Latest.Inputs.ApplicationUpgradePolicyArgs
+            {
+                ApplicationHealthPolicy = new AzureRM.ServiceFabric.Latest.Inputs.ArmApplicationHealthPolicyArgs
+                {
+                    ConsiderWarningAsError = true,
+                    DefaultServiceTypeHealthPolicy = new AzureRM.ServiceFabric.Latest.Inputs.ArmServiceTypeHealthPolicyArgs
+                    {
+                        MaxPercentUnhealthyPartitionsPerService = 0,
+                        MaxPercentUnhealthyReplicasPerPartition = 0,
+                        MaxPercentUnhealthyServices = 0,
+                    },
+                    MaxPercentUnhealthyDeployedApplications = 0,
+                },
+                ForceRestart = false,
+                RollingUpgradeMonitoringPolicy = new AzureRM.ServiceFabric.Latest.Inputs.ArmRollingUpgradeMonitoringPolicyArgs
+                {
+                    FailureAction = "Rollback",
+                    HealthCheckRetryTimeout = "00:10:00",
+                    HealthCheckStableDuration = "00:05:00",
+                    HealthCheckWaitDuration = "00:02:00",
+                    UpgradeDomainTimeout = "1.06:00:00",
+                    UpgradeTimeout = "01:00:00",
+                },
+                UpgradeMode = "Monitored",
+                UpgradeReplicaSetCheckTimeout = "01:00:00",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+application = azurerm.servicefabric.latest.Application("application",
+    application_name="myApp",
+    cluster_name="myCluster",
+    maximum_nodes=3,
+    metrics=[{
+        "maximumCapacity": 3,
+        "name": "metric1",
+        "reservationCapacity": 1,
+        "totalApplicationCapacity": 5,
+    }],
+    minimum_nodes=1,
+    parameters={
+        "param1": "value1",
+    },
+    remove_application_capacity=False,
+    resource_group_name="resRg",
+    type_name="myAppType",
+    type_version="1.0",
+    upgrade_policy={
+        "applicationHealthPolicy": {
+            "considerWarningAsError": True,
+            "defaultServiceTypeHealthPolicy": {
+                "maxPercentUnhealthyPartitionsPerService": 0,
+                "maxPercentUnhealthyReplicasPerPartition": 0,
+                "maxPercentUnhealthyServices": 0,
+            },
+            "maxPercentUnhealthyDeployedApplications": 0,
+        },
+        "forceRestart": False,
+        "rollingUpgradeMonitoringPolicy": {
+            "failureAction": "Rollback",
+            "healthCheckRetryTimeout": "00:10:00",
+            "healthCheckStableDuration": "00:05:00",
+            "healthCheckWaitDuration": "00:02:00",
+            "upgradeDomainTimeout": "1.06:00:00",
+            "upgradeTimeout": "01:00:00",
+        },
+        "upgradeMode": "Monitored",
+        "upgradeReplicaSetCheckTimeout": "01:00:00",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const application = new azurerm.servicefabric.latest.Application("application", {
+    applicationName: "myApp",
+    clusterName: "myCluster",
+    maximumNodes: 3,
+    metrics: [{
+        maximumCapacity: 3,
+        name: "metric1",
+        reservationCapacity: 1,
+        totalApplicationCapacity: 5,
+    }],
+    minimumNodes: 1,
+    parameters: {
+        param1: "value1",
+    },
+    removeApplicationCapacity: false,
+    resourceGroupName: "resRg",
+    typeName: "myAppType",
+    typeVersion: "1.0",
+    upgradePolicy: {
+        applicationHealthPolicy: {
+            considerWarningAsError: true,
+            defaultServiceTypeHealthPolicy: {
+                maxPercentUnhealthyPartitionsPerService: 0,
+                maxPercentUnhealthyReplicasPerPartition: 0,
+                maxPercentUnhealthyServices: 0,
+            },
+            maxPercentUnhealthyDeployedApplications: 0,
+        },
+        forceRestart: false,
+        rollingUpgradeMonitoringPolicy: {
+            failureAction: "Rollback",
+            healthCheckRetryTimeout: "00:10:00",
+            healthCheckStableDuration: "00:05:00",
+            healthCheckWaitDuration: "00:02:00",
+            upgradeDomainTimeout: "1.06:00:00",
+            upgradeTimeout: "01:00:00",
+        },
+        upgradeMode: "Monitored",
+        upgradeReplicaSetCheckTimeout: "01:00:00",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Put an application with minimum parameters
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var application = new AzureRM.ServiceFabric.Latest.Application("application", new AzureRM.ServiceFabric.Latest.ApplicationArgs
+        {
+            ApplicationName = "myApp",
+            ClusterName = "myCluster",
+            RemoveApplicationCapacity = false,
+            ResourceGroupName = "resRg",
+            TypeName = "myAppType",
+            TypeVersion = "1.0",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+application = azurerm.servicefabric.latest.Application("application",
+    application_name="myApp",
+    cluster_name="myCluster",
+    remove_application_capacity=False,
+    resource_group_name="resRg",
+    type_name="myAppType",
+    type_version="1.0")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const application = new azurerm.servicefabric.latest.Application("application", {
+    applicationName: "myApp",
+    clusterName: "myCluster",
+    removeApplicationCapacity: false,
+    resourceGroupName: "resRg",
+    typeName: "myAppType",
+    typeVersion: "1.0",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Application Resource {#create}

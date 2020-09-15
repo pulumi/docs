@@ -12,6 +12,79 @@ meta_desc: "Explore the WCFRelay resource of the relay/latest module, including 
 
 Description of the WCF relay resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### RelayCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var wcfRelay = new AzureRM.Relay.Latest.WCFRelay("wcfRelay", new AzureRM.Relay.Latest.WCFRelayArgs
+        {
+            NamespaceName = "sdk-RelayNamespace-9953",
+            RelayName = "sdk-Relay-Wcf-1194",
+            RelayType = "NetTcp",
+            RequiresClientAuthorization = true,
+            RequiresTransportSecurity = true,
+            ResourceGroupName = "RG-eg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+wcf_relay = azurerm.relay.latest.WCFRelay("wcfRelay",
+    namespace_name="sdk-RelayNamespace-9953",
+    relay_name="sdk-Relay-Wcf-1194",
+    relay_type="NetTcp",
+    requires_client_authorization=True,
+    requires_transport_security=True,
+    resource_group_name="RG-eg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const wcfRelay = new azurerm.relay.latest.WCFRelay("wcfRelay", {
+    namespaceName: "sdk-RelayNamespace-9953",
+    relayName: "sdk-Relay-Wcf-1194",
+    relayType: "NetTcp",
+    requiresClientAuthorization: true,
+    requiresTransportSecurity: true,
+    resourceGroupName: "RG-eg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a WCFRelay Resource {#create}

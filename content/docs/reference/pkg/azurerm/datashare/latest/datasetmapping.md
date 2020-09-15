@@ -12,6 +12,271 @@ meta_desc: "Explore the DataSetMapping resource of the datashare/latest module, 
 
 A data set mapping data transfer object.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### DataSetMappings_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataSetMapping = new AzureRM.DataShare.Latest.DataSetMapping("dataSetMapping", new AzureRM.DataShare.Latest.DataSetMappingArgs
+        {
+            AccountName = "Account1",
+            DataSetMappingName = "DatasetMapping1",
+            Kind = "Blob",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareSubscriptionName = "ShareSubscription1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+data_set_mapping = azurerm.datashare.latest.DataSetMapping("dataSetMapping",
+    account_name="Account1",
+    data_set_mapping_name="DatasetMapping1",
+    kind="Blob",
+    resource_group_name="SampleResourceGroup",
+    share_subscription_name="ShareSubscription1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataSetMapping = new azurerm.datashare.latest.DataSetMapping("dataSetMapping", {
+    accountName: "Account1",
+    dataSetMappingName: "DatasetMapping1",
+    kind: "Blob",
+    resourceGroupName: "SampleResourceGroup",
+    shareSubscriptionName: "ShareSubscription1",
+});
+
+```
+
+{{% /example %}}
+
+### DataSetMappings_SqlDB_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataSetMapping = new AzureRM.DataShare.Latest.DataSetMapping("dataSetMapping", new AzureRM.DataShare.Latest.DataSetMappingArgs
+        {
+            AccountName = "Account1",
+            DataSetMappingName = "DatasetMapping1",
+            Kind = "SqlDBTable",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareSubscriptionName = "ShareSubscription1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+data_set_mapping = azurerm.datashare.latest.DataSetMapping("dataSetMapping",
+    account_name="Account1",
+    data_set_mapping_name="DatasetMapping1",
+    kind="SqlDBTable",
+    resource_group_name="SampleResourceGroup",
+    share_subscription_name="ShareSubscription1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataSetMapping = new azurerm.datashare.latest.DataSetMapping("dataSetMapping", {
+    accountName: "Account1",
+    dataSetMappingName: "DatasetMapping1",
+    kind: "SqlDBTable",
+    resourceGroupName: "SampleResourceGroup",
+    shareSubscriptionName: "ShareSubscription1",
+});
+
+```
+
+{{% /example %}}
+
+### DataSetMappings_SqlDWDataSetToAdlsGen2File_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataSetMapping = new AzureRM.DataShare.Latest.DataSetMapping("dataSetMapping", new AzureRM.DataShare.Latest.DataSetMappingArgs
+        {
+            AccountName = "Account1",
+            DataSetMappingName = "DatasetMapping1",
+            Kind = "AdlsGen2File",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareSubscriptionName = "ShareSubscription1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+data_set_mapping = azurerm.datashare.latest.DataSetMapping("dataSetMapping",
+    account_name="Account1",
+    data_set_mapping_name="DatasetMapping1",
+    kind="AdlsGen2File",
+    resource_group_name="SampleResourceGroup",
+    share_subscription_name="ShareSubscription1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataSetMapping = new azurerm.datashare.latest.DataSetMapping("dataSetMapping", {
+    accountName: "Account1",
+    dataSetMappingName: "DatasetMapping1",
+    kind: "AdlsGen2File",
+    resourceGroupName: "SampleResourceGroup",
+    shareSubscriptionName: "ShareSubscription1",
+});
+
+```
+
+{{% /example %}}
+
+### DataSetMappings_SqlDW_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataSetMapping = new AzureRM.DataShare.Latest.DataSetMapping("dataSetMapping", new AzureRM.DataShare.Latest.DataSetMappingArgs
+        {
+            AccountName = "Account1",
+            DataSetMappingName = "DatasetMapping1",
+            Kind = "SqlDWTable",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareSubscriptionName = "ShareSubscription1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+data_set_mapping = azurerm.datashare.latest.DataSetMapping("dataSetMapping",
+    account_name="Account1",
+    data_set_mapping_name="DatasetMapping1",
+    kind="SqlDWTable",
+    resource_group_name="SampleResourceGroup",
+    share_subscription_name="ShareSubscription1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataSetMapping = new azurerm.datashare.latest.DataSetMapping("dataSetMapping", {
+    accountName: "Account1",
+    dataSetMappingName: "DatasetMapping1",
+    kind: "SqlDWTable",
+    resourceGroupName: "SampleResourceGroup",
+    shareSubscriptionName: "ShareSubscription1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DataSetMapping Resource {#create}

@@ -12,6 +12,464 @@ meta_desc: "Explore the ObjectReplicationPolicy resource of the storage/latest m
 
 The replication policy between two storage accounts. Multiple rules can be defined in one policy.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### StorageAccountCreateObjectReplicationPolicyOnDestination
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var objectReplicationPolicy = new AzureRM.Storage.Latest.ObjectReplicationPolicy("objectReplicationPolicy", new AzureRM.Storage.Latest.ObjectReplicationPolicyArgs
+        {
+            AccountName = "dst112",
+            DestinationAccount = "dst112",
+            ObjectReplicationPolicyId = "default",
+            ResourceGroupName = "res7687",
+            Rules = 
+            {
+                new AzureRM.Storage.Latest.Inputs.ObjectReplicationPolicyRuleArgs
+                {
+                    DestinationContainer = "dcont139",
+                    Filters = new AzureRM.Storage.Latest.Inputs.ObjectReplicationPolicyFilterArgs
+                    {
+                        PrefixMatch = 
+                        {
+                            "blobA",
+                            "blobB",
+                        },
+                    },
+                    SourceContainer = "scont139",
+                },
+            },
+            SourceAccount = "src1122",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+object_replication_policy = azurerm.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy",
+    account_name="dst112",
+    destination_account="dst112",
+    object_replication_policy_id="default",
+    resource_group_name="res7687",
+    rules=[{
+        "destinationContainer": "dcont139",
+        "filters": {
+            "prefixMatch": [
+                "blobA",
+                "blobB",
+            ],
+        },
+        "sourceContainer": "scont139",
+    }],
+    source_account="src1122")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const objectReplicationPolicy = new azurerm.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy", {
+    accountName: "dst112",
+    destinationAccount: "dst112",
+    objectReplicationPolicyId: "default",
+    resourceGroupName: "res7687",
+    rules: [{
+        destinationContainer: "dcont139",
+        filters: {
+            prefixMatch: [
+                "blobA",
+                "blobB",
+            ],
+        },
+        sourceContainer: "scont139",
+    }],
+    sourceAccount: "src1122",
+});
+
+```
+
+{{% /example %}}
+
+### StorageAccountCreateObjectReplicationPolicyOnSource
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var objectReplicationPolicy = new AzureRM.Storage.Latest.ObjectReplicationPolicy("objectReplicationPolicy", new AzureRM.Storage.Latest.ObjectReplicationPolicyArgs
+        {
+            AccountName = "src1122",
+            DestinationAccount = "dst112",
+            ObjectReplicationPolicyId = "2a20bb73-5717-4635-985a-5d4cf777438f",
+            ResourceGroupName = "res7687",
+            Rules = 
+            {
+                new AzureRM.Storage.Latest.Inputs.ObjectReplicationPolicyRuleArgs
+                {
+                    DestinationContainer = "dcont139",
+                    Filters = new AzureRM.Storage.Latest.Inputs.ObjectReplicationPolicyFilterArgs
+                    {
+                        MinCreationTime = "2020-02-19T16:05:00Z",
+                        PrefixMatch = 
+                        {
+                            "blobA",
+                            "blobB",
+                        },
+                    },
+                    RuleId = "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+                    SourceContainer = "scont139",
+                },
+            },
+            SourceAccount = "src1122",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+object_replication_policy = azurerm.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy",
+    account_name="src1122",
+    destination_account="dst112",
+    object_replication_policy_id="2a20bb73-5717-4635-985a-5d4cf777438f",
+    resource_group_name="res7687",
+    rules=[{
+        "destinationContainer": "dcont139",
+        "filters": {
+            "minCreationTime": "2020-02-19T16:05:00Z",
+            "prefixMatch": [
+                "blobA",
+                "blobB",
+            ],
+        },
+        "ruleId": "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+        "sourceContainer": "scont139",
+    }],
+    source_account="src1122")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const objectReplicationPolicy = new azurerm.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy", {
+    accountName: "src1122",
+    destinationAccount: "dst112",
+    objectReplicationPolicyId: "2a20bb73-5717-4635-985a-5d4cf777438f",
+    resourceGroupName: "res7687",
+    rules: [{
+        destinationContainer: "dcont139",
+        filters: {
+            minCreationTime: "2020-02-19T16:05:00Z",
+            prefixMatch: [
+                "blobA",
+                "blobB",
+            ],
+        },
+        ruleId: "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+        sourceContainer: "scont139",
+    }],
+    sourceAccount: "src1122",
+});
+
+```
+
+{{% /example %}}
+
+### StorageAccountUpdateObjectReplicationPolicyOnDestination
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var objectReplicationPolicy = new AzureRM.Storage.Latest.ObjectReplicationPolicy("objectReplicationPolicy", new AzureRM.Storage.Latest.ObjectReplicationPolicyArgs
+        {
+            AccountName = "dst112",
+            DestinationAccount = "dst112",
+            ObjectReplicationPolicyId = "2a20bb73-5717-4635-985a-5d4cf777438f",
+            ResourceGroupName = "res7687",
+            Rules = 
+            {
+                new AzureRM.Storage.Latest.Inputs.ObjectReplicationPolicyRuleArgs
+                {
+                    DestinationContainer = "dcont139",
+                    Filters = new AzureRM.Storage.Latest.Inputs.ObjectReplicationPolicyFilterArgs
+                    {
+                        PrefixMatch = 
+                        {
+                            "blobA",
+                            "blobB",
+                        },
+                    },
+                    RuleId = "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+                    SourceContainer = "scont139",
+                },
+                new AzureRM.Storage.Latest.Inputs.ObjectReplicationPolicyRuleArgs
+                {
+                    DestinationContainer = "dcont179",
+                    SourceContainer = "scont179",
+                },
+            },
+            SourceAccount = "src1122",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+object_replication_policy = azurerm.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy",
+    account_name="dst112",
+    destination_account="dst112",
+    object_replication_policy_id="2a20bb73-5717-4635-985a-5d4cf777438f",
+    resource_group_name="res7687",
+    rules=[
+        {
+            "destinationContainer": "dcont139",
+            "filters": {
+                "prefixMatch": [
+                    "blobA",
+                    "blobB",
+                ],
+            },
+            "ruleId": "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+            "sourceContainer": "scont139",
+        },
+        {
+            "destinationContainer": "dcont179",
+            "sourceContainer": "scont179",
+        },
+    ],
+    source_account="src1122")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const objectReplicationPolicy = new azurerm.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy", {
+    accountName: "dst112",
+    destinationAccount: "dst112",
+    objectReplicationPolicyId: "2a20bb73-5717-4635-985a-5d4cf777438f",
+    resourceGroupName: "res7687",
+    rules: [
+        {
+            destinationContainer: "dcont139",
+            filters: {
+                prefixMatch: [
+                    "blobA",
+                    "blobB",
+                ],
+            },
+            ruleId: "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+            sourceContainer: "scont139",
+        },
+        {
+            destinationContainer: "dcont179",
+            sourceContainer: "scont179",
+        },
+    ],
+    sourceAccount: "src1122",
+});
+
+```
+
+{{% /example %}}
+
+### StorageAccountUpdateObjectReplicationPolicyOnSource
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var objectReplicationPolicy = new AzureRM.Storage.Latest.ObjectReplicationPolicy("objectReplicationPolicy", new AzureRM.Storage.Latest.ObjectReplicationPolicyArgs
+        {
+            AccountName = "src1122",
+            DestinationAccount = "dst112",
+            ObjectReplicationPolicyId = "2a20bb73-5717-4635-985a-5d4cf777438f",
+            ResourceGroupName = "res7687",
+            Rules = 
+            {
+                new AzureRM.Storage.Latest.Inputs.ObjectReplicationPolicyRuleArgs
+                {
+                    DestinationContainer = "dcont139",
+                    Filters = new AzureRM.Storage.Latest.Inputs.ObjectReplicationPolicyFilterArgs
+                    {
+                        PrefixMatch = 
+                        {
+                            "blobA",
+                            "blobB",
+                        },
+                    },
+                    RuleId = "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+                    SourceContainer = "scont139",
+                },
+                new AzureRM.Storage.Latest.Inputs.ObjectReplicationPolicyRuleArgs
+                {
+                    DestinationContainer = "dcont179",
+                    RuleId = "cfbb4bc2-8b60-429f-b05a-d1e0942b33b2",
+                    SourceContainer = "scont179",
+                },
+            },
+            SourceAccount = "src1122",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+object_replication_policy = azurerm.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy",
+    account_name="src1122",
+    destination_account="dst112",
+    object_replication_policy_id="2a20bb73-5717-4635-985a-5d4cf777438f",
+    resource_group_name="res7687",
+    rules=[
+        {
+            "destinationContainer": "dcont139",
+            "filters": {
+                "prefixMatch": [
+                    "blobA",
+                    "blobB",
+                ],
+            },
+            "ruleId": "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+            "sourceContainer": "scont139",
+        },
+        {
+            "destinationContainer": "dcont179",
+            "ruleId": "cfbb4bc2-8b60-429f-b05a-d1e0942b33b2",
+            "sourceContainer": "scont179",
+        },
+    ],
+    source_account="src1122")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const objectReplicationPolicy = new azurerm.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy", {
+    accountName: "src1122",
+    destinationAccount: "dst112",
+    objectReplicationPolicyId: "2a20bb73-5717-4635-985a-5d4cf777438f",
+    resourceGroupName: "res7687",
+    rules: [
+        {
+            destinationContainer: "dcont139",
+            filters: {
+                prefixMatch: [
+                    "blobA",
+                    "blobB",
+                ],
+            },
+            ruleId: "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+            sourceContainer: "scont139",
+        },
+        {
+            destinationContainer: "dcont179",
+            ruleId: "cfbb4bc2-8b60-429f-b05a-d1e0942b33b2",
+            sourceContainer: "scont179",
+        },
+    ],
+    sourceAccount: "src1122",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ObjectReplicationPolicy Resource {#create}

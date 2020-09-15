@@ -12,6 +12,94 @@ meta_desc: "Explore the SecurityRule resource of the network/latest module, incl
 
 Network security rule.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create security rule
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var securityRule = new AzureRM.Network.Latest.SecurityRule("securityRule", new AzureRM.Network.Latest.SecurityRuleArgs
+        {
+            Access = "Deny",
+            DestinationAddressPrefix = "11.0.0.0/8",
+            DestinationPortRange = "8080",
+            Direction = "Outbound",
+            NetworkSecurityGroupName = "testnsg",
+            Priority = 100,
+            Protocol = "*",
+            ResourceGroupName = "rg1",
+            SecurityRuleName = "rule1",
+            SourceAddressPrefix = "10.0.0.0/8",
+            SourcePortRange = "*",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+security_rule = azurerm.network.latest.SecurityRule("securityRule",
+    access="Deny",
+    destination_address_prefix="11.0.0.0/8",
+    destination_port_range="8080",
+    direction="Outbound",
+    network_security_group_name="testnsg",
+    priority=100,
+    protocol="*",
+    resource_group_name="rg1",
+    security_rule_name="rule1",
+    source_address_prefix="10.0.0.0/8",
+    source_port_range="*")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const securityRule = new azurerm.network.latest.SecurityRule("securityRule", {
+    access: "Deny",
+    destinationAddressPrefix: "11.0.0.0/8",
+    destinationPortRange: "8080",
+    direction: "Outbound",
+    networkSecurityGroupName: "testnsg",
+    priority: 100,
+    protocol: "*",
+    resourceGroupName: "rg1",
+    securityRuleName: "rule1",
+    sourceAddressPrefix: "10.0.0.0/8",
+    sourcePortRange: "*",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SecurityRule Resource {#create}

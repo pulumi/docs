@@ -12,6 +12,70 @@ meta_desc: "Explore the ContainerService resource of the containerservice/latest
 
 Container service.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create/Update Container Service
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var containerService = new AzureRM.ContainerService.Latest.ContainerService("containerService", new AzureRM.ContainerService.Latest.ContainerServiceArgs
+        {
+            ContainerServiceName = "acs1",
+            Location = "location1",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+container_service = azurerm.containerservice.latest.ContainerService("containerService",
+    container_service_name="acs1",
+    location="location1",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const containerService = new azurerm.containerservice.latest.ContainerService("containerService", {
+    containerServiceName: "acs1",
+    location: "location1",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ContainerService Resource {#create}

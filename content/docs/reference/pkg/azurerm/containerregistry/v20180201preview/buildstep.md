@@ -12,6 +12,73 @@ meta_desc: "Explore the BuildStep resource of the containerregistry/v20180201pre
 
 Build step resource properties
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### BuildSteps_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var buildStep = new AzureRM.ContainerRegistry.V20180201Preview.BuildStep("buildStep", new AzureRM.ContainerRegistry.V20180201Preview.BuildStepArgs
+        {
+            BuildTaskName = "myBuildTask",
+            RegistryName = "myRegistry",
+            ResourceGroupName = "myResourceGroup",
+            StepName = "myStep",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+build_step = azurerm.containerregistry.v20180201preview.BuildStep("buildStep",
+    build_task_name="myBuildTask",
+    registry_name="myRegistry",
+    resource_group_name="myResourceGroup",
+    step_name="myStep")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const buildStep = new azurerm.containerregistry.v20180201preview.BuildStep("buildStep", {
+    buildTaskName: "myBuildTask",
+    registryName: "myRegistry",
+    resourceGroupName: "myResourceGroup",
+    stepName: "myStep",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BuildStep Resource {#create}

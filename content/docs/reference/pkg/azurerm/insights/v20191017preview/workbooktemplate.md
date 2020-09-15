@@ -12,6 +12,104 @@ meta_desc: "Explore the WorkbookTemplate resource of the insights/v20191017previ
 
 An Application Insights workbook template definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### WorkbookTemplateAdd
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workbookTemplate = new AzureRM.Insights.V20191017Preview.WorkbookTemplate("workbookTemplate", new AzureRM.Insights.V20191017Preview.WorkbookTemplateArgs
+        {
+            Author = "Contoso",
+            Galleries = 
+            {
+                new AzureRM.Insights.V20191017Preview.Inputs.WorkbookTemplateGalleryArgs
+                {
+                    Category = "Failures",
+                    Name = "Simple Template",
+                    Order = 100,
+                    ResourceType = "microsoft.insights/components",
+                    Type = "tsg",
+                },
+            },
+            Location = "west us",
+            Priority = 1,
+            ResourceGroupName = "my-resource-group",
+            ResourceName = "testtemplate2",
+            TemplateData = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+workbook_template = azurerm.insights.v20191017preview.WorkbookTemplate("workbookTemplate",
+    author="Contoso",
+    galleries=[{
+        "category": "Failures",
+        "name": "Simple Template",
+        "order": 100,
+        "resourceType": "microsoft.insights/components",
+        "type": "tsg",
+    }],
+    location="west us",
+    priority=1,
+    resource_group_name="my-resource-group",
+    resource_name="testtemplate2",
+    template_data={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const workbookTemplate = new azurerm.insights.v20191017preview.WorkbookTemplate("workbookTemplate", {
+    author: "Contoso",
+    galleries: [{
+        category: "Failures",
+        name: "Simple Template",
+        order: 100,
+        resourceType: "microsoft.insights/components",
+        type: "tsg",
+    }],
+    location: "west us",
+    priority: 1,
+    resourceGroupName: "my-resource-group",
+    resourceName: "testtemplate2",
+    templateData: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a WorkbookTemplate Resource {#create}

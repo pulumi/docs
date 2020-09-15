@@ -12,6 +12,137 @@ meta_desc: "Explore the Link resource of the customerinsights/latest module, inc
 
 The link resource format.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Links_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var link = new AzureRM.CustomerInsights.Latest.Link("link", new AzureRM.CustomerInsights.Latest.LinkArgs
+        {
+            Description = 
+            {
+                { "en-us", "Link Description" },
+            },
+            DisplayName = 
+            {
+                { "en-us", "Link DisplayName" },
+            },
+            HubName = "sdkTestHub",
+            LinkName = "linkTest4806",
+            Mappings = 
+            {
+                new AzureRM.CustomerInsights.Latest.Inputs.TypePropertiesMappingArgs
+                {
+                    LinkType = "UpdateAlways",
+                    SourcePropertyName = "testInteraction1949",
+                    TargetPropertyName = "testProfile1446",
+                },
+            },
+            ParticipantPropertyReferences = 
+            {
+                new AzureRM.CustomerInsights.Latest.Inputs.ParticipantPropertyReferenceArgs
+                {
+                    SourcePropertyName = "testInteraction1949",
+                    TargetPropertyName = "ProfileId",
+                },
+            },
+            ResourceGroupName = "TestHubRG",
+            SourceEntityType = "Interaction",
+            SourceEntityTypeName = "testInteraction1949",
+            TargetEntityType = "Profile",
+            TargetEntityTypeName = "testProfile1446",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+link = azurerm.customerinsights.latest.Link("link",
+    description={
+        "en-us": "Link Description",
+    },
+    display_name={
+        "en-us": "Link DisplayName",
+    },
+    hub_name="sdkTestHub",
+    link_name="linkTest4806",
+    mappings=[{
+        "linkType": "UpdateAlways",
+        "sourcePropertyName": "testInteraction1949",
+        "targetPropertyName": "testProfile1446",
+    }],
+    participant_property_references=[{
+        "sourcePropertyName": "testInteraction1949",
+        "targetPropertyName": "ProfileId",
+    }],
+    resource_group_name="TestHubRG",
+    source_entity_type="Interaction",
+    source_entity_type_name="testInteraction1949",
+    target_entity_type="Profile",
+    target_entity_type_name="testProfile1446")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const link = new azurerm.customerinsights.latest.Link("link", {
+    description: {
+        "en-us": "Link Description",
+    },
+    displayName: {
+        "en-us": "Link DisplayName",
+    },
+    hubName: "sdkTestHub",
+    linkName: "linkTest4806",
+    mappings: [{
+        linkType: "UpdateAlways",
+        sourcePropertyName: "testInteraction1949",
+        targetPropertyName: "testProfile1446",
+    }],
+    participantPropertyReferences: [{
+        sourcePropertyName: "testInteraction1949",
+        targetPropertyName: "ProfileId",
+    }],
+    resourceGroupName: "TestHubRG",
+    sourceEntityType: "Interaction",
+    sourceEntityTypeName: "testInteraction1949",
+    targetEntityType: "Profile",
+    targetEntityTypeName: "testProfile1446",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Link Resource {#create}

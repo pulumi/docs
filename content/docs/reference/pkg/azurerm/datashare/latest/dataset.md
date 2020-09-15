@@ -12,6 +12,336 @@ meta_desc: "Explore the DataSet resource of the datashare/latest module, includi
 
 A DataSet data transfer object.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### DataSets_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataSet = new AzureRM.DataShare.Latest.DataSet("dataSet", new AzureRM.DataShare.Latest.DataSetArgs
+        {
+            AccountName = "Account1",
+            DataSetName = "Dataset1",
+            Kind = "Blob",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareName = "Share1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+data_set = azurerm.datashare.latest.DataSet("dataSet",
+    account_name="Account1",
+    data_set_name="Dataset1",
+    kind="Blob",
+    resource_group_name="SampleResourceGroup",
+    share_name="Share1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataSet = new azurerm.datashare.latest.DataSet("dataSet", {
+    accountName: "Account1",
+    dataSetName: "Dataset1",
+    kind: "Blob",
+    resourceGroupName: "SampleResourceGroup",
+    shareName: "Share1",
+});
+
+```
+
+{{% /example %}}
+
+### DataSets_KustoCluster_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataSet = new AzureRM.DataShare.Latest.DataSet("dataSet", new AzureRM.DataShare.Latest.DataSetArgs
+        {
+            AccountName = "Account1",
+            DataSetName = "Dataset1",
+            Kind = "KustoCluster",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareName = "Share1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+data_set = azurerm.datashare.latest.DataSet("dataSet",
+    account_name="Account1",
+    data_set_name="Dataset1",
+    kind="KustoCluster",
+    resource_group_name="SampleResourceGroup",
+    share_name="Share1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataSet = new azurerm.datashare.latest.DataSet("dataSet", {
+    accountName: "Account1",
+    dataSetName: "Dataset1",
+    kind: "KustoCluster",
+    resourceGroupName: "SampleResourceGroup",
+    shareName: "Share1",
+});
+
+```
+
+{{% /example %}}
+
+### DataSets_KustoDatabase_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataSet = new AzureRM.DataShare.Latest.DataSet("dataSet", new AzureRM.DataShare.Latest.DataSetArgs
+        {
+            AccountName = "Account1",
+            DataSetName = "Dataset1",
+            Kind = "KustoDatabase",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareName = "Share1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+data_set = azurerm.datashare.latest.DataSet("dataSet",
+    account_name="Account1",
+    data_set_name="Dataset1",
+    kind="KustoDatabase",
+    resource_group_name="SampleResourceGroup",
+    share_name="Share1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataSet = new azurerm.datashare.latest.DataSet("dataSet", {
+    accountName: "Account1",
+    dataSetName: "Dataset1",
+    kind: "KustoDatabase",
+    resourceGroupName: "SampleResourceGroup",
+    shareName: "Share1",
+});
+
+```
+
+{{% /example %}}
+
+### DataSets_SqlDBTable_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataSet = new AzureRM.DataShare.Latest.DataSet("dataSet", new AzureRM.DataShare.Latest.DataSetArgs
+        {
+            AccountName = "Account1",
+            DataSetName = "Dataset1",
+            Kind = "SqlDBTable",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareName = "Share1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+data_set = azurerm.datashare.latest.DataSet("dataSet",
+    account_name="Account1",
+    data_set_name="Dataset1",
+    kind="SqlDBTable",
+    resource_group_name="SampleResourceGroup",
+    share_name="Share1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataSet = new azurerm.datashare.latest.DataSet("dataSet", {
+    accountName: "Account1",
+    dataSetName: "Dataset1",
+    kind: "SqlDBTable",
+    resourceGroupName: "SampleResourceGroup",
+    shareName: "Share1",
+});
+
+```
+
+{{% /example %}}
+
+### DataSets_SqlDWTable_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataSet = new AzureRM.DataShare.Latest.DataSet("dataSet", new AzureRM.DataShare.Latest.DataSetArgs
+        {
+            AccountName = "Account1",
+            DataSetName = "Dataset1",
+            Kind = "SqlDWTable",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareName = "Share1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+data_set = azurerm.datashare.latest.DataSet("dataSet",
+    account_name="Account1",
+    data_set_name="Dataset1",
+    kind="SqlDWTable",
+    resource_group_name="SampleResourceGroup",
+    share_name="Share1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataSet = new azurerm.datashare.latest.DataSet("dataSet", {
+    accountName: "Account1",
+    dataSetName: "Dataset1",
+    kind: "SqlDWTable",
+    resourceGroupName: "SampleResourceGroup",
+    shareName: "Share1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DataSet Resource {#create}

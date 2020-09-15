@@ -12,6 +12,96 @@ meta_desc: "Explore the IpGroup resource of the network/latest module, including
 
 The IpGroups resource information.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateOrUpdate_IpGroups
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ipGroup = new AzureRM.Network.Latest.IpGroup("ipGroup", new AzureRM.Network.Latest.IpGroupArgs
+        {
+            IpAddresses = 
+            {
+                "13.64.39.16/32",
+                "40.74.146.80/31",
+                "40.74.147.32/28",
+            },
+            IpGroupsName = "ipGroups1",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            Tags = 
+            {
+                { "key1", "value1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+ip_group = azurerm.network.latest.IpGroup("ipGroup",
+    ip_addresses=[
+        "13.64.39.16/32",
+        "40.74.146.80/31",
+        "40.74.147.32/28",
+    ],
+    ip_groups_name="ipGroups1",
+    location="West US",
+    resource_group_name="myResourceGroup",
+    tags={
+        "key1": "value1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const ipGroup = new azurerm.network.latest.IpGroup("ipGroup", {
+    ipAddresses: [
+        "13.64.39.16/32",
+        "40.74.146.80/31",
+        "40.74.147.32/28",
+    ],
+    ipGroupsName: "ipGroups1",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    tags: {
+        key1: "value1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IpGroup Resource {#create}

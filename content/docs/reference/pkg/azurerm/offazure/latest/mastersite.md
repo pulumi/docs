@@ -12,6 +12,70 @@ meta_desc: "Explore the MasterSite resource of the offazure/latest module, inclu
 
 Site REST Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Master site
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var masterSite = new AzureRM.OffAzure.Latest.MasterSite("masterSite", new AzureRM.OffAzure.Latest.MasterSiteArgs
+        {
+            Location = "eastus",
+            ResourceGroupName = "poshukla",
+            SiteName = "masterSite1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+master_site = azurerm.offazure.latest.MasterSite("masterSite",
+    location="eastus",
+    resource_group_name="poshukla",
+    site_name="masterSite1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const masterSite = new azurerm.offazure.latest.MasterSite("masterSite", {
+    location: "eastus",
+    resourceGroupName: "poshukla",
+    siteName: "masterSite1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MasterSite Resource {#create}

@@ -12,6 +12,277 @@ meta_desc: "Explore the Server resource of the dbformysql/v20200701privateprevie
 
 Represents a server.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a new server
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new AzureRM.DBForMySql.V20200701PrivatePreview.Server("server", new AzureRM.DBForMySql.V20200701PrivatePreview.ServerArgs
+        {
+            AdministratorLogin = "cloudsa",
+            AdministratorLoginPassword = "pass$w0rd",
+            CreateMode = "Default",
+            Location = "westus",
+            ResourceGroupName = "testrg",
+            ServerName = "mysqltestsvc4",
+            Sku = new AzureRM.DBForMySql.V20200701PrivatePreview.Inputs.SkuArgs
+            {
+                Name = "Standard_D14_v2",
+                Tier = "GeneralPurpose",
+            },
+            SslEnforcement = "Enabled",
+            StorageProfile = new AzureRM.DBForMySql.V20200701PrivatePreview.Inputs.StorageProfileArgs
+            {
+                BackupRetentionDays = 7,
+                StorageIops = 200,
+                StorageMB = 128000,
+            },
+            Tags = 
+            {
+                { "ElasticServer", "1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server = azurerm.dbformysql.v20200701privatepreview.Server("server",
+    administrator_login="cloudsa",
+    administrator_login_password="pass$w0rd",
+    create_mode="Default",
+    location="westus",
+    resource_group_name="testrg",
+    server_name="mysqltestsvc4",
+    sku={
+        "name": "Standard_D14_v2",
+        "tier": "GeneralPurpose",
+    },
+    ssl_enforcement="Enabled",
+    storage_profile={
+        "backupRetentionDays": 7,
+        "storageIops": 200,
+        "storageMB": 128000,
+    },
+    tags={
+        "ElasticServer": "1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const server = new azurerm.dbformysql.v20200701privatepreview.Server("server", {
+    administratorLogin: "cloudsa",
+    administratorLoginPassword: `pass$w0rd`,
+    createMode: "Default",
+    location: "westus",
+    resourceGroupName: "testrg",
+    serverName: "mysqltestsvc4",
+    sku: {
+        name: "Standard_D14_v2",
+        tier: "GeneralPurpose",
+    },
+    sslEnforcement: "Enabled",
+    storageProfile: {
+        backupRetentionDays: 7,
+        storageIops: 200,
+        storageMB: 128000,
+    },
+    tags: {
+        ElasticServer: "1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create a replica server
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new AzureRM.DBForMySql.V20200701PrivatePreview.Server("server", new AzureRM.DBForMySql.V20200701PrivatePreview.ServerArgs
+        {
+            CreateMode = "Replica",
+            Location = "westus",
+            ResourceGroupName = "TargetResourceGroup",
+            ServerName = "targetserver",
+            SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/PrimaryResourceGroup/providers/Microsoft.DBforMySQL/flexibleServers/primaryserver",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server = azurerm.dbformysql.v20200701privatepreview.Server("server",
+    create_mode="Replica",
+    location="westus",
+    resource_group_name="TargetResourceGroup",
+    server_name="targetserver",
+    source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/PrimaryResourceGroup/providers/Microsoft.DBforMySQL/flexibleServers/primaryserver")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const server = new azurerm.dbformysql.v20200701privatepreview.Server("server", {
+    createMode: "Replica",
+    location: "westus",
+    resourceGroupName: "TargetResourceGroup",
+    serverName: "targetserver",
+    sourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/PrimaryResourceGroup/providers/Microsoft.DBforMySQL/flexibleServers/primaryserver",
+});
+
+```
+
+{{% /example %}}
+
+### Create a server as a point in time restore
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var server = new AzureRM.DBForMySql.V20200701PrivatePreview.Server("server", new AzureRM.DBForMySql.V20200701PrivatePreview.ServerArgs
+        {
+            CreateMode = "PointInTimeRestore",
+            Location = "brazilsouth",
+            ResourceGroupName = "TargetResourceGroup",
+            RestorePointInTime = "2017-12-14T00:00:37.467Z",
+            ServerName = "targetserver",
+            Sku = new AzureRM.DBForMySql.V20200701PrivatePreview.Inputs.SkuArgs
+            {
+                Name = "Standard_D14_v2",
+                Tier = "GeneralPurpose",
+            },
+            SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/flexibleServers/sourceserver",
+            Tags = 
+            {
+                { "ElasticServer", "1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server = azurerm.dbformysql.v20200701privatepreview.Server("server",
+    create_mode="PointInTimeRestore",
+    location="brazilsouth",
+    resource_group_name="TargetResourceGroup",
+    restore_point_in_time="2017-12-14T00:00:37.467Z",
+    server_name="targetserver",
+    sku={
+        "name": "Standard_D14_v2",
+        "tier": "GeneralPurpose",
+    },
+    source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/flexibleServers/sourceserver",
+    tags={
+        "ElasticServer": "1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const server = new azurerm.dbformysql.v20200701privatepreview.Server("server", {
+    createMode: "PointInTimeRestore",
+    location: "brazilsouth",
+    resourceGroupName: "TargetResourceGroup",
+    restorePointInTime: "2017-12-14T00:00:37.467Z",
+    serverName: "targetserver",
+    sku: {
+        name: "Standard_D14_v2",
+        tier: "GeneralPurpose",
+    },
+    sourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMySQL/flexibleServers/sourceserver",
+    tags: {
+        ElasticServer: "1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Server Resource {#create}

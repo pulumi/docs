@@ -12,6 +12,198 @@ meta_desc: "Explore the ApiDiagnostic resource of the apimanagement/v20191201pre
 
 Diagnostic details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateApiDiagnostic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiDiagnostic = new AzureRM.ApiManagement.V20191201Preview.ApiDiagnostic("apiDiagnostic", new AzureRM.ApiManagement.V20191201Preview.ApiDiagnosticArgs
+        {
+            AlwaysLog = "allErrors",
+            ApiId = "57d1f7558aa04f15146d9d8a",
+            Backend = new AzureRM.ApiManagement.V20191201Preview.Inputs.PipelineDiagnosticSettingsArgs
+            {
+                Request = new AzureRM.ApiManagement.V20191201Preview.Inputs.HttpMessageDiagnosticArgs
+                {
+                    Body = new AzureRM.ApiManagement.V20191201Preview.Inputs.BodyDiagnosticSettingsArgs
+                    {
+                        Bytes = 512,
+                    },
+                    Headers = 
+                    {
+                        "Content-type",
+                    },
+                },
+                Response = new AzureRM.ApiManagement.V20191201Preview.Inputs.HttpMessageDiagnosticArgs
+                {
+                    Body = new AzureRM.ApiManagement.V20191201Preview.Inputs.BodyDiagnosticSettingsArgs
+                    {
+                        Bytes = 512,
+                    },
+                    Headers = 
+                    {
+                        "Content-type",
+                    },
+                },
+            },
+            DiagnosticId = "applicationinsights",
+            Frontend = new AzureRM.ApiManagement.V20191201Preview.Inputs.PipelineDiagnosticSettingsArgs
+            {
+                Request = new AzureRM.ApiManagement.V20191201Preview.Inputs.HttpMessageDiagnosticArgs
+                {
+                    Body = new AzureRM.ApiManagement.V20191201Preview.Inputs.BodyDiagnosticSettingsArgs
+                    {
+                        Bytes = 512,
+                    },
+                    Headers = 
+                    {
+                        "Content-type",
+                    },
+                },
+                Response = new AzureRM.ApiManagement.V20191201Preview.Inputs.HttpMessageDiagnosticArgs
+                {
+                    Body = new AzureRM.ApiManagement.V20191201Preview.Inputs.BodyDiagnosticSettingsArgs
+                    {
+                        Bytes = 512,
+                    },
+                    Headers = 
+                    {
+                        "Content-type",
+                    },
+                },
+            },
+            LoggerId = "/loggers/applicationinsights",
+            ResourceGroupName = "rg1",
+            Sampling = new AzureRM.ApiManagement.V20191201Preview.Inputs.SamplingSettingsArgs
+            {
+                Percentage = 50,
+                SamplingType = "fixed",
+            },
+            ServiceName = "apimService1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api_diagnostic = azurerm.apimanagement.v20191201preview.ApiDiagnostic("apiDiagnostic",
+    always_log="allErrors",
+    api_id="57d1f7558aa04f15146d9d8a",
+    backend={
+        "request": {
+            "body": {
+                "bytes": 512,
+            },
+            "headers": ["Content-type"],
+        },
+        "response": {
+            "body": {
+                "bytes": 512,
+            },
+            "headers": ["Content-type"],
+        },
+    },
+    diagnostic_id="applicationinsights",
+    frontend={
+        "request": {
+            "body": {
+                "bytes": 512,
+            },
+            "headers": ["Content-type"],
+        },
+        "response": {
+            "body": {
+                "bytes": 512,
+            },
+            "headers": ["Content-type"],
+        },
+    },
+    logger_id="/loggers/applicationinsights",
+    resource_group_name="rg1",
+    sampling={
+        "percentage": 50,
+        "samplingType": "fixed",
+    },
+    service_name="apimService1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const apiDiagnostic = new azurerm.apimanagement.v20191201preview.ApiDiagnostic("apiDiagnostic", {
+    alwaysLog: "allErrors",
+    apiId: "57d1f7558aa04f15146d9d8a",
+    backend: {
+        request: {
+            body: {
+                bytes: 512,
+            },
+            headers: ["Content-type"],
+        },
+        response: {
+            body: {
+                bytes: 512,
+            },
+            headers: ["Content-type"],
+        },
+    },
+    diagnosticId: "applicationinsights",
+    frontend: {
+        request: {
+            body: {
+                bytes: 512,
+            },
+            headers: ["Content-type"],
+        },
+        response: {
+            body: {
+                bytes: 512,
+            },
+            headers: ["Content-type"],
+        },
+    },
+    loggerId: "/loggers/applicationinsights",
+    resourceGroupName: "rg1",
+    sampling: {
+        percentage: 50,
+        samplingType: "fixed",
+    },
+    serviceName: "apimService1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApiDiagnostic Resource {#create}

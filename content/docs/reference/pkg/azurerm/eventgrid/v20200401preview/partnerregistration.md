@@ -12,6 +12,110 @@ meta_desc: "Explore the PartnerRegistration resource of the eventgrid/v20200401p
 
 Information about a partner registration.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PartnerRegistrations_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var partnerRegistration = new AzureRM.EventGrid.V20200401Preview.PartnerRegistration("partnerRegistration", new AzureRM.EventGrid.V20200401Preview.PartnerRegistrationArgs
+        {
+            AuthorizedAzureSubscriptionIds = 
+            {
+                "d48566a8-2428-4a6c-8347-9675d09fb851",
+            },
+            Location = "global",
+            LogoUri = "https://www.example.com/logo.png",
+            PartnerName = "ContosoCorp",
+            PartnerRegistrationName = "examplePartnerRegistrationName1",
+            PartnerResourceTypeDescription = "ContocoCorp Accounts Description Text",
+            PartnerResourceTypeDisplayName = "ContocoCorp Accounts DisplayName Text",
+            PartnerResourceTypeName = "ContosoCorp.Accounts",
+            ResourceGroupName = "examplerg",
+            SetupUri = "https://www.example.com/setup.html",
+            Tags = 
+            {
+                { "key1", "value1" },
+                { "key2", "Value2" },
+                { "key3", "Value3" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+partner_registration = azurerm.eventgrid.v20200401preview.PartnerRegistration("partnerRegistration",
+    authorized_azure_subscription_ids=["d48566a8-2428-4a6c-8347-9675d09fb851"],
+    location="global",
+    logo_uri="https://www.example.com/logo.png",
+    partner_name="ContosoCorp",
+    partner_registration_name="examplePartnerRegistrationName1",
+    partner_resource_type_description="ContocoCorp Accounts Description Text",
+    partner_resource_type_display_name="ContocoCorp Accounts DisplayName Text",
+    partner_resource_type_name="ContosoCorp.Accounts",
+    resource_group_name="examplerg",
+    setup_uri="https://www.example.com/setup.html",
+    tags={
+        "key1": "value1",
+        "key2": "Value2",
+        "key3": "Value3",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const partnerRegistration = new azurerm.eventgrid.v20200401preview.PartnerRegistration("partnerRegistration", {
+    authorizedAzureSubscriptionIds: ["d48566a8-2428-4a6c-8347-9675d09fb851"],
+    location: "global",
+    logoUri: "https://www.example.com/logo.png",
+    partnerName: "ContosoCorp",
+    partnerRegistrationName: "examplePartnerRegistrationName1",
+    partnerResourceTypeDescription: "ContocoCorp Accounts Description Text",
+    partnerResourceTypeDisplayName: "ContocoCorp Accounts DisplayName Text",
+    partnerResourceTypeName: "ContosoCorp.Accounts",
+    resourceGroupName: "examplerg",
+    setupUri: "https://www.example.com/setup.html",
+    tags: {
+        key1: "value1",
+        key2: "Value2",
+        key3: "Value3",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PartnerRegistration Resource {#create}

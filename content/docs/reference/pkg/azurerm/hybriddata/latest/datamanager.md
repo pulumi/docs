@@ -12,6 +12,70 @@ meta_desc: "Explore the DataManager resource of the hybriddata/latest module, in
 
 The DataManager resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### DataManagers_CreatePUT41
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataManager = new AzureRM.HybridData.Latest.DataManager("dataManager", new AzureRM.HybridData.Latest.DataManagerArgs
+        {
+            DataManagerName = "TestAzureSDKOperations",
+            Location = "westus",
+            ResourceGroupName = "ResourceGroupForSDKTest",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+data_manager = azurerm.hybriddata.latest.DataManager("dataManager",
+    data_manager_name="TestAzureSDKOperations",
+    location="westus",
+    resource_group_name="ResourceGroupForSDKTest")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataManager = new azurerm.hybriddata.latest.DataManager("dataManager", {
+    dataManagerName: "TestAzureSDKOperations",
+    location: "westus",
+    resourceGroupName: "ResourceGroupForSDKTest",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DataManager Resource {#create}

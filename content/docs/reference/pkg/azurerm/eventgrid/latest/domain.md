@@ -12,6 +12,119 @@ meta_desc: "Explore the Domain resource of the eventgrid/latest module, includin
 
 EventGrid Domain.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Domains_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var domain = new AzureRM.EventGrid.Latest.Domain("domain", new AzureRM.EventGrid.Latest.DomainArgs
+        {
+            DomainName = "exampledomain1",
+            InboundIpRules = 
+            {
+                new AzureRM.EventGrid.Latest.Inputs.InboundIpRuleArgs
+                {
+                    Action = "Allow",
+                    IpMask = "12.18.30.15",
+                },
+                new AzureRM.EventGrid.Latest.Inputs.InboundIpRuleArgs
+                {
+                    Action = "Allow",
+                    IpMask = "12.18.176.1",
+                },
+            },
+            Location = "westus2",
+            PublicNetworkAccess = "Enabled",
+            ResourceGroupName = "examplerg",
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+domain = azurerm.eventgrid.latest.Domain("domain",
+    domain_name="exampledomain1",
+    inbound_ip_rules=[
+        {
+            "action": "Allow",
+            "ipMask": "12.18.30.15",
+        },
+        {
+            "action": "Allow",
+            "ipMask": "12.18.176.1",
+        },
+    ],
+    location="westus2",
+    public_network_access="Enabled",
+    resource_group_name="examplerg",
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const domain = new azurerm.eventgrid.latest.Domain("domain", {
+    domainName: "exampledomain1",
+    inboundIpRules: [
+        {
+            action: "Allow",
+            ipMask: "12.18.30.15",
+        },
+        {
+            action: "Allow",
+            ipMask: "12.18.176.1",
+        },
+    ],
+    location: "westus2",
+    publicNetworkAccess: "Enabled",
+    resourceGroupName: "examplerg",
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Domain Resource {#create}

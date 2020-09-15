@@ -12,6 +12,98 @@ meta_desc: "Explore the MachineGroup resource of the operationalinsights/v201511
 
 A user-defined logical grouping of machines.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### SMMachineGroupsUpdatePut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var machineGroup = new AzureRM.OperationalInsights.V20151101Preview.MachineGroup("machineGroup", new AzureRM.OperationalInsights.V20151101Preview.MachineGroupArgs
+        {
+            Count = 1,
+            DisplayName = "Foo",
+            Etag = "8cd3a8a1-4b1f-43fc-ae3c-b2c092561444",
+            Kind = "machineGroup",
+            MachineGroupName = "ccfbf4bf-dc08-4371-9e9b-00a8d875d45a",
+            Machines = 
+            {
+                new AzureRM.OperationalInsights.V20151101Preview.Inputs.MachineReferenceWithHintsArgs
+                {
+                    Id = "/subscriptions/63BE4E24-FDF0-4E9C-9342-6A5D5A359722/resourceGroups/rg-sm/providers/Microsoft.OperationalInsights/workspaces/D6F79F14-E563-469B-84B5-9286D2803B2F/machines/m-0fe4b501-7ac9-41d7-a4e1-1591a0789519",
+                    Kind = "ref:machinewithhints",
+                },
+            },
+            ResourceGroupName = "rg-sm",
+            WorkspaceName = "D6F79F14-E563-469B-84B5-9286D2803B2F",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+machine_group = azurerm.operationalinsights.v20151101preview.MachineGroup("machineGroup",
+    count=1,
+    display_name="Foo",
+    etag="8cd3a8a1-4b1f-43fc-ae3c-b2c092561444",
+    kind="machineGroup",
+    machine_group_name="ccfbf4bf-dc08-4371-9e9b-00a8d875d45a",
+    machines=[{
+        "id": "/subscriptions/63BE4E24-FDF0-4E9C-9342-6A5D5A359722/resourceGroups/rg-sm/providers/Microsoft.OperationalInsights/workspaces/D6F79F14-E563-469B-84B5-9286D2803B2F/machines/m-0fe4b501-7ac9-41d7-a4e1-1591a0789519",
+        "kind": "ref:machinewithhints",
+    }],
+    resource_group_name="rg-sm",
+    workspace_name="D6F79F14-E563-469B-84B5-9286D2803B2F")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const machineGroup = new azurerm.operationalinsights.v20151101preview.MachineGroup("machineGroup", {
+    count: 1,
+    displayName: "Foo",
+    etag: "8cd3a8a1-4b1f-43fc-ae3c-b2c092561444",
+    kind: "machineGroup",
+    machineGroupName: "ccfbf4bf-dc08-4371-9e9b-00a8d875d45a",
+    machines: [{
+        id: "/subscriptions/63BE4E24-FDF0-4E9C-9342-6A5D5A359722/resourceGroups/rg-sm/providers/Microsoft.OperationalInsights/workspaces/D6F79F14-E563-469B-84B5-9286D2803B2F/machines/m-0fe4b501-7ac9-41d7-a4e1-1591a0789519",
+        kind: "ref:machinewithhints",
+    }],
+    resourceGroupName: "rg-sm",
+    workspaceName: "D6F79F14-E563-469B-84B5-9286D2803B2F",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a MachineGroup Resource {#create}

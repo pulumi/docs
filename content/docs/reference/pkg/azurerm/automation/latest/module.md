@@ -12,6 +12,96 @@ meta_desc: "Explore the Module resource of the automation/latest module, includi
 
 Definition of the module type.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a module
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var module = new AzureRM.Automation.Latest.Module("module", new AzureRM.Automation.Latest.ModuleArgs
+        {
+            AutomationAccountName = "myAutomationAccount33",
+            ContentLink = new AzureRM.Automation.Latest.Inputs.ContentLinkArgs
+            {
+                ContentHash = new AzureRM.Automation.Latest.Inputs.ContentHashArgs
+                {
+                    Algorithm = "sha265",
+                    Value = "07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
+                },
+                Uri = "https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip",
+                Version = "1.0.0.0",
+            },
+            ModuleName = "OmsCompositeResources",
+            ResourceGroupName = "rg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+module = azurerm.automation.latest.Module("module",
+    automation_account_name="myAutomationAccount33",
+    content_link={
+        "contentHash": {
+            "algorithm": "sha265",
+            "value": "07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
+        },
+        "uri": "https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip",
+        "version": "1.0.0.0",
+    },
+    module_name="OmsCompositeResources",
+    resource_group_name="rg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const module = new azurerm.automation.latest.Module("module", {
+    automationAccountName: "myAutomationAccount33",
+    contentLink: {
+        contentHash: {
+            algorithm: "sha265",
+            value: "07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
+        },
+        uri: "https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip",
+        version: "1.0.0.0",
+    },
+    moduleName: "OmsCompositeResources",
+    resourceGroupName: "rg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Module Resource {#create}

@@ -12,6 +12,80 @@ meta_desc: "Explore the RemoteRenderingAccount resource of the mixedreality/v202
 
 RemoteRenderingAccount Response.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create remote rendering account
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var remoteRenderingAccount = new AzureRM.MixedReality.V20200406Preview.RemoteRenderingAccount("remoteRenderingAccount", new AzureRM.MixedReality.V20200406Preview.RemoteRenderingAccountArgs
+        {
+            AccountName = "MyAccount",
+            Identity = new AzureRM.MixedReality.V20200406Preview.Inputs.RemoteRenderingAccountIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Location = "eastus2euap",
+            ResourceGroupName = "MyResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+remote_rendering_account = azurerm.mixedreality.v20200406preview.RemoteRenderingAccount("remoteRenderingAccount",
+    account_name="MyAccount",
+    identity={
+        "type": "SystemAssigned",
+    },
+    location="eastus2euap",
+    resource_group_name="MyResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const remoteRenderingAccount = new azurerm.mixedreality.v20200406preview.RemoteRenderingAccount("remoteRenderingAccount", {
+    accountName: "MyAccount",
+    identity: {
+        type: "SystemAssigned",
+    },
+    location: "eastus2euap",
+    resourceGroupName: "MyResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RemoteRenderingAccount Resource {#create}

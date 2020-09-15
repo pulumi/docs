@@ -12,6 +12,76 @@ meta_desc: "Explore the Invitation resource of the datashare/latest module, incl
 
 A Invitation data transfer object.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Invitations_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var invitation = new AzureRM.DataShare.Latest.Invitation("invitation", new AzureRM.DataShare.Latest.InvitationArgs
+        {
+            AccountName = "Account1",
+            InvitationName = "Invitation1",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareName = "Share1",
+            TargetEmail = "receiver@microsoft.com",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+invitation = azurerm.datashare.latest.Invitation("invitation",
+    account_name="Account1",
+    invitation_name="Invitation1",
+    resource_group_name="SampleResourceGroup",
+    share_name="Share1",
+    target_email="receiver@microsoft.com")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const invitation = new azurerm.datashare.latest.Invitation("invitation", {
+    accountName: "Account1",
+    invitationName: "Invitation1",
+    resourceGroupName: "SampleResourceGroup",
+    shareName: "Share1",
+    targetEmail: "receiver@microsoft.com",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Invitation Resource {#create}

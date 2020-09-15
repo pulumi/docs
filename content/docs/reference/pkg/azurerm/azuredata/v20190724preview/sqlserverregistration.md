@@ -12,6 +12,80 @@ meta_desc: "Explore the SqlServerRegistration resource of the azuredata/v2019072
 
 A SQL server registration.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates a SQL Server registration.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlServerRegistration = new AzureRM.AzureData.V20190724Preview.SqlServerRegistration("sqlServerRegistration", new AzureRM.AzureData.V20190724Preview.SqlServerRegistrationArgs
+        {
+            Location = "northeurope",
+            ResourceGroupName = "testrg",
+            SqlServerRegistrationName = "testsqlregistration",
+            Tags = 
+            {
+                { "mytag", "myval" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sql_server_registration = azurerm.azuredata.v20190724preview.SqlServerRegistration("sqlServerRegistration",
+    location="northeurope",
+    resource_group_name="testrg",
+    sql_server_registration_name="testsqlregistration",
+    tags={
+        "mytag": "myval",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sqlServerRegistration = new azurerm.azuredata.v20190724preview.SqlServerRegistration("sqlServerRegistration", {
+    location: "northeurope",
+    resourceGroupName: "testrg",
+    sqlServerRegistrationName: "testsqlregistration",
+    tags: {
+        mytag: "myval",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SqlServerRegistration Resource {#create}

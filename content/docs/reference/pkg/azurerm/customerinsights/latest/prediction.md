@@ -12,6 +12,136 @@ meta_desc: "Explore the Prediction resource of the customerinsights/latest modul
 
 The prediction resource format.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Predictions_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var prediction = new AzureRM.CustomerInsights.Latest.Prediction("prediction", new AzureRM.CustomerInsights.Latest.PredictionArgs
+        {
+            AutoAnalyze = true,
+            Description = 
+            {
+                { "en-us", "sdktest" },
+            },
+            DisplayName = 
+            {
+                { "en-us", "sdktest" },
+            },
+            Grades = {},
+            HubName = "sdkTestHub",
+            InvolvedInteractionTypes = {},
+            InvolvedKpiTypes = {},
+            InvolvedRelationships = {},
+            Mappings = new AzureRM.CustomerInsights.Latest.Inputs.PredictionMappingsArgs
+            {
+                Grade = "sdktest_Grade",
+                Reason = "sdktest_Reason",
+                Score = "sdktest_Score",
+            },
+            NegativeOutcomeExpression = "Customers.FirstName = 'Mike'",
+            PositiveOutcomeExpression = "Customers.FirstName = 'David'",
+            PredictionName = "sdktest",
+            PrimaryProfileType = "Customers",
+            ResourceGroupName = "TestHubRG",
+            ScopeExpression = "*",
+            ScoreLabel = "score label",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+prediction = azurerm.customerinsights.latest.Prediction("prediction",
+    auto_analyze=True,
+    description={
+        "en-us": "sdktest",
+    },
+    display_name={
+        "en-us": "sdktest",
+    },
+    grades=[],
+    hub_name="sdkTestHub",
+    involved_interaction_types=[],
+    involved_kpi_types=[],
+    involved_relationships=[],
+    mappings={
+        "grade": "sdktest_Grade",
+        "reason": "sdktest_Reason",
+        "score": "sdktest_Score",
+    },
+    negative_outcome_expression="Customers.FirstName = 'Mike'",
+    positive_outcome_expression="Customers.FirstName = 'David'",
+    prediction_name="sdktest",
+    primary_profile_type="Customers",
+    resource_group_name="TestHubRG",
+    scope_expression="*",
+    score_label="score label")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const prediction = new azurerm.customerinsights.latest.Prediction("prediction", {
+    autoAnalyze: true,
+    description: {
+        "en-us": "sdktest",
+    },
+    displayName: {
+        "en-us": "sdktest",
+    },
+    grades: [],
+    hubName: "sdkTestHub",
+    involvedInteractionTypes: [],
+    involvedKpiTypes: [],
+    involvedRelationships: [],
+    mappings: {
+        grade: "sdktest_Grade",
+        reason: "sdktest_Reason",
+        score: "sdktest_Score",
+    },
+    negativeOutcomeExpression: "Customers.FirstName = 'Mike'",
+    positiveOutcomeExpression: "Customers.FirstName = 'David'",
+    predictionName: "sdktest",
+    primaryProfileType: "Customers",
+    resourceGroupName: "TestHubRG",
+    scopeExpression: "*",
+    scoreLabel: "score label",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Prediction Resource {#create}

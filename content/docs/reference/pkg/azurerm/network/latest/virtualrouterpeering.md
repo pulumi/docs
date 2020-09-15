@@ -12,6 +12,76 @@ meta_desc: "Explore the VirtualRouterPeering resource of the network/latest modu
 
 Virtual Router Peering resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Virtual Router Peering
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualRouterPeering = new AzureRM.Network.Latest.VirtualRouterPeering("virtualRouterPeering", new AzureRM.Network.Latest.VirtualRouterPeeringArgs
+        {
+            PeerAsn = 20000,
+            PeerIp = "192.168.1.5",
+            PeeringName = "peering1",
+            ResourceGroupName = "rg1",
+            VirtualRouterName = "virtualRouter",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_router_peering = azurerm.network.latest.VirtualRouterPeering("virtualRouterPeering",
+    peer_asn=20000,
+    peer_ip="192.168.1.5",
+    peering_name="peering1",
+    resource_group_name="rg1",
+    virtual_router_name="virtualRouter")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualRouterPeering = new azurerm.network.latest.VirtualRouterPeering("virtualRouterPeering", {
+    peerAsn: 20000,
+    peerIp: "192.168.1.5",
+    peeringName: "peering1",
+    resourceGroupName: "rg1",
+    virtualRouterName: "virtualRouter",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualRouterPeering Resource {#create}

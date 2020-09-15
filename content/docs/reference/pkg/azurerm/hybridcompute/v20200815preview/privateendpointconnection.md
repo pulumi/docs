@@ -12,6 +12,83 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the hybridcompute/
 
 A private endpoint connection
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Approve or reject a private endpoint connection with a given name.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpointConnection = new AzureRM.HybridCompute.V20200815Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureRM.HybridCompute.V20200815Preview.PrivateEndpointConnectionArgs
+        {
+            PrivateEndpointConnectionName = "private-endpoint-connection-name",
+            PrivateLinkServiceConnectionState = new AzureRM.HybridCompute.V20200815Preview.Inputs.PrivateLinkServiceConnectionStatePropertyArgs
+            {
+                Description = "Approved by johndoe@contoso.com",
+                Status = "Approved",
+            },
+            ResourceGroupName = "myResourceGroup",
+            ScopeName = "myPrivateLinkScope",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_endpoint_connection = azurerm.hybridcompute.v20200815preview.PrivateEndpointConnection("privateEndpointConnection",
+    private_endpoint_connection_name="private-endpoint-connection-name",
+    private_link_service_connection_state={
+        "description": "Approved by johndoe@contoso.com",
+        "status": "Approved",
+    },
+    resource_group_name="myResourceGroup",
+    scope_name="myPrivateLinkScope")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateEndpointConnection = new azurerm.hybridcompute.v20200815preview.PrivateEndpointConnection("privateEndpointConnection", {
+    privateEndpointConnectionName: "private-endpoint-connection-name",
+    privateLinkServiceConnectionState: {
+        description: "Approved by johndoe@contoso.com",
+        status: "Approved",
+    },
+    resourceGroupName: "myResourceGroup",
+    scopeName: "myPrivateLinkScope",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateEndpointConnection Resource {#create}

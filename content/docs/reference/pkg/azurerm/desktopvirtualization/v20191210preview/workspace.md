@@ -12,6 +12,89 @@ meta_desc: "Explore the Workspace resource of the desktopvirtualization/v2019121
 
 Represents a Workspace definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Workspace_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workspace = new AzureRM.DesktopVirtualization.V20191210Preview.Workspace("workspace", new AzureRM.DesktopVirtualization.V20191210Preview.WorkspaceArgs
+        {
+            Description = "des1",
+            FriendlyName = "friendly",
+            Location = "centralus",
+            ResourceGroupName = "resourceGroup1",
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+            },
+            WorkspaceName = "workspace1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+workspace = azurerm.desktopvirtualization.v20191210preview.Workspace("workspace",
+    description="des1",
+    friendly_name="friendly",
+    location="centralus",
+    resource_group_name="resourceGroup1",
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+    },
+    workspace_name="workspace1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const workspace = new azurerm.desktopvirtualization.v20191210preview.Workspace("workspace", {
+    description: "des1",
+    friendlyName: "friendly",
+    location: "centralus",
+    resourceGroupName: "resourceGroup1",
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+    },
+    workspaceName: "workspace1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Workspace Resource {#create}

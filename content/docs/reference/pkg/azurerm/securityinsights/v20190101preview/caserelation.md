@@ -12,6 +12,96 @@ meta_desc: "Explore the CaseRelation resource of the securityinsights/v20190101p
 
 Represents a case relation
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates a case relation.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var caseRelation = new AzureRM.SecurityInsights.V20190101Preview.CaseRelation("caseRelation", new AzureRM.SecurityInsights.V20190101Preview.CaseRelationArgs
+        {
+            CaseId = "afbd324f-6c48-459c-8710-8d1e1cd03812",
+            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
+            RelationName = "4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014",
+            ResourceGroupName = "myRg",
+            SourceRelationNode = new AzureRM.SecurityInsights.V20190101Preview.Inputs.RelationNodeArgs
+            {
+                RelationNodeId = "afbd324f-6c48-459c-8710-8d1e1cd03812",
+            },
+            TargetRelationNode = new AzureRM.SecurityInsights.V20190101Preview.Inputs.RelationNodeArgs
+            {
+                RelationNodeId = "2216d0e1-91e3-4902-89fd-d2df8c535096",
+            },
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+case_relation = azurerm.securityinsights.v20190101preview.CaseRelation("caseRelation",
+    case_id="afbd324f-6c48-459c-8710-8d1e1cd03812",
+    operational_insights_resource_provider="Microsoft.OperationalInsights",
+    relation_name="4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014",
+    resource_group_name="myRg",
+    source_relation_node={
+        "relationNodeId": "afbd324f-6c48-459c-8710-8d1e1cd03812",
+    },
+    target_relation_node={
+        "relationNodeId": "2216d0e1-91e3-4902-89fd-d2df8c535096",
+    },
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const caseRelation = new azurerm.securityinsights.v20190101preview.CaseRelation("caseRelation", {
+    caseId: "afbd324f-6c48-459c-8710-8d1e1cd03812",
+    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
+    relationName: "4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014",
+    resourceGroupName: "myRg",
+    sourceRelationNode: {
+        relationNodeId: "afbd324f-6c48-459c-8710-8d1e1cd03812",
+    },
+    targetRelationNode: {
+        relationNodeId: "2216d0e1-91e3-4902-89fd-d2df8c535096",
+    },
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a CaseRelation Resource {#create}

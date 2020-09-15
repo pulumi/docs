@@ -12,6 +12,132 @@ meta_desc: "Explore the VirtualMachine resource of the devtestlab/latest module,
 
 A virtual machine.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### VirtualMachines_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachine = new AzureRM.DevTestLab.Latest.VirtualMachine("virtualMachine", new AzureRM.DevTestLab.Latest.VirtualMachineArgs
+        {
+            AllowClaim = true,
+            DisallowPublicIpAddress = true,
+            GalleryImageReference = new AzureRM.DevTestLab.Latest.Inputs.GalleryImageReferenceArgs
+            {
+                Offer = "UbuntuServer",
+                OsType = "Linux",
+                Publisher = "Canonical",
+                Sku = "16.04-LTS",
+                Version = "Latest",
+            },
+            LabName = "{devtestlab-name}",
+            LabSubnetName = "{virtualnetwork-name}Subnet",
+            LabVirtualNetworkId = "/subscriptions/{subscription-id}/resourcegroups/myResourceGroup/providers/microsoft.devtestlab/labs/{devtestlab-name}/virtualnetworks/{virtualnetwork-name}",
+            Location = "{azure-location}",
+            Name = "{virtualmachine-name}",
+            OsType = "Linux",
+            Password = "{user-password}",
+            ResourceGroupName = "myResourceGroup",
+            Size = "Standard_A2_v2",
+            StorageType = "Standard",
+            Tags = 
+            {
+                { "MyTag", "MyValue" },
+            },
+            UserName = "{user-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine = azurerm.devtestlab.latest.VirtualMachine("virtualMachine",
+    allow_claim=True,
+    disallow_public_ip_address=True,
+    gallery_image_reference={
+        "offer": "UbuntuServer",
+        "osType": "Linux",
+        "publisher": "Canonical",
+        "sku": "16.04-LTS",
+        "version": "Latest",
+    },
+    lab_name="{devtestlab-name}",
+    lab_subnet_name="{virtualnetwork-name}Subnet",
+    lab_virtual_network_id="/subscriptions/{subscription-id}/resourcegroups/myResourceGroup/providers/microsoft.devtestlab/labs/{devtestlab-name}/virtualnetworks/{virtualnetwork-name}",
+    location="{azure-location}",
+    name="{virtualmachine-name}",
+    os_type="Linux",
+    password="{user-password}",
+    resource_group_name="myResourceGroup",
+    size="Standard_A2_v2",
+    storage_type="Standard",
+    tags={
+        "MyTag": "MyValue",
+    },
+    user_name="{user-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachine = new azurerm.devtestlab.latest.VirtualMachine("virtualMachine", {
+    allowClaim: true,
+    disallowPublicIpAddress: true,
+    galleryImageReference: {
+        offer: "UbuntuServer",
+        osType: "Linux",
+        publisher: "Canonical",
+        sku: "16.04-LTS",
+        version: "Latest",
+    },
+    labName: "{devtestlab-name}",
+    labSubnetName: "{virtualnetwork-name}Subnet",
+    labVirtualNetworkId: "/subscriptions/{subscription-id}/resourcegroups/myResourceGroup/providers/microsoft.devtestlab/labs/{devtestlab-name}/virtualnetworks/{virtualnetwork-name}",
+    location: "{azure-location}",
+    name: "{virtualmachine-name}",
+    osType: "Linux",
+    password: "{user-password}",
+    resourceGroupName: "myResourceGroup",
+    size: "Standard_A2_v2",
+    storageType: "Standard",
+    tags: {
+        MyTag: "MyValue",
+    },
+    userName: "{user-name}",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualMachine Resource {#create}

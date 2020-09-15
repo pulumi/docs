@@ -12,6 +12,70 @@ meta_desc: "Explore the HierarchySetting resource of the management/latest modul
 
 Settings defined at the Management Group scope.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### GetGroupSettings
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hierarchySetting = new AzureRM.Management.Latest.HierarchySetting("hierarchySetting", new AzureRM.Management.Latest.HierarchySettingArgs
+        {
+            DefaultManagementGroup = "/providers/Microsoft.Management/managementGroups/DefaultGroup",
+            GroupId = "root",
+            RequireAuthorizationForGroupCreation = true,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+hierarchy_setting = azurerm.management.latest.HierarchySetting("hierarchySetting",
+    default_management_group="/providers/Microsoft.Management/managementGroups/DefaultGroup",
+    group_id="root",
+    require_authorization_for_group_creation=True)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const hierarchySetting = new azurerm.management.latest.HierarchySetting("hierarchySetting", {
+    defaultManagementGroup: "/providers/Microsoft.Management/managementGroups/DefaultGroup",
+    groupId: "root",
+    requireAuthorizationForGroupCreation: true,
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a HierarchySetting Resource {#create}

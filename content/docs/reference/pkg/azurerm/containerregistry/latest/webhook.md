@@ -12,6 +12,108 @@ meta_desc: "Explore the Webhook resource of the containerregistry/latest module,
 
 An object that represents a webhook for a container registry.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### WebhookCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var webhook = new AzureRM.ContainerRegistry.Latest.Webhook("webhook", new AzureRM.ContainerRegistry.Latest.WebhookArgs
+        {
+            Actions = 
+            {
+                "push",
+            },
+            CustomHeaders = 
+            {
+                { "Authorization", "Basic 000000000000000000000000000000000000000000000000000" },
+            },
+            Location = "westus",
+            RegistryName = "myRegistry",
+            ResourceGroupName = "myResourceGroup",
+            Scope = "myRepository",
+            ServiceUri = "http://myservice.com",
+            Status = "enabled",
+            Tags = 
+            {
+                { "key", "value" },
+            },
+            WebhookName = "myWebhook",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+webhook = azurerm.containerregistry.latest.Webhook("webhook",
+    actions=["push"],
+    custom_headers={
+        "Authorization": "Basic 000000000000000000000000000000000000000000000000000",
+    },
+    location="westus",
+    registry_name="myRegistry",
+    resource_group_name="myResourceGroup",
+    scope="myRepository",
+    service_uri="http://myservice.com",
+    status="enabled",
+    tags={
+        "key": "value",
+    },
+    webhook_name="myWebhook")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const webhook = new azurerm.containerregistry.latest.Webhook("webhook", {
+    actions: ["push"],
+    customHeaders: {
+        Authorization: "Basic 000000000000000000000000000000000000000000000000000",
+    },
+    location: "westus",
+    registryName: "myRegistry",
+    resourceGroupName: "myResourceGroup",
+    scope: "myRepository",
+    serviceUri: "http://myservice.com",
+    status: "enabled",
+    tags: {
+        key: "value",
+    },
+    webhookName: "myWebhook",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Webhook Resource {#create}

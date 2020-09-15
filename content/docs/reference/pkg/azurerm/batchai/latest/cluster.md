@@ -12,6 +12,187 @@ meta_desc: "Explore the Cluster resource of the batchai/latest module, including
 
 Information about a Cluster.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a cluster
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cluster = new AzureRM.BatchAI.Latest.Cluster("cluster", new AzureRM.BatchAI.Latest.ClusterArgs
+        {
+            ClusterName = "demo_cluster",
+            NodeSetup = new AzureRM.BatchAI.Latest.Inputs.NodeSetupArgs
+            {
+                MountVolumes = new AzureRM.BatchAI.Latest.Inputs.MountVolumesArgs
+                {
+                    AzureFileShares = 
+                    {
+                        new AzureRM.BatchAI.Latest.Inputs.AzureFileShareReferenceArgs
+                        {
+                            AccountName = "storage_account_name",
+                            AzureFileUrl = "https://storage_account_name.file.core.windows.net/azure_file_share_name",
+                            Credentials = new AzureRM.BatchAI.Latest.Inputs.AzureStorageCredentialsInfoArgs
+                            {
+                                AccountKey = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
+                            },
+                            DirectoryMode = "0777",
+                            FileMode = "0777",
+                            RelativeMountPath = "azfiles",
+                        },
+                    },
+                    FileServers = 
+                    {
+                        new AzureRM.BatchAI.Latest.Inputs.FileServerReferenceArgs
+                        {
+                            FileServer = new AzureRM.BatchAI.Latest.Inputs.ResourceIdArgs
+                            {
+                                Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspaces/fileservers/fileservercedd134b",
+                            },
+                            MountOptions = "rw",
+                            RelativeMountPath = "nfs",
+                        },
+                    },
+                },
+            },
+            ResourceGroupName = "demo_resource_group",
+            ScaleSettings = new AzureRM.BatchAI.Latest.Inputs.ScaleSettingsArgs
+            {
+                Manual = new AzureRM.BatchAI.Latest.Inputs.ManualScaleSettingsArgs
+                {
+                    NodeDeallocationOption = "requeue",
+                    TargetNodeCount = 1,
+                },
+            },
+            UserAccountSettings = new AzureRM.BatchAI.Latest.Inputs.UserAccountSettingsArgs
+            {
+                AdminUserName = "admin_user_name",
+                AdminUserPassword = "admin_user_password",
+                AdminUserSshPublicKey = "ssh-rsa AAAAB3NzaC1yc...",
+            },
+            VmPriority = "dedicated",
+            VmSize = "STANDARD_NC6",
+            WorkspaceName = "demo_workspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cluster = azurerm.batchai.latest.Cluster("cluster",
+    cluster_name="demo_cluster",
+    node_setup={
+        "mountVolumes": {
+            "azureFileShares": [{
+                "accountName": "storage_account_name",
+                "azureFileUrl": "https://storage_account_name.file.core.windows.net/azure_file_share_name",
+                "credentials": {
+                    "accountKey": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
+                },
+                "directoryMode": "0777",
+                "fileMode": "0777",
+                "relativeMountPath": "azfiles",
+            }],
+            "fileServers": [{
+                "fileServer": {
+                    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspaces/fileservers/fileservercedd134b",
+                },
+                "mountOptions": "rw",
+                "relativeMountPath": "nfs",
+            }],
+        },
+    },
+    resource_group_name="demo_resource_group",
+    scale_settings={
+        "manual": {
+            "nodeDeallocationOption": "requeue",
+            "targetNodeCount": 1,
+        },
+    },
+    user_account_settings={
+        "adminUserName": "admin_user_name",
+        "adminUserPassword": "admin_user_password",
+        "adminUserSshPublicKey": "ssh-rsa AAAAB3NzaC1yc...",
+    },
+    vm_priority="dedicated",
+    vm_size="STANDARD_NC6",
+    workspace_name="demo_workspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cluster = new azurerm.batchai.latest.Cluster("cluster", {
+    clusterName: "demo_cluster",
+    nodeSetup: {
+        mountVolumes: {
+            azureFileShares: [{
+                accountName: "storage_account_name",
+                azureFileUrl: "https://storage_account_name.file.core.windows.net/azure_file_share_name",
+                credentials: {
+                    accountKey: "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
+                },
+                directoryMode: "0777",
+                fileMode: "0777",
+                relativeMountPath: "azfiles",
+            }],
+            fileServers: [{
+                fileServer: {
+                    id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspaces/fileservers/fileservercedd134b",
+                },
+                mountOptions: "rw",
+                relativeMountPath: "nfs",
+            }],
+        },
+    },
+    resourceGroupName: "demo_resource_group",
+    scaleSettings: {
+        manual: {
+            nodeDeallocationOption: "requeue",
+            targetNodeCount: 1,
+        },
+    },
+    userAccountSettings: {
+        adminUserName: "admin_user_name",
+        adminUserPassword: "admin_user_password",
+        adminUserSshPublicKey: "ssh-rsa AAAAB3NzaC1yc...",
+    },
+    vmPriority: "dedicated",
+    vmSize: "STANDARD_NC6",
+    workspaceName: "demo_workspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}

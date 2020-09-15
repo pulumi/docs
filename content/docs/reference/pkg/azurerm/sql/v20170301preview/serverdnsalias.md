@@ -12,6 +12,70 @@ meta_desc: "Explore the ServerDnsAlias resource of the sql/v20170301preview modu
 
 A server DNS alias.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create server DNS alias
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serverDnsAlias = new AzureRM.Sql.V20170301Preview.ServerDnsAlias("serverDnsAlias", new AzureRM.Sql.V20170301Preview.ServerDnsAliasArgs
+        {
+            DnsAliasName = "dns-alias-name-1",
+            ResourceGroupName = "Default",
+            ServerName = "dns-alias-server",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server_dns_alias = azurerm.sql.v20170301preview.ServerDnsAlias("serverDnsAlias",
+    dns_alias_name="dns-alias-name-1",
+    resource_group_name="Default",
+    server_name="dns-alias-server")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const serverDnsAlias = new azurerm.sql.v20170301preview.ServerDnsAlias("serverDnsAlias", {
+    dnsAliasName: "dns-alias-name-1",
+    resourceGroupName: "Default",
+    serverName: "dns-alias-server",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServerDnsAlias Resource {#create}

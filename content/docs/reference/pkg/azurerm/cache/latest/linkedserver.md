@@ -12,6 +12,79 @@ meta_desc: "Explore the LinkedServer resource of the cache/latest module, includ
 
 Response to put/get linked server (with properties) for Redis cache.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### LinkedServer_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var linkedServer = new AzureRM.Cache.Latest.LinkedServer("linkedServer", new AzureRM.Cache.Latest.LinkedServerArgs
+        {
+            LinkedRedisCacheId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2",
+            LinkedRedisCacheLocation = "West US",
+            LinkedServerName = "cache2",
+            Name = "cache1",
+            ResourceGroupName = "rg1",
+            ServerRole = "Secondary",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+linked_server = azurerm.cache.latest.LinkedServer("linkedServer",
+    linked_redis_cache_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2",
+    linked_redis_cache_location="West US",
+    linked_server_name="cache2",
+    name="cache1",
+    resource_group_name="rg1",
+    server_role="Secondary")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const linkedServer = new azurerm.cache.latest.LinkedServer("linkedServer", {
+    linkedRedisCacheId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2",
+    linkedRedisCacheLocation: "West US",
+    linkedServerName: "cache2",
+    name: "cache1",
+    resourceGroupName: "rg1",
+    serverRole: "Secondary",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LinkedServer Resource {#create}

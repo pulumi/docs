@@ -12,6 +12,82 @@ meta_desc: "Explore the OpenIdConnectProvider resource of the apimanagement/v201
 
 OpenId Connect Provider details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateOpenIdConnectProvider
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var openIdConnectProvider = new AzureRM.ApiManagement.V20191201Preview.OpenIdConnectProvider("openIdConnectProvider", new AzureRM.ApiManagement.V20191201Preview.OpenIdConnectProviderArgs
+        {
+            ClientId = "oidprovidertemplate3",
+            ClientSecret = "x",
+            DisplayName = "templateoidprovider3",
+            MetadataEndpoint = "https://oidprovider-template3.net",
+            Opid = "templateOpenIdConnect3",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+open_id_connect_provider = azurerm.apimanagement.v20191201preview.OpenIdConnectProvider("openIdConnectProvider",
+    client_id="oidprovidertemplate3",
+    client_secret="x",
+    display_name="templateoidprovider3",
+    metadata_endpoint="https://oidprovider-template3.net",
+    opid="templateOpenIdConnect3",
+    resource_group_name="rg1",
+    service_name="apimService1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const openIdConnectProvider = new azurerm.apimanagement.v20191201preview.OpenIdConnectProvider("openIdConnectProvider", {
+    clientId: "oidprovidertemplate3",
+    clientSecret: "x",
+    displayName: "templateoidprovider3",
+    metadataEndpoint: "https://oidprovider-template3.net",
+    opid: "templateOpenIdConnect3",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a OpenIdConnectProvider Resource {#create}

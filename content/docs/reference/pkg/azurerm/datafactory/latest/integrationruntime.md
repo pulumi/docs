@@ -12,6 +12,70 @@ meta_desc: "Explore the IntegrationRuntime resource of the datafactory/latest mo
 
 Integration runtime resource type.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### IntegrationRuntimes_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var integrationRuntime = new AzureRM.DataFactory.Latest.IntegrationRuntime("integrationRuntime", new AzureRM.DataFactory.Latest.IntegrationRuntimeArgs
+        {
+            FactoryName = "exampleFactoryName",
+            IntegrationRuntimeName = "exampleIntegrationRuntime",
+            ResourceGroupName = "exampleResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+integration_runtime = azurerm.datafactory.latest.IntegrationRuntime("integrationRuntime",
+    factory_name="exampleFactoryName",
+    integration_runtime_name="exampleIntegrationRuntime",
+    resource_group_name="exampleResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const integrationRuntime = new azurerm.datafactory.latest.IntegrationRuntime("integrationRuntime", {
+    factoryName: "exampleFactoryName",
+    integrationRuntimeName: "exampleIntegrationRuntime",
+    resourceGroupName: "exampleResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IntegrationRuntime Resource {#create}

@@ -12,6 +12,73 @@ meta_desc: "Explore the ManagedPrivateEndpoint resource of the datafactory/lates
 
 Managed private endpoint resource type.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ManagedVirtualNetworks_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedPrivateEndpoint = new AzureRM.DataFactory.Latest.ManagedPrivateEndpoint("managedPrivateEndpoint", new AzureRM.DataFactory.Latest.ManagedPrivateEndpointArgs
+        {
+            FactoryName = "exampleFactoryName",
+            ManagedPrivateEndpointName = "exampleManagedPrivateEndpointName",
+            ManagedVirtualNetworkName = "exampleManagedVirtualNetworkName",
+            ResourceGroupName = "exampleResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_private_endpoint = azurerm.datafactory.latest.ManagedPrivateEndpoint("managedPrivateEndpoint",
+    factory_name="exampleFactoryName",
+    managed_private_endpoint_name="exampleManagedPrivateEndpointName",
+    managed_virtual_network_name="exampleManagedVirtualNetworkName",
+    resource_group_name="exampleResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedPrivateEndpoint = new azurerm.datafactory.latest.ManagedPrivateEndpoint("managedPrivateEndpoint", {
+    factoryName: "exampleFactoryName",
+    managedPrivateEndpointName: "exampleManagedPrivateEndpointName",
+    managedVirtualNetworkName: "exampleManagedVirtualNetworkName",
+    resourceGroupName: "exampleResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagedPrivateEndpoint Resource {#create}

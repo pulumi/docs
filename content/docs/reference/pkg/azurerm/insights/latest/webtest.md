@@ -12,6 +12,228 @@ meta_desc: "Explore the WebTest resource of the insights/latest module, includin
 
 An Application Insights web test definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### webTestCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var webTest = new AzureRM.Insights.Latest.WebTest("webTest", new AzureRM.Insights.Latest.WebTestArgs
+        {
+            Configuration = new AzureRM.Insights.Latest.Inputs.WebTestPropertiesConfigurationArgs
+            {
+                WebTest = "<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"120\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"120\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>",
+            },
+            Description = "Ping web test alert for mytestwebapp",
+            Enabled = true,
+            Frequency = 900,
+            Kind = "ping",
+            Location = "South Central US",
+            Locations = 
+            {
+                new AzureRM.Insights.Latest.Inputs.WebTestGeolocationArgs
+                {
+                    Location = "us-fl-mia-edge",
+                },
+            },
+            ResourceGroupName = "my-resource-group",
+            RetryEnabled = true,
+            SyntheticMonitorId = "my-webtest-my-component",
+            Timeout = 120,
+            WebTestKind = "ping",
+            WebTestName = "my-webtest-my-component",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+web_test = azurerm.insights.latest.WebTest("webTest",
+    configuration={
+        "webTest": "<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"120\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"120\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>",
+    },
+    description="Ping web test alert for mytestwebapp",
+    enabled=True,
+    frequency=900,
+    kind="ping",
+    location="South Central US",
+    locations=[{
+        "location": "us-fl-mia-edge",
+    }],
+    resource_group_name="my-resource-group",
+    retry_enabled=True,
+    synthetic_monitor_id="my-webtest-my-component",
+    timeout=120,
+    web_test_kind="ping",
+    web_test_name="my-webtest-my-component")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const webTest = new azurerm.insights.latest.WebTest("webTest", {
+    configuration: {
+        webTest: "<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"120\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"120\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>",
+    },
+    description: "Ping web test alert for mytestwebapp",
+    enabled: true,
+    frequency: 900,
+    kind: "ping",
+    location: "South Central US",
+    locations: [{
+        location: "us-fl-mia-edge",
+    }],
+    resourceGroupName: "my-resource-group",
+    retryEnabled: true,
+    syntheticMonitorId: "my-webtest-my-component",
+    timeout: 120,
+    webTestKind: "ping",
+    webTestName: "my-webtest-my-component",
+});
+
+```
+
+{{% /example %}}
+
+### webTestUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var webTest = new AzureRM.Insights.Latest.WebTest("webTest", new AzureRM.Insights.Latest.WebTestArgs
+        {
+            Configuration = new AzureRM.Insights.Latest.Inputs.WebTestPropertiesConfigurationArgs
+            {
+                WebTest = "<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"30\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"30\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>",
+            },
+            Frequency = 600,
+            Kind = "ping",
+            Location = "South Central US",
+            Locations = 
+            {
+                new AzureRM.Insights.Latest.Inputs.WebTestGeolocationArgs
+                {
+                    Location = "us-fl-mia-edge",
+                },
+                new AzureRM.Insights.Latest.Inputs.WebTestGeolocationArgs
+                {
+                    Location = "apac-hk-hkn-azr",
+                },
+            },
+            ResourceGroupName = "my-resource-group",
+            SyntheticMonitorId = "my-webtest-my-component",
+            Timeout = 30,
+            WebTestKind = "ping",
+            WebTestName = "my-webtest-my-component",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+web_test = azurerm.insights.latest.WebTest("webTest",
+    configuration={
+        "webTest": "<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"30\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"30\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>",
+    },
+    frequency=600,
+    kind="ping",
+    location="South Central US",
+    locations=[
+        {
+            "location": "us-fl-mia-edge",
+        },
+        {
+            "location": "apac-hk-hkn-azr",
+        },
+    ],
+    resource_group_name="my-resource-group",
+    synthetic_monitor_id="my-webtest-my-component",
+    timeout=30,
+    web_test_kind="ping",
+    web_test_name="my-webtest-my-component")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const webTest = new azurerm.insights.latest.WebTest("webTest", {
+    configuration: {
+        webTest: "<WebTest Name=\"my-webtest\" Id=\"678ddf96-1ab8-44c8-9274-123456789abc\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"30\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\" ><Items><Request Method=\"GET\" Guid=\"a4162485-9114-fcfc-e086-123456789abc\" Version=\"1.1\" Url=\"http://my-component.azurewebsites.net\" ThinkTime=\"0\" Timeout=\"30\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" /></Items></WebTest>",
+    },
+    frequency: 600,
+    kind: "ping",
+    location: "South Central US",
+    locations: [
+        {
+            location: "us-fl-mia-edge",
+        },
+        {
+            location: "apac-hk-hkn-azr",
+        },
+    ],
+    resourceGroupName: "my-resource-group",
+    syntheticMonitorId: "my-webtest-my-component",
+    timeout: 30,
+    webTestKind: "ping",
+    webTestName: "my-webtest-my-component",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a WebTest Resource {#create}

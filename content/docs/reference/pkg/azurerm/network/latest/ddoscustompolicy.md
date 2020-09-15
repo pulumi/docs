@@ -12,6 +12,83 @@ meta_desc: "Explore the DdosCustomPolicy resource of the network/latest module, 
 
 A DDoS custom policy in a resource group.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create DDoS custom policy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ddosCustomPolicy = new AzureRM.Network.Latest.DdosCustomPolicy("ddosCustomPolicy", new AzureRM.Network.Latest.DdosCustomPolicyArgs
+        {
+            DdosCustomPolicyName = "test-ddos-custom-policy",
+            Location = "centraluseuap",
+            ProtocolCustomSettings = 
+            {
+                new AzureRM.Network.Latest.Inputs.ProtocolCustomSettingsFormatArgs
+                {
+                    Protocol = "Tcp",
+                },
+            },
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+ddos_custom_policy = azurerm.network.latest.DdosCustomPolicy("ddosCustomPolicy",
+    ddos_custom_policy_name="test-ddos-custom-policy",
+    location="centraluseuap",
+    protocol_custom_settings=[{
+        "protocol": "Tcp",
+    }],
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const ddosCustomPolicy = new azurerm.network.latest.DdosCustomPolicy("ddosCustomPolicy", {
+    ddosCustomPolicyName: "test-ddos-custom-policy",
+    location: "centraluseuap",
+    protocolCustomSettings: [{
+        protocol: "Tcp",
+    }],
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DdosCustomPolicy Resource {#create}

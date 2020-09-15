@@ -12,6 +12,128 @@ meta_desc: "Explore the RelationshipLink resource of the customerinsights/latest
 
 The relationship link resource format.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### RelationshipLinks_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var relationshipLink = new AzureRM.CustomerInsights.Latest.RelationshipLink("relationshipLink", new AzureRM.CustomerInsights.Latest.RelationshipLinkArgs
+        {
+            Description = 
+            {
+                { "en-us", "Link Description" },
+            },
+            DisplayName = 
+            {
+                { "en-us", "Link DisplayName" },
+            },
+            HubName = "sdkTestHub",
+            InteractionType = "testInteraction4332",
+            ProfilePropertyReferences = 
+            {
+                new AzureRM.CustomerInsights.Latest.Inputs.ParticipantProfilePropertyReferenceArgs
+                {
+                    InteractionPropertyName = "profile1",
+                    ProfilePropertyName = "ProfileId",
+                },
+            },
+            RelatedProfilePropertyReferences = 
+            {
+                new AzureRM.CustomerInsights.Latest.Inputs.ParticipantProfilePropertyReferenceArgs
+                {
+                    InteractionPropertyName = "profile1",
+                    ProfilePropertyName = "ProfileId",
+                },
+            },
+            RelationshipLinkName = "Somelink",
+            RelationshipName = "testProfile2326994",
+            ResourceGroupName = "TestHubRG",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+relationship_link = azurerm.customerinsights.latest.RelationshipLink("relationshipLink",
+    description={
+        "en-us": "Link Description",
+    },
+    display_name={
+        "en-us": "Link DisplayName",
+    },
+    hub_name="sdkTestHub",
+    interaction_type="testInteraction4332",
+    profile_property_references=[{
+        "interactionPropertyName": "profile1",
+        "profilePropertyName": "ProfileId",
+    }],
+    related_profile_property_references=[{
+        "interactionPropertyName": "profile1",
+        "profilePropertyName": "ProfileId",
+    }],
+    relationship_link_name="Somelink",
+    relationship_name="testProfile2326994",
+    resource_group_name="TestHubRG")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const relationshipLink = new azurerm.customerinsights.latest.RelationshipLink("relationshipLink", {
+    description: {
+        "en-us": "Link Description",
+    },
+    displayName: {
+        "en-us": "Link DisplayName",
+    },
+    hubName: "sdkTestHub",
+    interactionType: "testInteraction4332",
+    profilePropertyReferences: [{
+        interactionPropertyName: "profile1",
+        profilePropertyName: "ProfileId",
+    }],
+    relatedProfilePropertyReferences: [{
+        interactionPropertyName: "profile1",
+        profilePropertyName: "ProfileId",
+    }],
+    relationshipLinkName: "Somelink",
+    relationshipName: "testProfile2326994",
+    resourceGroupName: "TestHubRG",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RelationshipLink Resource {#create}

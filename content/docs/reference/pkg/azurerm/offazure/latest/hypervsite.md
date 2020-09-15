@@ -12,6 +12,70 @@ meta_desc: "Explore the HyperVSite resource of the offazure/latest module, inclu
 
 Site REST Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Hyper-V site
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hyperVSite = new AzureRM.OffAzure.Latest.HyperVSite("hyperVSite", new AzureRM.OffAzure.Latest.HyperVSiteArgs
+        {
+            Location = "eastus",
+            ResourceGroupName = "pajindTest",
+            SiteName = "appliance1e39site",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+hyper_v_site = azurerm.offazure.latest.HyperVSite("hyperVSite",
+    location="eastus",
+    resource_group_name="pajindTest",
+    site_name="appliance1e39site")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const hyperVSite = new azurerm.offazure.latest.HyperVSite("hyperVSite", {
+    location: "eastus",
+    resourceGroupName: "pajindTest",
+    siteName: "appliance1e39site",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a HyperVSite Resource {#create}

@@ -12,6 +12,92 @@ meta_desc: "Explore the SqlResourceSqlUserDefinedFunction resource of the docume
 
 An Azure Cosmos DB userDefinedFunction.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CosmosDBSqlUserDefinedFunctionCreateUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlResourceSqlUserDefinedFunction = new AzureRM.DocumentDB.Latest.SqlResourceSqlUserDefinedFunction("sqlResourceSqlUserDefinedFunction", new AzureRM.DocumentDB.Latest.SqlResourceSqlUserDefinedFunctionArgs
+        {
+            AccountName = "ddb1",
+            ContainerName = "containerName",
+            DatabaseName = "databaseName",
+            Options = ,
+            Resource = new AzureRM.DocumentDB.Latest.Inputs.SqlUserDefinedFunctionResourceArgs
+            {
+                Body = "body",
+                Id = "userDefinedFunctionName",
+            },
+            ResourceGroupName = "rg1",
+            UserDefinedFunctionName = "userDefinedFunctionName",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sql_resource_sql_user_defined_function = azurerm.documentdb.latest.SqlResourceSqlUserDefinedFunction("sqlResourceSqlUserDefinedFunction",
+    account_name="ddb1",
+    container_name="containerName",
+    database_name="databaseName",
+    options={},
+    resource={
+        "body": "body",
+        "id": "userDefinedFunctionName",
+    },
+    resource_group_name="rg1",
+    user_defined_function_name="userDefinedFunctionName")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sqlResourceSqlUserDefinedFunction = new azurerm.documentdb.latest.SqlResourceSqlUserDefinedFunction("sqlResourceSqlUserDefinedFunction", {
+    accountName: "ddb1",
+    containerName: "containerName",
+    databaseName: "databaseName",
+    options: {},
+    resource: {
+        body: "body",
+        id: "userDefinedFunctionName",
+    },
+    resourceGroupName: "rg1",
+    userDefinedFunctionName: "userDefinedFunctionName",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SqlResourceSqlUserDefinedFunction Resource {#create}

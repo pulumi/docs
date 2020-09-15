@@ -12,6 +12,164 @@ meta_desc: "Explore the JobAgent resource of the sql/v20170301preview module, in
 
 An Azure SQL job agent.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a job agent with all properties
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var jobAgent = new AzureRM.Sql.V20170301Preview.JobAgent("jobAgent", new AzureRM.Sql.V20170301Preview.JobAgentArgs
+        {
+            DatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
+            JobAgentName = "agent1",
+            Location = "southeastasia",
+            ResourceGroupName = "group1",
+            ServerName = "server1",
+            Sku = new AzureRM.Sql.V20170301Preview.Inputs.SkuArgs
+            {
+                Capacity = 100,
+                Name = "Agent",
+            },
+            Tags = 
+            {
+                { "octopus", "agent" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+job_agent = azurerm.sql.v20170301preview.JobAgent("jobAgent",
+    database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
+    job_agent_name="agent1",
+    location="southeastasia",
+    resource_group_name="group1",
+    server_name="server1",
+    sku={
+        "capacity": 100,
+        "name": "Agent",
+    },
+    tags={
+        "octopus": "agent",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const jobAgent = new azurerm.sql.v20170301preview.JobAgent("jobAgent", {
+    databaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
+    jobAgentName: "agent1",
+    location: "southeastasia",
+    resourceGroupName: "group1",
+    serverName: "server1",
+    sku: {
+        capacity: 100,
+        name: "Agent",
+    },
+    tags: {
+        octopus: "agent",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create or update a job agent with minimum properties
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var jobAgent = new AzureRM.Sql.V20170301Preview.JobAgent("jobAgent", new AzureRM.Sql.V20170301Preview.JobAgentArgs
+        {
+            DatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
+            JobAgentName = "agent1",
+            Location = "southeastasia",
+            ResourceGroupName = "group1",
+            ServerName = "server1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+job_agent = azurerm.sql.v20170301preview.JobAgent("jobAgent",
+    database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
+    job_agent_name="agent1",
+    location="southeastasia",
+    resource_group_name="group1",
+    server_name="server1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const jobAgent = new azurerm.sql.v20170301preview.JobAgent("jobAgent", {
+    databaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
+    jobAgentName: "agent1",
+    location: "southeastasia",
+    resourceGroupName: "group1",
+    serverName: "server1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a JobAgent Resource {#create}

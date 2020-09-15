@@ -12,6 +12,73 @@ meta_desc: "Explore the File resource of the datamigration/v20180715preview modu
 
 A file resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Files_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var file = new AzureRM.DataMigration.V20180715Preview.File("file", new AzureRM.DataMigration.V20180715Preview.FileArgs
+        {
+            FileName = "x114d023d8",
+            GroupName = "DmsSdkRg",
+            ProjectName = "DmsSdkProject",
+            ServiceName = "DmsSdkService",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+file = azurerm.datamigration.v20180715preview.File("file",
+    file_name="x114d023d8",
+    group_name="DmsSdkRg",
+    project_name="DmsSdkProject",
+    service_name="DmsSdkService")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const file = new azurerm.datamigration.v20180715preview.File("file", {
+    fileName: "x114d023d8",
+    groupName: "DmsSdkRg",
+    projectName: "DmsSdkProject",
+    serviceName: "DmsSdkService",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a File Resource {#create}

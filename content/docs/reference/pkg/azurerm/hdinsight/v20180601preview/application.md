@@ -12,6 +12,70 @@ meta_desc: "Explore the Application resource of the hdinsight/v20180601preview m
 
 The HDInsight cluster application
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Application
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var application = new AzureRM.HDInsight.V20180601Preview.Application("application", new AzureRM.HDInsight.V20180601Preview.ApplicationArgs
+        {
+            ApplicationName = "hue",
+            ClusterName = "cluster1",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+application = azurerm.hdinsight.v20180601preview.Application("application",
+    application_name="hue",
+    cluster_name="cluster1",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const application = new azurerm.hdinsight.v20180601preview.Application("application", {
+    applicationName: "hue",
+    clusterName: "cluster1",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Application Resource {#create}

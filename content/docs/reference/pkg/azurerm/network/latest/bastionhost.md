@@ -12,6 +12,80 @@ meta_desc: "Explore the BastionHost resource of the network/latest module, inclu
 
 Bastion Host resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Bastion Host
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bastionHost = new AzureRM.Network.Latest.BastionHost("bastionHost", new AzureRM.Network.Latest.BastionHostArgs
+        {
+            BastionHostName = "bastionhosttenant'",
+            IpConfigurations = 
+            {
+                new AzureRM.Network.Latest.Inputs.BastionHostIPConfigurationArgs
+                {
+                    Name = "bastionHostIpConfiguration",
+                },
+            },
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+bastion_host = azurerm.network.latest.BastionHost("bastionHost",
+    bastion_host_name="bastionhosttenant'",
+    ip_configurations=[{
+        "name": "bastionHostIpConfiguration",
+    }],
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const bastionHost = new azurerm.network.latest.BastionHost("bastionHost", {
+    bastionHostName: "bastionhosttenant'",
+    ipConfigurations: [{
+        name: "bastionHostIpConfiguration",
+    }],
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BastionHost Resource {#create}

@@ -12,6 +12,79 @@ meta_desc: "Explore the WorkspaceAadAdmin resource of the synapse/v20190601previ
 
 Workspace active directory administrator
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update workspace active directory admin
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workspaceAadAdmin = new AzureRM.Synapse.V20190601Preview.WorkspaceAadAdmin("workspaceAadAdmin", new AzureRM.Synapse.V20190601Preview.WorkspaceAadAdminArgs
+        {
+            AdministratorType = "ActiveDirectory",
+            Login = "bob@contoso.com",
+            ResourceGroupName = "resourceGroup1",
+            Sid = "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+            TenantId = "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+            WorkspaceName = "workspace1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+workspace_aad_admin = azurerm.synapse.v20190601preview.WorkspaceAadAdmin("workspaceAadAdmin",
+    administrator_type="ActiveDirectory",
+    login="bob@contoso.com",
+    resource_group_name="resourceGroup1",
+    sid="c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+    tenant_id="c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+    workspace_name="workspace1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const workspaceAadAdmin = new azurerm.synapse.v20190601preview.WorkspaceAadAdmin("workspaceAadAdmin", {
+    administratorType: "ActiveDirectory",
+    login: "bob@contoso.com",
+    resourceGroupName: "resourceGroup1",
+    sid: "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+    tenantId: "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+    workspaceName: "workspace1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a WorkspaceAadAdmin Resource {#create}

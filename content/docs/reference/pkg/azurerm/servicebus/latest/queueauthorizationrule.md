@@ -12,6 +12,86 @@ meta_desc: "Explore the QueueAuthorizationRule resource of the servicebus/latest
 
 Description of a namespace authorization rule.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### QueueAuthorizationRuleCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var queueAuthorizationRule = new AzureRM.ServiceBus.Latest.QueueAuthorizationRule("queueAuthorizationRule", new AzureRM.ServiceBus.Latest.QueueAuthorizationRuleArgs
+        {
+            AuthorizationRuleName = "sdk-AuthRules-5800",
+            NamespaceName = "sdk-Namespace-7982",
+            QueueName = "sdk-Queues-2317",
+            ResourceGroupName = "ArunMonocle",
+            Rights = 
+            {
+                "Listen",
+                "Send",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+queue_authorization_rule = azurerm.servicebus.latest.QueueAuthorizationRule("queueAuthorizationRule",
+    authorization_rule_name="sdk-AuthRules-5800",
+    namespace_name="sdk-Namespace-7982",
+    queue_name="sdk-Queues-2317",
+    resource_group_name="ArunMonocle",
+    rights=[
+        "Listen",
+        "Send",
+    ])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const queueAuthorizationRule = new azurerm.servicebus.latest.QueueAuthorizationRule("queueAuthorizationRule", {
+    authorizationRuleName: "sdk-AuthRules-5800",
+    namespaceName: "sdk-Namespace-7982",
+    queueName: "sdk-Queues-2317",
+    resourceGroupName: "ArunMonocle",
+    rights: [
+        "Listen",
+        "Send",
+    ],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a QueueAuthorizationRule Resource {#create}

@@ -12,6 +12,1042 @@ meta_desc: "Explore the ManagedCluster resource of the containerservice/latest m
 
 Managed cluster.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Managed Cluster with PPG
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedCluster = new AzureRM.ContainerService.Latest.ManagedCluster("managedCluster", new AzureRM.ContainerService.Latest.ManagedClusterArgs
+        {
+            AddonProfiles = ,
+            AgentPoolProfiles = 
+            {
+                new AzureRM.ContainerService.Latest.Inputs.ManagedClusterAgentPoolProfileArgs
+                {
+                    Count = 3,
+                    EnableNodePublicIP = true,
+                    Mode = "System",
+                    Name = "nodepool1",
+                    OsType = "Linux",
+                    ProximityPlacementGroupID = "/subscriptions/subid1/resourcegroups/rg1/providers//Microsoft.Compute/proximityPlacementGroups/ppg1",
+                    Type = "VirtualMachineScaleSets",
+                    VmSize = "Standard_DS2_v2",
+                },
+            },
+            AutoScalerProfile = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
+            {
+                ScaleDownDelayAfterAdd = "15m",
+                ScanInterval = "20s",
+            },
+            DiskEncryptionSetID = "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+            DnsPrefix = "dnsprefix1",
+            EnablePodSecurityPolicy = true,
+            EnableRBAC = true,
+            KubernetesVersion = "",
+            LinuxProfile = new AzureRM.ContainerService.Latest.Inputs.ContainerServiceLinuxProfileArgs
+            {
+                AdminUsername = "azureuser",
+                Ssh = new AzureRM.ContainerService.Latest.Inputs.ContainerServiceSshConfigurationArgs
+                {
+                    PublicKeys = 
+                    {
+                        new AzureRM.ContainerService.Latest.Inputs.ContainerServiceSshPublicKeyArgs
+                        {
+                            KeyData = "keydata",
+                        },
+                    },
+                },
+            },
+            Location = "location1",
+            NetworkProfile = new AzureRM.ContainerService.Latest.Inputs.ContainerServiceNetworkProfileArgs
+            {
+                LoadBalancerProfile = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileArgs
+                {
+                    ManagedOutboundIPs = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
+                    {
+                        Count = 2,
+                    },
+                },
+                LoadBalancerSku = "standard",
+                OutboundType = "loadBalancer",
+            },
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            ServicePrincipalProfile = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterServicePrincipalProfileArgs
+            {
+                ClientId = "clientid",
+                Secret = "secret",
+            },
+            Sku = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterSKUArgs
+            {
+                Name = "Basic",
+                Tier = "Free",
+            },
+            Tags = 
+            {
+                { "archv2", "" },
+                { "tier", "production" },
+            },
+            WindowsProfile = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterWindowsProfileArgs
+            {
+                AdminPassword = "replacePassword1234$",
+                AdminUsername = "azureuser",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_cluster = azurerm.containerservice.latest.ManagedCluster("managedCluster",
+    addon_profiles={},
+    agent_pool_profiles=[{
+        "count": 3,
+        "enableNodePublicIP": True,
+        "mode": "System",
+        "name": "nodepool1",
+        "osType": "Linux",
+        "proximityPlacementGroupID": "/subscriptions/subid1/resourcegroups/rg1/providers//Microsoft.Compute/proximityPlacementGroups/ppg1",
+        "type": "VirtualMachineScaleSets",
+        "vmSize": "Standard_DS2_v2",
+    }],
+    auto_scaler_profile={
+        "scaleDownDelayAfterAdd": "15m",
+        "scanInterval": "20s",
+    },
+    disk_encryption_set_id="/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dns_prefix="dnsprefix1",
+    enable_pod_security_policy=True,
+    enable_rbac=True,
+    kubernetes_version="",
+    linux_profile={
+        "adminUsername": "azureuser",
+        "ssh": {
+            "publicKeys": [{
+                "keyData": "keydata",
+            }],
+        },
+    },
+    location="location1",
+    network_profile={
+        "loadBalancerProfile": {
+            "managedOutboundIPs": {
+                "count": 2,
+            },
+        },
+        "loadBalancerSku": "standard",
+        "outboundType": "loadBalancer",
+    },
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    service_principal_profile={
+        "clientId": "clientid",
+        "secret": "secret",
+    },
+    sku={
+        "name": "Basic",
+        "tier": "Free",
+    },
+    tags={
+        "archv2": "",
+        "tier": "production",
+    },
+    windows_profile={
+        "adminPassword": "replacePassword1234$",
+        "adminUsername": "azureuser",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedCluster = new azurerm.containerservice.latest.ManagedCluster("managedCluster", {
+    addonProfiles: {},
+    agentPoolProfiles: [{
+        count: 3,
+        enableNodePublicIP: true,
+        mode: "System",
+        name: "nodepool1",
+        osType: "Linux",
+        proximityPlacementGroupID: "/subscriptions/subid1/resourcegroups/rg1/providers//Microsoft.Compute/proximityPlacementGroups/ppg1",
+        type: "VirtualMachineScaleSets",
+        vmSize: "Standard_DS2_v2",
+    }],
+    autoScalerProfile: {
+        scaleDownDelayAfterAdd: "15m",
+        scanInterval: "20s",
+    },
+    diskEncryptionSetID: "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dnsPrefix: "dnsprefix1",
+    enablePodSecurityPolicy: true,
+    enableRBAC: true,
+    kubernetesVersion: "",
+    linuxProfile: {
+        adminUsername: "azureuser",
+        ssh: {
+            publicKeys: [{
+                keyData: "keydata",
+            }],
+        },
+    },
+    location: "location1",
+    networkProfile: {
+        loadBalancerProfile: {
+            managedOutboundIPs: {
+                count: 2,
+            },
+        },
+        loadBalancerSku: "standard",
+        outboundType: "loadBalancer",
+    },
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    servicePrincipalProfile: {
+        clientId: "clientid",
+        secret: "secret",
+    },
+    sku: {
+        name: "Basic",
+        tier: "Free",
+    },
+    tags: {
+        archv2: "",
+        tier: "production",
+    },
+    windowsProfile: {
+        adminPassword: `replacePassword1234$`,
+        adminUsername: "azureuser",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create/Update AAD Managed Cluster with EnableAzureRBAC
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedCluster = new AzureRM.ContainerService.Latest.ManagedCluster("managedCluster", new AzureRM.ContainerService.Latest.ManagedClusterArgs
+        {
+            AadProfile = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterAADProfileArgs
+            {
+                EnableAzureRBAC = true,
+                Managed = true,
+            },
+            AddonProfiles = ,
+            AgentPoolProfiles = 
+            {
+                new AzureRM.ContainerService.Latest.Inputs.ManagedClusterAgentPoolProfileArgs
+                {
+                    AvailabilityZones = 
+                    {
+                        "1",
+                        "2",
+                        "3",
+                    },
+                    Count = 3,
+                    EnableNodePublicIP = true,
+                    Mode = "System",
+                    Name = "nodepool1",
+                    OsType = "Linux",
+                    Type = "VirtualMachineScaleSets",
+                    VmSize = "Standard_DS1_v2",
+                },
+            },
+            AutoScalerProfile = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
+            {
+                ScaleDownDelayAfterAdd = "15m",
+                ScanInterval = "20s",
+            },
+            DiskEncryptionSetID = "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+            DnsPrefix = "dnsprefix1",
+            EnablePodSecurityPolicy = true,
+            EnableRBAC = true,
+            KubernetesVersion = "",
+            LinuxProfile = new AzureRM.ContainerService.Latest.Inputs.ContainerServiceLinuxProfileArgs
+            {
+                AdminUsername = "azureuser",
+                Ssh = new AzureRM.ContainerService.Latest.Inputs.ContainerServiceSshConfigurationArgs
+                {
+                    PublicKeys = 
+                    {
+                        new AzureRM.ContainerService.Latest.Inputs.ContainerServiceSshPublicKeyArgs
+                        {
+                            KeyData = "keydata",
+                        },
+                    },
+                },
+            },
+            Location = "location1",
+            NetworkProfile = new AzureRM.ContainerService.Latest.Inputs.ContainerServiceNetworkProfileArgs
+            {
+                LoadBalancerProfile = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileArgs
+                {
+                    ManagedOutboundIPs = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
+                    {
+                        Count = 2,
+                    },
+                },
+                LoadBalancerSku = "standard",
+                OutboundType = "loadBalancer",
+            },
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            ServicePrincipalProfile = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterServicePrincipalProfileArgs
+            {
+                ClientId = "clientid",
+                Secret = "secret",
+            },
+            Sku = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterSKUArgs
+            {
+                Name = "Basic",
+                Tier = "Free",
+            },
+            Tags = 
+            {
+                { "archv2", "" },
+                { "tier", "production" },
+            },
+            WindowsProfile = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterWindowsProfileArgs
+            {
+                AdminPassword = "replacePassword1234$",
+                AdminUsername = "azureuser",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_cluster = azurerm.containerservice.latest.ManagedCluster("managedCluster",
+    aad_profile={
+        "enableAzureRBAC": True,
+        "managed": True,
+    },
+    addon_profiles={},
+    agent_pool_profiles=[{
+        "availabilityZones": [
+            "1",
+            "2",
+            "3",
+        ],
+        "count": 3,
+        "enableNodePublicIP": True,
+        "mode": "System",
+        "name": "nodepool1",
+        "osType": "Linux",
+        "type": "VirtualMachineScaleSets",
+        "vmSize": "Standard_DS1_v2",
+    }],
+    auto_scaler_profile={
+        "scaleDownDelayAfterAdd": "15m",
+        "scanInterval": "20s",
+    },
+    disk_encryption_set_id="/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dns_prefix="dnsprefix1",
+    enable_pod_security_policy=True,
+    enable_rbac=True,
+    kubernetes_version="",
+    linux_profile={
+        "adminUsername": "azureuser",
+        "ssh": {
+            "publicKeys": [{
+                "keyData": "keydata",
+            }],
+        },
+    },
+    location="location1",
+    network_profile={
+        "loadBalancerProfile": {
+            "managedOutboundIPs": {
+                "count": 2,
+            },
+        },
+        "loadBalancerSku": "standard",
+        "outboundType": "loadBalancer",
+    },
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    service_principal_profile={
+        "clientId": "clientid",
+        "secret": "secret",
+    },
+    sku={
+        "name": "Basic",
+        "tier": "Free",
+    },
+    tags={
+        "archv2": "",
+        "tier": "production",
+    },
+    windows_profile={
+        "adminPassword": "replacePassword1234$",
+        "adminUsername": "azureuser",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedCluster = new azurerm.containerservice.latest.ManagedCluster("managedCluster", {
+    aadProfile: {
+        enableAzureRBAC: true,
+        managed: true,
+    },
+    addonProfiles: {},
+    agentPoolProfiles: [{
+        availabilityZones: [
+            "1",
+            "2",
+            "3",
+        ],
+        count: 3,
+        enableNodePublicIP: true,
+        mode: "System",
+        name: "nodepool1",
+        osType: "Linux",
+        type: "VirtualMachineScaleSets",
+        vmSize: "Standard_DS1_v2",
+    }],
+    autoScalerProfile: {
+        scaleDownDelayAfterAdd: "15m",
+        scanInterval: "20s",
+    },
+    diskEncryptionSetID: "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dnsPrefix: "dnsprefix1",
+    enablePodSecurityPolicy: true,
+    enableRBAC: true,
+    kubernetesVersion: "",
+    linuxProfile: {
+        adminUsername: "azureuser",
+        ssh: {
+            publicKeys: [{
+                keyData: "keydata",
+            }],
+        },
+    },
+    location: "location1",
+    networkProfile: {
+        loadBalancerProfile: {
+            managedOutboundIPs: {
+                count: 2,
+            },
+        },
+        loadBalancerSku: "standard",
+        outboundType: "loadBalancer",
+    },
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    servicePrincipalProfile: {
+        clientId: "clientid",
+        secret: "secret",
+    },
+    sku: {
+        name: "Basic",
+        tier: "Free",
+    },
+    tags: {
+        archv2: "",
+        tier: "production",
+    },
+    windowsProfile: {
+        adminPassword: `replacePassword1234$`,
+        adminUsername: "azureuser",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create/Update Managed Cluster
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedCluster = new AzureRM.ContainerService.Latest.ManagedCluster("managedCluster", new AzureRM.ContainerService.Latest.ManagedClusterArgs
+        {
+            AddonProfiles = ,
+            AgentPoolProfiles = 
+            {
+                new AzureRM.ContainerService.Latest.Inputs.ManagedClusterAgentPoolProfileArgs
+                {
+                    AvailabilityZones = 
+                    {
+                        "1",
+                        "2",
+                        "3",
+                    },
+                    Count = 3,
+                    EnableNodePublicIP = true,
+                    Mode = "System",
+                    Name = "nodepool1",
+                    OsType = "Linux",
+                    Type = "VirtualMachineScaleSets",
+                    VmSize = "Standard_DS1_v2",
+                },
+            },
+            AutoScalerProfile = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
+            {
+                BalanceSimilarNodeGroups = "true",
+                Expander = "most-pods",
+                NewPodScaleUpDelay = "1m",
+                ScaleDownDelayAfterAdd = "15m",
+                ScanInterval = "20s",
+                SkipNodesWithSystemPods = "false",
+            },
+            DiskEncryptionSetID = "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+            DnsPrefix = "dnsprefix1",
+            EnablePodSecurityPolicy = true,
+            EnableRBAC = true,
+            Identity = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterIdentityArgs
+            {
+                Type = "UserAssigned",
+            },
+            KubernetesVersion = "",
+            LinuxProfile = new AzureRM.ContainerService.Latest.Inputs.ContainerServiceLinuxProfileArgs
+            {
+                AdminUsername = "azureuser",
+                Ssh = new AzureRM.ContainerService.Latest.Inputs.ContainerServiceSshConfigurationArgs
+                {
+                    PublicKeys = 
+                    {
+                        new AzureRM.ContainerService.Latest.Inputs.ContainerServiceSshPublicKeyArgs
+                        {
+                            KeyData = "keydata",
+                        },
+                    },
+                },
+            },
+            Location = "location1",
+            NetworkProfile = new AzureRM.ContainerService.Latest.Inputs.ContainerServiceNetworkProfileArgs
+            {
+                LoadBalancerProfile = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileArgs
+                {
+                    ManagedOutboundIPs = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
+                    {
+                        Count = 2,
+                    },
+                },
+                LoadBalancerSku = "standard",
+                OutboundType = "loadBalancer",
+            },
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            ServicePrincipalProfile = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterServicePrincipalProfileArgs
+            {
+                ClientId = "clientid",
+                Secret = "secret",
+            },
+            Sku = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterSKUArgs
+            {
+                Name = "Basic",
+                Tier = "Free",
+            },
+            Tags = 
+            {
+                { "archv2", "" },
+                { "tier", "production" },
+            },
+            WindowsProfile = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterWindowsProfileArgs
+            {
+                AdminPassword = "replacePassword1234$",
+                AdminUsername = "azureuser",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_cluster = azurerm.containerservice.latest.ManagedCluster("managedCluster",
+    addon_profiles={},
+    agent_pool_profiles=[{
+        "availabilityZones": [
+            "1",
+            "2",
+            "3",
+        ],
+        "count": 3,
+        "enableNodePublicIP": True,
+        "mode": "System",
+        "name": "nodepool1",
+        "osType": "Linux",
+        "type": "VirtualMachineScaleSets",
+        "vmSize": "Standard_DS1_v2",
+    }],
+    auto_scaler_profile={
+        "balanceSimilarNodeGroups": "true",
+        "expander": "most-pods",
+        "newPodScaleUpDelay": "1m",
+        "scaleDownDelayAfterAdd": "15m",
+        "scanInterval": "20s",
+        "skipNodesWithSystemPods": "false",
+    },
+    disk_encryption_set_id="/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dns_prefix="dnsprefix1",
+    enable_pod_security_policy=True,
+    enable_rbac=True,
+    identity={
+        "type": "UserAssigned",
+    },
+    kubernetes_version="",
+    linux_profile={
+        "adminUsername": "azureuser",
+        "ssh": {
+            "publicKeys": [{
+                "keyData": "keydata",
+            }],
+        },
+    },
+    location="location1",
+    network_profile={
+        "loadBalancerProfile": {
+            "managedOutboundIPs": {
+                "count": 2,
+            },
+        },
+        "loadBalancerSku": "standard",
+        "outboundType": "loadBalancer",
+    },
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    service_principal_profile={
+        "clientId": "clientid",
+        "secret": "secret",
+    },
+    sku={
+        "name": "Basic",
+        "tier": "Free",
+    },
+    tags={
+        "archv2": "",
+        "tier": "production",
+    },
+    windows_profile={
+        "adminPassword": "replacePassword1234$",
+        "adminUsername": "azureuser",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedCluster = new azurerm.containerservice.latest.ManagedCluster("managedCluster", {
+    addonProfiles: {},
+    agentPoolProfiles: [{
+        availabilityZones: [
+            "1",
+            "2",
+            "3",
+        ],
+        count: 3,
+        enableNodePublicIP: true,
+        mode: "System",
+        name: "nodepool1",
+        osType: "Linux",
+        type: "VirtualMachineScaleSets",
+        vmSize: "Standard_DS1_v2",
+    }],
+    autoScalerProfile: {
+        balanceSimilarNodeGroups: "true",
+        expander: "most-pods",
+        newPodScaleUpDelay: "1m",
+        scaleDownDelayAfterAdd: "15m",
+        scanInterval: "20s",
+        skipNodesWithSystemPods: "false",
+    },
+    diskEncryptionSetID: "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dnsPrefix: "dnsprefix1",
+    enablePodSecurityPolicy: true,
+    enableRBAC: true,
+    identity: {
+        type: "UserAssigned",
+    },
+    kubernetesVersion: "",
+    linuxProfile: {
+        adminUsername: "azureuser",
+        ssh: {
+            publicKeys: [{
+                keyData: "keydata",
+            }],
+        },
+    },
+    location: "location1",
+    networkProfile: {
+        loadBalancerProfile: {
+            managedOutboundIPs: {
+                count: 2,
+            },
+        },
+        loadBalancerSku: "standard",
+        outboundType: "loadBalancer",
+    },
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    servicePrincipalProfile: {
+        clientId: "clientid",
+        secret: "secret",
+    },
+    sku: {
+        name: "Basic",
+        tier: "Free",
+    },
+    tags: {
+        archv2: "",
+        tier: "production",
+    },
+    windowsProfile: {
+        adminPassword: `replacePassword1234$`,
+        adminUsername: "azureuser",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create/Update Managed Cluster with EnableAHUB
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedCluster = new AzureRM.ContainerService.Latest.ManagedCluster("managedCluster", new AzureRM.ContainerService.Latest.ManagedClusterArgs
+        {
+            AddonProfiles = ,
+            AgentPoolProfiles = 
+            {
+                new AzureRM.ContainerService.Latest.Inputs.ManagedClusterAgentPoolProfileArgs
+                {
+                    AvailabilityZones = 
+                    {
+                        "1",
+                        "2",
+                        "3",
+                    },
+                    Count = 3,
+                    EnableNodePublicIP = true,
+                    Mode = "System",
+                    Name = "nodepool1",
+                    OsType = "Linux",
+                    Type = "VirtualMachineScaleSets",
+                    VmSize = "Standard_DS1_v2",
+                },
+            },
+            AutoScalerProfile = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
+            {
+                ScaleDownDelayAfterAdd = "15m",
+                ScanInterval = "20s",
+            },
+            DiskEncryptionSetID = "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+            DnsPrefix = "dnsprefix1",
+            EnablePodSecurityPolicy = true,
+            EnableRBAC = true,
+            Identity = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterIdentityArgs
+            {
+                Type = "UserAssigned",
+            },
+            KubernetesVersion = "",
+            LinuxProfile = new AzureRM.ContainerService.Latest.Inputs.ContainerServiceLinuxProfileArgs
+            {
+                AdminUsername = "azureuser",
+                Ssh = new AzureRM.ContainerService.Latest.Inputs.ContainerServiceSshConfigurationArgs
+                {
+                    PublicKeys = 
+                    {
+                        new AzureRM.ContainerService.Latest.Inputs.ContainerServiceSshPublicKeyArgs
+                        {
+                            KeyData = "keydata",
+                        },
+                    },
+                },
+            },
+            Location = "location1",
+            NetworkProfile = new AzureRM.ContainerService.Latest.Inputs.ContainerServiceNetworkProfileArgs
+            {
+                LoadBalancerProfile = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileArgs
+                {
+                    ManagedOutboundIPs = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
+                    {
+                        Count = 2,
+                    },
+                },
+                LoadBalancerSku = "standard",
+                OutboundType = "loadBalancer",
+            },
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            ServicePrincipalProfile = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterServicePrincipalProfileArgs
+            {
+                ClientId = "clientid",
+                Secret = "secret",
+            },
+            Sku = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterSKUArgs
+            {
+                Name = "Basic",
+                Tier = "Free",
+            },
+            Tags = 
+            {
+                { "archv2", "" },
+                { "tier", "production" },
+            },
+            WindowsProfile = new AzureRM.ContainerService.Latest.Inputs.ManagedClusterWindowsProfileArgs
+            {
+                AdminPassword = "replacePassword1234$",
+                AdminUsername = "azureuser",
+                LicenseType = "Windows_Server",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_cluster = azurerm.containerservice.latest.ManagedCluster("managedCluster",
+    addon_profiles={},
+    agent_pool_profiles=[{
+        "availabilityZones": [
+            "1",
+            "2",
+            "3",
+        ],
+        "count": 3,
+        "enableNodePublicIP": True,
+        "mode": "System",
+        "name": "nodepool1",
+        "osType": "Linux",
+        "type": "VirtualMachineScaleSets",
+        "vmSize": "Standard_DS1_v2",
+    }],
+    auto_scaler_profile={
+        "scaleDownDelayAfterAdd": "15m",
+        "scanInterval": "20s",
+    },
+    disk_encryption_set_id="/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dns_prefix="dnsprefix1",
+    enable_pod_security_policy=True,
+    enable_rbac=True,
+    identity={
+        "type": "UserAssigned",
+    },
+    kubernetes_version="",
+    linux_profile={
+        "adminUsername": "azureuser",
+        "ssh": {
+            "publicKeys": [{
+                "keyData": "keydata",
+            }],
+        },
+    },
+    location="location1",
+    network_profile={
+        "loadBalancerProfile": {
+            "managedOutboundIPs": {
+                "count": 2,
+            },
+        },
+        "loadBalancerSku": "standard",
+        "outboundType": "loadBalancer",
+    },
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    service_principal_profile={
+        "clientId": "clientid",
+        "secret": "secret",
+    },
+    sku={
+        "name": "Basic",
+        "tier": "Free",
+    },
+    tags={
+        "archv2": "",
+        "tier": "production",
+    },
+    windows_profile={
+        "adminPassword": "replacePassword1234$",
+        "adminUsername": "azureuser",
+        "licenseType": "Windows_Server",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedCluster = new azurerm.containerservice.latest.ManagedCluster("managedCluster", {
+    addonProfiles: {},
+    agentPoolProfiles: [{
+        availabilityZones: [
+            "1",
+            "2",
+            "3",
+        ],
+        count: 3,
+        enableNodePublicIP: true,
+        mode: "System",
+        name: "nodepool1",
+        osType: "Linux",
+        type: "VirtualMachineScaleSets",
+        vmSize: "Standard_DS1_v2",
+    }],
+    autoScalerProfile: {
+        scaleDownDelayAfterAdd: "15m",
+        scanInterval: "20s",
+    },
+    diskEncryptionSetID: "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dnsPrefix: "dnsprefix1",
+    enablePodSecurityPolicy: true,
+    enableRBAC: true,
+    identity: {
+        type: "UserAssigned",
+    },
+    kubernetesVersion: "",
+    linuxProfile: {
+        adminUsername: "azureuser",
+        ssh: {
+            publicKeys: [{
+                keyData: "keydata",
+            }],
+        },
+    },
+    location: "location1",
+    networkProfile: {
+        loadBalancerProfile: {
+            managedOutboundIPs: {
+                count: 2,
+            },
+        },
+        loadBalancerSku: "standard",
+        outboundType: "loadBalancer",
+    },
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    servicePrincipalProfile: {
+        clientId: "clientid",
+        secret: "secret",
+    },
+    sku: {
+        name: "Basic",
+        tier: "Free",
+    },
+    tags: {
+        archv2: "",
+        tier: "production",
+    },
+    windowsProfile: {
+        adminPassword: `replacePassword1234$`,
+        adminUsername: "azureuser",
+        licenseType: "Windows_Server",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagedCluster Resource {#create}

@@ -12,6 +12,70 @@ meta_desc: "Explore the Site resource of the offazure/latest module, including e
 
 Site REST Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create VMware site
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var site = new AzureRM.OffAzure.Latest.Site("site", new AzureRM.OffAzure.Latest.SiteArgs
+        {
+            Location = "eastus",
+            ResourceGroupName = "pajindTest",
+            SiteName = "appliance1e39site",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+site = azurerm.offazure.latest.Site("site",
+    location="eastus",
+    resource_group_name="pajindTest",
+    site_name="appliance1e39site")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const site = new azurerm.offazure.latest.Site("site", {
+    location: "eastus",
+    resourceGroupName: "pajindTest",
+    siteName: "appliance1e39site",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Site Resource {#create}

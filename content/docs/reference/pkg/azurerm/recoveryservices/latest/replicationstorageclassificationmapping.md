@@ -12,6 +12,76 @@ meta_desc: "Explore the ReplicationStorageClassificationMapping resource of the 
 
 Storage mapping object.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create storage classification mapping.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var replicationStorageClassificationMapping = new AzureRM.RecoveryServices.Latest.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping", new AzureRM.RecoveryServices.Latest.ReplicationStorageClassificationMappingArgs
+        {
+            FabricName = "2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0",
+            ResourceGroupName = "resourceGroupPS1",
+            ResourceName = "vault1",
+            StorageClassificationMappingName = "testStorageMapping",
+            StorageClassificationName = "8891569e-aaef-4a46-a4a0-78c14f2d7b09",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+replication_storage_classification_mapping = azurerm.recoveryservices.latest.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping",
+    fabric_name="2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0",
+    resource_group_name="resourceGroupPS1",
+    resource_name="vault1",
+    storage_classification_mapping_name="testStorageMapping",
+    storage_classification_name="8891569e-aaef-4a46-a4a0-78c14f2d7b09")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const replicationStorageClassificationMapping = new azurerm.recoveryservices.latest.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping", {
+    fabricName: "2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0",
+    resourceGroupName: "resourceGroupPS1",
+    resourceName: "vault1",
+    storageClassificationMappingName: "testStorageMapping",
+    storageClassificationName: "8891569e-aaef-4a46-a4a0-78c14f2d7b09",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ReplicationStorageClassificationMapping Resource {#create}

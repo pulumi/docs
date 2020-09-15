@@ -12,6 +12,67 @@ meta_desc: "Explore the RoleAssignment resource of the authorization/latest modu
 
 Role Assignments
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### GetConfigurations
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var roleAssignment = new AzureRM.Authorization.Latest.RoleAssignment("roleAssignment", new AzureRM.Authorization.Latest.RoleAssignmentArgs
+        {
+            RoleAssignmentName = "roleAssignmentName",
+            Scope = "scope",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+role_assignment = azurerm.authorization.latest.RoleAssignment("roleAssignment",
+    role_assignment_name="roleAssignmentName",
+    scope="scope")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const roleAssignment = new azurerm.authorization.latest.RoleAssignment("roleAssignment", {
+    roleAssignmentName: "roleAssignmentName",
+    scope: "scope",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RoleAssignment Resource {#create}

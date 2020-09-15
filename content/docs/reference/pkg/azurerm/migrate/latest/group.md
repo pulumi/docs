@@ -12,6 +12,73 @@ meta_desc: "Explore the Group resource of the migrate/latest module, including e
 
 A group created in a Migration project.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Groups_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @group = new AzureRM.Migrate.Latest.Group("group", new AzureRM.Migrate.Latest.GroupArgs
+        {
+            ETag = "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
+            GroupName = "Group2",
+            ProjectName = "abgoyalWEselfhostb72bproject",
+            ResourceGroupName = "abgoyal-westEurope",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+group = azurerm.migrate.latest.Group("group",
+    e_tag="\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
+    group_name="Group2",
+    project_name="abgoyalWEselfhostb72bproject",
+    resource_group_name="abgoyal-westEurope")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const group = new azurerm.migrate.latest.Group("group", {
+    eTag: "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
+    groupName: "Group2",
+    projectName: "abgoyalWEselfhostb72bproject",
+    resourceGroupName: "abgoyal-westEurope",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Group Resource {#create}

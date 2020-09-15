@@ -12,6 +12,96 @@ meta_desc: "Explore the Namespace resource of the notificationhubs/latest module
 
 Description of a Namespace resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### NameSpaceCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @namespace = new AzureRM.NotificationHubs.Latest.Namespace("namespace", new AzureRM.NotificationHubs.Latest.NamespaceArgs
+        {
+            Location = "South Central US",
+            NamespaceName = "nh-sdk-ns",
+            ResourceGroupName = "5ktrial",
+            Sku = new AzureRM.NotificationHubs.Latest.Inputs.SkuArgs
+            {
+                Name = "Standard",
+                Tier = "Standard",
+            },
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+namespace = azurerm.notificationhubs.latest.Namespace("namespace",
+    location="South Central US",
+    namespace_name="nh-sdk-ns",
+    resource_group_name="5ktrial",
+    sku={
+        "name": "Standard",
+        "tier": "Standard",
+    },
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const namespace = new azurerm.notificationhubs.latest.Namespace("namespace", {
+    location: "South Central US",
+    namespaceName: "nh-sdk-ns",
+    resourceGroupName: "5ktrial",
+    sku: {
+        name: "Standard",
+        tier: "Standard",
+    },
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Namespace Resource {#create}

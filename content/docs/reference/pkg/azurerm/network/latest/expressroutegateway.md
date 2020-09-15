@@ -12,6 +12,97 @@ meta_desc: "Explore the ExpressRouteGateway resource of the network/latest modul
 
 ExpressRoute gateway resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ExpressRouteGatewayCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var expressRouteGateway = new AzureRM.Network.Latest.ExpressRouteGateway("expressRouteGateway", new AzureRM.Network.Latest.ExpressRouteGatewayArgs
+        {
+            AutoScaleConfiguration = new AzureRM.Network.Latest.Inputs.ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs
+            {
+                Bounds = new AzureRM.Network.Latest.Inputs.ExpressRouteGatewayPropertiesBoundsArgs
+                {
+                    Min = 3,
+                },
+            },
+            ExpressRouteGatewayName = "gateway-2",
+            Location = "westus",
+            ResourceGroupName = "resourceGroupName",
+            VirtualHub = new AzureRM.Network.Latest.Inputs.VirtualHubIdArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/resourceGroupId/providers/Microsoft.Network/virtualHubs/virtualHubName",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+express_route_gateway = azurerm.network.latest.ExpressRouteGateway("expressRouteGateway",
+    auto_scale_configuration={
+        "bounds": {
+            "min": 3,
+        },
+    },
+    express_route_gateway_name="gateway-2",
+    location="westus",
+    resource_group_name="resourceGroupName",
+    virtual_hub={
+        "id": "/subscriptions/subid/resourceGroups/resourceGroupId/providers/Microsoft.Network/virtualHubs/virtualHubName",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const expressRouteGateway = new azurerm.network.latest.ExpressRouteGateway("expressRouteGateway", {
+    autoScaleConfiguration: {
+        bounds: {
+            min: 3,
+        },
+    },
+    expressRouteGatewayName: "gateway-2",
+    location: "westus",
+    resourceGroupName: "resourceGroupName",
+    virtualHub: {
+        id: "/subscriptions/subid/resourceGroups/resourceGroupId/providers/Microsoft.Network/virtualHubs/virtualHubName",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ExpressRouteGateway Resource {#create}

@@ -12,6 +12,79 @@ meta_desc: "Explore the ServerAdministrator resource of the dbformysql/v20171201
 
 Represents a and external administrator to be created.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ServerAdministratorCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serverAdministrator = new AzureRM.DBforMySQL.V20171201Preview.ServerAdministrator("serverAdministrator", new AzureRM.DBforMySQL.V20171201Preview.ServerAdministratorArgs
+        {
+            AdministratorType = "ActiveDirectory",
+            Login = "bob@contoso.com",
+            ResourceGroupName = "testrg",
+            ServerName = "mysqltestsvc4",
+            Sid = "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+            TenantId = "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server_administrator = azurerm.dbformysql.v20171201preview.ServerAdministrator("serverAdministrator",
+    administrator_type="ActiveDirectory",
+    login="bob@contoso.com",
+    resource_group_name="testrg",
+    server_name="mysqltestsvc4",
+    sid="c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+    tenant_id="c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const serverAdministrator = new azurerm.dbformysql.v20171201preview.ServerAdministrator("serverAdministrator", {
+    administratorType: "ActiveDirectory",
+    login: "bob@contoso.com",
+    resourceGroupName: "testrg",
+    serverName: "mysqltestsvc4",
+    sid: "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+    tenantId: "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServerAdministrator Resource {#create}

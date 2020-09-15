@@ -12,6 +12,98 @@ meta_desc: "Explore the VirtualMachineScaleSetVMExtension resource of the comput
 
 Describes a Virtual Machine Extension.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create VirtualMachineScaleSet VM extension.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSetVMExtension = new AzureRM.Compute.Latest.VirtualMachineScaleSetVMExtension("virtualMachineScaleSetVMExtension", new AzureRM.Compute.Latest.VirtualMachineScaleSetVMExtensionArgs
+        {
+            AutoUpgradeMinorVersion = true,
+            InstanceId = "0",
+            Location = "westus",
+            Publisher = "extPublisher",
+            ResourceGroupName = "myResourceGroup",
+            Settings = 
+            {
+                { "UserName", "xyz@microsoft.com" },
+            },
+            Type = "extType",
+            TypeHandlerVersion = "1.2",
+            VmExtensionName = "myVMExtension",
+            VmScaleSetName = "myvmScaleSet",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine_scale_set_vm_extension = azurerm.compute.latest.VirtualMachineScaleSetVMExtension("virtualMachineScaleSetVMExtension",
+    auto_upgrade_minor_version=True,
+    instance_id="0",
+    location="westus",
+    publisher="extPublisher",
+    resource_group_name="myResourceGroup",
+    settings={
+        "UserName": "xyz@microsoft.com",
+    },
+    type="extType",
+    type_handler_version="1.2",
+    vm_extension_name="myVMExtension",
+    vm_scale_set_name="myvmScaleSet")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachineScaleSetVMExtension = new azurerm.compute.latest.VirtualMachineScaleSetVMExtension("virtualMachineScaleSetVMExtension", {
+    autoUpgradeMinorVersion: true,
+    instanceId: "0",
+    location: "westus",
+    publisher: "extPublisher",
+    resourceGroupName: "myResourceGroup",
+    settings: {
+        UserName: "xyz@microsoft.com",
+    },
+    type: "extType",
+    typeHandlerVersion: "1.2",
+    vmExtensionName: "myVMExtension",
+    vmScaleSetName: "myvmScaleSet",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualMachineScaleSetVMExtension Resource {#create}

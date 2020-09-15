@@ -12,6 +12,82 @@ meta_desc: "Explore the ApiTagDescription resource of the apimanagement/latest m
 
 Contract details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateApiTagDescription
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiTagDescription = new AzureRM.ApiManagement.Latest.ApiTagDescription("apiTagDescription", new AzureRM.ApiManagement.Latest.ApiTagDescriptionArgs
+        {
+            ApiId = "5931a75ae4bbd512a88c680b",
+            Description = "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API",
+            ExternalDocsDescription = "Description of the external docs resource",
+            ExternalDocsUrl = "http://some.url/additionaldoc",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            TagDescriptionId = "tagId1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api_tag_description = azurerm.apimanagement.latest.ApiTagDescription("apiTagDescription",
+    api_id="5931a75ae4bbd512a88c680b",
+    description="Some description that will be displayed for operation's tag if the tag is assigned to operation of the API",
+    external_docs_description="Description of the external docs resource",
+    external_docs_url="http://some.url/additionaldoc",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    tag_description_id="tagId1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const apiTagDescription = new azurerm.apimanagement.latest.ApiTagDescription("apiTagDescription", {
+    apiId: "5931a75ae4bbd512a88c680b",
+    description: "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API",
+    externalDocsDescription: "Description of the external docs resource",
+    externalDocsUrl: "http://some.url/additionaldoc",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    tagDescriptionId: "tagId1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApiTagDescription Resource {#create}

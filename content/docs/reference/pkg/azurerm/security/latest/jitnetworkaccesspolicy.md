@@ -11,6 +11,185 @@ meta_desc: "Explore the JitNetworkAccessPolicy resource of the security/latest m
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create JIT network access policy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var jitNetworkAccessPolicy = new AzureRM.Security.Latest.JitNetworkAccessPolicy("jitNetworkAccessPolicy", new AzureRM.Security.Latest.JitNetworkAccessPolicyArgs
+        {
+            AscLocation = "westeurope",
+            JitNetworkAccessPolicyName = "default",
+            Kind = "Basic",
+            Requests = 
+            {
+                new AzureRM.Security.Latest.Inputs.JitNetworkAccessRequestArgs
+                {
+                    Requestor = "barbara@contoso.com",
+                    StartTimeUtc = "2018-05-17T08:06:45.5691611Z",
+                    VirtualMachines = 
+                    {
+                        new AzureRM.Security.Latest.Inputs.JitNetworkAccessRequestVirtualMachineArgs
+                        {
+                            Id = "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg1/providers/Microsoft.Compute/virtualMachines/vm1",
+                            Ports = 
+                            {
+                                new AzureRM.Security.Latest.Inputs.JitNetworkAccessRequestPortArgs
+                                {
+                                    AllowedSourceAddressPrefix = "192.127.0.2",
+                                    EndTimeUtc = "2018-05-17T09:06:45.5691611Z",
+                                    Number = 3389,
+                                    Status = "Initiated",
+                                    StatusReason = "UserRequested",
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+            ResourceGroupName = "myRg1",
+            VirtualMachines = 
+            {
+                new AzureRM.Security.Latest.Inputs.JitNetworkAccessPolicyVirtualMachineArgs
+                {
+                    Id = "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg1/providers/Microsoft.Compute/virtualMachines/vm1",
+                    Ports = 
+                    {
+                        new AzureRM.Security.Latest.Inputs.JitNetworkAccessPortRuleArgs
+                        {
+                            AllowedSourceAddressPrefix = "*",
+                            MaxRequestAccessDuration = "PT3H",
+                            Number = 22,
+                            Protocol = "*",
+                        },
+                        new AzureRM.Security.Latest.Inputs.JitNetworkAccessPortRuleArgs
+                        {
+                            AllowedSourceAddressPrefix = "*",
+                            MaxRequestAccessDuration = "PT3H",
+                            Number = 3389,
+                            Protocol = "*",
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+jit_network_access_policy = azurerm.security.latest.JitNetworkAccessPolicy("jitNetworkAccessPolicy",
+    asc_location="westeurope",
+    jit_network_access_policy_name="default",
+    kind="Basic",
+    requests=[{
+        "requestor": "barbara@contoso.com",
+        "startTimeUtc": "2018-05-17T08:06:45.5691611Z",
+        "virtualMachines": [{
+            "id": "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg1/providers/Microsoft.Compute/virtualMachines/vm1",
+            "ports": [{
+                "allowedSourceAddressPrefix": "192.127.0.2",
+                "endTimeUtc": "2018-05-17T09:06:45.5691611Z",
+                "number": 3389,
+                "status": "Initiated",
+                "statusReason": "UserRequested",
+            }],
+        }],
+    }],
+    resource_group_name="myRg1",
+    virtual_machines=[{
+        "id": "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg1/providers/Microsoft.Compute/virtualMachines/vm1",
+        "ports": [
+            {
+                "allowedSourceAddressPrefix": "*",
+                "maxRequestAccessDuration": "PT3H",
+                "number": 22,
+                "protocol": "*",
+            },
+            {
+                "allowedSourceAddressPrefix": "*",
+                "maxRequestAccessDuration": "PT3H",
+                "number": 3389,
+                "protocol": "*",
+            },
+        ],
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const jitNetworkAccessPolicy = new azurerm.security.latest.JitNetworkAccessPolicy("jitNetworkAccessPolicy", {
+    ascLocation: "westeurope",
+    jitNetworkAccessPolicyName: "default",
+    kind: "Basic",
+    requests: [{
+        requestor: "barbara@contoso.com",
+        startTimeUtc: "2018-05-17T08:06:45.5691611Z",
+        virtualMachines: [{
+            id: "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg1/providers/Microsoft.Compute/virtualMachines/vm1",
+            ports: [{
+                allowedSourceAddressPrefix: "192.127.0.2",
+                endTimeUtc: "2018-05-17T09:06:45.5691611Z",
+                number: 3389,
+                status: "Initiated",
+                statusReason: "UserRequested",
+            }],
+        }],
+    }],
+    resourceGroupName: "myRg1",
+    virtualMachines: [{
+        id: "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg1/providers/Microsoft.Compute/virtualMachines/vm1",
+        ports: [
+            {
+                allowedSourceAddressPrefix: "*",
+                maxRequestAccessDuration: "PT3H",
+                number: 22,
+                protocol: "*",
+            },
+            {
+                allowedSourceAddressPrefix: "*",
+                maxRequestAccessDuration: "PT3H",
+                number: 3389,
+                protocol: "*",
+            },
+        ],
+    }],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a JitNetworkAccessPolicy Resource {#create}

@@ -12,6 +12,436 @@ meta_desc: "Explore the ManagedCluster resource of the servicefabric/v20200101pr
 
 The manged cluster resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Put a cluster with maximum parameters
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedCluster = new AzureRM.ServiceFabric.V20200101Preview.ManagedCluster("managedCluster", new AzureRM.ServiceFabric.V20200101Preview.ManagedClusterArgs
+        {
+            AdminPassword = "{vm-password}",
+            AdminUserName = "vmadmin",
+            ClientConnectionPort = 19000,
+            ClusterCodeVersion = "7.1.168.9494",
+            ClusterName = "myCluster",
+            ClusterUpgradeDescription = new AzureRM.ServiceFabric.V20200101Preview.Inputs.ClusterUpgradePolicyArgs
+            {
+                DeltaHealthPolicy = new AzureRM.ServiceFabric.V20200101Preview.Inputs.ClusterUpgradeDeltaHealthPolicyArgs
+                {
+                    ApplicationDeltaHealthPolicies = 
+                    {
+                        { "fabric:/myApp1", new AzureRM.ServiceFabric.V20200101Preview.Inputs.ApplicationDeltaHealthPolicyArgs
+                        {
+                            DefaultServiceTypeDeltaHealthPolicy = new AzureRM.ServiceFabric.V20200101Preview.Inputs.ServiceTypeDeltaHealthPolicyArgs
+                            {
+                                MaxPercentDeltaUnhealthyServices = 0,
+                            },
+                            ServiceTypeDeltaHealthPolicies = 
+                            {
+                                { "myServiceType1", new AzureRM.ServiceFabric.V20200101Preview.Inputs.ServiceTypeDeltaHealthPolicyArgs
+                                {
+                                    MaxPercentDeltaUnhealthyServices = 0,
+                                } },
+                            },
+                        } },
+                    },
+                    MaxPercentDeltaUnhealthyApplications = 0,
+                    MaxPercentDeltaUnhealthyNodes = 0,
+                    MaxPercentUpgradeDomainDeltaUnhealthyNodes = 0,
+                },
+                ForceRestart = false,
+                HealthCheckRetryTimeout = "00:05:00",
+                HealthCheckStableDuration = "00:00:30",
+                HealthCheckWaitDuration = "00:00:30",
+                HealthPolicy = new AzureRM.ServiceFabric.V20200101Preview.Inputs.ClusterHealthPolicyArgs
+                {
+                    ApplicationHealthPolicies = 
+                    {
+                        { "fabric:/myApp1", new AzureRM.ServiceFabric.V20200101Preview.Inputs.ApplicationHealthPolicyArgs
+                        {
+                            DefaultServiceTypeHealthPolicy = new AzureRM.ServiceFabric.V20200101Preview.Inputs.ServiceTypeHealthPolicyArgs
+                            {
+                                MaxPercentUnhealthyServices = 0,
+                            },
+                            ServiceTypeHealthPolicies = 
+                            {
+                                { "myServiceType1", new AzureRM.ServiceFabric.V20200101Preview.Inputs.ServiceTypeHealthPolicyArgs
+                                {
+                                    MaxPercentUnhealthyServices = 100,
+                                } },
+                            },
+                        } },
+                    },
+                    MaxPercentUnhealthyApplications = 0,
+                    MaxPercentUnhealthyNodes = 0,
+                },
+                UpgradeDomainTimeout = "00:15:00",
+                UpgradeReplicaSetCheckTimeout = "00:10:00",
+                UpgradeTimeout = "01:00:00",
+            },
+            ClusterUpgradeMode = "Manual",
+            DnsName = "myCluster",
+            FabricSettings = 
+            {
+                new AzureRM.ServiceFabric.V20200101Preview.Inputs.SettingsSectionDescriptionArgs
+                {
+                    Name = "ManagedIdentityTokenService",
+                    Parameters = 
+                    {
+                        new AzureRM.ServiceFabric.V20200101Preview.Inputs.SettingsParameterDescriptionArgs
+                        {
+                            Name = "IsEnabled",
+                            Value = "true",
+                        },
+                    },
+                },
+            },
+            HttpGatewayConnectionPort = 19080,
+            LoadBalancingRules = 
+            {
+                new AzureRM.ServiceFabric.V20200101Preview.Inputs.LoadBalancingRuleArgs
+                {
+                    BackendPort = 80,
+                    FrontendPort = 80,
+                    ProbeProtocol = "http",
+                    Protocol = "http",
+                },
+                new AzureRM.ServiceFabric.V20200101Preview.Inputs.LoadBalancingRuleArgs
+                {
+                    BackendPort = 443,
+                    FrontendPort = 443,
+                    ProbeProtocol = "http",
+                    Protocol = "http",
+                },
+                new AzureRM.ServiceFabric.V20200101Preview.Inputs.LoadBalancingRuleArgs
+                {
+                    BackendPort = 10000,
+                    FrontendPort = 10000,
+                    ProbeProtocol = "http",
+                    Protocol = "tcp",
+                },
+            },
+            Location = "eastus",
+            ResourceGroupName = "resRg",
+            Sku = new AzureRM.ServiceFabric.V20200101Preview.Inputs.SkuArgs
+            {
+                Name = "Basic",
+            },
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_cluster = azurerm.servicefabric.v20200101preview.ManagedCluster("managedCluster",
+    admin_password="{vm-password}",
+    admin_user_name="vmadmin",
+    client_connection_port=19000,
+    cluster_code_version="7.1.168.9494",
+    cluster_name="myCluster",
+    cluster_upgrade_description={
+        "deltaHealthPolicy": {
+            "applicationDeltaHealthPolicies": {
+                "fabric:/myApp1": {
+                    "defaultServiceTypeDeltaHealthPolicy": {
+                        "maxPercentDeltaUnhealthyServices": 0,
+                    },
+                    "serviceTypeDeltaHealthPolicies": {
+                        "myServiceType1": {
+                            "maxPercentDeltaUnhealthyServices": 0,
+                        },
+                    },
+                },
+            },
+            "maxPercentDeltaUnhealthyApplications": 0,
+            "maxPercentDeltaUnhealthyNodes": 0,
+            "maxPercentUpgradeDomainDeltaUnhealthyNodes": 0,
+        },
+        "forceRestart": False,
+        "healthCheckRetryTimeout": "00:05:00",
+        "healthCheckStableDuration": "00:00:30",
+        "healthCheckWaitDuration": "00:00:30",
+        "healthPolicy": {
+            "applicationHealthPolicies": {
+                "fabric:/myApp1": {
+                    "defaultServiceTypeHealthPolicy": {
+                        "maxPercentUnhealthyServices": 0,
+                    },
+                    "serviceTypeHealthPolicies": {
+                        "myServiceType1": {
+                            "maxPercentUnhealthyServices": 100,
+                        },
+                    },
+                },
+            },
+            "maxPercentUnhealthyApplications": 0,
+            "maxPercentUnhealthyNodes": 0,
+        },
+        "upgradeDomainTimeout": "00:15:00",
+        "upgradeReplicaSetCheckTimeout": "00:10:00",
+        "upgradeTimeout": "01:00:00",
+    },
+    cluster_upgrade_mode="Manual",
+    dns_name="myCluster",
+    fabric_settings=[{
+        "name": "ManagedIdentityTokenService",
+        "parameters": [{
+            "name": "IsEnabled",
+            "value": "true",
+        }],
+    }],
+    http_gateway_connection_port=19080,
+    load_balancing_rules=[
+        {
+            "backendPort": 80,
+            "frontendPort": 80,
+            "probeProtocol": "http",
+            "protocol": "http",
+        },
+        {
+            "backendPort": 443,
+            "frontendPort": 443,
+            "probeProtocol": "http",
+            "protocol": "http",
+        },
+        {
+            "backendPort": 10000,
+            "frontendPort": 10000,
+            "probeProtocol": "http",
+            "protocol": "tcp",
+        },
+    ],
+    location="eastus",
+    resource_group_name="resRg",
+    sku={
+        "name": "Basic",
+    },
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedCluster = new azurerm.servicefabric.v20200101preview.ManagedCluster("managedCluster", {
+    adminPassword: "{vm-password}",
+    adminUserName: "vmadmin",
+    clientConnectionPort: 19000,
+    clusterCodeVersion: "7.1.168.9494",
+    clusterName: "myCluster",
+    clusterUpgradeDescription: {
+        deltaHealthPolicy: {
+            applicationDeltaHealthPolicies: {
+                "fabric:/myApp1": {
+                    defaultServiceTypeDeltaHealthPolicy: {
+                        maxPercentDeltaUnhealthyServices: 0,
+                    },
+                    serviceTypeDeltaHealthPolicies: {
+                        myServiceType1: {
+                            maxPercentDeltaUnhealthyServices: 0,
+                        },
+                    },
+                },
+            },
+            maxPercentDeltaUnhealthyApplications: 0,
+            maxPercentDeltaUnhealthyNodes: 0,
+            maxPercentUpgradeDomainDeltaUnhealthyNodes: 0,
+        },
+        forceRestart: false,
+        healthCheckRetryTimeout: "00:05:00",
+        healthCheckStableDuration: "00:00:30",
+        healthCheckWaitDuration: "00:00:30",
+        healthPolicy: {
+            applicationHealthPolicies: {
+                "fabric:/myApp1": {
+                    defaultServiceTypeHealthPolicy: {
+                        maxPercentUnhealthyServices: 0,
+                    },
+                    serviceTypeHealthPolicies: {
+                        myServiceType1: {
+                            maxPercentUnhealthyServices: 100,
+                        },
+                    },
+                },
+            },
+            maxPercentUnhealthyApplications: 0,
+            maxPercentUnhealthyNodes: 0,
+        },
+        upgradeDomainTimeout: "00:15:00",
+        upgradeReplicaSetCheckTimeout: "00:10:00",
+        upgradeTimeout: "01:00:00",
+    },
+    clusterUpgradeMode: "Manual",
+    dnsName: "myCluster",
+    fabricSettings: [{
+        name: "ManagedIdentityTokenService",
+        parameters: [{
+            name: "IsEnabled",
+            value: "true",
+        }],
+    }],
+    httpGatewayConnectionPort: 19080,
+    loadBalancingRules: [
+        {
+            backendPort: 80,
+            frontendPort: 80,
+            probeProtocol: "http",
+            protocol: "http",
+        },
+        {
+            backendPort: 443,
+            frontendPort: 443,
+            probeProtocol: "http",
+            protocol: "http",
+        },
+        {
+            backendPort: 10000,
+            frontendPort: 10000,
+            probeProtocol: "http",
+            protocol: "tcp",
+        },
+    ],
+    location: "eastus",
+    resourceGroupName: "resRg",
+    sku: {
+        name: "Basic",
+    },
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+### Put a cluster with minimum parameters
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedCluster = new AzureRM.ServiceFabric.V20200101Preview.ManagedCluster("managedCluster", new AzureRM.ServiceFabric.V20200101Preview.ManagedClusterArgs
+        {
+            AdminPassword = "{vm-password}",
+            AdminUserName = "vmadmin",
+            ClusterCodeVersion = "7.1.168.9494",
+            ClusterName = "myCluster",
+            DnsName = "myCluster",
+            FabricSettings = 
+            {
+                new AzureRM.ServiceFabric.V20200101Preview.Inputs.SettingsSectionDescriptionArgs
+                {
+                    Name = "ManagedIdentityTokenService",
+                    Parameters = 
+                    {
+                        new AzureRM.ServiceFabric.V20200101Preview.Inputs.SettingsParameterDescriptionArgs
+                        {
+                            Name = "IsEnabled",
+                            Value = "true",
+                        },
+                    },
+                },
+            },
+            Location = "eastus",
+            ResourceGroupName = "resRg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_cluster = azurerm.servicefabric.v20200101preview.ManagedCluster("managedCluster",
+    admin_password="{vm-password}",
+    admin_user_name="vmadmin",
+    cluster_code_version="7.1.168.9494",
+    cluster_name="myCluster",
+    dns_name="myCluster",
+    fabric_settings=[{
+        "name": "ManagedIdentityTokenService",
+        "parameters": [{
+            "name": "IsEnabled",
+            "value": "true",
+        }],
+    }],
+    location="eastus",
+    resource_group_name="resRg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedCluster = new azurerm.servicefabric.v20200101preview.ManagedCluster("managedCluster", {
+    adminPassword: "{vm-password}",
+    adminUserName: "vmadmin",
+    clusterCodeVersion: "7.1.168.9494",
+    clusterName: "myCluster",
+    dnsName: "myCluster",
+    fabricSettings: [{
+        name: "ManagedIdentityTokenService",
+        parameters: [{
+            name: "IsEnabled",
+            value: "true",
+        }],
+    }],
+    location: "eastus",
+    resourceGroupName: "resRg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagedCluster Resource {#create}

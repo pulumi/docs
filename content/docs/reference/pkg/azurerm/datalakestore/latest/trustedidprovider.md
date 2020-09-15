@@ -12,6 +12,73 @@ meta_desc: "Explore the TrustedIdProvider resource of the datalakestore/latest m
 
 Data Lake Store trusted identity provider information.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates the specified trusted identity provider. During update, the trusted identity provider with the specified name will be replaced with this new provider
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var trustedIdProvider = new AzureRM.DataLakeStore.Latest.TrustedIdProvider("trustedIdProvider", new AzureRM.DataLakeStore.Latest.TrustedIdProviderArgs
+        {
+            AccountName = "contosoadla",
+            IdProvider = "https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
+            ResourceGroupName = "contosorg",
+            TrustedIdProviderName = "test_trusted_id_provider_name",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+trusted_id_provider = azurerm.datalakestore.latest.TrustedIdProvider("trustedIdProvider",
+    account_name="contosoadla",
+    id_provider="https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
+    resource_group_name="contosorg",
+    trusted_id_provider_name="test_trusted_id_provider_name")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const trustedIdProvider = new azurerm.datalakestore.latest.TrustedIdProvider("trustedIdProvider", {
+    accountName: "contosoadla",
+    idProvider: "https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
+    resourceGroupName: "contosorg",
+    trustedIdProviderName: "test_trusted_id_provider_name",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TrustedIdProvider Resource {#create}

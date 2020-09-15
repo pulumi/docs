@@ -12,6 +12,76 @@ meta_desc: "Explore the IpFirewallRule resource of the synapse/v20190601preview 
 
 IP firewall rule
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create an IP firewall rule
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ipFirewallRule = new AzureRM.Synapse.V20190601Preview.IpFirewallRule("ipFirewallRule", new AzureRM.Synapse.V20190601Preview.IpFirewallRuleArgs
+        {
+            EndIpAddress = "10.0.0.254",
+            ResourceGroupName = "ExampleResourceGroup",
+            RuleName = "ExampleIpFirewallRule",
+            StartIpAddress = "10.0.0.0",
+            WorkspaceName = "ExampleWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+ip_firewall_rule = azurerm.synapse.v20190601preview.IpFirewallRule("ipFirewallRule",
+    end_ip_address="10.0.0.254",
+    resource_group_name="ExampleResourceGroup",
+    rule_name="ExampleIpFirewallRule",
+    start_ip_address="10.0.0.0",
+    workspace_name="ExampleWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const ipFirewallRule = new azurerm.synapse.v20190601preview.IpFirewallRule("ipFirewallRule", {
+    endIpAddress: "10.0.0.254",
+    resourceGroupName: "ExampleResourceGroup",
+    ruleName: "ExampleIpFirewallRule",
+    startIpAddress: "10.0.0.0",
+    workspaceName: "ExampleWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IpFirewallRule Resource {#create}

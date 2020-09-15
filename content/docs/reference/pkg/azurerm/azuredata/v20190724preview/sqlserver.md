@@ -12,6 +12,85 @@ meta_desc: "Explore the SqlServer resource of the azuredata/v20190724preview mod
 
 A SQL server.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates a SQL Server in a Registration group.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlServer = new AzureRM.AzureData.V20190724Preview.SqlServer("sqlServer", new AzureRM.AzureData.V20190724Preview.SqlServerArgs
+        {
+            Cores = 8,
+            Edition = "Latin",
+            PropertyBag = "",
+            RegistrationID = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration",
+            ResourceGroupName = "testrg",
+            SqlServerName = "testsqlserver",
+            SqlServerRegistrationName = "testsqlregistration",
+            Version = "2008",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sql_server = azurerm.azuredata.v20190724preview.SqlServer("sqlServer",
+    cores=8,
+    edition="Latin",
+    property_bag="",
+    registration_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration",
+    resource_group_name="testrg",
+    sql_server_name="testsqlserver",
+    sql_server_registration_name="testsqlregistration",
+    version="2008")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sqlServer = new azurerm.azuredata.v20190724preview.SqlServer("sqlServer", {
+    cores: 8,
+    edition: "Latin",
+    propertyBag: "",
+    registrationID: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration",
+    resourceGroupName: "testrg",
+    sqlServerName: "testsqlserver",
+    sqlServerRegistrationName: "testsqlregistration",
+    version: "2008",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SqlServer Resource {#create}

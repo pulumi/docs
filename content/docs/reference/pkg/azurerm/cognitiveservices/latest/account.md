@@ -12,6 +12,175 @@ meta_desc: "Explore the Account resource of the cognitiveservices/latest module,
 
 Cognitive Services Account is an Azure resource representing the provisioned account, its type, location and SKU.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Account
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var account = new AzureRM.CognitiveServices.Latest.Account("account", new AzureRM.CognitiveServices.Latest.AccountArgs
+        {
+            AccountName = "testCreate1",
+            Identity = new AzureRM.CognitiveServices.Latest.Inputs.IdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Kind = "Emotion",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.CognitiveServices.Latest.Inputs.SkuArgs
+            {
+                Name = "S0",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+account = azurerm.cognitiveservices.latest.Account("account",
+    account_name="testCreate1",
+    identity={
+        "type": "SystemAssigned",
+    },
+    kind="Emotion",
+    location="West US",
+    resource_group_name="myResourceGroup",
+    sku={
+        "name": "S0",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const account = new azurerm.cognitiveservices.latest.Account("account", {
+    accountName: "testCreate1",
+    identity: {
+        type: "SystemAssigned",
+    },
+    kind: "Emotion",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        name: "S0",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create Account Min
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var account = new AzureRM.CognitiveServices.Latest.Account("account", new AzureRM.CognitiveServices.Latest.AccountArgs
+        {
+            AccountName = "testCreate1",
+            Identity = new AzureRM.CognitiveServices.Latest.Inputs.IdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Kind = "CognitiveServices",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.CognitiveServices.Latest.Inputs.SkuArgs
+            {
+                Name = "S0",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+account = azurerm.cognitiveservices.latest.Account("account",
+    account_name="testCreate1",
+    identity={
+        "type": "SystemAssigned",
+    },
+    kind="CognitiveServices",
+    location="West US",
+    resource_group_name="myResourceGroup",
+    sku={
+        "name": "S0",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const account = new azurerm.cognitiveservices.latest.Account("account", {
+    accountName: "testCreate1",
+    identity: {
+        type: "SystemAssigned",
+    },
+    kind: "CognitiveServices",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        name: "S0",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Account Resource {#create}

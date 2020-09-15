@@ -12,6 +12,141 @@ meta_desc: "Explore the FirewallRule resource of the sql/v20150501preview module
 
 A server firewall rule.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a firewall rule max/min
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var firewallRule = new AzureRM.Sql.V20150501Preview.FirewallRule("firewallRule", new AzureRM.Sql.V20150501Preview.FirewallRuleArgs
+        {
+            EndIpAddress = "0.0.0.3",
+            FirewallRuleName = "firewallrulecrudtest-5370",
+            ResourceGroupName = "firewallrulecrudtest-12",
+            ServerName = "firewallrulecrudtest-6285",
+            StartIpAddress = "0.0.0.3",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+firewall_rule = azurerm.sql.v20150501preview.FirewallRule("firewallRule",
+    end_ip_address="0.0.0.3",
+    firewall_rule_name="firewallrulecrudtest-5370",
+    resource_group_name="firewallrulecrudtest-12",
+    server_name="firewallrulecrudtest-6285",
+    start_ip_address="0.0.0.3")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const firewallRule = new azurerm.sql.v20150501preview.FirewallRule("firewallRule", {
+    endIpAddress: "0.0.0.3",
+    firewallRuleName: "firewallrulecrudtest-5370",
+    resourceGroupName: "firewallrulecrudtest-12",
+    serverName: "firewallrulecrudtest-6285",
+    startIpAddress: "0.0.0.3",
+});
+
+```
+
+{{% /example %}}
+
+### Update a firewall rule max/min
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var firewallRule = new AzureRM.Sql.V20150501Preview.FirewallRule("firewallRule", new AzureRM.Sql.V20150501Preview.FirewallRuleArgs
+        {
+            EndIpAddress = "0.0.0.1",
+            FirewallRuleName = "firewallrulecrudtest-3927",
+            ResourceGroupName = "firewallrulecrudtest-12",
+            ServerName = "firewallrulecrudtest-6285",
+            StartIpAddress = "0.0.0.1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+firewall_rule = azurerm.sql.v20150501preview.FirewallRule("firewallRule",
+    end_ip_address="0.0.0.1",
+    firewall_rule_name="firewallrulecrudtest-3927",
+    resource_group_name="firewallrulecrudtest-12",
+    server_name="firewallrulecrudtest-6285",
+    start_ip_address="0.0.0.1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const firewallRule = new azurerm.sql.v20150501preview.FirewallRule("firewallRule", {
+    endIpAddress: "0.0.0.1",
+    firewallRuleName: "firewallrulecrudtest-3927",
+    resourceGroupName: "firewallrulecrudtest-12",
+    serverName: "firewallrulecrudtest-6285",
+    startIpAddress: "0.0.0.1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FirewallRule Resource {#create}

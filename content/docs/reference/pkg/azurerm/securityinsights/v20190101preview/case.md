@@ -12,6 +12,120 @@ meta_desc: "Explore the Case resource of the securityinsights/v20190101preview m
 
 Represents a case in Azure Security Insights.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates a case.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @case = new AzureRM.SecurityInsights.V20190101Preview.Case("case", new AzureRM.SecurityInsights.V20190101Preview.CaseArgs
+        {
+            CaseId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+            CloseReason = "Resolved",
+            Description = "This is a demo case",
+            EndTimeUtc = "2019-01-01T13:05:30Z",
+            Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+            Labels = 
+            {
+                "Tag1",
+                "Tag2",
+            },
+            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
+            Owner = new AzureRM.SecurityInsights.V20190101Preview.Inputs.UserInfoArgs
+            {
+                ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
+            },
+            ResourceGroupName = "myRg",
+            Severity = "High",
+            StartTimeUtc = "2019-01-01T13:00:30Z",
+            Status = "Closed",
+            Title = "My case",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+case = azurerm.securityinsights.v20190101preview.Case("case",
+    case_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+    close_reason="Resolved",
+    description="This is a demo case",
+    end_time_utc="2019-01-01T13:05:30Z",
+    etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    labels=[
+        "Tag1",
+        "Tag2",
+    ],
+    operational_insights_resource_provider="Microsoft.OperationalInsights",
+    owner={
+        "objectId": "2046feea-040d-4a46-9e2b-91c2941bfa70",
+    },
+    resource_group_name="myRg",
+    severity="High",
+    start_time_utc="2019-01-01T13:00:30Z",
+    status="Closed",
+    title="My case",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const _case = new azurerm.securityinsights.v20190101preview.Case("case", {
+    caseId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+    closeReason: "Resolved",
+    description: "This is a demo case",
+    endTimeUtc: "2019-01-01T13:05:30Z",
+    etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    labels: [
+        "Tag1",
+        "Tag2",
+    ],
+    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
+    owner: {
+        objectId: "2046feea-040d-4a46-9e2b-91c2941bfa70",
+    },
+    resourceGroupName: "myRg",
+    severity: "High",
+    startTimeUtc: "2019-01-01T13:00:30Z",
+    status: "Closed",
+    title: "My case",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Case Resource {#create}

@@ -12,6 +12,766 @@ meta_desc: "Explore the StreamingPolicy resource of the media/latest module, inc
 
 A Streaming Policy resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates a Streaming Policy with clear streaming
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var streamingPolicy = new AzureRM.Media.Latest.StreamingPolicy("streamingPolicy", new AzureRM.Media.Latest.StreamingPolicyArgs
+        {
+            AccountName = "contosomedia",
+            NoEncryption = new AzureRM.Media.Latest.Inputs.NoEncryptionArgs
+            {
+                EnabledProtocols = new AzureRM.Media.Latest.Inputs.EnabledProtocolsArgs
+                {
+                    Dash = true,
+                    Download = true,
+                    Hls = true,
+                    SmoothStreaming = true,
+                },
+            },
+            ResourceGroupName = "contoso",
+            StreamingPolicyName = "UserCreatedClearStreamingPolicy",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+streaming_policy = azurerm.media.latest.StreamingPolicy("streamingPolicy",
+    account_name="contosomedia",
+    no_encryption={
+        "enabledProtocols": {
+            "dash": True,
+            "download": True,
+            "hls": True,
+            "smoothStreaming": True,
+        },
+    },
+    resource_group_name="contoso",
+    streaming_policy_name="UserCreatedClearStreamingPolicy")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const streamingPolicy = new azurerm.media.latest.StreamingPolicy("streamingPolicy", {
+    accountName: "contosomedia",
+    noEncryption: {
+        enabledProtocols: {
+            dash: true,
+            download: true,
+            hls: true,
+            smoothStreaming: true,
+        },
+    },
+    resourceGroupName: "contoso",
+    streamingPolicyName: "UserCreatedClearStreamingPolicy",
+});
+
+```
+
+{{% /example %}}
+
+### Creates a Streaming Policy with commonEncryptionCbcs only
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var streamingPolicy = new AzureRM.Media.Latest.StreamingPolicy("streamingPolicy", new AzureRM.Media.Latest.StreamingPolicyArgs
+        {
+            AccountName = "contosomedia",
+            CommonEncryptionCbcs = new AzureRM.Media.Latest.Inputs.CommonEncryptionCbcsArgs
+            {
+                ContentKeys = new AzureRM.Media.Latest.Inputs.StreamingPolicyContentKeysArgs
+                {
+                    DefaultKey = new AzureRM.Media.Latest.Inputs.DefaultKeyArgs
+                    {
+                        Label = "cbcsDefaultKey",
+                    },
+                },
+                Drm = new AzureRM.Media.Latest.Inputs.CbcsDrmConfigurationArgs
+                {
+                    FairPlay = new AzureRM.Media.Latest.Inputs.StreamingPolicyFairPlayConfigurationArgs
+                    {
+                        AllowPersistentLicense = true,
+                        CustomLicenseAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/fairplay/{ContentKeyId}",
+                    },
+                },
+                EnabledProtocols = new AzureRM.Media.Latest.Inputs.EnabledProtocolsArgs
+                {
+                    Dash = false,
+                    Download = false,
+                    Hls = true,
+                    SmoothStreaming = false,
+                },
+            },
+            DefaultContentKeyPolicyName = "PolicyWithMultipleOptions",
+            ResourceGroupName = "contoso",
+            StreamingPolicyName = "UserCreatedSecureStreamingPolicyWithCommonEncryptionCbcsOnly",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+streaming_policy = azurerm.media.latest.StreamingPolicy("streamingPolicy",
+    account_name="contosomedia",
+    common_encryption_cbcs={
+        "contentKeys": {
+            "defaultKey": {
+                "label": "cbcsDefaultKey",
+            },
+        },
+        "drm": {
+            "fairPlay": {
+                "allowPersistentLicense": True,
+                "customLicenseAcquisitionUrlTemplate": "https://contoso.com/{AssetAlternativeId}/fairplay/{ContentKeyId}",
+            },
+        },
+        "enabledProtocols": {
+            "dash": False,
+            "download": False,
+            "hls": True,
+            "smoothStreaming": False,
+        },
+    },
+    default_content_key_policy_name="PolicyWithMultipleOptions",
+    resource_group_name="contoso",
+    streaming_policy_name="UserCreatedSecureStreamingPolicyWithCommonEncryptionCbcsOnly")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const streamingPolicy = new azurerm.media.latest.StreamingPolicy("streamingPolicy", {
+    accountName: "contosomedia",
+    commonEncryptionCbcs: {
+        contentKeys: {
+            defaultKey: {
+                label: "cbcsDefaultKey",
+            },
+        },
+        drm: {
+            fairPlay: {
+                allowPersistentLicense: true,
+                customLicenseAcquisitionUrlTemplate: "https://contoso.com/{AssetAlternativeId}/fairplay/{ContentKeyId}",
+            },
+        },
+        enabledProtocols: {
+            dash: false,
+            download: false,
+            hls: true,
+            smoothStreaming: false,
+        },
+    },
+    defaultContentKeyPolicyName: "PolicyWithMultipleOptions",
+    resourceGroupName: "contoso",
+    streamingPolicyName: "UserCreatedSecureStreamingPolicyWithCommonEncryptionCbcsOnly",
+});
+
+```
+
+{{% /example %}}
+
+### Creates a Streaming Policy with commonEncryptionCenc only
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var streamingPolicy = new AzureRM.Media.Latest.StreamingPolicy("streamingPolicy", new AzureRM.Media.Latest.StreamingPolicyArgs
+        {
+            AccountName = "contosomedia",
+            CommonEncryptionCenc = new AzureRM.Media.Latest.Inputs.CommonEncryptionCencArgs
+            {
+                ClearTracks = 
+                {
+                    new AzureRM.Media.Latest.Inputs.TrackSelectionArgs
+                    {
+                        TrackSelections = 
+                        {
+                            new AzureRM.Media.Latest.Inputs.TrackPropertyConditionArgs
+                            {
+                                Operation = "Equal",
+                                Property = "FourCC",
+                                Value = "hev1",
+                            },
+                        },
+                    },
+                },
+                ContentKeys = new AzureRM.Media.Latest.Inputs.StreamingPolicyContentKeysArgs
+                {
+                    DefaultKey = new AzureRM.Media.Latest.Inputs.DefaultKeyArgs
+                    {
+                        Label = "cencDefaultKey",
+                    },
+                },
+                Drm = new AzureRM.Media.Latest.Inputs.CencDrmConfigurationArgs
+                {
+                    PlayReady = new AzureRM.Media.Latest.Inputs.StreamingPolicyPlayReadyConfigurationArgs
+                    {
+                        CustomLicenseAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/playready/{ContentKeyId}",
+                        PlayReadyCustomAttributes = "PlayReady CustomAttributes",
+                    },
+                    Widevine = new AzureRM.Media.Latest.Inputs.StreamingPolicyWidevineConfigurationArgs
+                    {
+                        CustomLicenseAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/widevine/{ContentKeyId",
+                    },
+                },
+                EnabledProtocols = new AzureRM.Media.Latest.Inputs.EnabledProtocolsArgs
+                {
+                    Dash = true,
+                    Download = false,
+                    Hls = false,
+                    SmoothStreaming = true,
+                },
+            },
+            DefaultContentKeyPolicyName = "PolicyWithPlayReadyOptionAndOpenRestriction",
+            ResourceGroupName = "contoso",
+            StreamingPolicyName = "UserCreatedSecureStreamingPolicyWithCommonEncryptionCencOnly",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+streaming_policy = azurerm.media.latest.StreamingPolicy("streamingPolicy",
+    account_name="contosomedia",
+    common_encryption_cenc={
+        "clearTracks": [{
+            "trackSelections": [{
+                "operation": "Equal",
+                "property": "FourCC",
+                "value": "hev1",
+            }],
+        }],
+        "contentKeys": {
+            "defaultKey": {
+                "label": "cencDefaultKey",
+            },
+        },
+        "drm": {
+            "playReady": {
+                "customLicenseAcquisitionUrlTemplate": "https://contoso.com/{AssetAlternativeId}/playready/{ContentKeyId}",
+                "playReadyCustomAttributes": "PlayReady CustomAttributes",
+            },
+            "widevine": {
+                "customLicenseAcquisitionUrlTemplate": "https://contoso.com/{AssetAlternativeId}/widevine/{ContentKeyId",
+            },
+        },
+        "enabledProtocols": {
+            "dash": True,
+            "download": False,
+            "hls": False,
+            "smoothStreaming": True,
+        },
+    },
+    default_content_key_policy_name="PolicyWithPlayReadyOptionAndOpenRestriction",
+    resource_group_name="contoso",
+    streaming_policy_name="UserCreatedSecureStreamingPolicyWithCommonEncryptionCencOnly")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const streamingPolicy = new azurerm.media.latest.StreamingPolicy("streamingPolicy", {
+    accountName: "contosomedia",
+    commonEncryptionCenc: {
+        clearTracks: [{
+            trackSelections: [{
+                operation: "Equal",
+                property: "FourCC",
+                value: "hev1",
+            }],
+        }],
+        contentKeys: {
+            defaultKey: {
+                label: "cencDefaultKey",
+            },
+        },
+        drm: {
+            playReady: {
+                customLicenseAcquisitionUrlTemplate: "https://contoso.com/{AssetAlternativeId}/playready/{ContentKeyId}",
+                playReadyCustomAttributes: "PlayReady CustomAttributes",
+            },
+            widevine: {
+                customLicenseAcquisitionUrlTemplate: "https://contoso.com/{AssetAlternativeId}/widevine/{ContentKeyId",
+            },
+        },
+        enabledProtocols: {
+            dash: true,
+            download: false,
+            hls: false,
+            smoothStreaming: true,
+        },
+    },
+    defaultContentKeyPolicyName: "PolicyWithPlayReadyOptionAndOpenRestriction",
+    resourceGroupName: "contoso",
+    streamingPolicyName: "UserCreatedSecureStreamingPolicyWithCommonEncryptionCencOnly",
+});
+
+```
+
+{{% /example %}}
+
+### Creates a Streaming Policy with envelopeEncryption only
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var streamingPolicy = new AzureRM.Media.Latest.StreamingPolicy("streamingPolicy", new AzureRM.Media.Latest.StreamingPolicyArgs
+        {
+            AccountName = "contosomedia",
+            DefaultContentKeyPolicyName = "PolicyWithClearKeyOptionAndTokenRestriction",
+            EnvelopeEncryption = new AzureRM.Media.Latest.Inputs.EnvelopeEncryptionArgs
+            {
+                ContentKeys = new AzureRM.Media.Latest.Inputs.StreamingPolicyContentKeysArgs
+                {
+                    DefaultKey = new AzureRM.Media.Latest.Inputs.DefaultKeyArgs
+                    {
+                        Label = "aesDefaultKey",
+                    },
+                },
+                CustomKeyAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/envelope/{ContentKeyId}",
+                EnabledProtocols = new AzureRM.Media.Latest.Inputs.EnabledProtocolsArgs
+                {
+                    Dash = true,
+                    Download = false,
+                    Hls = true,
+                    SmoothStreaming = true,
+                },
+            },
+            ResourceGroupName = "contoso",
+            StreamingPolicyName = "UserCreatedSecureStreamingPolicyWithEnvelopeEncryptionOnly",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+streaming_policy = azurerm.media.latest.StreamingPolicy("streamingPolicy",
+    account_name="contosomedia",
+    default_content_key_policy_name="PolicyWithClearKeyOptionAndTokenRestriction",
+    envelope_encryption={
+        "contentKeys": {
+            "defaultKey": {
+                "label": "aesDefaultKey",
+            },
+        },
+        "customKeyAcquisitionUrlTemplate": "https://contoso.com/{AssetAlternativeId}/envelope/{ContentKeyId}",
+        "enabledProtocols": {
+            "dash": True,
+            "download": False,
+            "hls": True,
+            "smoothStreaming": True,
+        },
+    },
+    resource_group_name="contoso",
+    streaming_policy_name="UserCreatedSecureStreamingPolicyWithEnvelopeEncryptionOnly")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const streamingPolicy = new azurerm.media.latest.StreamingPolicy("streamingPolicy", {
+    accountName: "contosomedia",
+    defaultContentKeyPolicyName: "PolicyWithClearKeyOptionAndTokenRestriction",
+    envelopeEncryption: {
+        contentKeys: {
+            defaultKey: {
+                label: "aesDefaultKey",
+            },
+        },
+        customKeyAcquisitionUrlTemplate: "https://contoso.com/{AssetAlternativeId}/envelope/{ContentKeyId}",
+        enabledProtocols: {
+            dash: true,
+            download: false,
+            hls: true,
+            smoothStreaming: true,
+        },
+    },
+    resourceGroupName: "contoso",
+    streamingPolicyName: "UserCreatedSecureStreamingPolicyWithEnvelopeEncryptionOnly",
+});
+
+```
+
+{{% /example %}}
+
+### Creates a Streaming Policy with secure streaming
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var streamingPolicy = new AzureRM.Media.Latest.StreamingPolicy("streamingPolicy", new AzureRM.Media.Latest.StreamingPolicyArgs
+        {
+            AccountName = "contosomedia",
+            CommonEncryptionCbcs = new AzureRM.Media.Latest.Inputs.CommonEncryptionCbcsArgs
+            {
+                ContentKeys = new AzureRM.Media.Latest.Inputs.StreamingPolicyContentKeysArgs
+                {
+                    DefaultKey = new AzureRM.Media.Latest.Inputs.DefaultKeyArgs
+                    {
+                        Label = "cbcsDefaultKey",
+                    },
+                },
+                Drm = new AzureRM.Media.Latest.Inputs.CbcsDrmConfigurationArgs
+                {
+                    FairPlay = new AzureRM.Media.Latest.Inputs.StreamingPolicyFairPlayConfigurationArgs
+                    {
+                        AllowPersistentLicense = true,
+                        CustomLicenseAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/fairplay/{ContentKeyId}",
+                    },
+                },
+                EnabledProtocols = new AzureRM.Media.Latest.Inputs.EnabledProtocolsArgs
+                {
+                    Dash = false,
+                    Download = false,
+                    Hls = true,
+                    SmoothStreaming = false,
+                },
+            },
+            CommonEncryptionCenc = new AzureRM.Media.Latest.Inputs.CommonEncryptionCencArgs
+            {
+                ClearTracks = 
+                {
+                    new AzureRM.Media.Latest.Inputs.TrackSelectionArgs
+                    {
+                        TrackSelections = 
+                        {
+                            new AzureRM.Media.Latest.Inputs.TrackPropertyConditionArgs
+                            {
+                                Operation = "Equal",
+                                Property = "FourCC",
+                                Value = "hev1",
+                            },
+                        },
+                    },
+                },
+                ContentKeys = new AzureRM.Media.Latest.Inputs.StreamingPolicyContentKeysArgs
+                {
+                    DefaultKey = new AzureRM.Media.Latest.Inputs.DefaultKeyArgs
+                    {
+                        Label = "cencDefaultKey",
+                    },
+                },
+                Drm = new AzureRM.Media.Latest.Inputs.CencDrmConfigurationArgs
+                {
+                    PlayReady = new AzureRM.Media.Latest.Inputs.StreamingPolicyPlayReadyConfigurationArgs
+                    {
+                        CustomLicenseAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/playready/{ContentKeyId}",
+                        PlayReadyCustomAttributes = "PlayReady CustomAttributes",
+                    },
+                    Widevine = new AzureRM.Media.Latest.Inputs.StreamingPolicyWidevineConfigurationArgs
+                    {
+                        CustomLicenseAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/widevine/{ContentKeyId",
+                    },
+                },
+                EnabledProtocols = new AzureRM.Media.Latest.Inputs.EnabledProtocolsArgs
+                {
+                    Dash = true,
+                    Download = false,
+                    Hls = false,
+                    SmoothStreaming = true,
+                },
+            },
+            DefaultContentKeyPolicyName = "PolicyWithMultipleOptions",
+            EnvelopeEncryption = new AzureRM.Media.Latest.Inputs.EnvelopeEncryptionArgs
+            {
+                ContentKeys = new AzureRM.Media.Latest.Inputs.StreamingPolicyContentKeysArgs
+                {
+                    DefaultKey = new AzureRM.Media.Latest.Inputs.DefaultKeyArgs
+                    {
+                        Label = "aesDefaultKey",
+                    },
+                },
+                CustomKeyAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/envelope/{ContentKeyId}",
+                EnabledProtocols = new AzureRM.Media.Latest.Inputs.EnabledProtocolsArgs
+                {
+                    Dash = true,
+                    Download = false,
+                    Hls = true,
+                    SmoothStreaming = true,
+                },
+            },
+            ResourceGroupName = "contoso",
+            StreamingPolicyName = "UserCreatedSecureStreamingPolicy",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+streaming_policy = azurerm.media.latest.StreamingPolicy("streamingPolicy",
+    account_name="contosomedia",
+    common_encryption_cbcs={
+        "contentKeys": {
+            "defaultKey": {
+                "label": "cbcsDefaultKey",
+            },
+        },
+        "drm": {
+            "fairPlay": {
+                "allowPersistentLicense": True,
+                "customLicenseAcquisitionUrlTemplate": "https://contoso.com/{AssetAlternativeId}/fairplay/{ContentKeyId}",
+            },
+        },
+        "enabledProtocols": {
+            "dash": False,
+            "download": False,
+            "hls": True,
+            "smoothStreaming": False,
+        },
+    },
+    common_encryption_cenc={
+        "clearTracks": [{
+            "trackSelections": [{
+                "operation": "Equal",
+                "property": "FourCC",
+                "value": "hev1",
+            }],
+        }],
+        "contentKeys": {
+            "defaultKey": {
+                "label": "cencDefaultKey",
+            },
+        },
+        "drm": {
+            "playReady": {
+                "customLicenseAcquisitionUrlTemplate": "https://contoso.com/{AssetAlternativeId}/playready/{ContentKeyId}",
+                "playReadyCustomAttributes": "PlayReady CustomAttributes",
+            },
+            "widevine": {
+                "customLicenseAcquisitionUrlTemplate": "https://contoso.com/{AssetAlternativeId}/widevine/{ContentKeyId",
+            },
+        },
+        "enabledProtocols": {
+            "dash": True,
+            "download": False,
+            "hls": False,
+            "smoothStreaming": True,
+        },
+    },
+    default_content_key_policy_name="PolicyWithMultipleOptions",
+    envelope_encryption={
+        "contentKeys": {
+            "defaultKey": {
+                "label": "aesDefaultKey",
+            },
+        },
+        "customKeyAcquisitionUrlTemplate": "https://contoso.com/{AssetAlternativeId}/envelope/{ContentKeyId}",
+        "enabledProtocols": {
+            "dash": True,
+            "download": False,
+            "hls": True,
+            "smoothStreaming": True,
+        },
+    },
+    resource_group_name="contoso",
+    streaming_policy_name="UserCreatedSecureStreamingPolicy")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const streamingPolicy = new azurerm.media.latest.StreamingPolicy("streamingPolicy", {
+    accountName: "contosomedia",
+    commonEncryptionCbcs: {
+        contentKeys: {
+            defaultKey: {
+                label: "cbcsDefaultKey",
+            },
+        },
+        drm: {
+            fairPlay: {
+                allowPersistentLicense: true,
+                customLicenseAcquisitionUrlTemplate: "https://contoso.com/{AssetAlternativeId}/fairplay/{ContentKeyId}",
+            },
+        },
+        enabledProtocols: {
+            dash: false,
+            download: false,
+            hls: true,
+            smoothStreaming: false,
+        },
+    },
+    commonEncryptionCenc: {
+        clearTracks: [{
+            trackSelections: [{
+                operation: "Equal",
+                property: "FourCC",
+                value: "hev1",
+            }],
+        }],
+        contentKeys: {
+            defaultKey: {
+                label: "cencDefaultKey",
+            },
+        },
+        drm: {
+            playReady: {
+                customLicenseAcquisitionUrlTemplate: "https://contoso.com/{AssetAlternativeId}/playready/{ContentKeyId}",
+                playReadyCustomAttributes: "PlayReady CustomAttributes",
+            },
+            widevine: {
+                customLicenseAcquisitionUrlTemplate: "https://contoso.com/{AssetAlternativeId}/widevine/{ContentKeyId",
+            },
+        },
+        enabledProtocols: {
+            dash: true,
+            download: false,
+            hls: false,
+            smoothStreaming: true,
+        },
+    },
+    defaultContentKeyPolicyName: "PolicyWithMultipleOptions",
+    envelopeEncryption: {
+        contentKeys: {
+            defaultKey: {
+                label: "aesDefaultKey",
+            },
+        },
+        customKeyAcquisitionUrlTemplate: "https://contoso.com/{AssetAlternativeId}/envelope/{ContentKeyId}",
+        enabledProtocols: {
+            dash: true,
+            download: false,
+            hls: true,
+            smoothStreaming: true,
+        },
+    },
+    resourceGroupName: "contoso",
+    streamingPolicyName: "UserCreatedSecureStreamingPolicy",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a StreamingPolicy Resource {#create}

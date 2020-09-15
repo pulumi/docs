@@ -12,6 +12,70 @@ meta_desc: "Explore the Certificate resource of the devices/latest module, inclu
 
 The X509 Certificate.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Certificates_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var certificate = new AzureRM.Devices.Latest.Certificate("certificate", new AzureRM.Devices.Latest.CertificateArgs
+        {
+            CertificateName = "cert",
+            ResourceGroupName = "myResourceGroup",
+            ResourceName = "iothub",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+certificate = azurerm.devices.latest.Certificate("certificate",
+    certificate_name="cert",
+    resource_group_name="myResourceGroup",
+    resource_name="iothub")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const certificate = new azurerm.devices.latest.Certificate("certificate", {
+    certificateName: "cert",
+    resourceGroupName: "myResourceGroup",
+    resourceName: "iothub",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Certificate Resource {#create}

@@ -12,6 +12,228 @@ meta_desc: "Explore the Gateway resource of the servicefabricmesh/v20180901previ
 
 This type describes a gateway resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateOrUpdateGateway
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var gateway = new AzureRM.ServiceFabricMesh.V20180901Preview.Gateway("gateway", new AzureRM.ServiceFabricMesh.V20180901Preview.GatewayArgs
+        {
+            Description = "Service Fabric Mesh sample gateway.",
+            DestinationNetwork = new AzureRM.ServiceFabricMesh.V20180901Preview.Inputs.NetworkRefArgs
+            {
+                Name = "helloWorldNetwork",
+            },
+            GatewayResourceName = "sampleGateway",
+            Http = 
+            {
+                new AzureRM.ServiceFabricMesh.V20180901Preview.Inputs.HttpConfigArgs
+                {
+                    Hosts = 
+                    {
+                        new AzureRM.ServiceFabricMesh.V20180901Preview.Inputs.HttpHostConfigArgs
+                        {
+                            Name = "contoso.com",
+                            Routes = 
+                            {
+                                new AzureRM.ServiceFabricMesh.V20180901Preview.Inputs.HttpRouteConfigArgs
+                                {
+                                    Destination = new AzureRM.ServiceFabricMesh.V20180901Preview.Inputs.GatewayDestinationArgs
+                                    {
+                                        ApplicationName = "httpHelloWorldApp",
+                                        EndpointName = "indexHttpEndpoint",
+                                        ServiceName = "indexService",
+                                    },
+                                    Match = new AzureRM.ServiceFabricMesh.V20180901Preview.Inputs.HttpRouteMatchRuleArgs
+                                    {
+                                        Headers = 
+                                        {
+                                            new AzureRM.ServiceFabricMesh.V20180901Preview.Inputs.HttpRouteMatchHeaderArgs
+                                            {
+                                                Name = "accept",
+                                                Type = "exact",
+                                                Value = "application/json",
+                                            },
+                                        },
+                                        Path = new AzureRM.ServiceFabricMesh.V20180901Preview.Inputs.HttpRouteMatchPathArgs
+                                        {
+                                            Rewrite = "/",
+                                            Type = "prefix",
+                                            Value = "/index",
+                                        },
+                                    },
+                                    Name = "index",
+                                },
+                            },
+                        },
+                    },
+                    Name = "contosoWebsite",
+                    Port = 8081,
+                },
+            },
+            Location = "EastUS",
+            ResourceGroupName = "sbz_demo",
+            SourceNetwork = new AzureRM.ServiceFabricMesh.V20180901Preview.Inputs.NetworkRefArgs
+            {
+                Name = "Open",
+            },
+            Tags = ,
+            Tcp = 
+            {
+                new AzureRM.ServiceFabricMesh.V20180901Preview.Inputs.TcpConfigArgs
+                {
+                    Destination = new AzureRM.ServiceFabricMesh.V20180901Preview.Inputs.GatewayDestinationArgs
+                    {
+                        ApplicationName = "helloWorldApp",
+                        EndpointName = "helloWorldListener",
+                        ServiceName = "helloWorldService",
+                    },
+                    Name = "web",
+                    Port = 80,
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+gateway = azurerm.servicefabricmesh.v20180901preview.Gateway("gateway",
+    description="Service Fabric Mesh sample gateway.",
+    destination_network={
+        "name": "helloWorldNetwork",
+    },
+    gateway_resource_name="sampleGateway",
+    http=[{
+        "hosts": [{
+            "name": "contoso.com",
+            "routes": [{
+                "destination": {
+                    "applicationName": "httpHelloWorldApp",
+                    "endpointName": "indexHttpEndpoint",
+                    "serviceName": "indexService",
+                },
+                "match": {
+                    "headers": [{
+                        "name": "accept",
+                        "type": "exact",
+                        "value": "application/json",
+                    }],
+                    "path": {
+                        "rewrite": "/",
+                        "type": "prefix",
+                        "value": "/index",
+                    },
+                },
+                "name": "index",
+            }],
+        }],
+        "name": "contosoWebsite",
+        "port": 8081,
+    }],
+    location="EastUS",
+    resource_group_name="sbz_demo",
+    source_network={
+        "name": "Open",
+    },
+    tags={},
+    tcp=[{
+        "destination": {
+            "applicationName": "helloWorldApp",
+            "endpointName": "helloWorldListener",
+            "serviceName": "helloWorldService",
+        },
+        "name": "web",
+        "port": 80,
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const gateway = new azurerm.servicefabricmesh.v20180901preview.Gateway("gateway", {
+    description: "Service Fabric Mesh sample gateway.",
+    destinationNetwork: {
+        name: "helloWorldNetwork",
+    },
+    gatewayResourceName: "sampleGateway",
+    http: [{
+        hosts: [{
+            name: "contoso.com",
+            routes: [{
+                destination: {
+                    applicationName: "httpHelloWorldApp",
+                    endpointName: "indexHttpEndpoint",
+                    serviceName: "indexService",
+                },
+                match: {
+                    headers: [{
+                        name: "accept",
+                        type: "exact",
+                        value: "application/json",
+                    }],
+                    path: {
+                        rewrite: "/",
+                        type: "prefix",
+                        value: "/index",
+                    },
+                },
+                name: "index",
+            }],
+        }],
+        name: "contosoWebsite",
+        port: 8081,
+    }],
+    location: "EastUS",
+    resourceGroupName: "sbz_demo",
+    sourceNetwork: {
+        name: "Open",
+    },
+    tags: {},
+    tcp: [{
+        destination: {
+            applicationName: "helloWorldApp",
+            endpointName: "helloWorldListener",
+            serviceName: "helloWorldService",
+        },
+        name: "web",
+        port: 80,
+    }],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Gateway Resource {#create}

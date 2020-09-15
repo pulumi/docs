@@ -12,6 +12,76 @@ meta_desc: "Explore the ApiSchema resource of the apimanagement/v20191201preview
 
 Schema Contract details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateApiSchema
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiSchema = new AzureRM.ApiManagement.V20191201Preview.ApiSchema("apiSchema", new AzureRM.ApiManagement.V20191201Preview.ApiSchemaArgs
+        {
+            ApiId = "59d6bb8f1f7fab13dc67ec9b",
+            ContentType = "application/vnd.ms-azure-apim.xsd+xml",
+            ResourceGroupName = "rg1",
+            SchemaId = "ec12520d-9d48-4e7b-8f39-698ca2ac63f1",
+            ServiceName = "apimService1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+api_schema = azurerm.apimanagement.v20191201preview.ApiSchema("apiSchema",
+    api_id="59d6bb8f1f7fab13dc67ec9b",
+    content_type="application/vnd.ms-azure-apim.xsd+xml",
+    resource_group_name="rg1",
+    schema_id="ec12520d-9d48-4e7b-8f39-698ca2ac63f1",
+    service_name="apimService1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const apiSchema = new azurerm.apimanagement.v20191201preview.ApiSchema("apiSchema", {
+    apiId: "59d6bb8f1f7fab13dc67ec9b",
+    contentType: "application/vnd.ms-azure-apim.xsd+xml",
+    resourceGroupName: "rg1",
+    schemaId: "ec12520d-9d48-4e7b-8f39-698ca2ac63f1",
+    serviceName: "apimService1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApiSchema Resource {#create}

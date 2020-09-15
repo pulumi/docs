@@ -12,6 +12,105 @@ meta_desc: "Explore the Cluster resource of the kusto/latest module, including e
 
 Class representing a Kusto cluster.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### KustoClustersCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cluster = new AzureRM.Kusto.Latest.Cluster("cluster", new AzureRM.Kusto.Latest.ClusterArgs
+        {
+            ClusterName = "kustoclusterrptest4",
+            EnableDoubleEncryption = false,
+            EnablePurge = true,
+            EnableStreamingIngest = true,
+            Identity = new AzureRM.Kusto.Latest.Inputs.IdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Location = "westus",
+            ResourceGroupName = "kustorptest",
+            Sku = new AzureRM.Kusto.Latest.Inputs.AzureSkuArgs
+            {
+                Capacity = 2,
+                Name = "Standard_L8s",
+                Tier = "Standard",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cluster = azurerm.kusto.latest.Cluster("cluster",
+    cluster_name="kustoclusterrptest4",
+    enable_double_encryption=False,
+    enable_purge=True,
+    enable_streaming_ingest=True,
+    identity={
+        "type": "SystemAssigned",
+    },
+    location="westus",
+    resource_group_name="kustorptest",
+    sku={
+        "capacity": 2,
+        "name": "Standard_L8s",
+        "tier": "Standard",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cluster = new azurerm.kusto.latest.Cluster("cluster", {
+    clusterName: "kustoclusterrptest4",
+    enableDoubleEncryption: false,
+    enablePurge: true,
+    enableStreamingIngest: true,
+    identity: {
+        type: "SystemAssigned",
+    },
+    location: "westus",
+    resourceGroupName: "kustorptest",
+    sku: {
+        capacity: 2,
+        name: "Standard_L8s",
+        tier: "Standard",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}

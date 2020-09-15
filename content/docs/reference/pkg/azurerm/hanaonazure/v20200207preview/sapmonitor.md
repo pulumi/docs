@@ -12,6 +12,95 @@ meta_desc: "Explore the SapMonitor resource of the hanaonazure/v20200207preview 
 
 SAP monitor info on Azure (ARM properties and SAP monitor properties)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a SAP Monitor
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sapMonitor = new AzureRM.HanaOnAzure.V20200207Preview.SapMonitor("sapMonitor", new AzureRM.HanaOnAzure.V20200207Preview.SapMonitorArgs
+        {
+            EnableCustomerAnalytics = true,
+            Location = "westus",
+            LogAnalyticsWorkspaceArmId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/microsoft.operationalinsights/workspaces/myWorkspace",
+            LogAnalyticsWorkspaceId = "00000000-0000-0000-0000-000000000000",
+            LogAnalyticsWorkspaceSharedKey = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
+            MonitorSubnet = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+            ResourceGroupName = "myResourceGroup",
+            SapMonitorName = "mySapMonitor",
+            Tags = 
+            {
+                { "key", "value" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sap_monitor = azurerm.hanaonazure.v20200207preview.SapMonitor("sapMonitor",
+    enable_customer_analytics=True,
+    location="westus",
+    log_analytics_workspace_arm_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/microsoft.operationalinsights/workspaces/myWorkspace",
+    log_analytics_workspace_id="00000000-0000-0000-0000-000000000000",
+    log_analytics_workspace_shared_key="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
+    monitor_subnet="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+    resource_group_name="myResourceGroup",
+    sap_monitor_name="mySapMonitor",
+    tags={
+        "key": "value",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sapMonitor = new azurerm.hanaonazure.v20200207preview.SapMonitor("sapMonitor", {
+    enableCustomerAnalytics: true,
+    location: "westus",
+    logAnalyticsWorkspaceArmId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/microsoft.operationalinsights/workspaces/myWorkspace",
+    logAnalyticsWorkspaceId: "00000000-0000-0000-0000-000000000000",
+    logAnalyticsWorkspaceSharedKey: "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
+    monitorSubnet: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+    resourceGroupName: "myResourceGroup",
+    sapMonitorName: "mySapMonitor",
+    tags: {
+        key: "value",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SapMonitor Resource {#create}

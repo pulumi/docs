@@ -12,6 +12,92 @@ meta_desc: "Explore the Webhook resource of the automation/latest module, includ
 
 Definition of the webhook type.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update webhook
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var webhook = new AzureRM.Automation.Latest.Webhook("webhook", new AzureRM.Automation.Latest.WebhookArgs
+        {
+            AutomationAccountName = "myAutomationAccount33",
+            ExpiryTime = "2018-03-29T22:18:13.7002872Z",
+            IsEnabled = true,
+            Name = "TestWebhook",
+            ResourceGroupName = "rg",
+            Runbook = new AzureRM.Automation.Latest.Inputs.RunbookAssociationPropertyArgs
+            {
+                Name = "TestRunbook",
+            },
+            Uri = "https://s1events.azure-automation.net/webhooks?token=7u3KfQvM1vUPWaDMFRv2%2fAA4Jqx8QwS8aBuyO6Xsdcw%3d",
+            WebhookName = "TestWebhook",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+webhook = azurerm.automation.latest.Webhook("webhook",
+    automation_account_name="myAutomationAccount33",
+    expiry_time="2018-03-29T22:18:13.7002872Z",
+    is_enabled=True,
+    name="TestWebhook",
+    resource_group_name="rg",
+    runbook={
+        "name": "TestRunbook",
+    },
+    uri="https://s1events.azure-automation.net/webhooks?token=7u3KfQvM1vUPWaDMFRv2%2fAA4Jqx8QwS8aBuyO6Xsdcw%3d",
+    webhook_name="TestWebhook")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const webhook = new azurerm.automation.latest.Webhook("webhook", {
+    automationAccountName: "myAutomationAccount33",
+    expiryTime: "2018-03-29T22:18:13.7002872Z",
+    isEnabled: true,
+    name: "TestWebhook",
+    resourceGroupName: "rg",
+    runbook: {
+        name: "TestRunbook",
+    },
+    uri: `https://s1events.azure-automation.net/webhooks?token=7u3KfQvM1vUPWaDMFRv2%2fAA4Jqx8QwS8aBuyO6Xsdcw%3d`,
+    webhookName: "TestWebhook",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Webhook Resource {#create}

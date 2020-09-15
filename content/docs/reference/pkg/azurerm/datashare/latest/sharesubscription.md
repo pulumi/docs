@@ -12,6 +12,76 @@ meta_desc: "Explore the ShareSubscription resource of the datashare/latest modul
 
 A share subscription data transfer object.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ShareSubscriptions_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var shareSubscription = new AzureRM.DataShare.Latest.ShareSubscription("shareSubscription", new AzureRM.DataShare.Latest.ShareSubscriptionArgs
+        {
+            AccountName = "Account1",
+            InvitationId = "12345678-1234-1234-12345678abd",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareSubscriptionName = "ShareSubscription1",
+            SourceShareLocation = "eastus2",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+share_subscription = azurerm.datashare.latest.ShareSubscription("shareSubscription",
+    account_name="Account1",
+    invitation_id="12345678-1234-1234-12345678abd",
+    resource_group_name="SampleResourceGroup",
+    share_subscription_name="ShareSubscription1",
+    source_share_location="eastus2")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const shareSubscription = new azurerm.datashare.latest.ShareSubscription("shareSubscription", {
+    accountName: "Account1",
+    invitationId: "12345678-1234-1234-12345678abd",
+    resourceGroupName: "SampleResourceGroup",
+    shareSubscriptionName: "ShareSubscription1",
+    sourceShareLocation: "eastus2",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ShareSubscription Resource {#create}

@@ -12,6 +12,76 @@ meta_desc: "Explore the FirewallRule resource of the dbformariadb/v20180601previ
 
 Represents a server firewall rule.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### FirewallRuleCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var firewallRule = new AzureRM.DBforMariaDB.V20180601Preview.FirewallRule("firewallRule", new AzureRM.DBforMariaDB.V20180601Preview.FirewallRuleArgs
+        {
+            EndIpAddress = "255.255.255.255",
+            FirewallRuleName = "rule1",
+            ResourceGroupName = "TestGroup",
+            ServerName = "testserver",
+            StartIpAddress = "0.0.0.0",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+firewall_rule = azurerm.dbformariadb.v20180601preview.FirewallRule("firewallRule",
+    end_ip_address="255.255.255.255",
+    firewall_rule_name="rule1",
+    resource_group_name="TestGroup",
+    server_name="testserver",
+    start_ip_address="0.0.0.0")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const firewallRule = new azurerm.dbformariadb.v20180601preview.FirewallRule("firewallRule", {
+    endIpAddress: "255.255.255.255",
+    firewallRuleName: "rule1",
+    resourceGroupName: "TestGroup",
+    serverName: "testserver",
+    startIpAddress: "0.0.0.0",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FirewallRule Resource {#create}

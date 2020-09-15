@@ -12,6 +12,73 @@ meta_desc: "Explore the IntegrationAccountAssembly resource of the logic/latest 
 
 The assembly definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update an account assembly
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var integrationAccountAssembly = new AzureRM.Logic.Latest.IntegrationAccountAssembly("integrationAccountAssembly", new AzureRM.Logic.Latest.IntegrationAccountAssemblyArgs
+        {
+            AssemblyArtifactName = "testAssembly",
+            IntegrationAccountName = "testIntegrationAccount",
+            Location = "westus",
+            ResourceGroupName = "testResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+integration_account_assembly = azurerm.logic.latest.IntegrationAccountAssembly("integrationAccountAssembly",
+    assembly_artifact_name="testAssembly",
+    integration_account_name="testIntegrationAccount",
+    location="westus",
+    resource_group_name="testResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const integrationAccountAssembly = new azurerm.logic.latest.IntegrationAccountAssembly("integrationAccountAssembly", {
+    assemblyArtifactName: "testAssembly",
+    integrationAccountName: "testIntegrationAccount",
+    location: "westus",
+    resourceGroupName: "testResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IntegrationAccountAssembly Resource {#create}

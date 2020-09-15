@@ -12,6 +12,96 @@ meta_desc: "Explore the Transform resource of the media/latest module, including
 
 A Transform encapsulates the rules or instructions for generating desired outputs from input media, such as by transcoding or by extracting insights. After the Transform is created, it can be applied to input media by creating Jobs.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a Transform
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var transform = new AzureRM.Media.Latest.Transform("transform", new AzureRM.Media.Latest.TransformArgs
+        {
+            AccountName = "contosomedia",
+            Description = "Example Transform to illustrate create and update.",
+            Outputs = 
+            {
+                new AzureRM.Media.Latest.Inputs.TransformOutputArgs
+                {
+                    Preset = 
+                    {
+                        { "@odata.type", "#Microsoft.Media.BuiltInStandardEncoderPreset" },
+                        { "presetName", "AdaptiveStreaming" },
+                    },
+                },
+            },
+            ResourceGroupName = "contosoresources",
+            TransformName = "createdTransform",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+transform = azurerm.media.latest.Transform("transform",
+    account_name="contosomedia",
+    description="Example Transform to illustrate create and update.",
+    outputs=[{
+        "preset": {
+            "@odata.type": "#Microsoft.Media.BuiltInStandardEncoderPreset",
+            "presetName": "AdaptiveStreaming",
+        },
+    }],
+    resource_group_name="contosoresources",
+    transform_name="createdTransform")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const transform = new azurerm.media.latest.Transform("transform", {
+    accountName: "contosomedia",
+    description: "Example Transform to illustrate create and update.",
+    outputs: [{
+        preset: {
+            "@odata.type": "#Microsoft.Media.BuiltInStandardEncoderPreset",
+            presetName: "AdaptiveStreaming",
+        },
+    }],
+    resourceGroupName: "contosoresources",
+    transformName: "createdTransform",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Transform Resource {#create}

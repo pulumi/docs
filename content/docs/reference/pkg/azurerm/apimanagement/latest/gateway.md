@@ -12,6 +12,83 @@ meta_desc: "Explore the Gateway resource of the apimanagement/latest module, inc
 
 Gateway details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateGateway
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var gateway = new AzureRM.ApiManagement.Latest.Gateway("gateway", new AzureRM.ApiManagement.Latest.GatewayArgs
+        {
+            Description = "my gateway 1",
+            GatewayId = "gw1",
+            LocationData = new AzureRM.ApiManagement.Latest.Inputs.ResourceLocationDataContractArgs
+            {
+                Name = "my location",
+            },
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+gateway = azurerm.apimanagement.latest.Gateway("gateway",
+    description="my gateway 1",
+    gateway_id="gw1",
+    location_data={
+        "name": "my location",
+    },
+    resource_group_name="rg1",
+    service_name="apimService1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const gateway = new azurerm.apimanagement.latest.Gateway("gateway", {
+    description: "my gateway 1",
+    gatewayId: "gw1",
+    locationData: {
+        name: "my location",
+    },
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Gateway Resource {#create}

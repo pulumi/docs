@@ -12,6 +12,80 @@ meta_desc: "Explore the Account resource of the engagementfabric/v20180901previe
 
 The EngagementFabric account
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### AccountsCreateOrUpdateExample
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var account = new AzureRM.EngagementFabric.V20180901Preview.Account("account", new AzureRM.EngagementFabric.V20180901Preview.AccountArgs
+        {
+            AccountName = "ExampleAccount",
+            Location = "WestUS",
+            ResourceGroupName = "ExampleRg",
+            Sku = new AzureRM.EngagementFabric.V20180901Preview.Inputs.SKUArgs
+            {
+                Name = "B1",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+account = azurerm.engagementfabric.v20180901preview.Account("account",
+    account_name="ExampleAccount",
+    location="WestUS",
+    resource_group_name="ExampleRg",
+    sku={
+        "name": "B1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const account = new azurerm.engagementfabric.v20180901preview.Account("account", {
+    accountName: "ExampleAccount",
+    location: "WestUS",
+    resourceGroupName: "ExampleRg",
+    sku: {
+        name: "B1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Account Resource {#create}

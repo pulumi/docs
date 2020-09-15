@@ -12,6 +12,83 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the appconfigurati
 
 A private endpoint connection
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PrivateEndpointConnection_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpointConnection = new AzureRM.AppConfiguration.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureRM.AppConfiguration.Latest.PrivateEndpointConnectionArgs
+        {
+            ConfigStoreName = "contoso",
+            PrivateEndpointConnectionName = "myConnection",
+            PrivateLinkServiceConnectionState = new AzureRM.AppConfiguration.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
+            {
+                Description = "Auto-Approved",
+                Status = "Approved",
+            },
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_endpoint_connection = azurerm.appconfiguration.latest.PrivateEndpointConnection("privateEndpointConnection",
+    config_store_name="contoso",
+    private_endpoint_connection_name="myConnection",
+    private_link_service_connection_state={
+        "description": "Auto-Approved",
+        "status": "Approved",
+    },
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateEndpointConnection = new azurerm.appconfiguration.latest.PrivateEndpointConnection("privateEndpointConnection", {
+    configStoreName: "contoso",
+    privateEndpointConnectionName: "myConnection",
+    privateLinkServiceConnectionState: {
+        description: "Auto-Approved",
+        status: "Approved",
+    },
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateEndpointConnection Resource {#create}

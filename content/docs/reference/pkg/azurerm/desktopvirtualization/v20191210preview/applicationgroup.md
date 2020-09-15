@@ -12,6 +12,95 @@ meta_desc: "Explore the ApplicationGroup resource of the desktopvirtualization/v
 
 Represents a ApplicationGroup definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApplicationGroup_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var applicationGroup = new AzureRM.DesktopVirtualization.V20191210Preview.ApplicationGroup("applicationGroup", new AzureRM.DesktopVirtualization.V20191210Preview.ApplicationGroupArgs
+        {
+            ApplicationGroupName = "applicationGroup1",
+            ApplicationGroupType = "RemoteApp",
+            Description = "des1",
+            FriendlyName = "friendly",
+            HostPoolArmPath = "/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1",
+            Location = "centralus",
+            ResourceGroupName = "resourceGroup1",
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+application_group = azurerm.desktopvirtualization.v20191210preview.ApplicationGroup("applicationGroup",
+    application_group_name="applicationGroup1",
+    application_group_type="RemoteApp",
+    description="des1",
+    friendly_name="friendly",
+    host_pool_arm_path="/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1",
+    location="centralus",
+    resource_group_name="resourceGroup1",
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const applicationGroup = new azurerm.desktopvirtualization.v20191210preview.ApplicationGroup("applicationGroup", {
+    applicationGroupName: "applicationGroup1",
+    applicationGroupType: "RemoteApp",
+    description: "des1",
+    friendlyName: "friendly",
+    hostPoolArmPath: "/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1",
+    location: "centralus",
+    resourceGroupName: "resourceGroup1",
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApplicationGroup Resource {#create}

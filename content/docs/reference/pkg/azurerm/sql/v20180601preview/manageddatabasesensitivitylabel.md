@@ -12,6 +12,94 @@ meta_desc: "Explore the ManagedDatabaseSensitivityLabel resource of the sql/v201
 
 A sensitivity label.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Updates or creates a sensitivity label of a given column with all parameters in a managed database
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedDatabaseSensitivityLabel = new AzureRM.Sql.V20180601Preview.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel", new AzureRM.Sql.V20180601Preview.ManagedDatabaseSensitivityLabelArgs
+        {
+            ColumnName = "myColumn",
+            DatabaseName = "myDatabase",
+            InformationType = "PhoneNumber",
+            InformationTypeId = "d22fa6e9-5ee4-3bde-4c2b-a409604c4646",
+            LabelId = "bf91e08c-f4f0-478a-b016-25164b2a65ff",
+            LabelName = "PII",
+            ManagedInstanceName = "myManagedInstanceName",
+            ResourceGroupName = "myRG",
+            SchemaName = "dbo",
+            SensitivityLabelSource = "current",
+            TableName = "myTable",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_database_sensitivity_label = azurerm.sql.v20180601preview.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel",
+    column_name="myColumn",
+    database_name="myDatabase",
+    information_type="PhoneNumber",
+    information_type_id="d22fa6e9-5ee4-3bde-4c2b-a409604c4646",
+    label_id="bf91e08c-f4f0-478a-b016-25164b2a65ff",
+    label_name="PII",
+    managed_instance_name="myManagedInstanceName",
+    resource_group_name="myRG",
+    schema_name="dbo",
+    sensitivity_label_source="current",
+    table_name="myTable")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedDatabaseSensitivityLabel = new azurerm.sql.v20180601preview.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel", {
+    columnName: "myColumn",
+    databaseName: "myDatabase",
+    informationType: "PhoneNumber",
+    informationTypeId: "d22fa6e9-5ee4-3bde-4c2b-a409604c4646",
+    labelId: "bf91e08c-f4f0-478a-b016-25164b2a65ff",
+    labelName: "PII",
+    managedInstanceName: "myManagedInstanceName",
+    resourceGroupName: "myRG",
+    schemaName: "dbo",
+    sensitivityLabelSource: "current",
+    tableName: "myTable",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagedDatabaseSensitivityLabel Resource {#create}

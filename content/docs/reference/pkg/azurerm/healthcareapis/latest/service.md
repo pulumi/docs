@@ -12,6 +12,151 @@ meta_desc: "Explore the Service resource of the healthcareapis/latest module, in
 
 The description of the service.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or Update a service with all parameters
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var service = new AzureRM.HealthcareApis.Latest.Service("service", new AzureRM.HealthcareApis.Latest.ServiceArgs
+        {
+            Identity = new AzureRM.HealthcareApis.Latest.Inputs.ResourceIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Kind = "fhir-R4",
+            Location = "westus2",
+            ResourceGroupName = "rg1",
+            ResourceName = "service1",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+service = azurerm.healthcareapis.latest.Service("service",
+    identity={
+        "type": "SystemAssigned",
+    },
+    kind="fhir-R4",
+    location="westus2",
+    resource_group_name="rg1",
+    resource_name="service1",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const service = new azurerm.healthcareapis.latest.Service("service", {
+    identity: {
+        type: "SystemAssigned",
+    },
+    kind: "fhir-R4",
+    location: "westus2",
+    resourceGroupName: "rg1",
+    resourceName: "service1",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+### Create or Update a service with minimum parameters
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var service = new AzureRM.HealthcareApis.Latest.Service("service", new AzureRM.HealthcareApis.Latest.ServiceArgs
+        {
+            Kind = "fhir-R4",
+            Location = "westus2",
+            ResourceGroupName = "rg1",
+            ResourceName = "service2",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+service = azurerm.healthcareapis.latest.Service("service",
+    kind="fhir-R4",
+    location="westus2",
+    resource_group_name="rg1",
+    resource_name="service2",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const service = new azurerm.healthcareapis.latest.Service("service", {
+    kind: "fhir-R4",
+    location: "westus2",
+    resourceGroupName: "rg1",
+    resourceName: "service2",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Service Resource {#create}

@@ -12,6 +12,188 @@ meta_desc: "Explore the ManagedNetwork resource of the managednetwork/v20190601p
 
 The Managed Network resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ManagedNetworksPut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedNetwork = new AzureRM.ManagedNetwork.V20190601Preview.ManagedNetwork("managedNetwork", new AzureRM.ManagedNetwork.V20190601Preview.ManagedNetworkArgs
+        {
+            Location = "eastus",
+            ManagedNetworkName = "myManagedNetwork",
+            ResourceGroupName = "myResourceGroup",
+            Scope = new AzureRM.ManagedNetwork.V20190601Preview.Inputs.ScopeArgs
+            {
+                ManagementGroups = 
+                {
+                    new AzureRM.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                    {
+                        Id = "/providers/Microsoft.Management/managementGroups/20000000-0001-0000-0000-000000000000",
+                    },
+                    new AzureRM.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                    {
+                        Id = "/providers/Microsoft.Management/managementGroups/20000000-0002-0000-0000-000000000000",
+                    },
+                },
+                Subnets = 
+                {
+                    new AzureRM.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                    {
+                        Id = "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetA",
+                    },
+                    new AzureRM.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                    {
+                        Id = "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetB",
+                    },
+                },
+                Subscriptions = 
+                {
+                    new AzureRM.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                    {
+                        Id = "subscriptionA",
+                    },
+                    new AzureRM.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                    {
+                        Id = "subscriptionB",
+                    },
+                },
+                VirtualNetworks = 
+                {
+                    new AzureRM.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                    {
+                        Id = "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
+                    },
+                    new AzureRM.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
+                    {
+                        Id = "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
+                    },
+                },
+            },
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+managed_network = azurerm.managednetwork.v20190601preview.ManagedNetwork("managedNetwork",
+    location="eastus",
+    managed_network_name="myManagedNetwork",
+    resource_group_name="myResourceGroup",
+    scope={
+        "managementGroups": [
+            {
+                "id": "/providers/Microsoft.Management/managementGroups/20000000-0001-0000-0000-000000000000",
+            },
+            {
+                "id": "/providers/Microsoft.Management/managementGroups/20000000-0002-0000-0000-000000000000",
+            },
+        ],
+        "subnets": [
+            {
+                "id": "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetA",
+            },
+            {
+                "id": "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetB",
+            },
+        ],
+        "subscriptions": [
+            {
+                "id": "subscriptionA",
+            },
+            {
+                "id": "subscriptionB",
+            },
+        ],
+        "virtualNetworks": [
+            {
+                "id": "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
+            },
+            {
+                "id": "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
+            },
+        ],
+    },
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managedNetwork = new azurerm.managednetwork.v20190601preview.ManagedNetwork("managedNetwork", {
+    location: "eastus",
+    managedNetworkName: "myManagedNetwork",
+    resourceGroupName: "myResourceGroup",
+    scope: {
+        managementGroups: [
+            {
+                id: "/providers/Microsoft.Management/managementGroups/20000000-0001-0000-0000-000000000000",
+            },
+            {
+                id: "/providers/Microsoft.Management/managementGroups/20000000-0002-0000-0000-000000000000",
+            },
+        ],
+        subnets: [
+            {
+                id: "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetA",
+            },
+            {
+                id: "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetB",
+            },
+        ],
+        subscriptions: [
+            {
+                id: "subscriptionA",
+            },
+            {
+                id: "subscriptionB",
+            },
+        ],
+        virtualNetworks: [
+            {
+                id: "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
+            },
+            {
+                id: "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
+            },
+        ],
+    },
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagedNetwork Resource {#create}

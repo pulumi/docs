@@ -12,6 +12,73 @@ meta_desc: "Explore the Binding resource of the appplatform/latest module, inclu
 
 Binding resource payload
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Bindings_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new AzureRM.AppPlatform.Latest.Binding("binding", new AzureRM.AppPlatform.Latest.BindingArgs
+        {
+            AppName = "myapp",
+            BindingName = "mybinding",
+            ResourceGroupName = "myResourceGroup",
+            ServiceName = "myservice",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+binding = azurerm.appplatform.latest.Binding("binding",
+    app_name="myapp",
+    binding_name="mybinding",
+    resource_group_name="myResourceGroup",
+    service_name="myservice")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const binding = new azurerm.appplatform.latest.Binding("binding", {
+    appName: "myapp",
+    bindingName: "mybinding",
+    resourceGroupName: "myResourceGroup",
+    serviceName: "myservice",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Binding Resource {#create}

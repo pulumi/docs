@@ -12,6 +12,108 @@ meta_desc: "Explore the StaticSite resource of the web/latest module, including 
 
 Static Site ARM resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a static site
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var staticSite = new AzureRM.Web.Latest.StaticSite("staticSite", new AzureRM.Web.Latest.StaticSiteArgs
+        {
+            Branch = "master",
+            BuildProperties = new AzureRM.Web.Latest.Inputs.StaticSiteBuildPropertiesArgs
+            {
+                ApiLocation = "api",
+                AppArtifactLocation = "build",
+                AppLocation = "app",
+            },
+            Location = "West US 2",
+            Name = "testStaticSite0",
+            RepositoryToken = "repoToken123",
+            RepositoryUrl = "https://github.com/username/RepoName",
+            ResourceGroupName = "rg",
+            Sku = new AzureRM.Web.Latest.Inputs.SkuDescriptionArgs
+            {
+                Name = "Basic",
+                Tier = "Basic",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+static_site = azurerm.web.latest.StaticSite("staticSite",
+    branch="master",
+    build_properties={
+        "apiLocation": "api",
+        "appArtifactLocation": "build",
+        "appLocation": "app",
+    },
+    location="West US 2",
+    name="testStaticSite0",
+    repository_token="repoToken123",
+    repository_url="https://github.com/username/RepoName",
+    resource_group_name="rg",
+    sku={
+        "name": "Basic",
+        "tier": "Basic",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const staticSite = new azurerm.web.latest.StaticSite("staticSite", {
+    branch: "master",
+    buildProperties: {
+        apiLocation: "api",
+        appArtifactLocation: "build",
+        appLocation: "app",
+    },
+    location: "West US 2",
+    name: "testStaticSite0",
+    repositoryToken: "repoToken123",
+    repositoryUrl: "https://github.com/username/RepoName",
+    resourceGroupName: "rg",
+    sku: {
+        name: "Basic",
+        tier: "Basic",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a StaticSite Resource {#create}

@@ -12,6 +12,120 @@ meta_desc: "Explore the BackupSchedule resource of the storsimple/latest module,
 
 The backup schedule.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### BackupSchedulesCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var backupSchedule = new AzureRM.StorSimple.Latest.BackupSchedule("backupSchedule", new AzureRM.StorSimple.Latest.BackupScheduleArgs
+        {
+            BackupPolicyName = "BkUpPolicy01ForSDKTest",
+            BackupScheduleName = "schedule2",
+            BackupType = "CloudSnapshot",
+            DeviceName = "Device05ForSDKTest",
+            Kind = "Series8000",
+            ManagerName = "ManagerForSDKTest1",
+            ResourceGroupName = "ResourceGroupForSDKTest",
+            RetentionCount = 1,
+            ScheduleRecurrence = new AzureRM.StorSimple.Latest.Inputs.ScheduleRecurrenceArgs
+            {
+                RecurrenceType = "Weekly",
+                RecurrenceValue = 1,
+                WeeklyDaysList = 
+                {
+                    "Friday",
+                    "Thursday",
+                    "Monday",
+                },
+            },
+            ScheduleStatus = "Enabled",
+            StartTime = "2017-06-24T01:00:00Z",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+backup_schedule = azurerm.storsimple.latest.BackupSchedule("backupSchedule",
+    backup_policy_name="BkUpPolicy01ForSDKTest",
+    backup_schedule_name="schedule2",
+    backup_type="CloudSnapshot",
+    device_name="Device05ForSDKTest",
+    kind="Series8000",
+    manager_name="ManagerForSDKTest1",
+    resource_group_name="ResourceGroupForSDKTest",
+    retention_count=1,
+    schedule_recurrence={
+        "recurrenceType": "Weekly",
+        "recurrenceValue": 1,
+        "weeklyDaysList": [
+            "Friday",
+            "Thursday",
+            "Monday",
+        ],
+    },
+    schedule_status="Enabled",
+    start_time="2017-06-24T01:00:00Z")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const backupSchedule = new azurerm.storsimple.latest.BackupSchedule("backupSchedule", {
+    backupPolicyName: "BkUpPolicy01ForSDKTest",
+    backupScheduleName: "schedule2",
+    backupType: "CloudSnapshot",
+    deviceName: "Device05ForSDKTest",
+    kind: "Series8000",
+    managerName: "ManagerForSDKTest1",
+    resourceGroupName: "ResourceGroupForSDKTest",
+    retentionCount: 1,
+    scheduleRecurrence: {
+        recurrenceType: "Weekly",
+        recurrenceValue: 1,
+        weeklyDaysList: [
+            "Friday",
+            "Thursday",
+            "Monday",
+        ],
+    },
+    scheduleStatus: "Enabled",
+    startTime: "2017-06-24T01:00:00Z",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BackupSchedule Resource {#create}

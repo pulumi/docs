@@ -12,6 +12,73 @@ meta_desc: "Explore the VirtualNetworkRule resource of the datalakestore/latest 
 
 Data Lake Store virtual network rule information.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates the specified virtual network rule. During update, the virtual network rule with the specified name will be replaced with this new virtual network rule.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualNetworkRule = new AzureRM.DataLakeStore.Latest.VirtualNetworkRule("virtualNetworkRule", new AzureRM.DataLakeStore.Latest.VirtualNetworkRuleArgs
+        {
+            AccountName = "contosoadla",
+            ResourceGroupName = "contosorg",
+            SubnetId = "test_subnetId",
+            VirtualNetworkRuleName = "test_virtual_network_rules_name",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_network_rule = azurerm.datalakestore.latest.VirtualNetworkRule("virtualNetworkRule",
+    account_name="contosoadla",
+    resource_group_name="contosorg",
+    subnet_id="test_subnetId",
+    virtual_network_rule_name="test_virtual_network_rules_name")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualNetworkRule = new azurerm.datalakestore.latest.VirtualNetworkRule("virtualNetworkRule", {
+    accountName: "contosoadla",
+    resourceGroupName: "contosorg",
+    subnetId: "test_subnetId",
+    virtualNetworkRuleName: "test_virtual_network_rules_name",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualNetworkRule Resource {#create}

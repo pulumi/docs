@@ -12,6 +12,73 @@ meta_desc: "Explore the Topic resource of the servicebus/latest module, includin
 
 Description of topic resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### TopicCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var topic = new AzureRM.ServiceBus.Latest.Topic("topic", new AzureRM.ServiceBus.Latest.TopicArgs
+        {
+            EnableExpress = true,
+            NamespaceName = "sdk-Namespace-1617",
+            ResourceGroupName = "ArunMonocle",
+            TopicName = "sdk-Topics-5488",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+topic = azurerm.servicebus.latest.Topic("topic",
+    enable_express=True,
+    namespace_name="sdk-Namespace-1617",
+    resource_group_name="ArunMonocle",
+    topic_name="sdk-Topics-5488")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const topic = new azurerm.servicebus.latest.Topic("topic", {
+    enableExpress: true,
+    namespaceName: "sdk-Namespace-1617",
+    resourceGroupName: "ArunMonocle",
+    topicName: "sdk-Topics-5488",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Topic Resource {#create}

@@ -12,6 +12,252 @@ meta_desc: "Explore the NodeType resource of the servicefabric/v20200101preview 
 
 Describes a node type in the cluster, each node type represents sub set of nodes in the cluster.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Put a node type with maximum parameters
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var nodeType = new AzureRM.ServiceFabric.V20200101Preview.NodeType("nodeType", new AzureRM.ServiceFabric.V20200101Preview.NodeTypeArgs
+        {
+            Capacities = 
+            {
+                { "ClientConnections", "65536" },
+            },
+            ClusterName = "myCluster",
+            DataDiskSizeGB = 200,
+            IsPrimary = false,
+            NodeTypeName = "BE",
+            PlacementProperties = 
+            {
+                { "HasSSD", "true" },
+                { "NodeColor", "green" },
+                { "SomeProperty", "5" },
+            },
+            ResourceGroupName = "resRg",
+            VmExtensions = 
+            {
+                new AzureRM.ServiceFabric.V20200101Preview.Inputs.VMSSExtensionArgs
+                {
+                    Name = "Microsoft.Azure.Geneva.GenevaMonitoring",
+                },
+            },
+            VmImageOffer = "WindowsServer",
+            VmImagePublisher = "MicrosoftWindowsServer",
+            VmImageSku = "2016-Datacenter-Server-Core",
+            VmImageVersion = "latest",
+            VmInstanceCount = 10,
+            VmSecrets = 
+            {
+                new AzureRM.ServiceFabric.V20200101Preview.Inputs.VaultSecretGroupArgs
+                {
+                    SourceVault = new AzureRM.ServiceFabric.V20200101Preview.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resRg/providers/Microsoft.KeyVault/vaults/myVault",
+                    },
+                    VaultCertificates = 
+                    {
+                        new AzureRM.ServiceFabric.V20200101Preview.Inputs.VaultCertificateArgs
+                        {
+                            CertificateStore = "My",
+                            CertificateUrl = "https://myVault.vault.azure.net:443/secrets/myCert/ef1a31d39e1f46bca33def54b6cda54c",
+                        },
+                    },
+                },
+            },
+            VmSize = "Standard_D3",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+node_type = azurerm.servicefabric.v20200101preview.NodeType("nodeType",
+    capacities={
+        "ClientConnections": "65536",
+    },
+    cluster_name="myCluster",
+    data_disk_size_gb=200,
+    is_primary=False,
+    node_type_name="BE",
+    placement_properties={
+        "HasSSD": "true",
+        "NodeColor": "green",
+        "SomeProperty": "5",
+    },
+    resource_group_name="resRg",
+    vm_extensions=[{
+        "name": "Microsoft.Azure.Geneva.GenevaMonitoring",
+    }],
+    vm_image_offer="WindowsServer",
+    vm_image_publisher="MicrosoftWindowsServer",
+    vm_image_sku="2016-Datacenter-Server-Core",
+    vm_image_version="latest",
+    vm_instance_count=10,
+    vm_secrets=[{
+        "sourceVault": {
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resRg/providers/Microsoft.KeyVault/vaults/myVault",
+        },
+        "vaultCertificates": [{
+            "certificateStore": "My",
+            "certificateUrl": "https://myVault.vault.azure.net:443/secrets/myCert/ef1a31d39e1f46bca33def54b6cda54c",
+        }],
+    }],
+    vm_size="Standard_D3")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const nodeType = new azurerm.servicefabric.v20200101preview.NodeType("nodeType", {
+    capacities: {
+        ClientConnections: "65536",
+    },
+    clusterName: "myCluster",
+    dataDiskSizeGB: 200,
+    isPrimary: false,
+    nodeTypeName: "BE",
+    placementProperties: {
+        HasSSD: "true",
+        NodeColor: "green",
+        SomeProperty: "5",
+    },
+    resourceGroupName: "resRg",
+    vmExtensions: [{
+        name: "Microsoft.Azure.Geneva.GenevaMonitoring",
+    }],
+    vmImageOffer: "WindowsServer",
+    vmImagePublisher: "MicrosoftWindowsServer",
+    vmImageSku: "2016-Datacenter-Server-Core",
+    vmImageVersion: "latest",
+    vmInstanceCount: 10,
+    vmSecrets: [{
+        sourceVault: {
+            id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resRg/providers/Microsoft.KeyVault/vaults/myVault",
+        },
+        vaultCertificates: [{
+            certificateStore: "My",
+            certificateUrl: "https://myVault.vault.azure.net:443/secrets/myCert/ef1a31d39e1f46bca33def54b6cda54c",
+        }],
+    }],
+    vmSize: "Standard_D3",
+});
+
+```
+
+{{% /example %}}
+
+### Put a node type with minimum parameters
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var nodeType = new AzureRM.ServiceFabric.V20200101Preview.NodeType("nodeType", new AzureRM.ServiceFabric.V20200101Preview.NodeTypeArgs
+        {
+            ClusterName = "myCluster",
+            DataDiskSizeGB = 200,
+            IsPrimary = false,
+            NodeTypeName = "BE",
+            ResourceGroupName = "resRg",
+            VmImageOffer = "WindowsServer",
+            VmImagePublisher = "MicrosoftWindowsServer",
+            VmImageSku = "2016-Datacenter-Server-Core",
+            VmImageVersion = "latest",
+            VmInstanceCount = 10,
+            VmSize = "Standard_D3",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+node_type = azurerm.servicefabric.v20200101preview.NodeType("nodeType",
+    cluster_name="myCluster",
+    data_disk_size_gb=200,
+    is_primary=False,
+    node_type_name="BE",
+    resource_group_name="resRg",
+    vm_image_offer="WindowsServer",
+    vm_image_publisher="MicrosoftWindowsServer",
+    vm_image_sku="2016-Datacenter-Server-Core",
+    vm_image_version="latest",
+    vm_instance_count=10,
+    vm_size="Standard_D3")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const nodeType = new azurerm.servicefabric.v20200101preview.NodeType("nodeType", {
+    clusterName: "myCluster",
+    dataDiskSizeGB: 200,
+    isPrimary: false,
+    nodeTypeName: "BE",
+    resourceGroupName: "resRg",
+    vmImageOffer: "WindowsServer",
+    vmImagePublisher: "MicrosoftWindowsServer",
+    vmImageSku: "2016-Datacenter-Server-Core",
+    vmImageVersion: "latest",
+    vmInstanceCount: 10,
+    vmSize: "Standard_D3",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NodeType Resource {#create}

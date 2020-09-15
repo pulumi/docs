@@ -12,6 +12,94 @@ meta_desc: "Explore the SensitivityLabel resource of the sql/v20170301preview mo
 
 A sensitivity label.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Updates the sensitivity label of a given column with all parameters
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sensitivityLabel = new AzureRM.Sql.V20170301Preview.SensitivityLabel("sensitivityLabel", new AzureRM.Sql.V20170301Preview.SensitivityLabelArgs
+        {
+            ColumnName = "myColumn",
+            DatabaseName = "myDatabase",
+            InformationType = "PhoneNumber",
+            InformationTypeId = "d22fa6e9-5ee4-3bde-4c2b-a409604c4646",
+            LabelId = "bf91e08c-f4f0-478a-b016-25164b2a65ff",
+            LabelName = "PII",
+            ResourceGroupName = "myRG",
+            SchemaName = "dbo",
+            SensitivityLabelSource = "current",
+            ServerName = "myServer",
+            TableName = "myTable",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+sensitivity_label = azurerm.sql.v20170301preview.SensitivityLabel("sensitivityLabel",
+    column_name="myColumn",
+    database_name="myDatabase",
+    information_type="PhoneNumber",
+    information_type_id="d22fa6e9-5ee4-3bde-4c2b-a409604c4646",
+    label_id="bf91e08c-f4f0-478a-b016-25164b2a65ff",
+    label_name="PII",
+    resource_group_name="myRG",
+    schema_name="dbo",
+    sensitivity_label_source="current",
+    server_name="myServer",
+    table_name="myTable")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const sensitivityLabel = new azurerm.sql.v20170301preview.SensitivityLabel("sensitivityLabel", {
+    columnName: "myColumn",
+    databaseName: "myDatabase",
+    informationType: "PhoneNumber",
+    informationTypeId: "d22fa6e9-5ee4-3bde-4c2b-a409604c4646",
+    labelId: "bf91e08c-f4f0-478a-b016-25164b2a65ff",
+    labelName: "PII",
+    resourceGroupName: "myRG",
+    schemaName: "dbo",
+    sensitivityLabelSource: "current",
+    serverName: "myServer",
+    tableName: "myTable",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SensitivityLabel Resource {#create}

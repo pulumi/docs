@@ -12,6 +12,93 @@ meta_desc: "Explore the Workspace resource of the operationalinsights/latest mod
 
 The top level Workspace resource container.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### WorkspacesCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workspace = new AzureRM.OperationalInsights.Latest.Workspace("workspace", new AzureRM.OperationalInsights.Latest.WorkspaceArgs
+        {
+            Location = "australiasoutheast",
+            ResourceGroupName = "oiautorest6685",
+            RetentionInDays = 30,
+            Sku = new AzureRM.OperationalInsights.Latest.Inputs.WorkspaceSkuArgs
+            {
+                Name = "PerGB2018",
+            },
+            Tags = 
+            {
+                { "tag1", "val1" },
+            },
+            WorkspaceName = "oiautorest6685",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+workspace = azurerm.operationalinsights.latest.Workspace("workspace",
+    location="australiasoutheast",
+    resource_group_name="oiautorest6685",
+    retention_in_days=30,
+    sku={
+        "name": "PerGB2018",
+    },
+    tags={
+        "tag1": "val1",
+    },
+    workspace_name="oiautorest6685")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const workspace = new azurerm.operationalinsights.latest.Workspace("workspace", {
+    location: "australiasoutheast",
+    resourceGroupName: "oiautorest6685",
+    retentionInDays: 30,
+    sku: {
+        name: "PerGB2018",
+    },
+    tags: {
+        tag1: "val1",
+    },
+    workspaceName: "oiautorest6685",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Workspace Resource {#create}

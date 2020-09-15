@@ -12,6 +12,106 @@ meta_desc: "Explore the NatGateway resource of the network/latest module, includ
 
 Nat Gateway resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create nat gateway
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var natGateway = new AzureRM.Network.Latest.NatGateway("natGateway", new AzureRM.Network.Latest.NatGatewayArgs
+        {
+            Location = "westus",
+            NatGatewayName = "test-natgateway",
+            PublicIpAddresses = 
+            {
+                new AzureRM.Network.Latest.Inputs.SubResourceArgs
+                {
+                    Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/PublicIpAddress1",
+                },
+            },
+            PublicIpPrefixes = 
+            {
+                new AzureRM.Network.Latest.Inputs.SubResourceArgs
+                {
+                    Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPPrefixes/PublicIpPrefix1",
+                },
+            },
+            ResourceGroupName = "rg1",
+            Sku = new AzureRM.Network.Latest.Inputs.NatGatewaySkuArgs
+            {
+                Name = "Standard",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+nat_gateway = azurerm.network.latest.NatGateway("natGateway",
+    location="westus",
+    nat_gateway_name="test-natgateway",
+    public_ip_addresses=[{
+        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/PublicIpAddress1",
+    }],
+    public_ip_prefixes=[{
+        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPPrefixes/PublicIpPrefix1",
+    }],
+    resource_group_name="rg1",
+    sku={
+        "name": "Standard",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const natGateway = new azurerm.network.latest.NatGateway("natGateway", {
+    location: "westus",
+    natGatewayName: "test-natgateway",
+    publicIpAddresses: [{
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/PublicIpAddress1",
+    }],
+    publicIpPrefixes: [{
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPPrefixes/PublicIpPrefix1",
+    }],
+    resourceGroupName: "rg1",
+    sku: {
+        name: "Standard",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NatGateway Resource {#create}

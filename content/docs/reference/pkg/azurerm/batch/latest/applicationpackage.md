@@ -12,6 +12,73 @@ meta_desc: "Explore the ApplicationPackage resource of the batch/latest module, 
 
 An application package which represents a particular version of an application.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApplicationPackageCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var applicationPackage = new AzureRM.Batch.Latest.ApplicationPackage("applicationPackage", new AzureRM.Batch.Latest.ApplicationPackageArgs
+        {
+            AccountName = "sampleacct",
+            ApplicationName = "app1",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            VersionName = "1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+application_package = azurerm.batch.latest.ApplicationPackage("applicationPackage",
+    account_name="sampleacct",
+    application_name="app1",
+    resource_group_name="default-azurebatch-japaneast",
+    version_name="1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const applicationPackage = new azurerm.batch.latest.ApplicationPackage("applicationPackage", {
+    accountName: "sampleacct",
+    applicationName: "app1",
+    resourceGroupName: "default-azurebatch-japaneast",
+    versionName: "1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApplicationPackage Resource {#create}

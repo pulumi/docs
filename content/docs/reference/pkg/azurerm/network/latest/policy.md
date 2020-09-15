@@ -12,6 +12,234 @@ meta_desc: "Explore the Policy resource of the network/latest module, including 
 
 Defines web application firewall policy.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates specific policy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var policy = new AzureRM.Network.Latest.Policy("policy", new AzureRM.Network.Latest.PolicyArgs
+        {
+            CustomRules = new AzureRM.Network.Latest.Inputs.CustomRuleListArgs
+            {
+                Rules = 
+                {
+                    new AzureRM.Network.Latest.Inputs.CustomRuleArgs
+                    {
+                        Action = "Block",
+                        MatchConditions = 
+                        {
+                            new AzureRM.Network.Latest.Inputs.MatchConditionArgs
+                            {
+                                Operator = "IPMatch",
+                            },
+                        },
+                        Name = "Rule1",
+                        Priority = 1,
+                        RateLimitThreshold = 1000,
+                        RuleType = "RateLimitRule",
+                    },
+                    new AzureRM.Network.Latest.Inputs.CustomRuleArgs
+                    {
+                        Action = "Block",
+                        MatchConditions = 
+                        {
+                            new AzureRM.Network.Latest.Inputs.MatchConditionArgs
+                            {
+                                Operator = "GeoMatch",
+                            },
+                            new AzureRM.Network.Latest.Inputs.MatchConditionArgs
+                            {
+                                Operator = "Contains",
+                                Transforms = 
+                                {
+                                    "Lowercase",
+                                },
+                            },
+                        },
+                        Name = "Rule2",
+                        Priority = 2,
+                        RuleType = "MatchRule",
+                    },
+                },
+            },
+            ManagedRules = new AzureRM.Network.Latest.Inputs.ManagedRuleSetListArgs
+            {
+                ManagedRuleSets = 
+                {
+                    new AzureRM.Network.Latest.Inputs.ManagedRuleSetArgs
+                    {
+                        RuleGroupOverrides = 
+                        {
+                            new AzureRM.Network.Latest.Inputs.ManagedRuleGroupOverrideArgs
+                            {
+                                RuleGroupName = "SQLI",
+                                Rules = 
+                                {
+                                    new AzureRM.Network.Latest.Inputs.ManagedRuleOverrideArgs
+                                    {
+                                        RuleId = "942100",
+                                    },
+                                    new AzureRM.Network.Latest.Inputs.ManagedRuleOverrideArgs
+                                    {
+                                        RuleId = "942110",
+                                    },
+                                },
+                            },
+                        },
+                        RuleSetType = "DefaultRuleSet",
+                        RuleSetVersion = "1.0",
+                    },
+                },
+            },
+            PolicyName = "Policy1",
+            PolicySettings = ,
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+policy = azurerm.network.latest.Policy("policy",
+    custom_rules={
+        "rules": [
+            {
+                "action": "Block",
+                "matchConditions": [{
+                    "operator": "IPMatch",
+                }],
+                "name": "Rule1",
+                "priority": 1,
+                "rateLimitThreshold": 1000,
+                "ruleType": "RateLimitRule",
+            },
+            {
+                "action": "Block",
+                "matchConditions": [
+                    {
+                        "operator": "GeoMatch",
+                    },
+                    {
+                        "operator": "Contains",
+                        "transforms": ["Lowercase"],
+                    },
+                ],
+                "name": "Rule2",
+                "priority": 2,
+                "ruleType": "MatchRule",
+            },
+        ],
+    },
+    managed_rules={
+        "managedRuleSets": [{
+            "ruleGroupOverrides": [{
+                "ruleGroupName": "SQLI",
+                "rules": [
+                    {
+                        "ruleId": "942100",
+                    },
+                    {
+                        "ruleId": "942110",
+                    },
+                ],
+            }],
+            "ruleSetType": "DefaultRuleSet",
+            "ruleSetVersion": "1.0",
+        }],
+    },
+    policy_name="Policy1",
+    policy_settings={},
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const policy = new azurerm.network.latest.Policy("policy", {
+    customRules: {
+        rules: [
+            {
+                action: "Block",
+                matchConditions: [{
+                    operator: "IPMatch",
+                }],
+                name: "Rule1",
+                priority: 1,
+                rateLimitThreshold: 1000,
+                ruleType: "RateLimitRule",
+            },
+            {
+                action: "Block",
+                matchConditions: [
+                    {
+                        operator: "GeoMatch",
+                    },
+                    {
+                        operator: "Contains",
+                        transforms: ["Lowercase"],
+                    },
+                ],
+                name: "Rule2",
+                priority: 2,
+                ruleType: "MatchRule",
+            },
+        ],
+    },
+    managedRules: {
+        managedRuleSets: [{
+            ruleGroupOverrides: [{
+                ruleGroupName: "SQLI",
+                rules: [
+                    {
+                        ruleId: "942100",
+                    },
+                    {
+                        ruleId: "942110",
+                    },
+                ],
+            }],
+            ruleSetType: "DefaultRuleSet",
+            ruleSetVersion: "1.0",
+        }],
+    },
+    policyName: "Policy1",
+    policySettings: {},
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Policy Resource {#create}

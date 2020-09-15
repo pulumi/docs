@@ -12,6 +12,92 @@ meta_desc: "Explore the BandwidthSchedule resource of the databoxedge/latest mod
 
 The bandwidth schedule details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### BandwidthSchedulePut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bandwidthSchedule = new AzureRM.DataBoxEdge.Latest.BandwidthSchedule("bandwidthSchedule", new AzureRM.DataBoxEdge.Latest.BandwidthScheduleArgs
+        {
+            Days = 
+            {
+                "Sunday",
+                "Monday",
+            },
+            DeviceName = "testedgedevice",
+            Name = "bandwidth-1",
+            RateInMbps = 100,
+            ResourceGroupName = "GroupForEdgeAutomation",
+            Start = "0:0:0",
+            Stop = "13:59:0",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+bandwidth_schedule = azurerm.databoxedge.latest.BandwidthSchedule("bandwidthSchedule",
+    days=[
+        "Sunday",
+        "Monday",
+    ],
+    device_name="testedgedevice",
+    name="bandwidth-1",
+    rate_in_mbps=100,
+    resource_group_name="GroupForEdgeAutomation",
+    start="0:0:0",
+    stop="13:59:0")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const bandwidthSchedule = new azurerm.databoxedge.latest.BandwidthSchedule("bandwidthSchedule", {
+    days: [
+        "Sunday",
+        "Monday",
+    ],
+    deviceName: "testedgedevice",
+    name: "bandwidth-1",
+    rateInMbps: 100,
+    resourceGroupName: "GroupForEdgeAutomation",
+    start: "0:0:0",
+    stop: "13:59:0",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BandwidthSchedule Resource {#create}

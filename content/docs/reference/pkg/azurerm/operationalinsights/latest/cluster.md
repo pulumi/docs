@@ -12,6 +12,93 @@ meta_desc: "Explore the Cluster resource of the operationalinsights/latest modul
 
 The top level Log Analytics cluster resource container.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ClustersCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cluster = new AzureRM.OperationalInsights.Latest.Cluster("cluster", new AzureRM.OperationalInsights.Latest.ClusterArgs
+        {
+            ClusterName = "oiautorest6685",
+            Location = "australiasoutheast",
+            ResourceGroupName = "oiautorest6685",
+            Sku = new AzureRM.OperationalInsights.Latest.Inputs.ClusterSkuArgs
+            {
+                Capacity = 1000,
+                Name = "CapacityReservation",
+            },
+            Tags = 
+            {
+                { "tag1", "val1" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cluster = azurerm.operationalinsights.latest.Cluster("cluster",
+    cluster_name="oiautorest6685",
+    location="australiasoutheast",
+    resource_group_name="oiautorest6685",
+    sku={
+        "capacity": 1000,
+        "name": "CapacityReservation",
+    },
+    tags={
+        "tag1": "val1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cluster = new azurerm.operationalinsights.latest.Cluster("cluster", {
+    clusterName: "oiautorest6685",
+    location: "australiasoutheast",
+    resourceGroupName: "oiautorest6685",
+    sku: {
+        capacity: 1000,
+        name: "CapacityReservation",
+    },
+    tags: {
+        tag1: "val1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}

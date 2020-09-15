@@ -12,6 +12,749 @@ meta_desc: "Explore the RecordSet resource of the network/latest module, includi
 
 Describes a DNS record set (a collection of DNS records with the same name and type) in a Private DNS zone.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PUT Private DNS Zone A Record Set
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var recordSet = new AzureRM.Network.Latest.RecordSet("recordSet", new AzureRM.Network.Latest.RecordSetArgs
+        {
+            ARecords = 
+            {
+                new AzureRM.Network.Latest.Inputs.ARecordArgs
+                {
+                    Ipv4Address = "1.2.3.4",
+                },
+            },
+            Metadata = 
+            {
+                { "key1", "value1" },
+            },
+            PrivateZoneName = "privatezone1.com",
+            RecordType = "A",
+            RelativeRecordSetName = "recordA",
+            ResourceGroupName = "resourceGroup1",
+            Ttl = 3600,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+record_set = azurerm.network.latest.RecordSet("recordSet",
+    a_records=[{
+        "ipv4Address": "1.2.3.4",
+    }],
+    metadata={
+        "key1": "value1",
+    },
+    private_zone_name="privatezone1.com",
+    record_type="A",
+    relative_record_set_name="recordA",
+    resource_group_name="resourceGroup1",
+    ttl=3600)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const recordSet = new azurerm.network.latest.RecordSet("recordSet", {
+    aRecords: [{
+        ipv4Address: "1.2.3.4",
+    }],
+    metadata: {
+        key1: "value1",
+    },
+    privateZoneName: "privatezone1.com",
+    recordType: "A",
+    relativeRecordSetName: "recordA",
+    resourceGroupName: "resourceGroup1",
+    ttl: 3600,
+});
+
+```
+
+{{% /example %}}
+
+### PUT Private DNS Zone AAAA Record Set
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var recordSet = new AzureRM.Network.Latest.RecordSet("recordSet", new AzureRM.Network.Latest.RecordSetArgs
+        {
+            AaaaRecords = 
+            {
+                new AzureRM.Network.Latest.Inputs.AaaaRecordArgs
+                {
+                    Ipv6Address = "::1",
+                },
+            },
+            Metadata = 
+            {
+                { "key1", "value1" },
+            },
+            PrivateZoneName = "privatezone1.com",
+            RecordType = "AAAA",
+            RelativeRecordSetName = "recordAAAA",
+            ResourceGroupName = "resourceGroup1",
+            Ttl = 3600,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+record_set = azurerm.network.latest.RecordSet("recordSet",
+    aaaa_records=[{
+        "ipv6Address": "::1",
+    }],
+    metadata={
+        "key1": "value1",
+    },
+    private_zone_name="privatezone1.com",
+    record_type="AAAA",
+    relative_record_set_name="recordAAAA",
+    resource_group_name="resourceGroup1",
+    ttl=3600)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const recordSet = new azurerm.network.latest.RecordSet("recordSet", {
+    aaaaRecords: [{
+        ipv6Address: "::1",
+    }],
+    metadata: {
+        key1: "value1",
+    },
+    privateZoneName: "privatezone1.com",
+    recordType: "AAAA",
+    relativeRecordSetName: "recordAAAA",
+    resourceGroupName: "resourceGroup1",
+    ttl: 3600,
+});
+
+```
+
+{{% /example %}}
+
+### PUT Private DNS Zone CNAME Record Set
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var recordSet = new AzureRM.Network.Latest.RecordSet("recordSet", new AzureRM.Network.Latest.RecordSetArgs
+        {
+            CnameRecord = new AzureRM.Network.Latest.Inputs.CnameRecordArgs
+            {
+                Cname = "contoso.com",
+            },
+            Metadata = 
+            {
+                { "key1", "value1" },
+            },
+            PrivateZoneName = "privatezone1.com",
+            RecordType = "CNAME",
+            RelativeRecordSetName = "recordCNAME",
+            ResourceGroupName = "resourceGroup1",
+            Ttl = 3600,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+record_set = azurerm.network.latest.RecordSet("recordSet",
+    cname_record={
+        "cname": "contoso.com",
+    },
+    metadata={
+        "key1": "value1",
+    },
+    private_zone_name="privatezone1.com",
+    record_type="CNAME",
+    relative_record_set_name="recordCNAME",
+    resource_group_name="resourceGroup1",
+    ttl=3600)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const recordSet = new azurerm.network.latest.RecordSet("recordSet", {
+    cnameRecord: {
+        cname: "contoso.com",
+    },
+    metadata: {
+        key1: "value1",
+    },
+    privateZoneName: "privatezone1.com",
+    recordType: "CNAME",
+    relativeRecordSetName: "recordCNAME",
+    resourceGroupName: "resourceGroup1",
+    ttl: 3600,
+});
+
+```
+
+{{% /example %}}
+
+### PUT Private DNS Zone MX Record Set
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var recordSet = new AzureRM.Network.Latest.RecordSet("recordSet", new AzureRM.Network.Latest.RecordSetArgs
+        {
+            Metadata = 
+            {
+                { "key1", "value1" },
+            },
+            MxRecords = 
+            {
+                new AzureRM.Network.Latest.Inputs.MxRecordArgs
+                {
+                    Exchange = "mail.privatezone1.com",
+                    Preference = 0,
+                },
+            },
+            PrivateZoneName = "privatezone1.com",
+            RecordType = "MX",
+            RelativeRecordSetName = "recordMX",
+            ResourceGroupName = "resourceGroup1",
+            Ttl = 3600,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+record_set = azurerm.network.latest.RecordSet("recordSet",
+    metadata={
+        "key1": "value1",
+    },
+    mx_records=[{
+        "exchange": "mail.privatezone1.com",
+        "preference": 0,
+    }],
+    private_zone_name="privatezone1.com",
+    record_type="MX",
+    relative_record_set_name="recordMX",
+    resource_group_name="resourceGroup1",
+    ttl=3600)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const recordSet = new azurerm.network.latest.RecordSet("recordSet", {
+    metadata: {
+        key1: "value1",
+    },
+    mxRecords: [{
+        exchange: "mail.privatezone1.com",
+        preference: 0,
+    }],
+    privateZoneName: "privatezone1.com",
+    recordType: "MX",
+    relativeRecordSetName: "recordMX",
+    resourceGroupName: "resourceGroup1",
+    ttl: 3600,
+});
+
+```
+
+{{% /example %}}
+
+### PUT Private DNS Zone PTR Record Set
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var recordSet = new AzureRM.Network.Latest.RecordSet("recordSet", new AzureRM.Network.Latest.RecordSetArgs
+        {
+            Metadata = 
+            {
+                { "key1", "value1" },
+            },
+            PrivateZoneName = "0.0.127.in-addr.arpa",
+            PtrRecords = 
+            {
+                new AzureRM.Network.Latest.Inputs.PtrRecordArgs
+                {
+                    Ptrdname = "localhost",
+                },
+            },
+            RecordType = "PTR",
+            RelativeRecordSetName = "1",
+            ResourceGroupName = "resourceGroup1",
+            Ttl = 3600,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+record_set = azurerm.network.latest.RecordSet("recordSet",
+    metadata={
+        "key1": "value1",
+    },
+    private_zone_name="0.0.127.in-addr.arpa",
+    ptr_records=[{
+        "ptrdname": "localhost",
+    }],
+    record_type="PTR",
+    relative_record_set_name="1",
+    resource_group_name="resourceGroup1",
+    ttl=3600)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const recordSet = new azurerm.network.latest.RecordSet("recordSet", {
+    metadata: {
+        key1: "value1",
+    },
+    privateZoneName: "0.0.127.in-addr.arpa",
+    ptrRecords: [{
+        ptrdname: "localhost",
+    }],
+    recordType: "PTR",
+    relativeRecordSetName: "1",
+    resourceGroupName: "resourceGroup1",
+    ttl: 3600,
+});
+
+```
+
+{{% /example %}}
+
+### PUT Private DNS Zone SOA Record Set
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var recordSet = new AzureRM.Network.Latest.RecordSet("recordSet", new AzureRM.Network.Latest.RecordSetArgs
+        {
+            Metadata = 
+            {
+                { "key1", "value1" },
+            },
+            PrivateZoneName = "privatezone1.com",
+            RecordType = "SOA",
+            RelativeRecordSetName = "@",
+            ResourceGroupName = "resourceGroup1",
+            SoaRecord = new AzureRM.Network.Latest.Inputs.SoaRecordArgs
+            {
+                Email = "azureprivatedns-hostmaster.microsoft.com",
+                ExpireTime = 2419200,
+                Host = "azureprivatedns.net",
+                MinimumTtl = 300,
+                RefreshTime = 3600,
+                RetryTime = 300,
+                SerialNumber = 1,
+            },
+            Ttl = 3600,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+record_set = azurerm.network.latest.RecordSet("recordSet",
+    metadata={
+        "key1": "value1",
+    },
+    private_zone_name="privatezone1.com",
+    record_type="SOA",
+    relative_record_set_name="@",
+    resource_group_name="resourceGroup1",
+    soa_record={
+        "email": "azureprivatedns-hostmaster.microsoft.com",
+        "expireTime": 2419200,
+        "host": "azureprivatedns.net",
+        "minimumTtl": 300,
+        "refreshTime": 3600,
+        "retryTime": 300,
+        "serialNumber": 1,
+    },
+    ttl=3600)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const recordSet = new azurerm.network.latest.RecordSet("recordSet", {
+    metadata: {
+        key1: "value1",
+    },
+    privateZoneName: "privatezone1.com",
+    recordType: "SOA",
+    relativeRecordSetName: "@",
+    resourceGroupName: "resourceGroup1",
+    soaRecord: {
+        email: "azureprivatedns-hostmaster.microsoft.com",
+        expireTime: 2419200,
+        host: "azureprivatedns.net",
+        minimumTtl: 300,
+        refreshTime: 3600,
+        retryTime: 300,
+        serialNumber: 1,
+    },
+    ttl: 3600,
+});
+
+```
+
+{{% /example %}}
+
+### PUT Private DNS Zone SRV Record Set
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var recordSet = new AzureRM.Network.Latest.RecordSet("recordSet", new AzureRM.Network.Latest.RecordSetArgs
+        {
+            Metadata = 
+            {
+                { "key1", "value1" },
+            },
+            PrivateZoneName = "privatezone1.com",
+            RecordType = "SRV",
+            RelativeRecordSetName = "recordSRV",
+            ResourceGroupName = "resourceGroup1",
+            SrvRecords = 
+            {
+                new AzureRM.Network.Latest.Inputs.SrvRecordArgs
+                {
+                    Port = 80,
+                    Priority = 0,
+                    Target = "contoso.com",
+                    Weight = 10,
+                },
+            },
+            Ttl = 3600,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+record_set = azurerm.network.latest.RecordSet("recordSet",
+    metadata={
+        "key1": "value1",
+    },
+    private_zone_name="privatezone1.com",
+    record_type="SRV",
+    relative_record_set_name="recordSRV",
+    resource_group_name="resourceGroup1",
+    srv_records=[{
+        "port": 80,
+        "priority": 0,
+        "target": "contoso.com",
+        "weight": 10,
+    }],
+    ttl=3600)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const recordSet = new azurerm.network.latest.RecordSet("recordSet", {
+    metadata: {
+        key1: "value1",
+    },
+    privateZoneName: "privatezone1.com",
+    recordType: "SRV",
+    relativeRecordSetName: "recordSRV",
+    resourceGroupName: "resourceGroup1",
+    srvRecords: [{
+        port: 80,
+        priority: 0,
+        target: "contoso.com",
+        weight: 10,
+    }],
+    ttl: 3600,
+});
+
+```
+
+{{% /example %}}
+
+### PUT Private DNS Zone TXT Record Set
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var recordSet = new AzureRM.Network.Latest.RecordSet("recordSet", new AzureRM.Network.Latest.RecordSetArgs
+        {
+            Metadata = 
+            {
+                { "key1", "value1" },
+            },
+            PrivateZoneName = "privatezone1.com",
+            RecordType = "TXT",
+            RelativeRecordSetName = "recordTXT",
+            ResourceGroupName = "resourceGroup1",
+            Ttl = 3600,
+            TxtRecords = 
+            {
+                new AzureRM.Network.Latest.Inputs.TxtRecordArgs
+                {
+                    Value = 
+                    {
+                        "string1",
+                        "string2",
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+record_set = azurerm.network.latest.RecordSet("recordSet",
+    metadata={
+        "key1": "value1",
+    },
+    private_zone_name="privatezone1.com",
+    record_type="TXT",
+    relative_record_set_name="recordTXT",
+    resource_group_name="resourceGroup1",
+    ttl=3600,
+    txt_records=[{
+        "value": [
+            "string1",
+            "string2",
+        ],
+    }])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const recordSet = new azurerm.network.latest.RecordSet("recordSet", {
+    metadata: {
+        key1: "value1",
+    },
+    privateZoneName: "privatezone1.com",
+    recordType: "TXT",
+    relativeRecordSetName: "recordTXT",
+    resourceGroupName: "resourceGroup1",
+    ttl: 3600,
+    txtRecords: [{
+        value: [
+            "string1",
+            "string2",
+        ],
+    }],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RecordSet Resource {#create}

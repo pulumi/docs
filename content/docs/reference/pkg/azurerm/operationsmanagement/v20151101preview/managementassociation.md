@@ -12,6 +12,79 @@ meta_desc: "Explore the ManagementAssociation resource of the operationsmanageme
 
 The container for solution.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### SolutionCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managementAssociation = new AzureRM.OperationsManagement.V20151101Preview.ManagementAssociation("managementAssociation", new AzureRM.OperationsManagement.V20151101Preview.ManagementAssociationArgs
+        {
+            Location = "East US",
+            ManagementAssociationName = "managementAssociation1",
+            ProviderName = "providerName",
+            ResourceGroupName = "rg1",
+            ResourceName = "resourceName",
+            ResourceType = "resourceType",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+management_association = azurerm.operationsmanagement.v20151101preview.ManagementAssociation("managementAssociation",
+    location="East US",
+    management_association_name="managementAssociation1",
+    provider_name="providerName",
+    resource_group_name="rg1",
+    resource_name="resourceName",
+    resource_type="resourceType")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const managementAssociation = new azurerm.operationsmanagement.v20151101preview.ManagementAssociation("managementAssociation", {
+    location: "East US",
+    managementAssociationName: "managementAssociation1",
+    providerName: "providerName",
+    resourceGroupName: "rg1",
+    resourceName: "resourceName",
+    resourceType: "resourceType",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagementAssociation Resource {#create}

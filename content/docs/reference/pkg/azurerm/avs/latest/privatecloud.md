@@ -12,6 +12,96 @@ meta_desc: "Explore the PrivateCloud resource of the avs/latest module, includin
 
 A private cloud resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PrivateClouds_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateCloud = new AzureRM.AVS.Latest.PrivateCloud("privateCloud", new AzureRM.AVS.Latest.PrivateCloudArgs
+        {
+            Location = "eastus2",
+            ManagementCluster = new AzureRM.AVS.Latest.Inputs.ManagementClusterArgs
+            {
+                ClusterSize = 4,
+            },
+            NetworkBlock = "192.168.48.0/22",
+            PrivateCloudName = "cloud1",
+            ResourceGroupName = "group1",
+            Sku = new AzureRM.AVS.Latest.Inputs.SkuArgs
+            {
+                Name = "AV36",
+            },
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_cloud = azurerm.avs.latest.PrivateCloud("privateCloud",
+    location="eastus2",
+    management_cluster={
+        "clusterSize": 4,
+    },
+    network_block="192.168.48.0/22",
+    private_cloud_name="cloud1",
+    resource_group_name="group1",
+    sku={
+        "name": "AV36",
+    },
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateCloud = new azurerm.avs.latest.PrivateCloud("privateCloud", {
+    location: "eastus2",
+    managementCluster: {
+        clusterSize: 4,
+    },
+    networkBlock: "192.168.48.0/22",
+    privateCloudName: "cloud1",
+    resourceGroupName: "group1",
+    sku: {
+        name: "AV36",
+    },
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateCloud Resource {#create}

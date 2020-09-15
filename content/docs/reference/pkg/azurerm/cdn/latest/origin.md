@@ -12,6 +12,103 @@ meta_desc: "Explore the Origin resource of the cdn/latest module, including exam
 
 CDN origin is the source of the content being delivered via CDN. When the edge nodes represented by an endpoint do not have the requested content cached, they attempt to fetch it from one or more of the configured origins.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Origins_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var origin = new AzureRM.Cdn.Latest.Origin("origin", new AzureRM.Cdn.Latest.OriginArgs
+        {
+            Enabled = true,
+            EndpointName = "endpoint1",
+            HostName = "www.someDomain.net",
+            HttpPort = 80,
+            HttpsPort = 443,
+            OriginHostHeader = "www.someDomain.net",
+            OriginName = "www-someDomain-net",
+            Priority = 1,
+            PrivateLinkApprovalMessage = "Please approve the connection request for this Private Link",
+            PrivateLinkLocation = "eastus",
+            PrivateLinkResourceId = "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1",
+            ProfileName = "profile1",
+            ResourceGroupName = "RG",
+            Weight = 50,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+origin = azurerm.cdn.latest.Origin("origin",
+    enabled=True,
+    endpoint_name="endpoint1",
+    host_name="www.someDomain.net",
+    http_port=80,
+    https_port=443,
+    origin_host_header="www.someDomain.net",
+    origin_name="www-someDomain-net",
+    priority=1,
+    private_link_approval_message="Please approve the connection request for this Private Link",
+    private_link_location="eastus",
+    private_link_resource_id="/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1",
+    profile_name="profile1",
+    resource_group_name="RG",
+    weight=50)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const origin = new azurerm.cdn.latest.Origin("origin", {
+    enabled: true,
+    endpointName: "endpoint1",
+    hostName: "www.someDomain.net",
+    httpPort: 80,
+    httpsPort: 443,
+    originHostHeader: "www.someDomain.net",
+    originName: "www-someDomain-net",
+    priority: 1,
+    privateLinkApprovalMessage: "Please approve the connection request for this Private Link",
+    privateLinkLocation: "eastus",
+    privateLinkResourceId: "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1",
+    profileName: "profile1",
+    resourceGroupName: "RG",
+    weight: 50,
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Origin Resource {#create}

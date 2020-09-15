@@ -12,6 +12,64 @@ meta_desc: "Explore the Cluster resource of the streamanalytics/v20200301preview
 
 A Stream Analytics Cluster object
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a new cluster
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+cluster = .("cluster",
+    cluster_name="An Example Cluster",
+    location="North US",
+    resource_group_name="sjrg",
+    sku={
+        "capacity": 48,
+        "name": "Default",
+    },
+    tags={
+        "key": "value",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const cluster = new .("cluster", {
+    clusterName: "An Example Cluster",
+    location: "North US",
+    resourceGroupName: "sjrg",
+    sku: {
+        capacity: 48,
+        name: "Default",
+    },
+    tags: {
+        key: "value",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}

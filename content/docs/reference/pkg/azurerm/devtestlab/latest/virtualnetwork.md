@@ -12,6 +12,83 @@ meta_desc: "Explore the VirtualNetwork resource of the devtestlab/latest module,
 
 A virtual network.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### VirtualNetworks_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualNetwork = new AzureRM.DevTestLab.Latest.VirtualNetwork("virtualNetwork", new AzureRM.DevTestLab.Latest.VirtualNetworkArgs
+        {
+            LabName = "{devtestlab-name}",
+            Location = "{azure-location}",
+            Name = "{virtualnetwork-name}",
+            ResourceGroupName = "myResourceGroup",
+            Tags = 
+            {
+                { "MyTag", "MyValue" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_network = azurerm.devtestlab.latest.VirtualNetwork("virtualNetwork",
+    lab_name="{devtestlab-name}",
+    location="{azure-location}",
+    name="{virtualnetwork-name}",
+    resource_group_name="myResourceGroup",
+    tags={
+        "MyTag": "MyValue",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualNetwork = new azurerm.devtestlab.latest.VirtualNetwork("virtualNetwork", {
+    labName: "{devtestlab-name}",
+    location: "{azure-location}",
+    name: "{virtualnetwork-name}",
+    resourceGroupName: "myResourceGroup",
+    tags: {
+        MyTag: "MyValue",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualNetwork Resource {#create}

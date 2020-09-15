@@ -12,6 +12,83 @@ meta_desc: "Explore the UserAssignedIdentity resource of the managedidentity/lat
 
 Describes an identity resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### IdentityCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var userAssignedIdentity = new AzureRM.ManagedIdentity.Latest.UserAssignedIdentity("userAssignedIdentity", new AzureRM.ManagedIdentity.Latest.UserAssignedIdentityArgs
+        {
+            Location = "eastus",
+            ResourceGroupName = "rgName",
+            ResourceName = "resourceName",
+            Tags = 
+            {
+                { "key1", "value1" },
+                { "key2", "value2" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+user_assigned_identity = azurerm.managedidentity.latest.UserAssignedIdentity("userAssignedIdentity",
+    location="eastus",
+    resource_group_name="rgName",
+    resource_name="resourceName",
+    tags={
+        "key1": "value1",
+        "key2": "value2",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const userAssignedIdentity = new azurerm.managedidentity.latest.UserAssignedIdentity("userAssignedIdentity", {
+    location: "eastus",
+    resourceGroupName: "rgName",
+    resourceName: "resourceName",
+    tags: {
+        key1: "value1",
+        key2: "value2",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a UserAssignedIdentity Resource {#create}

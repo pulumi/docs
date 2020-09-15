@@ -12,6 +12,125 @@ meta_desc: "Explore the ImportPipeline resource of the containerregistry/v201912
 
 An object that represents an import pipeline for a container registry.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ImportPipelineCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var importPipeline = new AzureRM.ContainerRegistry.V20191201Preview.ImportPipeline("importPipeline", new AzureRM.ContainerRegistry.V20191201Preview.ImportPipelineArgs
+        {
+            Identity = new AzureRM.ContainerRegistry.V20191201Preview.Inputs.IdentityPropertiesArgs
+            {
+                Type = "UserAssigned",
+                UserAssignedIdentities = 
+                {
+                    { "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2",  },
+                },
+            },
+            ImportPipelineName = "myImportPipeline",
+            Location = "westus",
+            Options = 
+            {
+                "OverwriteTags",
+                "DeleteSourceBlobOnSuccess",
+                "ContinueOnErrors",
+            },
+            RegistryName = "myRegistry",
+            ResourceGroupName = "myResourceGroup",
+            Source = new AzureRM.ContainerRegistry.V20191201Preview.Inputs.ImportPipelineSourcePropertiesArgs
+            {
+                KeyVaultUri = "https://myvault.vault.azure.net/secrets/acrimportsas",
+                Type = "AzureStorageBlobContainer",
+                Uri = "https://accountname.blob.core.windows.net/containername",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+import_pipeline = azurerm.containerregistry.v20191201preview.ImportPipeline("importPipeline",
+    identity={
+        "type": "UserAssigned",
+        "userAssignedIdentities": {
+            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": {},
+        },
+    },
+    import_pipeline_name="myImportPipeline",
+    location="westus",
+    options=[
+        "OverwriteTags",
+        "DeleteSourceBlobOnSuccess",
+        "ContinueOnErrors",
+    ],
+    registry_name="myRegistry",
+    resource_group_name="myResourceGroup",
+    source={
+        "keyVaultUri": "https://myvault.vault.azure.net/secrets/acrimportsas",
+        "type": "AzureStorageBlobContainer",
+        "uri": "https://accountname.blob.core.windows.net/containername",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const importPipeline = new azurerm.containerregistry.v20191201preview.ImportPipeline("importPipeline", {
+    identity: {
+        type: "UserAssigned",
+        userAssignedIdentities: {
+            "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": {},
+        },
+    },
+    importPipelineName: "myImportPipeline",
+    location: "westus",
+    options: [
+        "OverwriteTags",
+        "DeleteSourceBlobOnSuccess",
+        "ContinueOnErrors",
+    ],
+    registryName: "myRegistry",
+    resourceGroupName: "myResourceGroup",
+    source: {
+        keyVaultUri: "https://myvault.vault.azure.net/secrets/acrimportsas",
+        type: "AzureStorageBlobContainer",
+        uri: "https://accountname.blob.core.windows.net/containername",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ImportPipeline Resource {#create}

@@ -12,6 +12,136 @@ meta_desc: "Explore the Watchlist resource of the securityinsights/v20190101prev
 
 Represents a Watchlist in Azure Security Insights.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates a watchlist.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var watchlist = new AzureRM.SecurityInsights.V20190101Preview.Watchlist("watchlist", new AzureRM.SecurityInsights.V20190101Preview.WatchlistArgs
+        {
+            CreatedBy = new AzureRM.SecurityInsights.V20190101Preview.Inputs.UserInfoArgs
+            {
+                ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
+            },
+            CreatedTimeUtc = "2019-01-01T13:15:30Z",
+            DefaultDuration = "P1D2H3M4S",
+            Description = "Watchlist Description",
+            DisplayName = "High Value Assets Watchlist",
+            Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+            Labels = 
+            {
+                "Tag1",
+                "Tag2",
+            },
+            LastUpdatedTimeUtc = "2019-01-01T13:15:30Z",
+            Notes = "A note for the watchlist",
+            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
+            Provider = "Azure Sentinel",
+            ResourceGroupName = "myRg",
+            Source = "Local file",
+            UpdatedBy = new AzureRM.SecurityInsights.V20190101Preview.Inputs.UserInfoArgs
+            {
+                ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
+            },
+            WatchlistAlias = "highValueAsset",
+            WatchlistType = "watchlist",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+watchlist = azurerm.securityinsights.v20190101preview.Watchlist("watchlist",
+    created_by={
+        "objectId": "2046feea-040d-4a46-9e2b-91c2941bfa70",
+    },
+    created_time_utc="2019-01-01T13:15:30Z",
+    default_duration="P1D2H3M4S",
+    description="Watchlist Description",
+    display_name="High Value Assets Watchlist",
+    etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    labels=[
+        "Tag1",
+        "Tag2",
+    ],
+    last_updated_time_utc="2019-01-01T13:15:30Z",
+    notes="A note for the watchlist",
+    operational_insights_resource_provider="Microsoft.OperationalInsights",
+    provider="Azure Sentinel",
+    resource_group_name="myRg",
+    source="Local file",
+    updated_by={
+        "objectId": "2046feea-040d-4a46-9e2b-91c2941bfa70",
+    },
+    watchlist_alias="highValueAsset",
+    watchlist_type="watchlist",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const watchlist = new azurerm.securityinsights.v20190101preview.Watchlist("watchlist", {
+    createdBy: {
+        objectId: "2046feea-040d-4a46-9e2b-91c2941bfa70",
+    },
+    createdTimeUtc: "2019-01-01T13:15:30Z",
+    defaultDuration: "P1D2H3M4S",
+    description: "Watchlist Description",
+    displayName: "High Value Assets Watchlist",
+    etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    labels: [
+        "Tag1",
+        "Tag2",
+    ],
+    lastUpdatedTimeUtc: "2019-01-01T13:15:30Z",
+    notes: "A note for the watchlist",
+    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
+    provider: "Azure Sentinel",
+    resourceGroupName: "myRg",
+    source: "Local file",
+    updatedBy: {
+        objectId: "2046feea-040d-4a46-9e2b-91c2941bfa70",
+    },
+    watchlistAlias: "highValueAsset",
+    watchlistType: "watchlist",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Watchlist Resource {#create}

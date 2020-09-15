@@ -12,6 +12,83 @@ meta_desc: "Explore the DatabaseAccountTable resource of the documentdb/latest m
 
 An Azure Cosmos DB Table.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CosmosDBTableReplace
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var databaseAccountTable = new AzureRM.DocumentDB.Latest.DatabaseAccountTable("databaseAccountTable", new AzureRM.DocumentDB.Latest.DatabaseAccountTableArgs
+        {
+            AccountName = "ddb1",
+            Options = ,
+            Resource = new AzureRM.DocumentDB.Latest.Inputs.TableResourceArgs
+            {
+                Id = "tableName",
+            },
+            ResourceGroupName = "rg1",
+            TableName = "tableName",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+database_account_table = azurerm.documentdb.latest.DatabaseAccountTable("databaseAccountTable",
+    account_name="ddb1",
+    options={},
+    resource={
+        "id": "tableName",
+    },
+    resource_group_name="rg1",
+    table_name="tableName")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const databaseAccountTable = new azurerm.documentdb.latest.DatabaseAccountTable("databaseAccountTable", {
+    accountName: "ddb1",
+    options: {},
+    resource: {
+        id: "tableName",
+    },
+    resourceGroupName: "rg1",
+    tableName: "tableName",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DatabaseAccountTable Resource {#create}

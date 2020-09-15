@@ -12,6 +12,192 @@ meta_desc: "Explore the ConnectorMapping resource of the customerinsights/latest
 
 The connector mapping resource format.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ConnectorMappings_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var connectorMapping = new AzureRM.CustomerInsights.Latest.ConnectorMapping("connectorMapping", new AzureRM.CustomerInsights.Latest.ConnectorMappingArgs
+        {
+            ConnectorName = "testConnector8858",
+            Description = "Test mapping",
+            DisplayName = "testMapping12491",
+            EntityType = "Interaction",
+            EntityTypeName = "TestInteractionType2967",
+            HubName = "sdkTestHub",
+            MappingName = "testMapping12491",
+            MappingProperties = new AzureRM.CustomerInsights.Latest.Inputs.ConnectorMappingPropertiesArgs
+            {
+                Availability = new AzureRM.CustomerInsights.Latest.Inputs.ConnectorMappingAvailabilityArgs
+                {
+                    Frequency = "Hour",
+                    Interval = 5,
+                },
+                CompleteOperation = new AzureRM.CustomerInsights.Latest.Inputs.ConnectorMappingCompleteOperationArgs
+                {
+                    CompletionOperationType = "DeleteFile",
+                    DestinationFolder = "fakePath",
+                },
+                ErrorManagement = new AzureRM.CustomerInsights.Latest.Inputs.ConnectorMappingErrorManagementArgs
+                {
+                    ErrorLimit = 10,
+                    ErrorManagementType = "StopImport",
+                },
+                FileFilter = "unknown",
+                FolderPath = "http://sample.dne/file",
+                Format = new AzureRM.CustomerInsights.Latest.Inputs.ConnectorMappingFormatArgs
+                {
+                    ColumnDelimiter = "|",
+                    FormatType = "TextFormat",
+                },
+                HasHeader = false,
+                Structure = 
+                {
+                    new AzureRM.CustomerInsights.Latest.Inputs.ConnectorMappingStructureArgs
+                    {
+                        ColumnName = "unknown1",
+                        IsEncrypted = false,
+                        PropertyName = "unknwon1",
+                    },
+                    new AzureRM.CustomerInsights.Latest.Inputs.ConnectorMappingStructureArgs
+                    {
+                        ColumnName = "unknown2",
+                        IsEncrypted = true,
+                        PropertyName = "unknwon2",
+                    },
+                },
+            },
+            ResourceGroupName = "TestHubRG",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+connector_mapping = azurerm.customerinsights.latest.ConnectorMapping("connectorMapping",
+    connector_name="testConnector8858",
+    description="Test mapping",
+    display_name="testMapping12491",
+    entity_type="Interaction",
+    entity_type_name="TestInteractionType2967",
+    hub_name="sdkTestHub",
+    mapping_name="testMapping12491",
+    mapping_properties={
+        "availability": {
+            "frequency": "Hour",
+            "interval": 5,
+        },
+        "completeOperation": {
+            "completionOperationType": "DeleteFile",
+            "destinationFolder": "fakePath",
+        },
+        "errorManagement": {
+            "errorLimit": 10,
+            "errorManagementType": "StopImport",
+        },
+        "fileFilter": "unknown",
+        "folderPath": "http://sample.dne/file",
+        "format": {
+            "columnDelimiter": "|",
+            "formatType": "TextFormat",
+        },
+        "hasHeader": False,
+        "structure": [
+            {
+                "columnName": "unknown1",
+                "isEncrypted": False,
+                "propertyName": "unknwon1",
+            },
+            {
+                "columnName": "unknown2",
+                "isEncrypted": True,
+                "propertyName": "unknwon2",
+            },
+        ],
+    },
+    resource_group_name="TestHubRG")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const connectorMapping = new azurerm.customerinsights.latest.ConnectorMapping("connectorMapping", {
+    connectorName: "testConnector8858",
+    description: "Test mapping",
+    displayName: "testMapping12491",
+    entityType: "Interaction",
+    entityTypeName: "TestInteractionType2967",
+    hubName: "sdkTestHub",
+    mappingName: "testMapping12491",
+    mappingProperties: {
+        availability: {
+            frequency: "Hour",
+            interval: 5,
+        },
+        completeOperation: {
+            completionOperationType: "DeleteFile",
+            destinationFolder: "fakePath",
+        },
+        errorManagement: {
+            errorLimit: 10,
+            errorManagementType: "StopImport",
+        },
+        fileFilter: "unknown",
+        folderPath: "http://sample.dne/file",
+        format: {
+            columnDelimiter: "|",
+            formatType: "TextFormat",
+        },
+        hasHeader: false,
+        structure: [
+            {
+                columnName: "unknown1",
+                isEncrypted: false,
+                propertyName: "unknwon1",
+            },
+            {
+                columnName: "unknown2",
+                isEncrypted: true,
+                propertyName: "unknwon2",
+            },
+        ],
+    },
+    resourceGroupName: "TestHubRG",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ConnectorMapping Resource {#create}

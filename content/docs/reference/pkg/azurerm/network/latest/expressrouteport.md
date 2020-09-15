@@ -12,6 +12,160 @@ meta_desc: "Explore the ExpressRoutePort resource of the network/latest module, 
 
 ExpressRoutePort resource definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ExpressRoutePortCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var expressRoutePort = new AzureRM.Network.Latest.ExpressRoutePort("expressRoutePort", new AzureRM.Network.Latest.ExpressRoutePortArgs
+        {
+            BandwidthInGbps = 100,
+            Encapsulation = "QinQ",
+            ExpressRoutePortName = "portName",
+            Location = "westus",
+            PeeringLocation = "peeringLocationName",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+express_route_port = azurerm.network.latest.ExpressRoutePort("expressRoutePort",
+    bandwidth_in_gbps=100,
+    encapsulation="QinQ",
+    express_route_port_name="portName",
+    location="westus",
+    peering_location="peeringLocationName",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const expressRoutePort = new azurerm.network.latest.ExpressRoutePort("expressRoutePort", {
+    bandwidthInGbps: 100,
+    encapsulation: "QinQ",
+    expressRoutePortName: "portName",
+    location: "westus",
+    peeringLocation: "peeringLocationName",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+### ExpressRoutePortUpdateLink
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var expressRoutePort = new AzureRM.Network.Latest.ExpressRoutePort("expressRoutePort", new AzureRM.Network.Latest.ExpressRoutePortArgs
+        {
+            BandwidthInGbps = 100,
+            Encapsulation = "QinQ",
+            ExpressRoutePortName = "portName",
+            Links = 
+            {
+                new AzureRM.Network.Latest.Inputs.ExpressRouteLinkArgs
+                {
+                    Name = "link1",
+                },
+            },
+            Location = "westus",
+            PeeringLocation = "peeringLocationName",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+express_route_port = azurerm.network.latest.ExpressRoutePort("expressRoutePort",
+    bandwidth_in_gbps=100,
+    encapsulation="QinQ",
+    express_route_port_name="portName",
+    links=[{
+        "name": "link1",
+    }],
+    location="westus",
+    peering_location="peeringLocationName",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const expressRoutePort = new azurerm.network.latest.ExpressRoutePort("expressRoutePort", {
+    bandwidthInGbps: 100,
+    encapsulation: "QinQ",
+    expressRoutePortName: "portName",
+    links: [{
+        name: "link1",
+    }],
+    location: "westus",
+    peeringLocation: "peeringLocationName",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ExpressRoutePort Resource {#create}

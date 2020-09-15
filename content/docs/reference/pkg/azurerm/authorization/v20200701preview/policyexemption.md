@@ -12,6 +12,95 @@ meta_desc: "Explore the PolicyExemption resource of the authorization/v20200701p
 
 The policy exemption.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a policy exemption
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var policyExemption = new AzureRM.Authorization.V20200701Preview.PolicyExemption("policyExemption", new AzureRM.Authorization.V20200701Preview.PolicyExemptionArgs
+        {
+            Description = "Exempt demo cluster from limit sku",
+            DisplayName = "Exempt demo cluster",
+            ExemptionCategory = "Waiver",
+            Metadata = 
+            {
+                { "reason", "Temporary exemption for a expensive VM demo" },
+            },
+            PolicyAssignmentId = "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyAssignments/CostManagement",
+            PolicyDefinitionReferenceIds = 
+            {
+                "Limit_Skus",
+            },
+            PolicyExemptionName = "DemoExpensiveVM",
+            Scope = "subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/resourceGroups/demoCluster",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+policy_exemption = azurerm.authorization.v20200701preview.PolicyExemption("policyExemption",
+    description="Exempt demo cluster from limit sku",
+    display_name="Exempt demo cluster",
+    exemption_category="Waiver",
+    metadata={
+        "reason": "Temporary exemption for a expensive VM demo",
+    },
+    policy_assignment_id="/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyAssignments/CostManagement",
+    policy_definition_reference_ids=["Limit_Skus"],
+    policy_exemption_name="DemoExpensiveVM",
+    scope="subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/resourceGroups/demoCluster")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const policyExemption = new azurerm.authorization.v20200701preview.PolicyExemption("policyExemption", {
+    description: "Exempt demo cluster from limit sku",
+    displayName: "Exempt demo cluster",
+    exemptionCategory: "Waiver",
+    metadata: {
+        reason: "Temporary exemption for a expensive VM demo",
+    },
+    policyAssignmentId: "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyAssignments/CostManagement",
+    policyDefinitionReferenceIds: ["Limit_Skus"],
+    policyExemptionName: "DemoExpensiveVM",
+    scope: "subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/resourceGroups/demoCluster",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PolicyExemption Resource {#create}

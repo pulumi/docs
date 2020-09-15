@@ -12,6 +12,106 @@ meta_desc: "Explore the ReferenceDataSet resource of the timeseriesinsights/late
 
 A reference data set provides metadata about the events in an environment. Metadata in the reference data set will be joined with events as they are read from event sources. The metadata that makes up the reference data set is uploaded or modified through the Time Series Insights data plane APIs.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ReferenceDataSetsCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var referenceDataSet = new AzureRM.TimeSeriesInsights.Latest.ReferenceDataSet("referenceDataSet", new AzureRM.TimeSeriesInsights.Latest.ReferenceDataSetArgs
+        {
+            EnvironmentName = "env1",
+            KeyProperties = 
+            {
+                new AzureRM.TimeSeriesInsights.Latest.Inputs.ReferenceDataSetKeyPropertyArgs
+                {
+                    Name = "DeviceId1",
+                    Type = "String",
+                },
+                new AzureRM.TimeSeriesInsights.Latest.Inputs.ReferenceDataSetKeyPropertyArgs
+                {
+                    Name = "DeviceFloor",
+                    Type = "Double",
+                },
+            },
+            Location = "West US",
+            ReferenceDataSetName = "rds1",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+reference_data_set = azurerm.timeseriesinsights.latest.ReferenceDataSet("referenceDataSet",
+    environment_name="env1",
+    key_properties=[
+        {
+            "name": "DeviceId1",
+            "type": "String",
+        },
+        {
+            "name": "DeviceFloor",
+            "type": "Double",
+        },
+    ],
+    location="West US",
+    reference_data_set_name="rds1",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const referenceDataSet = new azurerm.timeseriesinsights.latest.ReferenceDataSet("referenceDataSet", {
+    environmentName: "env1",
+    keyProperties: [
+        {
+            name: "DeviceId1",
+            type: "String",
+        },
+        {
+            name: "DeviceFloor",
+            type: "Double",
+        },
+    ],
+    location: "West US",
+    referenceDataSetName: "rds1",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ReferenceDataSet Resource {#create}

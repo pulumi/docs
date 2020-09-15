@@ -12,6 +12,194 @@ meta_desc: "Explore the PipelineRun resource of the containerregistry/v20191201p
 
 An object that represents a pipeline run for a container registry.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PipelineRunCreate_Export
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pipelineRun = new AzureRM.ContainerRegistry.V20191201Preview.PipelineRun("pipelineRun", new AzureRM.ContainerRegistry.V20191201Preview.PipelineRunArgs
+        {
+            PipelineRunName = "myPipelineRun",
+            RegistryName = "myRegistry",
+            Request = new AzureRM.ContainerRegistry.V20191201Preview.Inputs.PipelineRunRequestArgs
+            {
+                Artifacts = 
+                {
+                    "sourceRepository/hello-world",
+                    "sourceRepository2@sha256:00000000000000000000000000000000000",
+                },
+                PipelineResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline",
+                Target = new AzureRM.ContainerRegistry.V20191201Preview.Inputs.PipelineRunTargetPropertiesArgs
+                {
+                    Name = "myblob.tar.gz",
+                    Type = "AzureStorageBlob",
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+pipeline_run = azurerm.containerregistry.v20191201preview.PipelineRun("pipelineRun",
+    pipeline_run_name="myPipelineRun",
+    registry_name="myRegistry",
+    request={
+        "artifacts": [
+            "sourceRepository/hello-world",
+            "sourceRepository2@sha256:00000000000000000000000000000000000",
+        ],
+        "pipelineResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline",
+        "target": {
+            "name": "myblob.tar.gz",
+            "type": "AzureStorageBlob",
+        },
+    },
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const pipelineRun = new azurerm.containerregistry.v20191201preview.PipelineRun("pipelineRun", {
+    pipelineRunName: "myPipelineRun",
+    registryName: "myRegistry",
+    request: {
+        artifacts: [
+            "sourceRepository/hello-world",
+            "sourceRepository2@sha256:00000000000000000000000000000000000",
+        ],
+        pipelineResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline",
+        target: {
+            name: "myblob.tar.gz",
+            type: "AzureStorageBlob",
+        },
+    },
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+### PipelineRunCreate_Import
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pipelineRun = new AzureRM.ContainerRegistry.V20191201Preview.PipelineRun("pipelineRun", new AzureRM.ContainerRegistry.V20191201Preview.PipelineRunArgs
+        {
+            ForceUpdateTag = "2020-03-04T17:23:21.9261521+00:00",
+            PipelineRunName = "myPipelineRun",
+            RegistryName = "myRegistry",
+            Request = new AzureRM.ContainerRegistry.V20191201Preview.Inputs.PipelineRunRequestArgs
+            {
+                CatalogDigest = "sha256@",
+                PipelineResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline",
+                Source = new AzureRM.ContainerRegistry.V20191201Preview.Inputs.PipelineRunSourcePropertiesArgs
+                {
+                    Name = "myblob.tar.gz",
+                    Type = "AzureStorageBlob",
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+pipeline_run = azurerm.containerregistry.v20191201preview.PipelineRun("pipelineRun",
+    force_update_tag="2020-03-04T17:23:21.9261521+00:00",
+    pipeline_run_name="myPipelineRun",
+    registry_name="myRegistry",
+    request={
+        "catalogDigest": "sha256@",
+        "pipelineResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline",
+        "source": {
+            "name": "myblob.tar.gz",
+            "type": "AzureStorageBlob",
+        },
+    },
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const pipelineRun = new azurerm.containerregistry.v20191201preview.PipelineRun("pipelineRun", {
+    forceUpdateTag: "2020-03-04T17:23:21.9261521+00:00",
+    pipelineRunName: "myPipelineRun",
+    registryName: "myRegistry",
+    request: {
+        catalogDigest: "sha256@",
+        pipelineResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline",
+        source: {
+            name: "myblob.tar.gz",
+            type: "AzureStorageBlob",
+        },
+    },
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PipelineRun Resource {#create}

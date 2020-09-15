@@ -12,6 +12,355 @@ meta_desc: "Explore the DataCollectionRule resource of the insights/v20191101pre
 
 Definition of ARM tracked top level resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update data collection rule
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataCollectionRule = new AzureRM.Insights.V20191101Preview.DataCollectionRule("dataCollectionRule", new AzureRM.Insights.V20191101Preview.DataCollectionRuleArgs
+        {
+            DataCollectionRuleName = "myCollectionRule",
+            DataFlows = 
+            {
+                new AzureRM.Insights.V20191101Preview.Inputs.DataFlowArgs
+                {
+                    Destinations = 
+                    {
+                        "centralWorkspace",
+                    },
+                    Streams = 
+                    {
+                        "Microsoft-Perf",
+                        "Microsoft-Syslog",
+                        "Microsoft-WindowsEvent",
+                    },
+                },
+            },
+            DataSources = new AzureRM.Insights.V20191101Preview.Inputs.DataCollectionRuleDataSourcesArgs
+            {
+                PerformanceCounters = 
+                {
+                    new AzureRM.Insights.V20191101Preview.Inputs.PerfCounterDataSourceArgs
+                    {
+                        CounterSpecifiers = 
+                        {
+                            "\\Processor(_Total)\\% Processor Time",
+                            "\\Memory\\Committed Bytes",
+                            "\\LogicalDisk(_Total)\\Free Megabytes",
+                            "\\PhysicalDisk(_Total)\\Avg. Disk Queue Length",
+                        },
+                        Name = "cloudTeamCoreCounters",
+                        SamplingFrequencyInSeconds = 15,
+                        ScheduledTransferPeriod = "PT1M",
+                        Streams = 
+                        {
+                            "Microsoft-Perf",
+                        },
+                    },
+                    new AzureRM.Insights.V20191101Preview.Inputs.PerfCounterDataSourceArgs
+                    {
+                        CounterSpecifiers = 
+                        {
+                            "\\Process(_Total)\\Thread Count",
+                        },
+                        Name = "appTeamExtraCounters",
+                        SamplingFrequencyInSeconds = 30,
+                        ScheduledTransferPeriod = "PT5M",
+                        Streams = 
+                        {
+                            "Microsoft-Perf",
+                        },
+                    },
+                },
+                Syslog = 
+                {
+                    new AzureRM.Insights.V20191101Preview.Inputs.SyslogDataSourceArgs
+                    {
+                        FacilityNames = 
+                        {
+                            "cron",
+                        },
+                        LogLevels = 
+                        {
+                            "Debug",
+                            "Critical",
+                            "Emergency",
+                        },
+                        Name = "cronSyslog",
+                        Streams = 
+                        {
+                            "Microsoft-Syslog",
+                        },
+                    },
+                    new AzureRM.Insights.V20191101Preview.Inputs.SyslogDataSourceArgs
+                    {
+                        FacilityNames = 
+                        {
+                            "syslog",
+                        },
+                        LogLevels = 
+                        {
+                            "Alert",
+                            "Critical",
+                            "Emergency",
+                        },
+                        Name = "syslogBase",
+                        Streams = 
+                        {
+                            "Microsoft-Syslog",
+                        },
+                    },
+                },
+                WindowsEventLogs = 
+                {
+                    new AzureRM.Insights.V20191101Preview.Inputs.WindowsEventLogDataSourceArgs
+                    {
+                        Name = "cloudSecurityTeamEvents",
+                        ScheduledTransferPeriod = "PT1M",
+                        Streams = 
+                        {
+                            "Microsoft-WindowsEvent",
+                        },
+                        XPathQueries = 
+                        {
+                            "Security!",
+                        },
+                    },
+                    new AzureRM.Insights.V20191101Preview.Inputs.WindowsEventLogDataSourceArgs
+                    {
+                        Name = "appTeam1AppEvents",
+                        ScheduledTransferPeriod = "PT5M",
+                        Streams = 
+                        {
+                            "Microsoft-WindowsEvent",
+                        },
+                        XPathQueries = 
+                        {
+                            "System![System[(Level = 1 or Level = 2 or Level = 3)]]",
+                            "Application!*[System[(Level = 1 or Level = 2 or Level = 3)]]",
+                        },
+                    },
+                },
+            },
+            Destinations = new AzureRM.Insights.V20191101Preview.Inputs.DataCollectionRuleDestinationsArgs
+            {
+                LogAnalytics = 
+                {
+                    new AzureRM.Insights.V20191101Preview.Inputs.LogAnalyticsDestinationArgs
+                    {
+                        Name = "centralWorkspace",
+                        WorkspaceResourceId = "/subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.OperationalInsights/workspaces/centralTeamWorkspace",
+                    },
+                },
+            },
+            Location = "eastus",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+data_collection_rule = azurerm.insights.v20191101preview.DataCollectionRule("dataCollectionRule",
+    data_collection_rule_name="myCollectionRule",
+    data_flows=[{
+        "destinations": ["centralWorkspace"],
+        "streams": [
+            "Microsoft-Perf",
+            "Microsoft-Syslog",
+            "Microsoft-WindowsEvent",
+        ],
+    }],
+    data_sources={
+        "performanceCounters": [
+            {
+                "counterSpecifiers": [
+                    "\\Processor(_Total)\\% Processor Time",
+                    "\\Memory\\Committed Bytes",
+                    "\\LogicalDisk(_Total)\\Free Megabytes",
+                    "\\PhysicalDisk(_Total)\\Avg. Disk Queue Length",
+                ],
+                "name": "cloudTeamCoreCounters",
+                "samplingFrequencyInSeconds": 15,
+                "scheduledTransferPeriod": "PT1M",
+                "streams": ["Microsoft-Perf"],
+            },
+            {
+                "counterSpecifiers": ["\\Process(_Total)\\Thread Count"],
+                "name": "appTeamExtraCounters",
+                "samplingFrequencyInSeconds": 30,
+                "scheduledTransferPeriod": "PT5M",
+                "streams": ["Microsoft-Perf"],
+            },
+        ],
+        "syslog": [
+            {
+                "facilityNames": ["cron"],
+                "logLevels": [
+                    "Debug",
+                    "Critical",
+                    "Emergency",
+                ],
+                "name": "cronSyslog",
+                "streams": ["Microsoft-Syslog"],
+            },
+            {
+                "facilityNames": ["syslog"],
+                "logLevels": [
+                    "Alert",
+                    "Critical",
+                    "Emergency",
+                ],
+                "name": "syslogBase",
+                "streams": ["Microsoft-Syslog"],
+            },
+        ],
+        "windowsEventLogs": [
+            {
+                "name": "cloudSecurityTeamEvents",
+                "scheduledTransferPeriod": "PT1M",
+                "streams": ["Microsoft-WindowsEvent"],
+                "xPathQueries": ["Security!"],
+            },
+            {
+                "name": "appTeam1AppEvents",
+                "scheduledTransferPeriod": "PT5M",
+                "streams": ["Microsoft-WindowsEvent"],
+                "xPathQueries": [
+                    "System![System[(Level = 1 or Level = 2 or Level = 3)]]",
+                    "Application!*[System[(Level = 1 or Level = 2 or Level = 3)]]",
+                ],
+            },
+        ],
+    },
+    destinations={
+        "logAnalytics": [{
+            "name": "centralWorkspace",
+            "workspaceResourceId": "/subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.OperationalInsights/workspaces/centralTeamWorkspace",
+        }],
+    },
+    location="eastus",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataCollectionRule = new azurerm.insights.v20191101preview.DataCollectionRule("dataCollectionRule", {
+    dataCollectionRuleName: "myCollectionRule",
+    dataFlows: [{
+        destinations: ["centralWorkspace"],
+        streams: [
+            "Microsoft-Perf",
+            "Microsoft-Syslog",
+            "Microsoft-WindowsEvent",
+        ],
+    }],
+    dataSources: {
+        performanceCounters: [
+            {
+                counterSpecifiers: [
+                    `\Processor(_Total)\% Processor Time`,
+                    "\\Memory\\Committed Bytes",
+                    "\\LogicalDisk(_Total)\\Free Megabytes",
+                    "\\PhysicalDisk(_Total)\\Avg. Disk Queue Length",
+                ],
+                name: "cloudTeamCoreCounters",
+                samplingFrequencyInSeconds: 15,
+                scheduledTransferPeriod: "PT1M",
+                streams: ["Microsoft-Perf"],
+            },
+            {
+                counterSpecifiers: ["\\Process(_Total)\\Thread Count"],
+                name: "appTeamExtraCounters",
+                samplingFrequencyInSeconds: 30,
+                scheduledTransferPeriod: "PT5M",
+                streams: ["Microsoft-Perf"],
+            },
+        ],
+        syslog: [
+            {
+                facilityNames: ["cron"],
+                logLevels: [
+                    "Debug",
+                    "Critical",
+                    "Emergency",
+                ],
+                name: "cronSyslog",
+                streams: ["Microsoft-Syslog"],
+            },
+            {
+                facilityNames: ["syslog"],
+                logLevels: [
+                    "Alert",
+                    "Critical",
+                    "Emergency",
+                ],
+                name: "syslogBase",
+                streams: ["Microsoft-Syslog"],
+            },
+        ],
+        windowsEventLogs: [
+            {
+                name: "cloudSecurityTeamEvents",
+                scheduledTransferPeriod: "PT1M",
+                streams: ["Microsoft-WindowsEvent"],
+                xPathQueries: ["Security!"],
+            },
+            {
+                name: "appTeam1AppEvents",
+                scheduledTransferPeriod: "PT5M",
+                streams: ["Microsoft-WindowsEvent"],
+                xPathQueries: [
+                    "System![System[(Level = 1 or Level = 2 or Level = 3)]]",
+                    "Application!*[System[(Level = 1 or Level = 2 or Level = 3)]]",
+                ],
+            },
+        ],
+    },
+    destinations: {
+        logAnalytics: [{
+            name: "centralWorkspace",
+            workspaceResourceId: "/subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.OperationalInsights/workspaces/centralTeamWorkspace",
+        }],
+    },
+    location: "eastus",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DataCollectionRule Resource {#create}

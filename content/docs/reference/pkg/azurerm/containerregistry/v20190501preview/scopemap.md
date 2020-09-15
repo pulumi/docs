@@ -12,6 +12,86 @@ meta_desc: "Explore the ScopeMap resource of the containerregistry/v20190501prev
 
 An object that represents a scope map for a container registry.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ScopeMapCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var scopeMap = new AzureRM.ContainerRegistry.V20190501Preview.ScopeMap("scopeMap", new AzureRM.ContainerRegistry.V20190501Preview.ScopeMapArgs
+        {
+            Actions = 
+            {
+                "repositories/myrepository/contentWrite",
+                "repositories/myrepository/delete",
+            },
+            Description = "Developer Scopes",
+            RegistryName = "myRegistry",
+            ResourceGroupName = "myResourceGroup",
+            ScopeMapName = "myScopeMap",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+scope_map = azurerm.containerregistry.v20190501preview.ScopeMap("scopeMap",
+    actions=[
+        "repositories/myrepository/contentWrite",
+        "repositories/myrepository/delete",
+    ],
+    description="Developer Scopes",
+    registry_name="myRegistry",
+    resource_group_name="myResourceGroup",
+    scope_map_name="myScopeMap")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const scopeMap = new azurerm.containerregistry.v20190501preview.ScopeMap("scopeMap", {
+    actions: [
+        "repositories/myrepository/contentWrite",
+        "repositories/myrepository/delete",
+    ],
+    description: "Developer Scopes",
+    registryName: "myRegistry",
+    resourceGroupName: "myResourceGroup",
+    scopeMapName: "myScopeMap",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ScopeMap Resource {#create}

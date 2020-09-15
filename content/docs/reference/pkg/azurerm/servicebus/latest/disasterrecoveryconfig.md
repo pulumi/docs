@@ -12,6 +12,76 @@ meta_desc: "Explore the DisasterRecoveryConfig resource of the servicebus/latest
 
 Single item in List or Get Alias(Disaster Recovery configuration) operation
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### SBAliasCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disasterRecoveryConfig = new AzureRM.ServiceBus.Latest.DisasterRecoveryConfig("disasterRecoveryConfig", new AzureRM.ServiceBus.Latest.DisasterRecoveryConfigArgs
+        {
+            Alias = "sdk-Namespace-8860",
+            AlternateName = "alternameforAlias-Namespace-8860",
+            NamespaceName = "sdk-Namespace-8860",
+            PartnerNamespace = "sdk-Namespace-37",
+            ResourceGroupName = "ardsouzatestRG",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+disaster_recovery_config = azurerm.servicebus.latest.DisasterRecoveryConfig("disasterRecoveryConfig",
+    alias="sdk-Namespace-8860",
+    alternate_name="alternameforAlias-Namespace-8860",
+    namespace_name="sdk-Namespace-8860",
+    partner_namespace="sdk-Namespace-37",
+    resource_group_name="ardsouzatestRG")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const disasterRecoveryConfig = new azurerm.servicebus.latest.DisasterRecoveryConfig("disasterRecoveryConfig", {
+    alias: "sdk-Namespace-8860",
+    alternateName: "alternameforAlias-Namespace-8860",
+    namespaceName: "sdk-Namespace-8860",
+    partnerNamespace: "sdk-Namespace-37",
+    resourceGroupName: "ardsouzatestRG",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DisasterRecoveryConfig Resource {#create}

@@ -11,6 +11,73 @@ meta_desc: "Explore the VMwareCollector resource of the migrate/latest module, i
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### VMwareCollectors_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vMwareCollector = new AzureRM.Migrate.Latest.VMwareCollector("vMwareCollector", new AzureRM.Migrate.Latest.VMwareCollectorArgs
+        {
+            ETag = "\"01003d32-0000-0d00-0000-5d74d2e50000\"",
+            ProjectName = "abgoyalWEselfhostb72bproject",
+            ResourceGroupName = "abgoyal-westEurope",
+            VmWareCollectorName = "PortalvCenterbc2fcollector",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+v_mware_collector = azurerm.migrate.latest.VMwareCollector("vMwareCollector",
+    e_tag="\"01003d32-0000-0d00-0000-5d74d2e50000\"",
+    project_name="abgoyalWEselfhostb72bproject",
+    resource_group_name="abgoyal-westEurope",
+    vm_ware_collector_name="PortalvCenterbc2fcollector")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const vMwareCollector = new azurerm.migrate.latest.VMwareCollector("vMwareCollector", {
+    eTag: "\"01003d32-0000-0d00-0000-5d74d2e50000\"",
+    projectName: "abgoyalWEselfhostb72bproject",
+    resourceGroupName: "abgoyal-westEurope",
+    vmWareCollectorName: "PortalvCenterbc2fcollector",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VMwareCollector Resource {#create}

@@ -12,6 +12,76 @@ meta_desc: "Explore the Subscription resource of the servicebus/latest module, i
 
 Description of subscription resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### SubscriptionCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var subscription = new AzureRM.ServiceBus.Latest.Subscription("subscription", new AzureRM.ServiceBus.Latest.SubscriptionArgs
+        {
+            EnableBatchedOperations = true,
+            NamespaceName = "sdk-Namespace-1349",
+            ResourceGroupName = "ResourceGroup",
+            SubscriptionName = "sdk-Subscriptions-2178",
+            TopicName = "sdk-Topics-8740",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+subscription = azurerm.servicebus.latest.Subscription("subscription",
+    enable_batched_operations=True,
+    namespace_name="sdk-Namespace-1349",
+    resource_group_name="ResourceGroup",
+    subscription_name="sdk-Subscriptions-2178",
+    topic_name="sdk-Topics-8740")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const subscription = new azurerm.servicebus.latest.Subscription("subscription", {
+    enableBatchedOperations: true,
+    namespaceName: "sdk-Namespace-1349",
+    resourceGroupName: "ResourceGroup",
+    subscriptionName: "sdk-Subscriptions-2178",
+    topicName: "sdk-Topics-8740",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Subscription Resource {#create}

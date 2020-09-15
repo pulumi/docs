@@ -12,6 +12,143 @@ meta_desc: "Explore the VirtualMachine resource of the vmwarecloudsimple/latest 
 
 Virtual machine model
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateVirtualMachine
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachine = new AzureRM.VMwareCloudSimple.Latest.VirtualMachine("virtualMachine", new AzureRM.VMwareCloudSimple.Latest.VirtualMachineArgs
+        {
+            AmountOfRam = 4096,
+            Disks = 
+            {
+                new AzureRM.VMwareCloudSimple.Latest.Inputs.VirtualDiskArgs
+                {
+                    ControllerId = "1000",
+                    IndependenceMode = "persistent",
+                    TotalSize = 10485760,
+                    VirtualDiskId = "2000",
+                },
+            },
+            Location = "westus2",
+            Nics = 
+            {
+                new AzureRM.VMwareCloudSimple.Latest.Inputs.VirtualNicArgs
+                {
+                    Network = new AzureRM.VMwareCloudSimple.Latest.Inputs.VirtualNetworkArgs
+                    {
+                        Id = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19",
+                    },
+                    NicType = "E1000",
+                    PowerOnBoot = true,
+                    VirtualNicId = "4000",
+                },
+            },
+            NumberOfCores = 2,
+            PrivateCloudId = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud",
+            ResourceGroupName = "myResourceGroup",
+            ResourcePool = new AzureRM.VMwareCloudSimple.Latest.Inputs.ResourcePoolArgs
+            {
+                Id = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26",
+            },
+            TemplateId = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualMachineTemplates/vm-34",
+            VirtualMachineName = "myVirtualMachine",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+virtual_machine = azurerm.vmwarecloudsimple.latest.VirtualMachine("virtualMachine",
+    amount_of_ram=4096,
+    disks=[{
+        "controllerId": "1000",
+        "independenceMode": "persistent",
+        "totalSize": 10485760,
+        "virtualDiskId": "2000",
+    }],
+    location="westus2",
+    nics=[{
+        "network": {
+            "id": "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19",
+        },
+        "nicType": "E1000",
+        "powerOnBoot": True,
+        "virtualNicId": "4000",
+    }],
+    number_of_cores=2,
+    private_cloud_id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud",
+    resource_group_name="myResourceGroup",
+    resource_pool={
+        "id": "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26",
+    },
+    template_id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualMachineTemplates/vm-34",
+    virtual_machine_name="myVirtualMachine")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const virtualMachine = new azurerm.vmwarecloudsimple.latest.VirtualMachine("virtualMachine", {
+    amountOfRam: 4096,
+    disks: [{
+        controllerId: "1000",
+        independenceMode: "persistent",
+        totalSize: 10485760,
+        virtualDiskId: "2000",
+    }],
+    location: "westus2",
+    nics: [{
+        network: {
+            id: "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19",
+        },
+        nicType: "E1000",
+        powerOnBoot: true,
+        virtualNicId: "4000",
+    }],
+    numberOfCores: 2,
+    privateCloudId: "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud",
+    resourceGroupName: "myResourceGroup",
+    resourcePool: {
+        id: "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26",
+    },
+    templateId: "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualMachineTemplates/vm-34",
+    virtualMachineName: "myVirtualMachine",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a VirtualMachine Resource {#create}

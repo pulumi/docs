@@ -12,6 +12,89 @@ meta_desc: "Explore the LocalNetworkGateway resource of the network/latest modul
 
 A common class for general resource information.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateLocalNetworkGateway
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var localNetworkGateway = new AzureRM.Network.Latest.LocalNetworkGateway("localNetworkGateway", new AzureRM.Network.Latest.LocalNetworkGatewayArgs
+        {
+            Fqdn = "site1.contoso.com",
+            GatewayIpAddress = "11.12.13.14",
+            LocalNetworkAddressSpace = new AzureRM.Network.Latest.Inputs.AddressSpaceArgs
+            {
+                AddressPrefixes = 
+                {
+                    "10.1.0.0/16",
+                },
+            },
+            LocalNetworkGatewayName = "localgw",
+            Location = "Central US",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+local_network_gateway = azurerm.network.latest.LocalNetworkGateway("localNetworkGateway",
+    fqdn="site1.contoso.com",
+    gateway_ip_address="11.12.13.14",
+    local_network_address_space={
+        "addressPrefixes": ["10.1.0.0/16"],
+    },
+    local_network_gateway_name="localgw",
+    location="Central US",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const localNetworkGateway = new azurerm.network.latest.LocalNetworkGateway("localNetworkGateway", {
+    fqdn: "site1.contoso.com",
+    gatewayIpAddress: "11.12.13.14",
+    localNetworkAddressSpace: {
+        addressPrefixes: ["10.1.0.0/16"],
+    },
+    localNetworkGatewayName: "localgw",
+    location: "Central US",
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LocalNetworkGateway Resource {#create}

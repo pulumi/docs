@@ -15,6 +15,7 @@ Explore the resources and functions of the sql/v20200202preview module in the Az
     <li><a href="managedinstance" title="ManagedInstance"><span class="symbol resource"></span>ManagedInstance</a></li>
     <li><a href="managedinstanceazureadonlyauthentication" title="ManagedInstanceAzureADOnlyAuthentication"><span class="symbol resource"></span>ManagedInstanceAzureADOnlyAuthentication</a></li>
     <li><a href="serverazureadonlyauthentication" title="ServerAzureADOnlyAuthentication"><span class="symbol resource"></span>ServerAzureADOnlyAuthentication</a></li>
+    <li><a href="servertrustgroup" title="ServerTrustGroup"><span class="symbol resource"></span>ServerTrustGroup</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -23,6 +24,7 @@ Explore the resources and functions of the sql/v20200202preview module in the Az
     <li><a href="getmanagedinstance" title="GetManagedInstance"><span class="symbol function"></span>GetManagedInstance</a></li>
     <li><a href="getmanagedinstanceazureadonlyauthentication" title="GetManagedInstanceAzureADOnlyAuthentication"><span class="symbol function"></span>GetManagedInstanceAzureADOnlyAuthentication</a></li>
     <li><a href="getserverazureadonlyauthentication" title="GetServerAzureADOnlyAuthentication"><span class="symbol function"></span>GetServerAzureADOnlyAuthentication</a></li>
+    <li><a href="getservertrustgroup" title="GetServerTrustGroup"><span class="symbol function"></span>GetServerTrustGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

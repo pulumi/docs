@@ -1,8 +1,8 @@
 
 ---
 title: "DigitalTwinsEndpoint"
-title_tag: "Resource DigitalTwinsEndpoint | Module digitaltwins/v20200301preview | Package Azure RM"
-meta_desc: "Explore the DigitalTwinsEndpoint resource of the digitaltwins/v20200301preview module, including examples, input properties, output properties, lookup functions, and supporting types. DigitalTwinsInstance endpoint resource."
+title_tag: "Resource DigitalTwinsEndpoint | Module digitaltwins/latest | Package Azure RM"
+meta_desc: "Explore the DigitalTwinsEndpoint resource of the digitaltwins/latest module, including examples, input properties, output properties, lookup functions, and supporting types. DigitalTwinsInstance endpoint resource."
 ---
 
 
@@ -12,6 +12,50 @@ meta_desc: "Explore the DigitalTwinsEndpoint resource of the digitaltwins/v20200
 
 DigitalTwinsInstance endpoint resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Put a DigitalTwinsInstance resource
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+digital_twins_endpoint = .("digitalTwinsEndpoint",
+    endpoint_name="myServiceBus",
+    resource_group_name="resRg",
+    resource_name="myDigitalTwinsService")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const digitalTwinsEndpoint = new .("digitalTwinsEndpoint", {
+    endpointName: "myServiceBus",
+    resourceGroupName: "resRg",
+    resourceName: "myDigitalTwinsService",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DigitalTwinsEndpoint Resource {#create}
@@ -19,19 +63,19 @@ DigitalTwinsInstance endpoint resource.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azurerm/digitaltwins/v20200301preview/#DigitalTwinsEndpoint">DigitalTwinsEndpoint</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azurerm/digitaltwins/v20200301preview/#DigitalTwinsEndpointArgs">DigitalTwinsEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azurerm/digitaltwins/latest/#DigitalTwinsEndpoint">DigitalTwinsEndpoint</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azurerm/digitaltwins/latest/#DigitalTwinsEndpointArgs">DigitalTwinsEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/digitaltwins/v20200301preview/#pulumi_azurerm.digitaltwins/v20200301preview.DigitalTwinsEndpoint">DigitalTwinsEndpoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[EventGrid] | Dict[EventHub] | Dict[ServiceBus]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azurerm/digitaltwins/latest/#pulumi_azurerm.digitaltwins/latest.DigitalTwinsEndpoint">DigitalTwinsEndpoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[EventGrid] | Dict[EventHub] | Dict[ServiceBus]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/v20200301preview?tab=doc#DigitalTwinsEndpoint">NewDigitalTwinsEndpoint</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/v20200301preview?tab=doc#DigitalTwinsEndpointArgs">DigitalTwinsEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/v20200301preview?tab=doc#DigitalTwinsEndpoint">DigitalTwinsEndpoint</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/latest?tab=doc#DigitalTwinsEndpoint">NewDigitalTwinsEndpoint</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/latest?tab=doc#DigitalTwinsEndpointArgs">DigitalTwinsEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/latest?tab=doc#DigitalTwinsEndpoint">DigitalTwinsEndpoint</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DigitalTwins.V20200301Preview.DigitalTwinsEndpoint.html">DigitalTwinsEndpoint</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DigitalTwins.V20200301Preview.DigitalTwinsEndpointArgs.html">DigitalTwinsEndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DigitalTwins.Latest.DigitalTwinsEndpoint.html">DigitalTwinsEndpoint</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DigitalTwins.Latest.DigitalTwinsEndpointArgs.html">DigitalTwinsEndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -52,7 +96,7 @@ DigitalTwinsInstance endpoint resource.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/azurerm/digitaltwins/v20200301preview/#DigitalTwinsEndpointArgs">DigitalTwinsEndpointArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/azurerm/digitaltwins/latest/#DigitalTwinsEndpointArgs">DigitalTwinsEndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -121,7 +165,7 @@ DigitalTwinsInstance endpoint resource.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/v20200301preview?tab=doc#DigitalTwinsEndpointArgs">DigitalTwinsEndpointArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/latest?tab=doc#DigitalTwinsEndpointArgs">DigitalTwinsEndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -160,7 +204,7 @@ DigitalTwinsInstance endpoint resource.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DigitalTwins.V20200301Preview.DigitalTwinsEndpointArgs.html">DigitalTwinsEndpointArgs</a></span>
+        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DigitalTwins.Latest.DigitalTwinsEndpointArgs.html">DigitalTwinsEndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -231,7 +275,7 @@ The DigitalTwinsEndpoint resource accepts the following [input]({{< relref "/doc
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Digital<wbr>Twins.<wbr>V20200301Preview.<wbr>Inputs.<wbr>Event<wbr>Grid<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Digital<wbr>Twins.<wbr>V20200301Preview.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Digital<wbr>Twins.<wbr>V20200301Preview.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Args&gt;&gt;</span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Digital<wbr>Twins.<wbr>Latest.<wbr>Inputs.<wbr>Event<wbr>Grid<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>RM.<wbr>Digital<wbr>Twins.<wbr>Latest.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Args, Pulumi.<wbr>Azure<wbr>RM.<wbr>Digital<wbr>Twins.<wbr>Latest.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd>
 
@@ -557,10 +601,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/v20200301preview?tab=doc#EventGridArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/latest?tab=doc#EventGridArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DigitalTwins.V20200301Preview.Inputs.EventGridArgs.html">input</a>   API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DigitalTwins.Latest.Inputs.EventGridArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
 
 
@@ -577,30 +621,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="accesskey2_csharp">
-<a href="#accesskey2_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key2</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_csharp">
-<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="topicendpoint_csharp">
 <a href="#topicendpoint_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Endpoint</a>
 </span> 
@@ -608,6 +632,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}EventGrid Topic Endpoint{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesskey2_csharp">
+<a href="#accesskey2_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_csharp">
+<a href="#deadlettersecret_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -624,30 +668,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="accesskey2_go">
-<a href="#accesskey2_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key2</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_go">
-<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="topicendpoint_go">
 <a href="#topicendpoint_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Endpoint</a>
 </span> 
@@ -655,6 +679,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}EventGrid Topic Endpoint{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesskey2_go">
+<a href="#accesskey2_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_go">
+<a href="#deadlettersecret_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -671,30 +715,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="accesskey2_nodejs">
-<a href="#accesskey2_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key2</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_nodejs">
-<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="topicendpoint_nodejs">
 <a href="#topicendpoint_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Endpoint</a>
 </span> 
@@ -702,6 +726,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}EventGrid Topic Endpoint{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesskey2_nodejs">
+<a href="#accesskey2_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_nodejs">
+<a href="#deadlettersecret_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -718,30 +762,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="accesskey2_python">
-<a href="#accesskey2_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key2</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_python">
-<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="topicendpoint_python">
 <a href="#topicendpoint_python" style="color: inherit; text-decoration: inherit;">topic<wbr>Endpoint</a>
 </span> 
@@ -749,6 +773,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}EventGrid Topic Endpoint{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesskey2_python">
+<a href="#accesskey2_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_python">
+<a href="#deadlettersecret_python" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -763,10 +807,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/v20200301preview?tab=doc#EventGridResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/latest?tab=doc#EventGridResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DigitalTwins.V20200301Preview.Outputs.EventGridResponse.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DigitalTwins.Latest.Outputs.EventGridResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -783,17 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="accesskey2_csharp">
-<a href="#accesskey2_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key2</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -815,18 +849,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_csharp">
-<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="topicendpoint_csharp">
 <a href="#topicendpoint_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Endpoint</a>
 </span> 
@@ -834,6 +858,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}EventGrid Topic Endpoint{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesskey2_csharp">
+<a href="#accesskey2_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_csharp">
+<a href="#deadlettersecret_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -850,17 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="accesskey2_go">
-<a href="#accesskey2_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key2</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -882,18 +916,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_go">
-<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="topicendpoint_go">
 <a href="#topicendpoint_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Endpoint</a>
 </span> 
@@ -901,6 +925,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}EventGrid Topic Endpoint{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesskey2_go">
+<a href="#accesskey2_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_go">
+<a href="#deadlettersecret_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -917,17 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="accesskey2_nodejs">
-<a href="#accesskey2_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key2</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -949,18 +983,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_nodejs">
-<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="topicendpoint_nodejs">
 <a href="#topicendpoint_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Endpoint</a>
 </span> 
@@ -968,6 +992,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}EventGrid Topic Endpoint{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesskey2_nodejs">
+<a href="#accesskey2_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_nodejs">
+<a href="#deadlettersecret_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -984,17 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="accesskey2_python">
-<a href="#accesskey2_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key2</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1016,18 +1050,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_python">
-<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="topicendpoint_python">
 <a href="#topicendpoint_python" style="color: inherit; text-decoration: inherit;">topic<wbr>Endpoint</a>
 </span> 
@@ -1035,6 +1059,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}EventGrid Topic Endpoint{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesskey2_python">
+<a href="#accesskey2_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}EventGrid secondary accesskey. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_python">
+<a href="#deadlettersecret_python" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1049,10 +1093,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/v20200301preview?tab=doc#EventHubArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/latest?tab=doc#EventHubArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DigitalTwins.V20200301Preview.Inputs.EventHubArgs.html">input</a>   API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DigitalTwins.Latest.Inputs.EventHubArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
 
 
@@ -1069,27 +1113,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="connectionstringsecondarykey_csharp">
 <a href="#connectionstringsecondarykey_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String<wbr>Secondary<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tags_csharp">
-<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+        <span id="deadlettersecret_csharp">
+<a href="#deadlettersecret_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1106,27 +1150,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="connectionstringsecondarykey_go">
 <a href="#connectionstringsecondarykey_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String<wbr>Secondary<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tags_go">
-<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+        <span id="deadlettersecret_go">
+<a href="#deadlettersecret_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1143,27 +1187,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="connectionstringsecondarykey_nodejs">
 <a href="#connectionstringsecondarykey_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Secondary<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tags_nodejs">
-<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+        <span id="deadlettersecret_nodejs">
+<a href="#deadlettersecret_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1180,27 +1224,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="connectionstringsecondarykey_python">
 <a href="#connectionstringsecondarykey_python" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Secondary<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tags_python">
-<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+        <span id="deadlettersecret_python">
+<a href="#deadlettersecret_python" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1215,10 +1259,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/v20200301preview?tab=doc#EventHubResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/latest?tab=doc#EventHubResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DigitalTwins.V20200301Preview.Outputs.EventHubResponse.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DigitalTwins.Latest.Outputs.EventHubResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1235,17 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="connectionstringsecondarykey_csharp">
-<a href="#connectionstringsecondarykey_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String<wbr>Secondary<wbr>Key</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1269,13 +1303,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tags_csharp">
-<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+        <span id="connectionstringsecondarykey_csharp">
+<a href="#connectionstringsecondarykey_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String<wbr>Secondary<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_csharp">
+<a href="#deadlettersecret_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1292,17 +1336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="connectionstringsecondarykey_go">
-<a href="#connectionstringsecondarykey_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String<wbr>Secondary<wbr>Key</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1326,13 +1360,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tags_go">
-<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+        <span id="connectionstringsecondarykey_go">
+<a href="#connectionstringsecondarykey_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String<wbr>Secondary<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_go">
+<a href="#deadlettersecret_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1349,17 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="connectionstringsecondarykey_nodejs">
-<a href="#connectionstringsecondarykey_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Secondary<wbr>Key</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1383,13 +1417,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tags_nodejs">
-<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+        <span id="connectionstringsecondarykey_nodejs">
+<a href="#connectionstringsecondarykey_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Secondary<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_nodejs">
+<a href="#deadlettersecret_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1406,17 +1450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="connectionstringsecondarykey_python">
-<a href="#connectionstringsecondarykey_python" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Secondary<wbr>Key</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1440,13 +1474,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tags_python">
-<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+        <span id="connectionstringsecondarykey_python">
+<a href="#connectionstringsecondarykey_python" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Secondary<wbr>Key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_python">
+<a href="#deadlettersecret_python" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1461,10 +1505,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/v20200301preview?tab=doc#ServiceBusArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/latest?tab=doc#ServiceBusArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DigitalTwins.V20200301Preview.Inputs.ServiceBusArgs.html">input</a>   API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DigitalTwins.Latest.Inputs.ServiceBusArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
 
 
@@ -1481,27 +1525,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_csharp">
+<a href="#deadlettersecret_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="secondaryconnectionstring_csharp">
 <a href="#secondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_csharp">
-<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1518,27 +1562,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_go">
+<a href="#deadlettersecret_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="secondaryconnectionstring_go">
 <a href="#secondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_go">
-<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1555,27 +1599,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_nodejs">
+<a href="#deadlettersecret_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="secondaryconnectionstring_nodejs">
 <a href="#secondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_nodejs">
-<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1592,27 +1636,27 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_python">
+<a href="#deadlettersecret_python" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="secondaryconnectionstring_python">
 <a href="#secondaryconnectionstring_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_python">
-<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1627,10 +1671,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/v20200301preview?tab=doc#ServiceBusResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azurerm/sdk/go/azurerm/digitaltwins/latest?tab=doc#ServiceBusResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DigitalTwins.V20200301Preview.Outputs.ServiceBusResponse.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureRM/Pulumi.AzureRM.DigitalTwins.Latest.Outputs.ServiceBusResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1657,7 +1701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1669,25 +1713,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_csharp">
+<a href="#deadlettersecret_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="secondaryconnectionstring_csharp">
 <a href="#secondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_csharp">
-<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1714,7 +1758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1726,25 +1770,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_go">
+<a href="#deadlettersecret_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="secondaryconnectionstring_go">
 <a href="#secondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_go">
-<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1771,7 +1815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1783,25 +1827,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_nodejs">
+<a href="#deadlettersecret_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="secondaryconnectionstring_nodejs">
 <a href="#secondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_nodejs">
-<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1828,7 +1872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
+    <dd>{{% md %}}PrimaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1840,25 +1884,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadlettersecret_python">
+<a href="#deadlettersecret_python" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Dead letter storage secret. Will be obfuscated during read.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="secondaryconnectionstring_python">
 <a href="#secondaryconnectionstring_python" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tags_python">
-<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
+    <dd>{{% md %}}SecondaryConnectionString of the endpoint. Will be obfuscated during read.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

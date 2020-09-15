@@ -12,6 +12,86 @@ meta_desc: "Explore the ChapSetting resource of the storsimple/latest module, in
 
 Challenge-Handshake Authentication Protocol (CHAP) setting
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ChapSettingsCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var chapSetting = new AzureRM.StorSimple.Latest.ChapSetting("chapSetting", new AzureRM.StorSimple.Latest.ChapSettingArgs
+        {
+            ChapUserName = "ChapSettingForSDK",
+            DeviceName = "HSDK-WSJQERQW3F",
+            ManagerName = "hAzureSDKOperations",
+            Password = new AzureRM.StorSimple.Latest.Inputs.AsymmetricEncryptedSecretArgs
+            {
+                EncryptionAlgorithm = "RSAES_PKCS1_v_1_5",
+                Value = "W4xL3maActbzoehB9Ny1nr16uyjZZfvuJ70f8yBQgtS3vU4SLrOpoggmutOsbcgOgmgNHZnKe73WRZxzJFxzUQqcFNrAV+dReDkO5I/L1GxDjT5rsWn+74dRl8ditTew4z6OcwrT6RXtjG0njkUNsxXuawuylXsdHdvgQtSWbXBSao6KVhSbGQ57/V++CXqBbG2zoGLlHMdZF9OQccvCgh7qwD4ua7FLwqvQ8vYYVXryKm+XDmmT+GYWDqxPly0M2mJl/GLB/c6rNem4oRHBsf/vKfEKm8WGLWNsRZGcbxZKGiGsKC8QsxDHou6Ci3rfphVJE2R/9TxL+/1lUu2poQ==",
+            },
+            ResourceGroupName = "ResourceGroupForSDKTest",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+chap_setting = azurerm.storsimple.latest.ChapSetting("chapSetting",
+    chap_user_name="ChapSettingForSDK",
+    device_name="HSDK-WSJQERQW3F",
+    manager_name="hAzureSDKOperations",
+    password={
+        "encryptionAlgorithm": "RSAES_PKCS1_v_1_5",
+        "value": "W4xL3maActbzoehB9Ny1nr16uyjZZfvuJ70f8yBQgtS3vU4SLrOpoggmutOsbcgOgmgNHZnKe73WRZxzJFxzUQqcFNrAV+dReDkO5I/L1GxDjT5rsWn+74dRl8ditTew4z6OcwrT6RXtjG0njkUNsxXuawuylXsdHdvgQtSWbXBSao6KVhSbGQ57/V++CXqBbG2zoGLlHMdZF9OQccvCgh7qwD4ua7FLwqvQ8vYYVXryKm+XDmmT+GYWDqxPly0M2mJl/GLB/c6rNem4oRHBsf/vKfEKm8WGLWNsRZGcbxZKGiGsKC8QsxDHou6Ci3rfphVJE2R/9TxL+/1lUu2poQ==",
+    },
+    resource_group_name="ResourceGroupForSDKTest")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const chapSetting = new azurerm.storsimple.latest.ChapSetting("chapSetting", {
+    chapUserName: "ChapSettingForSDK",
+    deviceName: "HSDK-WSJQERQW3F",
+    managerName: "hAzureSDKOperations",
+    password: {
+        encryptionAlgorithm: "RSAES_PKCS1_v_1_5",
+        value: "W4xL3maActbzoehB9Ny1nr16uyjZZfvuJ70f8yBQgtS3vU4SLrOpoggmutOsbcgOgmgNHZnKe73WRZxzJFxzUQqcFNrAV+dReDkO5I/L1GxDjT5rsWn+74dRl8ditTew4z6OcwrT6RXtjG0njkUNsxXuawuylXsdHdvgQtSWbXBSao6KVhSbGQ57/V++CXqBbG2zoGLlHMdZF9OQccvCgh7qwD4ua7FLwqvQ8vYYVXryKm+XDmmT+GYWDqxPly0M2mJl/GLB/c6rNem4oRHBsf/vKfEKm8WGLWNsRZGcbxZKGiGsKC8QsxDHou6Ci3rfphVJE2R/9TxL+/1lUu2poQ==",
+    },
+    resourceGroupName: "ResourceGroupForSDKTest",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ChapSetting Resource {#create}

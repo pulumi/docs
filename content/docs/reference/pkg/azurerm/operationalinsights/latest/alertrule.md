@@ -12,6 +12,206 @@ meta_desc: "Explore the AlertRule resource of the operationalinsights/latest mod
 
 Alert rule.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates a Fusion alert rule.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var alertRule = new AzureRM.OperationalInsights.Latest.AlertRule("alertRule", new AzureRM.OperationalInsights.Latest.AlertRuleArgs
+        {
+            Etag = "3d00c3ca-0000-0100-0000-5d42d5010000",
+            Kind = "Fusion",
+            ResourceGroupName = "myRg",
+            RuleId = "myFirstFusionRule",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+alert_rule = azurerm.operationalinsights.latest.AlertRule("alertRule",
+    etag="3d00c3ca-0000-0100-0000-5d42d5010000",
+    kind="Fusion",
+    resource_group_name="myRg",
+    rule_id="myFirstFusionRule",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const alertRule = new azurerm.operationalinsights.latest.AlertRule("alertRule", {
+    etag: "3d00c3ca-0000-0100-0000-5d42d5010000",
+    kind: "Fusion",
+    resourceGroupName: "myRg",
+    ruleId: "myFirstFusionRule",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+### Creates or updates a MicrosoftSecurityIncidentCreation rule.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var alertRule = new AzureRM.OperationalInsights.Latest.AlertRule("alertRule", new AzureRM.OperationalInsights.Latest.AlertRuleArgs
+        {
+            Etag = "\"260097e0-0000-0d00-0000-5d6fa88f0000\"",
+            Kind = "MicrosoftSecurityIncidentCreation",
+            ResourceGroupName = "myRg",
+            RuleId = "microsoftSecurityIncidentCreationRuleExample",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+alert_rule = azurerm.operationalinsights.latest.AlertRule("alertRule",
+    etag="\"260097e0-0000-0d00-0000-5d6fa88f0000\"",
+    kind="MicrosoftSecurityIncidentCreation",
+    resource_group_name="myRg",
+    rule_id="microsoftSecurityIncidentCreationRuleExample",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const alertRule = new azurerm.operationalinsights.latest.AlertRule("alertRule", {
+    etag: "\"260097e0-0000-0d00-0000-5d6fa88f0000\"",
+    kind: "MicrosoftSecurityIncidentCreation",
+    resourceGroupName: "myRg",
+    ruleId: "microsoftSecurityIncidentCreationRuleExample",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+### Creates or updates a Scheduled alert rule.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var alertRule = new AzureRM.OperationalInsights.Latest.AlertRule("alertRule", new AzureRM.OperationalInsights.Latest.AlertRuleArgs
+        {
+            Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+            Kind = "Scheduled",
+            ResourceGroupName = "myRg",
+            RuleId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+alert_rule = azurerm.operationalinsights.latest.AlertRule("alertRule",
+    etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    kind="Scheduled",
+    resource_group_name="myRg",
+    rule_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const alertRule = new azurerm.operationalinsights.latest.AlertRule("alertRule", {
+    etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
+    kind: "Scheduled",
+    resourceGroupName: "myRg",
+    ruleId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AlertRule Resource {#create}

@@ -12,6 +12,83 @@ meta_desc: "Explore the IntegrationAccountSession resource of the logic/latest m
 
 The integration account session.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update an integration account session
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var integrationAccountSession = new AzureRM.Logic.Latest.IntegrationAccountSession("integrationAccountSession", new AzureRM.Logic.Latest.IntegrationAccountSessionArgs
+        {
+            Content = 
+            {
+                { "controlNumber", "1234" },
+                { "controlNumberChangedTime", "2017-02-21T22:30:11.9923759Z" },
+            },
+            IntegrationAccountName = "testia123",
+            ResourceGroupName = "testrg123",
+            SessionName = "testsession123-ICN",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+integration_account_session = azurerm.logic.latest.IntegrationAccountSession("integrationAccountSession",
+    content={
+        "controlNumber": "1234",
+        "controlNumberChangedTime": "2017-02-21T22:30:11.9923759Z",
+    },
+    integration_account_name="testia123",
+    resource_group_name="testrg123",
+    session_name="testsession123-ICN")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const integrationAccountSession = new azurerm.logic.latest.IntegrationAccountSession("integrationAccountSession", {
+    content: {
+        controlNumber: "1234",
+        controlNumberChangedTime: "2017-02-21T22:30:11.9923759Z",
+    },
+    integrationAccountName: "testia123",
+    resourceGroupName: "testrg123",
+    sessionName: "testsession123-ICN",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IntegrationAccountSession Resource {#create}

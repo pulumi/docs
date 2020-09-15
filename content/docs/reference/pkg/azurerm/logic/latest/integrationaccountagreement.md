@@ -12,6 +12,553 @@ meta_desc: "Explore the IntegrationAccountAgreement resource of the logic/latest
 
 The integration account agreement.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update an agreement
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var integrationAccountAgreement = new AzureRM.Logic.Latest.IntegrationAccountAgreement("integrationAccountAgreement", new AzureRM.Logic.Latest.IntegrationAccountAgreementArgs
+        {
+            AgreementName = "testAgreement",
+            AgreementType = "AS2",
+            Content = new AzureRM.Logic.Latest.Inputs.AgreementContentArgs
+            {
+                AS2 = new AzureRM.Logic.Latest.Inputs.AS2AgreementContentArgs
+                {
+                    ReceiveAgreement = new AzureRM.Logic.Latest.Inputs.AS2OneWayAgreementArgs
+                    {
+                        ProtocolSettings = new AzureRM.Logic.Latest.Inputs.AS2ProtocolSettingsArgs
+                        {
+                            AcknowledgementConnectionSettings = new AzureRM.Logic.Latest.Inputs.AS2AcknowledgementConnectionSettingsArgs
+                            {
+                                IgnoreCertificateNameMismatch = true,
+                                KeepHttpConnectionAlive = true,
+                                SupportHttpStatusCodeContinue = true,
+                                UnfoldHttpHeaders = true,
+                            },
+                            EnvelopeSettings = new AzureRM.Logic.Latest.Inputs.AS2EnvelopeSettingsArgs
+                            {
+                                AutogenerateFileName = true,
+                                FileNameTemplate = "Test",
+                                MessageContentType = "text/plain",
+                                SuspendMessageOnFileNameGenerationError = true,
+                                TransmitFileNameInMimeHeader = true,
+                            },
+                            ErrorSettings = new AzureRM.Logic.Latest.Inputs.AS2ErrorSettingsArgs
+                            {
+                                ResendIfMDNNotReceived = true,
+                                SuspendDuplicateMessage = true,
+                            },
+                            MdnSettings = new AzureRM.Logic.Latest.Inputs.AS2MdnSettingsArgs
+                            {
+                                DispositionNotificationTo = "http://tempuri.org",
+                                MdnText = "Sample",
+                                MicHashingAlgorithm = "SHA1",
+                                NeedMDN = true,
+                                ReceiptDeliveryUrl = "http://tempuri.org",
+                                SendInboundMDNToMessageBox = true,
+                                SendMDNAsynchronously = true,
+                                SignMDN = true,
+                                SignOutboundMDNIfOptional = true,
+                            },
+                            MessageConnectionSettings = new AzureRM.Logic.Latest.Inputs.AS2MessageConnectionSettingsArgs
+                            {
+                                IgnoreCertificateNameMismatch = true,
+                                KeepHttpConnectionAlive = true,
+                                SupportHttpStatusCodeContinue = true,
+                                UnfoldHttpHeaders = true,
+                            },
+                            SecuritySettings = new AzureRM.Logic.Latest.Inputs.AS2SecuritySettingsArgs
+                            {
+                                EnableNRRForInboundDecodedMessages = true,
+                                EnableNRRForInboundEncodedMessages = true,
+                                EnableNRRForInboundMDN = true,
+                                EnableNRRForOutboundDecodedMessages = true,
+                                EnableNRRForOutboundEncodedMessages = true,
+                                EnableNRRForOutboundMDN = true,
+                                OverrideGroupSigningCertificate = false,
+                            },
+                            ValidationSettings = new AzureRM.Logic.Latest.Inputs.AS2ValidationSettingsArgs
+                            {
+                                CheckCertificateRevocationListOnReceive = true,
+                                CheckCertificateRevocationListOnSend = true,
+                                CheckDuplicateMessage = true,
+                                CompressMessage = true,
+                                EncryptMessage = false,
+                                EncryptionAlgorithm = "AES128",
+                                InterchangeDuplicatesValidityDays = 100,
+                                OverrideMessageProperties = true,
+                                SignMessage = false,
+                            },
+                        },
+                        ReceiverBusinessIdentity = new AzureRM.Logic.Latest.Inputs.BusinessIdentityArgs
+                        {
+                            Qualifier = "ZZ",
+                            Value = "ZZ",
+                        },
+                        SenderBusinessIdentity = new AzureRM.Logic.Latest.Inputs.BusinessIdentityArgs
+                        {
+                            Qualifier = "AA",
+                            Value = "AA",
+                        },
+                    },
+                    SendAgreement = new AzureRM.Logic.Latest.Inputs.AS2OneWayAgreementArgs
+                    {
+                        ProtocolSettings = new AzureRM.Logic.Latest.Inputs.AS2ProtocolSettingsArgs
+                        {
+                            AcknowledgementConnectionSettings = new AzureRM.Logic.Latest.Inputs.AS2AcknowledgementConnectionSettingsArgs
+                            {
+                                IgnoreCertificateNameMismatch = true,
+                                KeepHttpConnectionAlive = true,
+                                SupportHttpStatusCodeContinue = true,
+                                UnfoldHttpHeaders = true,
+                            },
+                            EnvelopeSettings = new AzureRM.Logic.Latest.Inputs.AS2EnvelopeSettingsArgs
+                            {
+                                AutogenerateFileName = true,
+                                FileNameTemplate = "Test",
+                                MessageContentType = "text/plain",
+                                SuspendMessageOnFileNameGenerationError = true,
+                                TransmitFileNameInMimeHeader = true,
+                            },
+                            ErrorSettings = new AzureRM.Logic.Latest.Inputs.AS2ErrorSettingsArgs
+                            {
+                                ResendIfMDNNotReceived = true,
+                                SuspendDuplicateMessage = true,
+                            },
+                            MdnSettings = new AzureRM.Logic.Latest.Inputs.AS2MdnSettingsArgs
+                            {
+                                DispositionNotificationTo = "http://tempuri.org",
+                                MdnText = "Sample",
+                                MicHashingAlgorithm = "SHA1",
+                                NeedMDN = true,
+                                ReceiptDeliveryUrl = "http://tempuri.org",
+                                SendInboundMDNToMessageBox = true,
+                                SendMDNAsynchronously = true,
+                                SignMDN = true,
+                                SignOutboundMDNIfOptional = true,
+                            },
+                            MessageConnectionSettings = new AzureRM.Logic.Latest.Inputs.AS2MessageConnectionSettingsArgs
+                            {
+                                IgnoreCertificateNameMismatch = true,
+                                KeepHttpConnectionAlive = true,
+                                SupportHttpStatusCodeContinue = true,
+                                UnfoldHttpHeaders = true,
+                            },
+                            SecuritySettings = new AzureRM.Logic.Latest.Inputs.AS2SecuritySettingsArgs
+                            {
+                                EnableNRRForInboundDecodedMessages = true,
+                                EnableNRRForInboundEncodedMessages = true,
+                                EnableNRRForInboundMDN = true,
+                                EnableNRRForOutboundDecodedMessages = true,
+                                EnableNRRForOutboundEncodedMessages = true,
+                                EnableNRRForOutboundMDN = true,
+                                OverrideGroupSigningCertificate = false,
+                            },
+                            ValidationSettings = new AzureRM.Logic.Latest.Inputs.AS2ValidationSettingsArgs
+                            {
+                                CheckCertificateRevocationListOnReceive = true,
+                                CheckCertificateRevocationListOnSend = true,
+                                CheckDuplicateMessage = true,
+                                CompressMessage = true,
+                                EncryptMessage = false,
+                                EncryptionAlgorithm = "AES128",
+                                InterchangeDuplicatesValidityDays = 100,
+                                OverrideMessageProperties = true,
+                                SignMessage = false,
+                            },
+                        },
+                        ReceiverBusinessIdentity = new AzureRM.Logic.Latest.Inputs.BusinessIdentityArgs
+                        {
+                            Qualifier = "AA",
+                            Value = "AA",
+                        },
+                        SenderBusinessIdentity = new AzureRM.Logic.Latest.Inputs.BusinessIdentityArgs
+                        {
+                            Qualifier = "ZZ",
+                            Value = "ZZ",
+                        },
+                    },
+                },
+            },
+            GuestIdentity = new AzureRM.Logic.Latest.Inputs.BusinessIdentityArgs
+            {
+                Qualifier = "AA",
+                Value = "AA",
+            },
+            GuestPartner = "GuestPartner",
+            HostIdentity = new AzureRM.Logic.Latest.Inputs.BusinessIdentityArgs
+            {
+                Qualifier = "ZZ",
+                Value = "ZZ",
+            },
+            HostPartner = "HostPartner",
+            IntegrationAccountName = "testIntegrationAccount",
+            Location = "westus",
+            Metadata = ,
+            ResourceGroupName = "testResourceGroup",
+            Tags = 
+            {
+                { "IntegrationAccountAgreement", "<IntegrationAccountAgreementName>" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+integration_account_agreement = azurerm.logic.latest.IntegrationAccountAgreement("integrationAccountAgreement",
+    agreement_name="testAgreement",
+    agreement_type="AS2",
+    content={
+        "aS2": {
+            "receiveAgreement": {
+                "protocolSettings": {
+                    "acknowledgementConnectionSettings": {
+                        "ignoreCertificateNameMismatch": True,
+                        "keepHttpConnectionAlive": True,
+                        "supportHttpStatusCodeContinue": True,
+                        "unfoldHttpHeaders": True,
+                    },
+                    "envelopeSettings": {
+                        "autogenerateFileName": True,
+                        "fileNameTemplate": "Test",
+                        "messageContentType": "text/plain",
+                        "suspendMessageOnFileNameGenerationError": True,
+                        "transmitFileNameInMimeHeader": True,
+                    },
+                    "errorSettings": {
+                        "resendIfMDNNotReceived": True,
+                        "suspendDuplicateMessage": True,
+                    },
+                    "mdnSettings": {
+                        "dispositionNotificationTo": "http://tempuri.org",
+                        "mdnText": "Sample",
+                        "micHashingAlgorithm": "SHA1",
+                        "needMDN": True,
+                        "receiptDeliveryUrl": "http://tempuri.org",
+                        "sendInboundMDNToMessageBox": True,
+                        "sendMDNAsynchronously": True,
+                        "signMDN": True,
+                        "signOutboundMDNIfOptional": True,
+                    },
+                    "messageConnectionSettings": {
+                        "ignoreCertificateNameMismatch": True,
+                        "keepHttpConnectionAlive": True,
+                        "supportHttpStatusCodeContinue": True,
+                        "unfoldHttpHeaders": True,
+                    },
+                    "securitySettings": {
+                        "enableNRRForInboundDecodedMessages": True,
+                        "enableNRRForInboundEncodedMessages": True,
+                        "enableNRRForInboundMDN": True,
+                        "enableNRRForOutboundDecodedMessages": True,
+                        "enableNRRForOutboundEncodedMessages": True,
+                        "enableNRRForOutboundMDN": True,
+                        "overrideGroupSigningCertificate": False,
+                    },
+                    "validationSettings": {
+                        "checkCertificateRevocationListOnReceive": True,
+                        "checkCertificateRevocationListOnSend": True,
+                        "checkDuplicateMessage": True,
+                        "compressMessage": True,
+                        "encryptMessage": False,
+                        "encryptionAlgorithm": "AES128",
+                        "interchangeDuplicatesValidityDays": 100,
+                        "overrideMessageProperties": True,
+                        "signMessage": False,
+                    },
+                },
+                "receiverBusinessIdentity": {
+                    "qualifier": "ZZ",
+                    "value": "ZZ",
+                },
+                "senderBusinessIdentity": {
+                    "qualifier": "AA",
+                    "value": "AA",
+                },
+            },
+            "sendAgreement": {
+                "protocolSettings": {
+                    "acknowledgementConnectionSettings": {
+                        "ignoreCertificateNameMismatch": True,
+                        "keepHttpConnectionAlive": True,
+                        "supportHttpStatusCodeContinue": True,
+                        "unfoldHttpHeaders": True,
+                    },
+                    "envelopeSettings": {
+                        "autogenerateFileName": True,
+                        "fileNameTemplate": "Test",
+                        "messageContentType": "text/plain",
+                        "suspendMessageOnFileNameGenerationError": True,
+                        "transmitFileNameInMimeHeader": True,
+                    },
+                    "errorSettings": {
+                        "resendIfMDNNotReceived": True,
+                        "suspendDuplicateMessage": True,
+                    },
+                    "mdnSettings": {
+                        "dispositionNotificationTo": "http://tempuri.org",
+                        "mdnText": "Sample",
+                        "micHashingAlgorithm": "SHA1",
+                        "needMDN": True,
+                        "receiptDeliveryUrl": "http://tempuri.org",
+                        "sendInboundMDNToMessageBox": True,
+                        "sendMDNAsynchronously": True,
+                        "signMDN": True,
+                        "signOutboundMDNIfOptional": True,
+                    },
+                    "messageConnectionSettings": {
+                        "ignoreCertificateNameMismatch": True,
+                        "keepHttpConnectionAlive": True,
+                        "supportHttpStatusCodeContinue": True,
+                        "unfoldHttpHeaders": True,
+                    },
+                    "securitySettings": {
+                        "enableNRRForInboundDecodedMessages": True,
+                        "enableNRRForInboundEncodedMessages": True,
+                        "enableNRRForInboundMDN": True,
+                        "enableNRRForOutboundDecodedMessages": True,
+                        "enableNRRForOutboundEncodedMessages": True,
+                        "enableNRRForOutboundMDN": True,
+                        "overrideGroupSigningCertificate": False,
+                    },
+                    "validationSettings": {
+                        "checkCertificateRevocationListOnReceive": True,
+                        "checkCertificateRevocationListOnSend": True,
+                        "checkDuplicateMessage": True,
+                        "compressMessage": True,
+                        "encryptMessage": False,
+                        "encryptionAlgorithm": "AES128",
+                        "interchangeDuplicatesValidityDays": 100,
+                        "overrideMessageProperties": True,
+                        "signMessage": False,
+                    },
+                },
+                "receiverBusinessIdentity": {
+                    "qualifier": "AA",
+                    "value": "AA",
+                },
+                "senderBusinessIdentity": {
+                    "qualifier": "ZZ",
+                    "value": "ZZ",
+                },
+            },
+        },
+    },
+    guest_identity={
+        "qualifier": "AA",
+        "value": "AA",
+    },
+    guest_partner="GuestPartner",
+    host_identity={
+        "qualifier": "ZZ",
+        "value": "ZZ",
+    },
+    host_partner="HostPartner",
+    integration_account_name="testIntegrationAccount",
+    location="westus",
+    metadata={},
+    resource_group_name="testResourceGroup",
+    tags={
+        "IntegrationAccountAgreement": "<IntegrationAccountAgreementName>",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const integrationAccountAgreement = new azurerm.logic.latest.IntegrationAccountAgreement("integrationAccountAgreement", {
+    agreementName: "testAgreement",
+    agreementType: "AS2",
+    content: {
+        aS2: {
+            receiveAgreement: {
+                protocolSettings: {
+                    acknowledgementConnectionSettings: {
+                        ignoreCertificateNameMismatch: true,
+                        keepHttpConnectionAlive: true,
+                        supportHttpStatusCodeContinue: true,
+                        unfoldHttpHeaders: true,
+                    },
+                    envelopeSettings: {
+                        autogenerateFileName: true,
+                        fileNameTemplate: "Test",
+                        messageContentType: "text/plain",
+                        suspendMessageOnFileNameGenerationError: true,
+                        transmitFileNameInMimeHeader: true,
+                    },
+                    errorSettings: {
+                        resendIfMDNNotReceived: true,
+                        suspendDuplicateMessage: true,
+                    },
+                    mdnSettings: {
+                        dispositionNotificationTo: "http://tempuri.org",
+                        mdnText: "Sample",
+                        micHashingAlgorithm: "SHA1",
+                        needMDN: true,
+                        receiptDeliveryUrl: "http://tempuri.org",
+                        sendInboundMDNToMessageBox: true,
+                        sendMDNAsynchronously: true,
+                        signMDN: true,
+                        signOutboundMDNIfOptional: true,
+                    },
+                    messageConnectionSettings: {
+                        ignoreCertificateNameMismatch: true,
+                        keepHttpConnectionAlive: true,
+                        supportHttpStatusCodeContinue: true,
+                        unfoldHttpHeaders: true,
+                    },
+                    securitySettings: {
+                        enableNRRForInboundDecodedMessages: true,
+                        enableNRRForInboundEncodedMessages: true,
+                        enableNRRForInboundMDN: true,
+                        enableNRRForOutboundDecodedMessages: true,
+                        enableNRRForOutboundEncodedMessages: true,
+                        enableNRRForOutboundMDN: true,
+                        overrideGroupSigningCertificate: false,
+                    },
+                    validationSettings: {
+                        checkCertificateRevocationListOnReceive: true,
+                        checkCertificateRevocationListOnSend: true,
+                        checkDuplicateMessage: true,
+                        compressMessage: true,
+                        encryptMessage: false,
+                        encryptionAlgorithm: "AES128",
+                        interchangeDuplicatesValidityDays: 100,
+                        overrideMessageProperties: true,
+                        signMessage: false,
+                    },
+                },
+                receiverBusinessIdentity: {
+                    qualifier: "ZZ",
+                    value: "ZZ",
+                },
+                senderBusinessIdentity: {
+                    qualifier: "AA",
+                    value: "AA",
+                },
+            },
+            sendAgreement: {
+                protocolSettings: {
+                    acknowledgementConnectionSettings: {
+                        ignoreCertificateNameMismatch: true,
+                        keepHttpConnectionAlive: true,
+                        supportHttpStatusCodeContinue: true,
+                        unfoldHttpHeaders: true,
+                    },
+                    envelopeSettings: {
+                        autogenerateFileName: true,
+                        fileNameTemplate: "Test",
+                        messageContentType: "text/plain",
+                        suspendMessageOnFileNameGenerationError: true,
+                        transmitFileNameInMimeHeader: true,
+                    },
+                    errorSettings: {
+                        resendIfMDNNotReceived: true,
+                        suspendDuplicateMessage: true,
+                    },
+                    mdnSettings: {
+                        dispositionNotificationTo: "http://tempuri.org",
+                        mdnText: "Sample",
+                        micHashingAlgorithm: "SHA1",
+                        needMDN: true,
+                        receiptDeliveryUrl: "http://tempuri.org",
+                        sendInboundMDNToMessageBox: true,
+                        sendMDNAsynchronously: true,
+                        signMDN: true,
+                        signOutboundMDNIfOptional: true,
+                    },
+                    messageConnectionSettings: {
+                        ignoreCertificateNameMismatch: true,
+                        keepHttpConnectionAlive: true,
+                        supportHttpStatusCodeContinue: true,
+                        unfoldHttpHeaders: true,
+                    },
+                    securitySettings: {
+                        enableNRRForInboundDecodedMessages: true,
+                        enableNRRForInboundEncodedMessages: true,
+                        enableNRRForInboundMDN: true,
+                        enableNRRForOutboundDecodedMessages: true,
+                        enableNRRForOutboundEncodedMessages: true,
+                        enableNRRForOutboundMDN: true,
+                        overrideGroupSigningCertificate: false,
+                    },
+                    validationSettings: {
+                        checkCertificateRevocationListOnReceive: true,
+                        checkCertificateRevocationListOnSend: true,
+                        checkDuplicateMessage: true,
+                        compressMessage: true,
+                        encryptMessage: false,
+                        encryptionAlgorithm: "AES128",
+                        interchangeDuplicatesValidityDays: 100,
+                        overrideMessageProperties: true,
+                        signMessage: false,
+                    },
+                },
+                receiverBusinessIdentity: {
+                    qualifier: "AA",
+                    value: "AA",
+                },
+                senderBusinessIdentity: {
+                    qualifier: "ZZ",
+                    value: "ZZ",
+                },
+            },
+        },
+    },
+    guestIdentity: {
+        qualifier: "AA",
+        value: "AA",
+    },
+    guestPartner: "GuestPartner",
+    hostIdentity: {
+        qualifier: "ZZ",
+        value: "ZZ",
+    },
+    hostPartner: "HostPartner",
+    integrationAccountName: "testIntegrationAccount",
+    location: "westus",
+    metadata: {},
+    resourceGroupName: "testResourceGroup",
+    tags: {
+        IntegrationAccountAgreement: "<IntegrationAccountAgreementName>",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IntegrationAccountAgreement Resource {#create}

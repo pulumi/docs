@@ -12,6 +12,73 @@ meta_desc: "Explore the ReplicationRecoveryServicesProvider resource of the reco
 
 Provider details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Adds a recovery services provider.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var replicationRecoveryServicesProvider = new AzureRM.RecoveryServices.Latest.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider", new AzureRM.RecoveryServices.Latest.ReplicationRecoveryServicesProviderArgs
+        {
+            FabricName = "vmwarefabric1",
+            ProviderName = "vmwareprovider1",
+            ResourceGroupName = "resourcegroup1",
+            ResourceName = "migrationvault",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+replication_recovery_services_provider = azurerm.recoveryservices.latest.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider",
+    fabric_name="vmwarefabric1",
+    provider_name="vmwareprovider1",
+    resource_group_name="resourcegroup1",
+    resource_name="migrationvault")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const replicationRecoveryServicesProvider = new azurerm.recoveryservices.latest.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider", {
+    fabricName: "vmwarefabric1",
+    providerName: "vmwareprovider1",
+    resourceGroupName: "resourcegroup1",
+    resourceName: "migrationvault",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ReplicationRecoveryServicesProvider Resource {#create}

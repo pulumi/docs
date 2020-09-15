@@ -12,6 +12,83 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the documentdb/v20
 
 A private endpoint connection
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Approve or reject a private endpoint connection with a given name.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpointConnection = new AzureRM.DocumentDB.V20190801Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureRM.DocumentDB.V20190801Preview.PrivateEndpointConnectionArgs
+        {
+            AccountName = "ddb1",
+            PrivateEndpointConnectionName = "privateEndpointConnectionName",
+            PrivateLinkServiceConnectionState = new AzureRM.DocumentDB.V20190801Preview.Inputs.PrivateLinkServiceConnectionStatePropertyArgs
+            {
+                Description = "Approved by johndoe@contoso.com",
+                Status = "Approved",
+            },
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_endpoint_connection = azurerm.documentdb.v20190801preview.PrivateEndpointConnection("privateEndpointConnection",
+    account_name="ddb1",
+    private_endpoint_connection_name="privateEndpointConnectionName",
+    private_link_service_connection_state={
+        "description": "Approved by johndoe@contoso.com",
+        "status": "Approved",
+    },
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateEndpointConnection = new azurerm.documentdb.v20190801preview.PrivateEndpointConnection("privateEndpointConnection", {
+    accountName: "ddb1",
+    privateEndpointConnectionName: "privateEndpointConnectionName",
+    privateLinkServiceConnectionState: {
+        description: "Approved by johndoe@contoso.com",
+        status: "Approved",
+    },
+    resourceGroupName: "rg1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateEndpointConnection Resource {#create}

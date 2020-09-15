@@ -12,6 +12,86 @@ meta_desc: "Explore the IotDpsResource resource of the devices/latest module, in
 
 The description of the provisioning service.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### DPSCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var iotDpsResource = new AzureRM.Devices.Latest.IotDpsResource("iotDpsResource", new AzureRM.Devices.Latest.IotDpsResourceArgs
+        {
+            Location = "East US",
+            ProvisioningServiceName = "myFirstProvisioningService",
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.Devices.Latest.Inputs.IotDpsSkuInfoArgs
+            {
+                Capacity = 1,
+                Name = "S1",
+            },
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+iot_dps_resource = azurerm.devices.latest.IotDpsResource("iotDpsResource",
+    location="East US",
+    provisioning_service_name="myFirstProvisioningService",
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 1,
+        "name": "S1",
+    },
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const iotDpsResource = new azurerm.devices.latest.IotDpsResource("iotDpsResource", {
+    location: "East US",
+    provisioningServiceName: "myFirstProvisioningService",
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 1,
+        name: "S1",
+    },
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IotDpsResource Resource {#create}

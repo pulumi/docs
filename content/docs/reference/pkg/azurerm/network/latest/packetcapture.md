@@ -12,6 +12,117 @@ meta_desc: "Explore the PacketCapture resource of the network/latest module, inc
 
 Information about packet capture session.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create packet capture
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var packetCapture = new AzureRM.Network.Latest.PacketCapture("packetCapture", new AzureRM.Network.Latest.PacketCaptureArgs
+        {
+            BytesToCapturePerPacket = 10000,
+            Filters = 
+            {
+                new AzureRM.Network.Latest.Inputs.PacketCaptureFilterArgs
+                {
+                    LocalIPAddress = "10.0.0.4",
+                    LocalPort = "80",
+                    Protocol = "TCP",
+                },
+            },
+            NetworkWatcherName = "nw1",
+            PacketCaptureName = "pc1",
+            ResourceGroupName = "rg1",
+            StorageLocation = new AzureRM.Network.Latest.Inputs.PacketCaptureStorageLocationArgs
+            {
+                FilePath = "D:\\capture\\pc1.cap",
+                StorageId = "/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Storage/storageAccounts/pcstore",
+                StoragePath = "https://mytestaccountname.blob.core.windows.net/capture/pc1.cap",
+            },
+            Target = "/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Compute/virtualMachines/vm1",
+            TimeLimitInSeconds = 100,
+            TotalBytesPerSession = 100000,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+packet_capture = azurerm.network.latest.PacketCapture("packetCapture",
+    bytes_to_capture_per_packet=10000,
+    filters=[{
+        "localIPAddress": "10.0.0.4",
+        "localPort": "80",
+        "protocol": "TCP",
+    }],
+    network_watcher_name="nw1",
+    packet_capture_name="pc1",
+    resource_group_name="rg1",
+    storage_location={
+        "filePath": "D:\\capture\\pc1.cap",
+        "storageId": "/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Storage/storageAccounts/pcstore",
+        "storagePath": "https://mytestaccountname.blob.core.windows.net/capture/pc1.cap",
+    },
+    target="/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Compute/virtualMachines/vm1",
+    time_limit_in_seconds=100,
+    total_bytes_per_session=100000)
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const packetCapture = new azurerm.network.latest.PacketCapture("packetCapture", {
+    bytesToCapturePerPacket: 10000,
+    filters: [{
+        localIPAddress: "10.0.0.4",
+        localPort: "80",
+        protocol: "TCP",
+    }],
+    networkWatcherName: "nw1",
+    packetCaptureName: "pc1",
+    resourceGroupName: "rg1",
+    storageLocation: {
+        filePath: "D:\\capture\\pc1.cap",
+        storageId: "/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Storage/storageAccounts/pcstore",
+        storagePath: "https://mytestaccountname.blob.core.windows.net/capture/pc1.cap",
+    },
+    target: "/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Compute/virtualMachines/vm1",
+    timeLimitInSeconds: 100,
+    totalBytesPerSession: 100000,
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PacketCapture Resource {#create}

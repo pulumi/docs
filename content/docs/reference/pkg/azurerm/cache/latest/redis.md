@@ -12,6 +12,120 @@ meta_desc: "Explore the Redis resource of the cache/latest module, including exa
 
 A single Redis item in List or Get Operation.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### RedisCacheCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var redis = new AzureRM.Cache.Latest.Redis("redis", new AzureRM.Cache.Latest.RedisArgs
+        {
+            EnableNonSslPort = true,
+            Location = "West US",
+            MinimumTlsVersion = "1.2",
+            Name = "cache1",
+            RedisConfiguration = 
+            {
+                { "maxmemory-policy", "allkeys-lru" },
+            },
+            ReplicasPerMaster = 2,
+            ResourceGroupName = "rg1",
+            ShardCount = 2,
+            Sku = new AzureRM.Cache.Latest.Inputs.SkuArgs
+            {
+                Capacity = 1,
+                Family = "P",
+                Name = "Premium",
+            },
+            StaticIP = "192.168.0.5",
+            SubnetId = "/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1",
+            Zones = 
+            {
+                "1",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+redis = azurerm.cache.latest.Redis("redis",
+    enable_non_ssl_port=True,
+    location="West US",
+    minimum_tls_version="1.2",
+    name="cache1",
+    redis_configuration={
+        "maxmemory-policy": "allkeys-lru",
+    },
+    replicas_per_master=2,
+    resource_group_name="rg1",
+    shard_count=2,
+    sku={
+        "capacity": 1,
+        "family": "P",
+        "name": "Premium",
+    },
+    static_ip="192.168.0.5",
+    subnet_id="/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1",
+    zones=["1"])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const redis = new azurerm.cache.latest.Redis("redis", {
+    enableNonSslPort: true,
+    location: "West US",
+    minimumTlsVersion: "1.2",
+    name: "cache1",
+    redisConfiguration: {
+        "maxmemory-policy": "allkeys-lru",
+    },
+    replicasPerMaster: 2,
+    resourceGroupName: "rg1",
+    shardCount: 2,
+    sku: {
+        capacity: 1,
+        family: "P",
+        name: "Premium",
+    },
+    staticIP: "192.168.0.5",
+    subnetId: "/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Network/virtualNetworks/network1/subnets/subnet1",
+    zones: ["1"],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Redis Resource {#create}

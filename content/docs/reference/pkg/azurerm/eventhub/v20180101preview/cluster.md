@@ -12,6 +12,96 @@ meta_desc: "Explore the Cluster resource of the eventhub/v20180101preview module
 
 Single Event Hubs Cluster resource in List or Get operations.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ClusterPut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cluster = new AzureRM.EventHub.V20180101Preview.Cluster("cluster", new AzureRM.EventHub.V20180101Preview.ClusterArgs
+        {
+            ClusterName = "testCluster",
+            Location = "South Central US",
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.EventHub.V20180101Preview.Inputs.ClusterSkuArgs
+            {
+                Capacity = 1,
+                Name = "Dedicated",
+            },
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+cluster = azurerm.eventhub.v20180101preview.Cluster("cluster",
+    cluster_name="testCluster",
+    location="South Central US",
+    resource_group_name="myResourceGroup",
+    sku={
+        "capacity": 1,
+        "name": "Dedicated",
+    },
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const cluster = new azurerm.eventhub.v20180101preview.Cluster("cluster", {
+    clusterName: "testCluster",
+    location: "South Central US",
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 1,
+        name: "Dedicated",
+    },
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}

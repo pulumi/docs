@@ -12,6 +12,73 @@ meta_desc: "Explore the DataSource resource of the operationalinsights/latest mo
 
 Datasources under OMS Workspace.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### DataSourcesCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataSource = new AzureRM.OperationalInsights.Latest.DataSource("dataSource", new AzureRM.OperationalInsights.Latest.DataSourceArgs
+        {
+            DataSourceName = "AzTestDS774",
+            Kind = "AzureActivityLog",
+            ResourceGroupName = "OIAutoRest5123",
+            WorkspaceName = "AzTest9724",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+data_source = azurerm.operationalinsights.latest.DataSource("dataSource",
+    data_source_name="AzTestDS774",
+    kind="AzureActivityLog",
+    resource_group_name="OIAutoRest5123",
+    workspace_name="AzTest9724")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dataSource = new azurerm.operationalinsights.latest.DataSource("dataSource", {
+    dataSourceName: "AzTestDS774",
+    kind: "AzureActivityLog",
+    resourceGroupName: "OIAutoRest5123",
+    workspaceName: "AzTest9724",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DataSource Resource {#create}

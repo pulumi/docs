@@ -12,6 +12,646 @@ meta_desc: "Explore the Output resource of the streamanalytics/v20170401preview 
 
 An output object, containing all information associated with the named output. All outputs are contained under a streaming job.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a DocumentDB output
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+output = .("output",
+    datasource={
+        "properties": {
+            "accountId": "someAccountId",
+            "accountKey": "accountKey==",
+            "collectionNamePattern": "collection",
+            "database": "db01",
+            "documentId": "documentId",
+            "partitionKey": "key",
+        },
+        "type": "Microsoft.Storage/DocumentDB",
+    },
+    job_name="sj2331",
+    output_name="output3022",
+    resource_group_name="sjrg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const output = new .("output", {
+    datasource: {
+        properties: {
+            accountId: "someAccountId",
+            accountKey: "accountKey==",
+            collectionNamePattern: "collection",
+            database: "db01",
+            documentId: "documentId",
+            partitionKey: "key",
+        },
+        type: "Microsoft.Storage/DocumentDB",
+    },
+    jobName: "sj2331",
+    outputName: "output3022",
+    resourceGroupName: "sjrg",
+});
+
+```
+
+{{% /example %}}
+
+### Create a Power BI output
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+output = .("output",
+    datasource={
+        "properties": {
+            "authenticationMode": "ConnectionString",
+            "dataset": "someDataset",
+            "groupId": "ac40305e-3e8d-43ac-8161-c33799f43e95",
+            "groupName": "MyPowerBIGroup",
+            "refreshToken": "someRefreshToken==",
+            "table": "someTable",
+            "tokenUserDisplayName": "Bob Smith",
+            "tokenUserPrincipalName": "bobsmith@contoso.com",
+        },
+        "type": "PowerBI",
+    },
+    job_name="sj2331",
+    output_name="output3022",
+    resource_group_name="sjrg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const output = new .("output", {
+    datasource: {
+        properties: {
+            authenticationMode: "ConnectionString",
+            dataset: "someDataset",
+            groupId: "ac40305e-3e8d-43ac-8161-c33799f43e95",
+            groupName: "MyPowerBIGroup",
+            refreshToken: "someRefreshToken==",
+            table: "someTable",
+            tokenUserDisplayName: "Bob Smith",
+            tokenUserPrincipalName: "bobsmith@contoso.com",
+        },
+        type: "PowerBI",
+    },
+    jobName: "sj2331",
+    outputName: "output3022",
+    resourceGroupName: "sjrg",
+});
+
+```
+
+{{% /example %}}
+
+### Create a Service Bus Queue output with Avro serialization
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+output = .("output",
+    datasource={
+        "properties": {
+            "propertyColumns": [
+                "column1",
+                "column2",
+            ],
+            "queueName": "sdkqueue",
+            "serviceBusNamespace": "sdktest",
+            "sharedAccessPolicyKey": "sharedAccessPolicyKey=",
+            "sharedAccessPolicyName": "RootManageSharedAccessKey",
+        },
+        "type": "Microsoft.ServiceBus/Queue",
+    },
+    job_name="sj5095",
+    output_name="output3456",
+    resource_group_name="sjrg",
+    serialization={
+        "type": "Avro",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const output = new .("output", {
+    datasource: {
+        properties: {
+            propertyColumns: [
+                "column1",
+                "column2",
+            ],
+            queueName: "sdkqueue",
+            serviceBusNamespace: "sdktest",
+            sharedAccessPolicyKey: "sharedAccessPolicyKey=",
+            sharedAccessPolicyName: "RootManageSharedAccessKey",
+        },
+        type: "Microsoft.ServiceBus/Queue",
+    },
+    jobName: "sj5095",
+    outputName: "output3456",
+    resourceGroupName: "sjrg",
+    serialization: {
+        type: "Avro",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create a Service Bus Topic output with CSV serialization
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+output = .("output",
+    datasource={
+        "properties": {
+            "propertyColumns": [
+                "column1",
+                "column2",
+            ],
+            "serviceBusNamespace": "sdktest",
+            "sharedAccessPolicyKey": "sharedAccessPolicyKey=",
+            "sharedAccessPolicyName": "RootManageSharedAccessKey",
+            "topicName": "sdktopic",
+        },
+        "type": "Microsoft.ServiceBus/Topic",
+    },
+    job_name="sj7094",
+    output_name="output7886",
+    resource_group_name="sjrg",
+    serialization={
+        "properties": {
+            "encoding": "UTF8",
+            "fieldDelimiter": ",",
+        },
+        "type": "Csv",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const output = new .("output", {
+    datasource: {
+        properties: {
+            propertyColumns: [
+                "column1",
+                "column2",
+            ],
+            serviceBusNamespace: "sdktest",
+            sharedAccessPolicyKey: "sharedAccessPolicyKey=",
+            sharedAccessPolicyName: "RootManageSharedAccessKey",
+            topicName: "sdktopic",
+        },
+        type: "Microsoft.ServiceBus/Topic",
+    },
+    jobName: "sj7094",
+    outputName: "output7886",
+    resourceGroupName: "sjrg",
+    serialization: {
+        properties: {
+            encoding: "UTF8",
+            fieldDelimiter: ",",
+        },
+        type: "Csv",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create a blob output with CSV serialization
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+output = .("output",
+    datasource={
+        "properties": {
+            "container": "state",
+            "dateFormat": "yyyy/MM/dd",
+            "pathPattern": "{date}/{time}",
+            "storageAccounts": [{
+                "accountKey": "accountKey==",
+                "accountName": "someAccountName",
+            }],
+            "timeFormat": "HH",
+        },
+        "type": "Microsoft.Storage/Blob",
+    },
+    job_name="sj900",
+    output_name="output1623",
+    resource_group_name="sjrg",
+    serialization={
+        "properties": {
+            "encoding": "UTF8",
+            "fieldDelimiter": ",",
+        },
+        "type": "Csv",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const output = new .("output", {
+    datasource: {
+        properties: {
+            container: "state",
+            dateFormat: "yyyy/MM/dd",
+            pathPattern: "{date}/{time}",
+            storageAccounts: [{
+                accountKey: "accountKey==",
+                accountName: "someAccountName",
+            }],
+            timeFormat: "HH",
+        },
+        type: "Microsoft.Storage/Blob",
+    },
+    jobName: "sj900",
+    outputName: "output1623",
+    resourceGroupName: "sjrg",
+    serialization: {
+        properties: {
+            encoding: "UTF8",
+            fieldDelimiter: ",",
+        },
+        type: "Csv",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create an Azure Data Lake Store output with JSON serialization
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+output = .("output",
+    datasource={
+        "properties": {
+            "accountName": "someaccount",
+            "dateFormat": "yyyy/MM/dd",
+            "filePathPrefix": "{date}/{time}",
+            "refreshToken": "someRefreshToken==",
+            "tenantId": "cea4e98b-c798-49e7-8c40-4a2b3beb47dd",
+            "timeFormat": "HH",
+            "tokenUserDisplayName": "Bob Smith",
+            "tokenUserPrincipalName": "bobsmith@contoso.com",
+        },
+        "type": "Microsoft.DataLake/Accounts",
+    },
+    job_name="sj3310",
+    output_name="output5195",
+    resource_group_name="sjrg",
+    serialization={
+        "properties": {
+            "encoding": "UTF8",
+            "format": "Array",
+        },
+        "type": "Json",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const output = new .("output", {
+    datasource: {
+        properties: {
+            accountName: "someaccount",
+            dateFormat: "yyyy/MM/dd",
+            filePathPrefix: "{date}/{time}",
+            refreshToken: "someRefreshToken==",
+            tenantId: "cea4e98b-c798-49e7-8c40-4a2b3beb47dd",
+            timeFormat: "HH",
+            tokenUserDisplayName: "Bob Smith",
+            tokenUserPrincipalName: "bobsmith@contoso.com",
+        },
+        type: "Microsoft.DataLake/Accounts",
+    },
+    jobName: "sj3310",
+    outputName: "output5195",
+    resourceGroupName: "sjrg",
+    serialization: {
+        properties: {
+            encoding: "UTF8",
+            format: "Array",
+        },
+        type: "Json",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create an Azure SQL database output
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+output = .("output",
+    datasource={
+        "properties": {
+            "database": "someDatabase",
+            "password": "somePassword",
+            "server": "someServer",
+            "table": "someTable",
+            "user": "someUser",
+        },
+        "type": "Microsoft.Sql/Server/Database",
+    },
+    job_name="sj6458",
+    output_name="output1755",
+    resource_group_name="sjrg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const output = new .("output", {
+    datasource: {
+        properties: {
+            database: "someDatabase",
+            password: "somePassword",
+            server: "someServer",
+            table: "someTable",
+            user: "someUser",
+        },
+        type: "Microsoft.Sql/Server/Database",
+    },
+    jobName: "sj6458",
+    outputName: "output1755",
+    resourceGroupName: "sjrg",
+});
+
+```
+
+{{% /example %}}
+
+### Create an Azure Table output
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+output = .("output",
+    datasource={
+        "properties": {
+            "accountKey": "accountKey==",
+            "accountName": "someAccountName",
+            "batchSize": 25,
+            "columnsToRemove": [
+                "column1",
+                "column2",
+            ],
+            "partitionKey": "partitionKey",
+            "rowKey": "rowKey",
+            "table": "samples",
+        },
+        "type": "Microsoft.Storage/Table",
+    },
+    job_name="sj2790",
+    output_name="output958",
+    resource_group_name="sjrg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const output = new .("output", {
+    datasource: {
+        properties: {
+            accountKey: "accountKey==",
+            accountName: "someAccountName",
+            batchSize: 25,
+            columnsToRemove: [
+                "column1",
+                "column2",
+            ],
+            partitionKey: "partitionKey",
+            rowKey: "rowKey",
+            table: "samples",
+        },
+        type: "Microsoft.Storage/Table",
+    },
+    jobName: "sj2790",
+    outputName: "output958",
+    resourceGroupName: "sjrg",
+});
+
+```
+
+{{% /example %}}
+
+### Create an Event Hub output with JSON serialization
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_ as 
+
+output = .("output",
+    datasource={
+        "properties": {
+            "eventHubName": "sdkeventhub",
+            "partitionKey": "partitionKey",
+            "serviceBusNamespace": "sdktest",
+            "sharedAccessPolicyKey": "sharedAccessPolicyKey=",
+            "sharedAccessPolicyName": "RootManageSharedAccessKey",
+        },
+        "type": "Microsoft.ServiceBus/EventHub",
+    },
+    job_name="sj3310",
+    output_name="output5195",
+    resource_group_name="sjrg",
+    serialization={
+        "properties": {
+            "encoding": "UTF8",
+            "format": "Array",
+        },
+        "type": "Json",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as @pulumi from "@pulumi/";
+
+const output = new .("output", {
+    datasource: {
+        properties: {
+            eventHubName: "sdkeventhub",
+            partitionKey: "partitionKey",
+            serviceBusNamespace: "sdktest",
+            sharedAccessPolicyKey: "sharedAccessPolicyKey=",
+            sharedAccessPolicyName: "RootManageSharedAccessKey",
+        },
+        type: "Microsoft.ServiceBus/EventHub",
+    },
+    jobName: "sj3310",
+    outputName: "output5195",
+    resourceGroupName: "sjrg",
+    serialization: {
+        properties: {
+            encoding: "UTF8",
+            format: "Array",
+        },
+        type: "Json",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Output Resource {#create}

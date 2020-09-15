@@ -12,6 +12,118 @@ meta_desc: "Explore the AvailabilityGroupListener resource of the sqlvirtualmach
 
 A SQL Server availability group listener.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Creates or updates an availability group listener.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var availabilityGroupListener = new AzureRM.SqlVirtualMachine.V20170301Preview.AvailabilityGroupListener("availabilityGroupListener", new AzureRM.SqlVirtualMachine.V20170301Preview.AvailabilityGroupListenerArgs
+        {
+            AvailabilityGroupListenerName = "agl-test",
+            AvailabilityGroupName = "ag-test",
+            LoadBalancerConfigurations = 
+            {
+                new AzureRM.SqlVirtualMachine.V20170301Preview.Inputs.LoadBalancerConfigurationArgs
+                {
+                    LoadBalancerResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb-test",
+                    PrivateIpAddress = new AzureRM.SqlVirtualMachine.V20170301Preview.Inputs.PrivateIPAddressArgs
+                    {
+                        IpAddress = "10.1.0.112",
+                        SubnetResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/default",
+                    },
+                    ProbePort = 59983,
+                    SqlVirtualMachineInstances = 
+                    {
+                        "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/testvm2",
+                        "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/testvm3",
+                    },
+                },
+            },
+            Port = 1433,
+            ResourceGroupName = "testrg",
+            SqlVirtualMachineGroupName = "testvmgroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+availability_group_listener = azurerm.sqlvirtualmachine.v20170301preview.AvailabilityGroupListener("availabilityGroupListener",
+    availability_group_listener_name="agl-test",
+    availability_group_name="ag-test",
+    load_balancer_configurations=[{
+        "loadBalancerResourceId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb-test",
+        "privateIpAddress": {
+            "ipAddress": "10.1.0.112",
+            "subnetResourceId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/default",
+        },
+        "probePort": 59983,
+        "sqlVirtualMachineInstances": [
+            "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/testvm2",
+            "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/testvm3",
+        ],
+    }],
+    port=1433,
+    resource_group_name="testrg",
+    sql_virtual_machine_group_name="testvmgroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const availabilityGroupListener = new azurerm.sqlvirtualmachine.v20170301preview.AvailabilityGroupListener("availabilityGroupListener", {
+    availabilityGroupListenerName: "agl-test",
+    availabilityGroupName: "ag-test",
+    loadBalancerConfigurations: [{
+        loadBalancerResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb-test",
+        privateIpAddress: {
+            ipAddress: "10.1.0.112",
+            subnetResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/default",
+        },
+        probePort: 59983,
+        sqlVirtualMachineInstances: [
+            "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/testvm2",
+            "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/testvm3",
+        ],
+    }],
+    port: 1433,
+    resourceGroupName: "testrg",
+    sqlVirtualMachineGroupName: "testvmgroup",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AvailabilityGroupListener Resource {#create}

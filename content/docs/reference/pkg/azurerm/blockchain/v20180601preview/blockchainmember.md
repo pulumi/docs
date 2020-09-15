@@ -12,6 +12,92 @@ meta_desc: "Explore the BlockchainMember resource of the blockchain/v20180601pre
 
 Payload of the blockchain member which is exposed in the request/response of the resource provider.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### BlockchainMembers_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var blockchainMember = new AzureRM.Blockchain.V20180601Preview.BlockchainMember("blockchainMember", new AzureRM.Blockchain.V20180601Preview.BlockchainMemberArgs
+        {
+            BlockchainMemberName = "contosemember1",
+            Consortium = "ContoseConsortium",
+            ConsortiumManagementAccountPassword = "1234abcdEFG1",
+            Location = "southeastasia",
+            Password = "1234abcdEFG1",
+            Protocol = "Quorum",
+            ResourceGroupName = "mygroup",
+            ValidatorNodesSku = new AzureRM.Blockchain.V20180601Preview.Inputs.BlockchainMemberNodesSkuArgs
+            {
+                Capacity = 2,
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+blockchain_member = azurerm.blockchain.v20180601preview.BlockchainMember("blockchainMember",
+    blockchain_member_name="contosemember1",
+    consortium="ContoseConsortium",
+    consortium_management_account_password="1234abcdEFG1",
+    location="southeastasia",
+    password="1234abcdEFG1",
+    protocol="Quorum",
+    resource_group_name="mygroup",
+    validator_nodes_sku={
+        "capacity": 2,
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const blockchainMember = new azurerm.blockchain.v20180601preview.BlockchainMember("blockchainMember", {
+    blockchainMemberName: "contosemember1",
+    consortium: "ContoseConsortium",
+    consortiumManagementAccountPassword: "1234abcdEFG1",
+    location: "southeastasia",
+    password: "1234abcdEFG1",
+    protocol: "Quorum",
+    resourceGroupName: "mygroup",
+    validatorNodesSku: {
+        capacity: 2,
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BlockchainMember Resource {#create}

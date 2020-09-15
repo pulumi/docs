@@ -12,6 +12,85 @@ meta_desc: "Explore the FileServer resource of the storsimple/latest module, inc
 
 The file server.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### FileServersCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fileServer = new AzureRM.StorSimple.Latest.FileServer("fileServer", new AzureRM.StorSimple.Latest.FileServerArgs
+        {
+            BackupScheduleGroupId = "/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/hsdk-4xy4fi2ivg/backupScheduleGroups/BackupSchGroupForSDKTest",
+            Description = "Demo FileServer for SDK Test",
+            DeviceName = "HSDK-4XY4FI2IVG",
+            DomainName = "fareast.corp.microsoft.com",
+            FileServerName = "HSDK-4XY4FI2IVG",
+            ManagerName = "hAzureSDKOperations",
+            ResourceGroupName = "ResourceGroupForSDKTest",
+            StorageDomainId = "/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/storageDomains/sd-fs-HSDK-4XY4FI2IVG",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+file_server = azurerm.storsimple.latest.FileServer("fileServer",
+    backup_schedule_group_id="/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/hsdk-4xy4fi2ivg/backupScheduleGroups/BackupSchGroupForSDKTest",
+    description="Demo FileServer for SDK Test",
+    device_name="HSDK-4XY4FI2IVG",
+    domain_name="fareast.corp.microsoft.com",
+    file_server_name="HSDK-4XY4FI2IVG",
+    manager_name="hAzureSDKOperations",
+    resource_group_name="ResourceGroupForSDKTest",
+    storage_domain_id="/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/storageDomains/sd-fs-HSDK-4XY4FI2IVG")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const fileServer = new azurerm.storsimple.latest.FileServer("fileServer", {
+    backupScheduleGroupId: "/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/hsdk-4xy4fi2ivg/backupScheduleGroups/BackupSchGroupForSDKTest",
+    description: "Demo FileServer for SDK Test",
+    deviceName: "HSDK-4XY4FI2IVG",
+    domainName: "fareast.corp.microsoft.com",
+    fileServerName: "HSDK-4XY4FI2IVG",
+    managerName: "hAzureSDKOperations",
+    resourceGroupName: "ResourceGroupForSDKTest",
+    storageDomainId: "/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/storageDomains/sd-fs-HSDK-4XY4FI2IVG",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FileServer Resource {#create}

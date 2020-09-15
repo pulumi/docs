@@ -12,6 +12,82 @@ meta_desc: "Explore the EventHubConnection resource of the kusto/v20180907previe
 
 Class representing an event hub connection.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### KustoEventHubConnectionsCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var eventHubConnection = new AzureRM.Kusto.V20180907Preview.EventHubConnection("eventHubConnection", new AzureRM.Kusto.V20180907Preview.EventHubConnectionArgs
+        {
+            ClusterName = "KustoClusterRPTest4",
+            ConsumerGroup = "testConsumerGroup1",
+            DatabaseName = "KustoDatabase8",
+            EventHubConnectionName = "kustoeventhubconnection1",
+            EventHubResourceId = "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.EventHub/namespaces/eventhubTestns1/eventhubs/eventhubTest1",
+            Location = "westus",
+            ResourceGroupName = "kustorptest",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+event_hub_connection = azurerm.kusto.v20180907preview.EventHubConnection("eventHubConnection",
+    cluster_name="KustoClusterRPTest4",
+    consumer_group="testConsumerGroup1",
+    database_name="KustoDatabase8",
+    event_hub_connection_name="kustoeventhubconnection1",
+    event_hub_resource_id="/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.EventHub/namespaces/eventhubTestns1/eventhubs/eventhubTest1",
+    location="westus",
+    resource_group_name="kustorptest")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const eventHubConnection = new azurerm.kusto.v20180907preview.EventHubConnection("eventHubConnection", {
+    clusterName: "KustoClusterRPTest4",
+    consumerGroup: "testConsumerGroup1",
+    databaseName: "KustoDatabase8",
+    eventHubConnectionName: "kustoeventhubconnection1",
+    eventHubResourceId: "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.EventHub/namespaces/eventhubTestns1/eventhubs/eventhubTest1",
+    location: "westus",
+    resourceGroupName: "kustorptest",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EventHubConnection Resource {#create}

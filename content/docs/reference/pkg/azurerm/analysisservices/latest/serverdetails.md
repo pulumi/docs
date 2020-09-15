@@ -12,6 +12,116 @@ meta_desc: "Explore the ServerDetails resource of the analysisservices/latest mo
 
 Represents an instance of an Analysis Services resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a server.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serverDetails = new AzureRM.AnalysisServices.Latest.ServerDetails("serverDetails", new AzureRM.AnalysisServices.Latest.ServerDetailsArgs
+        {
+            AsAdministrators = new AzureRM.AnalysisServices.Latest.Inputs.ServerAdministratorsArgs
+            {
+                Members = 
+                {
+                    "azsdktest@microsoft.com",
+                    "azsdktest2@microsoft.com",
+                },
+            },
+            Location = "West US",
+            ResourceGroupName = "TestRG",
+            ServerName = "azsdktest",
+            Sku = new AzureRM.AnalysisServices.Latest.Inputs.ResourceSkuArgs
+            {
+                Capacity = 1,
+                Name = "S1",
+                Tier = "Standard",
+            },
+            Tags = 
+            {
+                { "testKey", "testValue" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+server_details = azurerm.analysisservices.latest.ServerDetails("serverDetails",
+    as_administrators={
+        "members": [
+            "azsdktest@microsoft.com",
+            "azsdktest2@microsoft.com",
+        ],
+    },
+    location="West US",
+    resource_group_name="TestRG",
+    server_name="azsdktest",
+    sku={
+        "capacity": 1,
+        "name": "S1",
+        "tier": "Standard",
+    },
+    tags={
+        "testKey": "testValue",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const serverDetails = new azurerm.analysisservices.latest.ServerDetails("serverDetails", {
+    asAdministrators: {
+        members: [
+            "azsdktest@microsoft.com",
+            "azsdktest2@microsoft.com",
+        ],
+    },
+    location: "West US",
+    resourceGroupName: "TestRG",
+    serverName: "azsdktest",
+    sku: {
+        capacity: 1,
+        name: "S1",
+        tier: "Standard",
+    },
+    tags: {
+        testKey: "testValue",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServerDetails Resource {#create}

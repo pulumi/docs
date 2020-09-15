@@ -12,6 +12,92 @@ meta_desc: "Explore the DedicatedCloudNode resource of the vmwarecloudsimple/lat
 
 Dedicated cloud node model
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### CreateDedicatedCloudNode
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dedicatedCloudNode = new AzureRM.VMwareCloudSimple.Latest.DedicatedCloudNode("dedicatedCloudNode", new AzureRM.VMwareCloudSimple.Latest.DedicatedCloudNodeArgs
+        {
+            AvailabilityZoneId = "az1",
+            DedicatedCloudNodeName = "myNode",
+            Location = "westus",
+            NodesCount = 1,
+            PlacementGroupId = "n1",
+            PurchaseId = "56acbd46-3d36-4bbf-9b08-57c30fdf6932",
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureRM.VMwareCloudSimple.Latest.Inputs.SkuArgs
+            {
+                Name = "VMware_CloudSimple_CS28",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+dedicated_cloud_node = azurerm.vmwarecloudsimple.latest.DedicatedCloudNode("dedicatedCloudNode",
+    availability_zone_id="az1",
+    dedicated_cloud_node_name="myNode",
+    location="westus",
+    nodes_count=1,
+    placement_group_id="n1",
+    purchase_id="56acbd46-3d36-4bbf-9b08-57c30fdf6932",
+    resource_group_name="myResourceGroup",
+    sku={
+        "name": "VMware_CloudSimple_CS28",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const dedicatedCloudNode = new azurerm.vmwarecloudsimple.latest.DedicatedCloudNode("dedicatedCloudNode", {
+    availabilityZoneId: "az1",
+    dedicatedCloudNodeName: "myNode",
+    location: "westus",
+    nodesCount: 1,
+    placementGroupId: "n1",
+    purchaseId: "56acbd46-3d36-4bbf-9b08-57c30fdf6932",
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        name: "VMware_CloudSimple_CS28",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a DedicatedCloudNode Resource {#create}

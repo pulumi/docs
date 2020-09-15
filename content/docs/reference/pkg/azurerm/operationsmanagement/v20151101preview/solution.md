@@ -12,6 +12,89 @@ meta_desc: "Explore the Solution resource of the operationsmanagement/v20151101p
 
 The container for solution.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### SolutionCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var solution = new AzureRM.OperationsManagement.V20151101Preview.Solution("solution", new AzureRM.OperationsManagement.V20151101Preview.SolutionArgs
+        {
+            Location = "East US",
+            Plan = new AzureRM.OperationsManagement.V20151101Preview.Inputs.SolutionPlanArgs
+            {
+                Name = "name1",
+                Product = "product1",
+                PromotionCode = "promocode1",
+                Publisher = "publisher1",
+            },
+            ResourceGroupName = "rg1",
+            SolutionName = "solution1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+solution = azurerm.operationsmanagement.v20151101preview.Solution("solution",
+    location="East US",
+    plan={
+        "name": "name1",
+        "product": "product1",
+        "promotionCode": "promocode1",
+        "publisher": "publisher1",
+    },
+    resource_group_name="rg1",
+    solution_name="solution1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const solution = new azurerm.operationsmanagement.v20151101preview.Solution("solution", {
+    location: "East US",
+    plan: {
+        name: "name1",
+        product: "product1",
+        promotionCode: "promocode1",
+        publisher: "publisher1",
+    },
+    resourceGroupName: "rg1",
+    solutionName: "solution1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Solution Resource {#create}

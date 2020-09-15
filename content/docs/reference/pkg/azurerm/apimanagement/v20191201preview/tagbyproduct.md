@@ -12,6 +12,73 @@ meta_desc: "Explore the TagByProduct resource of the apimanagement/v20191201prev
 
 Tag Contract details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateProductTag
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tagByProduct = new AzureRM.ApiManagement.V20191201Preview.TagByProduct("tagByProduct", new AzureRM.ApiManagement.V20191201Preview.TagByProductArgs
+        {
+            ProductId = "5931a75ae4bbd512a88c680b",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            TagId = "tagId1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+tag_by_product = azurerm.apimanagement.v20191201preview.TagByProduct("tagByProduct",
+    product_id="5931a75ae4bbd512a88c680b",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    tag_id="tagId1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const tagByProduct = new azurerm.apimanagement.v20191201preview.TagByProduct("tagByProduct", {
+    productId: "5931a75ae4bbd512a88c680b",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    tagId: "tagId1",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TagByProduct Resource {#create}

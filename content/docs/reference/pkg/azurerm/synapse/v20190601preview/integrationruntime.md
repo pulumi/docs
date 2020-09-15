@@ -12,6 +12,70 @@ meta_desc: "Explore the IntegrationRuntime resource of the synapse/v20190601prev
 
 Integration runtime resource type.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create integration runtime
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var integrationRuntime = new AzureRM.Synapse.V20190601Preview.IntegrationRuntime("integrationRuntime", new AzureRM.Synapse.V20190601Preview.IntegrationRuntimeArgs
+        {
+            IntegrationRuntimeName = "exampleIntegrationRuntime",
+            ResourceGroupName = "exampleResourceGroup",
+            WorkspaceName = "exampleWorkspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+integration_runtime = azurerm.synapse.v20190601preview.IntegrationRuntime("integrationRuntime",
+    integration_runtime_name="exampleIntegrationRuntime",
+    resource_group_name="exampleResourceGroup",
+    workspace_name="exampleWorkspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const integrationRuntime = new azurerm.synapse.v20190601preview.IntegrationRuntime("integrationRuntime", {
+    integrationRuntimeName: "exampleIntegrationRuntime",
+    resourceGroupName: "exampleResourceGroup",
+    workspaceName: "exampleWorkspace",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IntegrationRuntime Resource {#create}

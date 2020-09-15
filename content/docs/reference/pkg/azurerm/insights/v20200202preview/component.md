@@ -12,6 +12,160 @@ meta_desc: "Explore the Component resource of the insights/v20200202preview modu
 
 An Application Insights component definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ComponentCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var component = new AzureRM.Insights.V20200202Preview.Component("component", new AzureRM.Insights.V20200202Preview.ComponentArgs
+        {
+            ApplicationType = "web",
+            FlowType = "Bluefield",
+            Kind = "web",
+            Location = "South Central US",
+            RequestSource = "rest",
+            ResourceGroupName = "my-resource-group",
+            ResourceName = "my-component",
+            WorkspaceResourceId = "/subscriptions/subid/resourcegroups/my-resource-group/providers/microsoft.operationalinsights/workspaces/my-workspace",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+component = azurerm.insights.v20200202preview.Component("component",
+    application_type="web",
+    flow_type="Bluefield",
+    kind="web",
+    location="South Central US",
+    request_source="rest",
+    resource_group_name="my-resource-group",
+    resource_name="my-component",
+    workspace_resource_id="/subscriptions/subid/resourcegroups/my-resource-group/providers/microsoft.operationalinsights/workspaces/my-workspace")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const component = new azurerm.insights.v20200202preview.Component("component", {
+    applicationType: "web",
+    flowType: "Bluefield",
+    kind: "web",
+    location: "South Central US",
+    requestSource: "rest",
+    resourceGroupName: "my-resource-group",
+    resourceName: "my-component",
+    workspaceResourceId: "/subscriptions/subid/resourcegroups/my-resource-group/providers/microsoft.operationalinsights/workspaces/my-workspace",
+});
+
+```
+
+{{% /example %}}
+
+### ComponentUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var component = new AzureRM.Insights.V20200202Preview.Component("component", new AzureRM.Insights.V20200202Preview.ComponentArgs
+        {
+            Kind = "web",
+            Location = "South Central US",
+            ResourceGroupName = "my-resource-group",
+            ResourceName = "my-component",
+            Tags = 
+            {
+                { "ApplicationGatewayType", "Internal-Only" },
+                { "BillingEntity", "Self" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+component = azurerm.insights.v20200202preview.Component("component",
+    kind="web",
+    location="South Central US",
+    resource_group_name="my-resource-group",
+    resource_name="my-component",
+    tags={
+        "ApplicationGatewayType": "Internal-Only",
+        "BillingEntity": "Self",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const component = new azurerm.insights.v20200202preview.Component("component", {
+    kind: "web",
+    location: "South Central US",
+    resourceGroupName: "my-resource-group",
+    resourceName: "my-component",
+    tags: {
+        ApplicationGatewayType: "Internal-Only",
+        BillingEntity: "Self",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Component Resource {#create}

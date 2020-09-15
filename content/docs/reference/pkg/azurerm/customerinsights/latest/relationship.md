@@ -12,6 +12,102 @@ meta_desc: "Explore the Relationship resource of the customerinsights/latest mod
 
 The relationship resource format.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Relationships_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var relationship = new AzureRM.CustomerInsights.Latest.Relationship("relationship", new AzureRM.CustomerInsights.Latest.RelationshipArgs
+        {
+            Cardinality = "OneToOne",
+            Description = 
+            {
+                { "en-us", "Relationship Description" },
+            },
+            DisplayName = 
+            {
+                { "en-us", "Relationship DisplayName" },
+            },
+            Fields = {},
+            HubName = "sdkTestHub",
+            ProfileType = "testProfile2326994",
+            RelatedProfileType = "testProfile2326994",
+            RelationshipName = "SomeRelationship",
+            ResourceGroupName = "TestHubRG",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+relationship = azurerm.customerinsights.latest.Relationship("relationship",
+    cardinality="OneToOne",
+    description={
+        "en-us": "Relationship Description",
+    },
+    display_name={
+        "en-us": "Relationship DisplayName",
+    },
+    fields=[],
+    hub_name="sdkTestHub",
+    profile_type="testProfile2326994",
+    related_profile_type="testProfile2326994",
+    relationship_name="SomeRelationship",
+    resource_group_name="TestHubRG")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const relationship = new azurerm.customerinsights.latest.Relationship("relationship", {
+    cardinality: "OneToOne",
+    description: {
+        "en-us": "Relationship Description",
+    },
+    displayName: {
+        "en-us": "Relationship DisplayName",
+    },
+    fields: [],
+    hubName: "sdkTestHub",
+    profileType: "testProfile2326994",
+    relatedProfileType: "testProfile2326994",
+    relationshipName: "SomeRelationship",
+    resourceGroupName: "TestHubRG",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Relationship Resource {#create}

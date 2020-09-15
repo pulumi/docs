@@ -12,6 +12,73 @@ meta_desc: "Explore the Queue resource of the servicebus/latest module, includin
 
 Description of queue Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### QueueCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var queue = new AzureRM.ServiceBus.Latest.Queue("queue", new AzureRM.ServiceBus.Latest.QueueArgs
+        {
+            EnablePartitioning = true,
+            NamespaceName = "sdk-Namespace-3174",
+            QueueName = "sdk-Queues-5647",
+            ResourceGroupName = "ArunMonocle",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+queue = azurerm.servicebus.latest.Queue("queue",
+    enable_partitioning=True,
+    namespace_name="sdk-Namespace-3174",
+    queue_name="sdk-Queues-5647",
+    resource_group_name="ArunMonocle")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const queue = new azurerm.servicebus.latest.Queue("queue", {
+    enablePartitioning: true,
+    namespaceName: "sdk-Namespace-3174",
+    queueName: "sdk-Queues-5647",
+    resourceGroupName: "ArunMonocle",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Queue Resource {#create}

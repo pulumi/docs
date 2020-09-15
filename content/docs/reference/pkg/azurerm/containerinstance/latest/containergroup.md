@@ -12,6 +12,259 @@ meta_desc: "Explore the ContainerGroup resource of the containerinstance/latest 
 
 A container group.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ContainerGroupsCreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var containerGroup = new AzureRM.ContainerInstance.Latest.ContainerGroup("containerGroup", new AzureRM.ContainerInstance.Latest.ContainerGroupArgs
+        {
+            ContainerGroupName = "demo1",
+            Containers = 
+            {
+                new AzureRM.ContainerInstance.Latest.Inputs.ContainerArgs
+                {
+                    Name = "demo1",
+                },
+            },
+            Diagnostics = new AzureRM.ContainerInstance.Latest.Inputs.ContainerGroupDiagnosticsArgs
+            {
+                LogAnalytics = new AzureRM.ContainerInstance.Latest.Inputs.LogAnalyticsArgs
+                {
+                    LogType = "ContainerInsights",
+                    Metadata = 
+                    {
+                        { "test-key", "test-metadata-value" },
+                    },
+                    WorkspaceId = "workspaceid",
+                    WorkspaceKey = "workspaceKey",
+                },
+            },
+            DnsConfig = new AzureRM.ContainerInstance.Latest.Inputs.DnsConfigurationArgs
+            {
+                NameServers = 
+                {
+                    "1.1.1.1",
+                },
+                Options = "ndots:2",
+                SearchDomains = "cluster.local svc.cluster.local",
+            },
+            Identity = new AzureRM.ContainerInstance.Latest.Inputs.ContainerGroupIdentityArgs
+            {
+                Type = "SystemAssigned, UserAssigned",
+            },
+            ImageRegistryCredentials = {},
+            IpAddress = new AzureRM.ContainerInstance.Latest.Inputs.IpAddressArgs
+            {
+                DnsNameLabel = "dnsnamelabel1",
+                Ports = 
+                {
+                    new AzureRM.ContainerInstance.Latest.Inputs.PortArgs
+                    {
+                        Port = 80,
+                        Protocol = "TCP",
+                    },
+                },
+                Type = "Public",
+            },
+            Location = "west us",
+            NetworkProfile = new AzureRM.ContainerInstance.Latest.Inputs.ContainerGroupNetworkProfileArgs
+            {
+                Id = "test-network-profile-id",
+            },
+            OsType = "Linux",
+            ResourceGroupName = "demo",
+            Volumes = 
+            {
+                new AzureRM.ContainerInstance.Latest.Inputs.VolumeArgs
+                {
+                    AzureFile = new AzureRM.ContainerInstance.Latest.Inputs.AzureFileVolumeArgs
+                    {
+                        ShareName = "shareName",
+                        StorageAccountKey = "accountKey",
+                        StorageAccountName = "accountName",
+                    },
+                    Name = "volume1",
+                },
+                new AzureRM.ContainerInstance.Latest.Inputs.VolumeArgs
+                {
+                    EmptyDir = ,
+                    Name = "volume2",
+                },
+                new AzureRM.ContainerInstance.Latest.Inputs.VolumeArgs
+                {
+                    Name = "volume3",
+                    Secret = 
+                    {
+                        { "secretKey1", "SecretValue1InBase64" },
+                        { "secretKey2", "SecretValue2InBase64" },
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+container_group = azurerm.containerinstance.latest.ContainerGroup("containerGroup",
+    container_group_name="demo1",
+    containers=[{
+        "name": "demo1",
+    }],
+    diagnostics={
+        "logAnalytics": {
+            "logType": "ContainerInsights",
+            "metadata": {
+                "test-key": "test-metadata-value",
+            },
+            "workspaceId": "workspaceid",
+            "workspaceKey": "workspaceKey",
+        },
+    },
+    dns_config={
+        "nameServers": ["1.1.1.1"],
+        "options": "ndots:2",
+        "searchDomains": "cluster.local svc.cluster.local",
+    },
+    identity={
+        "type": "SystemAssigned, UserAssigned",
+    },
+    image_registry_credentials=[],
+    ip_address={
+        "dnsNameLabel": "dnsnamelabel1",
+        "ports": [{
+            "port": 80,
+            "protocol": "TCP",
+        }],
+        "type": "Public",
+    },
+    location="west us",
+    network_profile={
+        "id": "test-network-profile-id",
+    },
+    os_type="Linux",
+    resource_group_name="demo",
+    volumes=[
+        {
+            "azureFile": {
+                "shareName": "shareName",
+                "storageAccountKey": "accountKey",
+                "storageAccountName": "accountName",
+            },
+            "name": "volume1",
+        },
+        {
+            "emptyDir": {},
+            "name": "volume2",
+        },
+        {
+            "name": "volume3",
+            "secret": {
+                "secretKey1": "SecretValue1InBase64",
+                "secretKey2": "SecretValue2InBase64",
+            },
+        },
+    ])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const containerGroup = new azurerm.containerinstance.latest.ContainerGroup("containerGroup", {
+    containerGroupName: "demo1",
+    containers: [{
+        name: "demo1",
+    }],
+    diagnostics: {
+        logAnalytics: {
+            logType: "ContainerInsights",
+            metadata: {
+                "test-key": "test-metadata-value",
+            },
+            workspaceId: "workspaceid",
+            workspaceKey: "workspaceKey",
+        },
+    },
+    dnsConfig: {
+        nameServers: ["1.1.1.1"],
+        options: "ndots:2",
+        searchDomains: "cluster.local svc.cluster.local",
+    },
+    identity: {
+        type: "SystemAssigned, UserAssigned",
+    },
+    imageRegistryCredentials: [],
+    ipAddress: {
+        dnsNameLabel: "dnsnamelabel1",
+        ports: [{
+            port: 80,
+            protocol: "TCP",
+        }],
+        type: "Public",
+    },
+    location: "west us",
+    networkProfile: {
+        id: "test-network-profile-id",
+    },
+    osType: "Linux",
+    resourceGroupName: "demo",
+    volumes: [
+        {
+            azureFile: {
+                shareName: "shareName",
+                storageAccountKey: "accountKey",
+                storageAccountName: "accountName",
+            },
+            name: "volume1",
+        },
+        {
+            emptyDir: {},
+            name: "volume2",
+        },
+        {
+            name: "volume3",
+            secret: {
+                secretKey1: "SecretValue1InBase64",
+                secretKey2: "SecretValue2InBase64",
+            },
+        },
+    ],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ContainerGroup Resource {#create}

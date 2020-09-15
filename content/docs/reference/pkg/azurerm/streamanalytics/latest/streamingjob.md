@@ -12,6 +12,334 @@ meta_desc: "Explore the StreamingJob resource of the streamanalytics/latest modu
 
 A streaming job object, containing all information associated with the named streaming job.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create a complete streaming job (a streaming job with a transformation, at least 1 input and at least 1 output)
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var streamingJob = new AzureRM.StreamAnalytics.Latest.StreamingJob("streamingJob", new AzureRM.StreamAnalytics.Latest.StreamingJobArgs
+        {
+            CompatibilityLevel = "1.0",
+            DataLocale = "en-US",
+            EventsLateArrivalMaxDelayInSeconds = 5,
+            EventsOutOfOrderMaxDelayInSeconds = 0,
+            EventsOutOfOrderPolicy = "Drop",
+            Functions = {},
+            Inputs = 
+            {
+                new AzureRM.StreamAnalytics.Latest.Inputs.InputArgs
+                {
+                    Name = "inputtest",
+                    Properties = 
+                    {
+                        { "datasource", 
+                        {
+                            { "properties", 
+                            {
+                                { "container", "containerName" },
+                                { "pathPattern", "" },
+                                { "storageAccounts", 
+                                {
+                                    
+                                    {
+                                        { "accountKey", "yourAccountKey==" },
+                                        { "accountName", "yourAccountName" },
+                                    },
+                                } },
+                            } },
+                            { "type", "Microsoft.Storage/Blob" },
+                        } },
+                        { "serialization", 
+                        {
+                            { "properties", 
+                            {
+                                { "encoding", "UTF8" },
+                            } },
+                            { "type", "Json" },
+                        } },
+                        { "type", "Stream" },
+                    },
+                },
+            },
+            JobName = "sj7804",
+            Location = "West US",
+            OutputErrorPolicy = "Drop",
+            Outputs = 
+            {
+                new AzureRM.StreamAnalytics.Latest.Inputs.OutputArgs
+                {
+                    Name = "outputtest",
+                },
+            },
+            ResourceGroupName = "sjrg3276",
+            Sku = new AzureRM.StreamAnalytics.Latest.Inputs.SkuArgs
+            {
+                Name = "Standard",
+            },
+            Tags = 
+            {
+                { "key1", "value1" },
+                { "key3", "value3" },
+                { "randomKey", "randomValue" },
+            },
+            Transformation = new AzureRM.StreamAnalytics.Latest.Inputs.TransformationArgs
+            {
+                Name = "transformationtest",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+streaming_job = azurerm.streamanalytics.latest.StreamingJob("streamingJob",
+    compatibility_level="1.0",
+    data_locale="en-US",
+    events_late_arrival_max_delay_in_seconds=5,
+    events_out_of_order_max_delay_in_seconds=0,
+    events_out_of_order_policy="Drop",
+    functions=[],
+    inputs=[{
+        "name": "inputtest",
+        "properties": {
+            "datasource": {
+                "properties": {
+                    "container": "containerName",
+                    "pathPattern": "",
+                    "storageAccounts": [{
+                        "accountKey": "yourAccountKey==",
+                        "accountName": "yourAccountName",
+                    }],
+                },
+                "type": "Microsoft.Storage/Blob",
+            },
+            "serialization": {
+                "properties": {
+                    "encoding": "UTF8",
+                },
+                "type": "Json",
+            },
+            "type": "Stream",
+        },
+    }],
+    job_name="sj7804",
+    location="West US",
+    output_error_policy="Drop",
+    outputs=[{
+        "name": "outputtest",
+    }],
+    resource_group_name="sjrg3276",
+    sku={
+        "name": "Standard",
+    },
+    tags={
+        "key1": "value1",
+        "key3": "value3",
+        "randomKey": "randomValue",
+    },
+    transformation={
+        "name": "transformationtest",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const streamingJob = new azurerm.streamanalytics.latest.StreamingJob("streamingJob", {
+    compatibilityLevel: "1.0",
+    dataLocale: "en-US",
+    eventsLateArrivalMaxDelayInSeconds: 5,
+    eventsOutOfOrderMaxDelayInSeconds: 0,
+    eventsOutOfOrderPolicy: "Drop",
+    functions: [],
+    inputs: [{
+        name: "inputtest",
+        properties: {
+            datasource: {
+                properties: {
+                    container: "containerName",
+                    pathPattern: "",
+                    storageAccounts: [{
+                        accountKey: "yourAccountKey==",
+                        accountName: "yourAccountName",
+                    }],
+                },
+                type: "Microsoft.Storage/Blob",
+            },
+            serialization: {
+                properties: {
+                    encoding: "UTF8",
+                },
+                type: "Json",
+            },
+            type: "Stream",
+        },
+    }],
+    jobName: "sj7804",
+    location: "West US",
+    outputErrorPolicy: "Drop",
+    outputs: [{
+        name: "outputtest",
+    }],
+    resourceGroupName: "sjrg3276",
+    sku: {
+        name: "Standard",
+    },
+    tags: {
+        key1: "value1",
+        key3: "value3",
+        randomKey: "randomValue",
+    },
+    transformation: {
+        name: "transformationtest",
+    },
+});
+
+```
+
+{{% /example %}}
+
+### Create a streaming job shell (a streaming job with no inputs, outputs, transformation, or functions)
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var streamingJob = new AzureRM.StreamAnalytics.Latest.StreamingJob("streamingJob", new AzureRM.StreamAnalytics.Latest.StreamingJobArgs
+        {
+            CompatibilityLevel = "1.0",
+            DataLocale = "en-US",
+            EventsLateArrivalMaxDelayInSeconds = 16,
+            EventsOutOfOrderMaxDelayInSeconds = 5,
+            EventsOutOfOrderPolicy = "Drop",
+            Functions = {},
+            Inputs = {},
+            JobName = "sj59",
+            Location = "West US",
+            OutputErrorPolicy = "Drop",
+            Outputs = {},
+            ResourceGroupName = "sjrg6936",
+            Sku = new AzureRM.StreamAnalytics.Latest.Inputs.SkuArgs
+            {
+                Name = "Standard",
+            },
+            Tags = 
+            {
+                { "key1", "value1" },
+                { "key3", "value3" },
+                { "randomKey", "randomValue" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+streaming_job = azurerm.streamanalytics.latest.StreamingJob("streamingJob",
+    compatibility_level="1.0",
+    data_locale="en-US",
+    events_late_arrival_max_delay_in_seconds=16,
+    events_out_of_order_max_delay_in_seconds=5,
+    events_out_of_order_policy="Drop",
+    functions=[],
+    inputs=[],
+    job_name="sj59",
+    location="West US",
+    output_error_policy="Drop",
+    outputs=[],
+    resource_group_name="sjrg6936",
+    sku={
+        "name": "Standard",
+    },
+    tags={
+        "key1": "value1",
+        "key3": "value3",
+        "randomKey": "randomValue",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const streamingJob = new azurerm.streamanalytics.latest.StreamingJob("streamingJob", {
+    compatibilityLevel: "1.0",
+    dataLocale: "en-US",
+    eventsLateArrivalMaxDelayInSeconds: 16,
+    eventsOutOfOrderMaxDelayInSeconds: 5,
+    eventsOutOfOrderPolicy: "Drop",
+    functions: [],
+    inputs: [],
+    jobName: "sj59",
+    location: "West US",
+    outputErrorPolicy: "Drop",
+    outputs: [],
+    resourceGroupName: "sjrg6936",
+    sku: {
+        name: "Standard",
+    },
+    tags: {
+        key1: "value1",
+        key3: "value3",
+        randomKey: "randomValue",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a StreamingJob Resource {#create}

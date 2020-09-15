@@ -12,6 +12,83 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the storagesync/la
 
 The Private Endpoint Connection resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### PrivateEndpointConnections_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpointConnection = new AzureRM.StorageSync.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureRM.StorageSync.Latest.PrivateEndpointConnectionArgs
+        {
+            PrivateEndpointConnectionName = "{privateEndpointConnectionName}",
+            PrivateLinkServiceConnectionState = new AzureRM.StorageSync.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
+            {
+                Description = "Auto-Approved",
+                Status = "Approved",
+            },
+            ResourceGroupName = "res7687",
+            StorageSyncServiceName = "sss2527",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_endpoint_connection = azurerm.storagesync.latest.PrivateEndpointConnection("privateEndpointConnection",
+    private_endpoint_connection_name="{privateEndpointConnectionName}",
+    private_link_service_connection_state={
+        "description": "Auto-Approved",
+        "status": "Approved",
+    },
+    resource_group_name="res7687",
+    storage_sync_service_name="sss2527")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateEndpointConnection = new azurerm.storagesync.latest.PrivateEndpointConnection("privateEndpointConnection", {
+    privateEndpointConnectionName: "{privateEndpointConnectionName}",
+    privateLinkServiceConnectionState: {
+        description: "Auto-Approved",
+        status: "Approved",
+    },
+    resourceGroupName: "res7687",
+    storageSyncServiceName: "sss2527",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateEndpointConnection Resource {#create}

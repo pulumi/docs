@@ -12,6 +12,95 @@ meta_desc: "Explore the TemplateSpecVersion resource of the resources/v20190601p
 
 Template Spec Version object.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### TemplateSpecVersionsCreateUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var templateSpecVersion = new AzureRM.Resources.V20190601Preview.TemplateSpecVersion("templateSpecVersion", new AzureRM.Resources.V20190601Preview.TemplateSpecVersionArgs
+        {
+            Description = "This is version v1.0 of our template content",
+            Location = "eastus",
+            ResourceGroupName = "templateSpecRG",
+            Template = 
+            {
+                { "$schema", "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#" },
+                { "contentVersion", "1.0.0.0" },
+                { "parameters",  },
+                { "resources", {} },
+            },
+            TemplateSpecName = "simpleTemplateSpec",
+            TemplateSpecVersion = "v1.0",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+template_spec_version = azurerm.resources.v20190601preview.TemplateSpecVersion("templateSpecVersion",
+    description="This is version v1.0 of our template content",
+    location="eastus",
+    resource_group_name="templateSpecRG",
+    template={
+        "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+        "content_version": "1.0.0.0",
+        "parameters": {},
+        "resources": [],
+    },
+    template_spec_name="simpleTemplateSpec",
+    template_spec_version="v1.0")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const templateSpecVersion = new azurerm.resources.v20190601preview.TemplateSpecVersion("templateSpecVersion", {
+    description: "This is version v1.0 of our template content",
+    location: "eastus",
+    resourceGroupName: "templateSpecRG",
+    template: {
+        `$schema`: "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+        contentVersion: "1.0.0.0",
+        parameters: {},
+        resources: [],
+    },
+    templateSpecName: "simpleTemplateSpec",
+    templateSpecVersion: "v1.0",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TemplateSpecVersion Resource {#create}

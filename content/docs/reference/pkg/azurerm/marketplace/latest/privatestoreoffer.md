@@ -12,6 +12,67 @@ meta_desc: "Explore the PrivateStoreOffer resource of the marketplace/latest mod
 
 The privateStore offer data structure.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### UpdatePrivateStoreOffer
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateStoreOffer = new AzureRM.Marketplace.Latest.PrivateStoreOffer("privateStoreOffer", new AzureRM.Marketplace.Latest.PrivateStoreOfferArgs
+        {
+            OfferId = "marketplacetestthirdparty.md-test-third-party-2",
+            PrivateStoreId = "a0e28e55-90c4-41d8-8e34-bb7ef7775406",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_store_offer = azurerm.marketplace.latest.PrivateStoreOffer("privateStoreOffer",
+    offer_id="marketplacetestthirdparty.md-test-third-party-2",
+    private_store_id="a0e28e55-90c4-41d8-8e34-bb7ef7775406")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateStoreOffer = new azurerm.marketplace.latest.PrivateStoreOffer("privateStoreOffer", {
+    offerId: "marketplacetestthirdparty.md-test-third-party-2",
+    privateStoreId: "a0e28e55-90c4-41d8-8e34-bb7ef7775406",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateStoreOffer Resource {#create}

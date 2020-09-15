@@ -12,6 +12,112 @@ meta_desc: "Explore the IntegrationAccountPartner resource of the logic/latest m
 
 The integration account partner.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a partner
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var integrationAccountPartner = new AzureRM.Logic.Latest.IntegrationAccountPartner("integrationAccountPartner", new AzureRM.Logic.Latest.IntegrationAccountPartnerArgs
+        {
+            Content = new AzureRM.Logic.Latest.Inputs.PartnerContentArgs
+            {
+                B2b = new AzureRM.Logic.Latest.Inputs.B2BPartnerContentArgs
+                {
+                    BusinessIdentities = 
+                    {
+                        new AzureRM.Logic.Latest.Inputs.BusinessIdentityArgs
+                        {
+                            Qualifier = "AA",
+                            Value = "ZZ",
+                        },
+                    },
+                },
+            },
+            IntegrationAccountName = "testIntegrationAccount",
+            Location = "westus",
+            Metadata = ,
+            PartnerName = "testPartner",
+            PartnerType = "B2B",
+            ResourceGroupName = "testResourceGroup",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+integration_account_partner = azurerm.logic.latest.IntegrationAccountPartner("integrationAccountPartner",
+    content={
+        "b2b": {
+            "businessIdentities": [{
+                "qualifier": "AA",
+                "value": "ZZ",
+            }],
+        },
+    },
+    integration_account_name="testIntegrationAccount",
+    location="westus",
+    metadata={},
+    partner_name="testPartner",
+    partner_type="B2B",
+    resource_group_name="testResourceGroup",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const integrationAccountPartner = new azurerm.logic.latest.IntegrationAccountPartner("integrationAccountPartner", {
+    content: {
+        b2b: {
+            businessIdentities: [{
+                qualifier: "AA",
+                value: "ZZ",
+            }],
+        },
+    },
+    integrationAccountName: "testIntegrationAccount",
+    location: "westus",
+    metadata: {},
+    partnerName: "testPartner",
+    partnerType: "B2B",
+    resourceGroupName: "testResourceGroup",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a IntegrationAccountPartner Resource {#create}

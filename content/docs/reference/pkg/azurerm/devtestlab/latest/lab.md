@@ -12,6 +12,83 @@ meta_desc: "Explore the Lab resource of the devtestlab/latest module, including 
 
 A lab.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Labs_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var lab = new AzureRM.DevTestLab.Latest.Lab("lab", new AzureRM.DevTestLab.Latest.LabArgs
+        {
+            LabStorageType = "{Standard|Premium}",
+            Location = "{azure-location}",
+            Name = "{devtestlab-name}",
+            ResourceGroupName = "myResourceGroup",
+            Tags = 
+            {
+                { "MyTag", "MyValue" },
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+lab = azurerm.devtestlab.latest.Lab("lab",
+    lab_storage_type="{Standard|Premium}",
+    location="{azure-location}",
+    name="{devtestlab-name}",
+    resource_group_name="myResourceGroup",
+    tags={
+        "MyTag": "MyValue",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const lab = new azurerm.devtestlab.latest.Lab("lab", {
+    labStorageType: "{Standard|Premium}",
+    location: "{azure-location}",
+    name: "{devtestlab-name}",
+    resourceGroupName: "myResourceGroup",
+    tags: {
+        MyTag: "MyValue",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Lab Resource {#create}

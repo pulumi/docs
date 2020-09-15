@@ -12,6 +12,83 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the dbformysql/v20
 
 A private endpoint connection
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Approve or reject a private endpoint connection with a given name.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpointConnection = new AzureRM.DBforMySQL.V20180601PrivatePreview.PrivateEndpointConnection("privateEndpointConnection", new AzureRM.DBforMySQL.V20180601PrivatePreview.PrivateEndpointConnectionArgs
+        {
+            PrivateEndpointConnectionName = "private-endpoint-connection-name",
+            PrivateLinkServiceConnectionState = new AzureRM.DBforMySQL.V20180601PrivatePreview.Inputs.PrivateLinkServiceConnectionStatePropertyArgs
+            {
+                Description = "Approved by johndoe@contoso.com",
+                Status = "Approved",
+            },
+            ResourceGroupName = "Default",
+            ServerName = "test-svr",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+private_endpoint_connection = azurerm.dbformysql.v20180601privatepreview.PrivateEndpointConnection("privateEndpointConnection",
+    private_endpoint_connection_name="private-endpoint-connection-name",
+    private_link_service_connection_state={
+        "description": "Approved by johndoe@contoso.com",
+        "status": "Approved",
+    },
+    resource_group_name="Default",
+    server_name="test-svr")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const privateEndpointConnection = new azurerm.dbformysql.v20180601privatepreview.PrivateEndpointConnection("privateEndpointConnection", {
+    privateEndpointConnectionName: "private-endpoint-connection-name",
+    privateLinkServiceConnectionState: {
+        description: "Approved by johndoe@contoso.com",
+        status: "Approved",
+    },
+    resourceGroupName: "Default",
+    serverName: "test-svr",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PrivateEndpointConnection Resource {#create}

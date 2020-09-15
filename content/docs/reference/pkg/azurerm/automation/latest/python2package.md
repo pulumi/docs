@@ -12,6 +12,99 @@ meta_desc: "Explore the Python2Package resource of the automation/latest module,
 
 Definition of the module type.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a python 2 package
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var python2Package = new AzureRM.Automation.Latest.Python2Package("python2Package", new AzureRM.Automation.Latest.Python2PackageArgs
+        {
+            AutomationAccountName = "myAutomationAccount33",
+            ContentLink = new AzureRM.Automation.Latest.Inputs.ContentLinkArgs
+            {
+                ContentHash = new AzureRM.Automation.Latest.Inputs.ContentHashArgs
+                {
+                    Algorithm = "sha265",
+                    Value = "07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
+                },
+                Uri = "https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip",
+                Version = "1.0.0.0",
+            },
+            PackageName = "OmsCompositeResources",
+            ResourceGroupName = "rg",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+python2_package = azurerm.automation.latest.Python2Package("python2Package",
+    automation_account_name="myAutomationAccount33",
+    content_link={
+        "contentHash": {
+            "algorithm": "sha265",
+            "value": "07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
+        },
+        "uri": "https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip",
+        "version": "1.0.0.0",
+    },
+    package_name="OmsCompositeResources",
+    resource_group_name="rg",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const python2Package = new azurerm.automation.latest.Python2Package("python2Package", {
+    automationAccountName: "myAutomationAccount33",
+    contentLink: {
+        contentHash: {
+            algorithm: "sha265",
+            value: "07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
+        },
+        uri: "https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip",
+        version: "1.0.0.0",
+    },
+    packageName: "OmsCompositeResources",
+    resourceGroupName: "rg",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Python2Package Resource {#create}

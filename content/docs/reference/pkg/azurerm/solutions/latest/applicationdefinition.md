@@ -12,6 +12,98 @@ meta_desc: "Explore the ApplicationDefinition resource of the solutions/latest m
 
 Information about managed application definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update managed application definition
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var applicationDefinition = new AzureRM.Solutions.Latest.ApplicationDefinition("applicationDefinition", new AzureRM.Solutions.Latest.ApplicationDefinitionArgs
+        {
+            ApplicationDefinitionName = "myManagedApplicationDef",
+            Authorizations = 
+            {
+                new AzureRM.Solutions.Latest.Inputs.ApplicationAuthorizationArgs
+                {
+                    PrincipalId = "validprincipalguid",
+                    RoleDefinitionId = "validroleguid",
+                },
+            },
+            Description = "myManagedApplicationDef description",
+            DisplayName = "myManagedApplicationDef",
+            Location = "East US 2",
+            LockLevel = "None",
+            PackageFileUri = "https://path/to/packagezipfile",
+            ResourceGroupName = "rg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+application_definition = azurerm.solutions.latest.ApplicationDefinition("applicationDefinition",
+    application_definition_name="myManagedApplicationDef",
+    authorizations=[{
+        "principalId": "validprincipalguid",
+        "roleDefinitionId": "validroleguid",
+    }],
+    description="myManagedApplicationDef description",
+    display_name="myManagedApplicationDef",
+    location="East US 2",
+    lock_level="None",
+    package_file_uri="https://path/to/packagezipfile",
+    resource_group_name="rg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const applicationDefinition = new azurerm.solutions.latest.ApplicationDefinition("applicationDefinition", {
+    applicationDefinitionName: "myManagedApplicationDef",
+    authorizations: [{
+        principalId: "validprincipalguid",
+        roleDefinitionId: "validroleguid",
+    }],
+    description: "myManagedApplicationDef description",
+    displayName: "myManagedApplicationDef",
+    location: "East US 2",
+    lockLevel: "None",
+    packageFileUri: "https://path/to/packagezipfile",
+    resourceGroupName: "rg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApplicationDefinition Resource {#create}

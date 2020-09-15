@@ -12,6 +12,83 @@ meta_desc: "Explore the Service resource of the datamigration/latest module, inc
 
 A Database Migration Service resource
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Services_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var service = new AzureRM.DataMigration.Latest.Service("service", new AzureRM.DataMigration.Latest.ServiceArgs
+        {
+            GroupName = "DmsSdkRg",
+            Location = "southcentralus",
+            ServiceName = "DmsSdkService",
+            Sku = new AzureRM.DataMigration.Latest.Inputs.ServiceSkuArgs
+            {
+                Name = "Basic_1vCore",
+            },
+            VirtualSubnetId = "/subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkTestNetwork/providers/Microsoft.Network/virtualNetworks/DmsSdkTestNetwork/subnets/default",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+service = azurerm.datamigration.latest.Service("service",
+    group_name="DmsSdkRg",
+    location="southcentralus",
+    service_name="DmsSdkService",
+    sku={
+        "name": "Basic_1vCore",
+    },
+    virtual_subnet_id="/subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkTestNetwork/providers/Microsoft.Network/virtualNetworks/DmsSdkTestNetwork/subnets/default")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const service = new azurerm.datamigration.latest.Service("service", {
+    groupName: "DmsSdkRg",
+    location: "southcentralus",
+    serviceName: "DmsSdkService",
+    sku: {
+        name: "Basic_1vCore",
+    },
+    virtualSubnetId: "/subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkTestNetwork/providers/Microsoft.Network/virtualNetworks/DmsSdkTestNetwork/subnets/default",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Service Resource {#create}

@@ -12,6 +12,86 @@ meta_desc: "Explore the Hub resource of the customerinsights/latest module, incl
 
 Hub resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Hubs_CreateOrUpdate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hub = new AzureRM.CustomerInsights.Latest.Hub("hub", new AzureRM.CustomerInsights.Latest.HubArgs
+        {
+            HubBillingInfo = new AzureRM.CustomerInsights.Latest.Inputs.HubBillingInfoFormatArgs
+            {
+                MaxUnits = 5,
+                MinUnits = 1,
+                SkuName = "B0",
+            },
+            HubName = "sdkTestHub",
+            Location = "West US",
+            ResourceGroupName = "TestHubRG",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+hub = azurerm.customerinsights.latest.Hub("hub",
+    hub_billing_info={
+        "maxUnits": 5,
+        "minUnits": 1,
+        "skuName": "B0",
+    },
+    hub_name="sdkTestHub",
+    location="West US",
+    resource_group_name="TestHubRG")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const hub = new azurerm.customerinsights.latest.Hub("hub", {
+    hubBillingInfo: {
+        maxUnits: 5,
+        minUnits: 1,
+        skuName: "B0",
+    },
+    hubName: "sdkTestHub",
+    location: "West US",
+    resourceGroupName: "TestHubRG",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Hub Resource {#create}

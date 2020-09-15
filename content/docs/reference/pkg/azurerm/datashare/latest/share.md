@@ -12,6 +12,79 @@ meta_desc: "Explore the Share resource of the datashare/latest module, including
 
 A share data transfer object.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Shares_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var share = new AzureRM.DataShare.Latest.Share("share", new AzureRM.DataShare.Latest.ShareArgs
+        {
+            AccountName = "Account1",
+            Description = "share description",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareKind = "CopyBased",
+            ShareName = "Share1",
+            Terms = "Confidential",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+share = azurerm.datashare.latest.Share("share",
+    account_name="Account1",
+    description="share description",
+    resource_group_name="SampleResourceGroup",
+    share_kind="CopyBased",
+    share_name="Share1",
+    terms="Confidential")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const share = new azurerm.datashare.latest.Share("share", {
+    accountName: "Account1",
+    description: "share description",
+    resourceGroupName: "SampleResourceGroup",
+    shareKind: "CopyBased",
+    shareName: "Share1",
+    terms: "Confidential",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Share Resource {#create}

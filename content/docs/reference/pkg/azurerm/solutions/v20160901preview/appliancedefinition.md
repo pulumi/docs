@@ -12,6 +12,98 @@ meta_desc: "Explore the ApplianceDefinition resource of the solutions/v20160901p
 
 Information about appliance definition.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update appliance definition
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var applianceDefinition = new AzureRM.Solutions.V20160901Preview.ApplianceDefinition("applianceDefinition", new AzureRM.Solutions.V20160901Preview.ApplianceDefinitionArgs
+        {
+            ApplianceDefinitionName = "myApplianceDef",
+            Authorizations = 
+            {
+                new AzureRM.Solutions.V20160901Preview.Inputs.ApplianceProviderAuthorizationArgs
+                {
+                    PrincipalId = "validprincipalguid",
+                    RoleDefinitionId = "validroleguid",
+                },
+            },
+            Description = "myApplianceDef description",
+            DisplayName = "myApplianceDef",
+            Location = "East US 2",
+            LockLevel = "None",
+            PackageFileUri = "https://path/to/packagezipfile",
+            ResourceGroupName = "rg",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+appliance_definition = azurerm.solutions.v20160901preview.ApplianceDefinition("applianceDefinition",
+    appliance_definition_name="myApplianceDef",
+    authorizations=[{
+        "principalId": "validprincipalguid",
+        "roleDefinitionId": "validroleguid",
+    }],
+    description="myApplianceDef description",
+    display_name="myApplianceDef",
+    location="East US 2",
+    lock_level="None",
+    package_file_uri="https://path/to/packagezipfile",
+    resource_group_name="rg")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const applianceDefinition = new azurerm.solutions.v20160901preview.ApplianceDefinition("applianceDefinition", {
+    applianceDefinitionName: "myApplianceDef",
+    authorizations: [{
+        principalId: "validprincipalguid",
+        roleDefinitionId: "validroleguid",
+    }],
+    description: "myApplianceDef description",
+    displayName: "myApplianceDef",
+    location: "East US 2",
+    lockLevel: "None",
+    packageFileUri: "https://path/to/packagezipfile",
+    resourceGroupName: "rg",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ApplianceDefinition Resource {#create}

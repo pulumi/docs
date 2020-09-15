@@ -12,6 +12,86 @@ meta_desc: "Explore the EventHubAuthorizationRule resource of the eventhub/lates
 
 Single item in a List or Get AuthorizationRule operation
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### EventHubAuthorizationRuleCreate
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var eventHubAuthorizationRule = new AzureRM.EventHub.Latest.EventHubAuthorizationRule("eventHubAuthorizationRule", new AzureRM.EventHub.Latest.EventHubAuthorizationRuleArgs
+        {
+            AuthorizationRuleName = "sdk-Authrules-2513",
+            EventHubName = "sdk-EventHub-532",
+            NamespaceName = "sdk-Namespace-960",
+            ResourceGroupName = "ArunMonocle",
+            Rights = 
+            {
+                "Listen",
+                "Send",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+event_hub_authorization_rule = azurerm.eventhub.latest.EventHubAuthorizationRule("eventHubAuthorizationRule",
+    authorization_rule_name="sdk-Authrules-2513",
+    event_hub_name="sdk-EventHub-532",
+    namespace_name="sdk-Namespace-960",
+    resource_group_name="ArunMonocle",
+    rights=[
+        "Listen",
+        "Send",
+    ])
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const eventHubAuthorizationRule = new azurerm.eventhub.latest.EventHubAuthorizationRule("eventHubAuthorizationRule", {
+    authorizationRuleName: "sdk-Authrules-2513",
+    eventHubName: "sdk-EventHub-532",
+    namespaceName: "sdk-Namespace-960",
+    resourceGroupName: "ArunMonocle",
+    rights: [
+        "Listen",
+        "Send",
+    ],
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a EventHubAuthorizationRule Resource {#create}

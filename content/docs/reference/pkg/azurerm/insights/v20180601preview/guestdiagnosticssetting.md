@@ -12,6 +12,266 @@ meta_desc: "Explore the GuestDiagnosticsSetting resource of the insights/v201806
 
 Virtual machine guest diagnostics settings resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create or update a guest diagnostic settings
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var guestDiagnosticsSetting = new AzureRM.Insights.V20180601Preview.GuestDiagnosticsSetting("guestDiagnosticsSetting", new AzureRM.Insights.V20180601Preview.GuestDiagnosticsSettingArgs
+        {
+            DataSources = 
+            {
+                new AzureRM.Insights.V20180601Preview.Inputs.DataSourceArgs
+                {
+                    Configuration = new AzureRM.Insights.V20180601Preview.Inputs.DataSourceConfigurationArgs
+                    {
+                        PerfCounters = 
+                        {
+                            new AzureRM.Insights.V20180601Preview.Inputs.PerformanceCounterConfigurationArgs
+                            {
+                                Name = "\\Process(_Total)\\%Processor Time",
+                                SamplingPeriod = "PT1M",
+                            },
+                            new AzureRM.Insights.V20180601Preview.Inputs.PerformanceCounterConfigurationArgs
+                            {
+                                Name = "\\Process(_Total)\\Working Set",
+                                SamplingPeriod = "PT1M",
+                            },
+                        },
+                    },
+                    Kind = "PerformanceCounter",
+                    Sinks = 
+                    {
+                        new AzureRM.Insights.V20180601Preview.Inputs.SinkConfigurationArgs
+                        {
+                            Kind = "LogAnalytics",
+                        },
+                    },
+                },
+                new AzureRM.Insights.V20180601Preview.Inputs.DataSourceArgs
+                {
+                    Configuration = new AzureRM.Insights.V20180601Preview.Inputs.DataSourceConfigurationArgs
+                    {
+                        Providers = 
+                        {
+                            new AzureRM.Insights.V20180601Preview.Inputs.EtwProviderConfigurationArgs
+                            {
+                                Id = "1",
+                            },
+                            new AzureRM.Insights.V20180601Preview.Inputs.EtwProviderConfigurationArgs
+                            {
+                                Id = "2",
+                            },
+                        },
+                    },
+                    Kind = "ETWProviders",
+                    Sinks = 
+                    {
+                        new AzureRM.Insights.V20180601Preview.Inputs.SinkConfigurationArgs
+                        {
+                            Kind = "LogAnalytics",
+                        },
+                    },
+                },
+                new AzureRM.Insights.V20180601Preview.Inputs.DataSourceArgs
+                {
+                    Configuration = new AzureRM.Insights.V20180601Preview.Inputs.DataSourceConfigurationArgs
+                    {
+                        EventLogs = 
+                        {
+                            new AzureRM.Insights.V20180601Preview.Inputs.EventLogConfigurationArgs
+                            {
+                                Filter = "SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"CatWoman\"",
+                                LogName = "Application",
+                            },
+                            new AzureRM.Insights.V20180601Preview.Inputs.EventLogConfigurationArgs
+                            {
+                                Filter = "SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"BatMan\"",
+                                LogName = "Application",
+                            },
+                        },
+                    },
+                    Kind = "WindowsEventLogs",
+                    Sinks = 
+                    {
+                        new AzureRM.Insights.V20180601Preview.Inputs.SinkConfigurationArgs
+                        {
+                            Kind = "LogAnalytics",
+                        },
+                    },
+                },
+            },
+            DiagnosticSettingsName = "SampleDiagSetting",
+            Location = "Global",
+            OsType = "Windows",
+            ResourceGroupName = "Default-ResourceGroup",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+guest_diagnostics_setting = azurerm.insights.v20180601preview.GuestDiagnosticsSetting("guestDiagnosticsSetting",
+    data_sources=[
+        {
+            "configuration": {
+                "perfCounters": [
+                    {
+                        "name": "\\Process(_Total)\\%Processor Time",
+                        "samplingPeriod": "PT1M",
+                    },
+                    {
+                        "name": "\\Process(_Total)\\Working Set",
+                        "samplingPeriod": "PT1M",
+                    },
+                ],
+            },
+            "kind": "PerformanceCounter",
+            "sinks": [{
+                "kind": "LogAnalytics",
+            }],
+        },
+        {
+            "configuration": {
+                "providers": [
+                    {
+                        "id": "1",
+                    },
+                    {
+                        "id": "2",
+                    },
+                ],
+            },
+            "kind": "ETWProviders",
+            "sinks": [{
+                "kind": "LogAnalytics",
+            }],
+        },
+        {
+            "configuration": {
+                "eventLogs": [
+                    {
+                        "filter": "SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"CatWoman\"",
+                        "logName": "Application",
+                    },
+                    {
+                        "filter": "SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"BatMan\"",
+                        "logName": "Application",
+                    },
+                ],
+            },
+            "kind": "WindowsEventLogs",
+            "sinks": [{
+                "kind": "LogAnalytics",
+            }],
+        },
+    ],
+    diagnostic_settings_name="SampleDiagSetting",
+    location="Global",
+    os_type="Windows",
+    resource_group_name="Default-ResourceGroup",
+    tags={})
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const guestDiagnosticsSetting = new azurerm.insights.v20180601preview.GuestDiagnosticsSetting("guestDiagnosticsSetting", {
+    dataSources: [
+        {
+            configuration: {
+                perfCounters: [
+                    {
+                        name: `\Process(_Total)\%Processor Time`,
+                        samplingPeriod: "PT1M",
+                    },
+                    {
+                        name: "\\Process(_Total)\\Working Set",
+                        samplingPeriod: "PT1M",
+                    },
+                ],
+            },
+            kind: "PerformanceCounter",
+            sinks: [{
+                kind: "LogAnalytics",
+            }],
+        },
+        {
+            configuration: {
+                providers: [
+                    {
+                        id: 1,
+                    },
+                    {
+                        id: 2,
+                    },
+                ],
+            },
+            kind: "ETWProviders",
+            sinks: [{
+                kind: "LogAnalytics",
+            }],
+        },
+        {
+            configuration: {
+                eventLogs: [
+                    {
+                        filter: `SourceName == Xyz AND EventId = "100" AND  $Xpath/Column="DCName" = "CatWoman"`,
+                        logName: "Application",
+                    },
+                    {
+                        filter: `SourceName == Xyz AND EventId = "100" AND  $Xpath/Column="DCName" = "BatMan"`,
+                        logName: "Application",
+                    },
+                ],
+            },
+            kind: "WindowsEventLogs",
+            sinks: [{
+                kind: "LogAnalytics",
+            }],
+        },
+    ],
+    diagnosticSettingsName: "SampleDiagSetting",
+    location: "Global",
+    osType: "Windows",
+    resourceGroupName: "Default-ResourceGroup",
+    tags: {},
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GuestDiagnosticsSetting Resource {#create}

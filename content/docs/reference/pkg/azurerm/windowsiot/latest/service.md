@@ -12,6 +12,79 @@ meta_desc: "Explore the Service resource of the windowsiot/latest module, includ
 
 The description of the Windows IoT Device Service.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Service_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var service = new AzureRM.WindowsIoT.Latest.Service("service", new AzureRM.WindowsIoT.Latest.ServiceArgs
+        {
+            AdminDomainName = "d.e.f",
+            BillingDomainName = "a.b.c",
+            DeviceName = "service4445",
+            Notes = "blah",
+            Quantity = 1000000,
+            ResourceGroupName = "res9101",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+service = azurerm.windowsiot.latest.Service("service",
+    admin_domain_name="d.e.f",
+    billing_domain_name="a.b.c",
+    device_name="service4445",
+    notes="blah",
+    quantity=1000000,
+    resource_group_name="res9101")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const service = new azurerm.windowsiot.latest.Service("service", {
+    adminDomainName: "d.e.f",
+    billingDomainName: "a.b.c",
+    deviceName: "service4445",
+    notes: "blah",
+    quantity: 1000000,
+    resourceGroupName: "res9101",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Service Resource {#create}

@@ -12,6 +12,82 @@ meta_desc: "Explore the User resource of the apimanagement/latest module, includ
 
 User details.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### ApiManagementCreateUser
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var user = new AzureRM.ApiManagement.Latest.User("user", new AzureRM.ApiManagement.Latest.UserArgs
+        {
+            Confirmation = "signup",
+            Email = "foobar@outlook.com",
+            FirstName = "foo",
+            LastName = "bar",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            UserId = "5931a75ae4bbd512288c680b",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+user = azurerm.apimanagement.latest.User("user",
+    confirmation="signup",
+    email="foobar@outlook.com",
+    first_name="foo",
+    last_name="bar",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    user_id="5931a75ae4bbd512288c680b")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const user = new azurerm.apimanagement.latest.User("user", {
+    confirmation: "signup",
+    email: "foobar@outlook.com",
+    firstName: "foo",
+    lastName: "bar",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    userId: "5931a75ae4bbd512288c680b",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a User Resource {#create}

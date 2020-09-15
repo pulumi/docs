@@ -12,6 +12,132 @@ meta_desc: "Explore the P2sVpnGateway resource of the network/latest module, inc
 
 P2SVpnGateway Resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### P2SVpnGatewayPut
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureRM = Pulumi.AzureRM;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var p2sVpnGateway = new AzureRM.Network.Latest.P2sVpnGateway("p2sVpnGateway", new AzureRM.Network.Latest.P2sVpnGatewayArgs
+        {
+            CustomDnsServers = 
+            {
+                "1.1.1.1",
+                "2.2.2.2",
+            },
+            GatewayName = "p2sVpnGateway1",
+            Location = "West US",
+            P2SConnectionConfigurations = 
+            {
+                new AzureRM.Network.Latest.Inputs.P2SConnectionConfigurationArgs
+                {
+                    Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1",
+                    Name = "P2SConnectionConfig1",
+                },
+            },
+            ResourceGroupName = "rg1",
+            Tags = 
+            {
+                { "key1", "value1" },
+            },
+            VirtualHub = new AzureRM.Network.Latest.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
+            },
+            VpnGatewayScaleUnit = 1,
+            VpnServerConfiguration = new AzureRM.Network.Latest.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azurerm as azurerm
+
+p2s_vpn_gateway = azurerm.network.latest.P2sVpnGateway("p2sVpnGateway",
+    custom_dns_servers=[
+        "1.1.1.1",
+        "2.2.2.2",
+    ],
+    gateway_name="p2sVpnGateway1",
+    location="West US",
+    p2_s_connection_configurations=[{
+        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1",
+        "name": "P2SConnectionConfig1",
+    }],
+    resource_group_name="rg1",
+    tags={
+        "key1": "value1",
+    },
+    virtual_hub={
+        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
+    },
+    vpn_gateway_scale_unit=1,
+    vpn_server_configuration={
+        "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1",
+    })
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azurerm from "@pulumi/azurerm";
+
+const p2sVpnGateway = new azurerm.network.latest.P2sVpnGateway("p2sVpnGateway", {
+    customDnsServers: [
+        "1.1.1.1",
+        "2.2.2.2",
+    ],
+    gatewayName: "p2sVpnGateway1",
+    location: "West US",
+    p2SConnectionConfigurations: [{
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1",
+        name: "P2SConnectionConfig1",
+    }],
+    resourceGroupName: "rg1",
+    tags: {
+        key1: "value1",
+    },
+    virtualHub: {
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
+    },
+    vpnGatewayScaleUnit: 1,
+    vpnServerConfiguration: {
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1",
+    },
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a P2sVpnGateway Resource {#create}
