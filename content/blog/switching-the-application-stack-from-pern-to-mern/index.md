@@ -7,11 +7,11 @@ authors: ["vova-ivanov"]
 tags: ["aws", "typescript", "docker", "kubernetes"]
 ---
 
-In this blog post we will return to the PERN application we previously [migrated to Kubernetes]({{< relref "/blog/deploying-a-pern-stack-application-to-aws" >}}), and switch out the PostgreSQL database for MongoDB. Although at first glance it might seem like a difficult task, the straigthforward design of Pulumi and Kubernetes allows us to easily transition the application form a PERN stack to a MERN one.
+In this blog post, we return to the PERN application we previously [migrated to Kubernetes]({{< relref "/blog/deploying-a-pern-stack-application-to-aws" >}}) and replace the PostgreSQL database with MongoDB. Although it might seem like a difficult task initially, the straightforward design of Pulumi and Kubernetes allows us to easily transition the application form a PERN stack to a MERN one.
 
 <!--more-->
 
-The main difference between PostgreSQL and MongoDB is the way they store their data: PostgreSQL is a relational database which allows users to create complex tables and relations between values, while MongoDB is a key-value database that stores data in simple collections without any special relations. Because the application takes the form of three distinct components--the client, server, and database--almost all of the changes will occur in the database component. We can in fact reuse most of the existing code, and will be able to change the database without additional hassle.
+The main difference between PostgreSQL and MongoDB is data is stored. PostgreSQL is a relational database that allows users to create complex tables and relations between values. In contrast, MongoDB is a key-value database that stores data in simple collections without any special relations. Because the application takes the form of three distinct components--the client, server, and database--almost all of the changes will occur in the database component. In fact, we can reuse most of the existing code and will be able to change the database without additional hassle.
 
 The first step to switching the stack is to clone the [PERN Kubernetes example](https://github.com/pulumi/examples/tree/master/aws-ts-k8s-voting-app). We'll use a sparse clone to copy only the `aws-ts-k8s-voting-app` directory.
 
@@ -46,7 +46,7 @@ The `package.json` file lists the libraries used by the project. We will add the
     "@pulumi/cloud-aws": "^0.19.0"
 ```
 
-As most of the components in our project are nearly identical to those in the PERN Kubernetes application, we can copy many of them into our directory.
+As most of our project components are nearly identical to those in the PERN Kubernetes application, we can copy many of them into our directory.
 
 ```bash
 $ cd ..
@@ -104,9 +104,9 @@ while true; do
 done
 ```
 
-With the database in place, all that is left is to make some small MongoDB-specific changes to the way queries are sent by the client and server components.
+With the database in place, all that is left is to make some small MongoDB-specific changes to how the client and server components send queries.
 
-The server component will be changed to use a `model.js` file, which acts like a blueprint for the choices that the database has.
+The server component will be changed to use a model.js file, which acts as a blueprint for the database's choices.
 
 ```javascript
 const mongoose = require("mongoose");
@@ -245,7 +245,7 @@ async function castVote(id) {...}
 export default ListChoices;
 ```
 
-Now that, server, client, and database have been fully converted to use MongoDB, we can make the last remanining change in the infrastructure by updating the database deployment and service.
+Now that, server, client, and database have been fully converted to use MongoDB, we can make the last remaining change in the infrastructure by updating the database deployment and service.
 
 ```typescript
 import * as aws from "@pulumi/aws";
@@ -387,6 +387,6 @@ export const kubeConfig = eksCluster.kubeconfig;
 export const URL = clientsideListener.status.loadBalancer.ingress[0].hostname;
 ```
 
-In this example, we showed how to change a PERN stack based application to use MERN, and demonstrated the ease with which a designer can swap out different components within their application. The isolated nature of containerized applications allows for a great deal of modularity, and can significantly reduce the amount of time spent renovating previously written code to fit any new components that are added.
+In this example, we showed how to change a PERN stack-based application to use MERN, and demonstrated the ease with which a designer can swap out different components. The isolated nature of containerized applications allows for a great deal of modularity. It can significantly reduce the amount of time spent renovating previously written code to fit any added new components.
 
-The blog post's code can be [found on Github](https://github.com/pulumi/examples/tree/master/aws-ts-k8s-mern-voting-app).
+The MERN application code is [on Github](https://github.com/pulumi/examples/tree/master/aws-ts-k8s-mern-voting-app).
