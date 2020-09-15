@@ -23,7 +23,7 @@ This page contains detailed instructions for [installing Pulumi](#install-pulumi
 
 {{< chooser os "macos,windows,linux" >}}
 
-{{% choosable os macos %}}
+{{< choosable os macos >}}
 
 macOS Sierra (10.12) or later is required.
 
@@ -66,9 +66,9 @@ If you do not wish to use the previous options, you can install Pulumi manually.
 
 1. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable os linux %}}
+{{< choosable os linux >}}
 
 ### Installation Script
 
@@ -91,9 +91,9 @@ Alternatively, you can install Pulumi manually. We provide a prebuilt binary for
 
 1. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable os windows %}}
+{{< choosable os windows >}}
 
 Windows 8 and 10 are supported.
 
@@ -137,7 +137,7 @@ Alternatively, you can install Pulumi manually.
 
 1. Add `C:\pulumi\bin` to your path via **System Properties** -> **Advanced** -> **Environment Variables** -> **User Variables** -> **Path** -> **Edit**.
 
-{{% /choosable %}}
+{{< /choosable >}}
 
 {{< /chooser >}}
 
@@ -170,6 +170,64 @@ or visit https://pulumi.com/docs/reference/install/ for manual instructions and 
 ## Upgrading Pulumi
 
 If you are upgrading to Pulumi 2.0, please see our [migration guide]({{< relref "migrating-2.0" >}}).
+
+## Installing Previous Versions
+
+You can find the list of versions on the [Available Versions]({{< relref "/docs/get-started/install/versions" >}}) page.
+
+{{< chooser os "macos,windows,linux" >}}
+
+{{< choosable os macos >}}
+
+### Homebrew
+
+```bash
+$ brew install pulumi@<version>
+```
+
+### Installation Script
+
+```bash
+$ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
+```
+
+{{< /choosable >}}
+
+{{< choosable os linux >}}
+
+### Installation Script
+
+To install, run our installation script:
+
+```bash
+$ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
+```
+
+{{< /choosable >}}
+
+{{< choosable os windows >}}
+
+### Chocolatey
+
+You can specify a specific version with [Chocolatey package manager](https://chocolatey.org):
+
+```powershell
+> choco install pulumi --version <version>
+```
+
+### Installation Script
+
+1. Open a new command prompt window (**WIN+R**: `cmd.exe`):
+
+1. Run our installation script (replace `<version>` with the version number):
+
+```bat
+> @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $version = '<version>'; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1')).Replace('${latestVersion}', $version)" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
+```
+
+{{< /choosable >}}
+
+{{< /chooser >}}
 
 ## Uninstalling Pulumi
 
