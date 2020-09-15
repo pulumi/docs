@@ -14,6 +14,9 @@ Explore the resources and functions of the hybridcompute/latest module in the Az
     <li><a href="guestconfigurationhcrpassignment" title="GuestConfigurationHCRPAssignment"><span class="symbol resource"></span>GuestConfigurationHCRPAssignment</a></li>
     <li><a href="machine" title="Machine"><span class="symbol resource"></span>Machine</a></li>
     <li><a href="machineextension" title="MachineExtension"><span class="symbol resource"></span>MachineExtension</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="privatelinkscope" title="PrivateLinkScope"><span class="symbol resource"></span>PrivateLinkScope</a></li>
+    <li><a href="privatelinkscopedresource" title="PrivateLinkScopedResource"><span class="symbol resource"></span>PrivateLinkScopedResource</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -21,6 +24,9 @@ Explore the resources and functions of the hybridcompute/latest module in the Az
     <li><a href="getguestconfigurationhcrpassignment" title="GetGuestConfigurationHCRPAssignment"><span class="symbol function"></span>GetGuestConfigurationHCRPAssignment</a></li>
     <li><a href="getmachine" title="GetMachine"><span class="symbol function"></span>GetMachine</a></li>
     <li><a href="getmachineextension" title="GetMachineExtension"><span class="symbol function"></span>GetMachineExtension</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="getprivatelinkscope" title="GetPrivateLinkScope"><span class="symbol function"></span>GetPrivateLinkScope</a></li>
+    <li><a href="getprivatelinkscopedresource" title="GetPrivateLinkScopedResource"><span class="symbol function"></span>GetPrivateLinkScopedResource</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

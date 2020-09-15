@@ -11,15 +11,19 @@ Explore the resources and functions of the datamigration/latest module in the Az
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="file" title="File"><span class="symbol resource"></span>File</a></li>
     <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
+    <li><a href="servicetask" title="ServiceTask"><span class="symbol resource"></span>ServiceTask</a></li>
     <li><a href="task" title="Task"><span class="symbol resource"></span>Task</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getfile" title="GetFile"><span class="symbol function"></span>GetFile</a></li>
     <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getservicetask" title="GetServiceTask"><span class="symbol function"></span>GetServiceTask</a></li>
     <li><a href="gettask" title="GetTask"><span class="symbol function"></span>GetTask</a></li>
 </ul>
 

@@ -15,9 +15,12 @@ Explore the resources and functions of the resources/latest module in the Azure 
     <li><a href="deploymentatscope" title="DeploymentAtScope"><span class="symbol resource"></span>DeploymentAtScope</a></li>
     <li><a href="deploymentatsubscriptionscope" title="DeploymentAtSubscriptionScope"><span class="symbol resource"></span>DeploymentAtSubscriptionScope</a></li>
     <li><a href="deploymentattenantscope" title="DeploymentAtTenantScope"><span class="symbol resource"></span>DeploymentAtTenantScope</a></li>
+    <li><a href="deploymentscript" title="DeploymentScript"><span class="symbol resource"></span>DeploymentScript</a></li>
     <li><a href="resource" title="Resource"><span class="symbol resource"></span>Resource</a></li>
     <li><a href="resourcegroup" title="ResourceGroup"><span class="symbol resource"></span>ResourceGroup</a></li>
     <li><a href="tagatscope" title="TagAtScope"><span class="symbol resource"></span>TagAtScope</a></li>
+    <li><a href="templatespec" title="TemplateSpec"><span class="symbol resource"></span>TemplateSpec</a></li>
+    <li><a href="templatespecversion" title="TemplateSpecVersion"><span class="symbol resource"></span>TemplateSpecVersion</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -26,9 +29,12 @@ Explore the resources and functions of the resources/latest module in the Azure 
     <li><a href="getdeploymentatscope" title="GetDeploymentAtScope"><span class="symbol function"></span>GetDeploymentAtScope</a></li>
     <li><a href="getdeploymentatsubscriptionscope" title="GetDeploymentAtSubscriptionScope"><span class="symbol function"></span>GetDeploymentAtSubscriptionScope</a></li>
     <li><a href="getdeploymentattenantscope" title="GetDeploymentAtTenantScope"><span class="symbol function"></span>GetDeploymentAtTenantScope</a></li>
+    <li><a href="getdeploymentscript" title="GetDeploymentScript"><span class="symbol function"></span>GetDeploymentScript</a></li>
     <li><a href="getresource" title="GetResource"><span class="symbol function"></span>GetResource</a></li>
     <li><a href="getresourcegroup" title="GetResourceGroup"><span class="symbol function"></span>GetResourceGroup</a></li>
     <li><a href="gettagatscope" title="GetTagAtScope"><span class="symbol function"></span>GetTagAtScope</a></li>
+    <li><a href="gettemplatespec" title="GetTemplateSpec"><span class="symbol function"></span>GetTemplateSpec</a></li>
+    <li><a href="gettemplatespecversion" title="GetTemplateSpecVersion"><span class="symbol function"></span>GetTemplateSpecVersion</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

@@ -21,6 +21,7 @@ Explore the resources and functions of the operationalinsights/latest module in 
     <li><a href="incident" title="Incident"><span class="symbol resource"></span>Incident</a></li>
     <li><a href="linkedservice" title="LinkedService"><span class="symbol resource"></span>LinkedService</a></li>
     <li><a href="linkedstorageaccount" title="LinkedStorageAccount"><span class="symbol resource"></span>LinkedStorageAccount</a></li>
+    <li><a href="machinegroup" title="MachineGroup"><span class="symbol resource"></span>MachineGroup</a></li>
     <li><a href="savedsearch" title="SavedSearch"><span class="symbol resource"></span>SavedSearch</a></li>
     <li><a href="storageinsightconfig" title="StorageInsightConfig"><span class="symbol resource"></span>StorageInsightConfig</a></li>
     <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
@@ -38,6 +39,7 @@ Explore the resources and functions of the operationalinsights/latest module in 
     <li><a href="getincident" title="GetIncident"><span class="symbol function"></span>GetIncident</a></li>
     <li><a href="getlinkedservice" title="GetLinkedService"><span class="symbol function"></span>GetLinkedService</a></li>
     <li><a href="getlinkedstorageaccount" title="GetLinkedStorageAccount"><span class="symbol function"></span>GetLinkedStorageAccount</a></li>
+    <li><a href="getmachinegroup" title="GetMachineGroup"><span class="symbol function"></span>GetMachineGroup</a></li>
     <li><a href="getsavedsearch" title="GetSavedSearch"><span class="symbol function"></span>GetSavedSearch</a></li>
     <li><a href="getstorageinsightconfig" title="GetStorageInsightConfig"><span class="symbol function"></span>GetStorageInsightConfig</a></li>
     <li><a href="getworkspace" title="GetWorkspace"><span class="symbol function"></span>GetWorkspace</a></li>

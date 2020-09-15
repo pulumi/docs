@@ -15,6 +15,9 @@ Explore the resources and functions of the servicebus/latest module in the Azure
     <li><a href="migrationconfig" title="MigrationConfig"><span class="symbol resource"></span>MigrationConfig</a></li>
     <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
     <li><a href="namespaceauthorizationrule" title="NamespaceAuthorizationRule"><span class="symbol resource"></span>NamespaceAuthorizationRule</a></li>
+    <li><a href="namespaceipfilterrule" title="NamespaceIpFilterRule"><span class="symbol resource"></span>NamespaceIpFilterRule</a></li>
+    <li><a href="namespacevirtualnetworkrule" title="NamespaceVirtualNetworkRule"><span class="symbol resource"></span>NamespaceVirtualNetworkRule</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
     <li><a href="queueauthorizationrule" title="QueueAuthorizationRule"><span class="symbol resource"></span>QueueAuthorizationRule</a></li>
     <li><a href="rule" title="Rule"><span class="symbol resource"></span>Rule</a></li>
@@ -29,6 +32,9 @@ Explore the resources and functions of the servicebus/latest module in the Azure
     <li><a href="getmigrationconfig" title="GetMigrationConfig"><span class="symbol function"></span>GetMigrationConfig</a></li>
     <li><a href="getnamespace" title="GetNamespace"><span class="symbol function"></span>GetNamespace</a></li>
     <li><a href="getnamespaceauthorizationrule" title="GetNamespaceAuthorizationRule"><span class="symbol function"></span>GetNamespaceAuthorizationRule</a></li>
+    <li><a href="getnamespaceipfilterrule" title="GetNamespaceIpFilterRule"><span class="symbol function"></span>GetNamespaceIpFilterRule</a></li>
+    <li><a href="getnamespacevirtualnetworkrule" title="GetNamespaceVirtualNetworkRule"><span class="symbol function"></span>GetNamespaceVirtualNetworkRule</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getqueue" title="GetQueue"><span class="symbol function"></span>GetQueue</a></li>
     <li><a href="getqueueauthorizationrule" title="GetQueueAuthorizationRule"><span class="symbol function"></span>GetQueueAuthorizationRule</a></li>
     <li><a href="getrule" title="GetRule"><span class="symbol function"></span>GetRule</a></li>

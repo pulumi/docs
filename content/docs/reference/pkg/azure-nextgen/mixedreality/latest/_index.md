@@ -11,12 +11,15 @@ Explore the resources and functions of the mixedreality/latest module in the Azu
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="remoterenderingaccount" title="RemoteRenderingAccount"><span class="symbol resource"></span>RemoteRenderingAccount</a></li>
     <li><a href="spatialanchorsaccount" title="SpatialAnchorsAccount"><span class="symbol resource"></span>SpatialAnchorsAccount</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getremoterenderingaccount" title="GetRemoteRenderingAccount"><span class="symbol function"></span>GetRemoteRenderingAccount</a></li>
     <li><a href="getspatialanchorsaccount" title="GetSpatialAnchorsAccount"><span class="symbol function"></span>GetSpatialAnchorsAccount</a></li>
+    <li><a href="listremoterenderingaccountkeys" title="ListRemoteRenderingAccountKeys"><span class="symbol function"></span>ListRemoteRenderingAccountKeys</a></li>
     <li><a href="listspatialanchorsaccountkeys" title="ListSpatialAnchorsAccountKeys"><span class="symbol function"></span>ListSpatialAnchorsAccountKeys</a></li>
 </ul>
 

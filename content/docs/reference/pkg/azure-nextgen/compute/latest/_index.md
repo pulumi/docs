@@ -12,6 +12,7 @@ Explore the resources and functions of the compute/latest module in the Azure Ne
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="availabilityset" title="AvailabilitySet"><span class="symbol resource"></span>AvailabilitySet</a></li>
+    <li><a href="configurationprofileassignment" title="ConfigurationProfileAssignment"><span class="symbol resource"></span>ConfigurationProfileAssignment</a></li>
     <li><a href="dedicatedhost" title="DedicatedHost"><span class="symbol resource"></span>DedicatedHost</a></li>
     <li><a href="dedicatedhostgroup" title="DedicatedHostGroup"><span class="symbol resource"></span>DedicatedHostGroup</a></li>
     <li><a href="disk" title="Disk"><span class="symbol resource"></span>Disk</a></li>
@@ -38,6 +39,7 @@ Explore the resources and functions of the compute/latest module in the Azure Ne
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getavailabilityset" title="GetAvailabilitySet"><span class="symbol function"></span>GetAvailabilitySet</a></li>
+    <li><a href="getconfigurationprofileassignment" title="GetConfigurationProfileAssignment"><span class="symbol function"></span>GetConfigurationProfileAssignment</a></li>
     <li><a href="getdedicatedhost" title="GetDedicatedHost"><span class="symbol function"></span>GetDedicatedHost</a></li>
     <li><a href="getdedicatedhostgroup" title="GetDedicatedHostGroup"><span class="symbol function"></span>GetDedicatedHostGroup</a></li>
     <li><a href="getdisk" title="GetDisk"><span class="symbol function"></span>GetDisk</a></li>

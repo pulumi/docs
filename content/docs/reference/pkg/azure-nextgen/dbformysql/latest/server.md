@@ -16,127 +16,6 @@ Represents a server.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Create a database as a point in time restore
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureNextGen = Pulumi.AzureNextGen;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var server = new AzureNextGen.DBforMySQL.Latest.Server("server", new AzureNextGen.DBforMySQL.Latest.ServerArgs
-        {
-            Location = "brazilsouth",
-            ResourceGroupName = "TargetResourceGroup",
-            ServerName = "targetserver",
-            Sku = new AzureNextGen.DBforMySQL.Latest.Inputs.SkuArgs
-            {
-                Capacity = 2,
-                Family = "Gen5",
-                Name = "GP_Gen5_2",
-                Tier = "GeneralPurpose",
-            },
-            Tags = 
-            {
-                { "ElasticServer", "1" },
-            },
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	dbformysql "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := dbformysql.NewServer(ctx, "server", &dbformysql.ServerArgs{
-			Location:          pulumi.String("brazilsouth"),
-			ResourceGroupName: pulumi.String("TargetResourceGroup"),
-			ServerName:        pulumi.String("targetserver"),
-			Sku: &dbformysql.SkuArgs{
-				Capacity: pulumi.Int(2),
-				Family:   pulumi.String("Gen5"),
-				Name:     pulumi.String("GP_Gen5_2"),
-				Tier:     pulumi.String("GeneralPurpose"),
-			},
-			Tags: pulumi.StringMap{
-				"ElasticServer": pulumi.String("1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azure_nextgen as azure_nextgen
-
-server = azure_nextgen.dbformysql.latest.Server("server",
-    location="brazilsouth",
-    resource_group_name="TargetResourceGroup",
-    server_name="targetserver",
-    sku={
-        "capacity": 2,
-        "family": "Gen5",
-        "name": "GP_Gen5_2",
-        "tier": "GeneralPurpose",
-    },
-    tags={
-        "ElasticServer": "1",
-    })
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
-
-const server = new azure_nextgen.dbformysql.latest.Server("server", {
-    location: "brazilsouth",
-    resourceGroupName: "TargetResourceGroup",
-    serverName: "targetserver",
-    sku: {
-        capacity: 2,
-        family: "Gen5",
-        name: "GP_Gen5_2",
-        tier: "GeneralPurpose",
-    },
-    tags: {
-        ElasticServer: "1",
-    },
-});
-
-```
-
-{{% /example %}}
-
 ### Create a new server
 {{% example csharp %}}
 ```csharp
@@ -154,9 +33,7 @@ class MyStack : Stack
             ServerName = "mysqltestsvc4",
             Sku = new AzureNextGen.DBforMySQL.Latest.Inputs.SkuArgs
             {
-                Capacity = 2,
-                Family = "Gen5",
-                Name = "GP_Gen5_2",
+                Name = "Standard_D14_v2",
                 Tier = "GeneralPurpose",
             },
             Tags = 
@@ -189,10 +66,8 @@ func main() {
 			ResourceGroupName: pulumi.String("testrg"),
 			ServerName:        pulumi.String("mysqltestsvc4"),
 			Sku: &dbformysql.SkuArgs{
-				Capacity: pulumi.Int(2),
-				Family:   pulumi.String("Gen5"),
-				Name:     pulumi.String("GP_Gen5_2"),
-				Tier:     pulumi.String("GeneralPurpose"),
+				Name: pulumi.String("Standard_D14_v2"),
+				Tier: pulumi.String("GeneralPurpose"),
 			},
 			Tags: pulumi.StringMap{
 				"ElasticServer": pulumi.String("1"),
@@ -220,9 +95,7 @@ server = azure_nextgen.dbformysql.latest.Server("server",
     resource_group_name="testrg",
     server_name="mysqltestsvc4",
     sku={
-        "capacity": 2,
-        "family": "Gen5",
-        "name": "GP_Gen5_2",
+        "name": "Standard_D14_v2",
         "tier": "GeneralPurpose",
     },
     tags={
@@ -244,9 +117,7 @@ const server = new azure_nextgen.dbformysql.latest.Server("server", {
     resourceGroupName: "testrg",
     serverName: "mysqltestsvc4",
     sku: {
-        capacity: 2,
-        family: "Gen5",
-        name: "GP_Gen5_2",
+        name: "Standard_D14_v2",
         tier: "GeneralPurpose",
     },
     tags: {
@@ -341,7 +212,7 @@ const server = new azure_nextgen.dbformysql.latest.Server("server", {
 
 {{% /example %}}
 
-### Create a server as a geo restore
+### Create a server as a point in time restore
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -353,14 +224,12 @@ class MyStack : Stack
     {
         var server = new AzureNextGen.DBforMySQL.Latest.Server("server", new AzureNextGen.DBforMySQL.Latest.ServerArgs
         {
-            Location = "westus",
+            Location = "brazilsouth",
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
             Sku = new AzureNextGen.DBforMySQL.Latest.Inputs.SkuArgs
             {
-                Capacity = 2,
-                Family = "Gen5",
-                Name = "GP_Gen5_2",
+                Name = "Standard_D14_v2",
                 Tier = "GeneralPurpose",
             },
             Tags = 
@@ -389,14 +258,12 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := dbformysql.NewServer(ctx, "server", &dbformysql.ServerArgs{
-			Location:          pulumi.String("westus"),
+			Location:          pulumi.String("brazilsouth"),
 			ResourceGroupName: pulumi.String("TargetResourceGroup"),
 			ServerName:        pulumi.String("targetserver"),
 			Sku: &dbformysql.SkuArgs{
-				Capacity: pulumi.Int(2),
-				Family:   pulumi.String("Gen5"),
-				Name:     pulumi.String("GP_Gen5_2"),
-				Tier:     pulumi.String("GeneralPurpose"),
+				Name: pulumi.String("Standard_D14_v2"),
+				Tier: pulumi.String("GeneralPurpose"),
 			},
 			Tags: pulumi.StringMap{
 				"ElasticServer": pulumi.String("1"),
@@ -420,13 +287,11 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 server = azure_nextgen.dbformysql.latest.Server("server",
-    location="westus",
+    location="brazilsouth",
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
     sku={
-        "capacity": 2,
-        "family": "Gen5",
-        "name": "GP_Gen5_2",
+        "name": "Standard_D14_v2",
         "tier": "GeneralPurpose",
     },
     tags={
@@ -444,13 +309,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
 const server = new azure_nextgen.dbformysql.latest.Server("server", {
-    location: "westus",
+    location: "brazilsouth",
     resourceGroupName: "TargetResourceGroup",
     serverName: "targetserver",
     sku: {
-        capacity: 2,
-        family: "Gen5",
-        name: "GP_Gen5_2",
+        name: "Standard_D14_v2",
         tier: "GeneralPurpose",
     },
     tags: {
@@ -474,7 +337,7 @@ const server = new azure_nextgen.dbformysql.latest.Server("server", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/dbformysql/latest/#pulumi_azure-nextgen.dbformysql/latest.Server">Server</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ResourceIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Dict[ServerPropertiesForDefaultCreate] | Dict[ServerPropertiesForGeoRestore] | Dict[ServerPropertiesForReplica] | Dict[ServerPropertiesForRestore]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/dbformysql/latest/#pulumi_azure-nextgen.dbformysql/latest.Server">Server</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delegated_subnet_arguments</span><span class="p">:</span> <span class="nx">Optional[Dict[DelegatedSubnetArguments]]</span> = None<span class="p">, </span><span class="nx">ha_enabled</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[Identity]]</span> = None<span class="p">, </span><span class="nx">infrastructure_encryption</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[Dict[MaintenanceWindow]]</span> = None<span class="p">, </span><span class="nx">replication_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">source_server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_enforcement</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[StorageProfile]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -654,17 +517,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The location the resource resides in.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="properties_csharp">
-<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Latest.<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Latest.<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Latest.<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Replica<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Latest.<wbr>Inputs.<wbr>Server<wbr>Properties<wbr>For<wbr>Restore<wbr>Args&gt;&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}Properties of the server.{{% /md %}}</dd>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -688,13 +541,113 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="administratorlogin_csharp">
+<a href="#administratorlogin_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="administratorloginpassword_csharp">
+<a href="#administratorloginpassword_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The password of the administrator login (required for server creation).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availabilityzone_csharp">
+<a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}availability Zone information of the server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createmode_csharp">
+<a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The mode to create a new MySQL server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delegatedsubnetarguments_csharp">
+<a href="#delegatedsubnetarguments_csharp" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Subnet<wbr>Arguments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#delegatedsubnetarguments">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Latest.<wbr>Inputs.<wbr>Delegated<wbr>Subnet<wbr>Arguments<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Delegated subnet arguments.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="haenabled_csharp">
+<a href="#haenabled_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Enable HA or not for a server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Latest.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Latest.<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructureencryption_csharp">
+<a href="#infrastructureencryption_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maintenancewindow_csharp">
+<a href="#maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#maintenancewindow">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Latest.<wbr>Inputs.<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Maintenance window of a server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replicationrole_csharp">
+<a href="#replicationrole_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Role</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The replication role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="restorepointintime_csharp">
+<a href="#restorepointintime_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Restore point creation time (ISO8601 format), specifying the time to restore from.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -708,13 +661,53 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sourceserverid_csharp">
+<a href="#sourceserverid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Server<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source MySQL server id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslenforcement_csharp">
+<a href="#sslenforcement_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageprofile_csharp">
+<a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Latest.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Application-specific metadata in the form of key-value pairs.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -731,17 +724,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The location the resource resides in.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="properties_go">
-<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}Properties of the server.{{% /md %}}</dd>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -765,13 +748,113 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="administratorlogin_go">
+<a href="#administratorlogin_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="administratorloginpassword_go">
+<a href="#administratorloginpassword_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The password of the administrator login (required for server creation).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availabilityzone_go">
+<a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}availability Zone information of the server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createmode_go">
+<a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The mode to create a new MySQL server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delegatedsubnetarguments_go">
+<a href="#delegatedsubnetarguments_go" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Subnet<wbr>Arguments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#delegatedsubnetarguments">Delegated<wbr>Subnet<wbr>Arguments</a></span>
+    </dt>
+    <dd>{{% md %}}Delegated subnet arguments.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="haenabled_go">
+<a href="#haenabled_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Enable HA or not for a server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
+        <span class="property-type"><a href="#identity">Identity</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructureencryption_go">
+<a href="#infrastructureencryption_go" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maintenancewindow_go">
+<a href="#maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#maintenancewindow">Maintenance<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}Maintenance window of a server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replicationrole_go">
+<a href="#replicationrole_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Role</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The replication role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="restorepointintime_go">
+<a href="#restorepointintime_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Restore point creation time (ISO8601 format), specifying the time to restore from.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -785,13 +868,53 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sourceserverid_go">
+<a href="#sourceserverid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Server<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source MySQL server id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslenforcement_go">
+<a href="#sslenforcement_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageprofile_go">
+<a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Application-specific metadata in the form of key-value pairs.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -808,17 +931,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The location the resource resides in.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="properties_nodejs">
-<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create | Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore | Server<wbr>Properties<wbr>For<wbr>Replica | Server<wbr>Properties<wbr>For<wbr>Restore</span>
-    </dt>
-    <dd>{{% md %}}Properties of the server.{{% /md %}}</dd>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -842,13 +955,113 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="administratorlogin_nodejs">
+<a href="#administratorlogin_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="administratorloginpassword_nodejs">
+<a href="#administratorloginpassword_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The password of the administrator login (required for server creation).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availabilityzone_nodejs">
+<a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}availability Zone information of the server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createmode_nodejs">
+<a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The mode to create a new MySQL server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delegatedsubnetarguments_nodejs">
+<a href="#delegatedsubnetarguments_nodejs" style="color: inherit; text-decoration: inherit;">delegated<wbr>Subnet<wbr>Arguments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#delegatedsubnetarguments">Delegated<wbr>Subnet<wbr>Arguments</a></span>
+    </dt>
+    <dd>{{% md %}}Delegated subnet arguments.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="haenabled_nodejs">
+<a href="#haenabled_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Enable HA or not for a server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
+        <span class="property-type"><a href="#identity">Identity</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructureencryption_nodejs">
+<a href="#infrastructureencryption_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maintenancewindow_nodejs">
+<a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#maintenancewindow">Maintenance<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}Maintenance window of a server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replicationrole_nodejs">
+<a href="#replicationrole_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Role</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The replication role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="restorepointintime_nodejs">
+<a href="#restorepointintime_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Point<wbr>In<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Restore point creation time (ISO8601 format), specifying the time to restore from.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -862,13 +1075,53 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sourceserverid_nodejs">
+<a href="#sourceserverid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source MySQL server id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslenforcement_nodejs">
+<a href="#sslenforcement_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enforcement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageprofile_nodejs">
+<a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Application-specific metadata in the form of key-value pairs.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -885,17 +1138,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The location the resource resides in.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="properties_python">
-<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create] | Dict[Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore] | Dict[Server<wbr>Properties<wbr>For<wbr>Replica] | Dict[Server<wbr>Properties<wbr>For<wbr>Restore]</span>
-    </dt>
-    <dd>{{% md %}}Properties of the server.{{% /md %}}</dd>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -919,13 +1162,113 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="administrator_login_python">
+<a href="#administrator_login_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="administrator_login_password_python">
+<a href="#administrator_login_password_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login_<wbr>password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The password of the administrator login (required for server creation).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availability_zone_python">
+<a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}availability Zone information of the server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="create_mode_python">
+<a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The mode to create a new MySQL server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delegated_subnet_arguments_python">
+<a href="#delegated_subnet_arguments_python" style="color: inherit; text-decoration: inherit;">delegated_<wbr>subnet_<wbr>arguments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#delegatedsubnetarguments">Dict[Delegated<wbr>Subnet<wbr>Arguments]</a></span>
+    </dt>
+    <dd>{{% md %}}Delegated subnet arguments.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ha_enabled_python">
+<a href="#ha_enabled_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Enable HA or not for a server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Dict[Resource<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#identity">Dict[Identity]</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructure_encryption_python">
+<a href="#infrastructure_encryption_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>encryption</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maintenance_window_python">
+<a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#maintenancewindow">Dict[Maintenance<wbr>Window]</a></span>
+    </dt>
+    <dd>{{% md %}}Maintenance window of a server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replication_role_python">
+<a href="#replication_role_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>role</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The replication role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="restore_point_in_time_python">
+<a href="#restore_point_in_time_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>point_<wbr>in_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Restore point creation time (ISO8601 format), specifying the time to restore from.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -939,13 +1282,53 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="source_server_id_python">
+<a href="#source_server_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The source MySQL server id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssl_enforcement_python">
+<a href="#ssl_enforcement_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>enforcement</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_profile_python">
+<a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofile">Dict[Storage<wbr>Profile]</a></span>
+    </dt>
+    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}Application-specific metadata in the form of key-value pairs.{{% /md %}}</dd>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Server version.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -973,57 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Status showing whether the server data encryption is enabled with customer-managed keys.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="privateendpointconnections_csharp">
-<a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Latest.<wbr>Outputs.<wbr>Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of private endpoint connections on a server{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="administratorlogin_csharp">
-<a href="#administratorlogin_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).{{% /md %}}</dd>
+    <dd>{{% md %}}Status showing whether the data encryption is enabled with customer-managed keys.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1047,33 +1380,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="infrastructureencryption_csharp">
-<a href="#infrastructureencryption_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
+        <span id="hastate_csharp">
+<a href="#hastate_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
+    <dd>{{% md %}}The state of a HA server.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="masterserverid_csharp">
-<a href="#masterserverid_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Server<wbr>Id</a>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The master server id of a replica server.{{% /md %}}</dd>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="minimaltlsversion_csharp">
-<a href="#minimaltlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1093,57 +1426,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of replicas that a master server can have.{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of replicas that a primary server can have.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="replicationrole_csharp">
-<a href="#replicationrole_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Role</a>
+        <span id="standbyavailabilityzone_csharp">
+<a href="#standbyavailabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Standby<wbr>Availability<wbr>Zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The replication role of the server.{{% /md %}}</dd>
+    <dd>{{% md %}}availability Zone information of the server.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="sslenforcement_csharp">
-<a href="#sslenforcement_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
+    <dd>{{% md %}}The state of a server.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="storageprofile_csharp">
-<a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Latest.<wbr>Outputs.<wbr>Storage<wbr>Profile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="uservisiblestate_csharp">
-<a href="#uservisiblestate_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Visible<wbr>State</a>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A state of a server that is visible to user.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="version_csharp">
-<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1160,57 +1473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Status showing whether the server data encryption is enabled with customer-managed keys.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="privateendpointconnections_go">
-<a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivateendpointconnectionresponse">[]Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}List of private endpoint connections on a server{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="administratorlogin_go">
-<a href="#administratorlogin_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).{{% /md %}}</dd>
+    <dd>{{% md %}}Status showing whether the data encryption is enabled with customer-managed keys.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1234,33 +1497,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="infrastructureencryption_go">
-<a href="#infrastructureencryption_go" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
+        <span id="hastate_go">
+<a href="#hastate_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
+    <dd>{{% md %}}The state of a HA server.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="masterserverid_go">
-<a href="#masterserverid_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Server<wbr>Id</a>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The master server id of a replica server.{{% /md %}}</dd>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="minimaltlsversion_go">
-<a href="#minimaltlsversion_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1280,57 +1543,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of replicas that a master server can have.{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of replicas that a primary server can have.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="replicationrole_go">
-<a href="#replicationrole_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Role</a>
+        <span id="standbyavailabilityzone_go">
+<a href="#standbyavailabilityzone_go" style="color: inherit; text-decoration: inherit;">Standby<wbr>Availability<wbr>Zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The replication role of the server.{{% /md %}}</dd>
+    <dd>{{% md %}}availability Zone information of the server.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="sslenforcement_go">
-<a href="#sslenforcement_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
+    <dd>{{% md %}}The state of a server.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="storageprofile_go">
-<a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="uservisiblestate_go">
-<a href="#uservisiblestate_go" style="color: inherit; text-decoration: inherit;">User<wbr>Visible<wbr>State</a>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A state of a server that is visible to user.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="version_go">
-<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1347,57 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Status showing whether the server data encryption is enabled with customer-managed keys.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="privateendpointconnections_nodejs">
-<a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivateendpointconnectionresponse">Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of private endpoint connections on a server{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="administratorlogin_nodejs">
-<a href="#administratorlogin_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).{{% /md %}}</dd>
+    <dd>{{% md %}}Status showing whether the data encryption is enabled with customer-managed keys.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1421,33 +1614,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="infrastructureencryption_nodejs">
-<a href="#infrastructureencryption_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Encryption</a>
+        <span id="hastate_nodejs">
+<a href="#hastate_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
+    <dd>{{% md %}}The state of a HA server.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="masterserverid_nodejs">
-<a href="#masterserverid_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Server<wbr>Id</a>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The master server id of a replica server.{{% /md %}}</dd>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="minimaltlsversion_nodejs">
-<a href="#minimaltlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Tls<wbr>Version</a>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1467,57 +1660,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of replicas that a master server can have.{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of replicas that a primary server can have.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="replicationrole_nodejs">
-<a href="#replicationrole_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Role</a>
+        <span id="standbyavailabilityzone_nodejs">
+<a href="#standbyavailabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">standby<wbr>Availability<wbr>Zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The replication role of the server.{{% /md %}}</dd>
+    <dd>{{% md %}}availability Zone information of the server.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="sslenforcement_nodejs">
-<a href="#sslenforcement_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enforcement</a>
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
+    <dd>{{% md %}}The state of a server.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="storageprofile_nodejs">
-<a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="uservisiblestate_nodejs">
-<a href="#uservisiblestate_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Visible<wbr>State</a>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A state of a server that is visible to user.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="version_nodejs">
-<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1534,57 +1707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Status showing whether the server data encryption is enabled with customer-managed keys.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="private_endpoint_connections_python">
-<a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivateendpointconnectionresponse">List[Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}List of private endpoint connections on a server{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="administrator_login_python">
-<a href="#administrator_login_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).{{% /md %}}</dd>
+    <dd>{{% md %}}Status showing whether the data encryption is enabled with customer-managed keys.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1608,33 +1731,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="infrastructure_encryption_python">
-<a href="#infrastructure_encryption_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>encryption</a>
+        <span id="ha_state_python">
+<a href="#ha_state_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
+    <dd>{{% md %}}The state of a HA server.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="master_server_id_python">
-<a href="#master_server_id_python" style="color: inherit; text-decoration: inherit;">master_<wbr>server_<wbr>id</a>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The master server id of a replica server.{{% /md %}}</dd>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="minimal_tls_version_python">
-<a href="#minimal_tls_version_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>tls_<wbr>version</a>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1654,57 +1777,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of replicas that a master server can have.{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of replicas that a primary server can have.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="replication_role_python">
-<a href="#replication_role_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>role</a>
+        <span id="standby_availability_zone_python">
+<a href="#standby_availability_zone_python" style="color: inherit; text-decoration: inherit;">standby_<wbr>availability_<wbr>zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The replication role of the server.{{% /md %}}</dd>
+    <dd>{{% md %}}availability Zone information of the server.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="ssl_enforcement_python">
-<a href="#ssl_enforcement_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>enforcement</a>
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
+    <dd>{{% md %}}The state of a server.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span id="storage_profile_python">
-<a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Dict[Storage<wbr>Profile<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="user_visible_state_python">
-<a href="#user_visible_state_python" style="color: inherit; text-decoration: inherit;">user_<wbr>visible_<wbr>state</a>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A state of a server that is visible to user.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="version_python">
-<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1722,16 +1825,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
-<h4 id="privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</h4>
+<h4 id="delegatedsubnetarguments">Delegated<wbr>Subnet<wbr>Arguments</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#PrivateEndpointPropertyResponse">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#DelegatedSubnetArguments">input</a>   API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest?tab=doc#PrivateEndpointPropertyResponseOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest?tab=doc#DelegatedSubnetArgumentsArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DBforMySQL.Latest.Outputs.PrivateEndpointPropertyResponse.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DBforMySQL.Latest.Inputs.DelegatedSubnetArgumentsArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
 
 
@@ -1742,13 +1845,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+        <span id="subnetarmresourceid_csharp">
+<a href="#subnetarmresourceid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Arm<wbr>Resource<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the private endpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}delegated subnet arm resource id.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1759,13 +1862,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+        <span id="subnetarmresourceid_go">
+<a href="#subnetarmresourceid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Arm<wbr>Resource<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the private endpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}delegated subnet arm resource id.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1776,13 +1879,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+        <span id="subnetarmresourceid_nodejs">
+<a href="#subnetarmresourceid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Arm<wbr>Resource<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the private endpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}delegated subnet arm resource id.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1793,13 +1896,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+        <span id="subnet_arm_resource_id_python">
+<a href="#subnet_arm_resource_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>arm_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the private endpoint.{{% /md %}}</dd>
+    <dd>{{% md %}}delegated subnet arm resource id.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1808,16 +1911,102 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="resourceidentity">Resource<wbr>Identity</h4>
+<h4 id="delegatedsubnetargumentsresponse">Delegated<wbr>Subnet<wbr>Arguments<wbr>Response</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ResourceIdentity">input</a>   API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#DelegatedSubnetArgumentsResponse">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest?tab=doc#ResourceIdentityArgs">input</a>   API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest?tab=doc#DelegatedSubnetArgumentsResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DBforMySQL.Latest.Inputs.ResourceIdentityArgs.html">input</a>   API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DBforMySQL.Latest.Outputs.DelegatedSubnetArgumentsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnetarmresourceid_csharp">
+<a href="#subnetarmresourceid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}delegated subnet arm resource id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnetarmresourceid_go">
+<a href="#subnetarmresourceid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}delegated subnet arm resource id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnetarmresourceid_nodejs">
+<a href="#subnetarmresourceid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}delegated subnet arm resource id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_arm_resource_id_python">
+<a href="#subnet_arm_resource_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>arm_<wbr>resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}delegated subnet arm resource id.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="identity">Identity</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#Identity">input</a>   API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest?tab=doc#IdentityArgs">input</a>   API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DBforMySQL.Latest.Inputs.IdentityArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
 
 
@@ -1834,7 +2023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1851,7 +2040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1868,7 +2057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1885,7 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1894,16 +2083,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="resourceidentityresponse">Resource<wbr>Identity<wbr>Response</h4>
+<h4 id="identityresponse">Identity<wbr>Response</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ResourceIdentityResponse">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#IdentityResponse">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest?tab=doc#ResourceIdentityResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest?tab=doc#IdentityResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DBforMySQL.Latest.Outputs.ResourceIdentityResponse.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DBforMySQL.Latest.Outputs.IdentityResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1920,7 +2109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1930,7 +2119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1940,7 +2129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1957,7 +2146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1967,7 +2156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1977,7 +2166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1994,7 +2183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2004,7 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2014,7 +2203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2031,7 +2220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2041,7 +2230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2051,7 +2240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2060,16 +2249,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="serverprivateendpointconnectionpropertiesresponse">Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</h4>
+<h4 id="maintenancewindow">Maintenance<wbr>Window</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ServerPrivateEndpointConnectionPropertiesResponse">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#MaintenanceWindow">input</a>   API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest?tab=doc#ServerPrivateEndpointConnectionPropertiesResponseOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest?tab=doc#MaintenanceWindowArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DBforMySQL.Latest.Outputs.ServerPrivateEndpointConnectionPropertiesResponse.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DBforMySQL.Latest.Inputs.MaintenanceWindowArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
 
 
@@ -2078,35 +2267,45 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customwindow_csharp">
+<a href="#customwindow_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}State of the private endpoint connection.{{% /md %}}</dd>
+    <dd>{{% md %}}indicates whether custom window is enabled or disabled{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateendpoint_csharp">
-<a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
+        <span id="dayofweek_csharp">
+<a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Latest.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd>
+    <dd>{{% md %}}day of week for maintenance window{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privatelinkserviceconnectionstate_csharp">
-<a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+        <span id="starthour_csharp">
+<a href="#starthour_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Hour</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Latest.<wbr>Inputs.<wbr>Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd>
+    <dd>{{% md %}}start hour for maintenance window{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startminute_csharp">
+<a href="#startminute_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}start minute for maintenance window{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2115,35 +2314,45 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customwindow_go">
+<a href="#customwindow_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}State of the private endpoint connection.{{% /md %}}</dd>
+    <dd>{{% md %}}indicates whether custom window is enabled or disabled{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateendpoint_go">
-<a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
+        <span id="dayofweek_go">
+<a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd>
+    <dd>{{% md %}}day of week for maintenance window{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privatelinkserviceconnectionstate_go">
-<a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+        <span id="starthour_go">
+<a href="#starthour_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Hour</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd>
+    <dd>{{% md %}}start hour for maintenance window{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startminute_go">
+<a href="#startminute_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}start minute for maintenance window{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2152,35 +2361,45 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customwindow_nodejs">
+<a href="#customwindow_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}State of the private endpoint connection.{{% /md %}}</dd>
+    <dd>{{% md %}}indicates whether custom window is enabled or disabled{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateendpoint_nodejs">
-<a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
+        <span id="dayofweek_nodejs">
+<a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd>
+    <dd>{{% md %}}day of week for maintenance window{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privatelinkserviceconnectionstate_nodejs">
-<a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+        <span id="starthour_nodejs">
+<a href="#starthour_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Hour</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd>
+    <dd>{{% md %}}start hour for maintenance window{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startminute_nodejs">
+<a href="#startminute_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}start minute for maintenance window{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2189,35 +2408,45 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custom_window_python">
+<a href="#custom_window_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}State of the private endpoint connection.{{% /md %}}</dd>
+    <dd>{{% md %}}indicates whether custom window is enabled or disabled{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="private_endpoint_python">
-<a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
+        <span id="day_of_week_python">
+<a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Dict[Private<wbr>Endpoint<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd>
+    <dd>{{% md %}}day of week for maintenance window{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="private_link_service_connection_state_python">
-<a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
+        <span id="start_hour_python">
+<a href="#start_hour_python" style="color: inherit; text-decoration: inherit;">start_<wbr>hour</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Dict[Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd>
+    <dd>{{% md %}}start hour for maintenance window{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_minute_python">
+<a href="#start_minute_python" style="color: inherit; text-decoration: inherit;">start_<wbr>minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}start minute for maintenance window{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2226,16 +2455,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="serverprivateendpointconnectionresponse">Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
+<h4 id="maintenancewindowresponse">Maintenance<wbr>Window<wbr>Response</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ServerPrivateEndpointConnectionResponse">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#MaintenanceWindowResponse">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest?tab=doc#ServerPrivateEndpointConnectionResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest?tab=doc#MaintenanceWindowResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DBforMySQL.Latest.Outputs.ServerPrivateEndpointConnectionResponse.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DBforMySQL.Latest.Outputs.MaintenanceWindowResponse.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2244,25 +2473,45 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customwindow_csharp">
+<a href="#customwindow_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id of the private endpoint connection.{{% /md %}}</dd>
+    <dd>{{% md %}}indicates whether custom window is enabled or disabled{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="properties_csharp">
-<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dayofweek_csharp">
+<a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Latest.<wbr>Inputs.<wbr>Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd>
+    <dd>{{% md %}}day of week for maintenance window{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starthour_csharp">
+<a href="#starthour_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Hour</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}start hour for maintenance window{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startminute_csharp">
+<a href="#startminute_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}start minute for maintenance window{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2271,25 +2520,45 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customwindow_go">
+<a href="#customwindow_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id of the private endpoint connection.{{% /md %}}</dd>
+    <dd>{{% md %}}indicates whether custom window is enabled or disabled{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="properties_go">
-<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dayofweek_go">
+<a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd>
+    <dd>{{% md %}}day of week for maintenance window{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starthour_go">
+<a href="#starthour_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Hour</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}start hour for maintenance window{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startminute_go">
+<a href="#startminute_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}start minute for maintenance window{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2298,25 +2567,45 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customwindow_nodejs">
+<a href="#customwindow_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id of the private endpoint connection.{{% /md %}}</dd>
+    <dd>{{% md %}}indicates whether custom window is enabled or disabled{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="properties_nodejs">
-<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dayofweek_nodejs">
+<a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd>
+    <dd>{{% md %}}day of week for maintenance window{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starthour_nodejs">
+<a href="#starthour_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Hour</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}start hour for maintenance window{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startminute_nodejs">
+<a href="#startminute_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Minute</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}start minute for maintenance window{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2325,1575 +2614,45 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custom_window_python">
+<a href="#custom_window_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>window</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource Id of the private endpoint connection.{{% /md %}}</dd>
+    <dd>{{% md %}}indicates whether custom window is enabled or disabled{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="properties_python">
-<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Dict[Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="serverprivatelinkserviceconnectionstatepropertyresponse">Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ServerPrivateLinkServiceConnectionStatePropertyResponse">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest?tab=doc#ServerPrivateLinkServiceConnectionStatePropertyResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DBforMySQL.Latest.Outputs.ServerPrivateLinkServiceConnectionStatePropertyResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="actionsrequired_csharp">
-<a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The actions required for private link service connection.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="actionsrequired_go">
-<a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The actions required for private link service connection.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="actionsrequired_nodejs">
-<a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The actions required for private link service connection.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="actions_required_python">
-<a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The actions required for private link service connection.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="serverpropertiesfordefaultcreate">Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ServerPropertiesForDefaultCreate">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest?tab=doc#ServerPropertiesForDefaultCreateArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DBforMySQL.Latest.Inputs.ServerPropertiesForDefaultCreateArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="administratorlogin_csharp">
-<a href="#administratorlogin_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="administratorloginpassword_csharp">
-<a href="#administratorloginpassword_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The password of the administrator login.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="infrastructureencryption_csharp">
-<a href="#infrastructureencryption_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="minimaltlsversion_csharp">
-<a href="#minimaltlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_csharp">
-<a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sslenforcement_csharp">
-<a href="#sslenforcement_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storageprofile_csharp">
-<a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Latest.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="version_csharp">
-<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="administratorlogin_go">
-<a href="#administratorlogin_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="administratorloginpassword_go">
-<a href="#administratorloginpassword_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The password of the administrator login.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="infrastructureencryption_go">
-<a href="#infrastructureencryption_go" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="minimaltlsversion_go">
-<a href="#minimaltlsversion_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_go">
-<a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sslenforcement_go">
-<a href="#sslenforcement_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storageprofile_go">
-<a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="version_go">
-<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="administratorlogin_nodejs">
-<a href="#administratorlogin_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="administratorloginpassword_nodejs">
-<a href="#administratorloginpassword_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login<wbr>Password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The password of the administrator login.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="infrastructureencryption_nodejs">
-<a href="#infrastructureencryption_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="minimaltlsversion_nodejs">
-<a href="#minimaltlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Tls<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_nodejs">
-<a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sslenforcement_nodejs">
-<a href="#sslenforcement_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enforcement</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storageprofile_nodejs">
-<a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="version_nodejs">
-<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="administrator_login_python">
-<a href="#administrator_login_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="administrator_login_password_python">
-<a href="#administrator_login_password_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login_<wbr>password</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The password of the administrator login.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="infrastructure_encryption_python">
-<a href="#infrastructure_encryption_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="minimal_tls_version_python">
-<a href="#minimal_tls_version_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>tls_<wbr>version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="public_network_access_python">
-<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ssl_enforcement_python">
-<a href="#ssl_enforcement_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>enforcement</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storage_profile_python">
-<a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Dict[Storage<wbr>Profile]</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="version_python">
-<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="serverpropertiesforgeorestore">Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ServerPropertiesForGeoRestore">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest?tab=doc#ServerPropertiesForGeoRestoreArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DBforMySQL.Latest.Inputs.ServerPropertiesForGeoRestoreArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="sourceserverid_csharp">
-<a href="#sourceserverid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Server<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="infrastructureencryption_csharp">
-<a href="#infrastructureencryption_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="minimaltlsversion_csharp">
-<a href="#minimaltlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_csharp">
-<a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sslenforcement_csharp">
-<a href="#sslenforcement_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storageprofile_csharp">
-<a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Latest.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="version_csharp">
-<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="sourceserverid_go">
-<a href="#sourceserverid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Server<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="infrastructureencryption_go">
-<a href="#infrastructureencryption_go" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="minimaltlsversion_go">
-<a href="#minimaltlsversion_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_go">
-<a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sslenforcement_go">
-<a href="#sslenforcement_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storageprofile_go">
-<a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="version_go">
-<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="sourceserverid_nodejs">
-<a href="#sourceserverid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="infrastructureencryption_nodejs">
-<a href="#infrastructureencryption_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="minimaltlsversion_nodejs">
-<a href="#minimaltlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Tls<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_nodejs">
-<a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sslenforcement_nodejs">
-<a href="#sslenforcement_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enforcement</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storageprofile_nodejs">
-<a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="version_nodejs">
-<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="source_server_id_python">
-<a href="#source_server_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="infrastructure_encryption_python">
-<a href="#infrastructure_encryption_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="minimal_tls_version_python">
-<a href="#minimal_tls_version_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>tls_<wbr>version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="public_network_access_python">
-<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ssl_enforcement_python">
-<a href="#ssl_enforcement_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>enforcement</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storage_profile_python">
-<a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Dict[Storage<wbr>Profile]</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="version_python">
-<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="serverpropertiesforreplica">Server<wbr>Properties<wbr>For<wbr>Replica</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ServerPropertiesForReplica">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest?tab=doc#ServerPropertiesForReplicaArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DBforMySQL.Latest.Inputs.ServerPropertiesForReplicaArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="sourceserverid_csharp">
-<a href="#sourceserverid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Server<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The master server id to create replica from.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="infrastructureencryption_csharp">
-<a href="#infrastructureencryption_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="minimaltlsversion_csharp">
-<a href="#minimaltlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_csharp">
-<a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sslenforcement_csharp">
-<a href="#sslenforcement_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storageprofile_csharp">
-<a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Latest.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="version_csharp">
-<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="sourceserverid_go">
-<a href="#sourceserverid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Server<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The master server id to create replica from.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="infrastructureencryption_go">
-<a href="#infrastructureencryption_go" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="minimaltlsversion_go">
-<a href="#minimaltlsversion_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_go">
-<a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sslenforcement_go">
-<a href="#sslenforcement_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storageprofile_go">
-<a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="version_go">
-<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="sourceserverid_nodejs">
-<a href="#sourceserverid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The master server id to create replica from.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="infrastructureencryption_nodejs">
-<a href="#infrastructureencryption_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="minimaltlsversion_nodejs">
-<a href="#minimaltlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Tls<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_nodejs">
-<a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sslenforcement_nodejs">
-<a href="#sslenforcement_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enforcement</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storageprofile_nodejs">
-<a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="version_nodejs">
-<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="source_server_id_python">
-<a href="#source_server_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The master server id to create replica from.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="infrastructure_encryption_python">
-<a href="#infrastructure_encryption_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="minimal_tls_version_python">
-<a href="#minimal_tls_version_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>tls_<wbr>version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="public_network_access_python">
-<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ssl_enforcement_python">
-<a href="#ssl_enforcement_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>enforcement</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storage_profile_python">
-<a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Dict[Storage<wbr>Profile]</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="version_python">
-<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="serverpropertiesforrestore">Server<wbr>Properties<wbr>For<wbr>Restore</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ServerPropertiesForRestore">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbformysql/latest?tab=doc#ServerPropertiesForRestoreArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DBforMySQL.Latest.Inputs.ServerPropertiesForRestoreArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="restorepointintime_csharp">
-<a href="#restorepointintime_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Restore point creation time (ISO8601 format), specifying the time to restore from.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="sourceserverid_csharp">
-<a href="#sourceserverid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Server<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="infrastructureencryption_csharp">
-<a href="#infrastructureencryption_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="minimaltlsversion_csharp">
-<a href="#minimaltlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_csharp">
-<a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sslenforcement_csharp">
-<a href="#sslenforcement_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storageprofile_csharp">
-<a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>DBfor<wbr>My<wbr>SQL.<wbr>Latest.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="version_csharp">
-<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="restorepointintime_go">
-<a href="#restorepointintime_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Restore point creation time (ISO8601 format), specifying the time to restore from.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="sourceserverid_go">
-<a href="#sourceserverid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Server<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="infrastructureencryption_go">
-<a href="#infrastructureencryption_go" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="minimaltlsversion_go">
-<a href="#minimaltlsversion_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_go">
-<a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sslenforcement_go">
-<a href="#sslenforcement_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storageprofile_go">
-<a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="version_go">
-<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="restorepointintime_nodejs">
-<a href="#restorepointintime_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Point<wbr>In<wbr>Time</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Restore point creation time (ISO8601 format), specifying the time to restore from.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="sourceserverid_nodejs">
-<a href="#sourceserverid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="infrastructureencryption_nodejs">
-<a href="#infrastructureencryption_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="minimaltlsversion_nodejs">
-<a href="#minimaltlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Tls<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_nodejs">
-<a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sslenforcement_nodejs">
-<a href="#sslenforcement_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enforcement</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="storageprofile_nodejs">
-<a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
-    </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="version_nodejs">
-<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="restore_point_in_time_python">
-<a href="#restore_point_in_time_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>point_<wbr>in_<wbr>time</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Restore point creation time (ISO8601 format), specifying the time to restore from.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="source_server_id_python">
-<a href="#source_server_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="infrastructure_encryption_python">
-<a href="#infrastructure_encryption_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>encryption</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Status showing whether the server enabled infrastructure encryption.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="minimal_tls_version_python">
-<a href="#minimal_tls_version_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>tls_<wbr>version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="public_network_access_python">
-<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ssl_enforcement_python">
-<a href="#ssl_enforcement_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>enforcement</a>
+        <span id="day_of_week_python">
+<a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd>
+    <dd>{{% md %}}day of week for maintenance window{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storage_profile_python">
-<a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
+        <span id="start_hour_python">
+<a href="#start_hour_python" style="color: inherit; text-decoration: inherit;">start_<wbr>hour</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Dict[Storage<wbr>Profile]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd>
+    <dd>{{% md %}}start hour for maintenance window{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="version_python">
-<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+        <span id="start_minute_python">
+<a href="#start_minute_python" style="color: inherit; text-decoration: inherit;">start_<wbr>minute</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Server version.{{% /md %}}</dd>
+    <dd>{{% md %}}start minute for maintenance window{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3928,47 +2687,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the sku, e.g. Standard_D32s_v3.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_csharp">
-<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}The scale up/out capacity, representing server's compute units.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_csharp">
-<a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The family of hardware.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_csharp">
-<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The size code, to be interpreted by resource as appropriate.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The tier of the particular SKU, e.g. Basic.{{% /md %}}</dd>
+    <dd>{{% md %}}The tier of the particular SKU, e.g. GeneralPurpose.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3985,47 +2714,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the sku, e.g. Standard_D32s_v3.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_go">
-<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}The scale up/out capacity, representing server's compute units.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_go">
-<a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The family of hardware.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_go">
-<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The size code, to be interpreted by resource as appropriate.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The tier of the particular SKU, e.g. Basic.{{% /md %}}</dd>
+    <dd>{{% md %}}The tier of the particular SKU, e.g. GeneralPurpose.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4042,47 +2741,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the sku, e.g. Standard_D32s_v3.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_nodejs">
-<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}The scale up/out capacity, representing server's compute units.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_nodejs">
-<a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The family of hardware.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_nodejs">
-<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The size code, to be interpreted by resource as appropriate.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The tier of the particular SKU, e.g. Basic.{{% /md %}}</dd>
+    <dd>{{% md %}}The tier of the particular SKU, e.g. GeneralPurpose.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4099,47 +2768,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the sku, e.g. Standard_D32s_v3.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_python">
-<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}The scale up/out capacity, representing server's compute units.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_python">
-<a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The family of hardware.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_python">
-<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The size code, to be interpreted by resource as appropriate.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The tier of the particular SKU, e.g. Basic.{{% /md %}}</dd>
+    <dd>{{% md %}}The tier of the particular SKU, e.g. GeneralPurpose.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4174,47 +2813,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the sku, e.g. Standard_D32s_v3.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_csharp">
-<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}The scale up/out capacity, representing server's compute units.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_csharp">
-<a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The family of hardware.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_csharp">
-<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The size code, to be interpreted by resource as appropriate.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The tier of the particular SKU, e.g. Basic.{{% /md %}}</dd>
+    <dd>{{% md %}}The tier of the particular SKU, e.g. GeneralPurpose.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4231,47 +2840,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the sku, e.g. Standard_D32s_v3.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_go">
-<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}The scale up/out capacity, representing server's compute units.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_go">
-<a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The family of hardware.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_go">
-<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The size code, to be interpreted by resource as appropriate.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The tier of the particular SKU, e.g. Basic.{{% /md %}}</dd>
+    <dd>{{% md %}}The tier of the particular SKU, e.g. GeneralPurpose.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4288,47 +2867,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the sku, e.g. Standard_D32s_v3.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_nodejs">
-<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}The scale up/out capacity, representing server's compute units.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_nodejs">
-<a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The family of hardware.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_nodejs">
-<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The size code, to be interpreted by resource as appropriate.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The tier of the particular SKU, e.g. Basic.{{% /md %}}</dd>
+    <dd>{{% md %}}The tier of the particular SKU, e.g. GeneralPurpose.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4345,47 +2894,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the sku, e.g. Standard_D32s_v3.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_python">
-<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}The scale up/out capacity, representing server's compute units.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_python">
-<a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The family of hardware.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_python">
-<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The size code, to be interpreted by resource as appropriate.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The tier of the particular SKU, e.g. Basic.{{% /md %}}</dd>
+    <dd>{{% md %}}The tier of the particular SKU, e.g. GeneralPurpose.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4424,16 +2943,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="georedundantbackup_csharp">
-<a href="#georedundantbackup_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Redundant<wbr>Backup</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enable Geo-redundant or not for server backup.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="storageautogrow_csharp">
 <a href="#storageautogrow_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Autogrow</a>
 </span> 
@@ -4441,6 +2950,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Enable Storage Auto Grow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageiops_csharp">
+<a href="#storageiops_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Storage IOPS for a server.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4471,16 +2990,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="georedundantbackup_go">
-<a href="#georedundantbackup_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Redundant<wbr>Backup</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enable Geo-redundant or not for server backup.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="storageautogrow_go">
 <a href="#storageautogrow_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Autogrow</a>
 </span> 
@@ -4488,6 +2997,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Enable Storage Auto Grow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageiops_go">
+<a href="#storageiops_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Storage IOPS for a server.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4518,16 +3037,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="georedundantbackup_nodejs">
-<a href="#georedundantbackup_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Redundant<wbr>Backup</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enable Geo-redundant or not for server backup.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="storageautogrow_nodejs">
 <a href="#storageautogrow_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Autogrow</a>
 </span> 
@@ -4535,6 +3044,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Enable Storage Auto Grow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageiops_nodejs">
+<a href="#storageiops_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Storage IOPS for a server.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4565,16 +3084,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="geo_redundant_backup_python">
-<a href="#geo_redundant_backup_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>redundant_<wbr>backup</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Enable Geo-redundant or not for server backup.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="storage_autogrow_python">
 <a href="#storage_autogrow_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>autogrow</a>
 </span> 
@@ -4582,6 +3091,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Enable Storage Auto Grow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_iops_python">
+<a href="#storage_iops_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Storage IOPS for a server.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4630,16 +3149,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="georedundantbackup_csharp">
-<a href="#georedundantbackup_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Redundant<wbr>Backup</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enable Geo-redundant or not for server backup.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="storageautogrow_csharp">
 <a href="#storageautogrow_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Autogrow</a>
 </span> 
@@ -4647,6 +3156,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Enable Storage Auto Grow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageiops_csharp">
+<a href="#storageiops_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Storage IOPS for a server.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4677,16 +3196,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="georedundantbackup_go">
-<a href="#georedundantbackup_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Redundant<wbr>Backup</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enable Geo-redundant or not for server backup.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="storageautogrow_go">
 <a href="#storageautogrow_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Autogrow</a>
 </span> 
@@ -4694,6 +3203,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Enable Storage Auto Grow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageiops_go">
+<a href="#storageiops_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Storage IOPS for a server.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4724,16 +3243,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="georedundantbackup_nodejs">
-<a href="#georedundantbackup_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Redundant<wbr>Backup</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Enable Geo-redundant or not for server backup.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="storageautogrow_nodejs">
 <a href="#storageautogrow_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Autogrow</a>
 </span> 
@@ -4741,6 +3250,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Enable Storage Auto Grow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageiops_nodejs">
+<a href="#storageiops_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Storage IOPS for a server.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4771,16 +3290,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="geo_redundant_backup_python">
-<a href="#geo_redundant_backup_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>redundant_<wbr>backup</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Enable Geo-redundant or not for server backup.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="storage_autogrow_python">
 <a href="#storage_autogrow_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>autogrow</a>
 </span> 
@@ -4788,6 +3297,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Enable Storage Auto Grow.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_iops_python">
+<a href="#storage_iops_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Storage IOPS for a server.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

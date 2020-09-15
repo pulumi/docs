@@ -12,23 +12,37 @@ Explore the resources and functions of the security/latest module in the Azure N
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="adaptiveapplicationcontrol" title="AdaptiveApplicationControl"><span class="symbol resource"></span>AdaptiveApplicationControl</a></li>
+    <li><a href="alertssuppressionrule" title="AlertsSuppressionRule"><span class="symbol resource"></span>AlertsSuppressionRule</a></li>
     <li><a href="assessment" title="Assessment"><span class="symbol resource"></span>Assessment</a></li>
     <li><a href="assessmentmetadatainsubscription" title="AssessmentMetadataInSubscription"><span class="symbol resource"></span>AssessmentMetadataInSubscription</a></li>
+    <li><a href="automation" title="Automation"><span class="symbol resource"></span>Automation</a></li>
+    <li><a href="connector" title="Connector"><span class="symbol resource"></span>Connector</a></li>
     <li><a href="devicesecuritygroup" title="DeviceSecurityGroup"><span class="symbol resource"></span>DeviceSecurityGroup</a></li>
+    <li><a href="iotdefendersetting" title="IotDefenderSetting"><span class="symbol resource"></span>IotDefenderSetting</a></li>
     <li><a href="iotsecuritysolution" title="IotSecuritySolution"><span class="symbol resource"></span>IotSecuritySolution</a></li>
+    <li><a href="iotsensor" title="IotSensor"><span class="symbol resource"></span>IotSensor</a></li>
     <li><a href="jitnetworkaccesspolicy" title="JitNetworkAccessPolicy"><span class="symbol resource"></span>JitNetworkAccessPolicy</a></li>
+    <li><a href="securitycontact" title="SecurityContact"><span class="symbol resource"></span>SecurityContact</a></li>
     <li><a href="servervulnerabilityassessment" title="ServerVulnerabilityAssessment"><span class="symbol resource"></span>ServerVulnerabilityAssessment</a></li>
+    <li><a href="workspacesetting" title="WorkspaceSetting"><span class="symbol resource"></span>WorkspaceSetting</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getadaptiveapplicationcontrol" title="GetAdaptiveApplicationControl"><span class="symbol function"></span>GetAdaptiveApplicationControl</a></li>
+    <li><a href="getalertssuppressionrule" title="GetAlertsSuppressionRule"><span class="symbol function"></span>GetAlertsSuppressionRule</a></li>
     <li><a href="getassessment" title="GetAssessment"><span class="symbol function"></span>GetAssessment</a></li>
     <li><a href="getassessmentmetadatainsubscription" title="GetAssessmentMetadataInSubscription"><span class="symbol function"></span>GetAssessmentMetadataInSubscription</a></li>
+    <li><a href="getautomation" title="GetAutomation"><span class="symbol function"></span>GetAutomation</a></li>
+    <li><a href="getconnector" title="GetConnector"><span class="symbol function"></span>GetConnector</a></li>
     <li><a href="getdevicesecuritygroup" title="GetDeviceSecurityGroup"><span class="symbol function"></span>GetDeviceSecurityGroup</a></li>
+    <li><a href="getiotdefendersetting" title="GetIotDefenderSetting"><span class="symbol function"></span>GetIotDefenderSetting</a></li>
     <li><a href="getiotsecuritysolution" title="GetIotSecuritySolution"><span class="symbol function"></span>GetIotSecuritySolution</a></li>
+    <li><a href="getiotsensor" title="GetIotSensor"><span class="symbol function"></span>GetIotSensor</a></li>
     <li><a href="getjitnetworkaccesspolicy" title="GetJitNetworkAccessPolicy"><span class="symbol function"></span>GetJitNetworkAccessPolicy</a></li>
+    <li><a href="getsecuritycontact" title="GetSecurityContact"><span class="symbol function"></span>GetSecurityContact</a></li>
     <li><a href="getservervulnerabilityassessment" title="GetServerVulnerabilityAssessment"><span class="symbol function"></span>GetServerVulnerabilityAssessment</a></li>
+    <li><a href="getworkspacesetting" title="GetWorkspaceSetting"><span class="symbol function"></span>GetWorkspaceSetting</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

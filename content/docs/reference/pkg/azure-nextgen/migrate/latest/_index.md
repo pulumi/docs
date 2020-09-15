@@ -14,7 +14,11 @@ Explore the resources and functions of the migrate/latest module in the Azure Ne
     <li><a href="assessment" title="Assessment"><span class="symbol resource"></span>Assessment</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="hypervcollector" title="HyperVCollector"><span class="symbol resource"></span>HyperVCollector</a></li>
+    <li><a href="migrateproject" title="MigrateProject"><span class="symbol resource"></span>MigrateProject</a></li>
+    <li><a href="movecollection" title="MoveCollection"><span class="symbol resource"></span>MoveCollection</a></li>
+    <li><a href="moveresource" title="MoveResource"><span class="symbol resource"></span>MoveResource</a></li>
     <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
+    <li><a href="solution" title="Solution"><span class="symbol resource"></span>Solution</a></li>
     <li><a href="vmwarecollector" title="VMwareCollector"><span class="symbol resource"></span>VMwareCollector</a></li>
 </ul>
 
@@ -23,7 +27,11 @@ Explore the resources and functions of the migrate/latest module in the Azure Ne
     <li><a href="getassessment" title="GetAssessment"><span class="symbol function"></span>GetAssessment</a></li>
     <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
     <li><a href="gethypervcollector" title="GetHyperVCollector"><span class="symbol function"></span>GetHyperVCollector</a></li>
+    <li><a href="getmigrateproject" title="GetMigrateProject"><span class="symbol function"></span>GetMigrateProject</a></li>
+    <li><a href="getmovecollection" title="GetMoveCollection"><span class="symbol function"></span>GetMoveCollection</a></li>
+    <li><a href="getmoveresource" title="GetMoveResource"><span class="symbol function"></span>GetMoveResource</a></li>
     <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
+    <li><a href="getsolution" title="GetSolution"><span class="symbol function"></span>GetSolution</a></li>
     <li><a href="getvmwarecollector" title="GetVMwareCollector"><span class="symbol function"></span>GetVMwareCollector</a></li>
 </ul>
 

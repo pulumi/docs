@@ -24,6 +24,7 @@ Explore the resources and functions of the logic/latest module in the Azure Next
     <li><a href="integrationserviceenvironmentmanagedapi" title="IntegrationServiceEnvironmentManagedApi"><span class="symbol resource"></span>IntegrationServiceEnvironmentManagedApi</a></li>
     <li><a href="rosettanetprocessconfiguration" title="RosettaNetProcessConfiguration"><span class="symbol resource"></span>RosettaNetProcessConfiguration</a></li>
     <li><a href="workflow" title="Workflow"><span class="symbol resource"></span>Workflow</a></li>
+    <li><a href="workflowaccesskey" title="WorkflowAccessKey"><span class="symbol resource"></span>WorkflowAccessKey</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -41,6 +42,7 @@ Explore the resources and functions of the logic/latest module in the Azure Next
     <li><a href="getintegrationserviceenvironmentmanagedapi" title="GetIntegrationServiceEnvironmentManagedApi"><span class="symbol function"></span>GetIntegrationServiceEnvironmentManagedApi</a></li>
     <li><a href="getrosettanetprocessconfiguration" title="GetRosettaNetProcessConfiguration"><span class="symbol function"></span>GetRosettaNetProcessConfiguration</a></li>
     <li><a href="getworkflow" title="GetWorkflow"><span class="symbol function"></span>GetWorkflow</a></li>
+    <li><a href="getworkflowaccesskey" title="GetWorkflowAccessKey"><span class="symbol function"></span>GetWorkflowAccessKey</a></li>
     <li><a href="listintegrationaccountagreementcontentcallbackurl" title="ListIntegrationAccountAgreementContentCallbackUrl"><span class="symbol function"></span>ListIntegrationAccountAgreementContentCallbackUrl</a></li>
     <li><a href="listintegrationaccountassemblycontentcallbackurl" title="ListIntegrationAccountAssemblyContentCallbackUrl"><span class="symbol function"></span>ListIntegrationAccountAssemblyContentCallbackUrl</a></li>
     <li><a href="listintegrationaccountcallbackurl" title="ListIntegrationAccountCallbackUrl"><span class="symbol function"></span>ListIntegrationAccountCallbackUrl</a></li>
@@ -48,6 +50,7 @@ Explore the resources and functions of the logic/latest module in the Azure Next
     <li><a href="listintegrationaccountmapcontentcallbackurl" title="ListIntegrationAccountMapContentCallbackUrl"><span class="symbol function"></span>ListIntegrationAccountMapContentCallbackUrl</a></li>
     <li><a href="listintegrationaccountpartnercontentcallbackurl" title="ListIntegrationAccountPartnerContentCallbackUrl"><span class="symbol function"></span>ListIntegrationAccountPartnerContentCallbackUrl</a></li>
     <li><a href="listintegrationaccountschemacontentcallbackurl" title="ListIntegrationAccountSchemaContentCallbackUrl"><span class="symbol function"></span>ListIntegrationAccountSchemaContentCallbackUrl</a></li>
+    <li><a href="listworkflowaccesskeysecretkeys" title="ListWorkflowAccessKeySecretKeys"><span class="symbol function"></span>ListWorkflowAccessKeySecretKeys</a></li>
     <li><a href="listworkflowcallbackurl" title="ListWorkflowCallbackUrl"><span class="symbol function"></span>ListWorkflowCallbackUrl</a></li>
     <li><a href="listworkflowrunactionexpressiontraces" title="ListWorkflowRunActionExpressionTraces"><span class="symbol function"></span>ListWorkflowRunActionExpressionTraces</a></li>
     <li><a href="listworkflowrunactionrepetitionexpressiontraces" title="ListWorkflowRunActionRepetitionExpressionTraces"><span class="symbol function"></span>ListWorkflowRunActionRepetitionExpressionTraces</a></li>

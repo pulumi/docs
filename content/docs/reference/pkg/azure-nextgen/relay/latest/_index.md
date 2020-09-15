@@ -15,6 +15,7 @@ Explore the resources and functions of the relay/latest module in the Azure Next
     <li><a href="hybridconnectionauthorizationrule" title="HybridConnectionAuthorizationRule"><span class="symbol resource"></span>HybridConnectionAuthorizationRule</a></li>
     <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
     <li><a href="namespaceauthorizationrule" title="NamespaceAuthorizationRule"><span class="symbol resource"></span>NamespaceAuthorizationRule</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="wcfrelay" title="WCFRelay"><span class="symbol resource"></span>WCFRelay</a></li>
     <li><a href="wcfrelayauthorizationrule" title="WCFRelayAuthorizationRule"><span class="symbol resource"></span>WCFRelayAuthorizationRule</a></li>
 </ul>
@@ -25,6 +26,7 @@ Explore the resources and functions of the relay/latest module in the Azure Next
     <li><a href="gethybridconnectionauthorizationrule" title="GetHybridConnectionAuthorizationRule"><span class="symbol function"></span>GetHybridConnectionAuthorizationRule</a></li>
     <li><a href="getnamespace" title="GetNamespace"><span class="symbol function"></span>GetNamespace</a></li>
     <li><a href="getnamespaceauthorizationrule" title="GetNamespaceAuthorizationRule"><span class="symbol function"></span>GetNamespaceAuthorizationRule</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getwcfrelay" title="GetWCFRelay"><span class="symbol function"></span>GetWCFRelay</a></li>
     <li><a href="getwcfrelayauthorizationrule" title="GetWCFRelayAuthorizationRule"><span class="symbol function"></span>GetWCFRelayAuthorizationRule</a></li>
     <li><a href="listhybridconnectionkeys" title="ListHybridConnectionKeys"><span class="symbol function"></span>ListHybridConnectionKeys</a></li>

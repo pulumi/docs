@@ -94,6 +94,7 @@ Explore the resources and functions of the web/latest module in the Azure NextGe
     <li><a href="getwebappvnetconnectionslot" title="GetWebAppVnetConnectionSlot"><span class="symbol function"></span>GetWebAppVnetConnectionSlot</a></li>
     <li><a href="listappserviceplanhybridconnectionkeys" title="ListAppServicePlanHybridConnectionKeys"><span class="symbol function"></span>ListAppServicePlanHybridConnectionKeys</a></li>
     <li><a href="listconnectionconsentlinks" title="ListConnectionConsentLinks"><span class="symbol function"></span>ListConnectionConsentLinks</a></li>
+    <li><a href="listconnectionkeys" title="ListConnectionKeys"><span class="symbol function"></span>ListConnectionKeys</a></li>
     <li><a href="listcustomapiwsdlinterfaces" title="ListCustomApiWsdlInterfaces"><span class="symbol function"></span>ListCustomApiWsdlInterfaces</a></li>
     <li><a href="listsiteidentifiersassignedtohostname" title="ListSiteIdentifiersAssignedToHostName"><span class="symbol function"></span>ListSiteIdentifiersAssignedToHostName</a></li>
     <li><a href="liststaticsitebuildfunctionappsettings" title="ListStaticSiteBuildFunctionAppSettings"><span class="symbol function"></span>ListStaticSiteBuildFunctionAppSettings</a></li>

@@ -17,7 +17,7 @@ ABSOLUTEPACKDIR="$(pwd)/content/docs/reference/pkg"
 TOOL_RESDOCGEN="./tools/resourcedocsgen/"
 
 PROVIDERS=(
-    "azurerm"
+    "azure-nextgen"
 )
 
 echo "Generating docs templates bundle in pulumi/pulumi"
@@ -28,30 +28,13 @@ popd
 generate_docs() {
     provider=$1
 
-    echo -e "\033[0;95m--- Updating repo pulumi/pulumi-${provider} ---\033[0m"
-    pushd "../pulumi-${provider}"
-    git fetch --tags
-
-    plugin_version=$(git describe --tags "$(git rev-list --max-count=1 --tags --not --tags='*-dev')")
-    # If a plugin version was passed, then use that.
-    # The provider repo will also be checked out at that version below.
-    if [ -n "${INSTALL_RESOURCE_PLUGIN_VERSION:-}" ]; then
-        plugin_version=${INSTALL_RESOURCE_PLUGIN_VERSION}
-    elif [[ ${plugin_version} = sdk* ]]; then
-        plugin_version=${plugin_version:4}
-    elif [[ ${plugin_version} = provider* ]]; then
-        plugin_version=${plugin_version:9}
-    fi
-
-    echo -e "\033[0;93mCheckout pulumi/pulumi-${provider} at tag $plugin_version\033[0m"
-    git -c advice.detachedHead=false checkout "$plugin_version" >/dev/null
-
-    # Go back to the docs repo.
-    popd
+    plugin_version="0.1.0"
 
     EXISTING_SCHEMA_FILE="../pulumi-${provider}/provider/cmd/pulumi-resource-${provider}/schema.json"
     if [ "$provider" = "kubernetes" ]; then
         EXISTING_SCHEMA_FILE="../pulumi-kubernetes/sdk/schema/schema.json"
+    elif [ "$provider" = "azure-nextgen" ]; then
+        EXISTING_SCHEMA_FILE="../pulumi-azurerm/provider/cmd/pulumi-resource-azure-nextgen/schema.json"
     fi
 
     # Use a previously generated schema.json file if it exists.

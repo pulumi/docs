@@ -11,12 +11,14 @@ Explore the resources and functions of the machinelearning/latest module in the 
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="commitmentplan" title="CommitmentPlan"><span class="symbol resource"></span>CommitmentPlan</a></li>
     <li><a href="webservice" title="WebService"><span class="symbol resource"></span>WebService</a></li>
     <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getcommitmentplan" title="GetCommitmentPlan"><span class="symbol function"></span>GetCommitmentPlan</a></li>
     <li><a href="getwebservice" title="GetWebService"><span class="symbol function"></span>GetWebService</a></li>
     <li><a href="getworkspace" title="GetWorkspace"><span class="symbol function"></span>GetWorkspace</a></li>
     <li><a href="listworkspacekeys" title="ListWorkspaceKeys"><span class="symbol function"></span>ListWorkspaceKeys</a></li>

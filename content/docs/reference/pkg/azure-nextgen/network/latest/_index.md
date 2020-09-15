@@ -20,6 +20,7 @@ Explore the resources and functions of the network/latest module in the Azure Ne
     <li><a href="customipprefix" title="CustomIPPrefix"><span class="symbol resource"></span>CustomIPPrefix</a></li>
     <li><a href="ddoscustompolicy" title="DdosCustomPolicy"><span class="symbol resource"></span>DdosCustomPolicy</a></li>
     <li><a href="ddosprotectionplan" title="DdosProtectionPlan"><span class="symbol resource"></span>DdosProtectionPlan</a></li>
+    <li><a href="delegatedsubnetservicedetails" title="DelegatedSubnetServiceDetails"><span class="symbol resource"></span>DelegatedSubnetServiceDetails</a></li>
     <li><a href="dscpconfiguration" title="DscpConfiguration"><span class="symbol resource"></span>DscpConfiguration</a></li>
     <li><a href="endpoint" title="Endpoint"><span class="symbol resource"></span>Endpoint</a></li>
     <li><a href="experiment" title="Experiment"><span class="symbol resource"></span>Experiment</a></li>
@@ -110,6 +111,7 @@ Explore the resources and functions of the network/latest module in the Azure Ne
     <li><a href="getcustomipprefix" title="GetCustomIPPrefix"><span class="symbol function"></span>GetCustomIPPrefix</a></li>
     <li><a href="getddoscustompolicy" title="GetDdosCustomPolicy"><span class="symbol function"></span>GetDdosCustomPolicy</a></li>
     <li><a href="getddosprotectionplan" title="GetDdosProtectionPlan"><span class="symbol function"></span>GetDdosProtectionPlan</a></li>
+    <li><a href="getdelegatedsubnetservicedetails" title="GetDelegatedSubnetServiceDetails"><span class="symbol function"></span>GetDelegatedSubnetServiceDetails</a></li>
     <li><a href="getdscpconfiguration" title="GetDscpConfiguration"><span class="symbol function"></span>GetDscpConfiguration</a></li>
     <li><a href="getendpoint" title="GetEndpoint"><span class="symbol function"></span>GetEndpoint</a></li>
     <li><a href="getexperiment" title="GetExperiment"><span class="symbol function"></span>GetExperiment</a></li>

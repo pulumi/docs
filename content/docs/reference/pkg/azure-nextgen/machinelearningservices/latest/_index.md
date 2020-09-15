@@ -11,8 +11,10 @@ Explore the resources and functions of the machinelearningservices/latest module
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="linkedservice" title="LinkedService"><span class="symbol resource"></span>LinkedService</a></li>
     <li><a href="linkedworkspace" title="LinkedWorkspace"><span class="symbol resource"></span>LinkedWorkspace</a></li>
     <li><a href="machinelearningcompute" title="MachineLearningCompute"><span class="symbol resource"></span>MachineLearningCompute</a></li>
+    <li><a href="machinelearningservice" title="MachineLearningService"><span class="symbol resource"></span>MachineLearningService</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
     <li><a href="workspaceconnection" title="WorkspaceConnection"><span class="symbol resource"></span>WorkspaceConnection</a></li>
@@ -20,8 +22,10 @@ Explore the resources and functions of the machinelearningservices/latest module
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getlinkedservice" title="GetLinkedService"><span class="symbol function"></span>GetLinkedService</a></li>
     <li><a href="getlinkedworkspace" title="GetLinkedWorkspace"><span class="symbol function"></span>GetLinkedWorkspace</a></li>
     <li><a href="getmachinelearningcompute" title="GetMachineLearningCompute"><span class="symbol function"></span>GetMachineLearningCompute</a></li>
+    <li><a href="getmachinelearningservice" title="GetMachineLearningService"><span class="symbol function"></span>GetMachineLearningService</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getworkspace" title="GetWorkspace"><span class="symbol function"></span>GetWorkspace</a></li>
     <li><a href="getworkspaceconnection" title="GetWorkspaceConnection"><span class="symbol function"></span>GetWorkspaceConnection</a></li>

@@ -36,7 +36,7 @@ class MyStack : Stack
             {
                 
                 {
-                    { "action", new AzureNextGen.Network.Latest.Inputs.FirewallPolicyNatRuleActionArgs
+                    { "action", new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleActionArgs
                     {
                         Type = "Deny",
                     } },

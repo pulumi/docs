@@ -16,7 +16,7 @@ Represents a Database.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### DatabaseCreate
+### Create a database
 {{% example csharp %}}
 ```csharp
 using Pulumi;

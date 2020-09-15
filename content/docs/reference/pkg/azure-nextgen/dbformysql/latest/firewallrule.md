@@ -16,7 +16,7 @@ Represents a server firewall rule.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### FirewallRuleCreate
+### Create a firewall rule
 {{% example csharp %}}
 ```csharp
 using Pulumi;

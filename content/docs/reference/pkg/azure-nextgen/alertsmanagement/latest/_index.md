@@ -11,11 +11,15 @@ Explore the resources and functions of the alertsmanagement/latest module in the
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="actionrulebyname" title="ActionRuleByName"><span class="symbol resource"></span>ActionRuleByName</a></li>
+    <li><a href="healthalert" title="HealthAlert"><span class="symbol resource"></span>HealthAlert</a></li>
     <li><a href="smartdetectoralertrule" title="SmartDetectorAlertRule"><span class="symbol resource"></span>SmartDetectorAlertRule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getactionrulebyname" title="GetActionRuleByName"><span class="symbol function"></span>GetActionRuleByName</a></li>
+    <li><a href="gethealthalert" title="GetHealthAlert"><span class="symbol function"></span>GetHealthAlert</a></li>
     <li><a href="getsmartdetectoralertrule" title="GetSmartDetectorAlertRule"><span class="symbol function"></span>GetSmartDetectorAlertRule</a></li>
 </ul>
 

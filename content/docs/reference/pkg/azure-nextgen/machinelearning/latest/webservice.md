@@ -2073,7 +2073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearning/latest?tab=doc#CommitmentPlanArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearning/latest?tab=doc#CommitmentPlanTypeArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.MachineLearning.Latest.Inputs.CommitmentPlanArgs.html">input</a>   API doc for this type.
@@ -7636,7 +7636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commitmentplan_go" style="color: inherit; text-decoration: inherit;">Commitment<wbr>Plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commitmentplan">Commitment<wbr>Plan</a></span>
+        <span class="property-type"><a href="#commitmentplan">Commitment<wbr>Plan<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Contains the commitment plan associated with this web service. Set at creation time. Once set, this value cannot be changed. Note: The commitment plan is not returned from calls to GET operations.{{% /md %}}</dd>
 

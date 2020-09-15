@@ -11,7 +11,12 @@ Explore the resources and functions of the costmanagement/latest module in the A
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="budget" title="Budget"><span class="symbol resource"></span>Budget</a></li>
+    <li><a href="cloudconnector" title="CloudConnector"><span class="symbol resource"></span>CloudConnector</a></li>
+    <li><a href="connector" title="Connector"><span class="symbol resource"></span>Connector</a></li>
     <li><a href="export" title="Export"><span class="symbol resource"></span>Export</a></li>
+    <li><a href="report" title="Report"><span class="symbol resource"></span>Report</a></li>
+    <li><a href="reportbyresourcegroupname" title="ReportByResourceGroupName"><span class="symbol resource"></span>ReportByResourceGroupName</a></li>
     <li><a href="reportconfig" title="ReportConfig"><span class="symbol resource"></span>ReportConfig</a></li>
     <li><a href="reportconfigbyresourcegroupname" title="ReportConfigByResourceGroupName"><span class="symbol resource"></span>ReportConfigByResourceGroupName</a></li>
     <li><a href="view" title="View"><span class="symbol resource"></span>View</a></li>
@@ -20,7 +25,12 @@ Explore the resources and functions of the costmanagement/latest module in the A
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getbudget" title="GetBudget"><span class="symbol function"></span>GetBudget</a></li>
+    <li><a href="getcloudconnector" title="GetCloudConnector"><span class="symbol function"></span>GetCloudConnector</a></li>
+    <li><a href="getconnector" title="GetConnector"><span class="symbol function"></span>GetConnector</a></li>
     <li><a href="getexport" title="GetExport"><span class="symbol function"></span>GetExport</a></li>
+    <li><a href="getreport" title="GetReport"><span class="symbol function"></span>GetReport</a></li>
+    <li><a href="getreportbyresourcegroupname" title="GetReportByResourceGroupName"><span class="symbol function"></span>GetReportByResourceGroupName</a></li>
     <li><a href="getreportconfig" title="GetReportConfig"><span class="symbol function"></span>GetReportConfig</a></li>
     <li><a href="getreportconfigbyresourcegroupname" title="GetReportConfigByResourceGroupName"><span class="symbol function"></span>GetReportConfigByResourceGroupName</a></li>
     <li><a href="getview" title="GetView"><span class="symbol function"></span>GetView</a></li>

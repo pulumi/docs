@@ -12,11 +12,15 @@ Explore the resources and functions of the maps/latest module in the Azure NextG
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
+    <li><a href="creator" title="Creator"><span class="symbol resource"></span>Creator</a></li>
+    <li><a href="privateatlase" title="PrivateAtlase"><span class="symbol resource"></span>PrivateAtlase</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
+    <li><a href="getcreator" title="GetCreator"><span class="symbol function"></span>GetCreator</a></li>
+    <li><a href="getprivateatlase" title="GetPrivateAtlase"><span class="symbol function"></span>GetPrivateAtlase</a></li>
     <li><a href="listaccountkeys" title="ListAccountKeys"><span class="symbol function"></span>ListAccountKeys</a></li>
 </ul>
 

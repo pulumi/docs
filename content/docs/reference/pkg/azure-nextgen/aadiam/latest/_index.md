@@ -11,12 +11,16 @@ Explore the resources and functions of the aadiam/latest module in the Azure Nex
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="azureadmetric" title="AzureADMetric"><span class="symbol resource"></span>AzureADMetric</a></li>
     <li><a href="diagnosticsetting" title="DiagnosticSetting"><span class="symbol resource"></span>DiagnosticSetting</a></li>
+    <li><a href="privatelinkforazuread" title="PrivateLinkForAzureAd"><span class="symbol resource"></span>PrivateLinkForAzureAd</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getdiagnosticsetting" title="GetDiagnosticSetting"><span class="symbol function"></span>GetDiagnosticSetting</a></li>
+    <li><a href="getazureadmetric" title="GetazureADMetric"><span class="symbol function"></span>GetazureADMetric</a></li>
+    <li><a href="getprivatelinkforazuread" title="GetprivateLinkForAzureAd"><span class="symbol function"></span>GetprivateLinkForAzureAd</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

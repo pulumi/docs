@@ -15,6 +15,8 @@ Explore the resources and functions of the servicefabric/latest module in the Az
     <li><a href="applicationtype" title="ApplicationType"><span class="symbol resource"></span>ApplicationType</a></li>
     <li><a href="applicationtypeversion" title="ApplicationTypeVersion"><span class="symbol resource"></span>ApplicationTypeVersion</a></li>
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="managedcluster" title="ManagedCluster"><span class="symbol resource"></span>ManagedCluster</a></li>
+    <li><a href="nodetype" title="NodeType"><span class="symbol resource"></span>NodeType</a></li>
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
 </ul>
 
@@ -24,6 +26,8 @@ Explore the resources and functions of the servicefabric/latest module in the Az
     <li><a href="getapplicationtype" title="GetApplicationType"><span class="symbol function"></span>GetApplicationType</a></li>
     <li><a href="getapplicationtypeversion" title="GetApplicationTypeVersion"><span class="symbol function"></span>GetApplicationTypeVersion</a></li>
     <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
+    <li><a href="getmanagedcluster" title="GetManagedCluster"><span class="symbol function"></span>GetManagedCluster</a></li>
+    <li><a href="getnodetype" title="GetNodeType"><span class="symbol function"></span>GetNodeType</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 

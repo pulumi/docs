@@ -11,7 +11,7 @@ meta_desc: ""
 
 <h2 id="modules">Modules</h2>
 <ul class="api">
-    <li><a href="v20191011preview/" title="v20191011preview"><span class="symbol module"></span>v20191011preview</a></li>
+    <li><a href="latest/" title="latest"><span class="symbol module"></span>latest</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

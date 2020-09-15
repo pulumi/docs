@@ -13,8 +13,14 @@ Explore the resources and functions of the eventgrid/latest module in the Azure 
 <ul class="api">
     <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
     <li><a href="domaintopic" title="DomainTopic"><span class="symbol resource"></span>DomainTopic</a></li>
+    <li><a href="eventchannel" title="EventChannel"><span class="symbol resource"></span>EventChannel</a></li>
     <li><a href="eventsubscription" title="EventSubscription"><span class="symbol resource"></span>EventSubscription</a></li>
+    <li><a href="partnernamespace" title="PartnerNamespace"><span class="symbol resource"></span>PartnerNamespace</a></li>
+    <li><a href="partnerregistration" title="PartnerRegistration"><span class="symbol resource"></span>PartnerRegistration</a></li>
+    <li><a href="partnertopiceventsubscription" title="PartnerTopicEventSubscription"><span class="symbol resource"></span>PartnerTopicEventSubscription</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
+    <li><a href="systemtopic" title="SystemTopic"><span class="symbol resource"></span>SystemTopic</a></li>
+    <li><a href="systemtopiceventsubscription" title="SystemTopicEventSubscription"><span class="symbol resource"></span>SystemTopicEventSubscription</a></li>
     <li><a href="topic" title="Topic"><span class="symbol resource"></span>Topic</a></li>
 </ul>
 
@@ -22,10 +28,17 @@ Explore the resources and functions of the eventgrid/latest module in the Azure 
 <ul class="api">
     <li><a href="getdomain" title="GetDomain"><span class="symbol function"></span>GetDomain</a></li>
     <li><a href="getdomaintopic" title="GetDomainTopic"><span class="symbol function"></span>GetDomainTopic</a></li>
+    <li><a href="geteventchannel" title="GetEventChannel"><span class="symbol function"></span>GetEventChannel</a></li>
     <li><a href="geteventsubscription" title="GetEventSubscription"><span class="symbol function"></span>GetEventSubscription</a></li>
+    <li><a href="getpartnernamespace" title="GetPartnerNamespace"><span class="symbol function"></span>GetPartnerNamespace</a></li>
+    <li><a href="getpartnerregistration" title="GetPartnerRegistration"><span class="symbol function"></span>GetPartnerRegistration</a></li>
+    <li><a href="getpartnertopiceventsubscription" title="GetPartnerTopicEventSubscription"><span class="symbol function"></span>GetPartnerTopicEventSubscription</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
+    <li><a href="getsystemtopic" title="GetSystemTopic"><span class="symbol function"></span>GetSystemTopic</a></li>
+    <li><a href="getsystemtopiceventsubscription" title="GetSystemTopicEventSubscription"><span class="symbol function"></span>GetSystemTopicEventSubscription</a></li>
     <li><a href="gettopic" title="GetTopic"><span class="symbol function"></span>GetTopic</a></li>
     <li><a href="listdomainsharedaccesskeys" title="ListDomainSharedAccessKeys"><span class="symbol function"></span>ListDomainSharedAccessKeys</a></li>
+    <li><a href="listpartnernamespacesharedaccesskeys" title="ListPartnerNamespaceSharedAccessKeys"><span class="symbol function"></span>ListPartnerNamespaceSharedAccessKeys</a></li>
     <li><a href="listtopicsharedaccesskeys" title="ListTopicSharedAccessKeys"><span class="symbol function"></span>ListTopicSharedAccessKeys</a></li>
 </ul>
 

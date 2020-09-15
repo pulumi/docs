@@ -11,12 +11,14 @@ Explore the resources and functions of the keyvault/latest module in the Azure N
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="managedhsm" title="ManagedHsm"><span class="symbol resource"></span>ManagedHsm</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="vault" title="Vault"><span class="symbol resource"></span>Vault</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getmanagedhsm" title="GetManagedHsm"><span class="symbol function"></span>GetManagedHsm</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getvault" title="GetVault"><span class="symbol function"></span>GetVault</a></li>
 </ul>

@@ -20,9 +20,12 @@ Explore the resources and functions of the automation/latest module in the Azure
     <li><a href="dscnodeconfiguration" title="DscNodeConfiguration"><span class="symbol resource"></span>DscNodeConfiguration</a></li>
     <li><a href="jobschedule" title="JobSchedule"><span class="symbol resource"></span>JobSchedule</a></li>
     <li><a href="module" title="Module"><span class="symbol resource"></span>Module</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="python2package" title="Python2Package"><span class="symbol resource"></span>Python2Package</a></li>
     <li><a href="runbook" title="Runbook"><span class="symbol resource"></span>Runbook</a></li>
     <li><a href="schedule" title="Schedule"><span class="symbol resource"></span>Schedule</a></li>
+    <li><a href="softwareupdateconfigurationbyname" title="SoftwareUpdateConfigurationByName"><span class="symbol resource"></span>SoftwareUpdateConfigurationByName</a></li>
+    <li><a href="sourcecontrol" title="SourceControl"><span class="symbol resource"></span>SourceControl</a></li>
     <li><a href="variable" title="Variable"><span class="symbol resource"></span>Variable</a></li>
     <li><a href="watcher" title="Watcher"><span class="symbol resource"></span>Watcher</a></li>
     <li><a href="webhook" title="Webhook"><span class="symbol resource"></span>Webhook</a></li>
@@ -39,9 +42,12 @@ Explore the resources and functions of the automation/latest module in the Azure
     <li><a href="getdscnodeconfiguration" title="GetDscNodeConfiguration"><span class="symbol function"></span>GetDscNodeConfiguration</a></li>
     <li><a href="getjobschedule" title="GetJobSchedule"><span class="symbol function"></span>GetJobSchedule</a></li>
     <li><a href="getmodule" title="GetModule"><span class="symbol function"></span>GetModule</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getpython2package" title="GetPython2Package"><span class="symbol function"></span>GetPython2Package</a></li>
     <li><a href="getrunbook" title="GetRunbook"><span class="symbol function"></span>GetRunbook</a></li>
     <li><a href="getschedule" title="GetSchedule"><span class="symbol function"></span>GetSchedule</a></li>
+    <li><a href="getsoftwareupdateconfigurationbyname" title="GetSoftwareUpdateConfigurationByName"><span class="symbol function"></span>GetSoftwareUpdateConfigurationByName</a></li>
+    <li><a href="getsourcecontrol" title="GetSourceControl"><span class="symbol function"></span>GetSourceControl</a></li>
     <li><a href="getvariable" title="GetVariable"><span class="symbol function"></span>GetVariable</a></li>
     <li><a href="getwatcher" title="GetWatcher"><span class="symbol function"></span>GetWatcher</a></li>
     <li><a href="getwebhook" title="GetWebhook"><span class="symbol function"></span>GetWebhook</a></li>

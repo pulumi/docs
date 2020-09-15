@@ -12,12 +12,6 @@ meta_desc: ""
 <h2 id="modules">Modules</h2>
 <ul class="api">
     <li><a href="latest/" title="latest"><span class="symbol module"></span>latest</a></li>
-    <li><a href="v20150501preview/" title="v20150501preview"><span class="symbol module"></span>v20150501preview</a></li>
-    <li><a href="v20170301preview/" title="v20170301preview"><span class="symbol module"></span>v20170301preview</a></li>
-    <li><a href="v20171001preview/" title="v20171001preview"><span class="symbol module"></span>v20171001preview</a></li>
-    <li><a href="v20180601preview/" title="v20180601preview"><span class="symbol module"></span>v20180601preview</a></li>
-    <li><a href="v20190601preview/" title="v20190601preview"><span class="symbol module"></span>v20190601preview</a></li>
-    <li><a href="v20200202preview/" title="v20200202preview"><span class="symbol module"></span>v20200202preview</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>

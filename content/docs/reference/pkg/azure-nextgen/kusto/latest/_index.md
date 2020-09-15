@@ -17,6 +17,7 @@ Explore the resources and functions of the kusto/latest module in the Azure Next
     <li><a href="dataconnection" title="DataConnection"><span class="symbol resource"></span>DataConnection</a></li>
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
     <li><a href="databaseprincipalassignment" title="DatabasePrincipalAssignment"><span class="symbol resource"></span>DatabasePrincipalAssignment</a></li>
+    <li><a href="eventhubconnection" title="EventHubConnection"><span class="symbol resource"></span>EventHubConnection</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -27,6 +28,7 @@ Explore the resources and functions of the kusto/latest module in the Azure Next
     <li><a href="getdataconnection" title="GetDataConnection"><span class="symbol function"></span>GetDataConnection</a></li>
     <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
     <li><a href="getdatabaseprincipalassignment" title="GetDatabasePrincipalAssignment"><span class="symbol function"></span>GetDatabasePrincipalAssignment</a></li>
+    <li><a href="geteventhubconnection" title="GetEventHubConnection"><span class="symbol function"></span>GetEventHubConnection</a></li>
     <li><a href="listclusterfollowerdatabases" title="ListClusterFollowerDatabases"><span class="symbol function"></span>ListClusterFollowerDatabases</a></li>
     <li><a href="listclusterlanguageextensions" title="ListClusterLanguageExtensions"><span class="symbol function"></span>ListClusterLanguageExtensions</a></li>
     <li><a href="listdatabaseprincipals" title="ListDatabasePrincipals"><span class="symbol function"></span>ListDatabasePrincipals</a></li>

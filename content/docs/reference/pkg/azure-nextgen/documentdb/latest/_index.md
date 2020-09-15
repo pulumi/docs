@@ -28,6 +28,7 @@ Explore the resources and functions of the documentdb/latest module in the Azure
     <li><a href="mongodbresourcemongodbcollection" title="MongoDBResourceMongoDBCollection"><span class="symbol resource"></span>MongoDBResourceMongoDBCollection</a></li>
     <li><a href="mongodbresourcemongodbdatabase" title="MongoDBResourceMongoDBDatabase"><span class="symbol resource"></span>MongoDBResourceMongoDBDatabase</a></li>
     <li><a href="notebookworkspace" title="NotebookWorkspace"><span class="symbol resource"></span>NotebookWorkspace</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="sqlresourcesqlcontainer" title="SqlResourceSqlContainer"><span class="symbol resource"></span>SqlResourceSqlContainer</a></li>
     <li><a href="sqlresourcesqldatabase" title="SqlResourceSqlDatabase"><span class="symbol resource"></span>SqlResourceSqlDatabase</a></li>
     <li><a href="sqlresourcesqlstoredprocedure" title="SqlResourceSqlStoredProcedure"><span class="symbol resource"></span>SqlResourceSqlStoredProcedure</a></li>
@@ -55,6 +56,7 @@ Explore the resources and functions of the documentdb/latest module in the Azure
     <li><a href="getmongodbresourcemongodbcollection" title="GetMongoDBResourceMongoDBCollection"><span class="symbol function"></span>GetMongoDBResourceMongoDBCollection</a></li>
     <li><a href="getmongodbresourcemongodbdatabase" title="GetMongoDBResourceMongoDBDatabase"><span class="symbol function"></span>GetMongoDBResourceMongoDBDatabase</a></li>
     <li><a href="getnotebookworkspace" title="GetNotebookWorkspace"><span class="symbol function"></span>GetNotebookWorkspace</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getsqlresourcesqlcontainer" title="GetSqlResourceSqlContainer"><span class="symbol function"></span>GetSqlResourceSqlContainer</a></li>
     <li><a href="getsqlresourcesqldatabase" title="GetSqlResourceSqlDatabase"><span class="symbol function"></span>GetSqlResourceSqlDatabase</a></li>
     <li><a href="getsqlresourcesqlstoredprocedure" title="GetSqlResourceSqlStoredProcedure"><span class="symbol function"></span>GetSqlResourceSqlStoredProcedure</a></li>

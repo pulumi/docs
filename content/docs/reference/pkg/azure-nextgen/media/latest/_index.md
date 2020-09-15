@@ -18,6 +18,7 @@ Explore the resources and functions of the media/latest module in the Azure Next
     <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
     <li><a href="liveevent" title="LiveEvent"><span class="symbol resource"></span>LiveEvent</a></li>
     <li><a href="liveoutput" title="LiveOutput"><span class="symbol resource"></span>LiveOutput</a></li>
+    <li><a href="mediagraph" title="MediaGraph"><span class="symbol resource"></span>MediaGraph</a></li>
     <li><a href="mediaservice" title="MediaService"><span class="symbol resource"></span>MediaService</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="streamingendpoint" title="StreamingEndpoint"><span class="symbol resource"></span>StreamingEndpoint</a></li>
@@ -35,6 +36,7 @@ Explore the resources and functions of the media/latest module in the Azure Next
     <li><a href="getjob" title="GetJob"><span class="symbol function"></span>GetJob</a></li>
     <li><a href="getliveevent" title="GetLiveEvent"><span class="symbol function"></span>GetLiveEvent</a></li>
     <li><a href="getliveoutput" title="GetLiveOutput"><span class="symbol function"></span>GetLiveOutput</a></li>
+    <li><a href="getmediagraph" title="GetMediaGraph"><span class="symbol function"></span>GetMediaGraph</a></li>
     <li><a href="getmediaservice" title="GetMediaService"><span class="symbol function"></span>GetMediaService</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getstreamingendpoint" title="GetStreamingEndpoint"><span class="symbol function"></span>GetStreamingEndpoint</a></li>

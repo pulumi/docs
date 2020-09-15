@@ -2751,6 +2751,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="timewindow_python">
+<a href="#timewindow_python" style="color: inherit; text-decoration: inherit;">time<wbr>Window</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="time_grain_python">
 <a href="#time_grain_python" style="color: inherit; text-decoration: inherit;">time_<wbr>grain</a>
 </span> 
@@ -2758,16 +2768,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="time_window_python">
-<a href="#time_window_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3197,6 +3197,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="timewindow_python">
+<a href="#timewindow_python" style="color: inherit; text-decoration: inherit;">time<wbr>Window</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="time_grain_python">
 <a href="#time_grain_python" style="color: inherit; text-decoration: inherit;">time_<wbr>grain</a>
 </span> 
@@ -3204,16 +3214,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="time_window_python">
-<a href="#time_window_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
