@@ -23,7 +23,7 @@ This page contains detailed instructions for [installing Pulumi](#install-pulumi
 
 {{< chooser os "macos,windows,linux" >}}
 
-{{% choosable os macos %}}
+{{< choosable os macos >}}
 
 macOS Sierra (10.12) or later is required.
 
@@ -66,9 +66,9 @@ If you do not wish to use the previous options, you can install Pulumi manually.
 
 1. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable os linux %}}
+{{< choosable os linux >}}
 
 ### Installation Script
 
@@ -91,9 +91,9 @@ Alternatively, you can install Pulumi manually. We provide a prebuilt binary for
 
 1. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable os windows %}}
+{{< choosable os windows >}}
 
 Windows 8 and 10 are supported.
 
@@ -137,7 +137,7 @@ Alternatively, you can install Pulumi manually.
 
 1. Add `C:\pulumi\bin` to your path via **System Properties** -> **Advanced** -> **Environment Variables** -> **User Variables** -> **Path** -> **Edit**.
 
-{{% /choosable %}}
+{{< /choosable >}}
 
 {{< /chooser >}}
 
@@ -177,7 +177,7 @@ You can find the list of versions on the [Available Versions]({{< relref "/docs/
 
 {{< chooser os "macos,windows,linux" >}}
 
-{{% choosable os macos %}}
+{{< choosable os macos >}}
 
 ### Homebrew
 
@@ -191,9 +191,9 @@ $ brew install pulumi@<version>
 $ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable os linux %}}
+{{< choosable os linux >}}
 
 ### Installation Script
 
@@ -203,9 +203,9 @@ To install, run our installation script:
 $ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable os windows %}}
+{{< choosable os windows >}}
 
 ### Chocolatey
 
@@ -225,9 +225,7 @@ You can specify a specific version with [Chocolatey package manager](https://cho
 > @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $version = '<version>'; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1')).Replace('${latestVersion}', $version)" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
 ```
 
-&nbsp; <!-- Oddly, without this, the above code block doesn't render properly -->
-
-{{% /choosable %}}
+{{< /choosable >}}
 
 {{< /chooser >}}
 
