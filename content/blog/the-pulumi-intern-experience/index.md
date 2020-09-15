@@ -54,6 +54,6 @@ Thank you [Evan]({{< relref "/blog/author/evan-boyle" >}}) for being an amazing 
 
 Thank you [Lee]({{< relref "/blog/author/lee-zen" >}}) and and [Luke]({{< relref "/blog/author/luke-hoban" >}}) for being such organized, motivating, and empathetic managers!
 
-Thank you to [Levi](https://www.pulumi.com/blog/author/levi-blackstone), [Lee Briggs](https://www.pulumi.com/blog/author/lee-briggs), Komal, [Pat](https://www.pulumi.com/blog/author/pat-gavlin), and [Mikhail](https://www.pulumi.com/blog/author/mikhail-shilkov) for being so open and friendly and always being available and sharing your experience when I needed anything at all!
+Thank you to [Levi]({{< relref "/blog/author/levi-blackstone" >}}), [Lee Briggs]({{< relref "/blog/author/lee-briggs" >}}), Komal, [Pat]({{< relref "/blog/author/pat-gavlin" >}}), and [Mikhail]({{< relref "/blog/author/mikhail-shilkov" >}}) for being so open and friendly and always being available and sharing your experience when I needed anything at all!
 
 And finally, thank you to everyone at Pulumi and the whole platform team for giving me this opportunity!
