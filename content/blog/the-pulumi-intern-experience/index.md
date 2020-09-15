@@ -1,6 +1,6 @@
 ---
 title: "The Pulumi Intern Experience"
-date: "2020-09-15"
+date: "2020-09-16"
 draft: true
 meta_desc: "A glimpse into my work and experiences at Pulumi as a summer intern"
 meta_image: intern.png
