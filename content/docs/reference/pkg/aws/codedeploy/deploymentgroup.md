@@ -521,7 +521,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codedeploy/#pulumi_aws.codedeploy.DeploymentGroup">DeploymentGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alarm_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAlarmConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_rollback_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAutoRollbackConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">autoscaling_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">blue_green_deployment_config</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupBlueGreenDeploymentConfigArgs]</span> = None<span class="p">, </span><span class="nx">deployment_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_style</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupDeploymentStyleArgs]</span> = None<span class="p">, </span><span class="nx">ec2_tag_filters</span><span class="p">:</span> <span class="nx">Optional[List[DeploymentGroupEc2TagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">ec2_tag_sets</span><span class="p">:</span> <span class="nx">Optional[List[DeploymentGroupEc2TagSetArgs]]</span> = None<span class="p">, </span><span class="nx">ecs_service</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupEcsServiceArgs]</span> = None<span class="p">, </span><span class="nx">load_balancer_info</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupLoadBalancerInfoArgs]</span> = None<span class="p">, </span><span class="nx">on_premises_instance_tag_filters</span><span class="p">:</span> <span class="nx">Optional[List[DeploymentGroupOnPremisesInstanceTagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_configurations</span><span class="p">:</span> <span class="nx">Optional[List[DeploymentGroupTriggerConfigurationArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codedeploy/#pulumi_aws.codedeploy.DeploymentGroup">DeploymentGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alarm_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAlarmConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_rollback_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAutoRollbackConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">autoscaling_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">blue_green_deployment_config</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupBlueGreenDeploymentConfigArgs]</span> = None<span class="p">, </span><span class="nx">deployment_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_style</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupDeploymentStyleArgs]</span> = None<span class="p">, </span><span class="nx">ec2_tag_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupEc2TagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">ec2_tag_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupEc2TagSetArgs]]</span> = None<span class="p">, </span><span class="nx">ecs_service</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupEcsServiceArgs]</span> = None<span class="p">, </span><span class="nx">load_balancer_info</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupLoadBalancerInfoArgs]</span> = None<span class="p">, </span><span class="nx">on_premises_instance_tag_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupOnPremisesInstanceTagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupTriggerConfigurationArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1270,7 +1270,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#autoscaling_groups_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
 {{% /md %}}</dd>
@@ -1314,7 +1314,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#ec2_tag_filters_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagfilter">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagfilter">Sequence[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd>
@@ -1325,7 +1325,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#ec2_tag_sets_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagset">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagset">Sequence[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
 {{% /md %}}</dd>
@@ -1358,7 +1358,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#on_premises_instance_tag_filters_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premises_<wbr>instance_<wbr>tag_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">List[Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">Sequence[Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
 {{% /md %}}</dd>
@@ -1369,7 +1369,7 @@ The DeploymentGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#trigger_configurations_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">List[Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">Sequence[Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
 {{% /md %}}</dd>
@@ -1473,7 +1473,7 @@ Get an existing DeploymentGroup resource's state with the given name, ID, and op
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alarm_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAlarmConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_rollback_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAutoRollbackConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">autoscaling_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">blue_green_deployment_config</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupBlueGreenDeploymentConfigArgs]</span> = None<span class="p">, </span><span class="nx">deployment_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_style</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupDeploymentStyleArgs]</span> = None<span class="p">, </span><span class="nx">ec2_tag_filters</span><span class="p">:</span> <span class="nx">Optional[List[DeploymentGroupEc2TagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">ec2_tag_sets</span><span class="p">:</span> <span class="nx">Optional[List[DeploymentGroupEc2TagSetArgs]]</span> = None<span class="p">, </span><span class="nx">ecs_service</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupEcsServiceArgs]</span> = None<span class="p">, </span><span class="nx">load_balancer_info</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupLoadBalancerInfoArgs]</span> = None<span class="p">, </span><span class="nx">on_premises_instance_tag_filters</span><span class="p">:</span> <span class="nx">Optional[List[DeploymentGroupOnPremisesInstanceTagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_configurations</span><span class="p">:</span> <span class="nx">Optional[List[DeploymentGroupTriggerConfigurationArgs]]</span> = None<span class="p">) -&gt;</span> DeploymentGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alarm_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAlarmConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_rollback_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAutoRollbackConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">autoscaling_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">blue_green_deployment_config</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupBlueGreenDeploymentConfigArgs]</span> = None<span class="p">, </span><span class="nx">deployment_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_style</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupDeploymentStyleArgs]</span> = None<span class="p">, </span><span class="nx">ec2_tag_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupEc2TagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">ec2_tag_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupEc2TagSetArgs]]</span> = None<span class="p">, </span><span class="nx">ecs_service</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupEcsServiceArgs]</span> = None<span class="p">, </span><span class="nx">load_balancer_info</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupLoadBalancerInfoArgs]</span> = None<span class="p">, </span><span class="nx">on_premises_instance_tag_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupOnPremisesInstanceTagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupTriggerConfigurationArgs]]</span> = None<span class="p">) -&gt;</span> DeploymentGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2142,7 +2142,7 @@ The following state arguments are supported:
 <a href="#state_autoscaling_groups_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
 {{% /md %}}</dd>
@@ -2197,7 +2197,7 @@ The following state arguments are supported:
 <a href="#state_ec2_tag_filters_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagfilter">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagfilter">Sequence[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd>
@@ -2208,7 +2208,7 @@ The following state arguments are supported:
 <a href="#state_ec2_tag_sets_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagset">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagset">Sequence[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
 {{% /md %}}</dd>
@@ -2241,7 +2241,7 @@ The following state arguments are supported:
 <a href="#state_on_premises_instance_tag_filters_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premises_<wbr>instance_<wbr>tag_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">List[Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">Sequence[Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
 {{% /md %}}</dd>
@@ -2263,7 +2263,7 @@ The following state arguments are supported:
 <a href="#state_trigger_configurations_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">List[Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">Sequence[Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
 {{% /md %}}</dd>
@@ -2433,7 +2433,7 @@ The following state arguments are supported:
 <a href="#alarms_python" style="color: inherit; text-decoration: inherit;">alarms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of alarms configured for the deployment group. _A maximum of 10 alarms can be added to a deployment group_.
 {{% /md %}}</dd>
@@ -2591,7 +2591,7 @@ The following state arguments are supported:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The event type or types that trigger a rollback. Supported types are `DEPLOYMENT_FAILURE` and `DEPLOYMENT_STOP_ON_ALARM`.
 {{% /md %}}</dd>
@@ -2911,7 +2911,7 @@ The following state arguments are supported:
 <a href="#wait_time_in_minutes_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>time_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait before the status of a blue/green deployment changed to Stopped if rerouting is not started manually. Applies only to the `STOP_DEPLOYMENT` option for `action_on_timeout`.
 {{% /md %}}</dd>
@@ -3151,7 +3151,7 @@ The following state arguments are supported:
 <a href="#termination_wait_time_in_minutes_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>wait_<wbr>time_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait after a successful blue/green deployment before terminating instances from the original environment.
 {{% /md %}}</dd>
@@ -3553,7 +3553,7 @@ The following state arguments are supported:
 <a href="#ec2_tag_filters_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>tag_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">List[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">Sequence[Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd>
@@ -4021,7 +4021,7 @@ The following state arguments are supported:
 <a href="#elb_infos_python" style="color: inherit; text-decoration: inherit;">elb_<wbr>infos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">List[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">Sequence[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
 {{% /md %}}</dd>
@@ -4032,7 +4032,7 @@ The following state arguments are supported:
 <a href="#target_group_infos_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>infos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">List[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">Sequence[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elb_info` and `target_group_pair_info`.
 {{% /md %}}</dd>
@@ -4390,7 +4390,7 @@ The following state arguments are supported:
 <a href="#target_groups_python" style="color: inherit; text-decoration: inherit;">target_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">List[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">Sequence[Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks for a target group within a target group pair (documented below).
 {{% /md %}}</dd>
@@ -4491,7 +4491,7 @@ The following state arguments are supported:
 <a href="#listener_arns_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>arns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
 {{% /md %}}</dd>
@@ -4671,7 +4671,7 @@ The following state arguments are supported:
 <a href="#listener_arns_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>arns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
 {{% /md %}}</dd>
@@ -5005,7 +5005,7 @@ The following state arguments are supported:
 <a href="#trigger_events_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation](http://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-sns-event-notifications-create-trigger.html) for all possible values.
 {{% /md %}}</dd>

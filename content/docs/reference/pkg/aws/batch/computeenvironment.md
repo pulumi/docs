@@ -2271,7 +2271,7 @@ The following state arguments are supported:
 <a href="#instance_types_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of instance types that may be launched.
 {{% /md %}}</dd>
@@ -2282,7 +2282,7 @@ The following state arguments are supported:
 <a href="#max_vcpus_python" style="color: inherit; text-decoration: inherit;">max_<wbr>vcpus</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of EC2 vCPUs that an environment can reach.
 {{% /md %}}</dd>
@@ -2293,7 +2293,7 @@ The following state arguments are supported:
 <a href="#min_vcpus_python" style="color: inherit; text-decoration: inherit;">min_<wbr>vcpus</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of EC2 vCPUs that an environment should maintain.
 {{% /md %}}</dd>
@@ -2304,7 +2304,7 @@ The following state arguments are supported:
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of EC2 security group that are associated with instances launched in the compute environment.
 {{% /md %}}</dd>
@@ -2315,7 +2315,7 @@ The following state arguments are supported:
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of VPC subnets into which the compute resources are launched.
 {{% /md %}}</dd>
@@ -2348,7 +2348,7 @@ The following state arguments are supported:
 <a href="#bid_percentage_python" style="color: inherit; text-decoration: inherit;">bid_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Integer of minimum percentage that a Spot Instance price must be when compared with the On-Demand price for that instance type before instances are launched. For example, if your bid percentage is 20% (`20`), then the Spot price must be below 20% of the current On-Demand price for that EC2 instance. This parameter is required for SPOT compute environments.
 {{% /md %}}</dd>
@@ -2359,7 +2359,7 @@ The following state arguments are supported:
 <a href="#desired_vcpus_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>vcpus</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The desired number of EC2 vCPUS in the compute environment.
 {{% /md %}}</dd>

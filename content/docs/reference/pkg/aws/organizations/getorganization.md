@@ -697,7 +697,7 @@ The following output properties are available:
 <a href="#accounts_python" style="color: inherit; text-decoration: inherit;">accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getorganizationaccount">List[Get<wbr>Organization<wbr>Account]</a></span>
+        <span class="property-type"><a href="#getorganizationaccount">Sequence[Get<wbr>Organization<wbr>Account]</a></span>
     </dt>
     <dd>{{% md %}}List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
 {{% /md %}}</dd>
@@ -719,7 +719,7 @@ The following output properties are available:
 <a href="#aws_service_access_principals_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>service_<wbr>access_<wbr>principals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS service principal names that have integration enabled with your organization. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
 {{% /md %}}</dd>
@@ -730,7 +730,7 @@ The following output properties are available:
 <a href="#enabled_policy_types_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>policy_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of Organizations policy types that are enabled in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g. `SERVICE_CONTROL_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
 {{% /md %}}</dd>
@@ -796,7 +796,7 @@ The following output properties are available:
 <a href="#non_master_accounts_python" style="color: inherit; text-decoration: inherit;">non_<wbr>master_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getorganizationnonmasteraccount">List[Get<wbr>Organization<wbr>Non<wbr>Master<wbr>Account]</a></span>
+        <span class="property-type"><a href="#getorganizationnonmasteraccount">Sequence[Get<wbr>Organization<wbr>Non<wbr>Master<wbr>Account]</a></span>
     </dt>
     <dd>{{% md %}}List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
 {{% /md %}}</dd>
@@ -807,7 +807,7 @@ The following output properties are available:
 <a href="#roots_python" style="color: inherit; text-decoration: inherit;">roots</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getorganizationroot">List[Get<wbr>Organization<wbr>Root]</a></span>
+        <span class="property-type"><a href="#getorganizationroot">Sequence[Get<wbr>Organization<wbr>Root]</a></span>
     </dt>
     <dd>{{% md %}}List of organization roots. All elements have these attributes:
 {{% /md %}}</dd>
@@ -1567,7 +1567,7 @@ The following output properties are available:
 <a href="#policy_types_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getorganizationrootpolicytype">List[Get<wbr>Organization<wbr>Root<wbr>Policy<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getorganizationrootpolicytype">Sequence[Get<wbr>Organization<wbr>Root<wbr>Policy<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of policy types enabled for this root. All elements have these attributes:
 {{% /md %}}</dd>

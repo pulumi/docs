@@ -844,7 +844,7 @@ func main() {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_policy_document(</span><span class="nx">override_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">statements</span><span class="p">:</span> <span class="nx">Optional[List[GetPolicyDocumentStatementArgs]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPolicyDocumentResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_policy_document(</span><span class="nx">override_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPolicyDocumentStatementArgs]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPolicyDocumentResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1121,7 +1121,7 @@ json.  Statements without an `sid` cannot be overwritten.
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatement">List[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatement">Sequence[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
 configuring one *statement* to be included in the policy document.
@@ -1453,7 +1453,7 @@ The following output properties are available:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatement">List[Get<wbr>Policy<wbr>Document<wbr>Statement]</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatement">Sequence[Get<wbr>Policy<wbr>Document<wbr>Statement]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1855,7 +1855,7 @@ to. This is required by AWS if used for an IAM policy.
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement either allows
 or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
@@ -1867,7 +1867,7 @@ or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatementcondition">List[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatementcondition">Sequence[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
 that defines a further, possibly-service-specific condition that constrains
@@ -1892,7 +1892,7 @@ statement allows or denies the given actions. The default is "Allow".
 <a href="#not_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement does *not*
 apply to. Used to apply a policy statement to all actions *except* those
@@ -1905,7 +1905,7 @@ listed.
 <a href="#not_principals_python" style="color: inherit; text-decoration: inherit;">not_<wbr>principals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">List[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">Sequence[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Like `principals` except gives principals that
 the statement does *not* apply to.
@@ -1917,7 +1917,7 @@ the statement does *not* apply to.
 <a href="#not_resources_python" style="color: inherit; text-decoration: inherit;">not_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement
 does *not* apply to. Used to apply a policy statement to all resources
@@ -1930,7 +1930,7 @@ does *not* apply to. Used to apply a policy statement to all resources
 <a href="#principals_python" style="color: inherit; text-decoration: inherit;">principals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatementprincipal">List[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatementprincipal">Sequence[Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
 specifying a principal (or principal pattern) to which this statement applies.
@@ -1942,7 +1942,7 @@ specifying a principal (or principal pattern) to which this statement applies.
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement applies
 to. This is required by AWS if used for an IAM policy.
@@ -2147,7 +2147,7 @@ to evaluate.
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The values to evaluate the condition against. If multiple
 values are provided, the condition matches if at least one of them applies.
@@ -2290,7 +2290,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 <a href="#identifiers_python" style="color: inherit; text-decoration: inherit;">identifiers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`. When `type` is "Federated", these are web identity users or SAML provider ARNs.
@@ -2428,7 +2428,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 <a href="#identifiers_python" style="color: inherit; text-decoration: inherit;">identifiers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`. When `type` is "Federated", these are web identity users or SAML provider ARNs.

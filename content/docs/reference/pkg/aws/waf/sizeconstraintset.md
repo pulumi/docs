@@ -131,7 +131,7 @@ const sizeConstraintSet = new aws.waf.SizeConstraintSet("size_constraint_set", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/waf/#pulumi_aws.waf.SizeConstraintSet">SizeConstraintSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size_constraints</span><span class="p">:</span> <span class="nx">Optional[List[SizeConstraintSetSizeConstraintArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/waf/#pulumi_aws.waf.SizeConstraintSet">SizeConstraintSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size_constraints</span><span class="p">:</span> <span class="nx">Optional[Sequence[SizeConstraintSetSizeConstraintArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -407,7 +407,7 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#size_constraints_python" style="color: inherit; text-decoration: inherit;">size_<wbr>constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">List[Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">Sequence[Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
 {{% /md %}}</dd>
@@ -555,7 +555,7 @@ Get an existing SizeConstraintSet resource's state with the given name, ID, and 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size_constraints</span><span class="p">:</span> <span class="nx">Optional[List[SizeConstraintSetSizeConstraintArgs]]</span> = None<span class="p">) -&gt;</span> SizeConstraintSet</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size_constraints</span><span class="p">:</span> <span class="nx">Optional[Sequence[SizeConstraintSetSizeConstraintArgs]]</span> = None<span class="p">) -&gt;</span> SizeConstraintSet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -817,7 +817,7 @@ The following state arguments are supported:
 <a href="#state_size_constraints_python" style="color: inherit; text-decoration: inherit;">size_<wbr>constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">List[Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">Sequence[Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
 {{% /md %}}</dd>
@@ -1062,7 +1062,7 @@ See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_S
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size in bytes that you want to compare against the size of the specified `field_to_match`.
 Valid values are between 0 - 21474836480 bytes (0 - 20 GB).

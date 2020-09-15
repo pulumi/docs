@@ -531,7 +531,7 @@ The following output properties are available:
 <a href="#pending_tasks_count_python" style="color: inherit; text-decoration: inherit;">pending_<wbr>tasks_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of pending tasks for the ECS Cluster
 {{% /md %}}</dd>
@@ -542,7 +542,7 @@ The following output properties are available:
 <a href="#registered_container_instances_count_python" style="color: inherit; text-decoration: inherit;">registered_<wbr>container_<wbr>instances_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of registered container instances for the ECS Cluster
 {{% /md %}}</dd>
@@ -553,7 +553,7 @@ The following output properties are available:
 <a href="#running_tasks_count_python" style="color: inherit; text-decoration: inherit;">running_<wbr>tasks_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of running tasks for the ECS Cluster
 {{% /md %}}</dd>
@@ -564,7 +564,7 @@ The following output properties are available:
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersetting">List[Get<wbr>Cluster<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#getclustersetting">Sequence[Get<wbr>Cluster<wbr>Setting]</a></span>
     </dt>
     <dd>{{% md %}}The settings associated with the ECS Cluster.
 {{% /md %}}</dd>

@@ -645,7 +645,7 @@ The following output properties are available:
 <a href="#image_pushed_at_python" style="color: inherit; text-decoration: inherit;">image_<wbr>pushed_<wbr>at</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The date and time, expressed as a unix timestamp, at which the current image was pushed to the repository.
 {{% /md %}}</dd>
@@ -656,7 +656,7 @@ The following output properties are available:
 <a href="#image_size_in_bytes_python" style="color: inherit; text-decoration: inherit;">image_<wbr>size_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, of the image in the repository.
 {{% /md %}}</dd>
@@ -667,7 +667,7 @@ The following output properties are available:
 <a href="#image_tags_python" style="color: inherit; text-decoration: inherit;">image_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of tags associated with this image.
 {{% /md %}}</dd>

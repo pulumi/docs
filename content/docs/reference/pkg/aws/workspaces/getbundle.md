@@ -593,7 +593,7 @@ The following output properties are available:
 <a href="#compute_types_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbundlecomputetype">List[Get<wbr>Bundle<wbr>Compute<wbr>Type]</a></span>
+        <span class="property-type"><a href="#getbundlecomputetype">Sequence[Get<wbr>Bundle<wbr>Compute<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The compute type. See supported fields below.
 {{% /md %}}</dd>
@@ -626,7 +626,7 @@ The following output properties are available:
 <a href="#root_storages_python" style="color: inherit; text-decoration: inherit;">root_<wbr>storages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbundlerootstorage">List[Get<wbr>Bundle<wbr>Root<wbr>Storage]</a></span>
+        <span class="property-type"><a href="#getbundlerootstorage">Sequence[Get<wbr>Bundle<wbr>Root<wbr>Storage]</a></span>
     </dt>
     <dd>{{% md %}}The root volume. See supported fields below.
 {{% /md %}}</dd>
@@ -637,7 +637,7 @@ The following output properties are available:
 <a href="#user_storages_python" style="color: inherit; text-decoration: inherit;">user_<wbr>storages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbundleuserstorage">List[Get<wbr>Bundle<wbr>User<wbr>Storage]</a></span>
+        <span class="property-type"><a href="#getbundleuserstorage">Sequence[Get<wbr>Bundle<wbr>User<wbr>Storage]</a></span>
     </dt>
     <dd>{{% md %}}The user storage. See supported fields below.
 {{% /md %}}</dd>

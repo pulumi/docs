@@ -135,7 +135,7 @@ const ipset = new aws.waf.IpSet("ipset", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/waf/#pulumi_aws.waf.IpSet">IpSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ip_set_descriptors</span><span class="p">:</span> <span class="nx">Optional[List[IpSetIpSetDescriptorArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/waf/#pulumi_aws.waf.IpSet">IpSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ip_set_descriptors</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpSetIpSetDescriptorArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -400,7 +400,7 @@ The IpSet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ip_set_descriptors_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>set_<wbr>descriptors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsetipsetdescriptor">List[Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipsetipsetdescriptor">Sequence[Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR format) from which web requests originate.
 {{% /md %}}</dd>
@@ -559,7 +559,7 @@ Get an existing IpSet resource's state with the given name, ID, and optional ext
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_set_descriptors</span><span class="p">:</span> <span class="nx">Optional[List[IpSetIpSetDescriptorArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> IpSet</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_set_descriptors</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpSetIpSetDescriptorArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> IpSet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -810,7 +810,7 @@ The following state arguments are supported:
 <a href="#state_ip_set_descriptors_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>set_<wbr>descriptors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsetipsetdescriptor">List[Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipsetipsetdescriptor">Sequence[Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR format) from which web requests originate.
 {{% /md %}}</dd>

@@ -627,7 +627,7 @@ The following output properties are available:
 <a href="#encryption_configurations_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrepositoryencryptionconfiguration">List[Get<wbr>Repository<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getrepositoryencryptionconfiguration">Sequence[Get<wbr>Repository<wbr>Encryption<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}Encryption configuration for the repository. See Encryption Configuration below.
 {{% /md %}}</dd>
@@ -649,7 +649,7 @@ The following output properties are available:
 <a href="#image_scanning_configurations_python" style="color: inherit; text-decoration: inherit;">image_<wbr>scanning_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrepositoryimagescanningconfiguration">List[Get<wbr>Repository<wbr>Image<wbr>Scanning<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getrepositoryimagescanningconfiguration">Sequence[Get<wbr>Repository<wbr>Image<wbr>Scanning<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block that defines image scanning configuration for the repository. See Image Scanning Configuration below.
 {{% /md %}}</dd>

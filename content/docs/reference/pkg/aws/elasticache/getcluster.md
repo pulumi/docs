@@ -1040,7 +1040,7 @@ begin taking a daily snapshot of the cache cluster.
 <a href="#cache_nodes_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustercachenode">List[Get<wbr>Cluster<wbr>Cache<wbr>Node]</a></span>
+        <span class="property-type"><a href="#getclustercachenode">Sequence[Get<wbr>Cluster<wbr>Cache<wbr>Node]</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and `availability_zone`.
 Referenceable e.g. as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}`
@@ -1152,7 +1152,7 @@ SNS topic that ElastiCache notifications get sent to.
 <a href="#num_cache_nodes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>cache_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of cache nodes that the cache cluster has.
 {{% /md %}}</dd>
@@ -1174,7 +1174,7 @@ SNS topic that ElastiCache notifications get sent to.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port number on which each of the cache nodes will
 accept connections.
@@ -1197,7 +1197,7 @@ accept connections.
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List VPC security groups associated with the cache cluster.
 {{% /md %}}</dd>
@@ -1208,7 +1208,7 @@ accept connections.
 <a href="#security_group_names_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of security group names associated with this cache cluster.
 {{% /md %}}</dd>
@@ -1219,7 +1219,7 @@ accept connections.
 <a href="#snapshot_retention_limit_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>retention_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of days for which ElastiCache will
 retain automatic cache cluster snapshots before deleting them.
@@ -1477,7 +1477,7 @@ accept connections.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port number on which each of the cache nodes will
 accept connections.

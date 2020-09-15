@@ -23,7 +23,7 @@ Provides a CodePipeline.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codepipeline/#pulumi_aws.codepipeline.Pipeline">Pipeline</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">artifact_store</span><span class="p">:</span> <span class="nx">Optional[PipelineArtifactStoreArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stages</span><span class="p">:</span> <span class="nx">Optional[List[PipelineStageArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codepipeline/#pulumi_aws.codepipeline.Pipeline">Pipeline</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">artifact_store</span><span class="p">:</span> <span class="nx">Optional[PipelineArtifactStoreArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stages</span><span class="p">:</span> <span class="nx">Optional[Sequence[PipelineStageArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -409,7 +409,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#stages_python" style="color: inherit; text-decoration: inherit;">stages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinestage">List[Pipeline<wbr>Stage<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinestage">Sequence[Pipeline<wbr>Stage<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A stage block. Stages are documented below.
 {{% /md %}}</dd>
@@ -579,7 +579,7 @@ Get an existing Pipeline resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">artifact_store</span><span class="p">:</span> <span class="nx">Optional[PipelineArtifactStoreArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stages</span><span class="p">:</span> <span class="nx">Optional[List[PipelineStageArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Pipeline</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">artifact_store</span><span class="p">:</span> <span class="nx">Optional[PipelineArtifactStoreArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stages</span><span class="p">:</span> <span class="nx">Optional[Sequence[PipelineStageArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Pipeline</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -962,7 +962,7 @@ The following state arguments are supported:
 <a href="#state_stages_python" style="color: inherit; text-decoration: inherit;">stages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinestage">List[Pipeline<wbr>Stage<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinestage">Sequence[Pipeline<wbr>Stage<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A stage block. Stages are documented below.
 {{% /md %}}</dd>
@@ -1460,7 +1460,7 @@ The following state arguments are supported:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinestageaction">List[Pipeline<wbr>Stage<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinestageaction">Sequence[Pipeline<wbr>Stage<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The action(s) to include in the stage. Defined as an `action` block below
 {{% /md %}}</dd>
@@ -1990,7 +1990,7 @@ The following state arguments are supported:
 <a href="#input_artifacts_python" style="color: inherit; text-decoration: inherit;">input_<wbr>artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of artifact names to be worked on.
 {{% /md %}}</dd>
@@ -2012,7 +2012,7 @@ The following state arguments are supported:
 <a href="#output_artifacts_python" style="color: inherit; text-decoration: inherit;">output_<wbr>artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of artifact names to output. Output artifact names must be unique within a pipeline.
 {{% /md %}}</dd>
@@ -2045,7 +2045,7 @@ The following state arguments are supported:
 <a href="#run_order_python" style="color: inherit; text-decoration: inherit;">run_<wbr>order</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The order in which actions are run.
 {{% /md %}}</dd>

@@ -27,7 +27,7 @@ This data source can be useful for getting a list of volume IDs with (for exampl
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_ebs_volumes(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetEbsVolumesFilterArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEbsVolumesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_ebs_volumes(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetEbsVolumesFilterArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEbsVolumesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -148,7 +148,7 @@ a pair on the desired volumes.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getebsvolumesfilter">List[Get<wbr>Ebs<wbr>Volumes<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getebsvolumesfilter">Sequence[Get<wbr>Ebs<wbr>Volumes<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd>
@@ -352,7 +352,7 @@ no volumes match the provided criteria.
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of all the EBS Volume IDs found. This data source will fail if
 no volumes match the provided criteria.
@@ -364,7 +364,7 @@ no volumes match the provided criteria.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getebsvolumesfilter">List[Get<wbr>Ebs<wbr>Volumes<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getebsvolumesfilter">Sequence[Get<wbr>Ebs<wbr>Volumes<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -524,7 +524,7 @@ For example, if matching against the `size` filter, use:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 EBS Volume IDs will be selected if any one of the given values match.

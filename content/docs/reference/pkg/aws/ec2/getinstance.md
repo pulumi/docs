@@ -153,7 +153,7 @@ const foo = pulumi.output(aws.ec2.getInstance({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetInstanceFilterArgs]]</span> = None<span class="p">, </span><span class="nx">get_password_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">get_user_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstanceFilterArgs]]</span> = None<span class="p">, </span><span class="nx">get_password_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">get_user_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -414,7 +414,7 @@ exactly match a pair on the desired Instance.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancefilter">List[Get<wbr>Instance<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancefilter">Sequence[Get<wbr>Instance<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more name/value pairs to use as filters. There are
 several valid keys, for a full reference, check out
@@ -1888,7 +1888,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 <a href="#credit_specifications_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>specifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancecreditspecification">List[Get<wbr>Instance<wbr>Credit<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#getinstancecreditspecification">Sequence[Get<wbr>Instance<wbr>Credit<wbr>Specification]</a></span>
     </dt>
     <dd>{{% md %}}The credit specification of the Instance.
 {{% /md %}}</dd>
@@ -1909,7 +1909,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 <a href="#ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceebsblockdevice">List[Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#getinstanceebsblockdevice">Sequence[Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
     </dt>
     <dd>{{% md %}}The EBS block device mappings of the Instance.
 {{% /md %}}</dd>
@@ -1931,7 +1931,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 <a href="#ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceephemeralblockdevice">List[Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#getinstanceephemeralblockdevice">Sequence[Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device]</a></span>
     </dt>
     <dd>{{% md %}}The ephemeral block device mappings of the Instance.
 {{% /md %}}</dd>
@@ -2018,7 +2018,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 <a href="#metadata_options_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancemetadataoption">List[Get<wbr>Instance<wbr>Metadata<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getinstancemetadataoption">Sequence[Get<wbr>Instance<wbr>Metadata<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}The metadata options of the Instance.
 {{% /md %}}</dd>
@@ -2134,7 +2134,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 <a href="#root_block_devices_python" style="color: inherit; text-decoration: inherit;">root_<wbr>block_<wbr>devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancerootblockdevice">List[Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device]</a></span>
+        <span class="property-type"><a href="#getinstancerootblockdevice">Sequence[Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device]</a></span>
     </dt>
     <dd>{{% md %}}The root block device mappings of the Instance
 {{% /md %}}</dd>
@@ -2145,7 +2145,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 <a href="#secondary_private_ips_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>private_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The secondary private IPv4 addresses assigned to the instance's primary network interface (eth0) in a VPC.
 {{% /md %}}</dd>
@@ -2156,7 +2156,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The associated security groups.
 {{% /md %}}</dd>
@@ -2233,7 +2233,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 <a href="#vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The associated security groups in a non-default VPC.
 {{% /md %}}</dd>
@@ -2244,7 +2244,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancefilter">List[Get<wbr>Instance<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getinstancefilter">Sequence[Get<wbr>Instance<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2746,7 +2746,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}`0` If the volume is not a provisioned IOPS image, otherwise the supported IOPS count.
 {{% /md %}}</dd>
@@ -2788,7 +2788,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume, in GiB.
 {{% /md %}}</dd>
@@ -3104,7 +3104,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3270,7 +3270,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 <a href="#http_put_response_hop_limit_python" style="color: inherit; text-decoration: inherit;">http_<wbr>put_<wbr>response_<wbr>hop_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
 {{% /md %}}</dd>
@@ -3629,7 +3629,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}`0` If the volume is not a provisioned IOPS image, otherwise the supported IOPS count.
 {{% /md %}}</dd>
@@ -3660,7 +3660,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume, in GiB.
 {{% /md %}}</dd>

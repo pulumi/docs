@@ -749,7 +749,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 <a href="#ip_sets_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratoripset">List[Accelerator<wbr>Ip<wbr>Set]</a></span>
+        <span class="property-type"><a href="#acceleratoripset">Sequence[Accelerator<wbr>Ip<wbr>Set]</a></span>
     </dt>
     <dd>{{% md %}}IP address set associated with the accelerator.
 {{% /md %}}</dd>
@@ -774,7 +774,7 @@ Get an existing Accelerator resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[AcceleratorAttributesArgs]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_sets</span><span class="p">:</span> <span class="nx">Optional[List[AcceleratorIpSetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Accelerator</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[AcceleratorAttributesArgs]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[AcceleratorIpSetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Accelerator</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1242,7 +1242,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 <a href="#state_ip_sets_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratoripset">List[Accelerator<wbr>Ip<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#acceleratoripset">Sequence[Accelerator<wbr>Ip<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}IP address set associated with the accelerator.
 {{% /md %}}</dd>
@@ -1573,7 +1573,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses in the IP address set.
 {{% /md %}}</dd>

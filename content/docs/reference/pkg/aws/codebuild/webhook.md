@@ -277,7 +277,7 @@ const exampleRepositoryWebhook = new github.RepositoryWebhook("exampleRepository
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codebuild/#pulumi_aws.codebuild.Webhook">Webhook</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">branch_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter_groups</span><span class="p">:</span> <span class="nx">Optional[List[WebhookFilterGroupArgs]]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codebuild/#pulumi_aws.codebuild.Webhook">Webhook</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">branch_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebhookFilterGroupArgs]]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -597,7 +597,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#filter_groups_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfiltergroup">List[Webhook<wbr>Filter<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webhookfiltergroup">Sequence[Webhook<wbr>Filter<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
 {{% /md %}}</dd>
@@ -833,7 +833,7 @@ Get an existing Webhook resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">branch_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter_groups</span><span class="p">:</span> <span class="nx">Optional[List[WebhookFilterGroupArgs]]</span> = None<span class="p">, </span><span class="nx">payload_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Webhook</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">branch_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebhookFilterGroupArgs]]</span> = None<span class="p">, </span><span class="nx">payload_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Webhook</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1183,7 +1183,7 @@ The following state arguments are supported:
 <a href="#state_filter_groups_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfiltergroup">List[Webhook<wbr>Filter<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webhookfiltergroup">Sequence[Webhook<wbr>Filter<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
 {{% /md %}}</dd>
@@ -1325,7 +1325,7 @@ The following state arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfiltergroupfilter">List[Webhook<wbr>Filter<wbr>Group<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webhookfiltergroupfilter">Sequence[Webhook<wbr>Filter<wbr>Group<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A webhook filter for the group. Filter blocks are documented below.
 {{% /md %}}</dd>

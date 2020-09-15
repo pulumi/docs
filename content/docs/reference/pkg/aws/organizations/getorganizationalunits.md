@@ -338,7 +338,7 @@ The following output properties are available:
 <a href="#childrens_python" style="color: inherit; text-decoration: inherit;">childrens</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getorganizationalunitschildren">List[Get<wbr>Organizational<wbr>Units<wbr>Children]</a></span>
+        <span class="property-type"><a href="#getorganizationalunitschildren">Sequence[Get<wbr>Organizational<wbr>Units<wbr>Children]</a></span>
     </dt>
     <dd>{{% md %}}List of child organizational units, which have the following attributes:
 {{% /md %}}</dd>

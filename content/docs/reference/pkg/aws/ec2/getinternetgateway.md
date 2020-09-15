@@ -25,7 +25,7 @@ meta_desc: "Explore the GetInternetGateway function of the ec2 module, including
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_internet_gateway(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetInternetGatewayFilterArgs]]</span> = None<span class="p">, </span><span class="nx">internet_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInternetGatewayResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_internet_gateway(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInternetGatewayFilterArgs]]</span> = None<span class="p">, </span><span class="nx">internet_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInternetGatewayResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -181,7 +181,7 @@ a pair on the desired Internet Gateway.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinternetgatewayfilter">List[Get<wbr>Internet<wbr>Gateway<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinternetgatewayfilter">Sequence[Get<wbr>Internet<wbr>Gateway<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd>
@@ -486,7 +486,7 @@ The following output properties are available:
 <a href="#attachments_python" style="color: inherit; text-decoration: inherit;">attachments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinternetgatewayattachment">List[Get<wbr>Internet<wbr>Gateway<wbr>Attachment]</a></span>
+        <span class="property-type"><a href="#getinternetgatewayattachment">Sequence[Get<wbr>Internet<wbr>Gateway<wbr>Attachment]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -538,7 +538,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinternetgatewayfilter">List[Get<wbr>Internet<wbr>Gateway<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getinternetgatewayfilter">Sequence[Get<wbr>Internet<wbr>Gateway<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -818,7 +818,7 @@ An Internet Gateway will be selected if any one of the given values matches.
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 An Internet Gateway will be selected if any one of the given values matches.

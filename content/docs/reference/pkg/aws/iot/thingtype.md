@@ -1007,7 +1007,7 @@ The following state arguments are supported:
 <a href="#searchable_attributes_python" style="color: inherit; text-decoration: inherit;">searchable_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of searchable thing attribute names.
 {{% /md %}}</dd>

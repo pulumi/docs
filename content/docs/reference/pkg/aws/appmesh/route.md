@@ -1784,7 +1784,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The priority for the route, between `0` and `1000`.
 Routes are matched based on the specified value, where `0` is the highest priority.
@@ -2023,7 +2023,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weighted_targets_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteactionweightedtarget">List[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttprouteactionweightedtarget">Sequence[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
@@ -2158,7 +2158,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
 {{% /md %}}</dd>
@@ -2362,7 +2362,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheader">List[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespechttproutematchheader">Sequence[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The client request headers to match on.
 {{% /md %}}</dd>
@@ -2955,7 +2955,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The end of the range.
 {{% /md %}}</dd>
@@ -2966,7 +2966,7 @@ This parameter must always start with /, which by itself matches all requests to
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The start of the range.
 {{% /md %}}</dd>
@@ -3149,7 +3149,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weighted_targets_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>targets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcprouteactionweightedtarget">List[Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routespectcprouteactionweightedtarget">Sequence[Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
@@ -3284,7 +3284,7 @@ You can specify one or more targets and their relative weights with which to dis
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
 {{% /md %}}</dd>

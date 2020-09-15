@@ -426,7 +426,7 @@ const example = new aws.wafv2.RuleGroup("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafv2/#pulumi_aws.wafv2.RuleGroup">RuleGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[RuleGroupRuleArgs]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">visibility_config</span><span class="p">:</span> <span class="nx">Optional[RuleGroupVisibilityConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafv2/#pulumi_aws.wafv2.RuleGroup">RuleGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[RuleGroupRuleArgs]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">visibility_config</span><span class="p">:</span> <span class="nx">Optional[RuleGroupVisibilityConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -856,7 +856,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The web ACL capacity units (WCUs) required for this rule group. See [here](https://docs.aws.amazon.com/waf/latest/APIReference/API_CreateRuleGroup.html#API_CreateRuleGroup_RequestSyntax) for general information and [here](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statements-list.html) for capacity specific information.
 {{% /md %}}</dd>
@@ -911,7 +911,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprule">List[Rule<wbr>Group<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprule">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
 {{% /md %}}</dd>
@@ -1110,7 +1110,7 @@ Get an existing RuleGroup resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lock_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[RuleGroupRuleArgs]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">visibility_config</span><span class="p">:</span> <span class="nx">Optional[RuleGroupVisibilityConfigArgs]</span> = None<span class="p">) -&gt;</span> RuleGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lock_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[RuleGroupRuleArgs]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">visibility_config</span><span class="p">:</span> <span class="nx">Optional[RuleGroupVisibilityConfigArgs]</span> = None<span class="p">) -&gt;</span> RuleGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1556,7 +1556,7 @@ The following state arguments are supported:
 <a href="#state_capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The web ACL capacity units (WCUs) required for this rule group. See [here](https://docs.aws.amazon.com/waf/latest/APIReference/API_CreateRuleGroup.html#API_CreateRuleGroup_RequestSyntax) for general information and [here](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statements-list.html) for capacity specific information.
 {{% /md %}}</dd>
@@ -1599,7 +1599,7 @@ The following state arguments are supported:
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprule">List[Rule<wbr>Group<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprule">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
 {{% /md %}}</dd>
@@ -1884,7 +1884,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If you define more than one Rule in a WebACL, AWS WAF evaluates each request against the `rules` in order based on the value of `priority`. AWS WAF processes rules with lower priority first.
 {{% /md %}}</dd>
@@ -2660,7 +2660,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -3236,7 +3236,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -3801,7 +3801,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -4469,7 +4469,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -4570,7 +4570,7 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
@@ -4827,7 +4827,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -5495,7 +5495,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -5706,7 +5706,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -5717,7 +5717,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -6385,7 +6385,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -6519,7 +6519,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -7187,7 +7187,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -7321,7 +7321,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -7989,7 +7989,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -8211,7 +8211,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -8879,7 +8879,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -8980,7 +8980,7 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
@@ -9160,7 +9160,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statement to negate. You can use any statement that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -9725,7 +9725,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -10393,7 +10393,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -10494,7 +10494,7 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
@@ -10751,7 +10751,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -11419,7 +11419,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -11630,7 +11630,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -11641,7 +11641,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -12309,7 +12309,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -12443,7 +12443,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -13111,7 +13111,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -13245,7 +13245,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -13913,7 +13913,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -14014,7 +14014,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -14579,7 +14579,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -15247,7 +15247,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -15348,7 +15348,7 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
@@ -15605,7 +15605,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -16273,7 +16273,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -16484,7 +16484,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -16495,7 +16495,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -17163,7 +17163,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -17297,7 +17297,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -17965,7 +17965,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -18099,7 +18099,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -18767,7 +18767,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -18945,7 +18945,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -19613,7 +19613,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -19824,7 +19824,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -19835,7 +19835,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -20503,7 +20503,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -20637,7 +20637,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -21305,7 +21305,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -21439,7 +21439,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -22107,7 +22107,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -22329,7 +22329,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -22997,7 +22997,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -23098,7 +23098,7 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
@@ -23278,7 +23278,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statement to negate. You can use any statement that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -23854,7 +23854,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -24419,7 +24419,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -25087,7 +25087,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -25188,7 +25188,7 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
@@ -25445,7 +25445,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -26113,7 +26113,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -26324,7 +26324,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -26335,7 +26335,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -27003,7 +27003,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -27137,7 +27137,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -27805,7 +27805,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -27939,7 +27939,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -28607,7 +28607,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -28829,7 +28829,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -29497,7 +29497,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -29598,7 +29598,7 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
@@ -29778,7 +29778,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statement to negate. You can use any statement that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -30343,7 +30343,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -31011,7 +31011,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -31112,7 +31112,7 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
@@ -31369,7 +31369,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -32037,7 +32037,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -32248,7 +32248,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -32259,7 +32259,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -32927,7 +32927,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -33061,7 +33061,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -33729,7 +33729,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -33863,7 +33863,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -34531,7 +34531,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -34632,7 +34632,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -35197,7 +35197,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -35865,7 +35865,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -35966,7 +35966,7 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
@@ -36223,7 +36223,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -36891,7 +36891,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -37102,7 +37102,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -37113,7 +37113,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -37781,7 +37781,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -37915,7 +37915,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -38583,7 +38583,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -38717,7 +38717,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -39385,7 +39385,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -39563,7 +39563,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -40231,7 +40231,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -40442,7 +40442,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -40453,7 +40453,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -41121,7 +41121,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -41255,7 +41255,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -41923,7 +41923,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -42057,7 +42057,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -42725,7 +42725,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -42826,7 +42826,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -43402,7 +43402,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -43967,7 +43967,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -44635,7 +44635,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -44736,7 +44736,7 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
@@ -44993,7 +44993,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -45661,7 +45661,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -45872,7 +45872,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -45883,7 +45883,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -46551,7 +46551,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -46685,7 +46685,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -47353,7 +47353,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -47487,7 +47487,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -48155,7 +48155,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -48377,7 +48377,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -49045,7 +49045,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -49146,7 +49146,7 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
@@ -49326,7 +49326,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statement to negate. You can use any statement that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -49891,7 +49891,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -50559,7 +50559,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -50660,7 +50660,7 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
@@ -50917,7 +50917,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -51585,7 +51585,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -51796,7 +51796,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -51807,7 +51807,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -52475,7 +52475,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -52609,7 +52609,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -53277,7 +53277,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -53411,7 +53411,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -54079,7 +54079,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -54180,7 +54180,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -54745,7 +54745,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -55413,7 +55413,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -55514,7 +55514,7 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
@@ -55771,7 +55771,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -56439,7 +56439,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -56650,7 +56650,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -56661,7 +56661,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -57329,7 +57329,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -57463,7 +57463,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -58131,7 +58131,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -58265,7 +58265,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -58933,7 +58933,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -59111,7 +59111,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -59779,7 +59779,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -59990,7 +59990,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -60001,7 +60001,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -60669,7 +60669,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -60803,7 +60803,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -61471,7 +61471,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -61605,7 +61605,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -62273,7 +62273,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -62451,7 +62451,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -63119,7 +63119,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -63330,7 +63330,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -63341,7 +63341,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -64009,7 +64009,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -64143,7 +64143,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -64811,7 +64811,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -64945,7 +64945,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -65613,7 +65613,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>

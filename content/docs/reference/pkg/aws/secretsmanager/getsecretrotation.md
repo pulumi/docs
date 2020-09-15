@@ -432,7 +432,7 @@ The following output properties are available:
 <a href="#rotation_rules_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecretrotationrotationrule">List[Get<wbr>Secret<wbr>Rotation<wbr>Rotation<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getsecretrotationrotationrule">Sequence[Get<wbr>Secret<wbr>Rotation<wbr>Rotation<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The decrypted part of the protected secret information that was originally provided as a binary. Base64 encoded.
 {{% /md %}}</dd>
@@ -535,7 +535,7 @@ The following output properties are available:
 <a href="#automatically_after_days_python" style="color: inherit; text-decoration: inherit;">automatically_<wbr>after_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -369,7 +369,7 @@ func main() {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.DefaultNetworkAcl">DefaultNetworkAcl</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_network_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[List[DefaultNetworkAclEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[List[DefaultNetworkAclIngressArgs]]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.DefaultNetworkAcl">DefaultNetworkAcl</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_network_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[Sequence[DefaultNetworkAclEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[Sequence[DefaultNetworkAclIngressArgs]]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -751,7 +751,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
 <a href="#egress_python" style="color: inherit; text-decoration: inherit;">egress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultnetworkaclegress">List[Default<wbr>Network<wbr>Acl<wbr>Egress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#defaultnetworkaclegress">Sequence[Default<wbr>Network<wbr>Acl<wbr>Egress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an egress rule. Parameters defined below.
 {{% /md %}}</dd>
@@ -762,7 +762,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
 <a href="#ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultnetworkaclingress">List[Default<wbr>Network<wbr>Acl<wbr>Ingress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#defaultnetworkaclingress">Sequence[Default<wbr>Network<wbr>Acl<wbr>Ingress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an ingress rule. Parameters defined below.
 {{% /md %}}</dd>
@@ -773,7 +773,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of Subnet IDs to apply the ACL to. See the
 notes below on managing Subnets in the Default Network ACL
@@ -1021,7 +1021,7 @@ Get an existing DefaultNetworkAcl resource's state with the given name, ID, and 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_network_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[List[DefaultNetworkAclEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[List[DefaultNetworkAclIngressArgs]]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DefaultNetworkAcl</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_network_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[Sequence[DefaultNetworkAclEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[Sequence[DefaultNetworkAclIngressArgs]]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DefaultNetworkAcl</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1455,7 +1455,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
 <a href="#state_egress_python" style="color: inherit; text-decoration: inherit;">egress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultnetworkaclegress">List[Default<wbr>Network<wbr>Acl<wbr>Egress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#defaultnetworkaclegress">Sequence[Default<wbr>Network<wbr>Acl<wbr>Egress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an egress rule. Parameters defined below.
 {{% /md %}}</dd>
@@ -1466,7 +1466,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
 <a href="#state_ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultnetworkaclingress">List[Default<wbr>Network<wbr>Acl<wbr>Ingress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#defaultnetworkaclingress">Sequence[Default<wbr>Network<wbr>Acl<wbr>Ingress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an ingress rule. Parameters defined below.
 {{% /md %}}</dd>
@@ -1488,7 +1488,7 @@ attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
 <a href="#state_subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of Subnet IDs to apply the ACL to. See the
 notes below on managing Subnets in the Default Network ACL
@@ -1890,7 +1890,7 @@ valid network mask.
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The from port to match.
 {{% /md %}}</dd>
@@ -1913,7 +1913,7 @@ protocol, you must specify a from and to port of 0.
 <a href="#rule_no_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>no</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The rule number. Used for ordering.
 {{% /md %}}</dd>
@@ -1924,7 +1924,7 @@ protocol, you must specify a from and to port of 0.
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The to port to match.
 {{% /md %}}</dd>
@@ -1947,7 +1947,7 @@ valid network mask.
 <a href="#icmp_code_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The ICMP type code to be used. Default 0.
 {{% /md %}}</dd>
@@ -1958,7 +1958,7 @@ valid network mask.
 <a href="#icmp_type_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The ICMP type to be used. Default 0.
 {{% /md %}}</dd>
@@ -2340,7 +2340,7 @@ valid network mask.
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The from port to match.
 {{% /md %}}</dd>
@@ -2363,7 +2363,7 @@ protocol, you must specify a from and to port of 0.
 <a href="#rule_no_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>no</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The rule number. Used for ordering.
 {{% /md %}}</dd>
@@ -2374,7 +2374,7 @@ protocol, you must specify a from and to port of 0.
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The to port to match.
 {{% /md %}}</dd>
@@ -2397,7 +2397,7 @@ valid network mask.
 <a href="#icmp_code_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The ICMP type code to be used. Default 0.
 {{% /md %}}</dd>
@@ -2408,7 +2408,7 @@ valid network mask.
 <a href="#icmp_type_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The ICMP type to be used. Default 0.
 {{% /md %}}</dd>
