@@ -83,13 +83,6 @@ check_links:
 	$(MAKE) ensure
 	./scripts/check-links.sh www
 
-.PHONY: remove_buckets
-remove_buckets:
-	$(MAKE) banner
-	$(MAKE) ensure
-	./scripts/remove-recent-buckets.sh push
-	./scripts/remove-recent-buckets.sh pr
-
 .PHONY: ci_push
 ci_push::
 	$(MAKE) banner
@@ -108,3 +101,8 @@ ci_pull_request:
 ci_pull_request_closed:
 	$(MAKE) banner
 	./scripts/ci-pull-request-closed.sh
+
+.PHONY: ci_bucket_cleanup
+ci_bucket_cleanup:
+	$(MAKE) banner
+	./scripts/ci-bucket-cleanup.sh
