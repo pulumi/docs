@@ -11,8 +11,6 @@ In this blog post, we will explore PERN stack applications and deploy one to AWS
 
 <!--more-->
 
-The nature of the project means that it has four distinct tiers: a database that keeps track of our data, a stateless server that receives commands and manipulates the database, a clientside server that contains and send out the user interface code, and the internet browser that downloads that code, presents the UI and sends requests to the stateless server.
-
 PERN projects have four distinct tiers:
 
 - a database that keeps track of our data,
@@ -32,7 +30,7 @@ $ mkdir aws-pern-voting-app && cd aws-pern-voting-app
 $ pulumi new aws-typescript
 ```
 
-This tutorial was written for the [aws-pern-voting-app example](https://github.com/pulumi/examples/tree/vova/aws-pern-voting-app/aws-pern-voting-app) but will work with any other PERN stack application. The example uses two folders to hold the client and server tiers and a Dockerfile that builds images that run as containers in AWS.
+This tutorial was written for the [aws-pern-voting-app example](https://github.com/pulumi/examples/tree/master/aws-pern-voting-app) but will work with any other PERN stack application. The example uses two folders to hold the client and server tiers and a Dockerfile that builds images that run as containers in AWS.
 
 To deploy our PERN stack, the project requires several configuration variables, which we set using `pulumi config set`. The variables are used to configure the PostgreSQL admin account, a user account for initializing the schema and table, and the database's region.
 
@@ -346,4 +344,4 @@ In this example, I explained the basic principles behind PERN stack applications
 
 Next week, I'll demonstrate how to integrate applications with Kubernetes, and seamlessly deploy them to EKS using Pulumi.
 
-The blog post's code can be [found on Github](https://github.com/pulumi/examples/tree/vova/aws-pern-voting-app/aws-pern-voting-app).
+The blog post's code can be [found on Github](https://github.com/pulumi/examples/tree/master/aws-pern-voting-app).
