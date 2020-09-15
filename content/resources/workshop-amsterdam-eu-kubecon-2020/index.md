@@ -3,6 +3,9 @@
 title: "KubeCon EU Pre-day Workshop"
 meta_desc: "Join Pulumi at our Infrastructure As Code Workshop at KubeCon EU and learn more about cloud programming, infrastructure as code, and many other topics."
 
+aliases:
+  - /events/workshop-amsterdam-eu-kubecon-2020
+
 # Events with unlisted as true will not be shown on the event list
 unlisted: true
 block_external_search_index: true

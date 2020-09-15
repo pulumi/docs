@@ -5,4 +5,5 @@ meta_desc: |
 
 aliases:
   - /webinars
+  - /events
 ---

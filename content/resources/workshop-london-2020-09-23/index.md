@@ -1,33 +1,37 @@
 ---
 # Name of the event.
-title: "Infrastructure As Code Workshop | New York City, NY"
+title: "Infrastructure As Code Workshop | London, UK"
 subtitle: "Managing your cloud with Pulumi"
-meta_desc: "Join Pulumi at our Infrastructure As Code Workshop in New York City and learn more about cloud programming, infrastructure as code, and many other topics."
+meta_desc: "Join Pulumi at our Infrastructure As Code Workshop in London, UK and learn more about cloud programming, infrastructure as code, and many other topics."
+
+aliases:
+  - /events/workshop-london-2020-09-23
 
 # The layout of the landing page.
 type: events
 
 # The url slug for the even landing page.
-url_slug: "workshop-nyc-2020-07-08"
+url_slug: "workshop-london-2020-09-23"
 
 # Event information
 event:
     # The type of activities we will be doing at the event.
     type: ["workshop"]
     # The event address
-    location: "11 Times Square, New York, NY 10036"
+    location: "70 Wilson Street, London, UK"
     # The start date of an event. Format YYYY-MM-DD
-    start_date: "2020-07-08"
+    start_date: "2020-09-23"
     # The end date of an event. Format YYYY-MM-DD
-    end_date: "2020-07-08"
+    end_date: "2020-09-23"
     # The start and end time of an event with the time zone.
     # i.e. 5:30PM - 8:30PM (PT)
     # This is only displayed on event specific pages.
     time: "5:30PM - 8:30PM (PT)"
     # The event description shown on the event list page.
-    description: "Join us as we walk through Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
+    description: "Join us as we walkthrough Infrastructure as Code concepts via a series of hands-on labs. Topics covered include IaC fundamentals, in addition to application architectures and how to use IaC to create, update, and manage them."
     # The Calendly registrtion url for event specific pages.
-    calendly_url: "https://calendly.com/pulumi/nyc?month=2020-07"
+    eventbrite_url: "https://www.eventbrite.com/e/infrastructure-as-code-with-pulumi-tickets-97322563407"
+    eventbrite_id: "97322563407"
     # The cost of an event.
     cost: "Free"
 ---
