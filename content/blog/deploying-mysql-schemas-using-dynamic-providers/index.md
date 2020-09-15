@@ -290,4 +290,4 @@ In this example, I showed how straightforward it is to expand functionality with
 
 Next week, I'll change the frontend from Flask to Django, and will show how to integrate it with our new MySQL server.
 
-The blog post's full code and an in-depth explanation for each component can be [found on Github](https://github.com/jetvova/examples/tree/vova/aws-py-sql-dynamicresource/aws-py-dynamicresource).
+The blog post's full code and an in-depth explanation for each component can be [found on Github](https://github.com/pulumi/examples/tree/master/aws-py-dynamicresource).
