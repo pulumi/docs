@@ -22,9 +22,9 @@ explore what's possible, you've come to the right place.
 
 {{< resource-providers "aws,azure,gcp,kubernetes" >}}
 
-### Preview Core Providers
+### Next Generation Providers
 
-{{< resource-providers "azurerm" >}}
+{{< resource-providers "azure-nextgen" >}}
 
 ### Cloud Providers
 
