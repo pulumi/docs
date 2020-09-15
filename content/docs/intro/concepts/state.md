@@ -332,8 +332,8 @@ for your stack if needed.
 
 ## Backends and secrets
 
-When a secret value is provided via [secret configuration]({{ relref
-"/docs/intro/concepts/config" }})---either by passing `--secret` to `pulumi config set` or
+When a secret value is provided via [secret configuration]({{< relref "/docs/intro/concepts/config" >}})
+--- either by passing `--secret` to `pulumi config set` or
 by creating one inside your program via `pulumi.secret` (JavaScript) or `Output.secret`
 (Python)---the value is encrypted with a key managed by the backend you are connected to.
 When using the local or remote backend, this key is derived from a passphrase you set when
@@ -342,15 +342,15 @@ by the service.
 
 For new stacks managed with the Pulumi Service backend, you may choose to use the
 passphrase-based key instead. Pass `--secrets-provider passphrase` when you create the
-stack---either via [`pulumi new`]({{ relref "/docs/reference/cli/pulumi_stack_init" }}) or
-[`pulumi stack init`]({{ relref "/docs/reference/cli/pulumi_stack_init" }}). You will be
+stack---either via [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_stack_init" >}}) or
+[`pulumi stack init`]({{< relref "/docs/reference/cli/pulumi_stack_init" >}}). You will be
 prompted to choose a passphrase which will be required for future operations like
 `update`, `preview`, and `destroy`.
 
 When using the filesystem or cloud storage backend, you must use the passphrase-based
 secrets provider.
 
-See [Configuration and Secrets]({{ relref "/docs/intro/concepts/config" }}) for more details.
+See [Configuration and Secrets]({{< relref "/docs/intro/concepts/config" >}}) for more details.
 
 ## Logging out
 
