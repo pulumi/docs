@@ -767,7 +767,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of ram group names.
 {{% /md %}}</dd>
@@ -778,7 +778,7 @@ The following output properties are available:
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoliciespolicy">List[Get<wbr>Policies<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getpoliciespolicy">Sequence[Get<wbr>Policies<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}A list of policies. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -1166,7 +1166,7 @@ The following output properties are available:
 <a href="#attachment_count_python" style="color: inherit; text-decoration: inherit;">attachment_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Attachment count of the policy.
 {{% /md %}}</dd>

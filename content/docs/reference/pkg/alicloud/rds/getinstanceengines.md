@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#instance_engines_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>engines</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceenginesinstanceengine">List[Get<wbr>Instance<wbr>Engines<wbr>Instance<wbr>Engine]</a></span>
+        <span class="property-type"><a href="#getinstanceenginesinstanceengine">Sequence[Get<wbr>Instance<wbr>Engines<wbr>Instance<wbr>Engine]</a></span>
     </dt>
     <dd>{{% md %}}A list of Rds available resource. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -1029,7 +1029,7 @@ The following output properties are available:
 <a href="#zone_ids_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceenginesinstanceenginezoneid">List[Get<wbr>Instance<wbr>Engines<wbr>Instance<wbr>Engine<wbr>Zone<wbr>Id<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstanceenginesinstanceenginezoneid">Sequence[Get<wbr>Instance<wbr>Engines<wbr>Instance<wbr>Engine<wbr>Zone<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Zone to launch the DB instance.
 {{% /md %}}</dd>
@@ -1163,7 +1163,7 @@ The following output properties are available:
 <a href="#sub_zone_ids_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>zone_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of sub zone ids which in the id - e.g If `id` is `cn-beijing-MAZ5(a,b)`, `sub_zone_ids` will be `["cn-beijing-a", "cn-beijing-b"]`.
 {{% /md %}}</dd>

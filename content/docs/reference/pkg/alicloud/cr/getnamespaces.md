@@ -494,7 +494,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of matched Container Registry namespaces. Its element is a namespace name.
 {{% /md %}}</dd>
@@ -505,7 +505,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of namespace names.
 {{% /md %}}</dd>
@@ -516,7 +516,7 @@ The following output properties are available:
 <a href="#namespaces_python" style="color: inherit; text-decoration: inherit;">namespaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnamespacesnamespace">List[Get<wbr>Namespaces<wbr>Namespace]</a></span>
+        <span class="property-type"><a href="#getnamespacesnamespace">Sequence[Get<wbr>Namespaces<wbr>Namespace]</a></span>
     </dt>
     <dd>{{% md %}}A list of matched Container Registry namespaces. Each element contains the following attributes:
 {{% /md %}}</dd>

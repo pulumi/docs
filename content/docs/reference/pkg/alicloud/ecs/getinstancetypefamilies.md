@@ -672,7 +672,7 @@ The following output properties are available:
 <a href="#families_python" style="color: inherit; text-decoration: inherit;">families</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypefamiliesfamily">List[Get<wbr>Instance<wbr>Type<wbr>Families<wbr>Family]</a></span>
+        <span class="property-type"><a href="#getinstancetypefamiliesfamily">Sequence[Get<wbr>Instance<wbr>Type<wbr>Families<wbr>Family]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -693,7 +693,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of instance type family IDs.
 {{% /md %}}</dd>
@@ -928,7 +928,7 @@ The following output properties are available:
 <a href="#zone_ids_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of Zone to launch the instance.
 {{% /md %}}</dd>

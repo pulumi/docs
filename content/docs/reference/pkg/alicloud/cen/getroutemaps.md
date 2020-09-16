@@ -136,7 +136,7 @@ export const firstCenRouteMapId = thisRouteMaps.maps[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_route_maps(</span><span class="nx">cen_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cen_region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transmit_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRouteMapsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_route_maps(</span><span class="nx">cen_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cen_region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transmit_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRouteMapsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -449,7 +449,7 @@ The following arguments are supported:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of CEN route map IDs.
 {{% /md %}}</dd>
@@ -846,7 +846,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of CEN route map IDs.
 {{% /md %}}</dd>
@@ -857,7 +857,7 @@ The following output properties are available:
 <a href="#maps_python" style="color: inherit; text-decoration: inherit;">maps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getroutemapsmap">List[Get<wbr>Route<wbr>Maps<wbr>Map]</a></span>
+        <span class="property-type"><a href="#getroutemapsmap">Sequence[Get<wbr>Route<wbr>Maps<wbr>Map]</a></span>
     </dt>
     <dd>{{% md %}}A list of CEN instances. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -2040,7 +2040,7 @@ The following output properties are available:
 <a href="#destination_child_instance_types_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>child_<wbr>instance_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination instances.
 {{% /md %}}</dd>
@@ -2051,7 +2051,7 @@ The following output properties are available:
 <a href="#destination_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the prefix list.
 {{% /md %}}</dd>
@@ -2062,7 +2062,7 @@ The following output properties are available:
 <a href="#destination_instance_ids_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>instance_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination instances.
 {{% /md %}}</dd>
@@ -2084,7 +2084,7 @@ The following output properties are available:
 <a href="#destination_route_table_ids_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>route_<wbr>table_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables.
 {{% /md %}}</dd>
@@ -2117,7 +2117,7 @@ The following output properties are available:
 <a href="#match_asns_python" style="color: inherit; text-decoration: inherit;">match_<wbr>asns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the As path list.
 {{% /md %}}</dd>
@@ -2128,7 +2128,7 @@ The following output properties are available:
 <a href="#match_community_sets_python" style="color: inherit; text-decoration: inherit;">match_<wbr>community_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the community set.
 {{% /md %}}</dd>
@@ -2139,7 +2139,7 @@ The following output properties are available:
 <a href="#next_priority_python" style="color: inherit; text-decoration: inherit;">next_<wbr>priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of the next route map that is associated with the current route map.
 {{% /md %}}</dd>
@@ -2150,7 +2150,7 @@ The following output properties are available:
 <a href="#operate_community_sets_python" style="color: inherit; text-decoration: inherit;">operate_<wbr>community_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An action statement that operates the community attribute.
 {{% /md %}}</dd>
@@ -2161,7 +2161,7 @@ The following output properties are available:
 <a href="#preference_python" style="color: inherit; text-decoration: inherit;">preference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}An action statement that modifies the preference of the route.
 {{% /md %}}</dd>
@@ -2172,7 +2172,7 @@ The following output properties are available:
 <a href="#prepend_as_paths_python" style="color: inherit; text-decoration: inherit;">prepend_<wbr>as_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Indicates AS Path prepending when a regional gateway receives or publishes a route.
 {{% /md %}}</dd>
@@ -2183,7 +2183,7 @@ The following output properties are available:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of the route map.
 {{% /md %}}</dd>
@@ -2205,7 +2205,7 @@ The following output properties are available:
 <a href="#route_types_python" style="color: inherit; text-decoration: inherit;">route_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of route types.
 {{% /md %}}</dd>
@@ -2216,7 +2216,7 @@ The following output properties are available:
 <a href="#source_child_instance_types_python" style="color: inherit; text-decoration: inherit;">source_<wbr>child_<wbr>instance_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
 {{% /md %}}</dd>
@@ -2227,7 +2227,7 @@ The following output properties are available:
 <a href="#source_instance_ids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
 {{% /md %}}</dd>
@@ -2249,7 +2249,7 @@ The following output properties are available:
 <a href="#source_region_ids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>region_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source regions.
 {{% /md %}}</dd>
@@ -2260,7 +2260,7 @@ The following output properties are available:
 <a href="#source_route_table_ids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>route_<wbr>table_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables.
 {{% /md %}}</dd>

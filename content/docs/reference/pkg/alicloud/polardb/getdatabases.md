@@ -467,7 +467,7 @@ The following output properties are available:
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabasesdatabase">List[Get<wbr>Databases<wbr>Database]</a></span>
+        <span class="property-type"><a href="#getdatabasesdatabase">Sequence[Get<wbr>Databases<wbr>Database]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB cluster databases. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}database name of the cluster.
 {{% /md %}}</dd>
@@ -770,7 +770,7 @@ The following output properties are available:
 <a href="#accounts_python" style="color: inherit; text-decoration: inherit;">accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabasesdatabaseaccount">List[Get<wbr>Databases<wbr>Database<wbr>Account<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdatabasesdatabaseaccount">Sequence[Get<wbr>Databases<wbr>Database<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of accounts of database. Each element contains the following attributes.
 {{% /md %}}</dd>

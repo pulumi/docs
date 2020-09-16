@@ -688,7 +688,7 @@ The following output properties are available:
 <a href="#instance_engines_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>engines</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceenginesinstanceengine">List[Get<wbr>Instance<wbr>Engines<wbr>Instance<wbr>Engine]</a></span>
+        <span class="property-type"><a href="#getinstanceenginesinstanceengine">Sequence[Get<wbr>Instance<wbr>Engines<wbr>Instance<wbr>Engine]</a></span>
     </dt>
     <dd>{{% md %}}A list of KVStore available instance engines. Each element contains the following attributes:
 {{% /md %}}</dd>

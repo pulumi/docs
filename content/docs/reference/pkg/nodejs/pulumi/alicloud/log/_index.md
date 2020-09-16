@@ -3,7 +3,7 @@ title: "Module log"
 title_tag: "Module log | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "log"
 meta_desc: "Explore members of the log module in the @pulumi/alicloud package."
-git_sha: "c2484ffe8d16b32fc9b862da2b63e69be7ee81af"
+git_sha: "e05848fea3b8bad6ca0b4f5e8c073608d920ce30"
 block_external_search_index: true
 ---
 
@@ -28,6 +28,10 @@ block_external_search_index: true
     <li><a href="#StoreIndex"><span class="symbol resource"></span>StoreIndex</a></li>
 </ul>
 
+<h3>Functions</h3>
+<ul class="api">
+    <li><a href="#getService"><span class="symbol function"></span>getService</a></li>
+</ul>
 
 <h3>Others</h3>
 <ul class="api">
@@ -37,6 +41,8 @@ block_external_search_index: true
     <li><a href="#AuditState"><span class="symbol api"></span>AuditState</a></li>
     <li><a href="#DashboardArgs"><span class="symbol api"></span>DashboardArgs</a></li>
     <li><a href="#DashboardState"><span class="symbol api"></span>DashboardState</a></li>
+    <li><a href="#GetServiceArgs"><span class="symbol api"></span>GetServiceArgs</a></li>
+    <li><a href="#GetServiceResult"><span class="symbol api"></span>GetServiceResult</a></li>
     <li><a href="#LogTailAttachmentArgs"><span class="symbol api"></span>LogTailAttachmentArgs</a></li>
     <li><a href="#LogTailAttachmentState"><span class="symbol api"></span>LogTailAttachmentState</a></li>
     <li><a href="#LogTailConfigArgs"><span class="symbol api"></span>LogTailConfigArgs</a></li>
@@ -54,7 +60,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Alert" data-link-title="Alert">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L71">
         Resource <strong>Alert</strong>
     </a>
 </h3>
@@ -123,7 +129,7 @@ const exampleAlert = new alicloud.log.Alert("exampleAlert", {
 ```
 
 <h4 class="pdoc-member-header" id="Alert-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L147"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L147"> <b>constructor</b></a>
 </h4>
 
 
@@ -137,7 +143,7 @@ Create a Alert resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Alert-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L81">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L81">method <b>get</b></a>
 </h4>
 
 
@@ -148,14 +154,14 @@ Get an existing Alert resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Alert-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L71">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L71">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Alert-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L92">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L92">method <b>isInstance</b></a>
 </h4>
 
 
@@ -166,7 +172,7 @@ Returns true if the given object is an instance of Alert.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Alert-alertDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L102">property <b>alertDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L102">property <b>alertDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alertDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -174,7 +180,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Alert description.
 
 <h4 class="pdoc-member-header" id="Alert-alertDisplayname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L106">property <b>alertDisplayname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L106">property <b>alertDisplayname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alertDisplayname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -182,7 +188,7 @@ Alert description.
 Alert displayname.
 
 <h4 class="pdoc-member-header" id="Alert-alertName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L110">property <b>alertName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L110">property <b>alertName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alertName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -190,7 +196,7 @@ Alert displayname.
 Name of logstore for configuring alarm service.
 
 <h4 class="pdoc-member-header" id="Alert-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L114">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L114">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -198,12 +204,12 @@ Name of logstore for configuring alarm service.
 Conditional expression, such as: count> 100.
 
 <h4 class="pdoc-member-header" id="Alert-dashboard">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L115">property <b>dashboard</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L115">property <b>dashboard</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dashboard: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Alert-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -212,7 +218,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Alert-muteUntil">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L119">property <b>muteUntil</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L119">property <b>muteUntil</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>muteUntil: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -220,7 +226,7 @@ deployments and may be missing (undefined) during planning phases.
 Timestamp, notifications before closing again.
 
 <h4 class="pdoc-member-header" id="Alert-notificationLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L123">property <b>notificationLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L123">property <b>notificationLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#AlertNotificationList'>AlertNotificationList</a>[]&gt;;</code></pre>
@@ -228,7 +234,7 @@ Timestamp, notifications before closing again.
 Alarm information notification list.
 
 <h4 class="pdoc-member-header" id="Alert-notifyThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L127">property <b>notifyThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L127">property <b>notifyThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notifyThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -236,7 +242,7 @@ Alarm information notification list.
 Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
 
 <h4 class="pdoc-member-header" id="Alert-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L131">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L131">property <b>projectName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -244,7 +250,7 @@ Notification threshold, which is not notified until the number of triggers is re
 The project name.
 
 <h4 class="pdoc-member-header" id="Alert-queryLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L135">property <b>queryLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L135">property <b>queryLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>queryLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#AlertQueryList'>AlertQueryList</a>[]&gt;;</code></pre>
@@ -252,7 +258,7 @@ The project name.
 Multiple conditions for configured alarm query.
 
 <h4 class="pdoc-member-header" id="Alert-scheduleInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L139">property <b>scheduleInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L139">property <b>scheduleInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scheduleInterval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -260,7 +266,7 @@ Multiple conditions for configured alarm query.
 Execution interval. 60 seconds minimum, such as 60s, 1h.
 
 <h4 class="pdoc-member-header" id="Alert-scheduleType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L143">property <b>scheduleType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L143">property <b>scheduleType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scheduleType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -268,7 +274,7 @@ Execution interval. 60 seconds minimum, such as 60s, 1h.
 Default FixedRate. No need to configure this parameter.
 
 <h4 class="pdoc-member-header" id="Alert-throttling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L147">property <b>throttling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L147">property <b>throttling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>throttling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -276,7 +282,7 @@ Default FixedRate. No need to configure this parameter.
 Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
 
 <h4 class="pdoc-member-header" id="Alert-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L71">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L71">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -285,7 +291,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Audit" data-link-title="Audit">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L55">
         Resource <strong>Audit</strong>
     </a>
 </h3>
@@ -340,7 +346,7 @@ const example = new alicloud.log.Audit("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Audit-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -354,7 +360,7 @@ Create a Audit resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Audit-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L65">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L65">method <b>get</b></a>
 </h4>
 
 
@@ -365,14 +371,14 @@ Get an existing Audit resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Audit-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L55">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L55">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Audit-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L76">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L76">method <b>isInstance</b></a>
 </h4>
 
 
@@ -383,7 +389,7 @@ Returns true if the given object is an instance of Audit.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Audit-aliuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L86">property <b>aliuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L86">property <b>aliuid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aliuid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -391,7 +397,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Aliuid value of your account.
 
 <h4 class="pdoc-member-header" id="Audit-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L90">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L90">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -399,7 +405,7 @@ Aliuid value of your account.
 Name of SLS log audit.
 
 <h4 class="pdoc-member-header" id="Audit-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L55">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L55">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -408,7 +414,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Audit-multiAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L94">property <b>multiAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L94">property <b>multiAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>multiAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -416,7 +422,7 @@ deployments and may be missing (undefined) during planning phases.
 Multi-account configuration, please fill in multiple aliuid.
 
 <h4 class="pdoc-member-header" id="Audit-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L55">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L55">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -425,7 +431,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Audit-variableMap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L98">property <b>variableMap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L98">property <b>variableMap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>variableMap: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -433,7 +439,7 @@ deployments.
 Log audit detailed configuration.
 
 <h3 class="pdoc-module-header" id="Dashboard" data-link-title="Dashboard">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L62">
         Resource <strong>Dashboard</strong>
     </a>
 </h3>
@@ -495,7 +501,7 @@ const example = new alicloud.log.Dashboard("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Dashboard-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L105"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L105"> <b>constructor</b></a>
 </h4>
 
 
@@ -509,7 +515,7 @@ Create a Dashboard resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Dashboard-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L72">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L72">method <b>get</b></a>
 </h4>
 
 
@@ -520,14 +526,14 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Dashboard-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L62">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L62">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Dashboard-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L83">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L83">method <b>isInstance</b></a>
 </h4>
 
 
@@ -538,7 +544,7 @@ Returns true if the given object is an instance of Dashboard.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Dashboard-charList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L93">property <b>charList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L93">property <b>charList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>charList: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -546,7 +552,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Configuration of charts in the dashboard.
 
 <h4 class="pdoc-member-header" id="Dashboard-dashboardName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L97">property <b>dashboardName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L97">property <b>dashboardName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dashboardName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -554,7 +560,7 @@ Configuration of charts in the dashboard.
 The name of the Log Dashboard.
 
 <h4 class="pdoc-member-header" id="Dashboard-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L101">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L101">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -562,7 +568,7 @@ The name of the Log Dashboard.
 Dashboard alias.
 
 <h4 class="pdoc-member-header" id="Dashboard-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -571,7 +577,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Dashboard-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L105">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L105">property <b>projectName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -579,7 +585,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the log project. It is the only in one Alicloud account.
 
 <h4 class="pdoc-member-header" id="Dashboard-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L62">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L62">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -588,7 +594,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LogTailAttachment" data-link-title="LogTailAttachment">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailAttachment.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailAttachment.ts#L68">
         Resource <strong>LogTailAttachment</strong>
     </a>
 </h3>
@@ -656,7 +662,7 @@ const testLogTailAttachment = new alicloud.log.LogTailAttachment("testLogTailAtt
 ```
 
 <h4 class="pdoc-member-header" id="LogTailAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailAttachment.ts#L107"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailAttachment.ts#L107"> <b>constructor</b></a>
 </h4>
 
 
@@ -670,7 +676,7 @@ Create a LogTailAttachment resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LogTailAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailAttachment.ts#L78">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailAttachment.ts#L78">method <b>get</b></a>
 </h4>
 
 
@@ -681,14 +687,14 @@ Get an existing LogTailAttachment resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LogTailAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailAttachment.ts#L68">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailAttachment.ts#L68">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogTailAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailAttachment.ts#L89">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailAttachment.ts#L89">method <b>isInstance</b></a>
 </h4>
 
 
@@ -699,7 +705,7 @@ Returns true if the given object is an instance of LogTailAttachment.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogTailAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailAttachment.ts#L68">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailAttachment.ts#L68">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -708,7 +714,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LogTailAttachment-logtailConfigName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailAttachment.ts#L99">property <b>logtailConfigName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailAttachment.ts#L99">property <b>logtailConfigName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logtailConfigName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -716,7 +722,7 @@ deployments and may be missing (undefined) during planning phases.
 The Logtail configuration name, which is unique in the same project.
 
 <h4 class="pdoc-member-header" id="LogTailAttachment-machineGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailAttachment.ts#L103">property <b>machineGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailAttachment.ts#L103">property <b>machineGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>machineGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -724,7 +730,7 @@ The Logtail configuration name, which is unique in the same project.
 The machine group name, which is unique in the same project.
 
 <h4 class="pdoc-member-header" id="LogTailAttachment-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailAttachment.ts#L107">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailAttachment.ts#L107">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -732,7 +738,7 @@ The machine group name, which is unique in the same project.
 The project name to the log store belongs.
 
 <h4 class="pdoc-member-header" id="LogTailAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailAttachment.ts#L68">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailAttachment.ts#L68">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -741,14 +747,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LogTailConfig" data-link-title="LogTailConfig">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L7">
         Resource <strong>LogTailConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>LogTailConfig</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="LogTailConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L62"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L62"> <b>constructor</b></a>
 </h4>
 
 
@@ -762,7 +768,7 @@ Create a LogTailConfig resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LogTailConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -773,14 +779,14 @@ Get an existing LogTailConfig resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LogTailConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogTailConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -791,7 +797,7 @@ Returns true if the given object is an instance of LogTailConfig.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogTailConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -800,7 +806,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LogTailConfig-inputDetail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L38">property <b>inputDetail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L38">property <b>inputDetail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inputDetail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -808,7 +814,7 @@ deployments and may be missing (undefined) during planning phases.
 The logtail configure the required JSON files. ([Refer to details](https://www.alibabacloud.com/help/doc-detail/29058.htm))
 
 <h4 class="pdoc-member-header" id="LogTailConfig-inputType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L42">property <b>inputType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L42">property <b>inputType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inputType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -816,7 +822,7 @@ The logtail configure the required JSON files. ([Refer to details](https://www.a
 The input type. Currently only two types of files and plugin are supported.
 
 <h4 class="pdoc-member-header" id="LogTailConfig-logSample">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L46">property <b>logSample</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L46">property <b>logSample</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logSample: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -824,7 +830,7 @@ The input type. Currently only two types of files and plugin are supported.
 （Optional）The log sample of the Logtail configuration. The log size cannot exceed 1,000 bytes.
 
 <h4 class="pdoc-member-header" id="LogTailConfig-logstore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L50">property <b>logstore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L50">property <b>logstore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logstore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -832,7 +838,7 @@ The input type. Currently only two types of files and plugin are supported.
 The log store name to the query index belongs.
 
 <h4 class="pdoc-member-header" id="LogTailConfig-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L54">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -840,7 +846,7 @@ The log store name to the query index belongs.
 The Logtail configuration name, which is unique in the same project.
 
 <h4 class="pdoc-member-header" id="LogTailConfig-outputType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L58">property <b>outputType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L58">property <b>outputType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>outputType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -848,7 +854,7 @@ The Logtail configuration name, which is unique in the same project.
 The output type. Currently, only LogService is supported.
 
 <h4 class="pdoc-member-header" id="LogTailConfig-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L62">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L62">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -856,7 +862,7 @@ The output type. Currently, only LogService is supported.
 The project name to the log store belongs.
 
 <h4 class="pdoc-member-header" id="LogTailConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -865,14 +871,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="MachineGroup" data-link-title="MachineGroup">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L7">
         Resource <strong>MachineGroup</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>MachineGroup</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="MachineGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L54"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L54"> <b>constructor</b></a>
 </h4>
 
 
@@ -886,7 +892,7 @@ Create a MachineGroup resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MachineGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -897,14 +903,14 @@ Get an existing MachineGroup resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MachineGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MachineGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -915,7 +921,7 @@ Returns true if the given object is an instance of MachineGroup.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MachineGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -924,7 +930,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MachineGroup-identifyLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L38">property <b>identifyLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L38">property <b>identifyLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identifyLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -932,7 +938,7 @@ deployments and may be missing (undefined) during planning phases.
 The specific machine identification, which can be an IP address or user-defined identity.
 
 <h4 class="pdoc-member-header" id="MachineGroup-identifyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L42">property <b>identifyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L42">property <b>identifyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identifyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -940,7 +946,7 @@ The specific machine identification, which can be an IP address or user-defined 
 The machine identification type, including IP and user-defined identity. Valid values are "ip" and "userdefined". Default to "ip".
 
 <h4 class="pdoc-member-header" id="MachineGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -948,7 +954,7 @@ The machine identification type, including IP and user-defined identity. Valid v
 The machine group name, which is unique in the same project.
 
 <h4 class="pdoc-member-header" id="MachineGroup-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L50">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L50">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -956,7 +962,7 @@ The machine group name, which is unique in the same project.
 The project name to the machine group belongs.
 
 <h4 class="pdoc-member-header" id="MachineGroup-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L54">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L54">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -964,7 +970,7 @@ The project name to the machine group belongs.
 The topic of a machine group.
 
 <h4 class="pdoc-member-header" id="MachineGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -973,14 +979,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Project" data-link-title="Project">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/project.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/project.ts#L7">
         Resource <strong>Project</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Project</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Project-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/project.ts#L42"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/project.ts#L42"> <b>constructor</b></a>
 </h4>
 
 
@@ -994,7 +1000,7 @@ Create a Project resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Project-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/project.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/project.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -1005,14 +1011,14 @@ Get an existing Project resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Project-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/project.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/project.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Project-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/project.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/project.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1023,7 +1029,7 @@ Returns true if the given object is an instance of Project.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Project-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/project.ts#L38">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/project.ts#L38">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1031,7 +1037,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Description of the log project.
 
 <h4 class="pdoc-member-header" id="Project-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/project.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/project.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1040,7 +1046,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Project-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/project.ts#L42">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/project.ts#L42">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1048,7 +1054,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the log project. It is the only in one Alicloud account.
 
 <h4 class="pdoc-member-header" id="Project-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/project.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/project.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1057,14 +1063,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Store" data-link-title="Store">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L9">
         Resource <strong>Store</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Store</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Store-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -1078,7 +1084,7 @@ Create a Store resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Store-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -1089,14 +1095,14 @@ Get an existing Store resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Store-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Store-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1107,7 +1113,7 @@ Returns true if the given object is an instance of Store.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Store-appendMeta">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L40">property <b>appendMeta</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L40">property <b>appendMeta</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appendMeta: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1115,7 +1121,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Determines whether to append log meta automatically. The meta includes log receive time and client IP address. Default to true.
 
 <h4 class="pdoc-member-header" id="Store-autoSplit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L44">property <b>autoSplit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L44">property <b>autoSplit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoSplit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1123,7 +1129,7 @@ Determines whether to append log meta automatically. The meta includes log recei
 Determines whether to automatically split a shard. Default to true.
 
 <h4 class="pdoc-member-header" id="Store-enableWebTracking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L48">property <b>enableWebTracking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L48">property <b>enableWebTracking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableWebTracking: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1131,7 +1137,7 @@ Determines whether to automatically split a shard. Default to true.
 Determines whether to enable Web Tracking. Default false.
 
 <h4 class="pdoc-member-header" id="Store-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1140,7 +1146,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Store-maxSplitShardCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L52">property <b>maxSplitShardCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L52">property <b>maxSplitShardCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxSplitShardCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1148,7 +1154,7 @@ deployments and may be missing (undefined) during planning phases.
 The maximum number of shards for automatic split, which is in the range of 1 to 64. You must specify this parameter when autoSplit is true.
 
 <h4 class="pdoc-member-header" id="Store-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L56">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L56">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1156,7 +1162,7 @@ The maximum number of shards for automatic split, which is in the range of 1 to 
 The log store, which is unique in the same project.
 
 <h4 class="pdoc-member-header" id="Store-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L60">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L60">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1164,7 +1170,7 @@ The log store, which is unique in the same project.
 The project name to the log store belongs.
 
 <h4 class="pdoc-member-header" id="Store-retentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L64">property <b>retentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L64">property <b>retentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retentionPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1172,7 +1178,7 @@ The project name to the log store belongs.
 The data retention time (in days). Valid values: [1-3650]. Default to 30. Log store data will be stored permanently when the value is "3650".
 
 <h4 class="pdoc-member-header" id="Store-shardCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L68">property <b>shardCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L68">property <b>shardCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>shardCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1180,12 +1186,12 @@ The data retention time (in days). Valid values: [1-3650]. Default to 30. Log st
 The number of shards in this log store. Default to 2. You can modify it by "Split" or "Merge" operations. [Refer to details](https://www.alibabacloud.com/help/doc-detail/28976.htm)
 
 <h4 class="pdoc-member-header" id="Store-shards">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L69">property <b>shards</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L69">property <b>shards</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>shards: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#StoreShard'>StoreShard</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Store-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1194,14 +1200,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="StoreIndex" data-link-title="StoreIndex">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L9">
         Resource <strong>StoreIndex</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>StoreIndex</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="StoreIndex-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L52"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L52"> <b>constructor</b></a>
 </h4>
 
 
@@ -1215,7 +1221,7 @@ Create a StoreIndex resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="StoreIndex-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -1226,14 +1232,14 @@ Get an existing StoreIndex resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="StoreIndex-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StoreIndex-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1244,7 +1250,7 @@ Returns true if the given object is an instance of StoreIndex.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="StoreIndex-fieldSearches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L40">property <b>fieldSearches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L40">property <b>fieldSearches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fieldSearches: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#StoreIndexFieldSearch'>StoreIndexFieldSearch</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1252,7 +1258,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 List configurations of field search index. Valid item as follows:
 
 <h4 class="pdoc-member-header" id="StoreIndex-fullText">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L44">property <b>fullText</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L44">property <b>fullText</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fullText: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#StoreIndexFullText'>StoreIndexFullText</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1260,7 +1266,7 @@ List configurations of field search index. Valid item as follows:
 The configuration of full text index. Valid item as follows:
 
 <h4 class="pdoc-member-header" id="StoreIndex-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1269,7 +1275,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="StoreIndex-logstore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L48">property <b>logstore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L48">property <b>logstore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logstore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1277,7 +1283,7 @@ deployments and may be missing (undefined) during planning phases.
 The log store name to the query index belongs.
 
 <h4 class="pdoc-member-header" id="StoreIndex-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L52">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L52">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1285,7 +1291,7 @@ The log store name to the query index belongs.
 The project name to the log store belongs.
 
 <h4 class="pdoc-member-header" id="StoreIndex-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1294,10 +1300,38 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 
+<h2 id="functions">Functions</h2>
+<h3 class="pdoc-module-header" id="getService" data-link-title="getService">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/getService.ts#L27">
+        Function <strong>getService</strong>
+    </a>
+</h3>
+
+
+<pre class="highlight"><code><span class='kd'></span>getService(args?: <a href='#GetServiceArgs'>GetServiceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetServiceResult'>GetServiceResult</a>&gt;</code></pre>
+
+
+Using this data source can open Log service automatically. If the service has been opened, it will return opened.
+
+For information about Log service and how to use it, see [What is Log Service](https://www.alibabacloud.com/help/product/28958.htm).
+
+> **NOTE:** Available in v1.96.0+
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const open = pulumi.output(alicloud.log.getService({
+    enable: "On",
+}, { async: true }));
+```
+
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AlertArgs" data-link-title="AlertArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L280">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L280">
         interface <strong>AlertArgs</strong>
     </a>
 </h3>
@@ -1307,7 +1341,7 @@ deployments.
 The set of arguments for constructing a Alert resource.
 
 <h4 class="pdoc-member-header" id="AlertArgs-alertDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L284">property <b>alertDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L284">property <b>alertDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1315,7 +1349,7 @@ The set of arguments for constructing a Alert resource.
 Alert description.
 
 <h4 class="pdoc-member-header" id="AlertArgs-alertDisplayname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L288">property <b>alertDisplayname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L288">property <b>alertDisplayname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertDisplayname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1323,7 +1357,7 @@ Alert description.
 Alert displayname.
 
 <h4 class="pdoc-member-header" id="AlertArgs-alertName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L292">property <b>alertName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L292">property <b>alertName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1331,7 +1365,7 @@ Alert displayname.
 Name of logstore for configuring alarm service.
 
 <h4 class="pdoc-member-header" id="AlertArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L296">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L296">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1339,12 +1373,12 @@ Name of logstore for configuring alarm service.
 Conditional expression, such as: count> 100.
 
 <h4 class="pdoc-member-header" id="AlertArgs-dashboard">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L297">property <b>dashboard</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L297">property <b>dashboard</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboard: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AlertArgs-muteUntil">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L301">property <b>muteUntil</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L301">property <b>muteUntil</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>muteUntil?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1352,7 +1386,7 @@ Conditional expression, such as: count> 100.
 Timestamp, notifications before closing again.
 
 <h4 class="pdoc-member-header" id="AlertArgs-notificationLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L305">property <b>notificationLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L305">property <b>notificationLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#AlertNotificationList'>AlertNotificationList</a>&gt;[]&gt;;</code></pre>
@@ -1360,7 +1394,7 @@ Timestamp, notifications before closing again.
 Alarm information notification list.
 
 <h4 class="pdoc-member-header" id="AlertArgs-notifyThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L309">property <b>notifyThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L309">property <b>notifyThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1368,7 +1402,7 @@ Alarm information notification list.
 Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
 
 <h4 class="pdoc-member-header" id="AlertArgs-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L313">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L313">property <b>projectName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1376,7 +1410,7 @@ Notification threshold, which is not notified until the number of triggers is re
 The project name.
 
 <h4 class="pdoc-member-header" id="AlertArgs-queryLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L317">property <b>queryLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L317">property <b>queryLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queryLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#AlertQueryList'>AlertQueryList</a>&gt;[]&gt;;</code></pre>
@@ -1384,7 +1418,7 @@ The project name.
 Multiple conditions for configured alarm query.
 
 <h4 class="pdoc-member-header" id="AlertArgs-scheduleInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L321">property <b>scheduleInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L321">property <b>scheduleInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduleInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1392,7 +1426,7 @@ Multiple conditions for configured alarm query.
 Execution interval. 60 seconds minimum, such as 60s, 1h.
 
 <h4 class="pdoc-member-header" id="AlertArgs-scheduleType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L325">property <b>scheduleType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L325">property <b>scheduleType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduleType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1400,7 +1434,7 @@ Execution interval. 60 seconds minimum, such as 60s, 1h.
 Default FixedRate. No need to configure this parameter.
 
 <h4 class="pdoc-member-header" id="AlertArgs-throttling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L329">property <b>throttling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L329">property <b>throttling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>throttling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1408,7 +1442,7 @@ Default FixedRate. No need to configure this parameter.
 Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
 
 <h3 class="pdoc-module-header" id="AlertState" data-link-title="AlertState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L225">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L225">
         interface <strong>AlertState</strong>
     </a>
 </h3>
@@ -1418,7 +1452,7 @@ Notification interval, default is no interval. Support number + unit type, for e
 Input properties used for looking up and filtering Alert resources.
 
 <h4 class="pdoc-member-header" id="AlertState-alertDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L229">property <b>alertDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L229">property <b>alertDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1426,7 +1460,7 @@ Input properties used for looking up and filtering Alert resources.
 Alert description.
 
 <h4 class="pdoc-member-header" id="AlertState-alertDisplayname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L233">property <b>alertDisplayname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L233">property <b>alertDisplayname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertDisplayname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1434,7 +1468,7 @@ Alert description.
 Alert displayname.
 
 <h4 class="pdoc-member-header" id="AlertState-alertName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L237">property <b>alertName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L237">property <b>alertName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1442,7 +1476,7 @@ Alert displayname.
 Name of logstore for configuring alarm service.
 
 <h4 class="pdoc-member-header" id="AlertState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L241">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L241">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1450,12 +1484,12 @@ Name of logstore for configuring alarm service.
 Conditional expression, such as: count> 100.
 
 <h4 class="pdoc-member-header" id="AlertState-dashboard">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L242">property <b>dashboard</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L242">property <b>dashboard</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboard?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AlertState-muteUntil">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L246">property <b>muteUntil</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L246">property <b>muteUntil</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>muteUntil?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1463,7 +1497,7 @@ Conditional expression, such as: count> 100.
 Timestamp, notifications before closing again.
 
 <h4 class="pdoc-member-header" id="AlertState-notificationLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L250">property <b>notificationLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L250">property <b>notificationLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#AlertNotificationList'>AlertNotificationList</a>&gt;[]&gt;;</code></pre>
@@ -1471,7 +1505,7 @@ Timestamp, notifications before closing again.
 Alarm information notification list.
 
 <h4 class="pdoc-member-header" id="AlertState-notifyThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L254">property <b>notifyThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L254">property <b>notifyThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifyThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1479,7 +1513,7 @@ Alarm information notification list.
 Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
 
 <h4 class="pdoc-member-header" id="AlertState-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L258">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L258">property <b>projectName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1487,7 +1521,7 @@ Notification threshold, which is not notified until the number of triggers is re
 The project name.
 
 <h4 class="pdoc-member-header" id="AlertState-queryLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L262">property <b>queryLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L262">property <b>queryLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queryLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#AlertQueryList'>AlertQueryList</a>&gt;[]&gt;;</code></pre>
@@ -1495,7 +1529,7 @@ The project name.
 Multiple conditions for configured alarm query.
 
 <h4 class="pdoc-member-header" id="AlertState-scheduleInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L266">property <b>scheduleInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L266">property <b>scheduleInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduleInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1503,7 +1537,7 @@ Multiple conditions for configured alarm query.
 Execution interval. 60 seconds minimum, such as 60s, 1h.
 
 <h4 class="pdoc-member-header" id="AlertState-scheduleType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L270">property <b>scheduleType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L270">property <b>scheduleType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduleType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1511,7 +1545,7 @@ Execution interval. 60 seconds minimum, such as 60s, 1h.
 Default FixedRate. No need to configure this parameter.
 
 <h4 class="pdoc-member-header" id="AlertState-throttling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/alert.ts#L274">property <b>throttling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/alert.ts#L274">property <b>throttling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>throttling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1519,7 +1553,7 @@ Default FixedRate. No need to configure this parameter.
 Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
 
 <h3 class="pdoc-module-header" id="AuditArgs" data-link-title="AuditArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L165">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L165">
         interface <strong>AuditArgs</strong>
     </a>
 </h3>
@@ -1529,7 +1563,7 @@ Notification interval, default is no interval. Support number + unit type, for e
 The set of arguments for constructing a Audit resource.
 
 <h4 class="pdoc-member-header" id="AuditArgs-aliuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L169">property <b>aliuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L169">property <b>aliuid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliuid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1537,7 +1571,7 @@ The set of arguments for constructing a Audit resource.
 Aliuid value of your account.
 
 <h4 class="pdoc-member-header" id="AuditArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L173">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L173">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1545,7 +1579,7 @@ Aliuid value of your account.
 Name of SLS log audit.
 
 <h4 class="pdoc-member-header" id="AuditArgs-multiAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L177">property <b>multiAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L177">property <b>multiAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multiAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1553,7 +1587,7 @@ Name of SLS log audit.
 Multi-account configuration, please fill in multiple aliuid.
 
 <h4 class="pdoc-member-header" id="AuditArgs-variableMap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L181">property <b>variableMap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L181">property <b>variableMap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>variableMap?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1561,7 +1595,7 @@ Multi-account configuration, please fill in multiple aliuid.
 Log audit detailed configuration.
 
 <h3 class="pdoc-module-header" id="AuditState" data-link-title="AuditState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L143">
         interface <strong>AuditState</strong>
     </a>
 </h3>
@@ -1571,7 +1605,7 @@ Log audit detailed configuration.
 Input properties used for looking up and filtering Audit resources.
 
 <h4 class="pdoc-member-header" id="AuditState-aliuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L147">property <b>aliuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L147">property <b>aliuid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliuid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1579,7 +1613,7 @@ Input properties used for looking up and filtering Audit resources.
 Aliuid value of your account.
 
 <h4 class="pdoc-member-header" id="AuditState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L151">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L151">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1587,7 +1621,7 @@ Aliuid value of your account.
 Name of SLS log audit.
 
 <h4 class="pdoc-member-header" id="AuditState-multiAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L155">property <b>multiAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L155">property <b>multiAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multiAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1595,7 +1629,7 @@ Name of SLS log audit.
 Multi-account configuration, please fill in multiple aliuid.
 
 <h4 class="pdoc-member-header" id="AuditState-variableMap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/audit.ts#L159">property <b>variableMap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/audit.ts#L159">property <b>variableMap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>variableMap?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1603,7 +1637,7 @@ Multi-account configuration, please fill in multiple aliuid.
 Log audit detailed configuration.
 
 <h3 class="pdoc-module-header" id="DashboardArgs" data-link-title="DashboardArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L175">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L175">
         interface <strong>DashboardArgs</strong>
     </a>
 </h3>
@@ -1613,7 +1647,7 @@ Log audit detailed configuration.
 The set of arguments for constructing a Dashboard resource.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-charList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L179">property <b>charList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L179">property <b>charList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>charList: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1621,7 +1655,7 @@ The set of arguments for constructing a Dashboard resource.
 Configuration of charts in the dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-dashboardName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L183">property <b>dashboardName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L183">property <b>dashboardName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1629,7 +1663,7 @@ Configuration of charts in the dashboard.
 The name of the Log Dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L187">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L187">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1637,7 +1671,7 @@ The name of the Log Dashboard.
 Dashboard alias.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L191">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L191">property <b>projectName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1645,7 +1679,7 @@ Dashboard alias.
 The name of the log project. It is the only in one Alicloud account.
 
 <h3 class="pdoc-module-header" id="DashboardState" data-link-title="DashboardState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L153">
         interface <strong>DashboardState</strong>
     </a>
 </h3>
@@ -1655,7 +1689,7 @@ The name of the log project. It is the only in one Alicloud account.
 Input properties used for looking up and filtering Dashboard resources.
 
 <h4 class="pdoc-member-header" id="DashboardState-charList">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L157">property <b>charList</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L157">property <b>charList</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>charList?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1663,7 +1697,7 @@ Input properties used for looking up and filtering Dashboard resources.
 Configuration of charts in the dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardState-dashboardName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L161">property <b>dashboardName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L161">property <b>dashboardName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1671,7 +1705,7 @@ Configuration of charts in the dashboard.
 The name of the Log Dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L165">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L165">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1679,15 +1713,64 @@ The name of the Log Dashboard.
 Dashboard alias.
 
 <h4 class="pdoc-member-header" id="DashboardState-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/dashboard.ts#L169">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/dashboard.ts#L169">property <b>projectName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The name of the log project. It is the only in one Alicloud account.
 
+<h3 class="pdoc-module-header" id="GetServiceArgs" data-link-title="GetServiceArgs">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/getService.ts#L44">
+        interface <strong>GetServiceArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceArgs</span></code></pre>
+
+A collection of arguments for invoking getService.
+
+<h4 class="pdoc-member-header" id="GetServiceArgs-enable">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/getService.ts#L48">property <b>enable</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Setting the value to `On` to enable the service. If has been opened, return the result.
+
+<h3 class="pdoc-module-header" id="GetServiceResult" data-link-title="GetServiceResult">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/getService.ts#L54">
+        interface <strong>GetServiceResult</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceResult</span></code></pre>
+
+A collection of values returned by getService.
+
+<h4 class="pdoc-member-header" id="GetServiceResult-enable">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/getService.ts#L55">property <b>enable</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetServiceResult-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/getService.ts#L59">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The provider-assigned unique ID for this managed resource.
+
+<h4 class="pdoc-member-header" id="GetServiceResult-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/getService.ts#L63">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The current service enable status.
+
 <h3 class="pdoc-module-header" id="LogTailAttachmentArgs" data-link-title="LogTailAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailAttachment.ts#L171">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailAttachment.ts#L171">
         interface <strong>LogTailAttachmentArgs</strong>
     </a>
 </h3>
@@ -1697,7 +1780,7 @@ The name of the log project. It is the only in one Alicloud account.
 The set of arguments for constructing a LogTailAttachment resource.
 
 <h4 class="pdoc-member-header" id="LogTailAttachmentArgs-logtailConfigName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailAttachment.ts#L175">property <b>logtailConfigName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailAttachment.ts#L175">property <b>logtailConfigName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logtailConfigName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1705,7 +1788,7 @@ The set of arguments for constructing a LogTailAttachment resource.
 The Logtail configuration name, which is unique in the same project.
 
 <h4 class="pdoc-member-header" id="LogTailAttachmentArgs-machineGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailAttachment.ts#L179">property <b>machineGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailAttachment.ts#L179">property <b>machineGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>machineGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1713,7 +1796,7 @@ The Logtail configuration name, which is unique in the same project.
 The machine group name, which is unique in the same project.
 
 <h4 class="pdoc-member-header" id="LogTailAttachmentArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailAttachment.ts#L183">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailAttachment.ts#L183">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1721,7 +1804,7 @@ The machine group name, which is unique in the same project.
 The project name to the log store belongs.
 
 <h3 class="pdoc-module-header" id="LogTailAttachmentState" data-link-title="LogTailAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailAttachment.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailAttachment.ts#L153">
         interface <strong>LogTailAttachmentState</strong>
     </a>
 </h3>
@@ -1731,7 +1814,7 @@ The project name to the log store belongs.
 Input properties used for looking up and filtering LogTailAttachment resources.
 
 <h4 class="pdoc-member-header" id="LogTailAttachmentState-logtailConfigName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailAttachment.ts#L157">property <b>logtailConfigName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailAttachment.ts#L157">property <b>logtailConfigName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logtailConfigName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1739,7 +1822,7 @@ Input properties used for looking up and filtering LogTailAttachment resources.
 The Logtail configuration name, which is unique in the same project.
 
 <h4 class="pdoc-member-header" id="LogTailAttachmentState-machineGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailAttachment.ts#L161">property <b>machineGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailAttachment.ts#L161">property <b>machineGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>machineGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1747,7 +1830,7 @@ The Logtail configuration name, which is unique in the same project.
 The machine group name, which is unique in the same project.
 
 <h4 class="pdoc-member-header" id="LogTailAttachmentState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailAttachment.ts#L165">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailAttachment.ts#L165">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1755,7 +1838,7 @@ The machine group name, which is unique in the same project.
 The project name to the log store belongs.
 
 <h3 class="pdoc-module-header" id="LogTailConfigArgs" data-link-title="LogTailConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L156">
         interface <strong>LogTailConfigArgs</strong>
     </a>
 </h3>
@@ -1765,7 +1848,7 @@ The project name to the log store belongs.
 The set of arguments for constructing a LogTailConfig resource.
 
 <h4 class="pdoc-member-header" id="LogTailConfigArgs-inputDetail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L160">property <b>inputDetail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L160">property <b>inputDetail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputDetail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1773,7 +1856,7 @@ The set of arguments for constructing a LogTailConfig resource.
 The logtail configure the required JSON files. ([Refer to details](https://www.alibabacloud.com/help/doc-detail/29058.htm))
 
 <h4 class="pdoc-member-header" id="LogTailConfigArgs-inputType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L164">property <b>inputType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L164">property <b>inputType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1781,7 +1864,7 @@ The logtail configure the required JSON files. ([Refer to details](https://www.a
 The input type. Currently only two types of files and plugin are supported.
 
 <h4 class="pdoc-member-header" id="LogTailConfigArgs-logSample">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L168">property <b>logSample</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L168">property <b>logSample</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logSample?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1789,7 +1872,7 @@ The input type. Currently only two types of files and plugin are supported.
 （Optional）The log sample of the Logtail configuration. The log size cannot exceed 1,000 bytes.
 
 <h4 class="pdoc-member-header" id="LogTailConfigArgs-logstore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L172">property <b>logstore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L172">property <b>logstore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logstore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1797,7 +1880,7 @@ The input type. Currently only two types of files and plugin are supported.
 The log store name to the query index belongs.
 
 <h4 class="pdoc-member-header" id="LogTailConfigArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L176">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L176">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1805,7 +1888,7 @@ The log store name to the query index belongs.
 The Logtail configuration name, which is unique in the same project.
 
 <h4 class="pdoc-member-header" id="LogTailConfigArgs-outputType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L180">property <b>outputType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L180">property <b>outputType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1813,7 +1896,7 @@ The Logtail configuration name, which is unique in the same project.
 The output type. Currently, only LogService is supported.
 
 <h4 class="pdoc-member-header" id="LogTailConfigArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L184">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L184">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1821,7 +1904,7 @@ The output type. Currently, only LogService is supported.
 The project name to the log store belongs.
 
 <h3 class="pdoc-module-header" id="LogTailConfigState" data-link-title="LogTailConfigState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L122">
         interface <strong>LogTailConfigState</strong>
     </a>
 </h3>
@@ -1831,7 +1914,7 @@ The project name to the log store belongs.
 Input properties used for looking up and filtering LogTailConfig resources.
 
 <h4 class="pdoc-member-header" id="LogTailConfigState-inputDetail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L126">property <b>inputDetail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L126">property <b>inputDetail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputDetail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1839,7 +1922,7 @@ Input properties used for looking up and filtering LogTailConfig resources.
 The logtail configure the required JSON files. ([Refer to details](https://www.alibabacloud.com/help/doc-detail/29058.htm))
 
 <h4 class="pdoc-member-header" id="LogTailConfigState-inputType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L130">property <b>inputType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L130">property <b>inputType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1847,7 +1930,7 @@ The logtail configure the required JSON files. ([Refer to details](https://www.a
 The input type. Currently only two types of files and plugin are supported.
 
 <h4 class="pdoc-member-header" id="LogTailConfigState-logSample">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L134">property <b>logSample</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L134">property <b>logSample</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logSample?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1855,7 +1938,7 @@ The input type. Currently only two types of files and plugin are supported.
 （Optional）The log sample of the Logtail configuration. The log size cannot exceed 1,000 bytes.
 
 <h4 class="pdoc-member-header" id="LogTailConfigState-logstore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L138">property <b>logstore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L138">property <b>logstore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logstore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1863,7 +1946,7 @@ The input type. Currently only two types of files and plugin are supported.
 The log store name to the query index belongs.
 
 <h4 class="pdoc-member-header" id="LogTailConfigState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L142">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L142">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1871,7 +1954,7 @@ The log store name to the query index belongs.
 The Logtail configuration name, which is unique in the same project.
 
 <h4 class="pdoc-member-header" id="LogTailConfigState-outputType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L146">property <b>outputType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L146">property <b>outputType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1879,7 +1962,7 @@ The Logtail configuration name, which is unique in the same project.
 The output type. Currently, only LogService is supported.
 
 <h4 class="pdoc-member-header" id="LogTailConfigState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/logTailConfig.ts#L150">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/logTailConfig.ts#L150">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1887,7 +1970,7 @@ The output type. Currently, only LogService is supported.
 The project name to the log store belongs.
 
 <h3 class="pdoc-module-header" id="MachineGroupArgs" data-link-title="MachineGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L127">
         interface <strong>MachineGroupArgs</strong>
     </a>
 </h3>
@@ -1897,7 +1980,7 @@ The project name to the log store belongs.
 The set of arguments for constructing a MachineGroup resource.
 
 <h4 class="pdoc-member-header" id="MachineGroupArgs-identifyLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L131">property <b>identifyLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L131">property <b>identifyLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifyLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1905,7 +1988,7 @@ The set of arguments for constructing a MachineGroup resource.
 The specific machine identification, which can be an IP address or user-defined identity.
 
 <h4 class="pdoc-member-header" id="MachineGroupArgs-identifyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L135">property <b>identifyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L135">property <b>identifyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1913,7 +1996,7 @@ The specific machine identification, which can be an IP address or user-defined 
 The machine identification type, including IP and user-defined identity. Valid values are "ip" and "userdefined". Default to "ip".
 
 <h4 class="pdoc-member-header" id="MachineGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L139">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L139">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1921,7 +2004,7 @@ The machine identification type, including IP and user-defined identity. Valid v
 The machine group name, which is unique in the same project.
 
 <h4 class="pdoc-member-header" id="MachineGroupArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L143">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L143">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1929,7 +2012,7 @@ The machine group name, which is unique in the same project.
 The project name to the machine group belongs.
 
 <h4 class="pdoc-member-header" id="MachineGroupArgs-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L147">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L147">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1937,7 +2020,7 @@ The project name to the machine group belongs.
 The topic of a machine group.
 
 <h3 class="pdoc-module-header" id="MachineGroupState" data-link-title="MachineGroupState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L101">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L101">
         interface <strong>MachineGroupState</strong>
     </a>
 </h3>
@@ -1947,7 +2030,7 @@ The topic of a machine group.
 Input properties used for looking up and filtering MachineGroup resources.
 
 <h4 class="pdoc-member-header" id="MachineGroupState-identifyLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L105">property <b>identifyLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L105">property <b>identifyLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifyLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1955,7 +2038,7 @@ Input properties used for looking up and filtering MachineGroup resources.
 The specific machine identification, which can be an IP address or user-defined identity.
 
 <h4 class="pdoc-member-header" id="MachineGroupState-identifyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L109">property <b>identifyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L109">property <b>identifyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1963,7 +2046,7 @@ The specific machine identification, which can be an IP address or user-defined 
 The machine identification type, including IP and user-defined identity. Valid values are "ip" and "userdefined". Default to "ip".
 
 <h4 class="pdoc-member-header" id="MachineGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L113">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L113">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1971,7 +2054,7 @@ The machine identification type, including IP and user-defined identity. Valid v
 The machine group name, which is unique in the same project.
 
 <h4 class="pdoc-member-header" id="MachineGroupState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L117">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L117">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1979,7 +2062,7 @@ The machine group name, which is unique in the same project.
 The project name to the machine group belongs.
 
 <h4 class="pdoc-member-header" id="MachineGroupState-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/machineGroup.ts#L121">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/machineGroup.ts#L121">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1987,7 +2070,7 @@ The project name to the machine group belongs.
 The topic of a machine group.
 
 <h3 class="pdoc-module-header" id="ProjectArgs" data-link-title="ProjectArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/project.ts#L91">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/project.ts#L91">
         interface <strong>ProjectArgs</strong>
     </a>
 </h3>
@@ -1997,7 +2080,7 @@ The topic of a machine group.
 The set of arguments for constructing a Project resource.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/project.ts#L95">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/project.ts#L95">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2005,7 +2088,7 @@ The set of arguments for constructing a Project resource.
 Description of the log project.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/project.ts#L99">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/project.ts#L99">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2013,7 +2096,7 @@ Description of the log project.
 The name of the log project. It is the only in one Alicloud account.
 
 <h3 class="pdoc-module-header" id="ProjectState" data-link-title="ProjectState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/project.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/project.ts#L77">
         interface <strong>ProjectState</strong>
     </a>
 </h3>
@@ -2023,7 +2106,7 @@ The name of the log project. It is the only in one Alicloud account.
 Input properties used for looking up and filtering Project resources.
 
 <h4 class="pdoc-member-header" id="ProjectState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/project.ts#L81">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/project.ts#L81">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2031,7 +2114,7 @@ Input properties used for looking up and filtering Project resources.
 Description of the log project.
 
 <h4 class="pdoc-member-header" id="ProjectState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/project.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/project.ts#L85">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2039,7 +2122,7 @@ Description of the log project.
 The name of the log project. It is the only in one Alicloud account.
 
 <h3 class="pdoc-module-header" id="StoreArgs" data-link-title="StoreArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L160">
         interface <strong>StoreArgs</strong>
     </a>
 </h3>
@@ -2049,7 +2132,7 @@ The name of the log project. It is the only in one Alicloud account.
 The set of arguments for constructing a Store resource.
 
 <h4 class="pdoc-member-header" id="StoreArgs-appendMeta">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L164">property <b>appendMeta</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L164">property <b>appendMeta</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appendMeta?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2057,7 +2140,7 @@ The set of arguments for constructing a Store resource.
 Determines whether to append log meta automatically. The meta includes log receive time and client IP address. Default to true.
 
 <h4 class="pdoc-member-header" id="StoreArgs-autoSplit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L168">property <b>autoSplit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L168">property <b>autoSplit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSplit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2065,7 +2148,7 @@ Determines whether to append log meta automatically. The meta includes log recei
 Determines whether to automatically split a shard. Default to true.
 
 <h4 class="pdoc-member-header" id="StoreArgs-enableWebTracking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L172">property <b>enableWebTracking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L172">property <b>enableWebTracking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableWebTracking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2073,7 +2156,7 @@ Determines whether to automatically split a shard. Default to true.
 Determines whether to enable Web Tracking. Default false.
 
 <h4 class="pdoc-member-header" id="StoreArgs-maxSplitShardCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L176">property <b>maxSplitShardCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L176">property <b>maxSplitShardCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSplitShardCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2081,7 +2164,7 @@ Determines whether to enable Web Tracking. Default false.
 The maximum number of shards for automatic split, which is in the range of 1 to 64. You must specify this parameter when autoSplit is true.
 
 <h4 class="pdoc-member-header" id="StoreArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L180">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L180">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2089,7 +2172,7 @@ The maximum number of shards for automatic split, which is in the range of 1 to 
 The log store, which is unique in the same project.
 
 <h4 class="pdoc-member-header" id="StoreArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L184">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L184">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2097,7 +2180,7 @@ The log store, which is unique in the same project.
 The project name to the log store belongs.
 
 <h4 class="pdoc-member-header" id="StoreArgs-retentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L188">property <b>retentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L188">property <b>retentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2105,7 +2188,7 @@ The project name to the log store belongs.
 The data retention time (in days). Valid values: [1-3650]. Default to 30. Log store data will be stored permanently when the value is "3650".
 
 <h4 class="pdoc-member-header" id="StoreArgs-shardCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L192">property <b>shardCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L192">property <b>shardCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shardCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2113,7 +2196,7 @@ The data retention time (in days). Valid values: [1-3650]. Default to 30. Log st
 The number of shards in this log store. Default to 2. You can modify it by "Split" or "Merge" operations. [Refer to details](https://www.alibabacloud.com/help/doc-detail/28976.htm)
 
 <h3 class="pdoc-module-header" id="StoreIndexArgs" data-link-title="StoreIndexArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L119">
         interface <strong>StoreIndexArgs</strong>
     </a>
 </h3>
@@ -2123,7 +2206,7 @@ The number of shards in this log store. Default to 2. You can modify it by "Spli
 The set of arguments for constructing a StoreIndex resource.
 
 <h4 class="pdoc-member-header" id="StoreIndexArgs-fieldSearches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L123">property <b>fieldSearches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L123">property <b>fieldSearches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fieldSearches?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#StoreIndexFieldSearch'>StoreIndexFieldSearch</a>&gt;[]&gt;;</code></pre>
@@ -2131,7 +2214,7 @@ The set of arguments for constructing a StoreIndex resource.
 List configurations of field search index. Valid item as follows:
 
 <h4 class="pdoc-member-header" id="StoreIndexArgs-fullText">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L127">property <b>fullText</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L127">property <b>fullText</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fullText?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#StoreIndexFullText'>StoreIndexFullText</a>&gt;;</code></pre>
@@ -2139,7 +2222,7 @@ List configurations of field search index. Valid item as follows:
 The configuration of full text index. Valid item as follows:
 
 <h4 class="pdoc-member-header" id="StoreIndexArgs-logstore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L131">property <b>logstore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L131">property <b>logstore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logstore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2147,7 +2230,7 @@ The configuration of full text index. Valid item as follows:
 The log store name to the query index belongs.
 
 <h4 class="pdoc-member-header" id="StoreIndexArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L135">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L135">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2155,7 +2238,7 @@ The log store name to the query index belongs.
 The project name to the log store belongs.
 
 <h3 class="pdoc-module-header" id="StoreIndexState" data-link-title="StoreIndexState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L97">
         interface <strong>StoreIndexState</strong>
     </a>
 </h3>
@@ -2165,7 +2248,7 @@ The project name to the log store belongs.
 Input properties used for looking up and filtering StoreIndex resources.
 
 <h4 class="pdoc-member-header" id="StoreIndexState-fieldSearches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L101">property <b>fieldSearches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L101">property <b>fieldSearches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fieldSearches?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#StoreIndexFieldSearch'>StoreIndexFieldSearch</a>&gt;[]&gt;;</code></pre>
@@ -2173,7 +2256,7 @@ Input properties used for looking up and filtering StoreIndex resources.
 List configurations of field search index. Valid item as follows:
 
 <h4 class="pdoc-member-header" id="StoreIndexState-fullText">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L105">property <b>fullText</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L105">property <b>fullText</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fullText?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#StoreIndexFullText'>StoreIndexFullText</a>&gt;;</code></pre>
@@ -2181,7 +2264,7 @@ List configurations of field search index. Valid item as follows:
 The configuration of full text index. Valid item as follows:
 
 <h4 class="pdoc-member-header" id="StoreIndexState-logstore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L109">property <b>logstore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L109">property <b>logstore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logstore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2189,7 +2272,7 @@ The configuration of full text index. Valid item as follows:
 The log store name to the query index belongs.
 
 <h4 class="pdoc-member-header" id="StoreIndexState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/storeIndex.ts#L113">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/storeIndex.ts#L113">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2197,7 +2280,7 @@ The log store name to the query index belongs.
 The project name to the log store belongs.
 
 <h3 class="pdoc-module-header" id="StoreState" data-link-title="StoreState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L121">
         interface <strong>StoreState</strong>
     </a>
 </h3>
@@ -2207,7 +2290,7 @@ The project name to the log store belongs.
 Input properties used for looking up and filtering Store resources.
 
 <h4 class="pdoc-member-header" id="StoreState-appendMeta">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L125">property <b>appendMeta</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L125">property <b>appendMeta</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appendMeta?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2215,7 +2298,7 @@ Input properties used for looking up and filtering Store resources.
 Determines whether to append log meta automatically. The meta includes log receive time and client IP address. Default to true.
 
 <h4 class="pdoc-member-header" id="StoreState-autoSplit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L129">property <b>autoSplit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L129">property <b>autoSplit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSplit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2223,7 +2306,7 @@ Determines whether to append log meta automatically. The meta includes log recei
 Determines whether to automatically split a shard. Default to true.
 
 <h4 class="pdoc-member-header" id="StoreState-enableWebTracking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L133">property <b>enableWebTracking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L133">property <b>enableWebTracking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableWebTracking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2231,7 +2314,7 @@ Determines whether to automatically split a shard. Default to true.
 Determines whether to enable Web Tracking. Default false.
 
 <h4 class="pdoc-member-header" id="StoreState-maxSplitShardCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L137">property <b>maxSplitShardCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L137">property <b>maxSplitShardCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSplitShardCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2239,7 +2322,7 @@ Determines whether to enable Web Tracking. Default false.
 The maximum number of shards for automatic split, which is in the range of 1 to 64. You must specify this parameter when autoSplit is true.
 
 <h4 class="pdoc-member-header" id="StoreState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L141">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L141">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2247,7 +2330,7 @@ The maximum number of shards for automatic split, which is in the range of 1 to 
 The log store, which is unique in the same project.
 
 <h4 class="pdoc-member-header" id="StoreState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L145">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L145">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2255,7 +2338,7 @@ The log store, which is unique in the same project.
 The project name to the log store belongs.
 
 <h4 class="pdoc-member-header" id="StoreState-retentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L149">property <b>retentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L149">property <b>retentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2263,7 +2346,7 @@ The project name to the log store belongs.
 The data retention time (in days). Valid values: [1-3650]. Default to 30. Log store data will be stored permanently when the value is "3650".
 
 <h4 class="pdoc-member-header" id="StoreState-shardCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L153">property <b>shardCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L153">property <b>shardCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shardCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2271,7 +2354,7 @@ The data retention time (in days). Valid values: [1-3650]. Default to 30. Log st
 The number of shards in this log store. Default to 2. You can modify it by "Split" or "Merge" operations. [Refer to details](https://www.alibabacloud.com/help/doc-detail/28976.htm)
 
 <h4 class="pdoc-member-header" id="StoreState-shards">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/log/store.ts#L154">property <b>shards</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/log/store.ts#L154">property <b>shards</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shards?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#StoreShard'>StoreShard</a>&gt;[]&gt;;</code></pre>

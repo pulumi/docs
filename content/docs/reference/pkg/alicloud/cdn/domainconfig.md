@@ -184,7 +184,7 @@ const config = new alicloud.cdn.DomainConfig("config", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cdn/#pulumi_alicloud.cdn.DomainConfig">DomainConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function_args</span><span class="p">:</span> <span class="nx">Optional[List[DomainConfigFunctionArgArgs]]</span> = None<span class="p">, </span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cdn/#pulumi_alicloud.cdn.DomainConfig">DomainConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function_args</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainConfigFunctionArgArgs]]</span> = None<span class="p">, </span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -493,7 +493,7 @@ The DomainConfig resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#function_args_python" style="color: inherit; text-decoration: inherit;">function_<wbr>args</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainconfigfunctionarg">List[Domain<wbr>Config<wbr>Function<wbr>Arg<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainconfigfunctionarg">Sequence[Domain<wbr>Config<wbr>Function<wbr>Arg<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The args of the domain config.
 {{% /md %}}</dd>
@@ -608,7 +608,7 @@ Get an existing DomainConfig resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function_args</span><span class="p">:</span> <span class="nx">Optional[List[DomainConfigFunctionArgArgs]]</span> = None<span class="p">, </span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DomainConfig</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function_args</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainConfigFunctionArgArgs]]</span> = None<span class="p">, </span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DomainConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -859,7 +859,7 @@ The following state arguments are supported:
 <a href="#state_function_args_python" style="color: inherit; text-decoration: inherit;">function_<wbr>args</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainconfigfunctionarg">List[Domain<wbr>Config<wbr>Function<wbr>Arg<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainconfigfunctionarg">Sequence[Domain<wbr>Config<wbr>Function<wbr>Arg<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The args of the domain config.
 {{% /md %}}</dd>

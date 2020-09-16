@@ -582,7 +582,7 @@ The following output properties are available:
 <a href="#objects_python" style="color: inherit; text-decoration: inherit;">objects</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketobjectsobject">List[Get<wbr>Bucket<wbr>Objects<wbr>Object]</a></span>
+        <span class="property-type"><a href="#getbucketobjectsobject">Sequence[Get<wbr>Bucket<wbr>Objects<wbr>Object]</a></span>
     </dt>
     <dd>{{% md %}}A list of bucket objects. Each element contains the following attributes:
 {{% /md %}}</dd>
