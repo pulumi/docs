@@ -12,7 +12,7 @@ gated: true
 type: webinars
 external: false
 block_external_search_index: false
-url_slug: azure-infrastructure-as-code-workshop
+url_slug: azure-infrastructure-as-code-workshop-2020-10-29
 hero:
   title: Azure Infrastructure as Code Workshop
   image: /icons/containers.svg
