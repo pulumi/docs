@@ -549,14 +549,14 @@ function loadCannedExample(id) {
     $("#terraform-code").val(getCannedExample(id));
 }
 
-function waitForElementToExists(selector, callback) {
+function waitForElementToExist(selector, callback) {
     setTimeout(function () {
         var element = $(selector)[0];
 
         if (element) {
             return callback();
         } else {
-            return waitForElementToExists(selector, callback);
+            return waitForElementToExist(selector, callback);
         }
     }, 500);
 }
