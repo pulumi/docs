@@ -37,13 +37,13 @@ Explore the resources and functions of the virtualmachineimages module in the Az
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.virtualmachineimages.html" title="Pulumi.AzureNextGen.virtualmachineimages">Pulumi.AzureNextGen.virtualmachineimages</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/virtualmachineimages?tab=doc#" title="azure-nextgen/virtualmachineimages">azure-nextgen/virtualmachineimages</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#" title="azure/virtualmachineimages">azure/virtualmachineimages</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/virtualmachineimages/#" title="@pulumi/azure-nextgen/virtualmachineimages">@pulumi/azure-nextgen/virtualmachineimages</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/virtualmachineimages" title="pulumi_azure-nextgen/virtualmachineimages">pulumi_azure-nextgen/virtualmachineimages</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/virtualmachineimages" title="pulumi_azure_nextgen/virtualmachineimages">pulumi_azure_nextgen/virtualmachineimages</a></dd>
 
 </dl>
 

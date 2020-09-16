@@ -47,13 +47,13 @@ Explore the resources and functions of the azuredata module in the Azure NextGen
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.azuredata.html" title="Pulumi.AzureNextGen.azuredata">Pulumi.AzureNextGen.azuredata</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/azuredata?tab=doc#" title="azure-nextgen/azuredata">azure-nextgen/azuredata</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azuredata?tab=doc#" title="azure/azuredata">azure/azuredata</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/azuredata/#" title="@pulumi/azure-nextgen/azuredata">@pulumi/azure-nextgen/azuredata</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/azuredata" title="pulumi_azure-nextgen/azuredata">pulumi_azure-nextgen/azuredata</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/azuredata" title="pulumi_azure_nextgen/azuredata">pulumi_azure_nextgen/azuredata</a></dd>
 
 </dl>
 

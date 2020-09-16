@@ -49,13 +49,13 @@ Explore the resources and functions of the dbforpostgresql module in the Azure N
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.dbforpostgresql.html" title="Pulumi.AzureNextGen.dbforpostgresql">Pulumi.AzureNextGen.dbforpostgresql</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/dbforpostgresql?tab=doc#" title="azure-nextgen/dbforpostgresql">azure-nextgen/dbforpostgresql</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbforpostgresql?tab=doc#" title="azure/dbforpostgresql">azure/dbforpostgresql</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/dbforpostgresql/#" title="@pulumi/azure-nextgen/dbforpostgresql">@pulumi/azure-nextgen/dbforpostgresql</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/dbforpostgresql" title="pulumi_azure-nextgen/dbforpostgresql">pulumi_azure-nextgen/dbforpostgresql</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/dbforpostgresql" title="pulumi_azure_nextgen/dbforpostgresql">pulumi_azure_nextgen/dbforpostgresql</a></dd>
 
 </dl>
 

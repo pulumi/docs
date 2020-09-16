@@ -39,13 +39,13 @@ Explore the resources and functions of the digitaltwins module in the Azure Next
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.digitaltwins.html" title="Pulumi.AzureNextGen.digitaltwins">Pulumi.AzureNextGen.digitaltwins</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/digitaltwins?tab=doc#" title="azure-nextgen/digitaltwins">azure-nextgen/digitaltwins</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/digitaltwins?tab=doc#" title="azure/digitaltwins">azure/digitaltwins</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/digitaltwins/#" title="@pulumi/azure-nextgen/digitaltwins">@pulumi/azure-nextgen/digitaltwins</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/digitaltwins" title="pulumi_azure-nextgen/digitaltwins">pulumi_azure-nextgen/digitaltwins</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/digitaltwins" title="pulumi_azure_nextgen/digitaltwins">pulumi_azure_nextgen/digitaltwins</a></dd>
 
 </dl>
 

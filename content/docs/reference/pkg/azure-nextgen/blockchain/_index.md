@@ -42,13 +42,13 @@ Explore the resources and functions of the blockchain module in the Azure NextGe
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.blockchain.html" title="Pulumi.AzureNextGen.blockchain">Pulumi.AzureNextGen.blockchain</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/blockchain?tab=doc#" title="azure-nextgen/blockchain">azure-nextgen/blockchain</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blockchain?tab=doc#" title="azure/blockchain">azure/blockchain</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/blockchain/#" title="@pulumi/azure-nextgen/blockchain">@pulumi/azure-nextgen/blockchain</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/blockchain" title="pulumi_azure-nextgen/blockchain">pulumi_azure-nextgen/blockchain</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/blockchain" title="pulumi_azure_nextgen/blockchain">pulumi_azure_nextgen/blockchain</a></dd>
 
 </dl>
 

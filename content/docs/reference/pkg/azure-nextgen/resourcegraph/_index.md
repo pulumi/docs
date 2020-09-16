@@ -37,13 +37,13 @@ Explore the resources and functions of the resourcegraph module in the Azure Nex
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.resourcegraph.html" title="Pulumi.AzureNextGen.resourcegraph">Pulumi.AzureNextGen.resourcegraph</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/resourcegraph?tab=doc#" title="azure-nextgen/resourcegraph">azure-nextgen/resourcegraph</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resourcegraph?tab=doc#" title="azure/resourcegraph">azure/resourcegraph</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/resourcegraph/#" title="@pulumi/azure-nextgen/resourcegraph">@pulumi/azure-nextgen/resourcegraph</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/resourcegraph" title="pulumi_azure-nextgen/resourcegraph">pulumi_azure-nextgen/resourcegraph</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/resourcegraph" title="pulumi_azure_nextgen/resourcegraph">pulumi_azure_nextgen/resourcegraph</a></dd>
 
 </dl>
 

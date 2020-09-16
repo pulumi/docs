@@ -37,13 +37,13 @@ Explore the resources and functions of the azureactivedirectory module in the Az
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.azureactivedirectory.html" title="Pulumi.AzureNextGen.azureactivedirectory">Pulumi.AzureNextGen.azureactivedirectory</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/azureactivedirectory?tab=doc#" title="azure-nextgen/azureactivedirectory">azure-nextgen/azureactivedirectory</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azureactivedirectory?tab=doc#" title="azure/azureactivedirectory">azure/azureactivedirectory</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/azureactivedirectory/#" title="@pulumi/azure-nextgen/azureactivedirectory">@pulumi/azure-nextgen/azureactivedirectory</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/azureactivedirectory" title="pulumi_azure-nextgen/azureactivedirectory">pulumi_azure-nextgen/azureactivedirectory</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/azureactivedirectory" title="pulumi_azure_nextgen/azureactivedirectory">pulumi_azure_nextgen/azureactivedirectory</a></dd>
 
 </dl>
 

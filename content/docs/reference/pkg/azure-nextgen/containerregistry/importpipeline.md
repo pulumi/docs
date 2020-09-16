@@ -146,7 +146,7 @@ const importPipeline = new azure_nextgen.containerregistry.v20191201preview.Impo
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerregistry?tab=doc#ImportPipeline">NewImportPipeline</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerregistry?tab=doc#ImportPipelineArgs">ImportPipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerregistry?tab=doc#ImportPipeline">ImportPipeline</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry?tab=doc#ImportPipeline">NewImportPipeline</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry?tab=doc#ImportPipelineArgs">ImportPipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry?tab=doc#ImportPipeline">ImportPipeline</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -240,7 +240,7 @@ const importPipeline = new azure_nextgen.containerregistry.v20191201preview.Impo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerregistry?tab=doc#ImportPipelineArgs">ImportPipelineArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry?tab=doc#ImportPipelineArgs">ImportPipelineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -876,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerregistry?tab=doc#IdentityPropertiesArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry?tab=doc#IdentityPropertiesArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Containerregistry.Inputs.IdentityPropertiesArgs.html">input</a>   API doc for this type.
@@ -1094,7 +1094,7 @@ dictionary key references will be ARM resource ids in the form:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerregistry?tab=doc#IdentityPropertiesResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry?tab=doc#IdentityPropertiesResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Containerregistry.Outputs.IdentityPropertiesResponse.html">output</a> API doc for this type.
@@ -1312,7 +1312,7 @@ dictionary key references will be ARM resource ids in the form:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerregistry?tab=doc#ImportPipelineSourcePropertiesArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry?tab=doc#ImportPipelineSourcePropertiesArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Containerregistry.Inputs.ImportPipelineSourcePropertiesArgs.html">input</a>   API doc for this type.
@@ -1486,7 +1486,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerregistry?tab=doc#ImportPipelineSourcePropertiesResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry?tab=doc#ImportPipelineSourcePropertiesResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Containerregistry.Outputs.ImportPipelineSourcePropertiesResponse.html">output</a> API doc for this type.
@@ -1660,7 +1660,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerregistry?tab=doc#PipelineSourceTriggerPropertiesArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry?tab=doc#PipelineSourceTriggerPropertiesArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Containerregistry.Inputs.PipelineSourceTriggerPropertiesArgs.html">input</a>   API doc for this type.
@@ -1746,7 +1746,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerregistry?tab=doc#PipelineSourceTriggerPropertiesResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry?tab=doc#PipelineSourceTriggerPropertiesResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Containerregistry.Outputs.PipelineSourceTriggerPropertiesResponse.html">output</a> API doc for this type.
@@ -1832,7 +1832,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerregistry?tab=doc#PipelineTriggerPropertiesArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry?tab=doc#PipelineTriggerPropertiesArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Containerregistry.Inputs.PipelineTriggerPropertiesArgs.html">input</a>   API doc for this type.
@@ -1918,7 +1918,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerregistry?tab=doc#PipelineTriggerPropertiesResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry?tab=doc#PipelineTriggerPropertiesResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Containerregistry.Outputs.PipelineTriggerPropertiesResponse.html">output</a> API doc for this type.
@@ -2004,7 +2004,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerregistry?tab=doc#UserIdentityPropertiesArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry?tab=doc#UserIdentityPropertiesArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Containerregistry.Inputs.UserIdentityPropertiesArgs.html">input</a>   API doc for this type.
@@ -2130,7 +2130,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerregistry?tab=doc#UserIdentityPropertiesResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry?tab=doc#UserIdentityPropertiesResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Containerregistry.Outputs.UserIdentityPropertiesResponse.html">output</a> API doc for this type.

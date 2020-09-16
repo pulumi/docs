@@ -29,7 +29,7 @@ meta_desc: "Explore the GetTask function of the datamigration module, including 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTask<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#LookupTaskArgs">LookupTaskArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#LookupTaskResult">LookupTaskResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTask<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#LookupTaskArgs">LookupTaskArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#LookupTaskResult">LookupTaskResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupTask` in the Go SDK.
 
@@ -492,7 +492,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#AzureActiveDirectoryAppResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#AzureActiveDirectoryAppResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.AzureActiveDirectoryAppResponse.html">output</a> API doc for this type.
@@ -658,7 +658,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#BackupFileInfoResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#BackupFileInfoResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.BackupFileInfoResponse.html">output</a> API doc for this type.
@@ -824,7 +824,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#BackupSetInfoResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#BackupSetInfoResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.BackupSetInfoResponse.html">output</a> API doc for this type.
@@ -1270,7 +1270,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#BlobShareResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#BlobShareResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.BlobShareResponse.html">output</a> API doc for this type.
@@ -1356,7 +1356,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToSourcePostgreSqlSyncTaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToSourcePostgreSqlSyncTaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToSourcePostgreSqlSyncTaskInputResponse.html">output</a> API doc for this type.
@@ -1442,7 +1442,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToSourcePostgreSqlSyncTaskOutputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToSourcePostgreSqlSyncTaskOutputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToSourcePostgreSqlSyncTaskOutputResponse.html">output</a> API doc for this type.
@@ -1688,7 +1688,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToSourcePostgreSqlSyncTaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToSourcePostgreSqlSyncTaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToSourcePostgreSqlSyncTaskPropertiesResponse.html">output</a> API doc for this type.
@@ -1934,7 +1934,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToSourceSqlServerSyncTaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToSourceSqlServerSyncTaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToSourceSqlServerSyncTaskPropertiesResponse.html">output</a> API doc for this type.
@@ -2180,7 +2180,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToSourceSqlServerTaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToSourceSqlServerTaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToSourceSqlServerTaskInputResponse.html">output</a> API doc for this type.
@@ -2386,7 +2386,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse.html">output</a> API doc for this type.
@@ -2712,7 +2712,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse.html">output</a> API doc for this type.
@@ -2998,7 +2998,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToSourceSqlServerTaskOutputLoginLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToSourceSqlServerTaskOutputLoginLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToSourceSqlServerTaskOutputLoginLevelResponse.html">output</a> API doc for this type.
@@ -3284,7 +3284,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToSourceSqlServerTaskOutputTaskLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToSourceSqlServerTaskOutputTaskLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToSourceSqlServerTaskOutputTaskLevelResponse.html">output</a> API doc for this type.
@@ -3610,7 +3610,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToSourceSqlServerTaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToSourceSqlServerTaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToSourceSqlServerTaskPropertiesResponse.html">output</a> API doc for this type.
@@ -3856,7 +3856,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToTargetAzureDbForMySqlTaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToTargetAzureDbForMySqlTaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToTargetAzureDbForMySqlTaskInputResponse.html">output</a> API doc for this type.
@@ -3982,7 +3982,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToTargetAzureDbForMySqlTaskOutputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToTargetAzureDbForMySqlTaskOutputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToTargetAzureDbForMySqlTaskOutputResponse.html">output</a> API doc for this type.
@@ -4228,7 +4228,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToTargetAzureDbForMySqlTaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToTargetAzureDbForMySqlTaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToTargetAzureDbForMySqlTaskPropertiesResponse.html">output</a> API doc for this type.
@@ -4474,7 +4474,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse.html">output</a> API doc for this type.
@@ -4600,7 +4600,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse.html">output</a> API doc for this type.
@@ -4846,7 +4846,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesResponse.html">output</a> API doc for this type.
@@ -5092,7 +5092,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToTargetSqlDbTaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToTargetSqlDbTaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToTargetSqlDbTaskInputResponse.html">output</a> API doc for this type.
@@ -5178,7 +5178,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToTargetSqlDbTaskOutputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToTargetSqlDbTaskOutputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToTargetSqlDbTaskOutputResponse.html">output</a> API doc for this type.
@@ -5384,7 +5384,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToTargetSqlDbTaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToTargetSqlDbTaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToTargetSqlDbTaskPropertiesResponse.html">output</a> API doc for this type.
@@ -5630,7 +5630,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToTargetSqlMISyncTaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToTargetSqlMISyncTaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToTargetSqlMISyncTaskInputResponse.html">output</a> API doc for this type.
@@ -5756,7 +5756,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToTargetSqlMISyncTaskOutputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToTargetSqlMISyncTaskOutputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToTargetSqlMISyncTaskOutputResponse.html">output</a> API doc for this type.
@@ -5922,7 +5922,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToTargetSqlMISyncTaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToTargetSqlMISyncTaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToTargetSqlMISyncTaskPropertiesResponse.html">output</a> API doc for this type.
@@ -6168,7 +6168,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToTargetSqlMITaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToTargetSqlMITaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToTargetSqlMITaskInputResponse.html">output</a> API doc for this type.
@@ -6254,7 +6254,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToTargetSqlMITaskOutputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToTargetSqlMITaskOutputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToTargetSqlMITaskOutputResponse.html">output</a> API doc for this type.
@@ -6540,7 +6540,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToTargetSqlMITaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToTargetSqlMITaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToTargetSqlMITaskPropertiesResponse.html">output</a> API doc for this type.
@@ -6786,7 +6786,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToTargetSqlSqlDbSyncTaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToTargetSqlSqlDbSyncTaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToTargetSqlSqlDbSyncTaskInputResponse.html">output</a> API doc for this type.
@@ -6912,7 +6912,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ConnectToTargetSqlSqlDbSyncTaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ConnectToTargetSqlSqlDbSyncTaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ConnectToTargetSqlSqlDbSyncTaskPropertiesResponse.html">output</a> API doc for this type.
@@ -7158,7 +7158,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#DataIntegrityValidationResultResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#DataIntegrityValidationResultResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.DataIntegrityValidationResultResponse.html">output</a> API doc for this type.
@@ -7284,7 +7284,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#DatabaseBackupInfoResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#DatabaseBackupInfoResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.DatabaseBackupInfoResponse.html">output</a> API doc for this type.
@@ -7650,7 +7650,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#DatabaseFileInfoResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#DatabaseFileInfoResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.DatabaseFileInfoResponse.html">output</a> API doc for this type.
@@ -7976,7 +7976,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ExecutionStatisticsResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ExecutionStatisticsResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ExecutionStatisticsResponse.html">output</a> API doc for this type.
@@ -8262,7 +8262,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#FileShareResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#FileShareResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.FileShareResponse.html">output</a> API doc for this type.
@@ -8428,7 +8428,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#GetTdeCertificatesSqlTaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#GetTdeCertificatesSqlTaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.GetTdeCertificatesSqlTaskInputResponse.html">output</a> API doc for this type.
@@ -8594,7 +8594,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#GetTdeCertificatesSqlTaskOutputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#GetTdeCertificatesSqlTaskOutputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.GetTdeCertificatesSqlTaskOutputResponse.html">output</a> API doc for this type.
@@ -8720,7 +8720,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#GetTdeCertificatesSqlTaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#GetTdeCertificatesSqlTaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.GetTdeCertificatesSqlTaskPropertiesResponse.html">output</a> API doc for this type.
@@ -8966,7 +8966,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#GetUserTablesSqlSyncTaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#GetUserTablesSqlSyncTaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.GetUserTablesSqlSyncTaskInputResponse.html">output</a> API doc for this type.
@@ -9172,7 +9172,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#GetUserTablesSqlSyncTaskOutputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#GetUserTablesSqlSyncTaskOutputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.GetUserTablesSqlSyncTaskOutputResponse.html">output</a> API doc for this type.
@@ -9378,7 +9378,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#GetUserTablesSqlSyncTaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#GetUserTablesSqlSyncTaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.GetUserTablesSqlSyncTaskPropertiesResponse.html">output</a> API doc for this type.
@@ -9624,7 +9624,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#GetUserTablesSqlTaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#GetUserTablesSqlTaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.GetUserTablesSqlTaskInputResponse.html">output</a> API doc for this type.
@@ -9750,7 +9750,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#GetUserTablesSqlTaskOutputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#GetUserTablesSqlTaskOutputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.GetUserTablesSqlTaskOutputResponse.html">output</a> API doc for this type.
@@ -9916,7 +9916,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#GetUserTablesSqlTaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#GetUserTablesSqlTaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.GetUserTablesSqlTaskPropertiesResponse.html">output</a> API doc for this type.
@@ -10162,7 +10162,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MiSqlConnectionInfoResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MiSqlConnectionInfoResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MiSqlConnectionInfoResponse.html">output</a> API doc for this type.
@@ -10328,7 +10328,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateMISyncCompleteCommandInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateMISyncCompleteCommandInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateMISyncCompleteCommandInputResponse.html">output</a> API doc for this type.
@@ -10414,7 +10414,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateMISyncCompleteCommandOutputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateMISyncCompleteCommandOutputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateMISyncCompleteCommandOutputResponse.html">output</a> API doc for this type.
@@ -10500,7 +10500,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateMISyncCompleteCommandPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateMISyncCompleteCommandPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateMISyncCompleteCommandPropertiesResponse.html">output</a> API doc for this type.
@@ -10706,7 +10706,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse.html">output</a> API doc for this type.
@@ -10952,7 +10952,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateMySqlAzureDbForMySqlSyncTaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateMySqlAzureDbForMySqlSyncTaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateMySqlAzureDbForMySqlSyncTaskInputResponse.html">output</a> API doc for this type.
@@ -11118,7 +11118,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorResponse.html">output</a> API doc for this type.
@@ -11284,7 +11284,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseLevelResponse.html">output</a> API doc for this type.
@@ -11970,7 +11970,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse.html">output</a> API doc for this type.
@@ -12096,7 +12096,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelResponse.html">output</a> API doc for this type.
@@ -12422,7 +12422,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse.html">output</a> API doc for this type.
@@ -13028,7 +13028,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse.html">output</a> API doc for this type.
@@ -13274,7 +13274,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse.html">output</a> API doc for this type.
@@ -13520,7 +13520,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse.html">output</a> API doc for this type.
@@ -13686,7 +13686,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseErrorResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseErrorResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseErrorResponse.html">output</a> API doc for this type.
@@ -13852,7 +13852,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLevelResponse.html">output</a> API doc for this type.
@@ -14538,7 +14538,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputErrorResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputErrorResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputErrorResponse.html">output</a> API doc for this type.
@@ -14664,7 +14664,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse.html">output</a> API doc for this type.
@@ -14990,7 +14990,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse.html">output</a> API doc for this type.
@@ -15596,7 +15596,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesResponse.html">output</a> API doc for this type.
@@ -15842,7 +15842,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlDbDatabaseInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlDbDatabaseInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlDbDatabaseInputResponse.html">output</a> API doc for this type.
@@ -16048,7 +16048,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlDbSyncDatabaseInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlDbSyncDatabaseInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlDbSyncDatabaseInputResponse.html">output</a> API doc for this type.
@@ -16414,7 +16414,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlDbSyncTaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlDbSyncTaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlDbSyncTaskInputResponse.html">output</a> API doc for this type.
@@ -16620,7 +16620,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse.html">output</a> API doc for this type.
@@ -16786,7 +16786,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse.html">output</a> API doc for this type.
@@ -17472,7 +17472,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlDbSyncTaskOutputErrorResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlDbSyncTaskOutputErrorResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlDbSyncTaskOutputErrorResponse.html">output</a> API doc for this type.
@@ -17598,7 +17598,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse.html">output</a> API doc for this type.
@@ -17964,7 +17964,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse.html">output</a> API doc for this type.
@@ -18570,7 +18570,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlDbSyncTaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlDbSyncTaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlDbSyncTaskPropertiesResponse.html">output</a> API doc for this type.
@@ -18816,7 +18816,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlDbTaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlDbTaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlDbTaskInputResponse.html">output</a> API doc for this type.
@@ -19030,7 +19030,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse.html">output</a> API doc for this type.
@@ -19676,7 +19676,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse.html">output</a> API doc for this type.
@@ -20122,7 +20122,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlDbTaskOutputErrorResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlDbTaskOutputErrorResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlDbTaskOutputErrorResponse.html">output</a> API doc for this type.
@@ -20248,7 +20248,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse.html">output</a> API doc for this type.
@@ -20894,7 +20894,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlDbTaskOutputTableLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlDbTaskOutputTableLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlDbTaskOutputTableLevelResponse.html">output</a> API doc for this type.
@@ -21340,7 +21340,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlDbTaskOutputValidationResultResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlDbTaskOutputValidationResultResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlDbTaskOutputValidationResultResponse.html">output</a> API doc for this type.
@@ -21546,7 +21546,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlDbTaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlDbTaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlDbTaskPropertiesResponse.html">output</a> API doc for this type.
@@ -21792,7 +21792,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlMIDatabaseInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlMIDatabaseInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlMIDatabaseInputResponse.html">output</a> API doc for this type.
@@ -21998,7 +21998,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlMISyncTaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlMISyncTaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlMISyncTaskInputResponse.html">output</a> API doc for this type.
@@ -22284,7 +22284,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse.html">output</a> API doc for this type.
@@ -22810,7 +22810,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlMISyncTaskOutputErrorResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlMISyncTaskOutputErrorResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlMISyncTaskOutputErrorResponse.html">output</a> API doc for this type.
@@ -22936,7 +22936,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse.html">output</a> API doc for this type.
@@ -23462,7 +23462,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlMISyncTaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlMISyncTaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlMISyncTaskPropertiesResponse.html">output</a> API doc for this type.
@@ -23708,7 +23708,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlMITaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlMITaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlMITaskInputResponse.html">output</a> API doc for this type.
@@ -24074,7 +24074,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse.html">output</a> API doc for this type.
@@ -24440,7 +24440,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse.html">output</a> API doc for this type.
@@ -24846,7 +24846,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlMITaskOutputErrorResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlMITaskOutputErrorResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlMITaskOutputErrorResponse.html">output</a> API doc for this type.
@@ -24972,7 +24972,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlMITaskOutputLoginLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlMITaskOutputLoginLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlMITaskOutputLoginLevelResponse.html">output</a> API doc for this type.
@@ -25338,7 +25338,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlMITaskOutputMigrationLevelResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlMITaskOutputMigrationLevelResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlMITaskOutputMigrationLevelResponse.html">output</a> API doc for this type.
@@ -26024,7 +26024,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSqlServerSqlMITaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSqlServerSqlMITaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSqlServerSqlMITaskPropertiesResponse.html">output</a> API doc for this type.
@@ -26270,7 +26270,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSyncCompleteCommandInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSyncCompleteCommandInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSyncCompleteCommandInputResponse.html">output</a> API doc for this type.
@@ -26396,7 +26396,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSyncCompleteCommandOutputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSyncCompleteCommandOutputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSyncCompleteCommandOutputResponse.html">output</a> API doc for this type.
@@ -26522,7 +26522,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrateSyncCompleteCommandPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrateSyncCompleteCommandPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrateSyncCompleteCommandPropertiesResponse.html">output</a> API doc for this type.
@@ -26728,7 +26728,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrationEligibilityInfoResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrationEligibilityInfoResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrationEligibilityInfoResponse.html">output</a> API doc for this type.
@@ -26854,7 +26854,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrationReportResultResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrationReportResultResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrationReportResultResponse.html">output</a> API doc for this type.
@@ -26980,7 +26980,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrationValidationDatabaseSummaryResultResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrationValidationDatabaseSummaryResultResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrationValidationDatabaseSummaryResultResponse.html">output</a> API doc for this type.
@@ -27306,7 +27306,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MigrationValidationOptionsResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MigrationValidationOptionsResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MigrationValidationOptionsResponse.html">output</a> API doc for this type.
@@ -27472,7 +27472,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#MySqlConnectionInfoResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#MySqlConnectionInfoResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.MySqlConnectionInfoResponse.html">output</a> API doc for this type.
@@ -27678,7 +27678,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ODataErrorResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ODataErrorResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ODataErrorResponse.html">output</a> API doc for this type.
@@ -27844,7 +27844,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#OrphanedUserInfoResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#OrphanedUserInfoResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.OrphanedUserInfoResponse.html">output</a> API doc for this type.
@@ -27970,7 +27970,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#PostgreSqlConnectionInfoResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#PostgreSqlConnectionInfoResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.PostgreSqlConnectionInfoResponse.html">output</a> API doc for this type.
@@ -28216,7 +28216,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#QueryAnalysisValidationResultResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#QueryAnalysisValidationResultResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.QueryAnalysisValidationResultResponse.html">output</a> API doc for this type.
@@ -28342,7 +28342,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#QueryExecutionResultResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#QueryExecutionResultResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.QueryExecutionResultResponse.html">output</a> API doc for this type.
@@ -28548,7 +28548,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ReportableExceptionResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ReportableExceptionResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ReportableExceptionResponse.html">output</a> API doc for this type.
@@ -28834,7 +28834,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#SchemaComparisonValidationResultResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#SchemaComparisonValidationResultResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.SchemaComparisonValidationResultResponse.html">output</a> API doc for this type.
@@ -29040,7 +29040,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#SchemaComparisonValidationResultTypeResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#SchemaComparisonValidationResultTypeResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.SchemaComparisonValidationResultTypeResponse.html">output</a> API doc for this type.
@@ -29206,7 +29206,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#SelectedCertificateInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#SelectedCertificateInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.SelectedCertificateInputResponse.html">output</a> API doc for this type.
@@ -29332,7 +29332,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#SqlConnectionInfoResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#SqlConnectionInfoResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.SqlConnectionInfoResponse.html">output</a> API doc for this type.
@@ -29698,7 +29698,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#SyncMigrationDatabaseErrorEventResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#SyncMigrationDatabaseErrorEventResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.SyncMigrationDatabaseErrorEventResponse.html">output</a> API doc for this type.
@@ -29864,7 +29864,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesResponse.html">output</a> API doc for this type.
@@ -30110,7 +30110,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse.html">output</a> API doc for this type.
@@ -30396,7 +30396,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse.html">output</a> API doc for this type.
@@ -30562,7 +30562,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesResponse.html">output</a> API doc for this type.
@@ -30808,7 +30808,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ValidateMigrationInputSqlServerSqlMITaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ValidateMigrationInputSqlServerSqlMITaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ValidateMigrationInputSqlServerSqlMITaskInputResponse.html">output</a> API doc for this type.
@@ -31134,7 +31134,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ValidateMigrationInputSqlServerSqlMITaskOutputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ValidateMigrationInputSqlServerSqlMITaskOutputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ValidateMigrationInputSqlServerSqlMITaskOutputResponse.html">output</a> API doc for this type.
@@ -31500,7 +31500,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse.html">output</a> API doc for this type.
@@ -31746,7 +31746,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ValidateSyncMigrationInputSqlServerTaskInputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ValidateSyncMigrationInputSqlServerTaskInputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ValidateSyncMigrationInputSqlServerTaskInputResponse.html">output</a> API doc for this type.
@@ -31912,7 +31912,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ValidateSyncMigrationInputSqlServerTaskOutputResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ValidateSyncMigrationInputSqlServerTaskOutputResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ValidateSyncMigrationInputSqlServerTaskOutputResponse.html">output</a> API doc for this type.
@@ -32078,7 +32078,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#ValidationErrorResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#ValidationErrorResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.ValidationErrorResponse.html">output</a> API doc for this type.
@@ -32204,7 +32204,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datamigration?tab=doc#WaitStatisticsResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#WaitStatisticsResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Datamigration.Outputs.WaitStatisticsResponse.html">output</a> API doc for this type.

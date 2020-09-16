@@ -39,13 +39,13 @@ Explore the resources and functions of the databricks module in the Azure NextGe
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.databricks.html" title="Pulumi.AzureNextGen.databricks">Pulumi.AzureNextGen.databricks</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/databricks?tab=doc#" title="azure-nextgen/databricks">azure-nextgen/databricks</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databricks?tab=doc#" title="azure/databricks">azure/databricks</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/databricks/#" title="@pulumi/azure-nextgen/databricks">@pulumi/azure-nextgen/databricks</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/databricks" title="pulumi_azure-nextgen/databricks">pulumi_azure-nextgen/databricks</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/databricks" title="pulumi_azure_nextgen/databricks">pulumi_azure_nextgen/databricks</a></dd>
 
 </dl>
 

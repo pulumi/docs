@@ -277,7 +277,7 @@ const machineLearningService = new azure_nextgen.machinelearningservices.v202009
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#MachineLearningService">NewMachineLearningService</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#MachineLearningServiceArgs">MachineLearningServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#MachineLearningService">MachineLearningService</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#MachineLearningService">NewMachineLearningService</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#MachineLearningServiceArgs">MachineLearningServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#MachineLearningService">MachineLearningService</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -371,7 +371,7 @@ const machineLearningService = new azure_nextgen.machinelearningservices.v202009
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#MachineLearningServiceArgs">MachineLearningServiceArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#MachineLearningServiceArgs">MachineLearningServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1167,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ACIServiceResponseResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ACIServiceResponseResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.ACIServiceResponseResponse.html">output</a> API doc for this type.
@@ -2173,7 +2173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ACIServiceResponseResponseDataCollectionOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ACIServiceResponseResponseDataCollectionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.ACIServiceResponseResponseDataCollection.html">output</a> API doc for this type.
@@ -2299,7 +2299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ACIServiceResponseResponseEncryptionPropertiesOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ACIServiceResponseResponseEncryptionPropertiesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.ACIServiceResponseResponseEncryptionProperties.html">output</a> API doc for this type.
@@ -2465,7 +2465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ACIServiceResponseResponseEnvironmentImageRequestOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ACIServiceResponseResponseEnvironmentImageRequestOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.ACIServiceResponseResponseEnvironmentImageRequest.html">output</a> API doc for this type.
@@ -2751,7 +2751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ACIServiceResponseResponseVnetConfigurationOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ACIServiceResponseResponseVnetConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.ACIServiceResponseResponseVnetConfiguration.html">output</a> API doc for this type.
@@ -2877,7 +2877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#AKSVariantResponseResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#AKSVariantResponseResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.AKSVariantResponseResponse.html">output</a> API doc for this type.
@@ -3283,7 +3283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ContainerResourceRequirementsArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ContainerResourceRequirementsArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Inputs.ContainerResourceRequirementsArgs.html">input</a>   API doc for this type.
@@ -3489,7 +3489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ContainerResourceRequirementsResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ContainerResourceRequirementsResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.ContainerResourceRequirementsResponse.html">output</a> API doc for this type.
@@ -3695,7 +3695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#CreateServiceRequestEnvironmentImageRequestArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#CreateServiceRequestEnvironmentImageRequestArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Inputs.CreateServiceRequestEnvironmentImageRequestArgs.html">input</a>   API doc for this type.
@@ -3981,7 +3981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#CreateServiceRequestKeysArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#CreateServiceRequestKeysArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Inputs.CreateServiceRequestKeysArgs.html">input</a>   API doc for this type.
@@ -4107,7 +4107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#DatasetReferenceArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#DatasetReferenceArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Inputs.DatasetReferenceArgs.html">input</a>   API doc for this type.
@@ -4233,7 +4233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#DatasetReferenceResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#DatasetReferenceResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.DatasetReferenceResponse.html">output</a> API doc for this type.
@@ -4359,7 +4359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#EnvironmentImageRequestEnvironmentArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#EnvironmentImageRequestEnvironmentArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Inputs.EnvironmentImageRequestEnvironmentArgs.html">input</a>   API doc for this type.
@@ -4725,7 +4725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#EnvironmentImageRequestEnvironmentReferenceArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#EnvironmentImageRequestEnvironmentReferenceArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Inputs.EnvironmentImageRequestEnvironmentReferenceArgs.html">input</a>   API doc for this type.
@@ -4851,7 +4851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#EnvironmentImageResponseResponseEnvironmentOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#EnvironmentImageResponseResponseEnvironmentOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.EnvironmentImageResponseResponseEnvironment.html">output</a> API doc for this type.
@@ -5217,7 +5217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#EnvironmentImageResponseResponseEnvironmentReferenceOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#EnvironmentImageResponseResponseEnvironmentReferenceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.EnvironmentImageResponseResponseEnvironmentReference.html">output</a> API doc for this type.
@@ -5343,7 +5343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ErrorDetailResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ErrorDetailResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.ErrorDetailResponse.html">output</a> API doc for this type.
@@ -5469,7 +5469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#IdentityResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#IdentityResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.IdentityResponse.html">output</a> API doc for this type.
@@ -5675,7 +5675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ImageAssetArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ImageAssetArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Inputs.ImageAssetArgs.html">input</a>   API doc for this type.
@@ -5881,7 +5881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ImageAssetResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ImageAssetResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.ImageAssetResponse.html">output</a> API doc for this type.
@@ -6087,7 +6087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ModelArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ModelArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Inputs.ModelArgs.html">input</a>   API doc for this type.
@@ -6973,7 +6973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ModelDockerSectionBaseImageRegistryArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ModelDockerSectionBaseImageRegistryArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Inputs.ModelDockerSectionBaseImageRegistryArgs.html">input</a>   API doc for this type.
@@ -7139,7 +7139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ModelDockerSectionResponseResponseBaseImageRegistryOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ModelDockerSectionResponseResponseBaseImageRegistryOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.ModelDockerSectionResponseResponseBaseImageRegistry.html">output</a> API doc for this type.
@@ -7225,7 +7225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ModelEnvironmentDefinitionDockerArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ModelEnvironmentDefinitionDockerArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Inputs.ModelEnvironmentDefinitionDockerArgs.html">input</a>   API doc for this type.
@@ -7391,7 +7391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ModelEnvironmentDefinitionPythonArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ModelEnvironmentDefinitionPythonArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Inputs.ModelEnvironmentDefinitionPythonArgs.html">input</a>   API doc for this type.
@@ -7597,7 +7597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ModelEnvironmentDefinitionRArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ModelEnvironmentDefinitionRArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Inputs.ModelEnvironmentDefinitionRArgs.html">input</a>   API doc for this type.
@@ -7967,7 +7967,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ModelEnvironmentDefinitionResponseResponseDockerOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ModelEnvironmentDefinitionResponseResponseDockerOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.ModelEnvironmentDefinitionResponseResponseDocker.html">output</a> API doc for this type.
@@ -8133,7 +8133,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ModelEnvironmentDefinitionResponseResponsePythonOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ModelEnvironmentDefinitionResponseResponsePythonOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.ModelEnvironmentDefinitionResponseResponsePython.html">output</a> API doc for this type.
@@ -8339,7 +8339,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ModelEnvironmentDefinitionResponseResponseROutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ModelEnvironmentDefinitionResponseResponseROutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.ModelEnvironmentDefinitionResponseResponseR.html">output</a> API doc for this type.
@@ -8709,7 +8709,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ModelEnvironmentDefinitionResponseResponseSparkOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ModelEnvironmentDefinitionResponseResponseSparkOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.ModelEnvironmentDefinitionResponseResponseSpark.html">output</a> API doc for this type.
@@ -8875,7 +8875,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ModelEnvironmentDefinitionSparkArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ModelEnvironmentDefinitionSparkArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Inputs.ModelEnvironmentDefinitionSparkArgs.html">input</a>   API doc for this type.
@@ -9041,7 +9041,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ModelResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ModelResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.ModelResponse.html">output</a> API doc for this type.
@@ -9927,7 +9927,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#RCranPackageArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#RCranPackageArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Inputs.RCranPackageArgs.html">input</a>   API doc for this type.
@@ -10053,7 +10053,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#RCranPackageResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#RCranPackageResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.RCranPackageResponse.html">output</a> API doc for this type.
@@ -10179,7 +10179,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#RGitHubPackageArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#RGitHubPackageArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Inputs.RGitHubPackageArgs.html">input</a>   API doc for this type.
@@ -10305,7 +10305,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#RGitHubPackageResponseResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#RGitHubPackageResponseResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.RGitHubPackageResponseResponse.html">output</a> API doc for this type.
@@ -10391,7 +10391,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#ServiceResponseBaseResponseErrorOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#ServiceResponseBaseResponseErrorOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.ServiceResponseBaseResponseError.html">output</a> API doc for this type.
@@ -10557,7 +10557,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#SkuResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#SkuResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.SkuResponse.html">output</a> API doc for this type.
@@ -10683,7 +10683,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#SparkMavenPackageArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#SparkMavenPackageArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Inputs.SparkMavenPackageArgs.html">input</a>   API doc for this type.
@@ -10849,7 +10849,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#SparkMavenPackageResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#SparkMavenPackageResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.SparkMavenPackageResponse.html">output</a> API doc for this type.
@@ -11015,7 +11015,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningservices?tab=doc#UserAssignedIdentityResponseOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#UserAssignedIdentityResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Machinelearningservices.Outputs.UserAssignedIdentityResponse.html">output</a> API doc for this type.

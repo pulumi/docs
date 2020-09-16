@@ -43,13 +43,13 @@ Explore the resources and functions of the desktopvirtualization module in the A
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.desktopvirtualization.html" title="Pulumi.AzureNextGen.desktopvirtualization">Pulumi.AzureNextGen.desktopvirtualization</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/desktopvirtualization?tab=doc#" title="azure-nextgen/desktopvirtualization">azure-nextgen/desktopvirtualization</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization?tab=doc#" title="azure/desktopvirtualization">azure/desktopvirtualization</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/desktopvirtualization/#" title="@pulumi/azure-nextgen/desktopvirtualization">@pulumi/azure-nextgen/desktopvirtualization</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/desktopvirtualization" title="pulumi_azure-nextgen/desktopvirtualization">pulumi_azure-nextgen/desktopvirtualization</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/desktopvirtualization" title="pulumi_azure_nextgen/desktopvirtualization">pulumi_azure_nextgen/desktopvirtualization</a></dd>
 
 </dl>
 

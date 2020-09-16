@@ -46,13 +46,13 @@ Explore the resources and functions of the hybridnetwork module in the Azure Nex
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.hybridnetwork.html" title="Pulumi.AzureNextGen.hybridnetwork">Pulumi.AzureNextGen.hybridnetwork</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hybridnetwork?tab=doc#" title="azure-nextgen/hybridnetwork">azure-nextgen/hybridnetwork</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridnetwork?tab=doc#" title="azure/hybridnetwork">azure/hybridnetwork</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/hybridnetwork/#" title="@pulumi/azure-nextgen/hybridnetwork">@pulumi/azure-nextgen/hybridnetwork</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/hybridnetwork" title="pulumi_azure-nextgen/hybridnetwork">pulumi_azure-nextgen/hybridnetwork</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/hybridnetwork" title="pulumi_azure_nextgen/hybridnetwork">pulumi_azure_nextgen/hybridnetwork</a></dd>
 
 </dl>
 

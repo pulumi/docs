@@ -40,13 +40,13 @@ Explore the resources and functions of the azurestack module in the Azure NextGe
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.azurestack.html" title="Pulumi.AzureNextGen.azurestack">Pulumi.AzureNextGen.azurestack</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/azurestack?tab=doc#" title="azure-nextgen/azurestack">azure-nextgen/azurestack</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azurestack?tab=doc#" title="azure/azurestack">azure/azurestack</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/azurestack/#" title="@pulumi/azure-nextgen/azurestack">@pulumi/azure-nextgen/azurestack</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/azurestack" title="pulumi_azure-nextgen/azurestack">pulumi_azure-nextgen/azurestack</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/azurestack" title="pulumi_azure_nextgen/azurestack">pulumi_azure_nextgen/azurestack</a></dd>
 
 </dl>
 

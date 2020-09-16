@@ -37,13 +37,13 @@ Explore the resources and functions of the powerbidedicated module in the Azure 
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.powerbidedicated.html" title="Pulumi.AzureNextGen.powerbidedicated">Pulumi.AzureNextGen.powerbidedicated</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/powerbidedicated?tab=doc#" title="azure-nextgen/powerbidedicated">azure-nextgen/powerbidedicated</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/powerbidedicated?tab=doc#" title="azure/powerbidedicated">azure/powerbidedicated</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/powerbidedicated/#" title="@pulumi/azure-nextgen/powerbidedicated">@pulumi/azure-nextgen/powerbidedicated</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/powerbidedicated" title="pulumi_azure-nextgen/powerbidedicated">pulumi_azure-nextgen/powerbidedicated</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/powerbidedicated" title="pulumi_azure_nextgen/powerbidedicated">pulumi_azure_nextgen/powerbidedicated</a></dd>
 
 </dl>
 

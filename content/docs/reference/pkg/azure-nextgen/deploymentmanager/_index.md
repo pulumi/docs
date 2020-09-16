@@ -47,13 +47,13 @@ Explore the resources and functions of the deploymentmanager module in the Azure
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.deploymentmanager.html" title="Pulumi.AzureNextGen.deploymentmanager">Pulumi.AzureNextGen.deploymentmanager</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/deploymentmanager?tab=doc#" title="azure-nextgen/deploymentmanager">azure-nextgen/deploymentmanager</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/deploymentmanager?tab=doc#" title="azure/deploymentmanager">azure/deploymentmanager</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/deploymentmanager/#" title="@pulumi/azure-nextgen/deploymentmanager">@pulumi/azure-nextgen/deploymentmanager</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/deploymentmanager" title="pulumi_azure-nextgen/deploymentmanager">pulumi_azure-nextgen/deploymentmanager</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/deploymentmanager" title="pulumi_azure_nextgen/deploymentmanager">pulumi_azure_nextgen/deploymentmanager</a></dd>
 
 </dl>
 

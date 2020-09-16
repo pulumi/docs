@@ -37,13 +37,13 @@ Explore the resources and functions of the windowsesu module in the Azure NextGe
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.windowsesu.html" title="Pulumi.AzureNextGen.windowsesu">Pulumi.AzureNextGen.windowsesu</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/windowsesu?tab=doc#" title="azure-nextgen/windowsesu">azure-nextgen/windowsesu</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/windowsesu?tab=doc#" title="azure/windowsesu">azure/windowsesu</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/windowsesu/#" title="@pulumi/azure-nextgen/windowsesu">@pulumi/azure-nextgen/windowsesu</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/windowsesu" title="pulumi_azure-nextgen/windowsesu">pulumi_azure-nextgen/windowsesu</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/windowsesu" title="pulumi_azure_nextgen/windowsesu">pulumi_azure_nextgen/windowsesu</a></dd>
 
 </dl>
 

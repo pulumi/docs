@@ -39,13 +39,13 @@ Explore the resources and functions of the aad module in the Azure NextGen packa
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.aad.html" title="Pulumi.AzureNextGen.aad">Pulumi.AzureNextGen.aad</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/aad?tab=doc#" title="azure-nextgen/aad">azure-nextgen/aad</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/aad?tab=doc#" title="azure/aad">azure/aad</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/aad/#" title="@pulumi/azure-nextgen/aad">@pulumi/azure-nextgen/aad</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/aad" title="pulumi_azure-nextgen/aad">pulumi_azure-nextgen/aad</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/aad" title="pulumi_azure_nextgen/aad">pulumi_azure_nextgen/aad</a></dd>
 
 </dl>
 

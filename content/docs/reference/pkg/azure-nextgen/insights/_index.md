@@ -90,13 +90,13 @@ Explore the resources and functions of the insights module in the Azure NextGen 
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.insights.html" title="Pulumi.AzureNextGen.insights">Pulumi.AzureNextGen.insights</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/insights?tab=doc#" title="azure-nextgen/insights">azure-nextgen/insights</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/insights?tab=doc#" title="azure/insights">azure/insights</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/insights/#" title="@pulumi/azure-nextgen/insights">@pulumi/azure-nextgen/insights</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/insights" title="pulumi_azure-nextgen/insights">pulumi_azure-nextgen/insights</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/insights" title="pulumi_azure_nextgen/insights">pulumi_azure_nextgen/insights</a></dd>
 
 </dl>
 

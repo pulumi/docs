@@ -76,13 +76,13 @@ Explore the resources and functions of the logic module in the Azure NextGen pac
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.logic.html" title="Pulumi.AzureNextGen.logic">Pulumi.AzureNextGen.logic</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/logic?tab=doc#" title="azure-nextgen/logic">azure-nextgen/logic</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/logic?tab=doc#" title="azure/logic">azure/logic</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/logic/#" title="@pulumi/azure-nextgen/logic">@pulumi/azure-nextgen/logic</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/logic" title="pulumi_azure-nextgen/logic">pulumi_azure-nextgen/logic</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/logic" title="pulumi_azure_nextgen/logic">pulumi_azure_nextgen/logic</a></dd>
 
 </dl>
 

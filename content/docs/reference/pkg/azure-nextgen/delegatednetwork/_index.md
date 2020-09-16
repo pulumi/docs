@@ -37,13 +37,13 @@ Explore the resources and functions of the delegatednetwork module in the Azure 
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.delegatednetwork.html" title="Pulumi.AzureNextGen.delegatednetwork">Pulumi.AzureNextGen.delegatednetwork</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/delegatednetwork?tab=doc#" title="azure-nextgen/delegatednetwork">azure-nextgen/delegatednetwork</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/delegatednetwork?tab=doc#" title="azure/delegatednetwork">azure/delegatednetwork</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/delegatednetwork/#" title="@pulumi/azure-nextgen/delegatednetwork">@pulumi/azure-nextgen/delegatednetwork</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/delegatednetwork" title="pulumi_azure-nextgen/delegatednetwork">pulumi_azure-nextgen/delegatednetwork</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/delegatednetwork" title="pulumi_azure_nextgen/delegatednetwork">pulumi_azure_nextgen/delegatednetwork</a></dd>
 
 </dl>
 

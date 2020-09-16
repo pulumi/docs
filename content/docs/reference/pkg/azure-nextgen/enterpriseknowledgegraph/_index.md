@@ -37,13 +37,13 @@ Explore the resources and functions of the enterpriseknowledgegraph module in th
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.enterpriseknowledgegraph.html" title="Pulumi.AzureNextGen.enterpriseknowledgegraph">Pulumi.AzureNextGen.enterpriseknowledgegraph</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/enterpriseknowledgegraph?tab=doc#" title="azure-nextgen/enterpriseknowledgegraph">azure-nextgen/enterpriseknowledgegraph</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/enterpriseknowledgegraph?tab=doc#" title="azure/enterpriseknowledgegraph">azure/enterpriseknowledgegraph</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/enterpriseknowledgegraph/#" title="@pulumi/azure-nextgen/enterpriseknowledgegraph">@pulumi/azure-nextgen/enterpriseknowledgegraph</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/enterpriseknowledgegraph" title="pulumi_azure-nextgen/enterpriseknowledgegraph">pulumi_azure-nextgen/enterpriseknowledgegraph</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/enterpriseknowledgegraph" title="pulumi_azure_nextgen/enterpriseknowledgegraph">pulumi_azure_nextgen/enterpriseknowledgegraph</a></dd>
 
 </dl>
 

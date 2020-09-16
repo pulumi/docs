@@ -55,13 +55,13 @@ Explore the resources and functions of the databoxedge module in the Azure NextG
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.databoxedge.html" title="Pulumi.AzureNextGen.databoxedge">Pulumi.AzureNextGen.databoxedge</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/databoxedge?tab=doc#" title="azure-nextgen/databoxedge">azure-nextgen/databoxedge</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databoxedge?tab=doc#" title="azure/databoxedge">azure/databoxedge</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/databoxedge/#" title="@pulumi/azure-nextgen/databoxedge">@pulumi/azure-nextgen/databoxedge</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/databoxedge" title="pulumi_azure-nextgen/databoxedge">pulumi_azure-nextgen/databoxedge</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/databoxedge" title="pulumi_azure_nextgen/databoxedge">pulumi_azure_nextgen/databoxedge</a></dd>
 
 </dl>
 

@@ -37,13 +37,13 @@ Explore the resources and functions of the changeanalysis module in the Azure Ne
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.changeanalysis.html" title="Pulumi.AzureNextGen.changeanalysis">Pulumi.AzureNextGen.changeanalysis</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/changeanalysis?tab=doc#" title="azure-nextgen/changeanalysis">azure-nextgen/changeanalysis</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/changeanalysis?tab=doc#" title="azure/changeanalysis">azure/changeanalysis</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/changeanalysis/#" title="@pulumi/azure-nextgen/changeanalysis">@pulumi/azure-nextgen/changeanalysis</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/changeanalysis" title="pulumi_azure-nextgen/changeanalysis">pulumi_azure-nextgen/changeanalysis</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/changeanalysis" title="pulumi_azure_nextgen/changeanalysis">pulumi_azure_nextgen/changeanalysis</a></dd>
 
 </dl>
 

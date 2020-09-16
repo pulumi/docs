@@ -44,13 +44,13 @@ Explore the resources and functions of the cache module in the Azure NextGen pac
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.cache.html" title="Pulumi.AzureNextGen.cache">Pulumi.AzureNextGen.cache</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/cache?tab=doc#" title="azure-nextgen/cache">azure-nextgen/cache</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cache?tab=doc#" title="azure/cache">azure/cache</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/cache/#" title="@pulumi/azure-nextgen/cache">@pulumi/azure-nextgen/cache</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/cache" title="pulumi_azure-nextgen/cache">pulumi_azure-nextgen/cache</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/cache" title="pulumi_azure_nextgen/cache">pulumi_azure_nextgen/cache</a></dd>
 
 </dl>
 

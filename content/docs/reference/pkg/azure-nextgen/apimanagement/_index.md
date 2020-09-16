@@ -120,13 +120,13 @@ Explore the resources and functions of the apimanagement module in the Azure Nex
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.apimanagement.html" title="Pulumi.AzureNextGen.apimanagement">Pulumi.AzureNextGen.apimanagement</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/apimanagement?tab=doc#" title="azure-nextgen/apimanagement">azure-nextgen/apimanagement</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/apimanagement?tab=doc#" title="azure/apimanagement">azure/apimanagement</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/apimanagement/#" title="@pulumi/azure-nextgen/apimanagement">@pulumi/azure-nextgen/apimanagement</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/apimanagement" title="pulumi_azure-nextgen/apimanagement">pulumi_azure-nextgen/apimanagement</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/apimanagement" title="pulumi_azure_nextgen/apimanagement">pulumi_azure_nextgen/apimanagement</a></dd>
 
 </dl>
 

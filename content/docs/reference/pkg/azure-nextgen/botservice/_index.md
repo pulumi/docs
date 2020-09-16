@@ -46,13 +46,13 @@ Explore the resources and functions of the botservice module in the Azure NextGe
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.botservice.html" title="Pulumi.AzureNextGen.botservice">Pulumi.AzureNextGen.botservice</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/botservice?tab=doc#" title="azure-nextgen/botservice">azure-nextgen/botservice</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/botservice?tab=doc#" title="azure/botservice">azure/botservice</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/botservice/#" title="@pulumi/azure-nextgen/botservice">@pulumi/azure-nextgen/botservice</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/botservice" title="pulumi_azure-nextgen/botservice">pulumi_azure-nextgen/botservice</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/botservice" title="pulumi_azure_nextgen/botservice">pulumi_azure_nextgen/botservice</a></dd>
 
 </dl>
 

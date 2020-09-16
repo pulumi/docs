@@ -38,13 +38,13 @@ Explore the resources and functions of the machinelearningcompute module in the 
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.machinelearningcompute.html" title="Pulumi.AzureNextGen.machinelearningcompute">Pulumi.AzureNextGen.machinelearningcompute</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/machinelearningcompute?tab=doc#" title="azure-nextgen/machinelearningcompute">azure-nextgen/machinelearningcompute</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningcompute?tab=doc#" title="azure/machinelearningcompute">azure/machinelearningcompute</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/machinelearningcompute/#" title="@pulumi/azure-nextgen/machinelearningcompute">@pulumi/azure-nextgen/machinelearningcompute</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/machinelearningcompute" title="pulumi_azure-nextgen/machinelearningcompute">pulumi_azure-nextgen/machinelearningcompute</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/machinelearningcompute" title="pulumi_azure_nextgen/machinelearningcompute">pulumi_azure_nextgen/machinelearningcompute</a></dd>
 
 </dl>
 

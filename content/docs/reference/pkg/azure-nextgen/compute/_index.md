@@ -81,13 +81,13 @@ Explore the resources and functions of the compute module in the Azure NextGen p
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.compute.html" title="Pulumi.AzureNextGen.compute">Pulumi.AzureNextGen.compute</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/compute?tab=doc#" title="azure-nextgen/compute">azure-nextgen/compute</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute?tab=doc#" title="azure/compute">azure/compute</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/compute/#" title="@pulumi/azure-nextgen/compute">@pulumi/azure-nextgen/compute</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/compute" title="pulumi_azure-nextgen/compute">pulumi_azure-nextgen/compute</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/compute" title="pulumi_azure_nextgen/compute">pulumi_azure_nextgen/compute</a></dd>
 
 </dl>
 

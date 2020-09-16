@@ -54,13 +54,13 @@ Explore the resources and functions of the storage module in the Azure NextGen p
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.storage.html" title="Pulumi.AzureNextGen.storage">Pulumi.AzureNextGen.storage</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/storage?tab=doc#" title="azure-nextgen/storage">azure-nextgen/storage</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage?tab=doc#" title="azure/storage">azure/storage</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/storage/#" title="@pulumi/azure-nextgen/storage">@pulumi/azure-nextgen/storage</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/storage" title="pulumi_azure-nextgen/storage">pulumi_azure-nextgen/storage</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/storage" title="pulumi_azure_nextgen/storage">pulumi_azure_nextgen/storage</a></dd>
 
 </dl>
 

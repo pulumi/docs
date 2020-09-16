@@ -53,13 +53,13 @@ Explore the resources and functions of the devices module in the Azure NextGen p
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.devices.html" title="Pulumi.AzureNextGen.devices">Pulumi.AzureNextGen.devices</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/devices?tab=doc#" title="azure-nextgen/devices">azure-nextgen/devices</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devices?tab=doc#" title="azure/devices">azure/devices</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/devices/#" title="@pulumi/azure-nextgen/devices">@pulumi/azure-nextgen/devices</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/devices" title="pulumi_azure-nextgen/devices">pulumi_azure-nextgen/devices</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/devices" title="pulumi_azure_nextgen/devices">pulumi_azure_nextgen/devices</a></dd>
 
 </dl>
 

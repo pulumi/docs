@@ -37,13 +37,13 @@ Explore the resources and functions of the maintenance module in the Azure NextG
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.maintenance.html" title="Pulumi.AzureNextGen.maintenance">Pulumi.AzureNextGen.maintenance</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/maintenance?tab=doc#" title="azure-nextgen/maintenance">azure-nextgen/maintenance</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/maintenance?tab=doc#" title="azure/maintenance">azure/maintenance</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/maintenance/#" title="@pulumi/azure-nextgen/maintenance">@pulumi/azure-nextgen/maintenance</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/maintenance" title="pulumi_azure-nextgen/maintenance">pulumi_azure-nextgen/maintenance</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/maintenance" title="pulumi_azure_nextgen/maintenance">pulumi_azure_nextgen/maintenance</a></dd>
 
 </dl>
 

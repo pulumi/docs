@@ -52,13 +52,13 @@ Explore the resources and functions of the relay module in the Azure NextGen pac
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.relay.html" title="Pulumi.AzureNextGen.relay">Pulumi.AzureNextGen.relay</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/relay?tab=doc#" title="azure-nextgen/relay">azure-nextgen/relay</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/relay?tab=doc#" title="azure/relay">azure/relay</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/relay/#" title="@pulumi/azure-nextgen/relay">@pulumi/azure-nextgen/relay</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/relay" title="pulumi_azure-nextgen/relay">pulumi_azure-nextgen/relay</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/relay" title="pulumi_azure_nextgen/relay">pulumi_azure_nextgen/relay</a></dd>
 
 </dl>
 

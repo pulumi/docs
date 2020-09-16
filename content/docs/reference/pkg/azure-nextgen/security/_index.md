@@ -63,13 +63,13 @@ Explore the resources and functions of the security module in the Azure NextGen 
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.security.html" title="Pulumi.AzureNextGen.security">Pulumi.AzureNextGen.security</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/security?tab=doc#" title="azure-nextgen/security">azure-nextgen/security</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/security?tab=doc#" title="azure/security">azure/security</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/security/#" title="@pulumi/azure-nextgen/security">@pulumi/azure-nextgen/security</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/security" title="pulumi_azure-nextgen/security">pulumi_azure-nextgen/security</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/security" title="pulumi_azure_nextgen/security">pulumi_azure_nextgen/security</a></dd>
 
 </dl>
 

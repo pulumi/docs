@@ -42,13 +42,13 @@ Explore the resources and functions of the datalakeanalytics module in the Azure
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.datalakeanalytics.html" title="Pulumi.AzureNextGen.datalakeanalytics">Pulumi.AzureNextGen.datalakeanalytics</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datalakeanalytics?tab=doc#" title="azure-nextgen/datalakeanalytics">azure-nextgen/datalakeanalytics</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakeanalytics?tab=doc#" title="azure/datalakeanalytics">azure/datalakeanalytics</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/datalakeanalytics/#" title="@pulumi/azure-nextgen/datalakeanalytics">@pulumi/azure-nextgen/datalakeanalytics</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/datalakeanalytics" title="pulumi_azure-nextgen/datalakeanalytics">pulumi_azure-nextgen/datalakeanalytics</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/datalakeanalytics" title="pulumi_azure_nextgen/datalakeanalytics">pulumi_azure_nextgen/datalakeanalytics</a></dd>
 
 </dl>
 

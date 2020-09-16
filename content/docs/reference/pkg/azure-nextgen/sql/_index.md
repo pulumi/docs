@@ -113,13 +113,13 @@ Explore the resources and functions of the sql module in the Azure NextGen packa
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.sql.html" title="Pulumi.AzureNextGen.sql">Pulumi.AzureNextGen.sql</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/sql?tab=doc#" title="azure-nextgen/sql">azure-nextgen/sql</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sql?tab=doc#" title="azure/sql">azure/sql</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/sql/#" title="@pulumi/azure-nextgen/sql">@pulumi/azure-nextgen/sql</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/sql" title="pulumi_azure-nextgen/sql">pulumi_azure-nextgen/sql</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/sql" title="pulumi_azure_nextgen/sql">pulumi_azure_nextgen/sql</a></dd>
 
 </dl>
 

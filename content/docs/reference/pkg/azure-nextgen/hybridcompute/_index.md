@@ -47,13 +47,13 @@ Explore the resources and functions of the hybridcompute module in the Azure Nex
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.hybridcompute.html" title="Pulumi.AzureNextGen.hybridcompute">Pulumi.AzureNextGen.hybridcompute</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hybridcompute?tab=doc#" title="azure-nextgen/hybridcompute">azure-nextgen/hybridcompute</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybridcompute?tab=doc#" title="azure/hybridcompute">azure/hybridcompute</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/hybridcompute/#" title="@pulumi/azure-nextgen/hybridcompute">@pulumi/azure-nextgen/hybridcompute</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/hybridcompute" title="pulumi_azure-nextgen/hybridcompute">pulumi_azure-nextgen/hybridcompute</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/hybridcompute" title="pulumi_azure_nextgen/hybridcompute">pulumi_azure_nextgen/hybridcompute</a></dd>
 
 </dl>
 

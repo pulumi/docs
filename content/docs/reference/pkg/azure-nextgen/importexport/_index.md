@@ -38,13 +38,13 @@ Explore the resources and functions of the importexport module in the Azure Next
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.importexport.html" title="Pulumi.AzureNextGen.importexport">Pulumi.AzureNextGen.importexport</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/importexport?tab=doc#" title="azure-nextgen/importexport">azure-nextgen/importexport</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/importexport?tab=doc#" title="azure/importexport">azure/importexport</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/importexport/#" title="@pulumi/azure-nextgen/importexport">@pulumi/azure-nextgen/importexport</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/importexport" title="pulumi_azure-nextgen/importexport">pulumi_azure-nextgen/importexport</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/importexport" title="pulumi_azure_nextgen/importexport">pulumi_azure_nextgen/importexport</a></dd>
 
 </dl>
 

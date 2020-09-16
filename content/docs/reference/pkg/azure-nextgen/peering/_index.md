@@ -47,13 +47,13 @@ Explore the resources and functions of the peering module in the Azure NextGen p
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.peering.html" title="Pulumi.AzureNextGen.peering">Pulumi.AzureNextGen.peering</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/peering?tab=doc#" title="azure-nextgen/peering">azure-nextgen/peering</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/peering?tab=doc#" title="azure/peering">azure/peering</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/peering/#" title="@pulumi/azure-nextgen/peering">@pulumi/azure-nextgen/peering</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/peering" title="pulumi_azure-nextgen/peering">pulumi_azure-nextgen/peering</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/peering" title="pulumi_azure_nextgen/peering">pulumi_azure_nextgen/peering</a></dd>
 
 </dl>
 

@@ -37,13 +37,13 @@ Explore the resources and functions of the healthcareapis module in the Azure Ne
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.healthcareapis.html" title="Pulumi.AzureNextGen.healthcareapis">Pulumi.AzureNextGen.healthcareapis</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/healthcareapis?tab=doc#" title="azure-nextgen/healthcareapis">azure-nextgen/healthcareapis</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/healthcareapis?tab=doc#" title="azure/healthcareapis">azure/healthcareapis</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/healthcareapis/#" title="@pulumi/azure-nextgen/healthcareapis">@pulumi/azure-nextgen/healthcareapis</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/healthcareapis" title="pulumi_azure-nextgen/healthcareapis">pulumi_azure-nextgen/healthcareapis</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/healthcareapis" title="pulumi_azure_nextgen/healthcareapis">pulumi_azure_nextgen/healthcareapis</a></dd>
 
 </dl>
 

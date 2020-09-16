@@ -46,13 +46,13 @@ Explore the resources and functions of the batch module in the Azure NextGen pac
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.batch.html" title="Pulumi.AzureNextGen.batch">Pulumi.AzureNextGen.batch</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/batch?tab=doc#" title="azure-nextgen/batch">azure-nextgen/batch</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch?tab=doc#" title="azure/batch">azure/batch</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/batch/#" title="@pulumi/azure-nextgen/batch">@pulumi/azure-nextgen/batch</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/batch" title="pulumi_azure-nextgen/batch">pulumi_azure-nextgen/batch</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/batch" title="pulumi_azure_nextgen/batch">pulumi_azure_nextgen/batch</a></dd>
 
 </dl>
 

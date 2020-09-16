@@ -37,13 +37,13 @@ Explore the resources and functions of the addons module in the Azure NextGen pa
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.addons.html" title="Pulumi.AzureNextGen.addons">Pulumi.AzureNextGen.addons</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/addons?tab=doc#" title="azure-nextgen/addons">azure-nextgen/addons</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/addons?tab=doc#" title="azure/addons">azure/addons</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/addons/#" title="@pulumi/azure-nextgen/addons">@pulumi/azure-nextgen/addons</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/addons" title="pulumi_azure-nextgen/addons">pulumi_azure-nextgen/addons</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/addons" title="pulumi_azure_nextgen/addons">pulumi_azure_nextgen/addons</a></dd>
 
 </dl>
 

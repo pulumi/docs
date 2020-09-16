@@ -41,13 +41,13 @@ Explore the resources and functions of the hybriddata module in the Azure NextGe
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.hybriddata.html" title="Pulumi.AzureNextGen.hybriddata">Pulumi.AzureNextGen.hybriddata</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hybriddata?tab=doc#" title="azure-nextgen/hybriddata">azure-nextgen/hybriddata</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hybriddata?tab=doc#" title="azure/hybriddata">azure/hybriddata</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/hybriddata/#" title="@pulumi/azure-nextgen/hybriddata">@pulumi/azure-nextgen/hybriddata</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/hybriddata" title="pulumi_azure-nextgen/hybriddata">pulumi_azure-nextgen/hybriddata</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/hybriddata" title="pulumi_azure_nextgen/hybriddata">pulumi_azure_nextgen/hybriddata</a></dd>
 
 </dl>
 

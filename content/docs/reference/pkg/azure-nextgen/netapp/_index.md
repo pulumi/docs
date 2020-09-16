@@ -49,13 +49,13 @@ Explore the resources and functions of the netapp module in the Azure NextGen pa
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.netapp.html" title="Pulumi.AzureNextGen.netapp">Pulumi.AzureNextGen.netapp</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/netapp?tab=doc#" title="azure-nextgen/netapp">azure-nextgen/netapp</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/netapp?tab=doc#" title="azure/netapp">azure/netapp</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/netapp/#" title="@pulumi/azure-nextgen/netapp">@pulumi/azure-nextgen/netapp</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/netapp" title="pulumi_azure-nextgen/netapp">pulumi_azure-nextgen/netapp</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/netapp" title="pulumi_azure_nextgen/netapp">pulumi_azure_nextgen/netapp</a></dd>
 
 </dl>
 

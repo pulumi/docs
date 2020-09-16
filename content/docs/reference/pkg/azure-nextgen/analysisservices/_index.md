@@ -38,13 +38,13 @@ Explore the resources and functions of the analysisservices module in the Azure 
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.analysisservices.html" title="Pulumi.AzureNextGen.analysisservices">Pulumi.AzureNextGen.analysisservices</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/analysisservices?tab=doc#" title="azure-nextgen/analysisservices">azure-nextgen/analysisservices</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/analysisservices?tab=doc#" title="azure/analysisservices">azure/analysisservices</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/analysisservices/#" title="@pulumi/azure-nextgen/analysisservices">@pulumi/azure-nextgen/analysisservices</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/analysisservices" title="pulumi_azure-nextgen/analysisservices">pulumi_azure-nextgen/analysisservices</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/analysisservices" title="pulumi_azure_nextgen/analysisservices">pulumi_azure_nextgen/analysisservices</a></dd>
 
 </dl>
 

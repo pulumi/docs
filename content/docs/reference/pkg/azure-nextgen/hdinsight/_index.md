@@ -39,13 +39,13 @@ Explore the resources and functions of the hdinsight module in the Azure NextGen
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.hdinsight.html" title="Pulumi.AzureNextGen.hdinsight">Pulumi.AzureNextGen.hdinsight</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hdinsight?tab=doc#" title="azure-nextgen/hdinsight">azure-nextgen/hdinsight</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hdinsight?tab=doc#" title="azure/hdinsight">azure/hdinsight</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/hdinsight/#" title="@pulumi/azure-nextgen/hdinsight">@pulumi/azure-nextgen/hdinsight</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/hdinsight" title="pulumi_azure-nextgen/hdinsight">pulumi_azure-nextgen/hdinsight</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/hdinsight" title="pulumi_azure_nextgen/hdinsight">pulumi_azure_nextgen/hdinsight</a></dd>
 
 </dl>
 

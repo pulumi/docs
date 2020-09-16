@@ -41,13 +41,13 @@ Explore the resources and functions of the sqlvirtualmachine module in the Azure
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.sqlvirtualmachine.html" title="Pulumi.AzureNextGen.sqlvirtualmachine">Pulumi.AzureNextGen.sqlvirtualmachine</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/sqlvirtualmachine?tab=doc#" title="azure-nextgen/sqlvirtualmachine">azure-nextgen/sqlvirtualmachine</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/sqlvirtualmachine?tab=doc#" title="azure/sqlvirtualmachine">azure/sqlvirtualmachine</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/sqlvirtualmachine/#" title="@pulumi/azure-nextgen/sqlvirtualmachine">@pulumi/azure-nextgen/sqlvirtualmachine</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/sqlvirtualmachine" title="pulumi_azure-nextgen/sqlvirtualmachine">pulumi_azure-nextgen/sqlvirtualmachine</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/sqlvirtualmachine" title="pulumi_azure_nextgen/sqlvirtualmachine">pulumi_azure_nextgen/sqlvirtualmachine</a></dd>
 
 </dl>
 

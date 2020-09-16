@@ -48,13 +48,13 @@ Explore the resources and functions of the billing module in the Azure NextGen p
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.billing.html" title="Pulumi.AzureNextGen.billing">Pulumi.AzureNextGen.billing</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/billing?tab=doc#" title="azure-nextgen/billing">azure-nextgen/billing</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/billing?tab=doc#" title="azure/billing">azure/billing</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/billing/#" title="@pulumi/azure-nextgen/billing">@pulumi/azure-nextgen/billing</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/billing" title="pulumi_azure-nextgen/billing">pulumi_azure-nextgen/billing</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/billing" title="pulumi_azure_nextgen/billing">pulumi_azure_nextgen/billing</a></dd>
 
 </dl>
 

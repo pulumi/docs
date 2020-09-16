@@ -52,13 +52,13 @@ Explore the resources and functions of the datafactory module in the Azure NextG
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.datafactory.html" title="Pulumi.AzureNextGen.datafactory">Pulumi.AzureNextGen.datafactory</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datafactory?tab=doc#" title="azure-nextgen/datafactory">azure-nextgen/datafactory</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datafactory?tab=doc#" title="azure/datafactory">azure/datafactory</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/datafactory/#" title="@pulumi/azure-nextgen/datafactory">@pulumi/azure-nextgen/datafactory</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/datafactory" title="pulumi_azure-nextgen/datafactory">pulumi_azure-nextgen/datafactory</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/datafactory" title="pulumi_azure_nextgen/datafactory">pulumi_azure_nextgen/datafactory</a></dd>
 
 </dl>
 

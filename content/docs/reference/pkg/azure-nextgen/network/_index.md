@@ -209,13 +209,13 @@ Explore the resources and functions of the network module in the Azure NextGen p
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.network.html" title="Pulumi.AzureNextGen.network">Pulumi.AzureNextGen.network</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/network?tab=doc#" title="azure-nextgen/network">azure-nextgen/network</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network?tab=doc#" title="azure/network">azure/network</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/network/#" title="@pulumi/azure-nextgen/network">@pulumi/azure-nextgen/network</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/network" title="pulumi_azure-nextgen/network">pulumi_azure-nextgen/network</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/network" title="pulumi_azure_nextgen/network">pulumi_azure_nextgen/network</a></dd>
 
 </dl>
 

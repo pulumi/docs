@@ -37,13 +37,13 @@ Explore the resources and functions of the devops module in the Azure NextGen pa
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.devops.html" title="Pulumi.AzureNextGen.devops">Pulumi.AzureNextGen.devops</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/devops?tab=doc#" title="azure-nextgen/devops">azure-nextgen/devops</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devops?tab=doc#" title="azure/devops">azure/devops</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/devops/#" title="@pulumi/azure-nextgen/devops">@pulumi/azure-nextgen/devops</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/devops" title="pulumi_azure-nextgen/devops">pulumi_azure-nextgen/devops</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/devops" title="pulumi_azure_nextgen/devops">pulumi_azure_nextgen/devops</a></dd>
 
 </dl>
 

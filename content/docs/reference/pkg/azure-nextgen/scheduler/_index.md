@@ -39,13 +39,13 @@ Explore the resources and functions of the scheduler module in the Azure NextGen
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.scheduler.html" title="Pulumi.AzureNextGen.scheduler">Pulumi.AzureNextGen.scheduler</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/scheduler?tab=doc#" title="azure-nextgen/scheduler">azure-nextgen/scheduler</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/scheduler?tab=doc#" title="azure/scheduler">azure/scheduler</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/scheduler/#" title="@pulumi/azure-nextgen/scheduler">@pulumi/azure-nextgen/scheduler</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/scheduler" title="pulumi_azure-nextgen/scheduler">pulumi_azure-nextgen/scheduler</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/scheduler" title="pulumi_azure_nextgen/scheduler">pulumi_azure_nextgen/scheduler</a></dd>
 
 </dl>
 

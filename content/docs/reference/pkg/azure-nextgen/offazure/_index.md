@@ -41,13 +41,13 @@ Explore the resources and functions of the offazure module in the Azure NextGen 
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.offazure.html" title="Pulumi.AzureNextGen.offazure">Pulumi.AzureNextGen.offazure</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/offazure?tab=doc#" title="azure-nextgen/offazure">azure-nextgen/offazure</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/offazure?tab=doc#" title="azure/offazure">azure/offazure</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/offazure/#" title="@pulumi/azure-nextgen/offazure">@pulumi/azure-nextgen/offazure</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/offazure" title="pulumi_azure-nextgen/offazure">pulumi_azure-nextgen/offazure</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/offazure" title="pulumi_azure_nextgen/offazure">pulumi_azure_nextgen/offazure</a></dd>
 
 </dl>
 

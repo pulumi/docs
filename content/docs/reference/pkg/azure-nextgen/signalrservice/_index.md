@@ -40,13 +40,13 @@ Explore the resources and functions of the signalrservice module in the Azure Ne
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.signalrservice.html" title="Pulumi.AzureNextGen.signalrservice">Pulumi.AzureNextGen.signalrservice</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/signalrservice?tab=doc#" title="azure-nextgen/signalrservice">azure-nextgen/signalrservice</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/signalrservice?tab=doc#" title="azure/signalrservice">azure/signalrservice</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/signalrservice/#" title="@pulumi/azure-nextgen/signalrservice">@pulumi/azure-nextgen/signalrservice</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/signalrservice" title="pulumi_azure-nextgen/signalrservice">pulumi_azure-nextgen/signalrservice</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/signalrservice" title="pulumi_azure_nextgen/signalrservice">pulumi_azure_nextgen/signalrservice</a></dd>
 
 </dl>
 

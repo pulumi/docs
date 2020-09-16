@@ -43,13 +43,13 @@ Explore the resources and functions of the managednetwork module in the Azure Ne
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.managednetwork.html" title="Pulumi.AzureNextGen.managednetwork">Pulumi.AzureNextGen.managednetwork</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/managednetwork?tab=doc#" title="azure-nextgen/managednetwork">azure-nextgen/managednetwork</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managednetwork?tab=doc#" title="azure/managednetwork">azure/managednetwork</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/managednetwork/#" title="@pulumi/azure-nextgen/managednetwork">@pulumi/azure-nextgen/managednetwork</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/managednetwork" title="pulumi_azure-nextgen/managednetwork">pulumi_azure-nextgen/managednetwork</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/managednetwork" title="pulumi_azure_nextgen/managednetwork">pulumi_azure_nextgen/managednetwork</a></dd>
 
 </dl>
 

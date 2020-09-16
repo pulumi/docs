@@ -37,13 +37,13 @@ Explore the resources and functions of the subscription module in the Azure Next
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.subscription.html" title="Pulumi.AzureNextGen.subscription">Pulumi.AzureNextGen.subscription</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/subscription?tab=doc#" title="azure-nextgen/subscription">azure-nextgen/subscription</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/subscription?tab=doc#" title="azure/subscription">azure/subscription</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/subscription/#" title="@pulumi/azure-nextgen/subscription">@pulumi/azure-nextgen/subscription</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/subscription" title="pulumi_azure-nextgen/subscription">pulumi_azure-nextgen/subscription</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/subscription" title="pulumi_azure_nextgen/subscription">pulumi_azure_nextgen/subscription</a></dd>
 
 </dl>
 

@@ -47,13 +47,13 @@ Explore the resources and functions of the policyinsights module in the Azure Ne
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.policyinsights.html" title="Pulumi.AzureNextGen.policyinsights">Pulumi.AzureNextGen.policyinsights</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/policyinsights?tab=doc#" title="azure-nextgen/policyinsights">azure-nextgen/policyinsights</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/policyinsights?tab=doc#" title="azure/policyinsights">azure/policyinsights</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/policyinsights/#" title="@pulumi/azure-nextgen/policyinsights">@pulumi/azure-nextgen/policyinsights</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/policyinsights" title="pulumi_azure-nextgen/policyinsights">pulumi_azure-nextgen/policyinsights</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/policyinsights" title="pulumi_azure_nextgen/policyinsights">pulumi_azure_nextgen/policyinsights</a></dd>
 
 </dl>
 

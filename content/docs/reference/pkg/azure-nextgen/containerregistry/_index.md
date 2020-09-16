@@ -72,13 +72,13 @@ Explore the resources and functions of the containerregistry module in the Azure
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.containerregistry.html" title="Pulumi.AzureNextGen.containerregistry">Pulumi.AzureNextGen.containerregistry</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/containerregistry?tab=doc#" title="azure-nextgen/containerregistry">azure-nextgen/containerregistry</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerregistry?tab=doc#" title="azure/containerregistry">azure/containerregistry</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/containerregistry/#" title="@pulumi/azure-nextgen/containerregistry">@pulumi/azure-nextgen/containerregistry</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/containerregistry" title="pulumi_azure-nextgen/containerregistry">pulumi_azure-nextgen/containerregistry</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/containerregistry" title="pulumi_azure_nextgen/containerregistry">pulumi_azure_nextgen/containerregistry</a></dd>
 
 </dl>
 

@@ -47,13 +47,13 @@ Explore the resources and functions of the cdn module in the Azure NextGen packa
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.cdn.html" title="Pulumi.AzureNextGen.cdn">Pulumi.AzureNextGen.cdn</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/cdn?tab=doc#" title="azure-nextgen/cdn">azure-nextgen/cdn</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cdn?tab=doc#" title="azure/cdn">azure/cdn</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/cdn/#" title="@pulumi/azure-nextgen/cdn">@pulumi/azure-nextgen/cdn</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/cdn" title="pulumi_azure-nextgen/cdn">pulumi_azure-nextgen/cdn</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/cdn" title="pulumi_azure_nextgen/cdn">pulumi_azure_nextgen/cdn</a></dd>
 
 </dl>
 

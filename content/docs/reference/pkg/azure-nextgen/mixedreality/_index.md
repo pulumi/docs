@@ -41,13 +41,13 @@ Explore the resources and functions of the mixedreality module in the Azure Next
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.mixedreality.html" title="Pulumi.AzureNextGen.mixedreality">Pulumi.AzureNextGen.mixedreality</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/mixedreality?tab=doc#" title="azure-nextgen/mixedreality">azure-nextgen/mixedreality</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/mixedreality?tab=doc#" title="azure/mixedreality">azure/mixedreality</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/mixedreality/#" title="@pulumi/azure-nextgen/mixedreality">@pulumi/azure-nextgen/mixedreality</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/mixedreality" title="pulumi_azure-nextgen/mixedreality">pulumi_azure-nextgen/mixedreality</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/mixedreality" title="pulumi_azure_nextgen/mixedreality">pulumi_azure_nextgen/mixedreality</a></dd>
 
 </dl>
 

@@ -41,13 +41,13 @@ Explore the resources and functions of the domainregistration module in the Azur
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.domainregistration.html" title="Pulumi.AzureNextGen.domainregistration">Pulumi.AzureNextGen.domainregistration</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/domainregistration?tab=doc#" title="azure-nextgen/domainregistration">azure-nextgen/domainregistration</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/domainregistration?tab=doc#" title="azure/domainregistration">azure/domainregistration</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/domainregistration/#" title="@pulumi/azure-nextgen/domainregistration">@pulumi/azure-nextgen/domainregistration</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/domainregistration" title="pulumi_azure-nextgen/domainregistration">pulumi_azure-nextgen/domainregistration</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/domainregistration" title="pulumi_azure_nextgen/domainregistration">pulumi_azure_nextgen/domainregistration</a></dd>
 
 </dl>
 

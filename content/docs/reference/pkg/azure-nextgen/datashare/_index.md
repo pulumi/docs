@@ -56,13 +56,13 @@ Explore the resources and functions of the datashare module in the Azure NextGen
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.datashare.html" title="Pulumi.AzureNextGen.datashare">Pulumi.AzureNextGen.datashare</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datashare?tab=doc#" title="azure-nextgen/datashare">azure-nextgen/datashare</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare?tab=doc#" title="azure/datashare">azure/datashare</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/datashare/#" title="@pulumi/azure-nextgen/datashare">@pulumi/azure-nextgen/datashare</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/datashare" title="pulumi_azure-nextgen/datashare">pulumi_azure-nextgen/datashare</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/datashare" title="pulumi_azure_nextgen/datashare">pulumi_azure_nextgen/datashare</a></dd>
 
 </dl>
 

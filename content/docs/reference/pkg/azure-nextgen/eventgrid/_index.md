@@ -60,13 +60,13 @@ Explore the resources and functions of the eventgrid module in the Azure NextGen
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.eventgrid.html" title="Pulumi.AzureNextGen.eventgrid">Pulumi.AzureNextGen.eventgrid</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventgrid?tab=doc#" title="azure-nextgen/eventgrid">azure-nextgen/eventgrid</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid?tab=doc#" title="azure/eventgrid">azure/eventgrid</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/eventgrid/#" title="@pulumi/azure-nextgen/eventgrid">@pulumi/azure-nextgen/eventgrid</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/eventgrid" title="pulumi_azure-nextgen/eventgrid">pulumi_azure-nextgen/eventgrid</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/eventgrid" title="pulumi_azure_nextgen/eventgrid">pulumi_azure_nextgen/eventgrid</a></dd>
 
 </dl>
 

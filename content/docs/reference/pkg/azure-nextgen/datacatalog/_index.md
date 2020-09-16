@@ -37,13 +37,13 @@ Explore the resources and functions of the datacatalog module in the Azure NextG
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.datacatalog.html" title="Pulumi.AzureNextGen.datacatalog">Pulumi.AzureNextGen.datacatalog</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datacatalog?tab=doc#" title="azure-nextgen/datacatalog">azure-nextgen/datacatalog</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datacatalog?tab=doc#" title="azure/datacatalog">azure/datacatalog</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/datacatalog/#" title="@pulumi/azure-nextgen/datacatalog">@pulumi/azure-nextgen/datacatalog</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/datacatalog" title="pulumi_azure-nextgen/datacatalog">pulumi_azure-nextgen/datacatalog</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/datacatalog" title="pulumi_azure_nextgen/datacatalog">pulumi_azure_nextgen/datacatalog</a></dd>
 
 </dl>
 

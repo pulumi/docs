@@ -45,13 +45,13 @@ Explore the resources and functions of the solutions module in the Azure NextGen
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.solutions.html" title="Pulumi.AzureNextGen.solutions">Pulumi.AzureNextGen.solutions</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/solutions?tab=doc#" title="azure-nextgen/solutions">azure-nextgen/solutions</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/solutions?tab=doc#" title="azure/solutions">azure/solutions</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/solutions/#" title="@pulumi/azure-nextgen/solutions">@pulumi/azure-nextgen/solutions</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/solutions" title="pulumi_azure-nextgen/solutions">pulumi_azure-nextgen/solutions</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/solutions" title="pulumi_azure_nextgen/solutions">pulumi_azure_nextgen/solutions</a></dd>
 
 </dl>
 

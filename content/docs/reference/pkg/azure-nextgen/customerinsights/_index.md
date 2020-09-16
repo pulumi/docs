@@ -57,13 +57,13 @@ Explore the resources and functions of the customerinsights module in the Azure 
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.customerinsights.html" title="Pulumi.AzureNextGen.customerinsights">Pulumi.AzureNextGen.customerinsights</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/customerinsights?tab=doc#" title="azure-nextgen/customerinsights">azure-nextgen/customerinsights</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customerinsights?tab=doc#" title="azure/customerinsights">azure/customerinsights</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/customerinsights/#" title="@pulumi/azure-nextgen/customerinsights">@pulumi/azure-nextgen/customerinsights</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/customerinsights" title="pulumi_azure-nextgen/customerinsights">pulumi_azure-nextgen/customerinsights</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/customerinsights" title="pulumi_azure_nextgen/customerinsights">pulumi_azure_nextgen/customerinsights</a></dd>
 
 </dl>
 

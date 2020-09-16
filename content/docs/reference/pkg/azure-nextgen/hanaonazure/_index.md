@@ -41,13 +41,13 @@ Explore the resources and functions of the hanaonazure module in the Azure NextG
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.hanaonazure.html" title="Pulumi.AzureNextGen.hanaonazure">Pulumi.AzureNextGen.hanaonazure</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hanaonazure?tab=doc#" title="azure-nextgen/hanaonazure">azure-nextgen/hanaonazure</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure?tab=doc#" title="azure/hanaonazure">azure/hanaonazure</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/hanaonazure/#" title="@pulumi/azure-nextgen/hanaonazure">@pulumi/azure-nextgen/hanaonazure</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/hanaonazure" title="pulumi_azure-nextgen/hanaonazure">pulumi_azure-nextgen/hanaonazure</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/hanaonazure" title="pulumi_azure_nextgen/hanaonazure">pulumi_azure_nextgen/hanaonazure</a></dd>
 
 </dl>
 

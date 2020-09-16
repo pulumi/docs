@@ -29,7 +29,7 @@ meta_desc: "Explore the GetEventChannel function of the eventgrid module, includ
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEventChannel<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventgrid?tab=doc#LookupEventChannelArgs">LookupEventChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventgrid?tab=doc#LookupEventChannelResult">LookupEventChannelResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEventChannel<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid?tab=doc#LookupEventChannelArgs">LookupEventChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid?tab=doc#LookupEventChannelResult">LookupEventChannelResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupEventChannel` in the Go SDK.
 
@@ -620,7 +620,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventgrid?tab=doc#BoolEqualsAdvancedFilterResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid?tab=doc#BoolEqualsAdvancedFilterResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Eventgrid.Outputs.BoolEqualsAdvancedFilterResponse.html">output</a> API doc for this type.
@@ -746,7 +746,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventgrid?tab=doc#EventChannelDestinationResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid?tab=doc#EventChannelDestinationResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Eventgrid.Outputs.EventChannelDestinationResponse.html">output</a> API doc for this type.
@@ -920,7 +920,7 @@ associated with the event channel will be created under this resource group.{{% 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventgrid?tab=doc#EventChannelFilterResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid?tab=doc#EventChannelFilterResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Eventgrid.Outputs.EventChannelFilterResponse.html">output</a> API doc for this type.
@@ -1006,7 +1006,7 @@ associated with the event channel will be created under this resource group.{{% 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventgrid?tab=doc#EventChannelSourceResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid?tab=doc#EventChannelSourceResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Eventgrid.Outputs.EventChannelSourceResponse.html">output</a> API doc for this type.
@@ -1096,7 +1096,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventgrid?tab=doc#NumberGreaterThanAdvancedFilterResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid?tab=doc#NumberGreaterThanAdvancedFilterResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Eventgrid.Outputs.NumberGreaterThanAdvancedFilterResponse.html">output</a> API doc for this type.
@@ -1222,7 +1222,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventgrid?tab=doc#NumberGreaterThanOrEqualsAdvancedFilterResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid?tab=doc#NumberGreaterThanOrEqualsAdvancedFilterResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Eventgrid.Outputs.NumberGreaterThanOrEqualsAdvancedFilterResponse.html">output</a> API doc for this type.
@@ -1348,7 +1348,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventgrid?tab=doc#NumberInAdvancedFilterResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid?tab=doc#NumberInAdvancedFilterResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Eventgrid.Outputs.NumberInAdvancedFilterResponse.html">output</a> API doc for this type.
@@ -1474,7 +1474,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventgrid?tab=doc#NumberLessThanAdvancedFilterResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid?tab=doc#NumberLessThanAdvancedFilterResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Eventgrid.Outputs.NumberLessThanAdvancedFilterResponse.html">output</a> API doc for this type.
@@ -1600,7 +1600,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventgrid?tab=doc#NumberLessThanOrEqualsAdvancedFilterResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid?tab=doc#NumberLessThanOrEqualsAdvancedFilterResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Eventgrid.Outputs.NumberLessThanOrEqualsAdvancedFilterResponse.html">output</a> API doc for this type.
@@ -1726,7 +1726,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventgrid?tab=doc#NumberNotInAdvancedFilterResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid?tab=doc#NumberNotInAdvancedFilterResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Eventgrid.Outputs.NumberNotInAdvancedFilterResponse.html">output</a> API doc for this type.
@@ -1852,7 +1852,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventgrid?tab=doc#StringBeginsWithAdvancedFilterResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid?tab=doc#StringBeginsWithAdvancedFilterResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Eventgrid.Outputs.StringBeginsWithAdvancedFilterResponse.html">output</a> API doc for this type.
@@ -1978,7 +1978,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventgrid?tab=doc#StringContainsAdvancedFilterResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid?tab=doc#StringContainsAdvancedFilterResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Eventgrid.Outputs.StringContainsAdvancedFilterResponse.html">output</a> API doc for this type.
@@ -2104,7 +2104,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventgrid?tab=doc#StringEndsWithAdvancedFilterResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid?tab=doc#StringEndsWithAdvancedFilterResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Eventgrid.Outputs.StringEndsWithAdvancedFilterResponse.html">output</a> API doc for this type.
@@ -2230,7 +2230,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventgrid?tab=doc#StringInAdvancedFilterResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid?tab=doc#StringInAdvancedFilterResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Eventgrid.Outputs.StringInAdvancedFilterResponse.html">output</a> API doc for this type.
@@ -2356,7 +2356,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventgrid?tab=doc#StringNotInAdvancedFilterResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventgrid?tab=doc#StringNotInAdvancedFilterResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Eventgrid.Outputs.StringNotInAdvancedFilterResponse.html">output</a> API doc for this type.

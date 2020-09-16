@@ -37,13 +37,13 @@ Explore the resources and functions of the attestation module in the Azure NextG
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.attestation.html" title="Pulumi.AzureNextGen.attestation">Pulumi.AzureNextGen.attestation</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/attestation?tab=doc#" title="azure-nextgen/attestation">azure-nextgen/attestation</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/attestation?tab=doc#" title="azure/attestation">azure/attestation</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/attestation/#" title="@pulumi/azure-nextgen/attestation">@pulumi/azure-nextgen/attestation</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/attestation" title="pulumi_azure-nextgen/attestation">pulumi_azure-nextgen/attestation</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/attestation" title="pulumi_azure_nextgen/attestation">pulumi_azure_nextgen/attestation</a></dd>
 
 </dl>
 

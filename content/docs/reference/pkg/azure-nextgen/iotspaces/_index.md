@@ -37,13 +37,13 @@ Explore the resources and functions of the iotspaces module in the Azure NextGen
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.iotspaces.html" title="Pulumi.AzureNextGen.iotspaces">Pulumi.AzureNextGen.iotspaces</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/iotspaces?tab=doc#" title="azure-nextgen/iotspaces">azure-nextgen/iotspaces</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/iotspaces?tab=doc#" title="azure/iotspaces">azure/iotspaces</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/iotspaces/#" title="@pulumi/azure-nextgen/iotspaces">@pulumi/azure-nextgen/iotspaces</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/iotspaces" title="pulumi_azure-nextgen/iotspaces">pulumi_azure-nextgen/iotspaces</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/iotspaces" title="pulumi_azure_nextgen/iotspaces">pulumi_azure_nextgen/iotspaces</a></dd>
 
 </dl>
 

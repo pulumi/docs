@@ -37,13 +37,13 @@ Explore the resources and functions of the kubernetesconfiguration module in the
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.kubernetesconfiguration.html" title="Pulumi.AzureNextGen.kubernetesconfiguration">Pulumi.AzureNextGen.kubernetesconfiguration</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/kubernetesconfiguration?tab=doc#" title="azure-nextgen/kubernetesconfiguration">azure-nextgen/kubernetesconfiguration</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kubernetesconfiguration?tab=doc#" title="azure/kubernetesconfiguration">azure/kubernetesconfiguration</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/kubernetesconfiguration/#" title="@pulumi/azure-nextgen/kubernetesconfiguration">@pulumi/azure-nextgen/kubernetesconfiguration</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/kubernetesconfiguration" title="pulumi_azure-nextgen/kubernetesconfiguration">pulumi_azure-nextgen/kubernetesconfiguration</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/kubernetesconfiguration" title="pulumi_azure_nextgen/kubernetesconfiguration">pulumi_azure_nextgen/kubernetesconfiguration</a></dd>
 
 </dl>
 

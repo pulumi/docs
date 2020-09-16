@@ -63,13 +63,13 @@ Explore the resources and functions of the servicebus module in the Azure NextGe
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.servicebus.html" title="Pulumi.AzureNextGen.servicebus">Pulumi.AzureNextGen.servicebus</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/servicebus?tab=doc#" title="azure-nextgen/servicebus">azure-nextgen/servicebus</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicebus?tab=doc#" title="azure/servicebus">azure/servicebus</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/servicebus/#" title="@pulumi/azure-nextgen/servicebus">@pulumi/azure-nextgen/servicebus</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/servicebus" title="pulumi_azure-nextgen/servicebus">pulumi_azure-nextgen/servicebus</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/servicebus" title="pulumi_azure_nextgen/servicebus">pulumi_azure_nextgen/servicebus</a></dd>
 
 </dl>
 

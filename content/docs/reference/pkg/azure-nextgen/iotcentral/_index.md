@@ -37,13 +37,13 @@ Explore the resources and functions of the iotcentral module in the Azure NextGe
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.iotcentral.html" title="Pulumi.AzureNextGen.iotcentral">Pulumi.AzureNextGen.iotcentral</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/iotcentral?tab=doc#" title="azure-nextgen/iotcentral">azure-nextgen/iotcentral</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/iotcentral?tab=doc#" title="azure/iotcentral">azure/iotcentral</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/iotcentral/#" title="@pulumi/azure-nextgen/iotcentral">@pulumi/azure-nextgen/iotcentral</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/iotcentral" title="pulumi_azure-nextgen/iotcentral">pulumi_azure-nextgen/iotcentral</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/iotcentral" title="pulumi_azure_nextgen/iotcentral">pulumi_azure_nextgen/iotcentral</a></dd>
 
 </dl>
 

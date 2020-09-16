@@ -43,13 +43,13 @@ Explore the resources and functions of the datalakestore module in the Azure Nex
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.datalakestore.html" title="Pulumi.AzureNextGen.datalakestore">Pulumi.AzureNextGen.datalakestore</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/datalakestore?tab=doc#" title="azure-nextgen/datalakestore">azure-nextgen/datalakestore</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datalakestore?tab=doc#" title="azure/datalakestore">azure/datalakestore</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/datalakestore/#" title="@pulumi/azure-nextgen/datalakestore">@pulumi/azure-nextgen/datalakestore</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/datalakestore" title="pulumi_azure-nextgen/datalakestore">pulumi_azure-nextgen/datalakestore</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/datalakestore" title="pulumi_azure_nextgen/datalakestore">pulumi_azure_nextgen/datalakestore</a></dd>
 
 </dl>
 

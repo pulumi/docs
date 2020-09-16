@@ -177,13 +177,13 @@ A Next Generation Pulumi package for creating and managing Azure resources.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.html" title="Pulumi.AzureNextGen">Pulumi.AzureNextGen</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/?tab=doc#" title="azure-nextgen">azure-nextgen</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/?tab=doc#" title="azure">azure</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/#" title="@pulumi/azure-nextgen">@pulumi/azure-nextgen</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen" title="pulumi_azure-nextgen">pulumi_azure-nextgen</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen" title="pulumi_azure_nextgen">pulumi_azure_nextgen</a></dd>
 
 </dl>
 

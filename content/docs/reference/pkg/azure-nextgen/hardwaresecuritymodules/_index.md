@@ -37,13 +37,13 @@ Explore the resources and functions of the hardwaresecuritymodules module in the
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.hardwaresecuritymodules.html" title="Pulumi.AzureNextGen.hardwaresecuritymodules">Pulumi.AzureNextGen.hardwaresecuritymodules</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/hardwaresecuritymodules?tab=doc#" title="azure-nextgen/hardwaresecuritymodules">azure-nextgen/hardwaresecuritymodules</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hardwaresecuritymodules?tab=doc#" title="azure/hardwaresecuritymodules">azure/hardwaresecuritymodules</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/hardwaresecuritymodules/#" title="@pulumi/azure-nextgen/hardwaresecuritymodules">@pulumi/azure-nextgen/hardwaresecuritymodules</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/hardwaresecuritymodules" title="pulumi_azure-nextgen/hardwaresecuritymodules">pulumi_azure-nextgen/hardwaresecuritymodules</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/hardwaresecuritymodules" title="pulumi_azure_nextgen/hardwaresecuritymodules">pulumi_azure_nextgen/hardwaresecuritymodules</a></dd>
 
 </dl>
 

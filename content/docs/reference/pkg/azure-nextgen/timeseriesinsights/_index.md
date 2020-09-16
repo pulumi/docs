@@ -43,13 +43,13 @@ Explore the resources and functions of the timeseriesinsights module in the Azur
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.timeseriesinsights.html" title="Pulumi.AzureNextGen.timeseriesinsights">Pulumi.AzureNextGen.timeseriesinsights</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/timeseriesinsights?tab=doc#" title="azure-nextgen/timeseriesinsights">azure-nextgen/timeseriesinsights</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/timeseriesinsights?tab=doc#" title="azure/timeseriesinsights">azure/timeseriesinsights</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/timeseriesinsights/#" title="@pulumi/azure-nextgen/timeseriesinsights">@pulumi/azure-nextgen/timeseriesinsights</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/timeseriesinsights" title="pulumi_azure-nextgen/timeseriesinsights">pulumi_azure-nextgen/timeseriesinsights</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/timeseriesinsights" title="pulumi_azure_nextgen/timeseriesinsights">pulumi_azure_nextgen/timeseriesinsights</a></dd>
 
 </dl>
 

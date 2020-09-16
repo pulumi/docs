@@ -53,13 +53,13 @@ Explore the resources and functions of the migrate module in the Azure NextGen p
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.migrate.html" title="Pulumi.AzureNextGen.migrate">Pulumi.AzureNextGen.migrate</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/migrate?tab=doc#" title="azure-nextgen/migrate">azure-nextgen/migrate</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/migrate?tab=doc#" title="azure/migrate">azure/migrate</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/migrate/#" title="@pulumi/azure-nextgen/migrate">@pulumi/azure-nextgen/migrate</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/migrate" title="pulumi_azure-nextgen/migrate">pulumi_azure-nextgen/migrate</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/migrate" title="pulumi_azure_nextgen/migrate">pulumi_azure_nextgen/migrate</a></dd>
 
 </dl>
 

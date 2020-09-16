@@ -58,13 +58,13 @@ Explore the resources and functions of the eventhub module in the Azure NextGen 
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.eventhub.html" title="Pulumi.AzureNextGen.eventhub">Pulumi.AzureNextGen.eventhub</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/eventhub?tab=doc#" title="azure-nextgen/eventhub">azure-nextgen/eventhub</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/eventhub?tab=doc#" title="azure/eventhub">azure/eventhub</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/eventhub/#" title="@pulumi/azure-nextgen/eventhub">@pulumi/azure-nextgen/eventhub</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/eventhub" title="pulumi_azure-nextgen/eventhub">pulumi_azure-nextgen/eventhub</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/eventhub" title="pulumi_azure_nextgen/eventhub">pulumi_azure_nextgen/eventhub</a></dd>
 
 </dl>
 

@@ -47,13 +47,13 @@ Explore the resources and functions of the portal module in the Azure NextGen pa
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.portal.html" title="Pulumi.AzureNextGen.portal">Pulumi.AzureNextGen.portal</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure-nextgen/portal?tab=doc#" title="azure-nextgen/portal">azure-nextgen/portal</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/portal?tab=doc#" title="azure/portal">azure/portal</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/portal/#" title="@pulumi/azure-nextgen/portal">@pulumi/azure-nextgen/portal</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/portal" title="pulumi_azure-nextgen/portal">pulumi_azure-nextgen/portal</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/portal" title="pulumi_azure_nextgen/portal">pulumi_azure_nextgen/portal</a></dd>
 
 </dl>
 
