@@ -34,7 +34,7 @@ I worked on the Platform team for the last 3 months, and they focused their work
 
 ### kube2pulumi Tooling
 
-I built a CLI tool, and an open-source library to convert Kubernetes YAML manifests to Pulumi in a user-defined language ([check out kube2pulumi!])({{< relref "/blog/introducing-kube2pulumi" >}}). This was done so that Kubernetes users could easily migrate to Pulumi, and use familiar programming languages to tame YAML's complexity. I truly learned a lot from this experience as it was my first time designing and implementing a project end to end in a set time frame. Utilizing existing open-source libraries, code generation techniques, and compilers theory were just some of the many things I got to delve into.
+I built a CLI tool, and an open-source library to convert Kubernetes YAML manifests to Pulumi in a user-defined language [check out kube2pulumi!]({{< relref "/blog/introducing-kube2pulumi" >}}). This was done so that Kubernetes users could easily migrate to Pulumi, and use familiar programming languages to tame YAML's complexity. I truly learned a lot from this experience as it was my first time designing and implementing a project end to end in a set time frame. Utilizing existing open-source libraries, code generation techniques, and compilers theory were just some of the many things I got to delve into.
 
 ### UI Interface
 
@@ -48,12 +48,12 @@ What is the cloud? Three months later, I can say that the cloud, to me, is a vas
 
 ## Shoutouts :)
 
-Thank you [Albert]({{< relref "/docs/content/blog/author/albert-zhong" >}}), [Zephyr]({{< relref "/docs/content/blog/author/zephyr-zhou" >}}), and [Vova]({{< relref "docs/content/blog/author/vova-ivanov" >}}) for being incredible, kind, and helpful intern buddies!
+Thank you [Albert](https://github.com/albert-zhong), [Zephyr](https://github.com/zephyrz73), and [Vova](https://github.com/jetvova) for being incredible, kind, and helpful intern buddies!
 
-Thank you [Evan]({{< relref "/docs/content/blog/author/evan-boyle" >}}) for being an amazing mentor by being so approachable, and always being there everyday. You were always so patient with me and answered virtually any question I threw at you :)
+Thank you [Evan](https://github.com/evanboyle) for being an amazing mentor by being so approachable, and always being there everyday. You were always so patient with me and answered virtually any question I threw at you :)
 
-Thank you [Lee]({{< relref "/docs/content/blog/author/lee-zen" >}}) and and [Luke]({{< relref "/docs/content/blog/author/luke-hoban" >}}) for being such organized, motivating, and empathetic managers!
+Thank you [Lee](https://github.com/leezen) and and [Luke](https://github.com/lukehoban) for being such organized, motivating, and empathetic managers!
 
-Thank you to [Levi]({{< relref "/docs/content/blog/author/levi-blackstone" >}}), [Lee Briggs]({{< relref "/docs/content/blog/author/lee-briggs" >}}), Komal, [Pat]({{< relref "/docs/content/blog/author/pat-gavlin" >}}), and [Mikhail]({{< relref "/docs/content/blog/author/mikhail-shilkov" >}}) for being so open and friendly and always being available and sharing your experience when I needed anything at all!
+Thank you to [Levi](https://github.com/lblackstone), [Lee Briggs](https://github.com/jaxxstorm), [Komal](https://github.com/komalali), [Pat](https://github.com/pgavlin), and [Mikhail](https://github.com/MikhailShilkov) for being so open and friendly and always being available and sharing your experience when I needed anything at all!
 
 And finally, thank you to everyone at Pulumi and the whole platform team for giving me this opportunity!
