@@ -83,6 +83,7 @@ REPOS=(
     "aws,pulumi-aws,sdk/nodejs"
     "awsx,pulumi-awsx/nodejs/awsx"
     "azure,pulumi-azure,sdk/nodejs"
+    "azure-nextgen,pulumi-azure-nextgen,sdk/nodejs"
     "azuread,pulumi-azuread,sdk/nodejs"
     "azuredevops,pulumi-azuredevops,sdk/nodejs"
     "civo,pulumi-civo,sdk/nodejs"
