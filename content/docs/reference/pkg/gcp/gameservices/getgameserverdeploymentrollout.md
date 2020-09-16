@@ -375,7 +375,7 @@ If it is not provided, the provider project is used.
 <a href="#game_server_config_overrides_python" style="color: inherit; text-decoration: inherit;">game_<wbr>server_<wbr>config_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgameserverdeploymentrolloutgameserverconfigoverride">List[Get<wbr>Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override]</a></span>
+        <span class="property-type"><a href="#getgameserverdeploymentrolloutgameserverconfigoverride">Sequence[Get<wbr>Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -540,7 +540,7 @@ If it is not provided, the provider project is used.
 <a href="#realms_selectors_python" style="color: inherit; text-decoration: inherit;">realms_<wbr>selectors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgameserverdeploymentrolloutgameserverconfigoverriderealmsselector">List[Get<wbr>Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getgameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Sequence[Get<wbr>Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -626,7 +626,7 @@ If it is not provided, the provider project is used.
 <a href="#realms_python" style="color: inherit; text-decoration: inherit;">realms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -2021,7 +2021,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#shard_count_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2527,7 +2527,7 @@ Structure is documented below.
 <a href="#file_patterns_python" style="color: inherit; text-decoration: inherit;">file_<wbr>patterns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Patterns to identify a set of files in Google Cloud Storage.
 See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames)
@@ -2548,7 +2548,7 @@ for more information. Note that bucket wildcards are currently not supported. Ex
 <a href="#sample_gcs_file_specs_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>gcs_<wbr>file_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrygcsfilesetspecsamplegcsfilespec">List[Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Sample<wbr>Gcs<wbr>File<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#entrygcsfilesetspecsamplegcsfilespec">Sequence[Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Sample<wbr>Gcs<wbr>File<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}-
 Sample files contained in this fileset, not all files contained in this fileset are represented here.
@@ -2691,7 +2691,7 @@ The full file path
 <a href="#size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}-
 The size of the file, in bytes.

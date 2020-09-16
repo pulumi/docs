@@ -25,7 +25,7 @@ Retrieve a list of testable permissions for a resource. Testable permissions mea
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_testable_permissions(</span><span class="nx">custom_support_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">full_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stages</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTestablePermissionsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_testable_permissions(</span><span class="nx">custom_support_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">full_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stages</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTestablePermissionsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -198,7 +198,7 @@ The following arguments are supported:
 <a href="#stages_python" style="color: inherit; text-decoration: inherit;">stages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The acceptable release stages of the permission in the output. Note that `BETA` does not include permissions in `GA`, but you can specify both with `["GA", "BETA"]` for example. Can be a list of `"ALPHA"`, `"BETA"`, `"GA"`, `"DEPRECATED"`. Default is `["GA"]`.
 {{% /md %}}</dd>
@@ -430,7 +430,7 @@ The following output properties are available:
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettestablepermissionspermission">List[Get<wbr>Testable<wbr>Permissions<wbr>Permission]</a></span>
+        <span class="property-type"><a href="#gettestablepermissionspermission">Sequence[Get<wbr>Testable<wbr>Permissions<wbr>Permission]</a></span>
     </dt>
     <dd>{{% md %}}A list of permissions matching the provided input. Structure is defined below.
 {{% /md %}}</dd>
@@ -452,7 +452,7 @@ The following output properties are available:
 <a href="#stages_python" style="color: inherit; text-decoration: inherit;">stages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

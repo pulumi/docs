@@ -1352,7 +1352,7 @@ header. The actual headers served in responses will not be altered.
 <a href="#signed_url_cache_max_age_sec_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>url_<wbr>cache_<wbr>max_<wbr>age_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds the response to a signed URL request will
 be considered fresh. After this time period,

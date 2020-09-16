@@ -159,7 +159,7 @@ The following output properties are available:
 <a href="#uptime_check_ips_python" style="color: inherit; text-decoration: inherit;">uptime_<wbr>check_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getuptimecheckipsuptimecheckip">List[Get<wbr>Uptime<wbr>Check<wbr>IPs<wbr>Uptime<wbr>Check<wbr>Ip]</a></span>
+        <span class="property-type"><a href="#getuptimecheckipsuptimecheckip">Sequence[Get<wbr>Uptime<wbr>Check<wbr>IPs<wbr>Uptime<wbr>Check<wbr>Ip]</a></span>
     </dt>
     <dd>{{% md %}}A list of uptime check IPs used by Stackdriver Monitoring. Each `uptime_check_ip` contains:
 {{% /md %}}</dd>

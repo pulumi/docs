@@ -22,7 +22,7 @@ meta_desc: "Explore the AccessApprovalSettings resource of the organizations mod
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/organizations/#pulumi_gcp.organizations.AccessApprovalSettings">AccessApprovalSettings</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enrolled_services</span><span class="p">:</span> <span class="nx">Optional[List[AccessApprovalSettingsEnrolledServiceArgs]]</span> = None<span class="p">, </span><span class="nx">notification_emails</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">organization_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/organizations/#pulumi_gcp.organizations.AccessApprovalSettings">AccessApprovalSettings</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enrolled_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessApprovalSettingsEnrolledServiceArgs]]</span> = None<span class="p">, </span><span class="nx">notification_emails</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">organization_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -335,7 +335,7 @@ addresses are allowed.
 <a href="#enrolled_services_python" style="color: inherit; text-decoration: inherit;">enrolled_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessapprovalsettingsenrolledservice">List[Access<wbr>Approval<wbr>Settings<wbr>Enrolled<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessapprovalsettingsenrolledservice">Sequence[Access<wbr>Approval<wbr>Settings<wbr>Enrolled<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Google Cloud Services for which the given resource has Access Approval enrolled. Access requests for the
 resource given by name against any of these services contained here will be required to have explicit approval.
@@ -360,7 +360,7 @@ the set of supported services is expanded.
 <a href="#notification_emails_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of email addresses to which notifications relating to approval requests should be sent. Notifications relating to
 a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email
@@ -554,7 +554,7 @@ Get an existing AccessApprovalSettings resource's state with the given name, ID,
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enrolled_ancestor</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enrolled_services</span><span class="p">:</span> <span class="nx">Optional[List[AccessApprovalSettingsEnrolledServiceArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_emails</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">organization_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessApprovalSettings</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enrolled_ancestor</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enrolled_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessApprovalSettingsEnrolledServiceArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_emails</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">organization_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessApprovalSettings</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -886,7 +886,7 @@ addresses are allowed.
 <a href="#state_enrolled_services_python" style="color: inherit; text-decoration: inherit;">enrolled_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessapprovalsettingsenrolledservice">List[Access<wbr>Approval<wbr>Settings<wbr>Enrolled<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accessapprovalsettingsenrolledservice">Sequence[Access<wbr>Approval<wbr>Settings<wbr>Enrolled<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Google Cloud Services for which the given resource has Access Approval enrolled. Access requests for the
 resource given by name against any of these services contained here will be required to have explicit approval.
@@ -911,7 +911,7 @@ the set of supported services is expanded.
 <a href="#state_notification_emails_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of email addresses to which notifications relating to approval requests should be sent. Notifications relating to
 a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email

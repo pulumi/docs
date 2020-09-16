@@ -25,7 +25,7 @@ Creates a table resource in a dataset for Google BigQuery. For more information 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#pulumi_gcp.bigquery.Table">Table</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clusterings</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[TableEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">external_data_configuration</span><span class="p">:</span> <span class="nx">Optional[TableExternalDataConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">range_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableRangePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableTimePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[TableViewArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#pulumi_gcp.bigquery.Table">Table</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clusterings</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[TableEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">external_data_configuration</span><span class="p">:</span> <span class="nx">Optional[TableExternalDataConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">range_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableRangePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableTimePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[TableViewArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -788,7 +788,7 @@ Changing this forces a new resource to be created.
 <a href="#clusterings_python" style="color: inherit; text-decoration: inherit;">clusterings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies column names to use for data clustering.
 Up to four top-level columns are allowed, and should be specified in
@@ -825,7 +825,7 @@ is transparent to the user.  Structure is documented below.
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time when this table expires, in
 milliseconds since the epoch. If not present, the table will persist
@@ -1313,7 +1313,7 @@ one partition per day based on data loading time.
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time when this table was created, in milliseconds since the epoch.
 {{% /md %}}</dd>
@@ -1345,7 +1345,7 @@ one partition per day based on data loading time.
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time when this table was last modified, in milliseconds since the epoch.
 {{% /md %}}</dd>
@@ -1367,7 +1367,7 @@ one partition per day based on data loading time.
 <a href="#num_bytes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of this table in bytes, excluding any data in the streaming buffer.
 {{% /md %}}</dd>
@@ -1378,7 +1378,7 @@ one partition per day based on data loading time.
 <a href="#num_long_term_bytes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>long_<wbr>term_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of bytes in the table that are considered "long-term storage".
 {{% /md %}}</dd>
@@ -1389,7 +1389,7 @@ one partition per day based on data loading time.
 <a href="#num_rows_python" style="color: inherit; text-decoration: inherit;">num_<wbr>rows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of rows of data in this table, excluding any data in the streaming buffer.
 {{% /md %}}</dd>
@@ -1437,7 +1437,7 @@ Get an existing Table resource's state with the given name, ID, and optional ext
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clusterings</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[TableEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">external_data_configuration</span><span class="p">:</span> <span class="nx">Optional[TableExternalDataConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">num_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">num_long_term_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">num_rows</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">range_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableRangePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableTimePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[TableViewArgs]</span> = None<span class="p">) -&gt;</span> Table</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clusterings</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[TableEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">external_data_configuration</span><span class="p">:</span> <span class="nx">Optional[TableExternalDataConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">num_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">num_long_term_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">num_rows</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">range_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableRangePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableTimePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[TableViewArgs]</span> = None<span class="p">) -&gt;</span> Table</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2418,7 +2418,7 @@ Structure is documented below.
 <a href="#state_clusterings_python" style="color: inherit; text-decoration: inherit;">clusterings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies column names to use for data clustering.
 Up to four top-level columns are allowed, and should be specified in
@@ -2431,7 +2431,7 @@ descending priority order.
 <a href="#state_creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time when this table was created, in milliseconds since the epoch.
 {{% /md %}}</dd>
@@ -2489,7 +2489,7 @@ is transparent to the user.  Structure is documented below.
 <a href="#state_expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time when this table expires, in
 milliseconds since the epoch. If not present, the table will persist
@@ -2539,7 +2539,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#state_last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time when this table was last modified, in milliseconds since the epoch.
 {{% /md %}}</dd>
@@ -2561,7 +2561,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#state_num_bytes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of this table in bytes, excluding any data in the streaming buffer.
 {{% /md %}}</dd>
@@ -2572,7 +2572,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#state_num_long_term_bytes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>long_<wbr>term_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of bytes in the table that are considered "long-term storage".
 {{% /md %}}</dd>
@@ -2583,7 +2583,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#state_num_rows_python" style="color: inherit; text-decoration: inherit;">num_<wbr>rows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of rows of data in this table, excluding any data in the streaming buffer.
 {{% /md %}}</dd>
@@ -3302,7 +3302,7 @@ the `scopes` must include
 <a href="#source_uris_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of the fully-qualified URIs that point to
 your data in Google Cloud.
@@ -3381,7 +3381,7 @@ The default value is false.
 <a href="#max_bad_records_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bad_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of bad records that
 BigQuery can ignore when reading data.
@@ -3759,7 +3759,7 @@ values are UTF-8 or ISO-8859-1.
 <a href="#skip_leading_rows_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>leading_<wbr>rows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of rows at the top of the sheet
 that BigQuery will skip when reading the data. At least one of `range` or
@@ -3905,7 +3905,7 @@ Structure is documented below.
 <a href="#skip_leading_rows_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>leading_<wbr>rows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of rows at the top of the sheet
 that BigQuery will skip when reading the data. At least one of `range` or
@@ -4395,7 +4395,7 @@ Structure is documented below.
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}End of the range partitioning, exclusive.
 {{% /md %}}</dd>
@@ -4406,7 +4406,7 @@ Structure is documented below.
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The width of each range within the partition.
 {{% /md %}}</dd>
@@ -4417,7 +4417,7 @@ Structure is documented below.
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Start of the range partitioning, inclusive.
 {{% /md %}}</dd>
@@ -4633,7 +4633,7 @@ one partition per day based on data loading time.
 <a href="#expiration_ms_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of milliseconds for which to keep the
 storage for a partition.

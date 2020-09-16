@@ -1816,7 +1816,7 @@ only on primary workers, the cluster will use primary workers only and no second
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
@@ -1829,7 +1829,7 @@ Bounds: [minInstances, ). Defaults to 0.
 <a href="#min_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
 {{% /md %}}</dd>
@@ -1840,7 +1840,7 @@ Bounds: [minInstances, ). Defaults to 0.
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Weight for the instance group, which is used to determine the fraction of total workers
 in the cluster from this instance group. For example, if primary workers have weight 2,
@@ -2046,7 +2046,7 @@ only on primary workers, the cluster will use primary workers only and no second
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
@@ -2059,7 +2059,7 @@ Bounds: [minInstances, ). Defaults to 0.
 <a href="#min_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
 {{% /md %}}</dd>
@@ -2070,7 +2070,7 @@ Bounds: [minInstances, ). Defaults to 0.
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Weight for the instance group, which is used to determine the fraction of total workers
 in the cluster from this instance group. For example, if primary workers have weight 2,

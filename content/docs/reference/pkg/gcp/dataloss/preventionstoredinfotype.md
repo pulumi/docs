@@ -1456,7 +1456,7 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 <a href="#words_python" style="color: inherit; text-decoration: inherit;">words</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
@@ -2379,7 +2379,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 <a href="#group_indexes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>indexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd>

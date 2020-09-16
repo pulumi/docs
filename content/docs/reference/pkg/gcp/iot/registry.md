@@ -29,7 +29,7 @@ To get more information about DeviceRegistry, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/iot/#pulumi_gcp.iot.Registry">Registry</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[List[RegistryCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">event_notification_configs</span><span class="p">:</span> <span class="nx">Optional[List[RegistryEventNotificationConfigItemArgs]]</span> = None<span class="p">, </span><span class="nx">http_config</span><span class="p">:</span> <span class="nx">Optional[RegistryHttpConfigArgs]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mqtt_config</span><span class="p">:</span> <span class="nx">Optional[RegistryMqttConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state_notification_config</span><span class="p">:</span> <span class="nx">Optional[RegistryStateNotificationConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/iot/#pulumi_gcp.iot.Registry">Registry</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegistryCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">event_notification_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegistryEventNotificationConfigItemArgs]]</span> = None<span class="p">, </span><span class="nx">http_config</span><span class="p">:</span> <span class="nx">Optional[RegistryHttpConfigArgs]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mqtt_config</span><span class="p">:</span> <span class="nx">Optional[RegistryMqttConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state_notification_config</span><span class="p">:</span> <span class="nx">Optional[RegistryStateNotificationConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -567,7 +567,7 @@ The structure is documented below.
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrycredential">List[Registry<wbr>Credential<wbr>Args]</a></span>
+        <span class="property-type"><a href="#registrycredential">Sequence[Registry<wbr>Credential<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
 The structure is documented below.
@@ -579,7 +579,7 @@ The structure is documented below.
 <a href="#event_notification_configs_python" style="color: inherit; text-decoration: inherit;">event_<wbr>notification_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryeventnotificationconfigitem">List[Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#registryeventnotificationconfigitem">Sequence[Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
 to publish device events to.
@@ -773,7 +773,7 @@ Get an existing Registry resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[List[RegistryCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">event_notification_configs</span><span class="p">:</span> <span class="nx">Optional[List[RegistryEventNotificationConfigItemArgs]]</span> = None<span class="p">, </span><span class="nx">http_config</span><span class="p">:</span> <span class="nx">Optional[RegistryHttpConfigArgs]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mqtt_config</span><span class="p">:</span> <span class="nx">Optional[RegistryMqttConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state_notification_config</span><span class="p">:</span> <span class="nx">Optional[RegistryStateNotificationConfigArgs]</span> = None<span class="p">) -&gt;</span> Registry</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegistryCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">event_notification_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegistryEventNotificationConfigItemArgs]]</span> = None<span class="p">, </span><span class="nx">http_config</span><span class="p">:</span> <span class="nx">Optional[RegistryHttpConfigArgs]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mqtt_config</span><span class="p">:</span> <span class="nx">Optional[RegistryMqttConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state_notification_config</span><span class="p">:</span> <span class="nx">Optional[RegistryStateNotificationConfigArgs]</span> = None<span class="p">) -&gt;</span> Registry</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1253,7 +1253,7 @@ The structure is documented below.
 <a href="#state_credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrycredential">List[Registry<wbr>Credential<wbr>Args]</a></span>
+        <span class="property-type"><a href="#registrycredential">Sequence[Registry<wbr>Credential<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
 The structure is documented below.
@@ -1265,7 +1265,7 @@ The structure is documented below.
 <a href="#state_event_notification_configs_python" style="color: inherit; text-decoration: inherit;">event_<wbr>notification_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryeventnotificationconfigitem">List[Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#registryeventnotificationconfigitem">Sequence[Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
 to publish device events to.

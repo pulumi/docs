@@ -41,7 +41,7 @@ To get more information about Service, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/cloudrun/#pulumi_gcp.cloudrun.Service">Service</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autogenerate_revision_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[ServiceMetadataArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[ServiceTemplateArgs]</span> = None<span class="p">, </span><span class="nx">traffics</span><span class="p">:</span> <span class="nx">Optional[List[ServiceTrafficArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/cloudrun/#pulumi_gcp.cloudrun.Service">Service</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autogenerate_revision_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[ServiceMetadataArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[ServiceTemplateArgs]</span> = None<span class="p">, </span><span class="nx">traffics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceTrafficArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -607,7 +607,7 @@ Structure is documented below.
 <a href="#traffics_python" style="color: inherit; text-decoration: inherit;">traffics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">List[Service<wbr>Traffic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetraffic">Sequence[Service<wbr>Traffic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
 and Configurations
@@ -757,7 +757,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autogenerate_revision_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[ServiceMetadataArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[ServiceStatusArgs]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[ServiceTemplateArgs]</span> = None<span class="p">, </span><span class="nx">traffics</span><span class="p">:</span> <span class="nx">Optional[List[ServiceTrafficArgs]]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autogenerate_revision_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[ServiceMetadataArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[ServiceStatusArgs]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[ServiceTemplateArgs]</span> = None<span class="p">, </span><span class="nx">traffics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceTrafficArgs]]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1309,7 +1309,7 @@ Structure is documented below.
 <a href="#state_traffics_python" style="color: inherit; text-decoration: inherit;">traffics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">List[Service<wbr>Traffic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetraffic">Sequence[Service<wbr>Traffic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
 and Configurations
@@ -1674,7 +1674,7 @@ info: http://kubernetes.io/docs/user-guide/annotations
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
@@ -1952,7 +1952,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatuscondition">List[Service<wbr>Status<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicestatuscondition">Sequence[Service<wbr>Status<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1982,7 +1982,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#observed_generation_python" style="color: inherit; text-decoration: inherit;">observed_<wbr>generation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2731,7 +2731,7 @@ info: http://kubernetes.io/docs/user-guide/annotations
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
@@ -3074,7 +3074,7 @@ that the system will manipulate this based on routability and load.
 <a href="#container_concurrency_python" style="color: inherit; text-decoration: inherit;">container_<wbr>concurrency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}ContainerConcurrency specifies the maximum allowed in-flight (concurrent)
 requests per container of the Revision. Values are:
@@ -3086,7 +3086,7 @@ requests per container of the Revision. Values are:
 <a href="#containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainer">List[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainer">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Container defines the unit of execution for this Revision.
 In the context of a Revision, we disallow a number of the fields of
@@ -3131,7 +3131,7 @@ that the system will manipulate this based on routability and load.
 <a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
 {{% /md %}}</dd>
@@ -3573,7 +3573,7 @@ More info: https://kubernetes.io/docs/concepts/containers/images
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Arguments to the entrypoint.
 The docker image's CMD is used if this is not provided.
@@ -3592,7 +3592,7 @@ https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Entrypoint array. Not executed within a shell.
 The docker image's ENTRYPOINT is used if this is not provided.
@@ -3611,7 +3611,7 @@ https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument
 <a href="#env_froms_python" style="color: inherit; text-decoration: inherit;">env_<wbr>froms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">List[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -3629,7 +3629,7 @@ Structure is documented below.
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenv">List[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenv">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container.
 Structure is documented below.
@@ -3641,7 +3641,7 @@ Structure is documented below.
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerport">List[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerport">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of open ports in the container.
 More Info:
@@ -4633,7 +4633,7 @@ Structure is documented below.
 <a href="#container_port_python" style="color: inherit; text-decoration: inherit;">container_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Port number.
 {{% /md %}}</dd>
@@ -4978,7 +4978,7 @@ false when RevisionName is non-empty.
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Percent specifies percent of the traffic to this Revision or Configuration.
 {{% /md %}}</dd>

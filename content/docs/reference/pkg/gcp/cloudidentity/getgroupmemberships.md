@@ -281,7 +281,7 @@ The following output properties are available:
 <a href="#memberships_python" style="color: inherit; text-decoration: inherit;">memberships</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupmembershipsmembership">List[Get<wbr>Group<wbr>Memberships<wbr>Membership]</a></span>
+        <span class="property-type"><a href="#getgroupmembershipsmembership">Sequence[Get<wbr>Group<wbr>Memberships<wbr>Membership]</a></span>
     </dt>
     <dd>{{% md %}}The list of memberships under the given group. Structure is documented below.
 {{% /md %}}</dd>
@@ -614,7 +614,7 @@ The following output properties are available:
 <a href="#member_keys_python" style="color: inherit; text-decoration: inherit;">member_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupmembershipsmembershipmemberkey">List[Get<wbr>Group<wbr>Memberships<wbr>Membership<wbr>Member<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getgroupmembershipsmembershipmemberkey">Sequence[Get<wbr>Group<wbr>Memberships<wbr>Membership<wbr>Member<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -635,7 +635,7 @@ The following output properties are available:
 <a href="#preferred_member_keys_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>member_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupmembershipsmembershippreferredmemberkey">List[Get<wbr>Group<wbr>Memberships<wbr>Membership<wbr>Preferred<wbr>Member<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getgroupmembershipsmembershippreferredmemberkey">Sequence[Get<wbr>Group<wbr>Memberships<wbr>Membership<wbr>Preferred<wbr>Member<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -645,7 +645,7 @@ The following output properties are available:
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupmembershipsmembershiprole">List[Get<wbr>Group<wbr>Memberships<wbr>Membership<wbr>Role<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getgroupmembershipsmembershiprole">Sequence[Get<wbr>Group<wbr>Memberships<wbr>Membership<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The MembershipRoles that apply to the Membership. Structure is documented below.
 {{% /md %}}</dd>

@@ -29,7 +29,7 @@ plaintext. [Read more about secrets in state](https://www.pulumi.com/docs/intro/
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/container/#pulumi_gcp.container.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAddonsConfigArgs]</span> = None<span class="p">, </span><span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAuthenticatorGroupsConfigArgs]</span> = None<span class="p">, </span><span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTelemetryArgs]</span> = None<span class="p">, </span><span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[ClusterDatabaseEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">, </span><span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">, </span><span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">, </span><span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterNetworkPolicyArgs]</span> = None<span class="p">, </span><span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[List[ClusterNodePoolArgs]]</span> = None<span class="p">, </span><span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPodSecurityPolicyConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPrivateClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[ClusterReleaseChannelArgs]</span> = None<span class="p">, </span><span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[ClusterResourceUsageExportConfigArgs]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterVerticalPodAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[ClusterWorkloadIdentityConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/container/#pulumi_gcp.container.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAddonsConfigArgs]</span> = None<span class="p">, </span><span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAuthenticatorGroupsConfigArgs]</span> = None<span class="p">, </span><span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTelemetryArgs]</span> = None<span class="p">, </span><span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[ClusterDatabaseEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">, </span><span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">, </span><span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">, </span><span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterNetworkPolicyArgs]</span> = None<span class="p">, </span><span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodePoolArgs]]</span> = None<span class="p">, </span><span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPodSecurityPolicyConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPrivateClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[ClusterReleaseChannelArgs]</span> = None<span class="p">, </span><span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[ClusterResourceUsageExportConfigArgs]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterVerticalPodAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[ClusterWorkloadIdentityConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2013,7 +2013,7 @@ Structure is documented below.
 <a href="#default_max_pods_per_node_python" style="color: inherit; text-decoration: inherit;">default_<wbr>max_<wbr>pods_<wbr>per_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The default maximum number of pods
 per node in this cluster. This doesn't work on "routes-based" clusters, clusters
@@ -2123,7 +2123,7 @@ See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-en
 <a href="#initial_node_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes to create in this
 cluster's default node pool. In regional or multi-zonal clusters, this is the
@@ -2325,7 +2325,7 @@ Structure is documented below.
 <a href="#node_locations_python" style="color: inherit; text-decoration: inherit;">node_<wbr>locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of zones in which the cluster's nodes
 are located. Nodes must be in the region of their regional cluster or in the
@@ -2339,7 +2339,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#node_pools_python" style="color: inherit; text-decoration: inherit;">node_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepool">List[Cluster<wbr>Node<wbr>Pool<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodepool">Sequence[Cluster<wbr>Node<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of node pools associated with this cluster.
 See gcp.container.NodePool for schema.
@@ -2585,6 +2585,17 @@ has been updated by GKE.
 
     <dt class="property-"
             title="">
+        <span id="selflink_csharp">
+<a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The server-defined URL for the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="servicesipv4cidr_csharp">
 <a href="#servicesipv4cidr_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr</a>
 </span> 
@@ -2683,6 +2694,17 @@ has been updated by GKE.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="selflink_go">
+<a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The server-defined URL for the resource.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2787,6 +2809,17 @@ has been updated by GKE.
 
     <dt class="property-"
             title="">
+        <span id="selflink_nodejs">
+<a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The server-defined URL for the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="servicesipv4cidr_nodejs">
 <a href="#servicesipv4cidr_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Ipv4Cidr</a>
 </span> 
@@ -2846,7 +2879,7 @@ notation (e.g. `1.2.3.4/29`).
 <a href="#instance_group_urls_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of instance group URLs which have been assigned
 to the cluster.
@@ -2885,6 +2918,17 @@ has been updated by GKE.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="self_link_python">
+<a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The server-defined URL for the resource.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2933,7 +2977,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAddonsConfigArgs]</span> = None<span class="p">, </span><span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAuthenticatorGroupsConfigArgs]</span> = None<span class="p">, </span><span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTelemetryArgs]</span> = None<span class="p">, </span><span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[ClusterDatabaseEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">instance_group_urls</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">, </span><span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">, </span><span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">, </span><span class="nx">master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterNetworkPolicyArgs]</span> = None<span class="p">, </span><span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[List[ClusterNodePoolArgs]]</span> = None<span class="p">, </span><span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPodSecurityPolicyConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPrivateClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[ClusterReleaseChannelArgs]</span> = None<span class="p">, </span><span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[ClusterResourceUsageExportConfigArgs]</span> = None<span class="p">, </span><span class="nx">services_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tpu_ipv4_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterVerticalPodAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[ClusterWorkloadIdentityConfigArgs]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAddonsConfigArgs]</span> = None<span class="p">, </span><span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAuthenticatorGroupsConfigArgs]</span> = None<span class="p">, </span><span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTelemetryArgs]</span> = None<span class="p">, </span><span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[ClusterDatabaseEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">instance_group_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">, </span><span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">, </span><span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">, </span><span class="nx">master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterNetworkPolicyArgs]</span> = None<span class="p">, </span><span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodePoolArgs]]</span> = None<span class="p">, </span><span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPodSecurityPolicyConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPrivateClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[ClusterReleaseChannelArgs]</span> = None<span class="p">, </span><span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[ClusterResourceUsageExportConfigArgs]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">services_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tpu_ipv4_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterVerticalPodAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[ClusterWorkloadIdentityConfigArgs]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3638,6 +3682,17 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_selflink_csharp">
+<a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The server-defined URL for the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_servicesipv4cidr_csharp">
 <a href="#state_servicesipv4cidr_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr</a>
 </span> 
@@ -4294,6 +4349,17 @@ setting `initial_node_count` to at least `1`.
     <dd>{{% md %}}Configuration for the
 [ResourceUsageExportConfig](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering) feature.
 Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_selflink_go">
+<a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The server-defined URL for the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4958,6 +5024,17 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_selflink_nodejs">
+<a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The server-defined URL for the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_servicesipv4cidr_nodejs">
 <a href="#state_servicesipv4cidr_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Ipv4Cidr</a>
 </span> 
@@ -5111,7 +5188,7 @@ Structure is documented below.
 <a href="#state_default_max_pods_per_node_python" style="color: inherit; text-decoration: inherit;">default_<wbr>max_<wbr>pods_<wbr>per_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The default maximum number of pods
 per node in this cluster. This doesn't work on "routes-based" clusters, clusters
@@ -5232,7 +5309,7 @@ See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-en
 <a href="#state_initial_node_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes to create in this
 cluster's default node pool. In regional or multi-zonal clusters, this is the
@@ -5248,7 +5325,7 @@ set this to a value of at least `1`, alongside setting
 <a href="#state_instance_group_urls_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of instance group URLs which have been assigned
 to the cluster.
@@ -5470,7 +5547,7 @@ Structure is documented below.
 <a href="#state_node_locations_python" style="color: inherit; text-decoration: inherit;">node_<wbr>locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of zones in which the cluster's nodes
 are located. Nodes must be in the region of their regional cluster or in the
@@ -5484,7 +5561,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#state_node_pools_python" style="color: inherit; text-decoration: inherit;">node_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepool">List[Cluster<wbr>Node<wbr>Pool<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodepool">Sequence[Cluster<wbr>Node<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of node pools associated with this cluster.
 See gcp.container.NodePool for schema.
@@ -5614,6 +5691,17 @@ setting `initial_node_count` to at least `1`.
     <dd>{{% md %}}Configuration for the
 [ResourceUsageExportConfig](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering) feature.
 Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_self_link_python">
+<a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The server-defined URL for the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7436,7 +7524,7 @@ when deciding to remove nodes from a cluster. Can be `BALANCED` or `OPTIMIZE_UTI
 <a href="#resource_limits_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>limits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscalingresourcelimit">List[Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterclusterautoscalingresourcelimit">Sequence[Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Global constraints for machine resources in the
 cluster. Configuring the `cpu` and `memory` types is required if node
@@ -7643,7 +7731,7 @@ for more information.
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
 on all of the node VMs under the "default" service account. These can be
@@ -7836,7 +7924,7 @@ for a list of types.
 <a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum amount of the resource in the cluster.
 {{% /md %}}</dd>
@@ -7847,7 +7935,7 @@ for a list of types.
 <a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum amount of the resource in the cluster.
 {{% /md %}}</dd>
@@ -9362,7 +9450,7 @@ Kubernetes cluster master through HTTPS.
 <a href="#cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthorizednetworksconfigcidrblock">List[Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterauthorizednetworksconfigcidrblock">Sequence[Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}External networks that can access the
 Kubernetes cluster master through HTTPS.
@@ -10487,7 +10575,7 @@ Structure is documented below.
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the disk attached to each node, specified
 in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
@@ -10511,7 +10599,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigguestaccelerator">List[Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodeconfigguestaccelerator">Sequence[Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 Structure documented below.
@@ -10574,7 +10662,7 @@ Structure is documented below.
 <a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of local SSD disks that will be
 attached to each cluster node. Defaults to 0.
@@ -10629,7 +10717,7 @@ for more information.
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
 on all of the node VMs under the "default" service account. These can be
@@ -10694,7 +10782,7 @@ In order to use the configured `oauth_scopes` for logging and monitoring, the se
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of instance tags applied to all nodes. Tags are used to identify
 valid sources or targets for network firewalls.
@@ -10706,7 +10794,7 @@ valid sources or targets for network firewalls.
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigtaint">List[Cluster<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodeconfigtaint">Sequence[Cluster<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of [Kubernetes taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
 to apply to nodes. GKE's API can only set this field on cluster creation.
@@ -10848,7 +10936,7 @@ Structure is documented below.
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
 {{% /md %}}</dd>
@@ -12159,7 +12247,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#initial_node_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes to create in this
 cluster's default node pool. In regional or multi-zonal clusters, this is the
@@ -12175,7 +12263,7 @@ set this to a value of at least `1`, alongside setting
 <a href="#instance_group_urls_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of instance group URLs which have been assigned
 to the cluster.
@@ -12197,7 +12285,7 @@ to the cluster.
 <a href="#max_pods_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods_<wbr>per_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12244,7 +12332,7 @@ Structure is documented below.
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12254,7 +12342,7 @@ Structure is documented below.
 <a href="#node_locations_python" style="color: inherit; text-decoration: inherit;">node_<wbr>locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of zones in which the cluster's nodes
 are located. Nodes must be in the region of their regional cluster or in the
@@ -12394,7 +12482,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#max_node_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12404,7 +12492,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13377,7 +13465,7 @@ Structure is documented below.
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the disk attached to each node, specified
 in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
@@ -13401,7 +13489,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigguestaccelerator">List[Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigguestaccelerator">Sequence[Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 Structure documented below.
@@ -13464,7 +13552,7 @@ Structure is documented below.
 <a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of local SSD disks that will be
 attached to each cluster node. Defaults to 0.
@@ -13519,7 +13607,7 @@ for more information.
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
 on all of the node VMs under the "default" service account. These can be
@@ -13584,7 +13672,7 @@ In order to use the configured `oauth_scopes` for logging and monitoring, the se
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of instance tags applied to all nodes. Tags are used to identify
 valid sources or targets for network firewalls.
@@ -13596,7 +13684,7 @@ valid sources or targets for network firewalls.
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigtaint">List[Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigtaint">Sequence[Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of [Kubernetes taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
 to apply to nodes. GKE's API can only set this field on cluster creation.
@@ -13738,7 +13826,7 @@ Structure is documented below.
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
 {{% /md %}}</dd>
@@ -14682,7 +14770,7 @@ Accepted values are:
 <a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -14692,7 +14780,7 @@ Accepted values are:
 <a href="#max_unavailable_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

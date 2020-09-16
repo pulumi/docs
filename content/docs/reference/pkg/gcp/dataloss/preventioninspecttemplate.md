@@ -1259,7 +1259,7 @@ Structure is documented below.
 <a href="#content_options_python" style="color: inherit; text-decoration: inherit;">content_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of options defining data content to scan. If empty, text, images, and other content will be included.
 Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
@@ -1294,7 +1294,7 @@ Structure is documented below.
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiginfotype">List[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Info<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiginfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Info<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
@@ -1331,7 +1331,7 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
 <a href="#rule_sets_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigruleset">List[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigruleset">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end,
 other rules are executed in the order they are specified for each info type.
@@ -1586,7 +1586,7 @@ Structure is documented below.
 <a href="#max_findings_per_item_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings_<wbr>per_<wbr>item</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned for each item scanned. The maximum returned is 2000.
 {{% /md %}}</dd>
@@ -1597,7 +1597,7 @@ Structure is documented below.
 <a href="#max_findings_per_request_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings_<wbr>per_<wbr>request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned per request/job. The maximum returned is 2000.
 {{% /md %}}</dd>
@@ -1608,7 +1608,7 @@ Structure is documented below.
 <a href="#max_findings_per_info_types_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings_<wbr>per_<wbr>info_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotype">List[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of findings limit given for specified infoTypes.
 Structure is documented below.
@@ -1755,7 +1755,7 @@ Structure is documented below.
 <a href="#max_findings_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max findings limit for the given infoType.
 {{% /md %}}</dd>
@@ -1978,7 +1978,7 @@ Structure is documented below.
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetinfotype">List[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Info<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetinfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Info<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
@@ -1990,7 +1990,7 @@ Structure is documented below.
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrule">List[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrule">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to be applied to infoTypes. The rules are applied in order.
 Structure is documented below.
@@ -2790,7 +2790,7 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 <a href="#words_python" style="color: inherit; text-decoration: inherit;">words</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
@@ -2884,7 +2884,7 @@ Structure is documented below.
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypesinfotype">List[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Info<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypesinfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Info<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
@@ -3117,7 +3117,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 <a href="#group_indexes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>indexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd>
@@ -3461,7 +3461,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 <a href="#group_indexes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>indexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd>
@@ -3614,7 +3614,7 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
 <a href="#relative_likelihood_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>likelihood</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Increase or decrease the likelihood by the specified number of levels. For example,
 if a finding would be POSSIBLE without the detection rule and relativeLikelihood is 1,
@@ -3742,7 +3742,7 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
 <a href="#window_after_python" style="color: inherit; text-decoration: inherit;">window_<wbr>after</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of characters after the finding to consider. Either this or window_before must be specified
 {{% /md %}}</dd>
@@ -3753,7 +3753,7 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
 <a href="#window_before_python" style="color: inherit; text-decoration: inherit;">window_<wbr>before</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of characters before the finding to consider. Either this or window_after must be specified
 {{% /md %}}</dd>

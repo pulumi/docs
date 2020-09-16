@@ -29,7 +29,7 @@ To get more information about JobTrigger, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/dataloss/#pulumi_gcp.dataloss.PreventionJobTrigger">PreventionJobTrigger</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inspect_job</span><span class="p">:</span> <span class="nx">Optional[PreventionJobTriggerInspectJobArgs]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">triggers</span><span class="p">:</span> <span class="nx">Optional[List[PreventionJobTriggerTriggerArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/dataloss/#pulumi_gcp.dataloss.PreventionJobTrigger">PreventionJobTrigger</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inspect_job</span><span class="p">:</span> <span class="nx">Optional[PreventionJobTriggerInspectJobArgs]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">triggers</span><span class="p">:</span> <span class="nx">Optional[Sequence[PreventionJobTriggerTriggerArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -453,7 +453,7 @@ or `projects/{{project}}/locations/{{location}}`
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggertrigger">List[Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventionjobtriggertrigger">Sequence[Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}What event needs to occur for a new job to be started.
 Structure is documented below.
@@ -693,7 +693,7 @@ Get an existing PreventionJobTrigger resource's state with the given name, ID, a
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inspect_job</span><span class="p">:</span> <span class="nx">Optional[PreventionJobTriggerInspectJobArgs]</span> = None<span class="p">, </span><span class="nx">last_run_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">triggers</span><span class="p">:</span> <span class="nx">Optional[List[PreventionJobTriggerTriggerArgs]]</span> = None<span class="p">) -&gt;</span> PreventionJobTrigger</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inspect_job</span><span class="p">:</span> <span class="nx">Optional[PreventionJobTriggerInspectJobArgs]</span> = None<span class="p">, </span><span class="nx">last_run_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">triggers</span><span class="p">:</span> <span class="nx">Optional[Sequence[PreventionJobTriggerTriggerArgs]]</span> = None<span class="p">) -&gt;</span> PreventionJobTrigger</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1194,7 +1194,7 @@ Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
 <a href="#state_triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggertrigger">List[Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventionjobtriggertrigger">Sequence[Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}What event needs to occur for a new job to be started.
 Structure is documented below.
@@ -1365,7 +1365,7 @@ Structure is documented below.
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobaction">List[Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobaction">Sequence[Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A task to execute on the completion of a job.
 Structure is documented below.
@@ -2733,7 +2733,7 @@ Structure is documented below.
 <a href="#bytes_limit_per_file_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>limit_<wbr>per_<wbr>file</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max number of bytes to scan from a file. If a scanned file's size is bigger than this value
 then the rest of the bytes are omitted.
@@ -2745,7 +2745,7 @@ then the rest of the bytes are omitted.
 <a href="#bytes_limit_per_file_percent_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>limit_<wbr>per_<wbr>file_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned is rounded down.
 Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
@@ -2757,7 +2757,7 @@ Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
 <a href="#file_types_python" style="color: inherit; text-decoration: inherit;">file_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of file type groups to include in the scan. If empty, all files are scanned and available data
 format processors are applied. In addition, the binary content of the selected files is always scanned as well.
@@ -2771,7 +2771,7 @@ Each value may be one of `BINARY_FILE`, `TEXT_FILE`, `IMAGE`, `WORD`, `PDF`, `AV
 <a href="#files_limit_percent_python" style="color: inherit; text-decoration: inherit;">files_<wbr>limit_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Limits the number of files to scan to this percentage of the input FileSet. Number of files scanned is rounded down.
 Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
@@ -3118,7 +3118,7 @@ match all files by default (this is equivalent to including .* in the list)
 <a href="#exclude_regexes_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>regexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of regular expressions matching file paths to exclude. All files in the bucket that match at
 least one of these regular expressions will be excluded from the scan.
@@ -3130,7 +3130,7 @@ least one of these regular expressions will be excluded from the scan.
 <a href="#include_regexes_python" style="color: inherit; text-decoration: inherit;">include_<wbr>regexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of regular expressions matching file paths to include. All files in the bucket
 that match at least one of these regular expressions will be included in the set of files,

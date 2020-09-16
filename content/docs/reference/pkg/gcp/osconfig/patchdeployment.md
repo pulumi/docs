@@ -1985,7 +1985,7 @@ VMs when targeting configs, for example prefix="prod-".
 <a href="#group_labels_python" style="color: inherit; text-decoration: inherit;">group_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentinstancefiltergrouplabel">List[Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentinstancefiltergrouplabel">Sequence[Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
 Structure is documented below.
@@ -1997,7 +1997,7 @@ Structure is documented below.
 <a href="#instance_name_prefixes_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
 VMs when targeting configs, for example prefix="prod-".
@@ -2009,7 +2009,7 @@ VMs when targeting configs, for example prefix="prod-".
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Targets any of the VM instances specified. Instances are specified by their URI in the `form zones/{{zone}}/instances/{{instance_name}}`,
 `projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`, or
@@ -2022,7 +2022,7 @@ VMs when targeting configs, for example prefix="prod-".
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
 {{% /md %}}</dd>
@@ -2801,7 +2801,7 @@ Possible values are `DIST` and `UPGRADE`.
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
@@ -2812,7 +2812,7 @@ Possible values are `DIST` and `UPGRADE`.
 <a href="#exclusive_packages_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>packages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
@@ -3256,7 +3256,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#allowed_success_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>success_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
@@ -3668,7 +3668,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#allowed_success_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>success_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
@@ -4222,7 +4222,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#allowed_success_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>success_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
@@ -4634,7 +4634,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#allowed_success_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>success_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
@@ -5010,7 +5010,7 @@ This field must not be used with other patch configurations.
 <a href="#classifications_python" style="color: inherit; text-decoration: inherit;">classifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Only apply updates of these windows update classifications. If empty, all updates are applied.
 Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATURE_PACK`, `SERVICE_PACK`, `TOOL`, `UPDATE_ROLLUP`, and `UPDATE`.
@@ -5022,7 +5022,7 @@ Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATUR
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
@@ -5033,7 +5033,7 @@ Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATUR
 <a href="#exclusive_patches_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>patches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
@@ -5229,7 +5229,7 @@ any other patch configuration fields.
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
@@ -5240,7 +5240,7 @@ any other patch configuration fields.
 <a href="#exclusive_packages_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>packages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
@@ -5522,7 +5522,7 @@ This field must not be used with other patch configurations.
 <a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Install only patches with these categories. Common categories include security, recommended, and feature.
 {{% /md %}}</dd>
@@ -5533,7 +5533,7 @@ This field must not be used with other patch configurations.
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
@@ -5544,7 +5544,7 @@ This field must not be used with other patch configurations.
 <a href="#exclusive_patches_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>patches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
@@ -5556,7 +5556,7 @@ This field must not be used with other patch configurations.
 <a href="#severities_python" style="color: inherit; text-decoration: inherit;">severities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Install only patches with these severities. Common severities include critical, important, moderate, and low.
 {{% /md %}}</dd>
@@ -6152,7 +6152,7 @@ Structure is documented below.
 <a href="#month_day_python" style="color: inherit; text-decoration: inherit;">month_<wbr>day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
 Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
@@ -6304,7 +6304,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 <a href="#week_ordinal_python" style="color: inherit; text-decoration: inherit;">week_<wbr>ordinal</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
 {{% /md %}}</dd>
@@ -6496,7 +6496,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23.
 An API may choose to allow the value "24:00:00" for scenarios like business closing time.
@@ -6508,7 +6508,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
 {{% /md %}}</dd>
@@ -6519,7 +6519,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 {{% /md %}}</dd>
@@ -6530,7 +6530,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
 {{% /md %}}</dd>
@@ -7039,7 +7039,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
 <a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies a fixed value.
 {{% /md %}}</dd>
@@ -7050,7 +7050,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
 {{% /md %}}</dd>

@@ -909,7 +909,7 @@ that protects this image.
 <a href="#archive_size_bytes_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the image tar.gz archive stored in Google Cloud Storage in bytes.
 {{% /md %}}</dd>
@@ -942,7 +942,7 @@ that protects this image.
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the image when restored onto a persistent disk in gigabytes.
 {{% /md %}}</dd>
@@ -1021,7 +1021,7 @@ that protects this image.
 <a href="#licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of applicable license URI.
 {{% /md %}}</dd>

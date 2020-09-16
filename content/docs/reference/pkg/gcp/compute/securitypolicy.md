@@ -25,7 +25,7 @@ and the [API](https://cloud.google.com/compute/docs/reference/rest/beta/security
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.SecurityPolicy">SecurityPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[SecurityPolicyRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.SecurityPolicy">SecurityPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityPolicyRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -399,7 +399,7 @@ is not provided, the provider project is used.
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrule">List[Security<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicyrule">Sequence[Security<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of rules that belong to this policy. There must always be a default
 rule (rule with priority 2147483647 and match "\*"). If no rules are provided when creating a
@@ -593,7 +593,7 @@ Get an existing SecurityPolicy resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[SecurityPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SecurityPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SecurityPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -986,7 +986,7 @@ is not provided, the provider project is used.
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrule">List[Security<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicyrule">Sequence[Security<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of rules that belong to this policy. There must always be a default
 rule (rule with priority 2147483647 and match "\*"). If no rules are provided when creating a
@@ -1269,7 +1269,7 @@ If it evaluates to true, the corresponding `action` is enforced. Structure is do
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}An unique positive integer indicating the priority of evaluation for a rule.
 Rules are evaluated from highest priority (lowest numerically) to lowest priority (highest numerically) in order.
@@ -1591,7 +1591,7 @@ to match against inbound traffic. There is a limit of 10 IP ranges per rule. A v
 <a href="#src_ip_ranges_python" style="color: inherit; text-decoration: inherit;">src_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
 to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of '\*' matches all IPs

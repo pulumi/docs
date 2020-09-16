@@ -22,7 +22,7 @@ meta_desc: "Explore the OrganizationSecurityPolicyRule resource of the compute m
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.OrganizationSecurityPolicyRule">OrganizationSecurityPolicyRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">match</span><span class="p">:</span> <span class="nx">Optional[OrganizationSecurityPolicyRuleMatchArgs]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">target_resources</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.OrganizationSecurityPolicyRule">OrganizationSecurityPolicyRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">match</span><span class="p">:</span> <span class="nx">Optional[OrganizationSecurityPolicyRuleMatchArgs]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">target_resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -619,7 +619,7 @@ Structure is documented below.
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a value
 between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the
@@ -679,7 +679,7 @@ configured export destination in Stackdriver.
 <a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of network resource URLs to which this rule applies.
 This field allows you to control which network's VMs get
@@ -693,7 +693,7 @@ within the organization will receive the rule.
 <a href="#target_service_accounts_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of
 instances that are applied with this rule.
@@ -798,7 +798,7 @@ Get an existing OrganizationSecurityPolicyRule resource's state with the given n
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">match</span><span class="p">:</span> <span class="nx">Optional[OrganizationSecurityPolicyRuleMatchArgs]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">target_resources</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> OrganizationSecurityPolicyRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">match</span><span class="p">:</span> <span class="nx">Optional[OrganizationSecurityPolicyRuleMatchArgs]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">target_resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> OrganizationSecurityPolicyRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1384,7 +1384,7 @@ Structure is documented below.
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a value
 between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the
@@ -1397,7 +1397,7 @@ highest priority and 2147483647 is the lowest prority.
 <a href="#state_target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of network resource URLs to which this rule applies.
 This field allows you to control which network's VMs get
@@ -1411,7 +1411,7 @@ within the organization will receive the rule.
 <a href="#state_target_service_accounts_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of
 instances that are applied with this rule.
@@ -1779,7 +1779,7 @@ INGRESS rules.
 <a href="#layer4_configs_python" style="color: inherit; text-decoration: inherit;">layer4_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfiglayer4config">List[Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Layer4Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfiglayer4config">Sequence[Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Layer4Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
 Structure is documented below.
@@ -1791,7 +1791,7 @@ Structure is documented below.
 <a href="#dest_ip_ranges_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Destination IP address range in CIDR format. Required for
 EGRESS rules.
@@ -1803,7 +1803,7 @@ EGRESS rules.
 <a href="#src_ip_ranges_python" style="color: inherit; text-decoration: inherit;">src_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Source IP address range in CIDR format. Required for
 INGRESS rules.
@@ -1969,7 +1969,7 @@ or the IP protocol number.
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field
 is only applicable for UDP or TCP protocol. Each entry must be

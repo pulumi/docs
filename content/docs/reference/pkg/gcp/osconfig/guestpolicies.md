@@ -22,7 +22,7 @@ meta_desc: "Explore the GuestPolicies resource of the osconfig module, including
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/osconfig/#pulumi_gcp.osconfig.GuestPolicies">GuestPolicies</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment</span><span class="p">:</span> <span class="nx">Optional[GuestPoliciesAssignmentArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guest_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_repositories</span><span class="p">:</span> <span class="nx">Optional[List[GuestPoliciesPackageRepositoryArgs]]</span> = None<span class="p">, </span><span class="nx">packages</span><span class="p">:</span> <span class="nx">Optional[List[GuestPoliciesPackageArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recipes</span><span class="p">:</span> <span class="nx">Optional[List[GuestPoliciesRecipeArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/osconfig/#pulumi_gcp.osconfig.GuestPolicies">GuestPolicies</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment</span><span class="p">:</span> <span class="nx">Optional[GuestPoliciesAssignmentArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guest_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_repositories</span><span class="p">:</span> <span class="nx">Optional[Sequence[GuestPoliciesPackageRepositoryArgs]]</span> = None<span class="p">, </span><span class="nx">packages</span><span class="p">:</span> <span class="nx">Optional[Sequence[GuestPoliciesPackageArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recipes</span><span class="p">:</span> <span class="nx">Optional[Sequence[GuestPoliciesRecipeArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -595,7 +595,7 @@ Structure is documented below.
 <a href="#package_repositories_python" style="color: inherit; text-decoration: inherit;">package_<wbr>repositories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepository">List[Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepository">Sequence[Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of package repositories to configure on the VM instance.
 This is done before any other configs are applied so they can use these repos.
@@ -609,7 +609,7 @@ Structure is documented below.
 <a href="#packages_python" style="color: inherit; text-decoration: inherit;">packages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackage">List[Guest<wbr>Policies<wbr>Package<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciespackage">Sequence[Guest<wbr>Policies<wbr>Package<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The software packages to be managed by this policy.
 Structure is documented below.
@@ -633,7 +633,7 @@ If it is not provided, the provider project is used.
 <a href="#recipes_python" style="color: inherit; text-decoration: inherit;">recipes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipe">List[Guest<wbr>Policies<wbr>Recipe<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipe">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Recipes to install on the VM instance.
 Structure is documented below.
@@ -890,7 +890,7 @@ Get an existing GuestPolicies resource's state with the given name, ID, and opti
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment</span><span class="p">:</span> <span class="nx">Optional[GuestPoliciesAssignmentArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guest_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_repositories</span><span class="p">:</span> <span class="nx">Optional[List[GuestPoliciesPackageRepositoryArgs]]</span> = None<span class="p">, </span><span class="nx">packages</span><span class="p">:</span> <span class="nx">Optional[List[GuestPoliciesPackageArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recipes</span><span class="p">:</span> <span class="nx">Optional[List[GuestPoliciesRecipeArgs]]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GuestPolicies</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment</span><span class="p">:</span> <span class="nx">Optional[GuestPoliciesAssignmentArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guest_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_repositories</span><span class="p">:</span> <span class="nx">Optional[Sequence[GuestPoliciesPackageRepositoryArgs]]</span> = None<span class="p">, </span><span class="nx">packages</span><span class="p">:</span> <span class="nx">Optional[Sequence[GuestPoliciesPackageArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recipes</span><span class="p">:</span> <span class="nx">Optional[Sequence[GuestPoliciesRecipeArgs]]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GuestPolicies</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1545,7 +1545,7 @@ could potentially have conflicting assignments.
 <a href="#state_package_repositories_python" style="color: inherit; text-decoration: inherit;">package_<wbr>repositories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepository">List[Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepository">Sequence[Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of package repositories to configure on the VM instance.
 This is done before any other configs are applied so they can use these repos.
@@ -1559,7 +1559,7 @@ Structure is documented below.
 <a href="#state_packages_python" style="color: inherit; text-decoration: inherit;">packages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackage">List[Guest<wbr>Policies<wbr>Package<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciespackage">Sequence[Guest<wbr>Policies<wbr>Package<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The software packages to be managed by this policy.
 Structure is documented below.
@@ -1583,7 +1583,7 @@ If it is not provided, the provider project is used.
 <a href="#state_recipes_python" style="color: inherit; text-decoration: inherit;">recipes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipe">List[Guest<wbr>Policies<wbr>Recipe<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipe">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Recipes to install on the VM instance.
 Structure is documented below.
@@ -1862,7 +1862,7 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 <a href="#group_labels_python" style="color: inherit; text-decoration: inherit;">group_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesassignmentgrouplabel">List[Guest<wbr>Policies<wbr>Assignment<wbr>Group<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesassignmentgrouplabel">Sequence[Guest<wbr>Policies<wbr>Assignment<wbr>Group<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups,
 for example "env=prod or env=staging".
@@ -1875,7 +1875,7 @@ Structure is documented below.
 <a href="#instance_name_prefixes_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances whose name starts with one of these prefixes.
 Like labels, this is another way to group VM instances when targeting configs,
@@ -1889,7 +1889,7 @@ Only supported for project-level policies.
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Targets any of the instances specified. Instances are specified by their URI in the form
 zones/[ZONE]/instances/[INSTANCE_NAME].
@@ -1904,7 +1904,7 @@ Only supported for project-level policies and must reference instances within th
 <a href="#os_types_python" style="color: inherit; text-decoration: inherit;">os_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesassignmentostype">List[Guest<wbr>Policies<wbr>Assignment<wbr>Os<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesassignmentostype">Sequence[Guest<wbr>Policies<wbr>Assignment<wbr>Os<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching at least one of the following OS types.
 VM instances must match all supplied criteria for a given OsType to be included.
@@ -1917,7 +1917,7 @@ Structure is documented below.
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Targets instances in any of these zones. Leave empty to target instances in any zone.
 Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
@@ -2893,7 +2893,7 @@ Possible values are `DEB` and `DEB_SRC`.
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of components for this repository. Must contain at least one item.
 {{% /md %}}</dd>
@@ -3312,7 +3312,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#gpg_keys_python" style="color: inherit; text-decoration: inherit;">gpg_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.
 {{% /md %}}</dd>
@@ -3538,7 +3538,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#gpg_keys_python" style="color: inherit; text-decoration: inherit;">gpg_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.
 {{% /md %}}</dd>
@@ -3849,7 +3849,7 @@ could potentially have conflicting assignments.
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeartifact">List[Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeartifact">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resources available to be used in the steps in the recipe.
 Structure is documented below.
@@ -3878,7 +3878,7 @@ Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 <a href="#install_steps_python" style="color: inherit; text-decoration: inherit;">install_<wbr>steps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstep">List[Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstep">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation.
 Any steps taken (including partially completed steps) are not rolled back.
@@ -3891,7 +3891,7 @@ Structure is documented below.
 <a href="#update_steps_python" style="color: inherit; text-decoration: inherit;">update_<wbr>steps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestep">List[Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestep">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe.
 Any steps taken (including partially completed steps) are not rolled back.
@@ -4323,7 +4323,7 @@ this value would be my-bucket.
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Must be provided if allowInsecure is false. Generation number of the Google Cloud Storage object.
 https://storage.googleapis.com/my-bucket/foo/bar#1234567 this value would be 1234567.
@@ -5578,7 +5578,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the provided executable.
 {{% /md %}}</dd>
@@ -5767,7 +5767,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
@@ -5778,7 +5778,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The flags to use when installing the MSI. Defaults to the install flag.
 {{% /md %}}</dd>
@@ -6041,7 +6041,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
@@ -7143,7 +7143,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
@@ -7154,7 +7154,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the provided executable.
 {{% /md %}}</dd>
@@ -7343,7 +7343,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>
@@ -7354,7 +7354,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The flags to use when installing the MSI. Defaults to the install flag.
 {{% /md %}}</dd>
@@ -7617,7 +7617,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd>

@@ -1605,7 +1605,7 @@ Structure is documented below.
 <a href="#bounds_python" style="color: inherit; text-decoration: inherit;">bounds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}The values must be monotonically increasing.
 {{% /md %}}</dd>
@@ -1772,7 +1772,7 @@ Structure is documented below.
 <a href="#num_finite_buckets_python" style="color: inherit; text-decoration: inherit;">num_<wbr>finite_<wbr>buckets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
 {{% /md %}}</dd>
@@ -1939,7 +1939,7 @@ Structure is documented below.
 <a href="#num_finite_buckets_python" style="color: inherit; text-decoration: inherit;">num_<wbr>finite_<wbr>buckets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
 {{% /md %}}</dd>
@@ -1961,7 +1961,7 @@ Structure is documented below.
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
 {{% /md %}}</dd>
@@ -2262,7 +2262,7 @@ recommended to be set for any metrics associated with user-visible concepts, suc
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptorlabel">List[Metric<wbr>Metric<wbr>Descriptor<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricmetricdescriptorlabel">Sequence[Metric<wbr>Metric<wbr>Descriptor<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of labels that can be used to describe a specific instance of this metric type. For
 example, the appengine.googleapis.com/http/server/response_latencies metric type has a label

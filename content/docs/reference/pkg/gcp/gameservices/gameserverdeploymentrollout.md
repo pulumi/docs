@@ -30,7 +30,7 @@ To get more information about GameServerDeploymentRollout, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/gameservices/#pulumi_gcp.gameservices.GameServerDeploymentRollout">GameServerDeploymentRollout</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_game_server_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">game_server_config_overrides</span><span class="p">:</span> <span class="nx">Optional[List[GameServerDeploymentRolloutGameServerConfigOverrideArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/gameservices/#pulumi_gcp.gameservices.GameServerDeploymentRollout">GameServerDeploymentRollout</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_game_server_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">game_server_config_overrides</span><span class="p">:</span> <span class="nx">Optional[Sequence[GameServerDeploymentRolloutGameServerConfigOverrideArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -406,7 +406,7 @@ applied by default to all realms and clusters. For example,
 <a href="#game_server_config_overrides_python" style="color: inherit; text-decoration: inherit;">game_<wbr>server_<wbr>config_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">List[Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">Sequence[Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The game_server_config_overrides contains the per game server config
 overrides. The overrides are processed in the order they are listed. As
@@ -574,7 +574,7 @@ Get an existing GameServerDeploymentRollout resource's state with the given name
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_game_server_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">game_server_config_overrides</span><span class="p">:</span> <span class="nx">Optional[List[GameServerDeploymentRolloutGameServerConfigOverrideArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GameServerDeploymentRollout</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_game_server_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">game_server_config_overrides</span><span class="p">:</span> <span class="nx">Optional[Sequence[GameServerDeploymentRolloutGameServerConfigOverrideArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GameServerDeploymentRollout</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -928,7 +928,7 @@ applied by default to all realms and clusters. For example,
 <a href="#state_game_server_config_overrides_python" style="color: inherit; text-decoration: inherit;">game_<wbr>server_<wbr>config_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">List[Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">Sequence[Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The game_server_config_overrides contains the per game server config
 overrides. The overrides are processed in the order they are listed. As
@@ -1192,7 +1192,7 @@ Structure is documented below.
 <a href="#realms_python" style="color: inherit; text-decoration: inherit;">realms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of realms to match against.
 {{% /md %}}</dd>

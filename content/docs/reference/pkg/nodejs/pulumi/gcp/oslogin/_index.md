@@ -3,7 +3,7 @@ title: "Module oslogin"
 title_tag: "Module oslogin | Package @pulumi/gcp | Node.js SDK"
 linktitle: "oslogin"
 meta_desc: "Explore members of the oslogin module in the @pulumi/gcp package."
-git_sha: "da8ea6e04df21372ae7e86dc1edfa82d0f61de1e"
+git_sha: "aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="SshPublicKey" data-link-title="SshPublicKey">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L18">
         Resource <strong>SshPublicKey</strong>
     </a>
 </h3>
@@ -48,7 +48,7 @@ To get more information about SSHPublicKey, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="SshPublicKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L61"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L61"> <b>constructor</b></a>
 </h4>
 
 
@@ -62,7 +62,7 @@ Create a SshPublicKey resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SshPublicKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L28">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L28">method <b>get</b></a>
 </h4>
 
 
@@ -73,14 +73,14 @@ Get an existing SshPublicKey resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SshPublicKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L18">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L18">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SshPublicKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L39">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L39">method <b>isInstance</b></a>
 </h4>
 
 
@@ -91,7 +91,7 @@ Returns true if the given object is an instance of SshPublicKey.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SshPublicKey-expirationTimeUsec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L49">property <b>expirationTimeUsec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L49">property <b>expirationTimeUsec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expirationTimeUsec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -99,7 +99,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 An expiration time in microseconds since epoch.
 
 <h4 class="pdoc-member-header" id="SshPublicKey-fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L53">property <b>fingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L53">property <b>fingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -107,7 +107,7 @@ An expiration time in microseconds since epoch.
 The SHA-256 fingerprint of the SSH public key.
 
 <h4 class="pdoc-member-header" id="SshPublicKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L18">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L18">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -116,7 +116,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SshPublicKey-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L57">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L57">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -124,7 +124,7 @@ deployments and may be missing (undefined) during planning phases.
 Public key text in SSH format, defined by RFC4253 section 6.6.
 
 <h4 class="pdoc-member-header" id="SshPublicKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L18">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L18">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -133,7 +133,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SshPublicKey-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L61">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L61">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -144,7 +144,7 @@ The user email.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="SshPublicKeyArgs" data-link-title="SshPublicKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L128">
         interface <strong>SshPublicKeyArgs</strong>
     </a>
 </h3>
@@ -154,7 +154,7 @@ The user email.
 The set of arguments for constructing a SshPublicKey resource.
 
 <h4 class="pdoc-member-header" id="SshPublicKeyArgs-expirationTimeUsec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L132">property <b>expirationTimeUsec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L132">property <b>expirationTimeUsec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationTimeUsec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -162,7 +162,7 @@ The set of arguments for constructing a SshPublicKey resource.
 An expiration time in microseconds since epoch.
 
 <h4 class="pdoc-member-header" id="SshPublicKeyArgs-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L136">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L136">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -170,7 +170,7 @@ An expiration time in microseconds since epoch.
 Public key text in SSH format, defined by RFC4253 section 6.6.
 
 <h4 class="pdoc-member-header" id="SshPublicKeyArgs-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L140">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L140">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -178,7 +178,7 @@ Public key text in SSH format, defined by RFC4253 section 6.6.
 The user email.
 
 <h3 class="pdoc-module-header" id="SshPublicKeyState" data-link-title="SshPublicKeyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L106">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L106">
         interface <strong>SshPublicKeyState</strong>
     </a>
 </h3>
@@ -188,7 +188,7 @@ The user email.
 Input properties used for looking up and filtering SshPublicKey resources.
 
 <h4 class="pdoc-member-header" id="SshPublicKeyState-expirationTimeUsec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L110">property <b>expirationTimeUsec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L110">property <b>expirationTimeUsec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationTimeUsec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -196,7 +196,7 @@ Input properties used for looking up and filtering SshPublicKey resources.
 An expiration time in microseconds since epoch.
 
 <h4 class="pdoc-member-header" id="SshPublicKeyState-fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L114">property <b>fingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L114">property <b>fingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -204,7 +204,7 @@ An expiration time in microseconds since epoch.
 The SHA-256 fingerprint of the SSH public key.
 
 <h4 class="pdoc-member-header" id="SshPublicKeyState-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L118">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L118">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -212,7 +212,7 @@ The SHA-256 fingerprint of the SSH public key.
 Public key text in SSH format, defined by RFC4253 section 6.6.
 
 <h4 class="pdoc-member-header" id="SshPublicKeyState-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/oslogin/sshPublicKey.ts#L122">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/oslogin/sshPublicKey.ts#L122">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

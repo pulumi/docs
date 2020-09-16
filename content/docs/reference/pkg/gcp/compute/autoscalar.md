@@ -1629,7 +1629,7 @@ Possible values are `OFF`, `ONLY_UP`, and `ON`.
 <a href="#max_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>replicas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of instances that the autoscaler can scale up
 to. This is required when creating or updating an autoscaler. The
@@ -1643,7 +1643,7 @@ of replicas.
 <a href="#min_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>replicas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of replicas that the autoscaler can scale down
 to. This cannot be less than 0. If not provided, autoscaler will
@@ -1657,7 +1657,7 @@ allowed.
 <a href="#cooldown_period_python" style="color: inherit; text-decoration: inherit;">cooldown_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds that the autoscaler should wait before it
 starts collecting information from a new instance. This prevents
@@ -1702,7 +1702,7 @@ Structure is documented below.
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalarautoscalingpolicymetric">List[Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Metric<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalarautoscalingpolicymetric">Sequence[Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Metric<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.
 Structure is documented below.
@@ -2509,7 +2509,7 @@ Structure is documented below.
 <a href="#time_window_sec_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How long back autoscaling should look when computing recommendations
 to include directives regarding slower scale down, as described above.
@@ -2639,7 +2639,7 @@ For example, specify 80 for 80%.
 <a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
 integer.
@@ -2651,7 +2651,7 @@ integer.
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
 For example, specify 80 for 80%.

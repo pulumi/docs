@@ -577,7 +577,7 @@ The following output properties are available:
 <a href="#bgps_python" style="color: inherit; text-decoration: inherit;">bgps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrouterbgp">List[Get<wbr>Router<wbr>Bgp]</a></span>
+        <span class="property-type"><a href="#getrouterbgp">Sequence[Get<wbr>Router<wbr>Bgp]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -850,7 +850,7 @@ The following output properties are available:
 <a href="#advertised_groups_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -860,7 +860,7 @@ The following output properties are available:
 <a href="#advertised_ip_ranges_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrouterbgpadvertisediprange">List[Get<wbr>Router<wbr>Bgp<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getrouterbgpadvertisediprange">Sequence[Get<wbr>Router<wbr>Bgp<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -870,7 +870,7 @@ The following output properties are available:
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

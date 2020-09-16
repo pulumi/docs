@@ -25,7 +25,7 @@ and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroups)
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.InstanceGroup">InstanceGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_ports</span><span class="p">:</span> <span class="nx">Optional[List[InstanceGroupNamedPortArgs]]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.InstanceGroup">InstanceGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceGroupNamedPortArgs]]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -491,7 +491,7 @@ group.
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of instances in the group. They should be given
 as either self_link or id. When adding instances they must all be in the same
@@ -515,7 +515,7 @@ network and zone as the instance group.
 <a href="#named_ports_python" style="color: inherit; text-decoration: inherit;">named_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupnamedport">List[Instance<wbr>Group<wbr>Named<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupnamedport">Sequence[Instance<wbr>Group<wbr>Named<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
 for details on configuration.
@@ -720,7 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of instances in the group.
 {{% /md %}}</dd>
@@ -745,7 +745,7 @@ Get an existing InstanceGroup resource's state with the given name, ID, and opti
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_ports</span><span class="p">:</span> <span class="nx">Optional[List[InstanceGroupNamedPortArgs]]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> InstanceGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceGroupNamedPortArgs]]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> InstanceGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1219,7 +1219,7 @@ group.
 <a href="#state_instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of instances in the group. They should be given
 as either self_link or id. When adding instances they must all be in the same
@@ -1243,7 +1243,7 @@ network and zone as the instance group.
 <a href="#state_named_ports_python" style="color: inherit; text-decoration: inherit;">named_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupnamedport">List[Instance<wbr>Group<wbr>Named<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupnamedport">Sequence[Instance<wbr>Group<wbr>Named<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
 for details on configuration.
@@ -1292,7 +1292,7 @@ is not provided, the provider project is used.
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of instances in the group.
 {{% /md %}}</dd>
@@ -1445,7 +1445,7 @@ is not provided, the provider project is used.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port number to map the name to.
 {{% /md %}}</dd>

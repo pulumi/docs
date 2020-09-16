@@ -29,7 +29,7 @@ To get more information about Index, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/datastore/#pulumi_gcp.datastore.DataStoreIndex">DataStoreIndex</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ancestor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[List[DataStoreIndexPropertyArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/datastore/#pulumi_gcp.datastore.DataStoreIndex">DataStoreIndex</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ancestor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataStoreIndexPropertyArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -408,7 +408,7 @@ If it is not provided, the provider project is used.
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreindexproperty">List[Data<wbr>Store<wbr>Index<wbr>Property<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datastoreindexproperty">Sequence[Data<wbr>Store<wbr>Index<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of properties to index on.
 Structure is documented below.
@@ -557,7 +557,7 @@ Get an existing DataStoreIndex resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ancestor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">index_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[List[DataStoreIndexPropertyArgs]]</span> = None<span class="p">) -&gt;</span> DataStoreIndex</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ancestor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">index_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataStoreIndexPropertyArgs]]</span> = None<span class="p">) -&gt;</span> DataStoreIndex</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -922,7 +922,7 @@ If it is not provided, the provider project is used.
 <a href="#state_properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreindexproperty">List[Data<wbr>Store<wbr>Index<wbr>Property<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datastoreindexproperty">Sequence[Data<wbr>Store<wbr>Index<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of properties to index on.
 Structure is documented below.

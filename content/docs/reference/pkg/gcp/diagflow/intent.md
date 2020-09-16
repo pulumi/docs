@@ -30,7 +30,7 @@ To get more information about Intent, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/diagflow/#pulumi_gcp.diagflow.Intent">Intent</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_response_platforms</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">events</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">input_context_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">is_fallback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ml_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">parent_followup_intent_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reset_contexts</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">webhook_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/diagflow/#pulumi_gcp.diagflow.Intent">Intent</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_response_platforms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">events</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">input_context_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_fallback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ml_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">parent_followup_intent_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reset_contexts</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">webhook_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -699,7 +699,7 @@ Note: The action name must not contain whitespaces.
 <a href="#default_response_platforms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>response_<wbr>platforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
 (i.e. default platform).
@@ -712,7 +712,7 @@ Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
 the contexts must be present in the active user session for an event to trigger this intent. See the
@@ -725,7 +725,7 @@ the contexts must be present in the active user session for an event to trigger 
 <a href="#input_context_names_python" style="color: inherit; text-decoration: inherit;">input_<wbr>context_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of context names required for this intent to be triggered.
 Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
@@ -773,7 +773,7 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of this intent. Higher numbers represent higher priorities.
 - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
@@ -999,7 +999,7 @@ chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 <a href="#followup_intent_infos_python" style="color: inherit; text-decoration: inherit;">followup_<wbr>intent_<wbr>infos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowupintentinfo">List[Intent<wbr>Followup<wbr>Intent<wbr>Info]</a></span>
+        <span class="property-type"><a href="#intentfollowupintentinfo">Sequence[Intent<wbr>Followup<wbr>Intent<wbr>Info]</a></span>
     </dt>
     <dd>{{% md %}}Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.
@@ -1058,7 +1058,7 @@ Get an existing Intent resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_response_platforms</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">events</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">followup_intent_infos</span><span class="p">:</span> <span class="nx">Optional[List[IntentFollowupIntentInfoArgs]]</span> = None<span class="p">, </span><span class="nx">input_context_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">is_fallback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ml_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_followup_intent_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reset_contexts</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">root_followup_intent_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">webhook_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Intent</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_response_platforms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">events</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">followup_intent_infos</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntentFollowupIntentInfoArgs]]</span> = None<span class="p">, </span><span class="nx">input_context_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_fallback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ml_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_followup_intent_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reset_contexts</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">root_followup_intent_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">webhook_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Intent</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1763,7 +1763,7 @@ Note: The action name must not contain whitespaces.
 <a href="#state_default_response_platforms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>response_<wbr>platforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
 (i.e. default platform).
@@ -1787,7 +1787,7 @@ Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`
 <a href="#state_events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
 the contexts must be present in the active user session for an event to trigger this intent. See the
@@ -1800,7 +1800,7 @@ the contexts must be present in the active user session for an event to trigger 
 <a href="#state_followup_intent_infos_python" style="color: inherit; text-decoration: inherit;">followup_<wbr>intent_<wbr>infos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowupintentinfo">List[Intent<wbr>Followup<wbr>Intent<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#intentfollowupintentinfo">Sequence[Intent<wbr>Followup<wbr>Intent<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.
@@ -1812,7 +1812,7 @@ in the output.
 <a href="#state_input_context_names_python" style="color: inherit; text-decoration: inherit;">input_<wbr>context_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of context names required for this intent to be triggered.
 Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
@@ -1871,7 +1871,7 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of this intent. Higher numbers represent higher priorities.
 - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds

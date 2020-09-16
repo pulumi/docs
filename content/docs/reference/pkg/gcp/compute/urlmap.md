@@ -28,7 +28,7 @@ To get more information about UrlMap, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.URLMap">URLMap</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_route_action</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultRouteActionArgs]</span> = None<span class="p">, </span><span class="nx">default_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_url_redirect</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultUrlRedirectArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">header_action</span><span class="p">:</span> <span class="nx">Optional[URLMapHeaderActionArgs]</span> = None<span class="p">, </span><span class="nx">host_rules</span><span class="p">:</span> <span class="nx">Optional[List[URLMapHostRuleArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_matchers</span><span class="p">:</span> <span class="nx">Optional[List[URLMapPathMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[List[URLMapTestArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.URLMap">URLMap</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_route_action</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultRouteActionArgs]</span> = None<span class="p">, </span><span class="nx">default_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_url_redirect</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultUrlRedirectArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">header_action</span><span class="p">:</span> <span class="nx">Optional[URLMapHeaderActionArgs]</span> = None<span class="p">, </span><span class="nx">host_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapHostRuleArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_matchers</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapPathMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapTestArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -681,7 +681,7 @@ Structure is documented below.
 <a href="#host_rules_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaphostrule">List[URLMap<wbr>Host<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmaphostrule">Sequence[URLMap<wbr>Host<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 Structure is documented below.
@@ -705,7 +705,7 @@ request, in the absence of which the request match fails.
 <a href="#path_matchers_python" style="color: inherit; text-decoration: inherit;">path_<wbr>matchers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcher">List[URLMap<wbr>Path<wbr>Matcher<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcher">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
@@ -729,7 +729,7 @@ If it is not provided, the provider project is used.
 <a href="#tests_python" style="color: inherit; text-decoration: inherit;">tests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaptest">List[URLMap<wbr>Test<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmaptest">Sequence[URLMap<wbr>Test<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will
 succeed only if all of the test cases pass. You can specify a maximum of 100
@@ -976,7 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#map_id_python" style="color: inherit; text-decoration: inherit;">map_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -1012,7 +1012,7 @@ Get an existing URLMap resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_route_action</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultRouteActionArgs]</span> = None<span class="p">, </span><span class="nx">default_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_url_redirect</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultUrlRedirectArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">header_action</span><span class="p">:</span> <span class="nx">Optional[URLMapHeaderActionArgs]</span> = None<span class="p">, </span><span class="nx">host_rules</span><span class="p">:</span> <span class="nx">Optional[List[URLMapHostRuleArgs]]</span> = None<span class="p">, </span><span class="nx">map_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_matchers</span><span class="p">:</span> <span class="nx">Optional[List[URLMapPathMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[List[URLMapTestArgs]]</span> = None<span class="p">) -&gt;</span> URLMap</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_route_action</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultRouteActionArgs]</span> = None<span class="p">, </span><span class="nx">default_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_url_redirect</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultUrlRedirectArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">header_action</span><span class="p">:</span> <span class="nx">Optional[URLMapHeaderActionArgs]</span> = None<span class="p">, </span><span class="nx">host_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapHostRuleArgs]]</span> = None<span class="p">, </span><span class="nx">map_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_matchers</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapPathMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapTestArgs]]</span> = None<span class="p">) -&gt;</span> URLMap</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1761,7 +1761,7 @@ Structure is documented below.
 <a href="#state_host_rules_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaphostrule">List[URLMap<wbr>Host<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmaphostrule">Sequence[URLMap<wbr>Host<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 Structure is documented below.
@@ -1773,7 +1773,7 @@ Structure is documented below.
 <a href="#state_map_id_python" style="color: inherit; text-decoration: inherit;">map_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -1796,7 +1796,7 @@ request, in the absence of which the request match fails.
 <a href="#state_path_matchers_python" style="color: inherit; text-decoration: inherit;">path_<wbr>matchers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcher">List[URLMap<wbr>Path<wbr>Matcher<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcher">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
@@ -1831,7 +1831,7 @@ If it is not provided, the provider project is used.
 <a href="#state_tests_python" style="color: inherit; text-decoration: inherit;">tests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaptest">List[URLMap<wbr>Test<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmaptest">Sequence[URLMap<wbr>Test<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will
 succeed only if all of the test cases pass. You can specify a maximum of 100
@@ -2277,7 +2277,7 @@ Structure is documented below.
 <a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendservice">List[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendservice">Sequence[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -2632,7 +2632,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
 {{% /md %}}</dd>
@@ -2643,7 +2643,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
 {{% /md %}}</dd>
@@ -2654,7 +2654,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_origin_regexes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origin_<wbr>regexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
@@ -2667,7 +2667,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
@@ -2690,7 +2690,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
 {{% /md %}}</dd>
@@ -2701,7 +2701,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
@@ -2973,7 +2973,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#http_status_python" style="color: inherit; text-decoration: inherit;">http_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
@@ -3257,7 +3257,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -3567,7 +3567,7 @@ unavailable: Loadbalancer will retry if the gRPC status code in the response hea
 <a href="#num_retries_python" style="color: inherit; text-decoration: inherit;">num_<wbr>retries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd>
@@ -3592,7 +3592,7 @@ Structure is documented below.
 <a href="#retry_conditions_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
@@ -3735,7 +3735,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -3877,7 +3877,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -4249,7 +4249,7 @@ Structure is documented below.
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
 weight / (sum of all weightedBackendService weights in routeAction) .
@@ -4455,7 +4455,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -4467,7 +4467,7 @@ Structure is documented below.
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -4479,7 +4479,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -4491,7 +4491,7 @@ Structure is documented below.
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -5455,7 +5455,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">List[URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -5467,7 +5467,7 @@ Structure is documented below.
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -5479,7 +5479,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderactionresponseheaderstoadd">List[URLMap<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -5491,7 +5491,7 @@ Structure is documented below.
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -6021,7 +6021,7 @@ hostRule matches the URL's host portion.
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of host patterns to match. They must be valid hostnames, except * will
 match any string of ([a-z0-9-.]*). In that case, * must be the first character
@@ -6521,7 +6521,7 @@ Structure is documented below.
 <a href="#path_rules_python" style="color: inherit; text-decoration: inherit;">path_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrule">List[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrule">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of path rules. Use this list instead of routeRules when routing based
 on simple path matching is all that's required. The order by which path rules
@@ -6538,7 +6538,7 @@ Structure is documented below.
 <a href="#route_rules_python" style="color: inherit; text-decoration: inherit;">route_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterule">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterule">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of ordered HTTP route rules. Use this list instead of pathRules when
 advanced route matching and routing actions are desired. The order of specifying
@@ -6979,7 +6979,7 @@ Structure is documented below.
 <a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendservice">List[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendservice">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -7334,7 +7334,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
 {{% /md %}}</dd>
@@ -7345,7 +7345,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
 {{% /md %}}</dd>
@@ -7356,7 +7356,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_origin_regexes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origin_<wbr>regexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
@@ -7369,7 +7369,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
@@ -7392,7 +7392,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
 {{% /md %}}</dd>
@@ -7403,7 +7403,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
@@ -7675,7 +7675,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#http_status_python" style="color: inherit; text-decoration: inherit;">http_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
@@ -7959,7 +7959,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -8269,7 +8269,7 @@ unavailable: Loadbalancer will retry if the gRPC status code in the response hea
 <a href="#num_retries_python" style="color: inherit; text-decoration: inherit;">num_<wbr>retries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd>
@@ -8294,7 +8294,7 @@ Structure is documented below.
 <a href="#retry_conditions_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
@@ -8437,7 +8437,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -8579,7 +8579,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -8951,7 +8951,7 @@ Structure is documented below.
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
 weight / (sum of all weightedBackendService weights in routeAction) .
@@ -9157,7 +9157,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -9169,7 +9169,7 @@ Structure is documented below.
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -9181,7 +9181,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -9193,7 +9193,7 @@ Structure is documented below.
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -10157,7 +10157,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -10169,7 +10169,7 @@ Structure is documented below.
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -10181,7 +10181,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderactionresponseheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -10193,7 +10193,7 @@ Structure is documented below.
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -10783,7 +10783,7 @@ Structure is documented below.
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of path patterns to match. Each must start with / and the only place a
 * is allowed is at the end following a /. The string fed to the path matcher
@@ -11263,7 +11263,7 @@ Structure is documented below.
 <a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">List[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -11629,7 +11629,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
 {{% /md %}}</dd>
@@ -11640,7 +11640,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
 {{% /md %}}</dd>
@@ -11651,7 +11651,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_origin_regexes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origin_<wbr>regexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
@@ -11664,7 +11664,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
@@ -11676,7 +11676,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
 {{% /md %}}</dd>
@@ -11687,7 +11687,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
@@ -11959,7 +11959,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#http_status_python" style="color: inherit; text-decoration: inherit;">http_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
@@ -12255,7 +12255,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -12553,7 +12553,7 @@ unavailable: Loadbalancer will retry if the gRPC status code in the response hea
 <a href="#num_retries_python" style="color: inherit; text-decoration: inherit;">num_<wbr>retries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd>
@@ -12578,7 +12578,7 @@ Structure is documented below.
 <a href="#retry_conditions_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
@@ -12733,7 +12733,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -12875,7 +12875,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -13220,7 +13220,7 @@ Structure is documented below.
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
 weight / (sum of all weightedBackendService weights in routeAction) .
@@ -13441,7 +13441,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -13453,7 +13453,7 @@ Structure is documented below.
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -13465,7 +13465,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -13477,7 +13477,7 @@ Structure is documented below.
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -14573,7 +14573,7 @@ Structure is documented below.
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}For routeRules within a given pathMatcher, priority determines the order
 in which load balancer will interpret routeRules. RouteRules are evaluated
@@ -14611,7 +14611,7 @@ Structure is documented below.
 <a href="#match_rules_python" style="color: inherit; text-decoration: inherit;">match_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrule">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrule">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The rules for determining a match.
 Structure is documented below.
@@ -14855,7 +14855,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -14867,7 +14867,7 @@ Structure is documented below.
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -14879,7 +14879,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionresponseheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -14891,7 +14891,7 @@ Structure is documented below.
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -15634,7 +15634,7 @@ be specified.
 <a href="#header_matches_python" style="color: inherit; text-decoration: inherit;">header_<wbr>matches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatch">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatch">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding
 headers in the request.
@@ -15659,7 +15659,7 @@ Defaults to false.
 <a href="#metadata_filters_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilter">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilter">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to
 a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS
@@ -15694,7 +15694,7 @@ must be set.
 <a href="#query_parameter_matches_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameter_<wbr>matches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulequeryparametermatch">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulequeryparametermatch">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match
 corresponding query parameters in the request.
@@ -16307,7 +16307,7 @@ must be set.
 <a href="#range_end_python" style="color: inherit; text-decoration: inherit;">range_<wbr>end</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The end of the range (exclusive).
 {{% /md %}}</dd>
@@ -16318,7 +16318,7 @@ must be set.
 <a href="#range_start_python" style="color: inherit; text-decoration: inherit;">range_<wbr>start</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The start of the range (inclusive).
 {{% /md %}}</dd>
@@ -16468,7 +16468,7 @@ Possible values are `MATCH_ALL` and `MATCH_ANY`.
 <a href="#filter_labels_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata
 based on filterMatchCriteria  This list must not be empty and can have at the
@@ -17319,7 +17319,7 @@ Structure is documented below.
 <a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -17674,7 +17674,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
 {{% /md %}}</dd>
@@ -17685,7 +17685,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
 {{% /md %}}</dd>
@@ -17696,7 +17696,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_origin_regexes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origin_<wbr>regexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
@@ -17709,7 +17709,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
@@ -17732,7 +17732,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
 {{% /md %}}</dd>
@@ -17743,7 +17743,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
@@ -18015,7 +18015,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#http_status_python" style="color: inherit; text-decoration: inherit;">http_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
@@ -18311,7 +18311,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -18609,7 +18609,7 @@ unavailable: Loadbalancer will retry if the gRPC status code in the response hea
 <a href="#num_retries_python" style="color: inherit; text-decoration: inherit;">num_<wbr>retries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd>
@@ -18634,7 +18634,7 @@ Structure is documented below.
 <a href="#retry_conditions_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
@@ -18789,7 +18789,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -18931,7 +18931,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -19276,7 +19276,7 @@ Structure is documented below.
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
 weight / (sum of all weightedBackendService weights in routeAction) .
@@ -19497,7 +19497,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -19509,7 +19509,7 @@ Structure is documented below.
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -19521,7 +19521,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -19533,7 +19533,7 @@ Structure is documented below.
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.

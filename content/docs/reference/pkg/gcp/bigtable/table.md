@@ -25,7 +25,7 @@ Creates a Google Cloud Bigtable table inside an instance. For more information s
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigtable/#pulumi_gcp.bigtable.Table">Table</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_families</span><span class="p">:</span> <span class="nx">Optional[List[TableColumnFamilyArgs]]</span> = None<span class="p">, </span><span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">split_keys</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigtable/#pulumi_gcp.bigtable.Table">Table</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_families</span><span class="p">:</span> <span class="nx">Optional[Sequence[TableColumnFamilyArgs]]</span> = None<span class="p">, </span><span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">split_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -409,7 +409,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
 <a href="#column_families_python" style="color: inherit; text-decoration: inherit;">column_<wbr>families</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablecolumnfamily">List[Table<wbr>Column<wbr>Family<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tablecolumnfamily">Sequence[Table<wbr>Column<wbr>Family<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
 {{% /md %}}</dd>
@@ -443,7 +443,7 @@ is not provided, the provider project is used.
 <a href="#split_keys_python" style="color: inherit; text-decoration: inherit;">split_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of predefined keys to split the table on.
 !> **Warning:** Modifying the `split_keys` of an existing table will cause the provider
@@ -549,7 +549,7 @@ Get an existing Table resource's state with the given name, ID, and optional ext
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_families</span><span class="p">:</span> <span class="nx">Optional[List[TableColumnFamilyArgs]]</span> = None<span class="p">, </span><span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">split_keys</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> Table</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_families</span><span class="p">:</span> <span class="nx">Optional[Sequence[TableColumnFamilyArgs]]</span> = None<span class="p">, </span><span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">split_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Table</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -864,7 +864,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
 <a href="#state_column_families_python" style="color: inherit; text-decoration: inherit;">column_<wbr>families</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablecolumnfamily">List[Table<wbr>Column<wbr>Family<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tablecolumnfamily">Sequence[Table<wbr>Column<wbr>Family<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
 {{% /md %}}</dd>
@@ -909,7 +909,7 @@ is not provided, the provider project is used.
 <a href="#state_split_keys_python" style="color: inherit; text-decoration: inherit;">split_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of predefined keys to split the table on.
 !> **Warning:** Modifying the `split_keys` of an existing table will cause the provider

@@ -3,7 +3,7 @@ title: "Module dataloss"
 title_tag: "Module dataloss | Package @pulumi/gcp | Node.js SDK"
 linktitle: "dataloss"
 meta_desc: "Explore members of the dataloss module in the @pulumi/gcp package."
-git_sha: "da8ea6e04df21372ae7e86dc1edfa82d0f61de1e"
+git_sha: "aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="PreventionInspectTemplate" data-link-title="PreventionInspectTemplate">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L20">
         Resource <strong>PreventionInspectTemplate</strong>
     </a>
 </h3>
@@ -54,7 +54,7 @@ To get more information about InspectTemplate, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplate-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L73"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L73"> <b>constructor</b></a>
 </h4>
 
 
@@ -68,7 +68,7 @@ Create a PreventionInspectTemplate resource with the given unique name, argument
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplate-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -79,14 +79,14 @@ Get an existing PreventionInspectTemplate resource's state with the given name, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -97,7 +97,7 @@ Returns true if the given object is an instance of PreventionInspectTemplate.  T
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplate-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L51">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L51">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -105,7 +105,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A description of the inspect template.
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplate-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L55">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L55">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -113,7 +113,7 @@ A description of the inspect template.
 User set display name of the inspect template.
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -122,7 +122,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplate-inspectConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L60">property <b>inspectConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L60">property <b>inspectConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inspectConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PreventionInspectTemplateInspectConfig'>PreventionInspectTemplateInspectConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -131,7 +131,7 @@ The core content of the template.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplate-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L65">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L65">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -140,7 +140,7 @@ Name of the information type. Either a name of your choosing when creating a Cus
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplate-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L73">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L73">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -152,7 +152,7 @@ The parent of the inspect template in any of the following formats:
 * `organizations/{{organization_id}}/locations/{{location}}`
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -161,7 +161,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PreventionJobTrigger" data-link-title="PreventionJobTrigger">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L20">
         Resource <strong>PreventionJobTrigger</strong>
     </a>
 </h3>
@@ -179,7 +179,7 @@ To get more information about JobTrigger, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="PreventionJobTrigger-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -193,7 +193,7 @@ Create a PreventionJobTrigger resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PreventionJobTrigger-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -204,14 +204,14 @@ Get an existing PreventionJobTrigger resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PreventionJobTrigger-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PreventionJobTrigger-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -222,7 +222,7 @@ Returns true if the given object is an instance of PreventionJobTrigger.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PreventionJobTrigger-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L51">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L51">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -230,7 +230,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A description of the job trigger.
 
 <h4 class="pdoc-member-header" id="PreventionJobTrigger-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L55">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L55">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -238,7 +238,7 @@ A description of the job trigger.
 User set display name of the job trigger.
 
 <h4 class="pdoc-member-header" id="PreventionJobTrigger-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -247,7 +247,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PreventionJobTrigger-inspectJob">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L60">property <b>inspectJob</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L60">property <b>inspectJob</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inspectJob: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PreventionJobTriggerInspectJob'>PreventionJobTriggerInspectJob</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -256,7 +256,7 @@ Controls what and how to inspect for findings.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PreventionJobTrigger-lastRunTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L64">property <b>lastRunTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L64">property <b>lastRunTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastRunTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -264,7 +264,7 @@ Structure is documented below.
 The timestamp of the last time this trigger executed.
 
 <h4 class="pdoc-member-header" id="PreventionJobTrigger-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L68">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -272,7 +272,7 @@ The timestamp of the last time this trigger executed.
 The name of the Datastore kind.
 
 <h4 class="pdoc-member-header" id="PreventionJobTrigger-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L73">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L73">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -281,7 +281,7 @@ The parent of the trigger, either in the format `projects/{{project}}`
 or `projects/{{project}}/locations/{{location}}`
 
 <h4 class="pdoc-member-header" id="PreventionJobTrigger-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L79">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L79">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -291,7 +291,7 @@ Default value is `HEALTHY`.
 Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
 
 <h4 class="pdoc-member-header" id="PreventionJobTrigger-triggers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L84">property <b>triggers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L84">property <b>triggers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>triggers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PreventionJobTriggerTrigger'>PreventionJobTriggerTrigger</a>[]&gt;;</code></pre>
@@ -300,7 +300,7 @@ What event needs to occur for a new job to be started.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PreventionJobTrigger-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -309,7 +309,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PreventionStoredInfoType" data-link-title="PreventionStoredInfoType">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L20">
         Resource <strong>PreventionStoredInfoType</strong>
     </a>
 </h3>
@@ -327,7 +327,7 @@ To get more information about StoredInfoType, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoType-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L82"> <b>constructor</b></a>
 </h4>
 
 
@@ -341,7 +341,7 @@ Create a PreventionStoredInfoType resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoType-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -352,14 +352,14 @@ Get an existing PreventionStoredInfoType resource's state with the given name, I
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoType-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoType-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -370,7 +370,7 @@ Returns true if the given object is an instance of PreventionStoredInfoType.  Th
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoType-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L51">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L51">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -378,7 +378,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A description of the info type.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoType-dictionary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L56">property <b>dictionary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L56">property <b>dictionary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dictionary: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PreventionStoredInfoTypeDictionary'>PreventionStoredInfoTypeDictionary</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -387,7 +387,7 @@ Dictionary which defines the rule.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoType-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L60">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L60">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -395,7 +395,7 @@ Structure is documented below.
 User set display name of the info type.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoType-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -404,7 +404,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoType-largeCustomDictionary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L65">property <b>largeCustomDictionary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L65">property <b>largeCustomDictionary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>largeCustomDictionary: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PreventionStoredInfoTypeLargeCustomDictionary'>PreventionStoredInfoTypeLargeCustomDictionary</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -413,7 +413,7 @@ Dictionary which defines the rule.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoType-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L69">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -421,7 +421,7 @@ Structure is documented below.
 Name describing the field.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoType-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L77">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L77">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -433,7 +433,7 @@ The parent of the info type in any of the following formats:
 * `organizations/{{organization_id}}/locations/{{location}}`
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoType-regex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L82">property <b>regex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L82">property <b>regex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>regex: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PreventionStoredInfoTypeRegex'>PreventionStoredInfoTypeRegex</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -442,7 +442,7 @@ Regular expression which defines the rule.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoType-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -454,7 +454,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="PreventionInspectTemplateArgs" data-link-title="PreventionInspectTemplateArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L149">
         interface <strong>PreventionInspectTemplateArgs</strong>
     </a>
 </h3>
@@ -464,7 +464,7 @@ deployments.
 The set of arguments for constructing a PreventionInspectTemplate resource.
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplateArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L153">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L153">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -472,7 +472,7 @@ The set of arguments for constructing a PreventionInspectTemplate resource.
 A description of the inspect template.
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplateArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L157">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L157">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -480,7 +480,7 @@ A description of the inspect template.
 User set display name of the inspect template.
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplateArgs-inspectConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L162">property <b>inspectConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L162">property <b>inspectConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inspectConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionInspectTemplateInspectConfig'>PreventionInspectTemplateInspectConfig</a>&gt;;</code></pre>
@@ -489,7 +489,7 @@ The core content of the template.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplateArgs-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L170">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L170">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -501,7 +501,7 @@ The parent of the inspect template in any of the following formats:
 * `organizations/{{organization_id}}/locations/{{location}}`
 
 <h3 class="pdoc-module-header" id="PreventionInspectTemplateState" data-link-title="PreventionInspectTemplateState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L117">
         interface <strong>PreventionInspectTemplateState</strong>
     </a>
 </h3>
@@ -511,7 +511,7 @@ The parent of the inspect template in any of the following formats:
 Input properties used for looking up and filtering PreventionInspectTemplate resources.
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplateState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L121">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L121">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -519,7 +519,7 @@ Input properties used for looking up and filtering PreventionInspectTemplate res
 A description of the inspect template.
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplateState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L125">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L125">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -527,7 +527,7 @@ A description of the inspect template.
 User set display name of the inspect template.
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplateState-inspectConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L130">property <b>inspectConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L130">property <b>inspectConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inspectConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionInspectTemplateInspectConfig'>PreventionInspectTemplateInspectConfig</a>&gt;;</code></pre>
@@ -536,7 +536,7 @@ The core content of the template.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplateState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L135">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L135">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -545,7 +545,7 @@ Name of the information type. Either a name of your choosing when creating a Cus
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
 
 <h4 class="pdoc-member-header" id="PreventionInspectTemplateState-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L143">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionInspectTemplate.ts#L143">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -557,7 +557,7 @@ The parent of the inspect template in any of the following formats:
 * `organizations/{{organization_id}}/locations/{{location}}`
 
 <h3 class="pdoc-module-header" id="PreventionJobTriggerArgs" data-link-title="PreventionJobTriggerArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L180">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L180">
         interface <strong>PreventionJobTriggerArgs</strong>
     </a>
 </h3>
@@ -567,7 +567,7 @@ The parent of the inspect template in any of the following formats:
 The set of arguments for constructing a PreventionJobTrigger resource.
 
 <h4 class="pdoc-member-header" id="PreventionJobTriggerArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L184">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L184">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -575,7 +575,7 @@ The set of arguments for constructing a PreventionJobTrigger resource.
 A description of the job trigger.
 
 <h4 class="pdoc-member-header" id="PreventionJobTriggerArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L188">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L188">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -583,7 +583,7 @@ A description of the job trigger.
 User set display name of the job trigger.
 
 <h4 class="pdoc-member-header" id="PreventionJobTriggerArgs-inspectJob">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L193">property <b>inspectJob</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L193">property <b>inspectJob</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inspectJob?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionJobTriggerInspectJob'>PreventionJobTriggerInspectJob</a>&gt;;</code></pre>
@@ -592,7 +592,7 @@ Controls what and how to inspect for findings.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PreventionJobTriggerArgs-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L198">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L198">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -601,7 +601,7 @@ The parent of the trigger, either in the format `projects/{{project}}`
 or `projects/{{project}}/locations/{{location}}`
 
 <h4 class="pdoc-member-header" id="PreventionJobTriggerArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L204">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L204">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -611,7 +611,7 @@ Default value is `HEALTHY`.
 Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
 
 <h4 class="pdoc-member-header" id="PreventionJobTriggerArgs-triggers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L209">property <b>triggers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L209">property <b>triggers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionJobTriggerTrigger'>PreventionJobTriggerTrigger</a>&gt;[]&gt;;</code></pre>
@@ -620,7 +620,7 @@ What event needs to occur for a new job to be started.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="PreventionJobTriggerState" data-link-title="PreventionJobTriggerState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L137">
         interface <strong>PreventionJobTriggerState</strong>
     </a>
 </h3>
@@ -630,7 +630,7 @@ Structure is documented below.
 Input properties used for looking up and filtering PreventionJobTrigger resources.
 
 <h4 class="pdoc-member-header" id="PreventionJobTriggerState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L141">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L141">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -638,7 +638,7 @@ Input properties used for looking up and filtering PreventionJobTrigger resource
 A description of the job trigger.
 
 <h4 class="pdoc-member-header" id="PreventionJobTriggerState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L145">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L145">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -646,7 +646,7 @@ A description of the job trigger.
 User set display name of the job trigger.
 
 <h4 class="pdoc-member-header" id="PreventionJobTriggerState-inspectJob">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L150">property <b>inspectJob</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L150">property <b>inspectJob</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inspectJob?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionJobTriggerInspectJob'>PreventionJobTriggerInspectJob</a>&gt;;</code></pre>
@@ -655,7 +655,7 @@ Controls what and how to inspect for findings.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PreventionJobTriggerState-lastRunTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L154">property <b>lastRunTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L154">property <b>lastRunTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastRunTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -663,7 +663,7 @@ Structure is documented below.
 The timestamp of the last time this trigger executed.
 
 <h4 class="pdoc-member-header" id="PreventionJobTriggerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L158">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L158">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -671,7 +671,7 @@ The timestamp of the last time this trigger executed.
 The name of the Datastore kind.
 
 <h4 class="pdoc-member-header" id="PreventionJobTriggerState-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L163">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L163">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -680,7 +680,7 @@ The parent of the trigger, either in the format `projects/{{project}}`
 or `projects/{{project}}/locations/{{location}}`
 
 <h4 class="pdoc-member-header" id="PreventionJobTriggerState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L169">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L169">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -690,7 +690,7 @@ Default value is `HEALTHY`.
 Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
 
 <h4 class="pdoc-member-header" id="PreventionJobTriggerState-triggers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionJobTrigger.ts#L174">property <b>triggers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionJobTrigger.ts#L174">property <b>triggers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionJobTriggerTrigger'>PreventionJobTriggerTrigger</a>&gt;[]&gt;;</code></pre>
@@ -699,7 +699,7 @@ What event needs to occur for a new job to be started.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="PreventionStoredInfoTypeArgs" data-link-title="PreventionStoredInfoTypeArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L171">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L171">
         interface <strong>PreventionStoredInfoTypeArgs</strong>
     </a>
 </h3>
@@ -709,7 +709,7 @@ Structure is documented below.
 The set of arguments for constructing a PreventionStoredInfoType resource.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoTypeArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L175">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L175">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -717,7 +717,7 @@ The set of arguments for constructing a PreventionStoredInfoType resource.
 A description of the info type.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoTypeArgs-dictionary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L180">property <b>dictionary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L180">property <b>dictionary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dictionary?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionStoredInfoTypeDictionary'>PreventionStoredInfoTypeDictionary</a>&gt;;</code></pre>
@@ -726,7 +726,7 @@ Dictionary which defines the rule.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoTypeArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L184">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L184">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -734,7 +734,7 @@ Structure is documented below.
 User set display name of the info type.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoTypeArgs-largeCustomDictionary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L189">property <b>largeCustomDictionary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L189">property <b>largeCustomDictionary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>largeCustomDictionary?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionStoredInfoTypeLargeCustomDictionary'>PreventionStoredInfoTypeLargeCustomDictionary</a>&gt;;</code></pre>
@@ -743,7 +743,7 @@ Dictionary which defines the rule.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoTypeArgs-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L197">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L197">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -755,7 +755,7 @@ The parent of the info type in any of the following formats:
 * `organizations/{{organization_id}}/locations/{{location}}`
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoTypeArgs-regex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L202">property <b>regex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L202">property <b>regex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionStoredInfoTypeRegex'>PreventionStoredInfoTypeRegex</a>&gt;;</code></pre>
@@ -764,7 +764,7 @@ Regular expression which defines the rule.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="PreventionStoredInfoTypeState" data-link-title="PreventionStoredInfoTypeState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L130">
         interface <strong>PreventionStoredInfoTypeState</strong>
     </a>
 </h3>
@@ -774,7 +774,7 @@ Structure is documented below.
 Input properties used for looking up and filtering PreventionStoredInfoType resources.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoTypeState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L134">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L134">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -782,7 +782,7 @@ Input properties used for looking up and filtering PreventionStoredInfoType reso
 A description of the info type.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoTypeState-dictionary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L139">property <b>dictionary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L139">property <b>dictionary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dictionary?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionStoredInfoTypeDictionary'>PreventionStoredInfoTypeDictionary</a>&gt;;</code></pre>
@@ -791,7 +791,7 @@ Dictionary which defines the rule.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoTypeState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L143">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L143">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -799,7 +799,7 @@ Structure is documented below.
 User set display name of the info type.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoTypeState-largeCustomDictionary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L148">property <b>largeCustomDictionary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L148">property <b>largeCustomDictionary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>largeCustomDictionary?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionStoredInfoTypeLargeCustomDictionary'>PreventionStoredInfoTypeLargeCustomDictionary</a>&gt;;</code></pre>
@@ -808,7 +808,7 @@ Dictionary which defines the rule.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoTypeState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L152">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L152">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -816,7 +816,7 @@ Structure is documented below.
 Name describing the field.
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoTypeState-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L160">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L160">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -828,7 +828,7 @@ The parent of the info type in any of the following formats:
 * `organizations/{{organization_id}}/locations/{{location}}`
 
 <h4 class="pdoc-member-header" id="PreventionStoredInfoTypeState-regex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L165">property <b>regex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/dataloss/preventionStoredInfoType.ts#L165">property <b>regex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PreventionStoredInfoTypeRegex'>PreventionStoredInfoTypeRegex</a>&gt;;</code></pre>

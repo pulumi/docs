@@ -768,7 +768,7 @@ addresses.
 <a href="#secondary_ip_ranges_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsubnetworksecondaryiprange">List[Get<wbr>Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range]</a></span>
+        <span class="property-type"><a href="#getsubnetworksecondaryiprange">Sequence[Get<wbr>Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range]</a></span>
     </dt>
     <dd>{{% md %}}An array of configurations for secondary IP ranges for
 VM instances contained in this subnetwork. Structure is documented below.

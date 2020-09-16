@@ -29,7 +29,7 @@ To get more information about RouterNat, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.RouterNat">RouterNat</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">drain_nat_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">icmp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RouterNatLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">min_ports_per_vm</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ip_allocate_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_subnetwork_ip_ranges_to_nat</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetworks</span><span class="p">:</span> <span class="nx">Optional[List[RouterNatSubnetworkArgs]]</span> = None<span class="p">, </span><span class="nx">tcp_established_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tcp_transitory_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">udp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.RouterNat">RouterNat</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">drain_nat_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">icmp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RouterNatLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">min_ports_per_vm</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ip_allocate_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_subnetwork_ip_ranges_to_nat</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetworks</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouterNatSubnetworkArgs]]</span> = None<span class="p">, </span><span class="nx">tcp_established_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tcp_transitory_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">udp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -832,7 +832,7 @@ Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMAR
 <a href="#drain_nat_ips_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>nat_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT.
@@ -844,7 +844,7 @@ valid static external IPs that have been assigned to the NAT.
 <a href="#icmp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
 {{% /md %}}</dd>
@@ -867,7 +867,7 @@ Structure is documented below.
 <a href="#min_ports_per_vm_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ports_<wbr>per_<wbr>vm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of ports allocated to a VM from this NAT.
 {{% /md %}}</dd>
@@ -889,7 +889,7 @@ Structure is documented below.
 <a href="#nat_ips_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
 is set to MANUAL_ONLY.
@@ -924,7 +924,7 @@ If it is not provided, the provider project is used.
 <a href="#subnetworks_python" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatsubnetwork">List[Router<wbr>Nat<wbr>Subnetwork<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routernatsubnetwork">Sequence[Router<wbr>Nat<wbr>Subnetwork<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
 `source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`
@@ -937,7 +937,7 @@ Structure is documented below.
 <a href="#tcp_established_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>established_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
 Defaults to 1200s if not set.
@@ -949,7 +949,7 @@ Defaults to 1200s if not set.
 <a href="#tcp_transitory_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>transitory_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
 Defaults to 30s if not set.
@@ -961,7 +961,7 @@ Defaults to 30s if not set.
 <a href="#udp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">udp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
 {{% /md %}}</dd>
@@ -1065,7 +1065,7 @@ Get an existing RouterNat resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">drain_nat_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">icmp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RouterNatLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">min_ports_per_vm</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ip_allocate_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_subnetwork_ip_ranges_to_nat</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetworks</span><span class="p">:</span> <span class="nx">Optional[List[RouterNatSubnetworkArgs]]</span> = None<span class="p">, </span><span class="nx">tcp_established_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tcp_transitory_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">udp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> RouterNat</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">drain_nat_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">icmp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RouterNatLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">min_ports_per_vm</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ip_allocate_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_subnetwork_ip_ranges_to_nat</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetworks</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouterNatSubnetworkArgs]]</span> = None<span class="p">, </span><span class="nx">tcp_established_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tcp_transitory_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">udp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> RouterNat</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1764,7 +1764,7 @@ Defaults to 30s if not set.
 <a href="#state_drain_nat_ips_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>nat_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT.
@@ -1776,7 +1776,7 @@ valid static external IPs that have been assigned to the NAT.
 <a href="#state_icmp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
 {{% /md %}}</dd>
@@ -1799,7 +1799,7 @@ Structure is documented below.
 <a href="#state_min_ports_per_vm_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ports_<wbr>per_<wbr>vm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of ports allocated to a VM from this NAT.
 {{% /md %}}</dd>
@@ -1835,7 +1835,7 @@ Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
 <a href="#state_nat_ips_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
 is set to MANUAL_ONLY.
@@ -1902,7 +1902,7 @@ Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMAR
 <a href="#state_subnetworks_python" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatsubnetwork">List[Router<wbr>Nat<wbr>Subnetwork<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routernatsubnetwork">Sequence[Router<wbr>Nat<wbr>Subnetwork<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
 `source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`
@@ -1915,7 +1915,7 @@ Structure is documented below.
 <a href="#state_tcp_established_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>established_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
 Defaults to 1200s if not set.
@@ -1927,7 +1927,7 @@ Defaults to 1200s if not set.
 <a href="#state_tcp_transitory_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>transitory_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
 Defaults to 30s if not set.
@@ -1939,7 +1939,7 @@ Defaults to 30s if not set.
 <a href="#state_udp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">udp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
 {{% /md %}}</dd>
@@ -2270,7 +2270,7 @@ sourceIpRangesToNat
 <a href="#source_ip_ranges_to_nats_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>ranges_<wbr>to_<wbr>nats</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of options for which source IPs in the subnetwork
 should have NAT enabled. Supported values include:
@@ -2284,7 +2284,7 @@ should have NAT enabled. Supported values include:
 <a href="#secondary_ip_range_names_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>ip_<wbr>range_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of the secondary ranges of the subnetwork that are allowed
 to use NAT. This can be populated only if

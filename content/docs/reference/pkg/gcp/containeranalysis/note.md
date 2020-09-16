@@ -31,7 +31,7 @@ To get more information about Note, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/containeranalysis/#pulumi_gcp.containeranalysis.Note">Note</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attestation_authority</span><span class="p">:</span> <span class="nx">Optional[NoteAttestationAuthorityArgs]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">related_note_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">related_urls</span><span class="p">:</span> <span class="nx">Optional[List[NoteRelatedUrlArgs]]</span> = None<span class="p">, </span><span class="nx">short_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/containeranalysis/#pulumi_gcp.containeranalysis.Note">Note</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attestation_authority</span><span class="p">:</span> <span class="nx">Optional[NoteAttestationAuthorityArgs]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">related_note_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">related_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[NoteRelatedUrlArgs]]</span> = None<span class="p">, </span><span class="nx">short_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -592,7 +592,7 @@ If it is not provided, the provider project is used.
 <a href="#related_note_names_python" style="color: inherit; text-decoration: inherit;">related_<wbr>note_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
 {{% /md %}}</dd>
@@ -603,7 +603,7 @@ If it is not provided, the provider project is used.
 <a href="#related_urls_python" style="color: inherit; text-decoration: inherit;">related_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noterelatedurl">List[Note<wbr>Related<wbr>Url<wbr>Args]</a></span>
+        <span class="property-type"><a href="#noterelatedurl">Sequence[Note<wbr>Related<wbr>Url<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}URLs associated with this note and related metadata.
 Structure is documented below.
@@ -851,7 +851,7 @@ Get an existing Note resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attestation_authority</span><span class="p">:</span> <span class="nx">Optional[NoteAttestationAuthorityArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">related_note_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">related_urls</span><span class="p">:</span> <span class="nx">Optional[List[NoteRelatedUrlArgs]]</span> = None<span class="p">, </span><span class="nx">short_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Note</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attestation_authority</span><span class="p">:</span> <span class="nx">Optional[NoteAttestationAuthorityArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">related_note_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">related_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[NoteRelatedUrlArgs]]</span> = None<span class="p">, </span><span class="nx">short_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Note</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1475,7 +1475,7 @@ If it is not provided, the provider project is used.
 <a href="#state_related_note_names_python" style="color: inherit; text-decoration: inherit;">related_<wbr>note_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
 {{% /md %}}</dd>
@@ -1486,7 +1486,7 @@ If it is not provided, the provider project is used.
 <a href="#state_related_urls_python" style="color: inherit; text-decoration: inherit;">related_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noterelatedurl">List[Note<wbr>Related<wbr>Url<wbr>Args]</a></span>
+        <span class="property-type"><a href="#noterelatedurl">Sequence[Note<wbr>Related<wbr>Url<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}URLs associated with this note and related metadata.
 Structure is documented below.

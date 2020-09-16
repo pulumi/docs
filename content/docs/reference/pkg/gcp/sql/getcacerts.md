@@ -379,7 +379,7 @@ The following output properties are available:
 <a href="#certs_python" style="color: inherit; text-decoration: inherit;">certs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcacertscert">List[Get<wbr>Ca<wbr>Certs<wbr>Cert]</a></span>
+        <span class="property-type"><a href="#getcacertscert">Sequence[Get<wbr>Ca<wbr>Certs<wbr>Cert]</a></span>
     </dt>
     <dd>{{% md %}}A list of server CA certificates for the instance. Each contains:
 {{% /md %}}</dd>

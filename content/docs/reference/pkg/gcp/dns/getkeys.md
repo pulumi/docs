@@ -378,7 +378,7 @@ The following output properties are available:
 <a href="#key_signing_keys_python" style="color: inherit; text-decoration: inherit;">key_<wbr>signing_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkeyskeysigningkey">List[Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key]</a></span>
+        <span class="property-type"><a href="#getkeyskeysigningkey">Sequence[Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}A list of Key-signing key (KSK) records. Structure is documented below. Additionally, the DS record is provided:
 {{% /md %}}</dd>
@@ -409,7 +409,7 @@ The following output properties are available:
 <a href="#zone_signing_keys_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>signing_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkeyszonesigningkey">List[Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key]</a></span>
+        <span class="property-type"><a href="#getkeyszonesigningkey">Sequence[Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}A list of Zone-signing key (ZSK) records. Structure is documented below.
 {{% /md %}}</dd>
@@ -835,7 +835,7 @@ The following output properties are available:
 <a href="#digests_python" style="color: inherit; text-decoration: inherit;">digests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkeyskeysigningkeydigest">List[Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key<wbr>Digest<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkeyskeysigningkeydigest">Sequence[Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key<wbr>Digest<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
 {{% /md %}}</dd>
@@ -879,7 +879,7 @@ The following output properties are available:
 <a href="#key_length_python" style="color: inherit; text-decoration: inherit;">key_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Length of the key in bits. Specified at creation time then immutable.
 {{% /md %}}</dd>
@@ -890,7 +890,7 @@ The following output properties are available:
 <a href="#key_tag_python" style="color: inherit; text-decoration: inherit;">key_<wbr>tag</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique identifier). In particular, the key tag is used in a parent zone's DS record to point at the DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the algorithm to calculate it is specified in RFC4034 Appendix B.
 {{% /md %}}</dd>
@@ -1422,7 +1422,7 @@ The following output properties are available:
 <a href="#digests_python" style="color: inherit; text-decoration: inherit;">digests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkeyszonesigningkeydigest">List[Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key<wbr>Digest<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkeyszonesigningkeydigest">Sequence[Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key<wbr>Digest<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
 {{% /md %}}</dd>
@@ -1455,7 +1455,7 @@ The following output properties are available:
 <a href="#key_length_python" style="color: inherit; text-decoration: inherit;">key_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Length of the key in bits. Specified at creation time then immutable.
 {{% /md %}}</dd>
@@ -1466,7 +1466,7 @@ The following output properties are available:
 <a href="#key_tag_python" style="color: inherit; text-decoration: inherit;">key_<wbr>tag</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique identifier). In particular, the key tag is used in a parent zone's DS record to point at the DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the algorithm to calculate it is specified in RFC4034 Appendix B.
 {{% /md %}}</dd>

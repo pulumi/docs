@@ -182,7 +182,7 @@ The following output properties are available:
 <a href="#http_ssl_tcp_internals_python" style="color: inherit; text-decoration: inherit;">http_<wbr>ssl_<wbr>tcp_<wbr>internals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The IP ranges used for health checks when **HTTP(S), SSL proxy, TCP proxy, and Internal load balancing** is used
 {{% /md %}}</dd>
@@ -204,7 +204,7 @@ The following output properties are available:
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The IP ranges used for health checks when **Network load balancing** is used
 {{% /md %}}</dd>

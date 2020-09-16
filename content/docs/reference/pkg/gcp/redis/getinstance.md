@@ -977,7 +977,7 @@ to connect to the service.
 <a href="#memory_size_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1007,7 +1007,7 @@ to connect to the service.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port number of the exposed Redis endpoint.
 {{% /md %}}</dd>

@@ -930,7 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Delegate your managed_zone to these virtual name servers; defined by the server
 {{% /md %}}</dd>
@@ -955,7 +955,7 @@ Get an existing ManagedZone resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dnssec_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZoneDnssecConfigArgs]</span> = None<span class="p">, </span><span class="nx">forwarding_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZoneForwardingConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_servers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">peering_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZonePeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_visibility_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZonePrivateVisibilityConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reverse_lookup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">service_directory_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZoneServiceDirectoryConfigArgs]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ManagedZone</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dnssec_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZoneDnssecConfigArgs]</span> = None<span class="p">, </span><span class="nx">forwarding_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZoneForwardingConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">peering_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZonePeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_visibility_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZonePrivateVisibilityConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reverse_lookup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">service_directory_config</span><span class="p">:</span> <span class="nx">Optional[ManagedZoneServiceDirectoryConfigArgs]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ManagedZone</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1641,7 +1641,7 @@ Must be unique within the project.
 <a href="#state_name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Delegate your managed_zone to these virtual name servers; defined by the server
 {{% /md %}}</dd>
@@ -1935,7 +1935,7 @@ Possible values are `off`, `on`, and `transfer`.
 <a href="#default_key_specs_python" style="color: inherit; text-decoration: inherit;">default_<wbr>key_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">List[Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">Sequence[Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies parameters that will be used for generating initial DnsKeys
 for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
@@ -2197,7 +2197,7 @@ Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`
 <a href="#key_length_python" style="color: inherit; text-decoration: inherit;">key_<wbr>length</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Length of the keys in bits
 {{% /md %}}</dd>
@@ -2324,7 +2324,7 @@ Structure is documented below.
 <a href="#target_name_servers_python" style="color: inherit; text-decoration: inherit;">target_<wbr>name_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">List[Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">Sequence[Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of target name servers to forward to. Cloud DNS will
 select the best available name server if more than
@@ -2755,7 +2755,7 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">List[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">Sequence[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of VPC networks that can see this zone. Structure is documented below.
 {{% /md %}}</dd>

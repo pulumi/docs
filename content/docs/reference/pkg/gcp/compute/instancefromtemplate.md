@@ -30,7 +30,7 @@ This resource is specifically to create a compute instance from a given
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.InstanceFromTemplate">InstanceFromTemplate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_stopping_for_update</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">attached_disks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceFromTemplateAttachedDiskArgs]]</span> = None<span class="p">, </span><span class="nx">boot_disk</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateBootDiskArgs]</span> = None<span class="p">, </span><span class="nx">can_ip_forward</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">confidential_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateConfidentialInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_display</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">guest_accelerators</span><span class="p">:</span> <span class="nx">Optional[List[InstanceFromTemplateGuestAcceleratorArgs]]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">metadata_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[InstanceFromTemplateNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateSchedulingArgs]</span> = None<span class="p">, </span><span class="nx">scratch_disks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceFromTemplateScratchDiskArgs]]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateServiceAccountArgs]</span> = None<span class="p">, </span><span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateShieldedInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">source_instance_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.InstanceFromTemplate">InstanceFromTemplate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_stopping_for_update</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">attached_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromTemplateAttachedDiskArgs]]</span> = None<span class="p">, </span><span class="nx">boot_disk</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateBootDiskArgs]</span> = None<span class="p">, </span><span class="nx">can_ip_forward</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">confidential_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateConfidentialInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_display</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">guest_accelerators</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromTemplateGuestAcceleratorArgs]]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">metadata_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromTemplateNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateSchedulingArgs]</span> = None<span class="p">, </span><span class="nx">scratch_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromTemplateScratchDiskArgs]]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateServiceAccountArgs]</span> = None<span class="p">, </span><span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateShieldedInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">source_instance_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1171,7 +1171,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#attached_disks_python" style="color: inherit; text-decoration: inherit;">attached_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateattacheddisk">List[Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplateattacheddisk">Sequence[Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of disks attached to the instance
 {{% /md %}}</dd>
@@ -1260,7 +1260,7 @@ to create.
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateguestaccelerator">List[Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplateguestaccelerator">Sequence[Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 {{% /md %}}</dd>
@@ -1351,7 +1351,7 @@ Changing this forces a new resource to be created.
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterface">List[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterface">Sequence[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance.
 {{% /md %}}</dd>
@@ -1397,7 +1397,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#scratch_disks_python" style="color: inherit; text-decoration: inherit;">scratch_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatescratchdisk">List[Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatescratchdisk">Sequence[Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The scratch disks attached to the instance.
 {{% /md %}}</dd>
@@ -1430,7 +1430,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of tags attached to the instance.
 {{% /md %}}</dd>
@@ -1854,7 +1854,7 @@ Get an existing InstanceFromTemplate resource's state with the given name, ID, a
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_stopping_for_update</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">attached_disks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceFromTemplateAttachedDiskArgs]]</span> = None<span class="p">, </span><span class="nx">boot_disk</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateBootDiskArgs]</span> = None<span class="p">, </span><span class="nx">can_ip_forward</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">confidential_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateConfidentialInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">cpu_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">current_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_display</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">guest_accelerators</span><span class="p">:</span> <span class="nx">Optional[List[InstanceFromTemplateGuestAcceleratorArgs]]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">metadata_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[InstanceFromTemplateNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateSchedulingArgs]</span> = None<span class="p">, </span><span class="nx">scratch_disks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceFromTemplateScratchDiskArgs]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateServiceAccountArgs]</span> = None<span class="p">, </span><span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateShieldedInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">source_instance_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> InstanceFromTemplate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_stopping_for_update</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">attached_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromTemplateAttachedDiskArgs]]</span> = None<span class="p">, </span><span class="nx">boot_disk</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateBootDiskArgs]</span> = None<span class="p">, </span><span class="nx">can_ip_forward</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">confidential_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateConfidentialInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">cpu_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">current_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_display</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">guest_accelerators</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromTemplateGuestAcceleratorArgs]]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">metadata_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromTemplateNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateSchedulingArgs]</span> = None<span class="p">, </span><span class="nx">scratch_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromTemplateScratchDiskArgs]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateServiceAccountArgs]</span> = None<span class="p">, </span><span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateShieldedInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">source_instance_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> InstanceFromTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3156,7 +3156,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#state_attached_disks_python" style="color: inherit; text-decoration: inherit;">attached_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateattacheddisk">List[Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplateattacheddisk">Sequence[Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of disks attached to the instance
 {{% /md %}}</dd>
@@ -3267,7 +3267,7 @@ to create.
 <a href="#state_guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateguestaccelerator">List[Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplateguestaccelerator">Sequence[Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 {{% /md %}}</dd>
@@ -3391,7 +3391,7 @@ Changing this forces a new resource to be created.
 <a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterface">List[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterface">Sequence[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance.
 {{% /md %}}</dd>
@@ -3437,7 +3437,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_scratch_disks_python" style="color: inherit; text-decoration: inherit;">scratch_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatescratchdisk">List[Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatescratchdisk">Sequence[Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The scratch disks attached to the instance.
 {{% /md %}}</dd>
@@ -3493,7 +3493,7 @@ template to create the instance based on.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of tags attached to the instance.
 {{% /md %}}</dd>
@@ -4373,7 +4373,7 @@ set, the provider zone is used.
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4585,7 +4585,7 @@ set, the provider zone is used.
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4867,7 +4867,7 @@ Changing this forces a new resource to be created.
 <a href="#access_configs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterfaceaccessconfig">List[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterfaceaccessconfig">Sequence[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4877,7 +4877,7 @@ Changing this forces a new resource to be created.
 <a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterfacealiasiprange">List[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterfacealiasiprange">Sequence[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5437,7 +5437,7 @@ Changing this forces a new resource to be created.
 <a href="#min_node_cpus_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>cpus</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5447,7 +5447,7 @@ Changing this forces a new resource to be created.
 <a href="#node_affinities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateschedulingnodeaffinity">List[Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplateschedulingnodeaffinity">Sequence[Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5633,7 +5633,7 @@ Changing this forces a new resource to be created.
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5835,7 +5835,7 @@ Changing this forces a new resource to be created.
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -668,7 +668,7 @@ The following output properties are available:
 <a href="#valid_master_versions_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>master_<wbr>versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of versions available in the given zone for use with master instances.
 {{% /md %}}</dd>
@@ -679,7 +679,7 @@ The following output properties are available:
 <a href="#valid_node_versions_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>node_<wbr>versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of versions available in the given zone for use with node instances.
 {{% /md %}}</dd>

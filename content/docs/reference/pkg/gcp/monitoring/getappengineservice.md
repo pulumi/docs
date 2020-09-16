@@ -490,7 +490,7 @@ The following output properties are available:
 <a href="#telemetries_python" style="color: inherit; text-decoration: inherit;">telemetries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappengineservicetelemetry">List[Get<wbr>App<wbr>Engine<wbr>Service<wbr>Telemetry]</a></span>
+        <span class="property-type"><a href="#getappengineservicetelemetry">Sequence[Get<wbr>App<wbr>Engine<wbr>Service<wbr>Telemetry]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
