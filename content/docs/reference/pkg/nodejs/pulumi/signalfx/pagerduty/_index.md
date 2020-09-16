@@ -3,7 +3,7 @@ title: "Module pagerduty"
 title_tag: "Module pagerduty | Package @pulumi/signalfx | Node.js SDK"
 linktitle: "pagerduty"
 meta_desc: "Explore members of the pagerduty module in the @pulumi/signalfx package."
-git_sha: "259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab"
+git_sha: "5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Integration" data-link-title="Integration">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/pagerduty/integration.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/pagerduty/integration.ts#L24">
         Resource <strong>Integration</strong>
     </a>
 </h3>
@@ -43,20 +43,18 @@ SignalFx PagerDuty integrations
 
 #### Example Usage
 
-
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as signalfx from "@pulumi/signalfx";
 
-const pagerdutyMyteam = new signalfx.pagerduty.Integration("pagerdutyMyteam", {
+const pagerdutyMyteam = new signalfx.pagerduty.Integration("pagerduty_myteam", {
     apiKey: "1234567890",
     enabled: true,
 });
 ```
 
 <h4 class="pdoc-member-header" id="Integration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/pagerduty/integration.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/pagerduty/integration.ts#L63"> <b>constructor</b></a>
 </h4>
 
 
@@ -70,7 +68,7 @@ Create a Integration resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Integration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/pagerduty/integration.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/pagerduty/integration.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -81,14 +79,14 @@ Get an existing Integration resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Integration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/pagerduty/integration.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/pagerduty/integration.ts#L24">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Integration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/pagerduty/integration.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/pagerduty/integration.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -99,7 +97,7 @@ Returns true if the given object is an instance of Integration.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Integration-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/pagerduty/integration.ts#L57">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/pagerduty/integration.ts#L55">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -107,7 +105,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 PagerDuty API key.
 
 <h4 class="pdoc-member-header" id="Integration-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/pagerduty/integration.ts#L61">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/pagerduty/integration.ts#L59">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -115,7 +113,7 @@ PagerDuty API key.
 Whether the integration is enabled.
 
 <h4 class="pdoc-member-header" id="Integration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/pagerduty/integration.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/pagerduty/integration.ts#L24">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -124,7 +122,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Integration-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/pagerduty/integration.ts#L65">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/pagerduty/integration.ts#L63">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -132,7 +130,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the integration.
 
 <h4 class="pdoc-member-header" id="Integration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/pagerduty/integration.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/pagerduty/integration.ts#L24">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -144,7 +142,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="IntegrationArgs" data-link-title="IntegrationArgs">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/pagerduty/integration.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/pagerduty/integration.ts#L121">
         interface <strong>IntegrationArgs</strong>
     </a>
 </h3>
@@ -154,7 +152,7 @@ deployments.
 The set of arguments for constructing a Integration resource.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/pagerduty/integration.ts#L127">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/pagerduty/integration.ts#L125">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -162,7 +160,7 @@ The set of arguments for constructing a Integration resource.
 PagerDuty API key.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/pagerduty/integration.ts#L131">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/pagerduty/integration.ts#L129">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -170,7 +168,7 @@ PagerDuty API key.
 Whether the integration is enabled.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/pagerduty/integration.ts#L135">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/pagerduty/integration.ts#L133">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -178,7 +176,7 @@ Whether the integration is enabled.
 Name of the integration.
 
 <h3 class="pdoc-module-header" id="IntegrationState" data-link-title="IntegrationState">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/pagerduty/integration.ts#L105">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/pagerduty/integration.ts#L103">
         interface <strong>IntegrationState</strong>
     </a>
 </h3>
@@ -188,7 +186,7 @@ Name of the integration.
 Input properties used for looking up and filtering Integration resources.
 
 <h4 class="pdoc-member-header" id="IntegrationState-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/pagerduty/integration.ts#L109">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/pagerduty/integration.ts#L107">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -196,7 +194,7 @@ Input properties used for looking up and filtering Integration resources.
 PagerDuty API key.
 
 <h4 class="pdoc-member-header" id="IntegrationState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/pagerduty/integration.ts#L113">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/pagerduty/integration.ts#L111">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -204,7 +202,7 @@ PagerDuty API key.
 Whether the integration is enabled.
 
 <h4 class="pdoc-member-header" id="IntegrationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/pagerduty/integration.ts#L117">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/pagerduty/integration.ts#L115">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

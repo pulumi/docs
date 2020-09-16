@@ -72,7 +72,53 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := signalfx.NewTimeChart(ctx, "mychart0", &signalfx.TimeChartArgs{
+			AxisLeft: &signalfx.TimeChartAxisLeftArgs{
+				Label:        pulumi.String("CPU Total Idle"),
+				LowWatermark: pulumi.Float64(1000),
+			},
+			LegendOptionsFields: signalfx.TimeChartLegendOptionsFieldArray{
+				&signalfx.TimeChartLegendOptionsFieldArgs{
+					Enabled:  pulumi.Bool(false),
+					Property: pulumi.String("collector"),
+				},
+				&signalfx.TimeChartLegendOptionsFieldArgs{
+					Enabled:  pulumi.Bool(false),
+					Property: pulumi.String("hostname"),
+				},
+			},
+			PlotType:        pulumi.String("LineChart"),
+			ProgramText:     pulumi.String(fmt.Sprintf("%v%v", "data(\"cpu.total.idle\").publish(label=\"CPU Idle\")\n", "\n")),
+			ShowDataMarkers: pulumi.Bool(true),
+			TimeRange:       pulumi.Int(3600),
+			VizOptions: signalfx.TimeChartVizOptionArray{
+				&signalfx.TimeChartVizOptionArgs{
+					Axis:  pulumi.String("left"),
+					Color: pulumi.String("orange"),
+					Label: pulumi.String("CPU Idle"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -81,19 +127,19 @@ import pulumi
 import pulumi_signalfx as signalfx
 
 mychart0 = signalfx.TimeChart("mychart0",
-    axis_left={
-        "label": "CPU Total Idle",
-        "lowWatermark": 1000,
-    },
+    axis_left=signalfx.TimeChartAxisLeftArgs(
+        label="CPU Total Idle",
+        low_watermark=1000,
+    ),
     legend_options_fields=[
-        {
-            "enabled": False,
-            "property": "collector",
-        },
-        {
-            "enabled": False,
-            "property": "hostname",
-        },
+        signalfx.TimeChartLegendOptionsFieldArgs(
+            enabled=False,
+            property="collector",
+        ),
+        signalfx.TimeChartLegendOptionsFieldArgs(
+            enabled=False,
+            property="hostname",
+        ),
     ],
     plot_type="LineChart",
     program_text="""data("cpu.total.idle").publish(label="CPU Idle")
@@ -101,11 +147,11 @@ mychart0 = signalfx.TimeChart("mychart0",
 """,
     show_data_markers=True,
     time_range=3600,
-    viz_options=[{
-        "axis": "left",
-        "color": "orange",
-        "label": "CPU Idle",
-    }])
+    viz_options=[signalfx.TimeChartVizOptionArgs(
+        axis="left",
+        color="orange",
+        label="CPU Idle",
+    )])
 ```
 
 {{% /example %}}
@@ -157,11 +203,11 @@ const mychart0 = new signalfx.TimeChart("mychart0", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/#pulumi_signalfx.TimeChart">TimeChart</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>axes_include_zero=None<span class="p">, </span>axes_precision=None<span class="p">, </span>axis_left=None<span class="p">, </span>axis_right=None<span class="p">, </span>color_by=None<span class="p">, </span>description=None<span class="p">, </span>disable_sampling=None<span class="p">, </span>end_time=None<span class="p">, </span>event_options=None<span class="p">, </span>histogram_options=None<span class="p">, </span>legend_fields_to_hides=None<span class="p">, </span>legend_options_fields=None<span class="p">, </span>max_delay=None<span class="p">, </span>minimum_resolution=None<span class="p">, </span>name=None<span class="p">, </span>on_chart_legend_dimension=None<span class="p">, </span>plot_type=None<span class="p">, </span>program_text=None<span class="p">, </span>show_data_markers=None<span class="p">, </span>show_event_lines=None<span class="p">, </span>stacked=None<span class="p">, </span>start_time=None<span class="p">, </span>tags=None<span class="p">, </span>time_range=None<span class="p">, </span>timezone=None<span class="p">, </span>unit_prefix=None<span class="p">, </span>viz_options=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/#pulumi_signalfx.TimeChart">TimeChart</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">axes_include_zero</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">axes_precision</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">axis_left</span><span class="p">:</span> <span class="nx">Optional[TimeChartAxisLeftArgs]</span> = None<span class="p">, </span><span class="nx">axis_right</span><span class="p">:</span> <span class="nx">Optional[TimeChartAxisRightArgs]</span> = None<span class="p">, </span><span class="nx">color_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_sampling</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">event_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeChartEventOptionArgs]]</span> = None<span class="p">, </span><span class="nx">histogram_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeChartHistogramOptionArgs]]</span> = None<span class="p">, </span><span class="nx">legend_fields_to_hides</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">legend_options_fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeChartLegendOptionsFieldArgs]]</span> = None<span class="p">, </span><span class="nx">max_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">minimum_resolution</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">on_chart_legend_dimension</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plot_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">program_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">show_data_markers</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">show_event_lines</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">stacked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">time_range</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">viz_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeChartVizOptionArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChart">NewTimeChart</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChartArgs">TimeChartArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChart">TimeChart</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChart">NewTimeChart</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChartArgs">TimeChartArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChart">TimeChart</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -235,7 +281,7 @@ const mychart0 = new signalfx.TimeChart("mychart0", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -255,7 +301,7 @@ const mychart0 = new signalfx.TimeChart("mychart0", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChartArgs">TimeChartArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChartArgs">TimeChartArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -265,7 +311,7 @@ const mychart0 = new signalfx.TimeChart("mychart0", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1269,7 +1315,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#axes_precision_python" style="color: inherit; text-decoration: inherit;">axes_<wbr>precision</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the digits SignalFx displays for values plotted on the chart. Defaults to `3`.
 {{% /md %}}</dd>
@@ -1280,7 +1326,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#axis_left_python" style="color: inherit; text-decoration: inherit;">axis_<wbr>left</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisleft">Dict[Time<wbr>Chart<wbr>Axis<wbr>Left]</a></span>
+        <span class="property-type"><a href="#timechartaxisleft">Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
 {{% /md %}}</dd>
@@ -1291,7 +1337,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#axis_right_python" style="color: inherit; text-decoration: inherit;">axis_<wbr>right</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisright">Dict[Time<wbr>Chart<wbr>Axis<wbr>Right]</a></span>
+        <span class="property-type"><a href="#timechartaxisright">Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
 {{% /md %}}</dd>
@@ -1335,7 +1381,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
 {{% /md %}}</dd>
@@ -1346,7 +1392,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#event_options_python" style="color: inherit; text-decoration: inherit;">event_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timecharteventoption">List[Time<wbr>Chart<wbr>Event<wbr>Option]</a></span>
+        <span class="property-type"><a href="#timecharteventoption">Sequence[Time<wbr>Chart<wbr>Event<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Event customization options, associated with a publish statement. You will need to use this to change settings for any `events(…)` statements you use.
 {{% /md %}}</dd>
@@ -1357,7 +1403,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#histogram_options_python" style="color: inherit; text-decoration: inherit;">histogram_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timecharthistogramoption">List[Time<wbr>Chart<wbr>Histogram<wbr>Option]</a></span>
+        <span class="property-type"><a href="#timecharthistogramoption">Sequence[Time<wbr>Chart<wbr>Histogram<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Only used when `plot_type` is `"Histogram"`. Histogram specific options.
 {{% /md %}}</dd>
@@ -1368,7 +1414,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#legend_fields_to_hides_python" style="color: inherit; text-decoration: inherit;">legend_<wbr>fields_<wbr>to_<wbr>hides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of properties that should not be displayed in the chart legend (i.e. dimension names). All the properties are visible by default. Deprecated, please use `legend_options_fields`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd>
@@ -1379,7 +1425,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#legend_options_fields_python" style="color: inherit; text-decoration: inherit;">legend_<wbr>options_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartlegendoptionsfield">List[Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field]</a></span>
+        <span class="property-type"><a href="#timechartlegendoptionsfield">Sequence[Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legend_fields_to_hide`.
 {{% /md %}}</dd>
@@ -1390,7 +1436,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#max_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd>
@@ -1401,7 +1447,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#minimum_resolution_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>resolution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd>
@@ -1478,7 +1524,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
 {{% /md %}}</dd>
@@ -1489,7 +1535,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Tags associated with the chart
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd>
@@ -1500,7 +1546,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How many seconds ago from which to display data. For example, the last hour would be `3600`, etc. Conflicts with `start_time` and `end_time`.
 {{% /md %}}</dd>
@@ -1533,7 +1579,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#viz_options_python" style="color: inherit; text-decoration: inherit;">viz_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartvizoption">List[Time<wbr>Chart<wbr>Viz<wbr>Option]</a></span>
+        <span class="property-type"><a href="#timechartvizoption">Sequence[Time<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd>
@@ -1574,7 +1620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the chart
+    <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
 
 </dl>
@@ -1602,7 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the chart
+    <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
 
 </dl>
@@ -1630,7 +1676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the chart
+    <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
 
 </dl>
@@ -1658,7 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}URL of the chart
+    <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
 
 </dl>
@@ -1680,15 +1726,16 @@ Get an existing TimeChart resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>axes_include_zero=None<span class="p">, </span>axes_precision=None<span class="p">, </span>axis_left=None<span class="p">, </span>axis_right=None<span class="p">, </span>color_by=None<span class="p">, </span>description=None<span class="p">, </span>disable_sampling=None<span class="p">, </span>end_time=None<span class="p">, </span>event_options=None<span class="p">, </span>histogram_options=None<span class="p">, </span>legend_fields_to_hides=None<span class="p">, </span>legend_options_fields=None<span class="p">, </span>max_delay=None<span class="p">, </span>minimum_resolution=None<span class="p">, </span>name=None<span class="p">, </span>on_chart_legend_dimension=None<span class="p">, </span>plot_type=None<span class="p">, </span>program_text=None<span class="p">, </span>show_data_markers=None<span class="p">, </span>show_event_lines=None<span class="p">, </span>stacked=None<span class="p">, </span>start_time=None<span class="p">, </span>tags=None<span class="p">, </span>time_range=None<span class="p">, </span>timezone=None<span class="p">, </span>unit_prefix=None<span class="p">, </span>url=None<span class="p">, </span>viz_options=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">axes_include_zero</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">axes_precision</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">axis_left</span><span class="p">:</span> <span class="nx">Optional[TimeChartAxisLeftArgs]</span> = None<span class="p">, </span><span class="nx">axis_right</span><span class="p">:</span> <span class="nx">Optional[TimeChartAxisRightArgs]</span> = None<span class="p">, </span><span class="nx">color_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_sampling</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">event_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeChartEventOptionArgs]]</span> = None<span class="p">, </span><span class="nx">histogram_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeChartHistogramOptionArgs]]</span> = None<span class="p">, </span><span class="nx">legend_fields_to_hides</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">legend_options_fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeChartLegendOptionsFieldArgs]]</span> = None<span class="p">, </span><span class="nx">max_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">minimum_resolution</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">on_chart_legend_dimension</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plot_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">program_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">show_data_markers</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">show_event_lines</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">stacked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">time_range</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">viz_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeChartVizOptionArgs]]</span> = None<span class="p">) -&gt;</span> TimeChart</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTimeChart<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChartState">TimeChartState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChart">TimeChart</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTimeChart<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChartState">TimeChartState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChart">TimeChart</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.TimeChart.html">TimeChart</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx..TimeChartState.html">TimeChartState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.TimeChart.html">TimeChart</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx..TimeChartState.html">TimeChartState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2088,7 +2135,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the chart
+    <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2403,7 +2450,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the chart
+    <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2718,7 +2765,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the chart
+    <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2756,7 +2803,7 @@ The following state arguments are supported:
 <a href="#state_axes_precision_python" style="color: inherit; text-decoration: inherit;">axes_<wbr>precision</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the digits SignalFx displays for values plotted on the chart. Defaults to `3`.
 {{% /md %}}</dd>
@@ -2767,7 +2814,7 @@ The following state arguments are supported:
 <a href="#state_axis_left_python" style="color: inherit; text-decoration: inherit;">axis_<wbr>left</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisleft">Dict[Time<wbr>Chart<wbr>Axis<wbr>Left]</a></span>
+        <span class="property-type"><a href="#timechartaxisleft">Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
 {{% /md %}}</dd>
@@ -2778,7 +2825,7 @@ The following state arguments are supported:
 <a href="#state_axis_right_python" style="color: inherit; text-decoration: inherit;">axis_<wbr>right</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisright">Dict[Time<wbr>Chart<wbr>Axis<wbr>Right]</a></span>
+        <span class="property-type"><a href="#timechartaxisright">Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
 {{% /md %}}</dd>
@@ -2822,7 +2869,7 @@ The following state arguments are supported:
 <a href="#state_end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
 {{% /md %}}</dd>
@@ -2833,7 +2880,7 @@ The following state arguments are supported:
 <a href="#state_event_options_python" style="color: inherit; text-decoration: inherit;">event_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timecharteventoption">List[Time<wbr>Chart<wbr>Event<wbr>Option]</a></span>
+        <span class="property-type"><a href="#timecharteventoption">Sequence[Time<wbr>Chart<wbr>Event<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Event customization options, associated with a publish statement. You will need to use this to change settings for any `events(…)` statements you use.
 {{% /md %}}</dd>
@@ -2844,7 +2891,7 @@ The following state arguments are supported:
 <a href="#state_histogram_options_python" style="color: inherit; text-decoration: inherit;">histogram_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timecharthistogramoption">List[Time<wbr>Chart<wbr>Histogram<wbr>Option]</a></span>
+        <span class="property-type"><a href="#timecharthistogramoption">Sequence[Time<wbr>Chart<wbr>Histogram<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Only used when `plot_type` is `"Histogram"`. Histogram specific options.
 {{% /md %}}</dd>
@@ -2855,7 +2902,7 @@ The following state arguments are supported:
 <a href="#state_legend_fields_to_hides_python" style="color: inherit; text-decoration: inherit;">legend_<wbr>fields_<wbr>to_<wbr>hides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of properties that should not be displayed in the chart legend (i.e. dimension names). All the properties are visible by default. Deprecated, please use `legend_options_fields`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd>
@@ -2866,7 +2913,7 @@ The following state arguments are supported:
 <a href="#state_legend_options_fields_python" style="color: inherit; text-decoration: inherit;">legend_<wbr>options_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartlegendoptionsfield">List[Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field]</a></span>
+        <span class="property-type"><a href="#timechartlegendoptionsfield">Sequence[Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legend_fields_to_hide`.
 {{% /md %}}</dd>
@@ -2877,7 +2924,7 @@ The following state arguments are supported:
 <a href="#state_max_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd>
@@ -2888,7 +2935,7 @@ The following state arguments are supported:
 <a href="#state_minimum_resolution_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>resolution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd>
@@ -2976,7 +3023,7 @@ The following state arguments are supported:
 <a href="#state_start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
 {{% /md %}}</dd>
@@ -2987,7 +3034,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Tags associated with the chart
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd>
@@ -2998,7 +3045,7 @@ The following state arguments are supported:
 <a href="#state_time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How many seconds ago from which to display data. For example, the last hour would be `3600`, etc. Conflicts with `start_time` and `end_time`.
 {{% /md %}}</dd>
@@ -3033,7 +3080,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}URL of the chart
+    <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3042,7 +3089,7 @@ The following state arguments are supported:
 <a href="#state_viz_options_python" style="color: inherit; text-decoration: inherit;">viz_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartvizoption">List[Time<wbr>Chart<wbr>Viz<wbr>Option]</a></span>
+        <span class="property-type"><a href="#timechartvizoption">Sequence[Time<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd>
@@ -3068,7 +3115,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChartAxisLeftArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChartAxisLeftOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChartAxisLeftArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChartAxisLeftOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.TimeChartAxisLeftArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.TimeChartAxisLeft.html">output</a> API doc for this type.
@@ -3364,8 +3411,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="highwatermark_python">
-<a href="#highwatermark_python" style="color: inherit; text-decoration: inherit;">high<wbr>Watermark</a>
+        <span id="high_watermark_python">
+<a href="#high_watermark_python" style="color: inherit; text-decoration: inherit;">high_<wbr>watermark</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3375,8 +3422,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="highwatermarklabel_python">
-<a href="#highwatermarklabel_python" style="color: inherit; text-decoration: inherit;">high<wbr>Watermark<wbr>Label</a>
+        <span id="high_watermark_label_python">
+<a href="#high_watermark_label_python" style="color: inherit; text-decoration: inherit;">high_<wbr>watermark_<wbr>label</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3397,8 +3444,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lowwatermark_python">
-<a href="#lowwatermark_python" style="color: inherit; text-decoration: inherit;">low<wbr>Watermark</a>
+        <span id="low_watermark_python">
+<a href="#low_watermark_python" style="color: inherit; text-decoration: inherit;">low_<wbr>watermark</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3408,8 +3455,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lowwatermarklabel_python">
-<a href="#lowwatermarklabel_python" style="color: inherit; text-decoration: inherit;">low<wbr>Watermark<wbr>Label</a>
+        <span id="low_watermark_label_python">
+<a href="#low_watermark_label_python" style="color: inherit; text-decoration: inherit;">low_<wbr>watermark_<wbr>label</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3419,8 +3466,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxvalue_python">
-<a href="#maxvalue_python" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
+        <span id="max_value_python">
+<a href="#max_value_python" style="color: inherit; text-decoration: inherit;">max_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3430,8 +3477,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minvalue_python">
-<a href="#minvalue_python" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
+        <span id="min_value_python">
+<a href="#min_value_python" style="color: inherit; text-decoration: inherit;">min_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3445,7 +3492,7 @@ The following state arguments are supported:
 <a href="#watermarks_python" style="color: inherit; text-decoration: inherit;">watermarks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisleftwatermark">List[Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Watermark]</a></span>
+        <span class="property-type"><a href="#timechartaxisleftwatermark">Sequence[Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Watermark<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3462,7 +3509,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChartAxisLeftWatermarkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChartAxisLeftWatermarkOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChartAxisLeftWatermarkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChartAxisLeftWatermarkOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.TimeChartAxisLeftWatermarkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.TimeChartAxisLeftWatermark.html">output</a> API doc for this type.
@@ -3592,7 +3639,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChartAxisRightArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChartAxisRightOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChartAxisRightArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChartAxisRightOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.TimeChartAxisRightArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.TimeChartAxisRight.html">output</a> API doc for this type.
@@ -3888,8 +3935,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="highwatermark_python">
-<a href="#highwatermark_python" style="color: inherit; text-decoration: inherit;">high<wbr>Watermark</a>
+        <span id="high_watermark_python">
+<a href="#high_watermark_python" style="color: inherit; text-decoration: inherit;">high_<wbr>watermark</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3899,8 +3946,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="highwatermarklabel_python">
-<a href="#highwatermarklabel_python" style="color: inherit; text-decoration: inherit;">high<wbr>Watermark<wbr>Label</a>
+        <span id="high_watermark_label_python">
+<a href="#high_watermark_label_python" style="color: inherit; text-decoration: inherit;">high_<wbr>watermark_<wbr>label</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3921,8 +3968,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lowwatermark_python">
-<a href="#lowwatermark_python" style="color: inherit; text-decoration: inherit;">low<wbr>Watermark</a>
+        <span id="low_watermark_python">
+<a href="#low_watermark_python" style="color: inherit; text-decoration: inherit;">low_<wbr>watermark</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3932,8 +3979,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lowwatermarklabel_python">
-<a href="#lowwatermarklabel_python" style="color: inherit; text-decoration: inherit;">low<wbr>Watermark<wbr>Label</a>
+        <span id="low_watermark_label_python">
+<a href="#low_watermark_label_python" style="color: inherit; text-decoration: inherit;">low_<wbr>watermark_<wbr>label</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3943,8 +3990,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxvalue_python">
-<a href="#maxvalue_python" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
+        <span id="max_value_python">
+<a href="#max_value_python" style="color: inherit; text-decoration: inherit;">max_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3954,8 +4001,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minvalue_python">
-<a href="#minvalue_python" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
+        <span id="min_value_python">
+<a href="#min_value_python" style="color: inherit; text-decoration: inherit;">min_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3969,7 +4016,7 @@ The following state arguments are supported:
 <a href="#watermarks_python" style="color: inherit; text-decoration: inherit;">watermarks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisrightwatermark">List[Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Watermark]</a></span>
+        <span class="property-type"><a href="#timechartaxisrightwatermark">Sequence[Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Watermark<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3986,7 +4033,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChartAxisRightWatermarkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChartAxisRightWatermarkOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChartAxisRightWatermarkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChartAxisRightWatermarkOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.TimeChartAxisRightWatermarkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.TimeChartAxisRightWatermark.html">output</a> API doc for this type.
@@ -4116,7 +4163,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChartEventOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChartEventOptionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChartEventOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChartEventOptionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.TimeChartEventOptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.TimeChartEventOption.html">output</a> API doc for this type.
@@ -4272,8 +4319,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="displayname_python">
-<a href="#displayname_python" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4294,7 +4341,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChartHistogramOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChartHistogramOptionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChartHistogramOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChartHistogramOptionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.TimeChartHistogramOptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.TimeChartHistogramOption.html">output</a> API doc for this type.
@@ -4362,8 +4409,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="colortheme_python">
-<a href="#colortheme_python" style="color: inherit; text-decoration: inherit;">color<wbr>Theme</a>
+        <span id="color_theme_python">
+<a href="#color_theme_python" style="color: inherit; text-decoration: inherit;">color_<wbr>theme</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4384,7 +4431,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChartLegendOptionsFieldArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChartLegendOptionsFieldOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChartLegendOptionsFieldArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChartLegendOptionsFieldOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.TimeChartLegendOptionsFieldArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.TimeChartLegendOptionsField.html">output</a> API doc for this type.
@@ -4518,7 +4565,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChartVizOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#TimeChartVizOptionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChartVizOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#TimeChartVizOptionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.TimeChartVizOptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.TimeChartVizOption.html">output</a> API doc for this type.
@@ -4847,8 +4894,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="displayname_python">
-<a href="#displayname_python" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4869,8 +4916,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="valueprefix_python">
-<a href="#valueprefix_python" style="color: inherit; text-decoration: inherit;">value<wbr>Prefix</a>
+        <span id="value_prefix_python">
+<a href="#value_prefix_python" style="color: inherit; text-decoration: inherit;">value_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4879,8 +4926,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="valuesuffix_python">
-<a href="#valuesuffix_python" style="color: inherit; text-decoration: inherit;">value<wbr>Suffix</a>
+        <span id="value_suffix_python">
+<a href="#value_suffix_python" style="color: inherit; text-decoration: inherit;">value_<wbr>suffix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4889,8 +4936,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="valueunit_python">
-<a href="#valueunit_python" style="color: inherit; text-decoration: inherit;">value<wbr>Unit</a>
+        <span id="value_unit_python">
+<a href="#value_unit_python" style="color: inherit; text-decoration: inherit;">value_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4917,6 +4964,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/terraform-providers/terraform-provider-signalfx).</dd>
+	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).</dd>
 </dl>
 
