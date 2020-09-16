@@ -45,9 +45,6 @@ jobs:
       - name: Add GOBIN to PATH
         run: echo "::add-path::$(go env GOPATH)/bin"
 
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@releases/v1
-
       - name: Build and deploy
         run: make ci_${GITHUB_EVENT_NAME}
         env:
