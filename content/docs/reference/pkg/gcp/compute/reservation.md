@@ -1588,7 +1588,7 @@ How many instances are in use.
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of resources that are allocated.
 {{% /md %}}</dd>
@@ -1611,7 +1611,7 @@ Structure is documented below.
 <a href="#in_use_count_python" style="color: inherit; text-decoration: inherit;">in_<wbr>use_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}-
 How many instances are in use.
@@ -1830,7 +1830,7 @@ for information on available CPU platforms.
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">List[Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">Sequence[Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Guest accelerator type and count.
 Structure is documented below.
@@ -1842,7 +1842,7 @@ Structure is documented below.
 <a href="#local_ssds_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">List[Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">Sequence[Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The amount of local ssd to reserve with each instance. This
 reserves disks of type `local-ssd`.
@@ -1993,7 +1993,7 @@ If you are creating an instance template, specify only the accelerator name.
 <a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to
 this instance.
@@ -2137,7 +2137,7 @@ Possible values are `SCSI` and `NVME`.
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the disk in base-2 GB.
 {{% /md %}}</dd>

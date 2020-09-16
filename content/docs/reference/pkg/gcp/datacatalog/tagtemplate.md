@@ -30,7 +30,7 @@ To get more information about TagTemplate, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/datacatalog/#pulumi_gcp.datacatalog.TagTemplate">TagTemplate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[List[TagTemplateFieldArgs]]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/datacatalog/#pulumi_gcp.datacatalog.TagTemplate">TagTemplate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[TagTemplateFieldArgs]]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -433,7 +433,7 @@ If it is not provided, the provider project is used.
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagtemplatefield">List[Tag<wbr>Template<wbr>Field<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tagtemplatefield">Sequence[Tag<wbr>Template<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.
 Structure is documented below.
@@ -642,7 +642,7 @@ Get an existing TagTemplate resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[List[TagTemplateFieldArgs]]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TagTemplate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[TagTemplateFieldArgs]]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TagTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1034,7 +1034,7 @@ If it is not provided, the provider project is used.
 <a href="#state_fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagtemplatefield">List[Tag<wbr>Template<wbr>Field<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tagtemplatefield">Sequence[Tag<wbr>Template<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.
 Structure is documented below.
@@ -1424,7 +1424,7 @@ The resource name of the tag template field in URL format. Example: projects/{pr
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The order of this field with respect to other fields in this tag template.
 A higher value indicates a more important field. The value can be negative.
@@ -1681,7 +1681,7 @@ Structure is documented below.
 <a href="#allowed_values_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagtemplatefieldtypeenumtypeallowedvalue">List[Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type<wbr>Allowed<wbr>Value<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tagtemplatefieldtypeenumtypeallowedvalue">Sequence[Tag<wbr>Template<wbr>Field<wbr>Type<wbr>Enum<wbr>Type<wbr>Allowed<wbr>Value<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of allowed values for this enum. The display names of the
 values must be case-insensitively unique within this set. Currently,

@@ -1517,7 +1517,7 @@ more signatures. A base64-encoded string.
 <a href="#signatures_python" style="color: inherit; text-decoration: inherit;">signatures</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#occurenceattestationsignature">List[Occurence<wbr>Attestation<wbr>Signature<wbr>Args]</a></span>
+        <span class="property-type"><a href="#occurenceattestationsignature">Sequence[Occurence<wbr>Attestation<wbr>Signature<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more signatures over serializedPayload.
 Verifier implementations should consider this attestation

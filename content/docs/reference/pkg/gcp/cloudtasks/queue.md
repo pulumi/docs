@@ -1490,7 +1490,7 @@ If unspecified when the queue is created, Cloud Tasks will pick the default.
 <a href="#max_burst_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>burst_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}-
 The max burst size.
@@ -1506,7 +1506,7 @@ resource usage when many tasks are enqueued in a short period of time.
 <a href="#max_concurrent_dispatches_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>dispatches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent tasks that Cloud Tasks allows to
 be dispatched for this queue. After this threshold has been
@@ -1797,7 +1797,7 @@ specifies that the task should be retried.
 <a href="#max_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>attempts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of attempts per task.
 Cloud Tasks will attempt the task maxAttempts times (that is, if
@@ -1827,7 +1827,7 @@ specifies that the task should be retried.
 <a href="#max_doublings_python" style="color: inherit; text-decoration: inherit;">max_<wbr>doublings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time between retries will double maxDoublings times.
 A task's retry interval starts at minBackoff, then doubles maxDoublings times,

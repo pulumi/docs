@@ -489,7 +489,7 @@ while private zones are visible only to Virtual Private Cloud resources.
 <a href="#name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of nameservers that will be authoritative for this
 domain. Use NS records to redirect from your DNS provider to these names,

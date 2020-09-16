@@ -1539,7 +1539,7 @@ instances, applicable to all instances in the cluster. Structure defined below.
 <a href="#initialization_actions_python" style="color: inherit; text-decoration: inherit;">initialization_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfiginitializationaction">List[Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfiginitializationaction">Sequence[Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Commands to execute on each node after config is completed.
 You can specify multiple versions of these. Structure defined below.
@@ -2379,7 +2379,7 @@ If not specified, the "default" service account is used.
 <a href="#service_account_scopes_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes
 to be made available on all of the node VMs under the `service_account`
@@ -2406,7 +2406,7 @@ subnetwork the cluster will be part of. Conflicts with `network`.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of instance tags applied to instances in the cluster.
 Tags are used to identify valid sources or targets for network firewalls.
@@ -2568,7 +2568,7 @@ The script must be a GCS file with a gs:// prefix.
 <a href="#timeout_sec_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum duration (in seconds) which `script` is
 allowed to take to execute its action. GCP will default to a predetermined
@@ -3062,7 +3062,7 @@ Defaults to 0.
 <a href="#accelerators_python" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigmasterconfigaccelerator">List[Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigmasterconfigaccelerator">Sequence[Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
 {{% /md %}}</dd>
@@ -3096,7 +3096,7 @@ for more information.
 <a href="#instance_names_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3133,7 +3133,7 @@ for details about which CPU families are available (and defaulted) for each zone
 <a href="#num_instances_python" style="color: inherit; text-decoration: inherit;">num_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the number of preemptible nodes to create.
 Defaults to 0.
@@ -3257,7 +3257,7 @@ Defaults to 0.
 <a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
 {{% /md %}}</dd>
@@ -3439,7 +3439,7 @@ attached to each preemptible worker node. Defaults to 0.
 <a href="#boot_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the primary disk attached to each preemptible worker node, specified
 in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
@@ -3465,7 +3465,7 @@ One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 <a href="#num_local_ssds_python" style="color: inherit; text-decoration: inherit;">num_<wbr>local_<wbr>ssds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of local SSD disks that will be
 attached to each preemptible worker node. Defaults to 0.
@@ -3633,7 +3633,7 @@ Defaults to 0.
 <a href="#instance_names_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3643,7 +3643,7 @@ Defaults to 0.
 <a href="#num_instances_python" style="color: inherit; text-decoration: inherit;">num_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the number of preemptible nodes to create.
 Defaults to 0.
@@ -3815,7 +3815,7 @@ attached to each preemptible worker node. Defaults to 0.
 <a href="#boot_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the primary disk attached to each preemptible worker node, specified
 in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
@@ -3841,7 +3841,7 @@ One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 <a href="#num_local_ssds_python" style="color: inherit; text-decoration: inherit;">num_<wbr>local_<wbr>ssds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of local SSD disks that will be
 attached to each preemptible worker node. Defaults to 0.
@@ -4677,7 +4677,7 @@ uppercased domain of hostnames will be the realm.
 <a href="#tgt_lifetime_hours_python" style="color: inherit; text-decoration: inherit;">tgt_<wbr>lifetime_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the ticket granting ticket, in hours.
 {{% /md %}}</dd>
@@ -4960,7 +4960,7 @@ latest version. For a list of valid versions see
 <a href="#optional_components_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>components</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of optional components to activate on the cluster. 
 Accepted values are:
@@ -5302,7 +5302,7 @@ Defaults to 0.
 <a href="#accelerators_python" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigworkerconfigaccelerator">List[Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigworkerconfigaccelerator">Sequence[Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
 {{% /md %}}</dd>
@@ -5336,7 +5336,7 @@ for more information.
 <a href="#instance_names_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5373,7 +5373,7 @@ for details about which CPU families are available (and defaulted) for each zone
 <a href="#num_instances_python" style="color: inherit; text-decoration: inherit;">num_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the number of preemptible nodes to create.
 Defaults to 0.
@@ -5497,7 +5497,7 @@ Defaults to 0.
 <a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
 {{% /md %}}</dd>
@@ -5679,7 +5679,7 @@ attached to each preemptible worker node. Defaults to 0.
 <a href="#boot_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the primary disk attached to each preemptible worker node, specified
 in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
@@ -5705,7 +5705,7 @@ One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 <a href="#num_local_ssds_python" style="color: inherit; text-decoration: inherit;">num_<wbr>local_<wbr>ssds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of local SSD disks that will be
 attached to each preemptible worker node. Defaults to 0.

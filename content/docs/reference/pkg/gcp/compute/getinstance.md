@@ -1414,7 +1414,7 @@ The following output properties are available:
 <a href="#attached_disks_python" style="color: inherit; text-decoration: inherit;">attached_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceattacheddisk">List[Get<wbr>Instance<wbr>Attached<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#getinstanceattacheddisk">Sequence[Get<wbr>Instance<wbr>Attached<wbr>Disk]</a></span>
     </dt>
     <dd>{{% md %}}List of disks attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
@@ -1425,7 +1425,7 @@ The following output properties are available:
 <a href="#boot_disks_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancebootdisk">List[Get<wbr>Instance<wbr>Boot<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#getinstancebootdisk">Sequence[Get<wbr>Instance<wbr>Boot<wbr>Disk]</a></span>
     </dt>
     <dd>{{% md %}}The boot disk for the instance. Structure is documented below.
 {{% /md %}}</dd>
@@ -1447,7 +1447,7 @@ The following output properties are available:
 <a href="#confidential_instance_configs_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>instance_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceconfidentialinstanceconfig">List[Get<wbr>Instance<wbr>Confidential<wbr>Instance<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getinstanceconfidentialinstanceconfig">Sequence[Get<wbr>Instance<wbr>Confidential<wbr>Instance<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1520,7 +1520,7 @@ The following output properties are available:
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceguestaccelerator">List[Get<wbr>Instance<wbr>Guest<wbr>Accelerator]</a></span>
+        <span class="property-type"><a href="#getinstanceguestaccelerator">Sequence[Get<wbr>Instance<wbr>Guest<wbr>Accelerator]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
@@ -1639,7 +1639,7 @@ The following output properties are available:
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancenetworkinterface">List[Get<wbr>Instance<wbr>Network<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#getinstancenetworkinterface">Sequence[Get<wbr>Instance<wbr>Network<wbr>Interface]</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
@@ -1650,7 +1650,7 @@ The following output properties are available:
 <a href="#resource_policies_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1660,7 +1660,7 @@ The following output properties are available:
 <a href="#schedulings_python" style="color: inherit; text-decoration: inherit;">schedulings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancescheduling">List[Get<wbr>Instance<wbr>Scheduling]</a></span>
+        <span class="property-type"><a href="#getinstancescheduling">Sequence[Get<wbr>Instance<wbr>Scheduling]</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy being used by the instance.
 {{% /md %}}</dd>
@@ -1671,7 +1671,7 @@ The following output properties are available:
 <a href="#scratch_disks_python" style="color: inherit; text-decoration: inherit;">scratch_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancescratchdisk">List[Get<wbr>Instance<wbr>Scratch<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#getinstancescratchdisk">Sequence[Get<wbr>Instance<wbr>Scratch<wbr>Disk]</a></span>
     </dt>
     <dd>{{% md %}}The scratch disks attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
@@ -1682,7 +1682,7 @@ The following output properties are available:
 <a href="#service_accounts_python" style="color: inherit; text-decoration: inherit;">service_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceserviceaccount">List[Get<wbr>Instance<wbr>Service<wbr>Account]</a></span>
+        <span class="property-type"><a href="#getinstanceserviceaccount">Sequence[Get<wbr>Instance<wbr>Service<wbr>Account]</a></span>
     </dt>
     <dd>{{% md %}}The service account to attach to the instance. Structure is documented below.
 {{% /md %}}</dd>
@@ -1693,7 +1693,7 @@ The following output properties are available:
 <a href="#shielded_instance_configs_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceshieldedinstanceconfig">List[Get<wbr>Instance<wbr>Shielded<wbr>Instance<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getinstanceshieldedinstanceconfig">Sequence[Get<wbr>Instance<wbr>Shielded<wbr>Instance<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}The shielded vm config being used by the instance. Structure is documented below.
 {{% /md %}}</dd>
@@ -1704,7 +1704,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of tags attached to the instance.
 {{% /md %}}</dd>
@@ -2425,7 +2425,7 @@ under `/dev/disk/by-id/`
 <a href="#initialize_params_python" style="color: inherit; text-decoration: inherit;">initialize_<wbr>params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancebootdiskinitializeparam">List[Get<wbr>Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Param<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancebootdiskinitializeparam">Sequence[Get<wbr>Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Param<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Parameters with which a disk was created alongside the instance.
 Structure is documented below.
@@ -2669,7 +2669,7 @@ Structure is documented below.
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the image in gigabytes.
 {{% /md %}}</dd>
@@ -2889,7 +2889,7 @@ Structure is documented below.
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
 {{% /md %}}</dd>
@@ -3191,7 +3191,7 @@ instance can be accessed via the Internet. Structure documented below.
 <a href="#access_configs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancenetworkinterfaceaccessconfig">List[Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancenetworkinterfaceaccessconfig">Sequence[Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Structure documented below.
@@ -3203,7 +3203,7 @@ instance can be accessed via the Internet. Structure documented below.
 <a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancenetworkinterfacealiasiprange">List[Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancenetworkinterfacealiasiprange">Sequence[Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of alias IP ranges for this network interface. Structure documented below.
 {{% /md %}}</dd>
@@ -3819,7 +3819,7 @@ restarted if it was terminated by Compute Engine (not a user).
 <a href="#min_node_cpus_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>cpus</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3829,7 +3829,7 @@ restarted if it was terminated by Compute Engine (not a user).
 <a href="#node_affinities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceschedulingnodeaffinity">List[Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstanceschedulingnodeaffinity">Sequence[Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4019,7 +4019,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4242,7 +4242,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of service scopes.
 {{% /md %}}</dd>

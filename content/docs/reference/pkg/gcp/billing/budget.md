@@ -29,7 +29,7 @@ To get more information about Budget, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/billing/#pulumi_gcp.billing.Budget">Budget</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">all_updates_rule</span><span class="p">:</span> <span class="nx">Optional[BudgetAllUpdatesRuleArgs]</span> = None<span class="p">, </span><span class="nx">amount</span><span class="p">:</span> <span class="nx">Optional[BudgetAmountArgs]</span> = None<span class="p">, </span><span class="nx">billing_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">budget_filter</span><span class="p">:</span> <span class="nx">Optional[BudgetBudgetFilterArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold_rules</span><span class="p">:</span> <span class="nx">Optional[List[BudgetThresholdRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/billing/#pulumi_gcp.billing.Budget">Budget</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">all_updates_rule</span><span class="p">:</span> <span class="nx">Optional[BudgetAllUpdatesRuleArgs]</span> = None<span class="p">, </span><span class="nx">amount</span><span class="p">:</span> <span class="nx">Optional[BudgetAmountArgs]</span> = None<span class="p">, </span><span class="nx">billing_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">budget_filter</span><span class="p">:</span> <span class="nx">Optional[BudgetBudgetFilterArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BudgetThresholdRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -476,7 +476,7 @@ Structure is documented below.
 <a href="#threshold_rules_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetthresholdrule">List[Budget<wbr>Threshold<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#budgetthresholdrule">Sequence[Budget<wbr>Threshold<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Rules that trigger alerts (notifications of thresholds being
 crossed) when spend exceeds the specified percentages of the
@@ -669,7 +669,7 @@ Get an existing Budget resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">all_updates_rule</span><span class="p">:</span> <span class="nx">Optional[BudgetAllUpdatesRuleArgs]</span> = None<span class="p">, </span><span class="nx">amount</span><span class="p">:</span> <span class="nx">Optional[BudgetAmountArgs]</span> = None<span class="p">, </span><span class="nx">billing_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">budget_filter</span><span class="p">:</span> <span class="nx">Optional[BudgetBudgetFilterArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold_rules</span><span class="p">:</span> <span class="nx">Optional[List[BudgetThresholdRuleArgs]]</span> = None<span class="p">) -&gt;</span> Budget</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">all_updates_rule</span><span class="p">:</span> <span class="nx">Optional[BudgetAllUpdatesRuleArgs]</span> = None<span class="p">, </span><span class="nx">amount</span><span class="p">:</span> <span class="nx">Optional[BudgetAmountArgs]</span> = None<span class="p">, </span><span class="nx">billing_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">budget_filter</span><span class="p">:</span> <span class="nx">Optional[BudgetBudgetFilterArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BudgetThresholdRuleArgs]]</span> = None<span class="p">) -&gt;</span> Budget</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1144,7 +1144,7 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
 <a href="#state_threshold_rules_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetthresholdrule">List[Budget<wbr>Threshold<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#budgetthresholdrule">Sequence[Budget<wbr>Threshold<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Rules that trigger alerts (notifications of thresholds being
 crossed) when spend exceeds the specified percentages of the
@@ -1335,7 +1335,7 @@ https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
 <a href="#monitoring_notification_channels_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>notification_<wbr>channels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The full resource name of a monitoring notification
 channel in the form
@@ -1711,7 +1711,7 @@ is "USD", then 1 unit is one US dollar.
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of nano (10^-9) units of the amount.
 The value must be between -999,999,999 and +999,999,999
@@ -1938,7 +1938,7 @@ Possible values are `INCLUDE_ALL_CREDITS` and `EXCLUDE_ALL_CREDITS`.
 <a href="#projects_python" style="color: inherit; text-decoration: inherit;">projects</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of projects of the form projects/{project_id},
 specifying that usage from only this set of projects should be
@@ -1954,7 +1954,7 @@ specified currently.
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of services of the form services/{service_id},
 specifying that usage from only this set of services should be

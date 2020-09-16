@@ -1224,7 +1224,7 @@ Possible values are `COLLOCATED`.
 <a href="#availability_domain_count_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>domain_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of availability domains instances will be spread across. If two instances are in different
 availability domain, they will not be put in the same low latency network
@@ -1251,7 +1251,7 @@ Possible values are `COLLOCATED`.
 <a href="#vm_count_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of vms in this placement group.
 {{% /md %}}</dd>
@@ -1573,7 +1573,7 @@ Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
 <a href="#max_retention_days_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retention_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum age of the snapshot that is allowed to be kept.
 {{% /md %}}</dd>
@@ -1903,7 +1903,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 <a href="#days_in_cycle_python" style="color: inherit; text-decoration: inherit;">days_<wbr>in_<wbr>cycle</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of days between snapshots.
 {{% /md %}}</dd>
@@ -2041,7 +2041,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 <a href="#hours_in_cycle_python" style="color: inherit; text-decoration: inherit;">hours_<wbr>in_<wbr>cycle</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of hours between snapshots.
 {{% /md %}}</dd>
@@ -2146,7 +2146,7 @@ Structure is documented below.
 <a href="#day_of_weeks_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>weeks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">List[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">Sequence[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.
 Structure is documented below.

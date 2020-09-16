@@ -30,7 +30,7 @@ To get more information about RegionBackendService, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.RegionBackendService">RegionBackendService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[List[RegionBackendServiceBackendArgs]]</span> = None<span class="p">, </span><span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceCircuitBreakersArgs]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceConsistentHashArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">failover_policy</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceFailoverPolicyArgs]</span> = None<span class="p">, </span><span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceOutlierDetectionArgs]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.RegionBackendService">RegionBackendService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionBackendServiceBackendArgs]]</span> = None<span class="p">, </span><span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceCircuitBreakersArgs]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceConsistentHashArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">failover_policy</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceFailoverPolicyArgs]</span> = None<span class="p">, </span><span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceOutlierDetectionArgs]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1097,7 +1097,7 @@ check can be specified, and a health check is required.
 <a href="#affinity_cookie_ttl_sec_python" style="color: inherit; text-decoration: inherit;">affinity_<wbr>cookie_<wbr>ttl_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Lifetime of cookies in seconds if session_affinity is
 GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
@@ -1112,7 +1112,7 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicebackend">List[Region<wbr>Backend<wbr>Service<wbr>Backend<wbr>Args]</a></span>
+        <span class="property-type"><a href="#regionbackendservicebackend">Sequence[Region<wbr>Backend<wbr>Service<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of backends that serve this RegionBackendService.
 Structure is documented below.
@@ -1138,7 +1138,7 @@ Structure is documented below.
 <a href="#connection_draining_timeout_sec_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>draining_<wbr>timeout_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time for which instance will be drained (not accept new
 connections, but still work to finish started).
@@ -1357,7 +1357,7 @@ Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROT
 <a href="#timeout_sec_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How many seconds to wait for the backend before considering it a
 failed request. Default is 30 seconds. Valid range is [1, 86400].
@@ -1594,7 +1594,7 @@ Get an existing RegionBackendService resource's state with the given name, ID, a
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[List[RegionBackendServiceBackendArgs]]</span> = None<span class="p">, </span><span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceCircuitBreakersArgs]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceConsistentHashArgs]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">failover_policy</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceFailoverPolicyArgs]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceOutlierDetectionArgs]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> RegionBackendService</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionBackendServiceBackendArgs]]</span> = None<span class="p">, </span><span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceCircuitBreakersArgs]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceConsistentHashArgs]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">failover_policy</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceFailoverPolicyArgs]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceOutlierDetectionArgs]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> RegionBackendService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2689,7 +2689,7 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 <a href="#state_affinity_cookie_ttl_sec_python" style="color: inherit; text-decoration: inherit;">affinity_<wbr>cookie_<wbr>ttl_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Lifetime of cookies in seconds if session_affinity is
 GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
@@ -2704,7 +2704,7 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#state_backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicebackend">List[Region<wbr>Backend<wbr>Service<wbr>Backend<wbr>Args]</a></span>
+        <span class="property-type"><a href="#regionbackendservicebackend">Sequence[Region<wbr>Backend<wbr>Service<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of backends that serve this RegionBackendService.
 Structure is documented below.
@@ -2730,7 +2730,7 @@ Structure is documented below.
 <a href="#state_connection_draining_timeout_sec_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>draining_<wbr>timeout_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time for which instance will be drained (not accept new
 connections, but still work to finish started).
@@ -2995,7 +2995,7 @@ Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROT
 <a href="#state_timeout_sec_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How many seconds to wait for the backend before considering it a
 failed request. Default is 30 seconds. Valid range is [1, 86400].
@@ -3700,7 +3700,7 @@ than one failover backend can be configured for a given RegionBackendService.
 <a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of connections to the backend cluster.
 Defaults to 1024.
@@ -3712,7 +3712,7 @@ Defaults to 1024.
 <a href="#max_connections_per_endpoint_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max number of simultaneous connections that a single backend
 network endpoint can handle. Cannot be set
@@ -3729,7 +3729,7 @@ maxConnectionsPerEndpoint must be set.
 <a href="#max_connections_per_instance_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max number of simultaneous connections that a single
 backend instance can handle. Cannot be set for INTERNAL backend
@@ -3746,7 +3746,7 @@ maxConnectionsPerInstance must be set.
 <a href="#max_rate_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max requests per second (RPS) of the group. Cannot be set
 for INTERNAL backend services.
@@ -4081,7 +4081,7 @@ Defaults to 3.
 <a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of connections to the backend cluster.
 Defaults to 1024.
@@ -4093,7 +4093,7 @@ Defaults to 1024.
 <a href="#max_pending_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pending_<wbr>requests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of pending requests to the backend cluster.
 Defaults to 1024.
@@ -4105,7 +4105,7 @@ Defaults to 1024.
 <a href="#max_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel requests to the backend cluster.
 Defaults to 1024.
@@ -4117,7 +4117,7 @@ Defaults to 1024.
 <a href="#max_requests_per_connection_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests_<wbr>per_<wbr>connection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum requests for a single backend connection. This parameter
 is respected by both the HTTP/1.1 and HTTP/2 implementations. If
@@ -4131,7 +4131,7 @@ will effectively disable keep alive.
 <a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel retries to the backend cluster.
 Defaults to 3.
@@ -4264,7 +4264,7 @@ less than one second are represented with a 0 `seconds` field and a positive
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
@@ -4276,7 +4276,7 @@ inclusive.
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
@@ -4491,7 +4491,7 @@ This field is applicable if the sessionAffinity is set to HEADER_FIELD.
 <a href="#minimum_ring_size_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>ring_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of virtual nodes to use for the hash ring.
 Larger ring sizes result in more granular load
@@ -4810,7 +4810,7 @@ less than one second are represented with a 0 `seconds` field and a positive
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
@@ -4822,7 +4822,7 @@ inclusive.
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
@@ -5734,7 +5734,7 @@ Structure is documented below.
 <a href="#consecutive_errors_python" style="color: inherit; text-decoration: inherit;">consecutive_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of errors before a host is ejected from the connection pool. When the
 backend host is accessed over HTTP, a 5xx return code qualifies as an error.
@@ -5747,7 +5747,7 @@ Defaults to 5.
 <a href="#consecutive_gateway_failure_python" style="color: inherit; text-decoration: inherit;">consecutive_<wbr>gateway_<wbr>failure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive gateway failures (502, 503, 504 status or connection
 errors that are mapped to one of those status codes) before a consecutive
@@ -5760,7 +5760,7 @@ gateway failure ejection occurs. Defaults to 5.
 <a href="#enforcing_consecutive_errors_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>consecutive_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through consecutive 5xx. This setting can be used to disable
@@ -5773,7 +5773,7 @@ ejection or to ramp it up slowly. Defaults to 100.
 <a href="#enforcing_consecutive_gateway_failure_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>consecutive_<wbr>gateway_<wbr>failure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through consecutive gateway failures. This setting can be
@@ -5786,7 +5786,7 @@ used to disable ejection or to ramp it up slowly. Defaults to 0.
 <a href="#enforcing_success_rate_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>success_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through success rate statistics. This setting can be used to
@@ -5812,7 +5812,7 @@ Structure is documented below.
 <a href="#max_ejection_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ejection_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum percentage of hosts in the load balancing pool for the backend service
 that can be ejected. Defaults to 10%.
@@ -5824,7 +5824,7 @@ that can be ejected. Defaults to 10%.
 <a href="#success_rate_minimum_hosts_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>minimum_<wbr>hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of hosts in a cluster that must have enough request volume to detect
 success rate outliers. If the number of hosts is less than this setting, outlier
@@ -5838,7 +5838,7 @@ cluster. Defaults to 5.
 <a href="#success_rate_request_volume_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>request_<wbr>volume</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of total requests that must be collected in one interval (as
 defined by the interval duration above) to include this host in success rate
@@ -5853,7 +5853,7 @@ to 100.
 <a href="#success_rate_stdev_factor_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>stdev_<wbr>factor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}This factor is used to determine the ejection threshold for success rate outlier
 ejection. The ejection threshold is the difference between the mean success
@@ -5990,7 +5990,7 @@ less than one second are represented with a 0 `seconds` field and a positive
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
@@ -6002,7 +6002,7 @@ inclusive.
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
@@ -6136,7 +6136,7 @@ less than one second are represented with a 0 `seconds` field and a positive
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
@@ -6148,7 +6148,7 @@ inclusive.
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive

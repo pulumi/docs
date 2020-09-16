@@ -483,7 +483,7 @@ The following output properties are available:
 <a href="#boolean_policies_python" style="color: inherit; text-decoration: inherit;">boolean_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getorganizationpolicybooleanpolicy">List[Get<wbr>Organization<wbr>Policy<wbr>Boolean<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getorganizationpolicybooleanpolicy">Sequence[Get<wbr>Organization<wbr>Policy<wbr>Boolean<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -534,7 +534,7 @@ The following output properties are available:
 <a href="#list_policies_python" style="color: inherit; text-decoration: inherit;">list_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getorganizationpolicylistpolicy">List[Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getorganizationpolicylistpolicy">Sequence[Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -544,7 +544,7 @@ The following output properties are available:
 <a href="#restore_policies_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getorganizationpolicyrestorepolicy">List[Get<wbr>Organization<wbr>Policy<wbr>Restore<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getorganizationpolicyrestorepolicy">Sequence[Get<wbr>Organization<wbr>Policy<wbr>Restore<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -564,7 +564,7 @@ The following output properties are available:
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -832,7 +832,7 @@ The following output properties are available:
 <a href="#allows_python" style="color: inherit; text-decoration: inherit;">allows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getorganizationpolicylistpolicyallow">List[Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getorganizationpolicylistpolicyallow">Sequence[Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -842,7 +842,7 @@ The following output properties are available:
 <a href="#denies_python" style="color: inherit; text-decoration: inherit;">denies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getorganizationpolicylistpolicydeny">List[Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getorganizationpolicylistpolicydeny">Sequence[Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -988,7 +988,7 @@ The following output properties are available:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1114,7 +1114,7 @@ The following output properties are available:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

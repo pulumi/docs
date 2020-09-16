@@ -1378,7 +1378,7 @@ info: http://kubernetes.io/docs/user-guide/annotations
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
@@ -1816,7 +1816,7 @@ has given such a warning.
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatuscondition">List[Domain<wbr>Mapping<wbr>Status<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainmappingstatuscondition">Sequence[Domain<wbr>Mapping<wbr>Status<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1836,7 +1836,7 @@ has given such a warning.
 <a href="#observed_generation_python" style="color: inherit; text-decoration: inherit;">observed_<wbr>generation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1846,7 +1846,7 @@ has given such a warning.
 <a href="#resource_records_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatusresourcerecord">List[Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainmappingstatusresourcerecord">Sequence[Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

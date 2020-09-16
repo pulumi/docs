@@ -28,7 +28,7 @@ and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroupMa
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.InstanceGroupManager">InstanceGroupManager</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing_policies</span><span class="p">:</span> <span class="nx">Optional[InstanceGroupManagerAutoHealingPoliciesArgs]</span> = None<span class="p">, </span><span class="nx">base_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_ports</span><span class="p">:</span> <span class="nx">Optional[List[InstanceGroupManagerNamedPortArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stateful_disks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceGroupManagerStatefulDiskArgs]]</span> = None<span class="p">, </span><span class="nx">target_pools</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">target_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[InstanceGroupManagerUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">versions</span><span class="p">:</span> <span class="nx">Optional[List[InstanceGroupManagerVersionArgs]]</span> = None<span class="p">, </span><span class="nx">wait_for_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.InstanceGroupManager">InstanceGroupManager</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing_policies</span><span class="p">:</span> <span class="nx">Optional[InstanceGroupManagerAutoHealingPoliciesArgs]</span> = None<span class="p">, </span><span class="nx">base_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceGroupManagerNamedPortArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stateful_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceGroupManagerStatefulDiskArgs]]</span> = None<span class="p">, </span><span class="nx">target_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[InstanceGroupManagerUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceGroupManagerVersionArgs]]</span> = None<span class="p">, </span><span class="nx">wait_for_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -720,7 +720,7 @@ name.
 <a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerversion">List[Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerversion">Sequence[Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
@@ -768,7 +768,7 @@ group manager.
 <a href="#named_ports_python" style="color: inherit; text-decoration: inherit;">named_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagernamedport">List[Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagernamedport">Sequence[Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
 for details on configuration.
@@ -792,7 +792,7 @@ is not provided, the provider project is used.
 <a href="#stateful_disks_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">List[Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">Sequence[Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
 {{% /md %}}</dd>
@@ -803,7 +803,7 @@ is not provided, the provider project is used.
 <a href="#target_pools_python" style="color: inherit; text-decoration: inherit;">target_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The full URL of all target pools to which new
 instances in the group are added. Updating the target pools attribute does
@@ -816,7 +816,7 @@ not affect existing instances.
 <a href="#target_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
 {{% /md %}}</dd>
@@ -1128,7 +1128,7 @@ Get an existing InstanceGroupManager resource's state with the given name, ID, a
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing_policies</span><span class="p">:</span> <span class="nx">Optional[InstanceGroupManagerAutoHealingPoliciesArgs]</span> = None<span class="p">, </span><span class="nx">base_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_ports</span><span class="p">:</span> <span class="nx">Optional[List[InstanceGroupManagerNamedPortArgs]]</span> = None<span class="p">, </span><span class="nx">operation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stateful_disks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceGroupManagerStatefulDiskArgs]]</span> = None<span class="p">, </span><span class="nx">target_pools</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">target_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[InstanceGroupManagerUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">versions</span><span class="p">:</span> <span class="nx">Optional[List[InstanceGroupManagerVersionArgs]]</span> = None<span class="p">, </span><span class="nx">wait_for_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> InstanceGroupManager</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing_policies</span><span class="p">:</span> <span class="nx">Optional[InstanceGroupManagerAutoHealingPoliciesArgs]</span> = None<span class="p">, </span><span class="nx">base_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceGroupManagerNamedPortArgs]]</span> = None<span class="p">, </span><span class="nx">operation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stateful_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceGroupManagerStatefulDiskArgs]]</span> = None<span class="p">, </span><span class="nx">target_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[InstanceGroupManagerUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceGroupManagerVersionArgs]]</span> = None<span class="p">, </span><span class="nx">wait_for_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> InstanceGroupManager</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1948,7 +1948,7 @@ group manager.
 <a href="#state_named_ports_python" style="color: inherit; text-decoration: inherit;">named_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagernamedport">List[Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagernamedport">Sequence[Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
 for details on configuration.
@@ -1993,7 +1993,7 @@ is not provided, the provider project is used.
 <a href="#state_stateful_disks_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">List[Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">Sequence[Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
 {{% /md %}}</dd>
@@ -2004,7 +2004,7 @@ is not provided, the provider project is used.
 <a href="#state_target_pools_python" style="color: inherit; text-decoration: inherit;">target_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The full URL of all target pools to which new
 instances in the group are added. Updating the target pools attribute does
@@ -2017,7 +2017,7 @@ not affect existing instances.
 <a href="#state_target_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
 {{% /md %}}</dd>
@@ -2039,7 +2039,7 @@ not affect existing instances.
 <a href="#state_versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerversion">List[Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerversion">Sequence[Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
@@ -2211,7 +2211,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#initial_delay_sec_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds that the managed instance group waits before
 it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.
@@ -2349,7 +2349,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port number.
 - - -
@@ -2797,7 +2797,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#max_surge_fixed_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge_<wbr>fixed</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with `max_surge_percent`. If neither is set, defaults to 1
 {{% /md %}}</dd>
@@ -2808,7 +2808,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#max_surge_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances(calculated as percentage) that can be created above the specified targetSize during the update process. Conflicts with `max_surge_fixed`.
 {{% /md %}}</dd>
@@ -2819,7 +2819,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#max_unavailable_fixed_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable_<wbr>fixed</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances that can be unavailable during the update process. Conflicts with `max_unavailable_percent`. If neither is set, defaults to 1
 {{% /md %}}</dd>
@@ -2830,7 +2830,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#max_unavailable_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances(calculated as percentage) that can be unavailable during the update process. Conflicts with `max_unavailable_fixed`.
 {{% /md %}}</dd>
@@ -2841,7 +2841,7 @@ it applies autohealing policies to new instances or recently recreated instances
 <a href="#min_ready_sec_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ready_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}, Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600]
 - - -
@@ -3149,7 +3149,7 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
 <a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}, The number of instances which are managed for this version. Conflicts with `percent`.
 {{% /md %}}</dd>
@@ -3160,7 +3160,7 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}, The number of instances (calculated as percentage) which are managed for this version. Conflicts with `fixed`.
 Note that when using `percent`, rounding will be in favor of explicitly set `target_size` values; a managed instance group with 2 instances and 2 `version`s,

@@ -335,7 +335,7 @@ The following output properties are available:
 <a href="#included_permissions_python" style="color: inherit; text-decoration: inherit;">included_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}specifies the list of one or more permissions to include in the custom role, such as - `iam.roles.get`
 {{% /md %}}</dd>

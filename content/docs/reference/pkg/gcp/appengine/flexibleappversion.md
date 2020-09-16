@@ -35,7 +35,7 @@ To get more information about FlexibleAppVersion, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#pulumi_gcp.appengine.FlexibleAppVersion">FlexibleAppVersion</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_config</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionApiConfigArgs]</span> = None<span class="p">, </span><span class="nx">automatic_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionAutomaticScalingArgs]</span> = None<span class="p">, </span><span class="nx">beta_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">default_expiration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_service_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionDeploymentArgs]</span> = None<span class="p">, </span><span class="nx">endpoints_api_service</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEndpointsApiServiceArgs]</span> = None<span class="p">, </span><span class="nx">entrypoint</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEntrypointArgs]</span> = None<span class="p">, </span><span class="nx">env_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">handlers</span><span class="p">:</span> <span class="nx">Optional[List[FlexibleAppVersionHandlerArgs]]</span> = None<span class="p">, </span><span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">liveness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionLivenessCheckArgs]</span> = None<span class="p">, </span><span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionManualScalingArgs]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionNetworkArgs]</span> = None<span class="p">, </span><span class="nx">nobuild_files_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">noop_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">readiness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionReadinessCheckArgs]</span> = None<span class="p">, </span><span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionResourcesArgs]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_channel</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_main_executable_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_access_connector</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionVpcAccessConnectorArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#pulumi_gcp.appengine.FlexibleAppVersion">FlexibleAppVersion</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_config</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionApiConfigArgs]</span> = None<span class="p">, </span><span class="nx">automatic_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionAutomaticScalingArgs]</span> = None<span class="p">, </span><span class="nx">beta_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">default_expiration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_service_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionDeploymentArgs]</span> = None<span class="p">, </span><span class="nx">endpoints_api_service</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEndpointsApiServiceArgs]</span> = None<span class="p">, </span><span class="nx">entrypoint</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEntrypointArgs]</span> = None<span class="p">, </span><span class="nx">env_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">handlers</span><span class="p">:</span> <span class="nx">Optional[Sequence[FlexibleAppVersionHandlerArgs]]</span> = None<span class="p">, </span><span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">liveness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionLivenessCheckArgs]</span> = None<span class="p">, </span><span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionManualScalingArgs]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionNetworkArgs]</span> = None<span class="p">, </span><span class="nx">nobuild_files_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">noop_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">readiness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionReadinessCheckArgs]</span> = None<span class="p">, </span><span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionResourcesArgs]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_channel</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_main_executable_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_access_connector</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionVpcAccessConnectorArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1378,7 +1378,7 @@ Structure is documented below.
 <a href="#handlers_python" style="color: inherit; text-decoration: inherit;">handlers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionhandler">List[Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Args]</a></span>
+        <span class="property-type"><a href="#flexibleappversionhandler">Sequence[Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
 The first matching URL handles the request and other request handlers are not attempted.
@@ -1391,7 +1391,7 @@ Structure is documented below.
 <a href="#inbound_services_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of the types of messages that this application is able to receive.
 Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
@@ -1695,7 +1695,7 @@ Get an existing FlexibleAppVersion resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_config</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionApiConfigArgs]</span> = None<span class="p">, </span><span class="nx">automatic_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionAutomaticScalingArgs]</span> = None<span class="p">, </span><span class="nx">beta_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">default_expiration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_service_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionDeploymentArgs]</span> = None<span class="p">, </span><span class="nx">endpoints_api_service</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEndpointsApiServiceArgs]</span> = None<span class="p">, </span><span class="nx">entrypoint</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEntrypointArgs]</span> = None<span class="p">, </span><span class="nx">env_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">handlers</span><span class="p">:</span> <span class="nx">Optional[List[FlexibleAppVersionHandlerArgs]]</span> = None<span class="p">, </span><span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">liveness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionLivenessCheckArgs]</span> = None<span class="p">, </span><span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionManualScalingArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionNetworkArgs]</span> = None<span class="p">, </span><span class="nx">nobuild_files_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">noop_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">readiness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionReadinessCheckArgs]</span> = None<span class="p">, </span><span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionResourcesArgs]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_channel</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_main_executable_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_access_connector</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionVpcAccessConnectorArgs]</span> = None<span class="p">) -&gt;</span> FlexibleAppVersion</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_config</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionApiConfigArgs]</span> = None<span class="p">, </span><span class="nx">automatic_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionAutomaticScalingArgs]</span> = None<span class="p">, </span><span class="nx">beta_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">default_expiration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_service_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionDeploymentArgs]</span> = None<span class="p">, </span><span class="nx">endpoints_api_service</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEndpointsApiServiceArgs]</span> = None<span class="p">, </span><span class="nx">entrypoint</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEntrypointArgs]</span> = None<span class="p">, </span><span class="nx">env_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">handlers</span><span class="p">:</span> <span class="nx">Optional[Sequence[FlexibleAppVersionHandlerArgs]]</span> = None<span class="p">, </span><span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">liveness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionLivenessCheckArgs]</span> = None<span class="p">, </span><span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionManualScalingArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionNetworkArgs]</span> = None<span class="p">, </span><span class="nx">nobuild_files_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">noop_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">readiness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionReadinessCheckArgs]</span> = None<span class="p">, </span><span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionResourcesArgs]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_channel</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_main_executable_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_access_connector</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionVpcAccessConnectorArgs]</span> = None<span class="p">) -&gt;</span> FlexibleAppVersion</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2967,7 +2967,7 @@ Structure is documented below.
 <a href="#state_handlers_python" style="color: inherit; text-decoration: inherit;">handlers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionhandler">List[Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Args]</a></span>
+        <span class="property-type"><a href="#flexibleappversionhandler">Sequence[Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
 The first matching URL handles the request and other request handlers are not attempted.
@@ -2980,7 +2980,7 @@ Structure is documented below.
 <a href="#state_inbound_services_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of the types of messages that this application is able to receive.
 Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
@@ -3998,7 +3998,7 @@ Structure is documented below.
 <a href="#max_concurrent_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>requests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
 Defaults to a runtime-specific value.
@@ -4010,7 +4010,7 @@ Defaults to a runtime-specific value.
 <a href="#max_idle_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of idle instances that should be maintained for this version.
 {{% /md %}}</dd>
@@ -4032,7 +4032,7 @@ Defaults to a runtime-specific value.
 <a href="#max_total_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>total_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of instances that should be started to handle requests for this version. Default: 20
 {{% /md %}}</dd>
@@ -4043,7 +4043,7 @@ Defaults to a runtime-specific value.
 <a href="#min_idle_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>idle_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
 {{% /md %}}</dd>
@@ -4065,7 +4065,7 @@ Defaults to a runtime-specific value.
 <a href="#min_total_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>total_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of running instances that should be maintained for this version. Default: 2
 {{% /md %}}</dd>
@@ -4412,7 +4412,7 @@ Structure is documented below.
 <a href="#target_read_bytes_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>read_<wbr>bytes_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Target bytes read per second.
 {{% /md %}}</dd>
@@ -4423,7 +4423,7 @@ Structure is documented below.
 <a href="#target_read_ops_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>read_<wbr>ops_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Target ops read per seconds.
 {{% /md %}}</dd>
@@ -4434,7 +4434,7 @@ Structure is documented below.
 <a href="#target_write_bytes_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>write_<wbr>bytes_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Target bytes written per second.
 {{% /md %}}</dd>
@@ -4445,7 +4445,7 @@ Structure is documented below.
 <a href="#target_write_ops_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>write_<wbr>ops_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Target ops written per second.
 {{% /md %}}</dd>
@@ -4634,7 +4634,7 @@ Structure is documented below.
 <a href="#target_received_bytes_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>received_<wbr>bytes_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Target bytes received per second.
 {{% /md %}}</dd>
@@ -4645,7 +4645,7 @@ Structure is documented below.
 <a href="#target_received_packets_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>received_<wbr>packets_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Target packets received per second.
 {{% /md %}}</dd>
@@ -4656,7 +4656,7 @@ Structure is documented below.
 <a href="#target_sent_bytes_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>sent_<wbr>bytes_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Target bytes sent per second.
 {{% /md %}}</dd>
@@ -4667,7 +4667,7 @@ Structure is documented below.
 <a href="#target_sent_packets_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>sent_<wbr>packets_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Target packets sent per second.
 {{% /md %}}</dd>
@@ -5029,7 +5029,7 @@ Structure is documented below.
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentfile">List[Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentfile">Sequence[Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
 All files must be readable using the credentials supplied with this call.
@@ -5587,7 +5587,7 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
 <a href="#files_count_python" style="color: inherit; text-decoration: inherit;">files_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}files count
 {{% /md %}}</dd>
@@ -7243,7 +7243,7 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of instances to assign to the service at the start.
 **Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
@@ -7490,7 +7490,7 @@ If specified, the subnetwork must exist in the same region as the App Engine fle
 <a href="#forwarded_ports_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.
 {{% /md %}}</dd>
@@ -8081,7 +8081,7 @@ Structure is documented below.
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of CPU cores needed.
 {{% /md %}}</dd>
@@ -8092,7 +8092,7 @@ Structure is documented below.
 <a href="#disk_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Disk size (GB) needed.
 {{% /md %}}</dd>
@@ -8114,7 +8114,7 @@ Structure is documented below.
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionresourcesvolume">List[Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#flexibleappversionresourcesvolume">Sequence[Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.
 Structure is documented below.
@@ -8282,7 +8282,7 @@ Structure is documented below.
 <a href="#size_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Volume size in gigabytes.
 {{% /md %}}</dd>

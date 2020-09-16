@@ -514,7 +514,7 @@ The following output properties are available:
 <a href="#cdn_policies_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendbucketcdnpolicy">List[Get<wbr>Backend<wbr>Bucket<wbr>Cdn<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getbackendbucketcdnpolicy">Sequence[Get<wbr>Backend<wbr>Bucket<wbr>Cdn<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket. Structure is documented below.
 {{% /md %}}</dd>
@@ -685,7 +685,7 @@ The following output properties are available:
 <a href="#signed_url_cache_max_age_sec_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>url_<wbr>cache_<wbr>max_<wbr>age_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds the response to a signed URL request will be considered fresh. After this time period, the response will be revalidated before being served. When serving responses to signed URL requests, Cloud CDN will internally behave as though all responses from this backend had a "Cache-Control: public, max-age=[TTL]" header, regardless of any existing Cache-Control header. The actual headers served in responses will not be altered.
 {{% /md %}}</dd>

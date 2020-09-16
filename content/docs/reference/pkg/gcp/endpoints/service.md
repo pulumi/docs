@@ -658,7 +658,7 @@ to compute engine instances as a tag.
 <a href="#apis_python" style="color: inherit; text-decoration: inherit;">apis</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceapi">List[Service<wbr>Api]</a></span>
+        <span class="property-type"><a href="#serviceapi">Sequence[Service<wbr>Api]</a></span>
     </dt>
     <dd>{{% md %}}A list of API objects.
 {{% /md %}}</dd>
@@ -692,7 +692,7 @@ to compute engine instances as a tag.
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpoint">List[Service<wbr>Endpoint]</a></span>
+        <span class="property-type"><a href="#serviceendpoint">Sequence[Service<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}A list of Endpoint objects.
 {{% /md %}}</dd>
@@ -727,7 +727,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apis</span><span class="p">:</span> <span class="nx">Optional[List[ServiceApiArgs]]</span> = None<span class="p">, </span><span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[List[ServiceEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">grpc_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">openapi_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protoc_output_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apis</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceApiArgs]]</span> = None<span class="p">, </span><span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">grpc_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">openapi_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protoc_output_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1177,7 +1177,7 @@ base64-encoded.
 <a href="#state_apis_python" style="color: inherit; text-decoration: inherit;">apis</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceapi">List[Service<wbr>Api<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceapi">Sequence[Service<wbr>Api<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of API objects.
 {{% /md %}}</dd>
@@ -1211,7 +1211,7 @@ to compute engine instances as a tag.
 <a href="#state_endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpoint">List[Service<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceendpoint">Sequence[Service<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Endpoint objects.
 {{% /md %}}</dd>
@@ -1454,7 +1454,7 @@ base64-encoded.
 <a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceapimethod">List[Service<wbr>Api<wbr>Method<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceapimethod">Sequence[Service<wbr>Api<wbr>Method<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

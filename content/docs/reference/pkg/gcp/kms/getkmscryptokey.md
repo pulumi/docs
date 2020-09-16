@@ -550,7 +550,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 <a href="#version_templates_python" style="color: inherit; text-decoration: inherit;">version_<wbr>templates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkmscryptokeyversiontemplate">List[Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Template]</a></span>
+        <span class="property-type"><a href="#getkmscryptokeyversiontemplate">Sequence[Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Template]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

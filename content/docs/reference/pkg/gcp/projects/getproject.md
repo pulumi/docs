@@ -281,7 +281,7 @@ The following output properties are available:
 <a href="#projects_python" style="color: inherit; text-decoration: inherit;">projects</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectproject">List[Get<wbr>Project<wbr>Project]</a></span>
+        <span class="property-type"><a href="#getprojectproject">Sequence[Get<wbr>Project<wbr>Project]</a></span>
     </dt>
     <dd>{{% md %}}A list of projects matching the provided filter. Structure is defined below.
 {{% /md %}}</dd>

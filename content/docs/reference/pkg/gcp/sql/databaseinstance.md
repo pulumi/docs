@@ -1100,7 +1100,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstanceipaddress">List[Database<wbr>Instance<wbr>Ip<wbr>Address]</a></span>
+        <span class="property-type"><a href="#databaseinstanceipaddress">Sequence[Database<wbr>Instance<wbr>Ip<wbr>Address]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1179,7 +1179,7 @@ Get an existing DatabaseInstance resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[DatabaseInstanceIpAddressArgs]]</span> = None<span class="p">, </span><span class="nx">master_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replica_configuration</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceReplicaConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_ca_cert</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceServerCaCertArgs]</span> = None<span class="p">, </span><span class="nx">service_account_email_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceSettingsArgs]</span> = None<span class="p">) -&gt;</span> DatabaseInstance</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseInstanceIpAddressArgs]]</span> = None<span class="p">, </span><span class="nx">master_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replica_configuration</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceReplicaConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_ca_cert</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceServerCaCertArgs]</span> = None<span class="p">, </span><span class="nx">service_account_email_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceSettingsArgs]</span> = None<span class="p">) -&gt;</span> DatabaseInstance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2004,7 +2004,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
 <a href="#state_ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstanceipaddress">List[Database<wbr>Instance<wbr>Ip<wbr>Address<wbr>Args]</a></span>
+        <span class="property-type"><a href="#databaseinstanceipaddress">Sequence[Database<wbr>Instance<wbr>Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2802,7 +2802,7 @@ corresponding public key in encoded in the `client_certificate`.
 <a href="#connect_retry_interval_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>retry_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds
 between connect retries.
@@ -2840,7 +2840,7 @@ the new master instance.
 <a href="#master_heartbeat_period_python" style="color: inherit; text-decoration: inherit;">master_<wbr>heartbeat_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time in ms between replication
 heartbeats.
@@ -3812,7 +3812,7 @@ active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
 <a href="#authorized_gae_applications_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>gae_<wbr>applications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}This property is only applicable to First Generation instances.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
@@ -3865,7 +3865,7 @@ when crash-safe replication flags are enabled.
 <a href="#database_flags_python" style="color: inherit; text-decoration: inherit;">database_<wbr>flags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsdatabaseflag">List[Database<wbr>Instance<wbr>Settings<wbr>Database<wbr>Flag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsdatabaseflag">Sequence[Database<wbr>Instance<wbr>Settings<wbr>Database<wbr>Flag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3886,7 +3886,7 @@ when crash-safe replication flags are enabled.
 <a href="#disk_size_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased.
 {{% /md %}}</dd>
@@ -3974,7 +3974,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4596,7 +4596,7 @@ for users connecting over IP.
 <a href="#authorized_networks_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsipconfigurationauthorizednetwork">List[Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network<wbr>Args]</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsipconfigurationauthorizednetwork">Sequence[Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5126,7 +5126,7 @@ in. Must be in the same region as this instance.
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Day of week (`1-7`), starting on Monday
 {{% /md %}}</dd>
@@ -5137,7 +5137,7 @@ in. Must be in the same region as this instance.
 <a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Hour of day (`0-23`), ignored if `day` not set
 {{% /md %}}</dd>

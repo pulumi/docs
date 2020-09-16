@@ -583,7 +583,7 @@ configuration in order to serve the application via this domain mapping.
 <a href="#resource_records_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingresourcerecord">List[Domain<wbr>Mapping<wbr>Resource<wbr>Record]</a></span>
+        <span class="property-type"><a href="#domainmappingresourcerecord">Sequence[Domain<wbr>Mapping<wbr>Resource<wbr>Record]</a></span>
     </dt>
     <dd>{{% md %}}The resource records required to configure this domain mapping. These records must be added to the domain's DNS
 configuration in order to serve the application via this domain mapping.
@@ -609,7 +609,7 @@ Get an existing DomainMapping resource's state with the given name, ID, and opti
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">override_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_records</span><span class="p">:</span> <span class="nx">Optional[List[DomainMappingResourceRecordArgs]]</span> = None<span class="p">, </span><span class="nx">ssl_settings</span><span class="p">:</span> <span class="nx">Optional[DomainMappingSslSettingsArgs]</span> = None<span class="p">) -&gt;</span> DomainMapping</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">override_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainMappingResourceRecordArgs]]</span> = None<span class="p">, </span><span class="nx">ssl_settings</span><span class="p">:</span> <span class="nx">Optional[DomainMappingSslSettingsArgs]</span> = None<span class="p">) -&gt;</span> DomainMapping</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1014,7 +1014,7 @@ If it is not provided, the provider project is used.
 <a href="#state_resource_records_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingresourcerecord">List[Domain<wbr>Mapping<wbr>Resource<wbr>Record<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainmappingresourcerecord">Sequence[Domain<wbr>Mapping<wbr>Resource<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The resource records required to configure this domain mapping. These records must be added to the domain's DNS
 configuration in order to serve the application via this domain mapping.

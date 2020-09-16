@@ -29,7 +29,7 @@ To get more information about Policy, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/binaryauthorization/#pulumi_gcp.binaryauthorization.Policy">Policy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admission_whitelist_patterns</span><span class="p">:</span> <span class="nx">Optional[List[PolicyAdmissionWhitelistPatternArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_admission_rules</span><span class="p">:</span> <span class="nx">Optional[List[PolicyClusterAdmissionRuleArgs]]</span> = None<span class="p">, </span><span class="nx">default_admission_rule</span><span class="p">:</span> <span class="nx">Optional[PolicyDefaultAdmissionRuleArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_policy_evaluation_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/binaryauthorization/#pulumi_gcp.binaryauthorization.Policy">Policy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admission_whitelist_patterns</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyAdmissionWhitelistPatternArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_admission_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyClusterAdmissionRuleArgs]]</span> = None<span class="p">, </span><span class="nx">default_admission_rule</span><span class="p">:</span> <span class="nx">Optional[PolicyDefaultAdmissionRuleArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_policy_evaluation_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -478,7 +478,7 @@ Structure is documented below.
 <a href="#admission_whitelist_patterns_python" style="color: inherit; text-decoration: inherit;">admission_<wbr>whitelist_<wbr>patterns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyadmissionwhitelistpattern">List[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policyadmissionwhitelistpattern">Sequence[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
@@ -492,7 +492,7 @@ Structure is documented below.
 <a href="#cluster_admission_rules_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>admission_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyclusteradmissionrule">List[Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policyclusteradmissionrule">Sequence[Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
 all container images used in a pod creation request must be attested
@@ -637,7 +637,7 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admission_whitelist_patterns</span><span class="p">:</span> <span class="nx">Optional[List[PolicyAdmissionWhitelistPatternArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_admission_rules</span><span class="p">:</span> <span class="nx">Optional[List[PolicyClusterAdmissionRuleArgs]]</span> = None<span class="p">, </span><span class="nx">default_admission_rule</span><span class="p">:</span> <span class="nx">Optional[PolicyDefaultAdmissionRuleArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_policy_evaluation_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admission_whitelist_patterns</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyAdmissionWhitelistPatternArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_admission_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyClusterAdmissionRuleArgs]]</span> = None<span class="p">, </span><span class="nx">default_admission_rule</span><span class="p">:</span> <span class="nx">Optional[PolicyDefaultAdmissionRuleArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_policy_evaluation_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1015,7 +1015,7 @@ If it is not provided, the provider project is used.
 <a href="#state_admission_whitelist_patterns_python" style="color: inherit; text-decoration: inherit;">admission_<wbr>whitelist_<wbr>patterns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyadmissionwhitelistpattern">List[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policyadmissionwhitelistpattern">Sequence[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
@@ -1029,7 +1029,7 @@ Structure is documented below.
 <a href="#state_cluster_admission_rules_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>admission_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyclusteradmissionrule">List[Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policyclusteradmissionrule">Sequence[Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
 all container images used in a pod creation request must be attested
@@ -1444,7 +1444,7 @@ Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 <a href="#require_attestations_bies_python" style="color: inherit; text-decoration: inherit;">require_<wbr>attestations_<wbr>bies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The resource names of the attestors that must attest to a
 container image. If the attestor is in a different project from the
@@ -1658,7 +1658,7 @@ Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 <a href="#require_attestations_bies_python" style="color: inherit; text-decoration: inherit;">require_<wbr>attestations_<wbr>bies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The resource names of the attestors that must attest to a
 container image. If the attestor is in a different project from the

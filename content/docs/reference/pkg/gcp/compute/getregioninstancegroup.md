@@ -546,7 +546,7 @@ The following output properties are available:
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getregioninstancegroupinstance">List[Get<wbr>Region<wbr>Instance<wbr>Group<wbr>Instance]</a></span>
+        <span class="property-type"><a href="#getregioninstancegroupinstance">Sequence[Get<wbr>Region<wbr>Instance<wbr>Group<wbr>Instance]</a></span>
     </dt>
     <dd>{{% md %}}List of instances in the group, as a list of resources, each containing:
 {{% /md %}}</dd>
@@ -598,7 +598,7 @@ The following output properties are available:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of instances in the group.
 {{% /md %}}</dd>
@@ -771,7 +771,7 @@ The following output properties are available:
 <a href="#named_ports_python" style="color: inherit; text-decoration: inherit;">named_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getregioninstancegroupinstancenamedport">List[Get<wbr>Region<wbr>Instance<wbr>Group<wbr>Instance<wbr>Named<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getregioninstancegroupinstancenamedport">Sequence[Get<wbr>Region<wbr>Instance<wbr>Group<wbr>Instance<wbr>Named<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of named ports in the group, as a list of resources, each containing:
 {{% /md %}}</dd>
@@ -916,7 +916,7 @@ The following output properties are available:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Integer port number
 {{% /md %}}</dd>

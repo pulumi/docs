@@ -1403,7 +1403,7 @@ Structure is documented below.
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionperinstanceconfigpreservedstatedisk">List[Region<wbr>Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#regionperinstanceconfigpreservedstatedisk">Sequence[Region<wbr>Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Stateful disks for the instance.
 Structure is documented below.

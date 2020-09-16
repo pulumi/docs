@@ -31,7 +31,7 @@ To get more information about ServicePerimeters, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/accesscontextmanager/#pulumi_gcp.accesscontextmanager.ServicePerimeters">ServicePerimeters</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_perimeters</span><span class="p">:</span> <span class="nx">Optional[List[ServicePerimetersServicePerimeterArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/accesscontextmanager/#pulumi_gcp.accesscontextmanager.ServicePerimeters">ServicePerimeters</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_perimeters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePerimetersServicePerimeterArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -314,7 +314,7 @@ Format: accessPolicies/{policy_id}
 <a href="#service_perimeters_python" style="color: inherit; text-decoration: inherit;">service_<wbr>perimeters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeter">List[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeter">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The desired Service Perimeters that should replace all existing Service Perimeters in the Access Policy.
 Structure is documented below.
@@ -419,7 +419,7 @@ Get an existing ServicePerimeters resource's state with the given name, ID, and 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_perimeters</span><span class="p">:</span> <span class="nx">Optional[List[ServicePerimetersServicePerimeterArgs]]</span> = None<span class="p">) -&gt;</span> ServicePerimeters</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_perimeters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePerimetersServicePerimeterArgs]]</span> = None<span class="p">) -&gt;</span> ServicePerimeters</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -644,7 +644,7 @@ Format: accessPolicies/{policy_id}
 <a href="#state_service_perimeters_python" style="color: inherit; text-decoration: inherit;">service_<wbr>perimeters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeter">List[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeter">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The desired Service Perimeters that should replace all existing Service Perimeters in the Access Policy.
 Structure is documented below.
@@ -1472,7 +1472,7 @@ Structure is documented below.
 <a href="#access_levels_python" style="color: inherit; text-decoration: inherit;">access_<wbr>levels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
@@ -1491,7 +1491,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
 Currently only projects are allowed.
@@ -1504,7 +1504,7 @@ Format: projects/{project_number}
 <a href="#restricted_services_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}GCP services that are subject to the Service Perimeter
 restrictions. Must contain a list of services. For example, if
@@ -1650,7 +1650,7 @@ list of APIs specified in 'allowedServices'.
 <a href="#allowed_services_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
 Must be empty unless `enableRestriction` is True.
@@ -1900,7 +1900,7 @@ Structure is documented below.
 <a href="#access_levels_python" style="color: inherit; text-decoration: inherit;">access_<wbr>levels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
@@ -1919,7 +1919,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
 Currently only projects are allowed.
@@ -1932,7 +1932,7 @@ Format: projects/{project_number}
 <a href="#restricted_services_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}GCP services that are subject to the Service Perimeter
 restrictions. Must contain a list of services. For example, if
@@ -2078,7 +2078,7 @@ list of APIs specified in 'allowedServices'.
 <a href="#allowed_services_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
 Must be empty unless `enableRestriction` is True.

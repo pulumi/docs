@@ -39,7 +39,7 @@ To get more information about HealthCheck, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.HealthCheck">HealthCheck</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">check_interval_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grpc_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckGrpcHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">healthy_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">http2_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttp2HealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">http_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttpHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">https_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttpsHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[HealthCheckLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckSslHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">tcp_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckTcpHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">unhealthy_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.HealthCheck">HealthCheck</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">check_interval_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grpc_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckGrpcHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">healthy_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">http2_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttp2HealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">http_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttpHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">https_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttpsHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[HealthCheckLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckSslHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">tcp_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckTcpHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">unhealthy_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -757,7 +757,7 @@ consecutive failures. The default value is 2.
 <a href="#check_interval_sec_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
 seconds.
@@ -793,7 +793,7 @@ Structure is documented below.
 <a href="#healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
 consecutive successes. The default value is 2.
@@ -905,7 +905,7 @@ Structure is documented below.
 <a href="#timeout_sec_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
@@ -918,7 +918,7 @@ greater value than checkIntervalSec.
 <a href="#unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2.
@@ -1155,7 +1155,7 @@ Get an existing HealthCheck resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">check_interval_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grpc_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckGrpcHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">healthy_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">http2_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttp2HealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">http_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttpHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">https_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttpsHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[HealthCheckLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckSslHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">tcp_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckTcpHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unhealthy_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> HealthCheck</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">check_interval_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grpc_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckGrpcHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">healthy_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">http2_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttp2HealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">http_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttpHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">https_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttpsHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[HealthCheckLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckSslHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">tcp_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckTcpHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unhealthy_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> HealthCheck</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1914,7 +1914,7 @@ consecutive failures. The default value is 2.
 <a href="#state_check_interval_sec_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
 seconds.
@@ -1961,7 +1961,7 @@ Structure is documented below.
 <a href="#state_healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
 consecutive successes. The default value is 2.
@@ -2084,7 +2084,7 @@ Structure is documented below.
 <a href="#state_timeout_sec_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
@@ -2108,7 +2108,7 @@ greater value than checkIntervalSec.
 <a href="#state_unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2.
@@ -2372,7 +2372,7 @@ The grpcServiceName can only be ASCII.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
@@ -2771,7 +2771,7 @@ check is performed will be used.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
@@ -3209,7 +3209,7 @@ check is performed will be used.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
@@ -3647,7 +3647,7 @@ check is performed will be used.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
@@ -4133,7 +4133,7 @@ can only be ASCII.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
@@ -4527,7 +4527,7 @@ can only be ASCII.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set

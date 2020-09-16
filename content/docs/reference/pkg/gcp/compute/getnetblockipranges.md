@@ -324,7 +324,7 @@ The following output properties are available:
 <a href="#cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Retrieve list of all CIDR blocks.
 {{% /md %}}</dd>
@@ -335,7 +335,7 @@ The following output properties are available:
 <a href="#cidr_blocks_ipv4s_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks_<wbr>ipv4s</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Retrieve list of the IPv4 CIDR blocks
 {{% /md %}}</dd>
@@ -346,7 +346,7 @@ The following output properties are available:
 <a href="#cidr_blocks_ipv6s_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks_<wbr>ipv6s</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Retrieve list of the IPv6 CIDR blocks, if available.
 {{% /md %}}</dd>

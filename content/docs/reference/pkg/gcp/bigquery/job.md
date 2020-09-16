@@ -1729,7 +1729,7 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 <a href="#source_tables_python" style="color: inherit; text-decoration: inherit;">source_<wbr>tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopysourcetable">List[Job<wbr>Copy<wbr>Source<wbr>Table<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobcopysourcetable">Sequence[Job<wbr>Copy<wbr>Source<wbr>Table<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Source tables to copy.
 Structure is documented below.
@@ -2585,7 +2585,7 @@ Structure is documented below.
 <a href="#destination_uris_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
 {{% /md %}}</dd>
@@ -3886,7 +3886,7 @@ Structure is documented below.
 <a href="#source_uris_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The fully-qualified URIs that point to your data in Google Cloud.
 For Google Cloud Storage URIs: Each URI can contain one '*' wildcard character
@@ -4007,7 +4007,7 @@ JSON: Named values that don't match any column names
 <a href="#max_bad_records_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bad_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of bad records that BigQuery can ignore when running the job. If the number of bad records exceeds this value,
 an invalid error is returned in the job result. The default value is 0, which requires that all records are valid.
@@ -4033,7 +4033,7 @@ an empty value.
 <a href="#projection_fields_python" style="color: inherit; text-decoration: inherit;">projection_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}If sourceFormat is set to "DATASTORE_BACKUP", indicates which entity properties to load into BigQuery from a Cloud Datastore backup.
 Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties.
@@ -4060,7 +4060,7 @@ If your data contains quoted newline characters, you must also set the allowQuot
 <a href="#schema_update_options_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>update_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
 supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
@@ -4076,7 +4076,7 @@ ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema t
 <a href="#skip_leading_rows_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>leading_<wbr>rows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of rows at the top of a CSV file that BigQuery will skip when loading the data.
 The default value is 0. This property is useful if you have header rows in the file that should be skipped.
@@ -5398,7 +5398,7 @@ allowLargeResults must be true if this is set to false. For standard SQL queries
 <a href="#maximum_billing_tier_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>billing_<wbr>tier</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge).
 If unspecified, this will be set to your project default.
@@ -5446,7 +5446,7 @@ Possible values are `INTERACTIVE` and `BATCH`.
 <a href="#schema_update_options_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>update_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
 supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
@@ -5499,7 +5499,7 @@ The default value is true.
 <a href="#user_defined_function_resources_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>function_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">List[Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">Sequence[Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes user-defined function resources used in the query.
 Structure is documented below.

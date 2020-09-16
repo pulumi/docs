@@ -1296,7 +1296,7 @@ Structure is documented below.
 <a href="#replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreplicationusermanagedreplica">List[Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretreplicationusermanagedreplica">Sequence[Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Replicas for this Secret. Cannot be empty.
 Structure is documented below.

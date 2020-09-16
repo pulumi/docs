@@ -1412,7 +1412,7 @@ will be used to run this environment.
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Kubernetes Engine cluster that
 will be used to run this environment.
@@ -1995,7 +1995,7 @@ and region.
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The disk size in GB used for node VMs. Minimum size is 20GB.
 If unspecified, defaults to 100GB. Cannot be updated.
@@ -2047,7 +2047,7 @@ communications, specified as a self-link, relative resource name
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available on all node
 VMs. Cannot be updated. If empty, defaults to
@@ -2089,7 +2089,7 @@ network must also be provided and the subnetwork must belong to the enclosing en
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of instance tags applied to all node VMs. Tags are
 used to identify valid sources or targets for network
@@ -3309,7 +3309,7 @@ A collection of allowed IP ranges with descriptions. Structure is documented bel
 <a href="#allowed_ip_ranges_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrolallowediprange">List[Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrolallowediprange">Sequence[Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}-
 A collection of allowed IP ranges with descriptions. Structure is documented below.

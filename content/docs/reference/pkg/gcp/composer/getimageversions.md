@@ -351,7 +351,7 @@ The following output properties are available:
 <a href="#image_versions_python" style="color: inherit; text-decoration: inherit;">image_<wbr>versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getimageversionsimageversion">List[Get<wbr>Image<wbr>Versions<wbr>Image<wbr>Version]</a></span>
+        <span class="property-type"><a href="#getimageversionsimageversion">Sequence[Get<wbr>Image<wbr>Versions<wbr>Image<wbr>Version]</a></span>
     </dt>
     <dd>{{% md %}}A list of composer image versions available in the given project and location. Each `image_version` contains:
 {{% /md %}}</dd>
@@ -511,7 +511,7 @@ The following output properties are available:
 <a href="#supported_python_versions_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>python_<wbr>versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Supported python versions for this image version
 {{% /md %}}</dd>

@@ -1026,7 +1026,7 @@ The following output properties are available:
 <a href="#affinity_cookie_ttl_sec_python" style="color: inherit; text-decoration: inherit;">affinity_<wbr>cookie_<wbr>ttl_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1036,7 +1036,7 @@ The following output properties are available:
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendservicebackend">List[Get<wbr>Backend<wbr>Service<wbr>Backend]</a></span>
+        <span class="property-type"><a href="#getbackendservicebackend">Sequence[Get<wbr>Backend<wbr>Service<wbr>Backend]</a></span>
     </dt>
     <dd>{{% md %}}The set of backends that serve this Backend Service.
 {{% /md %}}</dd>
@@ -1047,7 +1047,7 @@ The following output properties are available:
 <a href="#cdn_policies_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendservicecdnpolicy">List[Get<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getbackendservicecdnpolicy">Sequence[Get<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1057,7 +1057,7 @@ The following output properties are available:
 <a href="#circuit_breakers_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>breakers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendservicecircuitbreaker">List[Get<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breaker]</a></span>
+        <span class="property-type"><a href="#getbackendservicecircuitbreaker">Sequence[Get<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breaker]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1067,7 +1067,7 @@ The following output properties are available:
 <a href="#connection_draining_timeout_sec_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>draining_<wbr>timeout_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time for which instance will be drained (not accept new connections, but still work to finish started ones).
 {{% /md %}}</dd>
@@ -1078,7 +1078,7 @@ The following output properties are available:
 <a href="#consistent_hash_python" style="color: inherit; text-decoration: inherit;">consistent_<wbr>hash</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendserviceconsistenthash">List[Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash]</a></span>
+        <span class="property-type"><a href="#getbackendserviceconsistenthash">Sequence[Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1098,7 +1098,7 @@ The following output properties are available:
 <a href="#custom_request_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>request_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1141,7 +1141,7 @@ The following output properties are available:
 <a href="#health_checks_python" style="color: inherit; text-decoration: inherit;">health_<wbr>checks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of HTTP/HTTPS health checks used by the Backend Service.
 {{% /md %}}</dd>
@@ -1152,7 +1152,7 @@ The following output properties are available:
 <a href="#iaps_python" style="color: inherit; text-decoration: inherit;">iaps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendserviceiap">List[Get<wbr>Backend<wbr>Service<wbr>Iap]</a></span>
+        <span class="property-type"><a href="#getbackendserviceiap">Sequence[Get<wbr>Backend<wbr>Service<wbr>Iap]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1193,7 +1193,7 @@ The following output properties are available:
 <a href="#log_configs_python" style="color: inherit; text-decoration: inherit;">log_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendservicelogconfig">List[Get<wbr>Backend<wbr>Service<wbr>Log<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getbackendservicelogconfig">Sequence[Get<wbr>Backend<wbr>Service<wbr>Log<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1213,7 +1213,7 @@ The following output properties are available:
 <a href="#outlier_detections_python" style="color: inherit; text-decoration: inherit;">outlier_<wbr>detections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendserviceoutlierdetection">List[Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection]</a></span>
+        <span class="property-type"><a href="#getbackendserviceoutlierdetection">Sequence[Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1277,7 +1277,7 @@ The following output properties are available:
 <a href="#timeout_sec_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds to wait for a backend to respond to a request before considering the request failed.
 {{% /md %}}</dd>
@@ -1724,7 +1724,7 @@ The following output properties are available:
 <a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1734,7 +1734,7 @@ The following output properties are available:
 <a href="#max_connections_per_endpoint_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1744,7 +1744,7 @@ The following output properties are available:
 <a href="#max_connections_per_instance_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1754,7 +1754,7 @@ The following output properties are available:
 <a href="#max_rate_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1900,7 +1900,7 @@ The following output properties are available:
 <a href="#cache_key_policies_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendservicecdnpolicycachekeypolicy">List[Get<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getbackendservicecdnpolicycachekeypolicy">Sequence[Get<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1910,7 +1910,7 @@ The following output properties are available:
 <a href="#signed_url_cache_max_age_sec_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>url_<wbr>cache_<wbr>max_<wbr>age_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2146,7 +2146,7 @@ The following output properties are available:
 <a href="#query_string_blacklists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>blacklists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2156,7 +2156,7 @@ The following output properties are available:
 <a href="#query_string_whitelists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>whitelists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2392,7 +2392,7 @@ The following output properties are available:
 <a href="#connect_timeouts_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeouts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendservicecircuitbreakerconnecttimeout">List[Get<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breaker<wbr>Connect<wbr>Timeout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getbackendservicecircuitbreakerconnecttimeout">Sequence[Get<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breaker<wbr>Connect<wbr>Timeout<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2402,7 +2402,7 @@ The following output properties are available:
 <a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2412,7 +2412,7 @@ The following output properties are available:
 <a href="#max_pending_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pending_<wbr>requests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2422,7 +2422,7 @@ The following output properties are available:
 <a href="#max_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2432,7 +2432,7 @@ The following output properties are available:
 <a href="#max_requests_per_connection_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests_<wbr>per_<wbr>connection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2442,7 +2442,7 @@ The following output properties are available:
 <a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2558,7 +2558,7 @@ The following output properties are available:
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2568,7 +2568,7 @@ The following output properties are available:
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2714,7 +2714,7 @@ The following output properties are available:
 <a href="#http_cookies_python" style="color: inherit; text-decoration: inherit;">http_<wbr>cookies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendserviceconsistenthashhttpcooky">List[Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getbackendserviceconsistenthashhttpcooky">Sequence[Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2734,7 +2734,7 @@ The following output properties are available:
 <a href="#minimum_ring_size_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>ring_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2904,7 +2904,7 @@ The following output properties are available:
 <a href="#ttls_python" style="color: inherit; text-decoration: inherit;">ttls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendserviceconsistenthashhttpcookyttl">List[Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky<wbr>Ttl<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getbackendserviceconsistenthashhttpcookyttl">Sequence[Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky<wbr>Ttl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3020,7 +3020,7 @@ The following output properties are available:
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3030,7 +3030,7 @@ The following output properties are available:
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3708,7 +3708,7 @@ The following output properties are available:
 <a href="#base_ejection_times_python" style="color: inherit; text-decoration: inherit;">base_<wbr>ejection_<wbr>times</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendserviceoutlierdetectionbaseejectiontime">List[Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getbackendserviceoutlierdetectionbaseejectiontime">Sequence[Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3718,7 +3718,7 @@ The following output properties are available:
 <a href="#consecutive_errors_python" style="color: inherit; text-decoration: inherit;">consecutive_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3728,7 +3728,7 @@ The following output properties are available:
 <a href="#consecutive_gateway_failure_python" style="color: inherit; text-decoration: inherit;">consecutive_<wbr>gateway_<wbr>failure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3738,7 +3738,7 @@ The following output properties are available:
 <a href="#enforcing_consecutive_errors_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>consecutive_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3748,7 +3748,7 @@ The following output properties are available:
 <a href="#enforcing_consecutive_gateway_failure_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>consecutive_<wbr>gateway_<wbr>failure</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3758,7 +3758,7 @@ The following output properties are available:
 <a href="#enforcing_success_rate_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>success_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3768,7 +3768,7 @@ The following output properties are available:
 <a href="#intervals_python" style="color: inherit; text-decoration: inherit;">intervals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendserviceoutlierdetectioninterval">List[Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getbackendserviceoutlierdetectioninterval">Sequence[Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3778,7 +3778,7 @@ The following output properties are available:
 <a href="#max_ejection_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ejection_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3788,7 +3788,7 @@ The following output properties are available:
 <a href="#success_rate_minimum_hosts_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>minimum_<wbr>hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3798,7 +3798,7 @@ The following output properties are available:
 <a href="#success_rate_request_volume_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>request_<wbr>volume</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3808,7 +3808,7 @@ The following output properties are available:
 <a href="#success_rate_stdev_factor_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>stdev_<wbr>factor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3924,7 +3924,7 @@ The following output properties are available:
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3934,7 +3934,7 @@ The following output properties are available:
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4050,7 +4050,7 @@ The following output properties are available:
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4060,7 +4060,7 @@ The following output properties are available:
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

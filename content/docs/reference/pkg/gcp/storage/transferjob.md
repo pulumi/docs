@@ -1594,7 +1594,7 @@ is not provided, the provider project is used.
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.
 {{% /md %}}</dd>
@@ -1605,7 +1605,7 @@ is not provided, the provider project is used.
 <a href="#month_python" style="color: inherit; text-decoration: inherit;">month</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12.
 {{% /md %}}</dd>
@@ -1616,7 +1616,7 @@ is not provided, the provider project is used.
 <a href="#year_python" style="color: inherit; text-decoration: inherit;">year</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.
 {{% /md %}}</dd>
@@ -1772,7 +1772,7 @@ is not provided, the provider project is used.
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.
 {{% /md %}}</dd>
@@ -1783,7 +1783,7 @@ is not provided, the provider project is used.
 <a href="#month_python" style="color: inherit; text-decoration: inherit;">month</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12.
 {{% /md %}}</dd>
@@ -1794,7 +1794,7 @@ is not provided, the provider project is used.
 <a href="#year_python" style="color: inherit; text-decoration: inherit;">year</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.
 {{% /md %}}</dd>
@@ -1983,7 +1983,7 @@ is not provided, the provider project is used.
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23
 {{% /md %}}</dd>
@@ -1994,7 +1994,7 @@ is not provided, the provider project is used.
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
 {{% /md %}}</dd>
@@ -2005,7 +2005,7 @@ is not provided, the provider project is used.
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 {{% /md %}}</dd>
@@ -2016,7 +2016,7 @@ is not provided, the provider project is used.
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59.
 {{% /md %}}</dd>
@@ -3053,7 +3053,7 @@ is not provided, the provider project is used.
 <a href="#exclude_prefixes_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}`exclude_prefixes` must follow the requirements described for `include_prefixes`. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
 {{% /md %}}</dd>
@@ -3064,7 +3064,7 @@ is not provided, the provider project is used.
 <a href="#include_prefixes_python" style="color: inherit; text-decoration: inherit;">include_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}If `include_refixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
 {{% /md %}}</dd>

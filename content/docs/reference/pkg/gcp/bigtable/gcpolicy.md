@@ -25,7 +25,7 @@ Creates a Google Cloud Bigtable GC Policy inside a family. For more information 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigtable/#pulumi_gcp.bigtable.GCPolicy">GCPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_ages</span><span class="p">:</span> <span class="nx">Optional[List[GCPolicyMaxAgeArgs]]</span> = None<span class="p">, </span><span class="nx">max_versions</span><span class="p">:</span> <span class="nx">Optional[List[GCPolicyMaxVersionArgs]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigtable/#pulumi_gcp.bigtable.GCPolicy">GCPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_ages</span><span class="p">:</span> <span class="nx">Optional[Sequence[GCPolicyMaxAgeArgs]]</span> = None<span class="p">, </span><span class="nx">max_versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[GCPolicyMaxVersionArgs]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -488,7 +488,7 @@ The GCPolicy resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#max_ages_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">List[GCPolicy<wbr>Max<wbr>Age<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">Sequence[GCPolicy<wbr>Max<wbr>Age<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd>
@@ -499,7 +499,7 @@ The GCPolicy resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#max_versions_python" style="color: inherit; text-decoration: inherit;">max_<wbr>versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxversion">List[GCPolicy<wbr>Max<wbr>Version<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gcpolicymaxversion">Sequence[GCPolicy<wbr>Max<wbr>Version<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all versions of a cell except for the most recent.
 {{% /md %}}</dd>
@@ -625,7 +625,7 @@ Get an existing GCPolicy resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_ages</span><span class="p">:</span> <span class="nx">Optional[List[GCPolicyMaxAgeArgs]]</span> = None<span class="p">, </span><span class="nx">max_versions</span><span class="p">:</span> <span class="nx">Optional[List[GCPolicyMaxVersionArgs]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GCPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_ages</span><span class="p">:</span> <span class="nx">Optional[Sequence[GCPolicyMaxAgeArgs]]</span> = None<span class="p">, </span><span class="nx">max_versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[GCPolicyMaxVersionArgs]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GCPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1019,7 +1019,7 @@ The following state arguments are supported:
 <a href="#state_max_ages_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">List[GCPolicy<wbr>Max<wbr>Age<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">Sequence[GCPolicy<wbr>Max<wbr>Age<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd>
@@ -1030,7 +1030,7 @@ The following state arguments are supported:
 <a href="#state_max_versions_python" style="color: inherit; text-decoration: inherit;">max_<wbr>versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxversion">List[GCPolicy<wbr>Max<wbr>Version<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gcpolicymaxversion">Sequence[GCPolicy<wbr>Max<wbr>Version<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all versions of a cell except for the most recent.
 {{% /md %}}</dd>
@@ -1161,7 +1161,7 @@ The following state arguments are supported:
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of days before applying GC policy.
 {{% /md %}}</dd>
@@ -1251,7 +1251,7 @@ The following state arguments are supported:
 <a href="#number_python" style="color: inherit; text-decoration: inherit;">number</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of version before applying the GC policy.
 {{% /md %}}</dd>

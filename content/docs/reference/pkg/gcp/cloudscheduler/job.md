@@ -3169,7 +3169,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'.
 <a href="#max_doublings_python" style="color: inherit; text-decoration: inherit;">max_<wbr>doublings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time between retries will double maxDoublings times.
 A job's retry interval starts at minBackoffDuration,
@@ -3208,7 +3208,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'.
 <a href="#retry_count_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of attempts that the system will make to run a
 job using the exponential backoff procedure described by maxDoublings.

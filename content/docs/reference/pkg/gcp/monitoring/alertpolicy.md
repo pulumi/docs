@@ -31,7 +31,7 @@ To get more information about AlertPolicy, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/monitoring/#pulumi_gcp.monitoring.AlertPolicy">AlertPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">combiner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[List[AlertPolicyConditionArgs]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">documentation</span><span class="p">:</span> <span class="nx">Optional[AlertPolicyDocumentationArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notification_channels</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/monitoring/#pulumi_gcp.monitoring.AlertPolicy">AlertPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">combiner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyConditionArgs]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">documentation</span><span class="p">:</span> <span class="nx">Optional[AlertPolicyDocumentationArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notification_channels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -582,7 +582,7 @@ Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycondition">List[Alert<wbr>Policy<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertpolicycondition">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
 AND or OR according to the combiner field. If the combined conditions
@@ -638,7 +638,7 @@ Structure is documented below.
 <a href="#notification_channels_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>channels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be
 sent when incidents are opened or closed or when new violations occur
@@ -891,7 +891,7 @@ Get an existing AlertPolicy resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">combiner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[List[AlertPolicyConditionArgs]]</span> = None<span class="p">, </span><span class="nx">creation_record</span><span class="p">:</span> <span class="nx">Optional[AlertPolicyCreationRecordArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">documentation</span><span class="p">:</span> <span class="nx">Optional[AlertPolicyDocumentationArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_channels</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> AlertPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">combiner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyConditionArgs]]</span> = None<span class="p">, </span><span class="nx">creation_record</span><span class="p">:</span> <span class="nx">Optional[AlertPolicyCreationRecordArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">documentation</span><span class="p">:</span> <span class="nx">Optional[AlertPolicyDocumentationArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_channels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> AlertPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1471,7 +1471,7 @@ Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 <a href="#state_conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycondition">List[Alert<wbr>Policy<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertpolicycondition">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
 AND or OR according to the combiner field. If the combined conditions
@@ -1556,7 +1556,7 @@ policy.
 <a href="#state_notification_channels_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>channels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be
 sent when incidents are opened or closed or when new violations occur
@@ -2227,7 +2227,7 @@ alerted on quickly.
 <a href="#aggregations_python" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">List[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series as well as how to
@@ -2735,7 +2735,7 @@ Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `R
 <a href="#group_by_fields_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -2922,7 +2922,7 @@ condition to be triggered.
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the
@@ -3557,7 +3557,7 @@ alerted on quickly.
 <a href="#aggregations_python" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">List[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series as well as how to
@@ -3581,7 +3581,7 @@ Structure is documented below.
 <a href="#denominator_aggregations_python" style="color: inherit; text-decoration: inherit;">denominator_<wbr>aggregations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">List[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series selected by
@@ -4129,7 +4129,7 @@ Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `R
 <a href="#group_by_fields_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -4635,7 +4635,7 @@ Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `R
 <a href="#group_by_fields_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -4822,7 +4822,7 @@ condition to be triggered.
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the

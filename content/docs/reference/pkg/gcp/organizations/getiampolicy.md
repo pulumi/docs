@@ -34,7 +34,7 @@ from another resource is the only way to apply an IAM policy to a resource.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_iam_policy(</span><span class="nx">audit_configs</span><span class="p">:</span> <span class="nx">Optional[List[GetIAMPolicyAuditConfigArgs]]</span> = None<span class="p">, </span><span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[List[GetIAMPolicyBindingArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIAMPolicyResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_iam_policy(</span><span class="nx">audit_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetIAMPolicyAuditConfigArgs]]</span> = None<span class="p">, </span><span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetIAMPolicyBindingArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIAMPolicyResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -160,7 +160,7 @@ defining a binding to be included in the policy document. Multiple
 <a href="#audit_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicyauditconfig">List[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getiampolicyauditconfig">Sequence[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project.
 {{% /md %}}</dd>
@@ -171,7 +171,7 @@ defining a binding to be included in the policy document. Multiple
 <a href="#bindings_python" style="color: inherit; text-decoration: inherit;">bindings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicybinding">List[Get<wbr>IAMPolicy<wbr>Binding<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getiampolicybinding">Sequence[Get<wbr>IAMPolicy<wbr>Binding<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
 defining a binding to be included in the policy document. Multiple
@@ -377,7 +377,7 @@ referencing from a resource that supports IAM.
 <a href="#audit_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicyauditconfig">List[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getiampolicyauditconfig">Sequence[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -387,7 +387,7 @@ referencing from a resource that supports IAM.
 <a href="#bindings_python" style="color: inherit; text-decoration: inherit;">bindings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicybinding">List[Get<wbr>IAMPolicy<wbr>Binding]</a></span>
+        <span class="property-type"><a href="#getiampolicybinding">Sequence[Get<wbr>IAMPolicy<wbr>Binding]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -515,7 +515,7 @@ referencing from a resource that supports IAM.
 <a href="#audit_log_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>log_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicyauditconfigauditlogconfig">List[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getiampolicyauditconfigauditlogconfig">Sequence[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block that defines the operations you'd like to log.
 {{% /md %}}</dd>
@@ -660,7 +660,7 @@ referencing from a resource that supports IAM.
 <a href="#exempted_members_python" style="color: inherit; text-decoration: inherit;">exempted_<wbr>members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the identities that are exempt from these types of logging operations. Follows the same format of the `members` array for `binding`.
 {{% /md %}}</dd>
@@ -843,7 +843,7 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
 Each entry can have one of the following values:
