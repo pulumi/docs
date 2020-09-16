@@ -61,7 +61,7 @@ private_store_offer = azure_nextgen.marketplace.latest.PrivateStoreOffer("privat
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const privateStoreOffer = new azure_nextgen.marketplace.latest.PrivateStoreOffer("privateStoreOffer", {
     offerId: "marketplacetestthirdparty.md-test-third-party-2",

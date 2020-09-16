@@ -99,7 +99,7 @@ connector = azure_nextgen.security.v20200101preview.Connector("connector",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const connector = new azure_nextgen.security.v20200101preview.Connector("connector", {
     authenticationDetails: {
@@ -210,7 +210,7 @@ connector = azure_nextgen.security.v20200101preview.Connector("connector",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const connector = new azure_nextgen.security.v20200101preview.Connector("connector", {
     authenticationDetails: {
@@ -373,7 +373,7 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const connector = new azure_nextgen.security.v20200101preview.Connector("connector", {
     authenticationDetails: {

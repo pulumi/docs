@@ -236,7 +236,7 @@ management_policy = azure_nextgen.storage.latest.ManagementPolicy("managementPol
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("managementPolicy", {
     accountName: "sto9699",

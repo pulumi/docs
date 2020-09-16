@@ -102,7 +102,7 @@ runbook = azure_nextgen.automation.latest.Runbook("runbook",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const runbook = new azure_nextgen.automation.latest.Runbook("runbook", {
     automationAccountName: "ContoseAutomationAccount",
@@ -202,7 +202,7 @@ runbook = azure_nextgen.automation.latest.Runbook("runbook",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const runbook = new azure_nextgen.automation.latest.Runbook("runbook", {
     automationAccountName: "ContoseAutomationAccount",

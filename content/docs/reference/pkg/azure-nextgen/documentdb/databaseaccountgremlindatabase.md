@@ -72,7 +72,7 @@ database_account_gremlin_database = azure_nextgen.documentdb.latest.DatabaseAcco
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const databaseAccountGremlinDatabase = new azure_nextgen.documentdb.latest.DatabaseAccountGremlinDatabase("databaseAccountGremlinDatabase", {
     accountName: "ddb1",

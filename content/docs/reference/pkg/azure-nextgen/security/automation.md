@@ -107,7 +107,7 @@ automation = azure_nextgen.security.v20190101preview.Automation("automation",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const automation = new azure_nextgen.security.v20190101preview.Automation("automation", {
     actions: [{
@@ -250,7 +250,7 @@ automation = azure_nextgen.security.v20190101preview.Automation("automation",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const automation = new azure_nextgen.security.v20190101preview.Automation("automation", {
     actions: [{
@@ -401,7 +401,7 @@ automation = azure_nextgen.security.v20190101preview.Automation("automation",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const automation = new azure_nextgen.security.v20190101preview.Automation("automation", {
     actions: [{

@@ -63,7 +63,7 @@ master_site = azure_nextgen.offazure.latest.MasterSite("masterSite",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const masterSite = new azure_nextgen.offazure.latest.MasterSite("masterSite", {
     location: "eastus",

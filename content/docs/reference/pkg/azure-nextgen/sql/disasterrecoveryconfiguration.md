@@ -63,7 +63,7 @@ disaster_recovery_configuration = azure_nextgen.sql.latest.DisasterRecoveryConfi
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const disasterRecoveryConfiguration = new azure_nextgen.sql.latest.DisasterRecoveryConfiguration("disasterRecoveryConfiguration", {
     disasterRecoveryConfigurationName: "Default",

@@ -67,7 +67,7 @@ data_set_mapping = azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping", {
     accountName: "Account1",
@@ -132,7 +132,7 @@ data_set_mapping = azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping", {
     accountName: "Account1",
@@ -197,7 +197,7 @@ data_set_mapping = azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping", {
     accountName: "Account1",
@@ -262,7 +262,7 @@ data_set_mapping = azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping", {
     accountName: "Account1",

@@ -115,7 +115,7 @@ media_graph = azure_nextgen.media.v20200201preview.MediaGraph("mediaGraph",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const mediaGraph = new azure_nextgen.media.v20200201preview.MediaGraph("mediaGraph", {
     accountName: "contosomedia",
@@ -283,7 +283,7 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const mediaGraph = new azure_nextgen.media.v20200201preview.MediaGraph("mediaGraph", {
     accountName: "contosomedia",

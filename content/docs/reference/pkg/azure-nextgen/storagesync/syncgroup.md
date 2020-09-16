@@ -63,7 +63,7 @@ sync_group = azure_nextgen.storagesync.latest.SyncGroup("syncGroup",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const syncGroup = new azure_nextgen.storagesync.latest.SyncGroup("syncGroup", {
     resourceGroupName: "SampleResourceGroup_1",

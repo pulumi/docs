@@ -174,16 +174,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="identity_csharp">
-<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Outputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
@@ -234,6 +224,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Outputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -248,16 +248,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span id="identity_go">
-<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -311,6 +301,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -325,16 +325,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span id="identity_nodejs">
-<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -388,6 +378,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -402,16 +402,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span id="identity_python">
-<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Dict[Managed<wbr>Service<wbr>Identity<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -462,6 +452,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of this resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Dict[Managed<wbr>Service<wbr>Identity<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

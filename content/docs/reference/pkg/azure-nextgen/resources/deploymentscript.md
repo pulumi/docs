@@ -197,16 +197,6 @@ The DeploymentScript resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span id="identity_csharp">
-<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span> 
@@ -247,6 +237,16 @@ The DeploymentScript resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -261,16 +261,6 @@ The DeploymentScript resource accepts the following [input]({{< relref "/docs/in
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="identity_go">
-<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
-    </dt>
-    <dd>{{% md %}}Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -314,6 +304,16 @@ The DeploymentScript resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -328,16 +328,6 @@ The DeploymentScript resource accepts the following [input]({{< relref "/docs/in
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="identity_nodejs">
-<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
-    </dt>
-    <dd>{{% md %}}Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -381,6 +371,16 @@ The DeploymentScript resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -395,16 +395,6 @@ The DeploymentScript resource accepts the following [input]({{< relref "/docs/in
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="identity_python">
-<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Dict[Managed<wbr>Service<wbr>Identity]</a></span>
-    </dt>
-    <dd>{{% md %}}Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -445,6 +435,16 @@ The DeploymentScript resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the deployment script.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentity">Dict[Managed<wbr>Service<wbr>Identity]</a></span>
+    </dt>
+    <dd>{{% md %}}Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

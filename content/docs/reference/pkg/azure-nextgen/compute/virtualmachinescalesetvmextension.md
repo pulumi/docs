@@ -82,7 +82,7 @@ virtual_machine_scale_set_vm_extension = azure_nextgen.compute.latest.VirtualMac
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSetVMExtension = new azure_nextgen.compute.latest.VirtualMachineScaleSetVMExtension("virtualMachineScaleSetVMExtension", {
     autoUpgradeMinorVersion: true,

@@ -67,7 +67,7 @@ availability_set = azure_nextgen.compute.latest.AvailabilitySet("availabilitySet
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const availabilitySet = new azure_nextgen.compute.latest.AvailabilitySet("availabilitySet", {
     availabilitySetName: "myAvailabilitySet",

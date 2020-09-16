@@ -164,7 +164,7 @@ rosetta_net_process_configuration = azure_nextgen.logic.latest.RosettaNetProcess
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const rosettaNetProcessConfiguration = new azure_nextgen.logic.latest.RosettaNetProcessConfiguration("rosettaNetProcessConfiguration", {
     activitySettings: {

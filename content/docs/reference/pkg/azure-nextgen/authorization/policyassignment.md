@@ -93,7 +93,7 @@ policy_assignment = azure_nextgen.authorization.latest.PolicyAssignment("policyA
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const policyAssignment = new azure_nextgen.authorization.latest.PolicyAssignment("policyAssignment", {
     description: "Force resource names to begin with given DeptA and end with -LC",
@@ -206,7 +206,7 @@ policy_assignment = azure_nextgen.authorization.latest.PolicyAssignment("policyA
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const policyAssignment = new azure_nextgen.authorization.latest.PolicyAssignment("policyAssignment", {
     description: "Force resource names to begin with given DeptA and end with -LC",
@@ -315,7 +315,7 @@ policy_assignment = azure_nextgen.authorization.latest.PolicyAssignment("policyA
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const policyAssignment = new azure_nextgen.authorization.latest.PolicyAssignment("policyAssignment", {
     description: "Force resource names to begin with given DeptA and end with -LC",

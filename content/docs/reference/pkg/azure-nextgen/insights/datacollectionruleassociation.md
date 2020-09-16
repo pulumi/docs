@@ -63,7 +63,7 @@ data_collection_rule_association = azure_nextgen.insights.v20191101preview.DataC
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dataCollectionRuleAssociation = new azure_nextgen.insights.v20191101preview.DataCollectionRuleAssociation("dataCollectionRuleAssociation", {
     associationName: "myAssociation",

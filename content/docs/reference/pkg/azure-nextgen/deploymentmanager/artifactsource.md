@@ -74,7 +74,7 @@ artifact_source = azure_nextgen.deploymentmanager.v20191101preview.ArtifactSourc
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const artifactSource = new azure_nextgen.deploymentmanager.v20191101preview.ArtifactSource("artifactSource", {
     artifactSourceName: "myArtifactSource",
@@ -151,7 +151,7 @@ artifact_source = azure_nextgen.deploymentmanager.v20191101preview.ArtifactSourc
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const artifactSource = new azure_nextgen.deploymentmanager.v20191101preview.ArtifactSource("artifactSource", {
     artifactRoot: "1.0.0.0",

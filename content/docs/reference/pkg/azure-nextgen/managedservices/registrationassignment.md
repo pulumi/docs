@@ -61,7 +61,7 @@ registration_assignment = azure_nextgen.managedservices.latest.RegistrationAssig
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const registrationAssignment = new azure_nextgen.managedservices.latest.RegistrationAssignment("registrationAssignment", {
     registrationAssignmentId: "26c128c2-fefa-4340-9bb1-6e081c90ada2",

@@ -63,7 +63,7 @@ hierarchy_setting = azure_nextgen.management.latest.HierarchySetting("hierarchyS
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const hierarchySetting = new azure_nextgen.management.latest.HierarchySetting("hierarchySetting", {
     defaultManagementGroup: "/providers/Microsoft.Management/managementGroups/DefaultGroup",

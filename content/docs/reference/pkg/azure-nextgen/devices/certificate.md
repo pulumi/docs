@@ -63,7 +63,7 @@ certificate = azure_nextgen.devices.latest.Certificate("certificate",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const certificate = new azure_nextgen.devices.latest.Certificate("certificate", {
     certificateName: "cert",

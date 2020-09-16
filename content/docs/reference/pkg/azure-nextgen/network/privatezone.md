@@ -70,7 +70,7 @@ private_zone = azure_nextgen.network.latest.PrivateZone("privateZone",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const privateZone = new azure_nextgen.network.latest.PrivateZone("privateZone", {
     location: "Global",

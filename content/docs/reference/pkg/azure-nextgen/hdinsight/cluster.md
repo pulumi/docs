@@ -61,7 +61,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
@@ -124,7 +124,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
@@ -190,7 +190,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
@@ -256,7 +256,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
@@ -315,7 +315,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
@@ -378,7 +378,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
@@ -444,7 +444,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
@@ -503,7 +503,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
@@ -559,7 +559,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
@@ -615,7 +615,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
@@ -671,7 +671,7 @@ cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",

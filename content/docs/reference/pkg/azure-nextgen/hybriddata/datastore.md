@@ -107,7 +107,7 @@ data_store = azure_nextgen.hybriddata.latest.DataStore("dataStore",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dataStore = new azure_nextgen.hybriddata.latest.DataStore("dataStore", {
     customerSecrets: [
@@ -215,7 +215,7 @@ data_store = azure_nextgen.hybriddata.latest.DataStore("dataStore",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dataStore = new azure_nextgen.hybriddata.latest.DataStore("dataStore", {
     customerSecrets: [{

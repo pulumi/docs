@@ -87,7 +87,7 @@ server_trust_group = azure_nextgen.sql.v20200202preview.ServerTrustGroup("server
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const serverTrustGroup = new azure_nextgen.sql.v20200202preview.ServerTrustGroup("serverTrustGroup", {
     groupMembers: [

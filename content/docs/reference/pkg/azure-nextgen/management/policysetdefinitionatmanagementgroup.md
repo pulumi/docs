@@ -133,7 +133,7 @@ policy_set_definition_at_management_group = azure_nextgen.management.latest.Poli
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const policySetDefinitionAtManagementGroup = new azure_nextgen.management.latest.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup", {
     description: "Policies to enforce low cost storage SKUs",
@@ -329,7 +329,7 @@ policy_set_definition_at_management_group = azure_nextgen.management.latest.Poli
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const policySetDefinitionAtManagementGroup = new azure_nextgen.management.latest.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup", {
     description: "Policies to enforce low cost storage SKUs",

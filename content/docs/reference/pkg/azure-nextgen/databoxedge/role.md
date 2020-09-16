@@ -65,7 +65,7 @@ role = azure_nextgen.databoxedge.latest.Role("role",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const role = new azure_nextgen.databoxedge.latest.Role("role", {
     deviceName: "testedgedevice",

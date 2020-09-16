@@ -72,7 +72,7 @@ private_atlase = azure_nextgen.maps.v20200201preview.PrivateAtlase("privateAtlas
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const privateAtlase = new azure_nextgen.maps.v20200201preview.PrivateAtlase("privateAtlase", {
     accountName: "myMapsAccount",

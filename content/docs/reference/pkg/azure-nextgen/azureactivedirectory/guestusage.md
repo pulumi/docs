@@ -61,7 +61,7 @@ guest_usage = azure_nextgen.azureactivedirectory.v20200501preview.GuestUsage("gu
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const guestUsage = new azure_nextgen.azureactivedirectory.v20200501preview.GuestUsage("guestUsage", {
     resourceGroupName: "contosoResourceGroup",

@@ -72,7 +72,7 @@ automation_account = azure_nextgen.automation.latest.AutomationAccount("automati
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const automationAccount = new azure_nextgen.automation.latest.AutomationAccount("automationAccount", {
     automationAccountName: "myAutomationAccount9",

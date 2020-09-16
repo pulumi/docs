@@ -65,7 +65,7 @@ custom_ip_prefix = azure_nextgen.network.latest.CustomIPPrefix("customIPPrefix",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const customIPPrefix = new azure_nextgen.network.latest.CustomIPPrefix("customIPPrefix", {
     cidr: "0.0.0.0/24",

@@ -107,7 +107,7 @@ threat_intelligence_indicator = azure_nextgen.securityinsights.v20190101preview.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const threatIntelligenceIndicator = new azure_nextgen.securityinsights.v20190101preview.ThreatIntelligenceIndicator("threatIntelligenceIndicator", {
     confidence: 78,

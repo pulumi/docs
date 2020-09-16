@@ -73,7 +73,7 @@ registered_server = azure_nextgen.storagesync.latest.RegisteredServer("registere
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const registeredServer = new azure_nextgen.storagesync.latest.RegisteredServer("registeredServer", {
     agentVersion: "1.0.277.0",

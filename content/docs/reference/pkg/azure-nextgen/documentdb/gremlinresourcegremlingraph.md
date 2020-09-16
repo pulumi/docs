@@ -167,7 +167,7 @@ gremlin_resource_gremlin_graph = azure_nextgen.documentdb.latest.GremlinResource
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const gremlinResourceGremlinGraph = new azure_nextgen.documentdb.latest.GremlinResourceGremlinGraph("gremlinResourceGremlinGraph", {
     accountName: "ddb1",

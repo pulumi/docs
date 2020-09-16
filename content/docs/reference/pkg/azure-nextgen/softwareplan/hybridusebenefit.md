@@ -68,7 +68,7 @@ hybrid_use_benefit = azure_nextgen.softwareplan.latest.HybridUseBenefit("hybridU
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const hybridUseBenefit = new azure_nextgen.softwareplan.latest.HybridUseBenefit("hybridUseBenefit", {
     planId: "94f46eda-45f8-493a-8425-251921463a89",

@@ -74,7 +74,7 @@ hub = azure_nextgen.customerinsights.latest.Hub("hub",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const hub = new azure_nextgen.customerinsights.latest.Hub("hub", {
     hubBillingInfo: {

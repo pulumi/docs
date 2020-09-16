@@ -101,7 +101,7 @@ instance_failover_group = azure_nextgen.sql.v20171001preview.InstanceFailoverGro
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const instanceFailoverGroup = new azure_nextgen.sql.v20171001preview.InstanceFailoverGroup("instanceFailoverGroup", {
     failoverGroupName: "failover-group-test-3",

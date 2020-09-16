@@ -67,7 +67,7 @@ trigger = azure_nextgen.datashare.latest.Trigger("trigger",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const trigger = new azure_nextgen.datashare.latest.Trigger("trigger", {
     accountName: "Account1",

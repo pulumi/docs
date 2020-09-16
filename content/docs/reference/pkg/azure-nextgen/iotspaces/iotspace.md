@@ -70,7 +70,7 @@ io_t_space = azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const ioTSpace = new azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace", {
     location: "string",

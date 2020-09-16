@@ -97,7 +97,7 @@ availability_group_listener = azure_nextgen.sqlvirtualmachine.v20170301preview.A
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const availabilityGroupListener = new azure_nextgen.sqlvirtualmachine.v20170301preview.AvailabilityGroupListener("availabilityGroupListener", {
     availabilityGroupListenerName: "agl-test",

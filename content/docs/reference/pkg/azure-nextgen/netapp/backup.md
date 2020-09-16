@@ -71,7 +71,7 @@ backup = azure_nextgen.netapp.latest.Backup("backup",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const backup = new azure_nextgen.netapp.latest.Backup("backup", {
     accountName: "account1",

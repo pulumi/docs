@@ -81,7 +81,7 @@ managed_hsm = azure_nextgen.keyvault.v20200401preview.ManagedHsm("managedHsm",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedHsm = new azure_nextgen.keyvault.v20200401preview.ManagedHsm("managedHsm", {
     location: "westus",

@@ -65,7 +65,7 @@ dedicated_cloud_service = azure_nextgen.vmwarecloudsimple.latest.DedicatedCloudS
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dedicatedCloudService = new azure_nextgen.vmwarecloudsimple.latest.DedicatedCloudService("dedicatedCloudService", {
     dedicatedCloudServiceName: "myService",

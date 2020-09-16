@@ -74,7 +74,7 @@ virtual_wan = azure_nextgen.network.latest.VirtualWan("virtualWan",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualWan = new azure_nextgen.network.latest.VirtualWan("virtualWan", {
     disableVpnEncryption: false,

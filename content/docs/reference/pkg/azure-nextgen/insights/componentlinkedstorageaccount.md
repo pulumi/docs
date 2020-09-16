@@ -65,7 +65,7 @@ component_linked_storage_account = azure_nextgen.insights.v20200301preview.Compo
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const componentLinkedStorageAccount = new azure_nextgen.insights.v20200301preview.ComponentLinkedStorageAccount("componentLinkedStorageAccount", {
     linkedStorageAccount: "/subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupName/providers/Microsoft.Storage/storageAccounts/storageaccountname",

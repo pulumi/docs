@@ -69,7 +69,7 @@ provider_instance = azure_nextgen.hanaonazure.v20200207preview.ProviderInstance(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const providerInstance = new azure_nextgen.hanaonazure.v20200207preview.ProviderInstance("providerInstance", {
     metadata: "{\"key\":\"value\"}",

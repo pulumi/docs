@@ -83,7 +83,7 @@ server = azure_nextgen.dbforpostgresql.latest.Server("server",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const server = new azure_nextgen.dbforpostgresql.latest.Server("server", {
     location: "brazilsouth",
@@ -171,7 +171,7 @@ server = azure_nextgen.dbforpostgresql.latest.Server("server",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const server = new azure_nextgen.dbforpostgresql.latest.Server("server", {
     location: "westus",
@@ -252,7 +252,7 @@ server = azure_nextgen.dbforpostgresql.latest.Server("server",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const server = new azure_nextgen.dbforpostgresql.latest.Server("server", {
     location: "westcentralus",
@@ -337,7 +337,7 @@ server = azure_nextgen.dbforpostgresql.latest.Server("server",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const server = new azure_nextgen.dbforpostgresql.latest.Server("server", {
     location: "westus",

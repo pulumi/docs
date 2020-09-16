@@ -73,7 +73,7 @@ api_issue_comment = azure_nextgen.apimanagement.latest.ApiIssueComment("apiIssue
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const apiIssueComment = new azure_nextgen.apimanagement.latest.ApiIssueComment("apiIssueComment", {
     apiId: "57d1f7558aa04f15146d9d8a",

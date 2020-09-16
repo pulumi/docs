@@ -65,7 +65,7 @@ iot_hub_resource_event_hub_consumer_group = azure_nextgen.devices.latest.IotHubR
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const iotHubResourceEventHubConsumerGroup = new azure_nextgen.devices.latest.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", {
     eventHubEndpointName: "events",

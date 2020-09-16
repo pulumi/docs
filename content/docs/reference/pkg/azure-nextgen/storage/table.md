@@ -63,7 +63,7 @@ table = azure_nextgen.storage.latest.Table("table",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const table = new azure_nextgen.storage.latest.Table("table", {
     accountName: "sto328",

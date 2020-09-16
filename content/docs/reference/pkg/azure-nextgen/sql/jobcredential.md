@@ -69,7 +69,7 @@ job_credential = azure_nextgen.sql.v20170301preview.JobCredential("jobCredential
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const jobCredential = new azure_nextgen.sql.v20170301preview.JobCredential("jobCredential", {
     credentialName: "cred1",

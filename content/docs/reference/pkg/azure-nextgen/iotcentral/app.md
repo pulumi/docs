@@ -76,7 +76,7 @@ app = azure_nextgen.iotcentral.latest.App("app",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const app = new azure_nextgen.iotcentral.latest.App("app", {
     displayName: "My IoT Central App",

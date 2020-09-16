@@ -71,7 +71,7 @@ alert_rule_action = azure_nextgen.operationalinsights.latest.AlertRuleAction("al
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const alertRuleAction = new azure_nextgen.operationalinsights.latest.AlertRuleAction("alertRuleAction", {
     actionId: "912bec42-cb66-4c03-ac63-1761b6898c3e",

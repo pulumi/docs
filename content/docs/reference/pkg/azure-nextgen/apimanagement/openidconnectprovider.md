@@ -71,7 +71,7 @@ open_id_connect_provider = azure_nextgen.apimanagement.latest.OpenIdConnectProvi
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const openIdConnectProvider = new azure_nextgen.apimanagement.latest.OpenIdConnectProvider("openIdConnectProvider", {
     clientId: "oidprovidertemplate3",

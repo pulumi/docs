@@ -79,7 +79,7 @@ dedicated_host_group = azure_nextgen.compute.latest.DedicatedHostGroup("dedicate
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dedicatedHostGroup = new azure_nextgen.compute.latest.DedicatedHostGroup("dedicatedHostGroup", {
     hostGroupName: "myDedicatedHostGroup",

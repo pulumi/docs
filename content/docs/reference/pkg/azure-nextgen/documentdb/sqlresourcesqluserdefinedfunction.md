@@ -78,7 +78,7 @@ sql_resource_sql_user_defined_function = azure_nextgen.documentdb.latest.SqlReso
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const sqlResourceSqlUserDefinedFunction = new azure_nextgen.documentdb.latest.SqlResourceSqlUserDefinedFunction("sqlResourceSqlUserDefinedFunction", {
     accountName: "ddb1",

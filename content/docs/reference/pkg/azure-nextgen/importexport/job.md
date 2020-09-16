@@ -63,7 +63,7 @@ job = azure_nextgen.importexport.latest.Job("job",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const job = new azure_nextgen.importexport.latest.Job("job", {
     jobName: "myExportJob",
@@ -122,7 +122,7 @@ job = azure_nextgen.importexport.latest.Job("job",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const job = new azure_nextgen.importexport.latest.Job("job", {
     jobName: "myJob",

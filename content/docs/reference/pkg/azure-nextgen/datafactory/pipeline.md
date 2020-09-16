@@ -218,7 +218,7 @@ pipeline = azure_nextgen.datafactory.latest.Pipeline("pipeline",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const pipeline = new azure_nextgen.datafactory.latest.Pipeline("pipeline", {
     activities: [{
@@ -463,7 +463,7 @@ pipeline = azure_nextgen.datafactory.latest.Pipeline("pipeline",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const pipeline = new azure_nextgen.datafactory.latest.Pipeline("pipeline", {
     activities: [{

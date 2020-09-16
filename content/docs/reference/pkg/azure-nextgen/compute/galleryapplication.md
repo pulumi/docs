@@ -75,7 +75,7 @@ gallery_application = azure_nextgen.compute.latest.GalleryApplication("galleryAp
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const galleryApplication = new azure_nextgen.compute.latest.GalleryApplication("galleryApplication", {
     description: "This is the gallery application description.",

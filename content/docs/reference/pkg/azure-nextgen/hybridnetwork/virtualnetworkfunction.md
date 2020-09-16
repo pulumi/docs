@@ -151,7 +151,7 @@ virtual_network_function = azure_nextgen.hybridnetwork.v20200101preview.VirtualN
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualNetworkFunction = new azure_nextgen.hybridnetwork.v20200101preview.VirtualNetworkFunction("virtualNetworkFunction", {
     device: {

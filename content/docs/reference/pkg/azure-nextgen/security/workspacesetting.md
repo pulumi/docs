@@ -63,7 +63,7 @@ workspace_setting = azure_nextgen.security.v20170801preview.WorkspaceSetting("wo
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const workspaceSetting = new azure_nextgen.security.v20170801preview.WorkspaceSetting("workspaceSetting", {
     scope: "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23",

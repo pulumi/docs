@@ -107,7 +107,7 @@ network_virtual_appliance = azure_nextgen.network.latest.NetworkVirtualAppliance
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const networkVirtualAppliance = new azure_nextgen.network.latest.NetworkVirtualAppliance("networkVirtualAppliance", {
     bootStrapConfigurationBlobs: ["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrbootstrapconfig"],

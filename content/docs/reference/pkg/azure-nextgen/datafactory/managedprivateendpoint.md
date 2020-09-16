@@ -65,7 +65,7 @@ managed_private_endpoint = azure_nextgen.datafactory.latest.ManagedPrivateEndpoi
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedPrivateEndpoint = new azure_nextgen.datafactory.latest.ManagedPrivateEndpoint("managedPrivateEndpoint", {
     factoryName: "exampleFactoryName",

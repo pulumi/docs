@@ -65,7 +65,7 @@ remediation_at_management_group = azure_nextgen.policyinsights.latest.Remediatio
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const remediationAtManagementGroup = new azure_nextgen.policyinsights.latest.RemediationAtManagementGroup("remediationAtManagementGroup", {
     managementGroupId: "financeMg",

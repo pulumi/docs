@@ -71,7 +71,7 @@ gateway_hostname_configuration = azure_nextgen.apimanagement.latest.GatewayHostn
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const gatewayHostnameConfiguration = new azure_nextgen.apimanagement.latest.GatewayHostnameConfiguration("gatewayHostnameConfiguration", {
     certificateId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/certificates/cert1",

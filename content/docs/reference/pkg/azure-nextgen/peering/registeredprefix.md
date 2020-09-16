@@ -65,7 +65,7 @@ registered_prefix = azure_nextgen.peering.latest.RegisteredPrefix("registeredPre
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const registeredPrefix = new azure_nextgen.peering.latest.RegisteredPrefix("registeredPrefix", {
     peeringName: "peeringName",

@@ -77,7 +77,7 @@ schedule = azure_nextgen.automation.latest.Schedule("schedule",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const schedule = new azure_nextgen.automation.latest.Schedule("schedule", {
     advancedSchedule: {},

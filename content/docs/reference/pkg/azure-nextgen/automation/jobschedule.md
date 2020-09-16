@@ -86,7 +86,7 @@ job_schedule = azure_nextgen.automation.latest.JobSchedule("jobSchedule",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const jobSchedule = new azure_nextgen.automation.latest.JobSchedule("jobSchedule", {
     automationAccountName: "ContoseAutomationAccount",

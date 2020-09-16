@@ -73,7 +73,7 @@ watcher = azure_nextgen.automation.latest.Watcher("watcher",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const watcher = new azure_nextgen.automation.latest.Watcher("watcher", {
     automationAccountName: "MyTestAutomationAccount",

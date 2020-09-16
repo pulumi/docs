@@ -72,7 +72,7 @@ gallery = azure_nextgen.compute.latest.Gallery("gallery",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const gallery = new azure_nextgen.compute.latest.Gallery("gallery", {
     description: "This is the gallery description.",
@@ -137,7 +137,7 @@ gallery = azure_nextgen.compute.latest.Gallery("gallery",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const gallery = new azure_nextgen.compute.latest.Gallery("gallery", {
     description: "This is the gallery description.",

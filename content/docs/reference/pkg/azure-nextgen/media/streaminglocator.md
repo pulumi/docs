@@ -67,7 +67,7 @@ streaming_locator = azure_nextgen.media.latest.StreamingLocator("streamingLocato
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const streamingLocator = new azure_nextgen.media.latest.StreamingLocator("streamingLocator", {
     accountName: "contosomedia",
@@ -136,7 +136,7 @@ streaming_locator = azure_nextgen.media.latest.StreamingLocator("streamingLocato
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const streamingLocator = new azure_nextgen.media.latest.StreamingLocator("streamingLocator", {
     accountName: "contosomedia",
@@ -243,7 +243,7 @@ streaming_locator = azure_nextgen.media.latest.StreamingLocator("streamingLocato
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const streamingLocator = new azure_nextgen.media.latest.StreamingLocator("streamingLocator", {
     accountName: "contosomedia",

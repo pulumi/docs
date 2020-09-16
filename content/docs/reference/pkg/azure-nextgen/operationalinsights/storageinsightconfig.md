@@ -86,7 +86,7 @@ storage_insight_config = azure_nextgen.operationalinsights.latest.StorageInsight
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const storageInsightConfig = new azure_nextgen.operationalinsights.latest.StorageInsightConfig("storageInsightConfig", {
     containers: ["wad-iis-logfiles"],

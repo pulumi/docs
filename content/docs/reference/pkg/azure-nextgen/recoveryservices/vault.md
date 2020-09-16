@@ -77,7 +77,7 @@ vault = azure_nextgen.recoveryservices.latest.Vault("vault",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const vault = new azure_nextgen.recoveryservices.latest.Vault("vault", {
     identity: {

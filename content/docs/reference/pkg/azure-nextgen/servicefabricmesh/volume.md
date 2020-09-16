@@ -80,7 +80,7 @@ volume = azure_nextgen.servicefabricmesh.v20180901preview.Volume("volume",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const volume = new azure_nextgen.servicefabricmesh.v20180901preview.Volume("volume", {
     azureFileParameters: {

@@ -64,7 +64,7 @@ hyper_v_collector = azure_nextgen.migrate.latest.HyperVCollector("hyperVCollecto
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const hyperVCollector = new azure_nextgen.migrate.latest.HyperVCollector("hyperVCollector", {
     eTag: "\"00000981-0000-0300-0000-5d74cd5f0000\"",

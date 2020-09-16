@@ -67,7 +67,7 @@ peering_service = azure_nextgen.peering.latest.PeeringService("peeringService",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const peeringService = new azure_nextgen.peering.latest.PeeringService("peeringService", {
     location: "eastus",

@@ -67,7 +67,7 @@ blob_container = azure_nextgen.storage.latest.BlobContainer("blobContainer",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const blobContainer = new azure_nextgen.storage.latest.BlobContainer("blobContainer", {
     accountName: "sto328",
@@ -128,7 +128,7 @@ blob_container = azure_nextgen.storage.latest.BlobContainer("blobContainer",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const blobContainer = new azure_nextgen.storage.latest.BlobContainer("blobContainer", {
     accountName: "sto328",

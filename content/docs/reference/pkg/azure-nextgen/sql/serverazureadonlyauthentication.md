@@ -65,7 +65,7 @@ server_azure_ad_only_authentication = azure_nextgen.sql.v20200202preview.ServerA
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const serverAzureADOnlyAuthentication = new azure_nextgen.sql.v20200202preview.ServerAzureADOnlyAuthentication("serverAzureADOnlyAuthentication", {
     authenticationName: "Default",

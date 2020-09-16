@@ -1210,6 +1210,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="keyvaultkeyuri_csharp">
+<a href="#keyvaultkeyuri_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Key<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="offerthroughput_csharp">
 <a href="#offerthroughput_csharp" style="color: inherit; text-decoration: inherit;">Offer<wbr>Throughput</a>
 </span> 
@@ -1224,6 +1234,16 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultkeyuri_go">
+<a href="#keyvaultkeyuri_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Key<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1244,6 +1264,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="keyvaultkeyuri_nodejs">
+<a href="#keyvaultkeyuri_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Key<wbr>Uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="offerthroughput_nodejs">
 <a href="#offerthroughput_nodejs" style="color: inherit; text-decoration: inherit;">offer<wbr>Throughput</a>
 </span> 
@@ -1258,6 +1288,16 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_vault_key_uri_python">
+<a href="#key_vault_key_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>key_<wbr>uri</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

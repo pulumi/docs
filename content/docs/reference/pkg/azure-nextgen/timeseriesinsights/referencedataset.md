@@ -88,7 +88,7 @@ reference_data_set = azure_nextgen.timeseriesinsights.latest.ReferenceDataSet("r
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const referenceDataSet = new azure_nextgen.timeseriesinsights.latest.ReferenceDataSet("referenceDataSet", {
     environmentName: "env1",

@@ -241,7 +241,7 @@ rules_engine = azure_nextgen.network.latest.RulesEngine("rulesEngine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const rulesEngine = new azure_nextgen.network.latest.RulesEngine("rulesEngine", {
     frontDoorName: "frontDoor1",

@@ -87,7 +87,7 @@ saved_search = azure_nextgen.operationalinsights.latest.SavedSearch("savedSearch
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const savedSearch = new azure_nextgen.operationalinsights.latest.SavedSearch("savedSearch", {
     category: "Saved Search Test Category",

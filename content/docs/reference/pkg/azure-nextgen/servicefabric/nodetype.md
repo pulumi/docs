@@ -134,7 +134,7 @@ node_type = azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const nodeType = new azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType", {
     capacities: {
@@ -237,7 +237,7 @@ node_type = azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const nodeType = new azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType", {
     clusterName: "myCluster",

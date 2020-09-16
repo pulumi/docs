@@ -67,7 +67,7 @@ route = azure_nextgen.network.latest.Route("route",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const route = new azure_nextgen.network.latest.Route("route", {
     addressPrefix: "10.0.3.0/24",

@@ -69,7 +69,7 @@ express_route_port = azure_nextgen.network.latest.ExpressRoutePort("expressRoute
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const expressRoutePort = new azure_nextgen.network.latest.ExpressRoutePort("expressRoutePort", {
     bandwidthInGbps: 100,
@@ -147,7 +147,7 @@ express_route_port = azure_nextgen.network.latest.ExpressRoutePort("expressRoute
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const expressRoutePort = new azure_nextgen.network.latest.ExpressRoutePort("expressRoutePort", {
     bandwidthInGbps: 100,

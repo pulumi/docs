@@ -79,7 +79,7 @@ workbook = azure_nextgen.insights.latest.Workbook("workbook",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const workbook = new azure_nextgen.insights.latest.Workbook("workbook", {
     category: "workbook",

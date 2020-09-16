@@ -175,7 +175,7 @@ integration_account_map = azure_nextgen.logic.latest.IntegrationAccountMap("inte
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const integrationAccountMap = new azure_nextgen.logic.latest.IntegrationAccountMap("integrationAccountMap", {
     content: `<?xml version="1.0" encoding="UTF-16"?>

@@ -63,7 +63,7 @@ remediation_at_resource_group = azure_nextgen.policyinsights.latest.RemediationA
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const remediationAtResourceGroup = new azure_nextgen.policyinsights.latest.RemediationAtResourceGroup("remediationAtResourceGroup", {
     policyAssignmentId: "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",

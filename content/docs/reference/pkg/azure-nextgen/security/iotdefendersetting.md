@@ -57,7 +57,7 @@ iot_defender_setting = azure_nextgen.security.v20200806preview.IotDefenderSettin
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const iotDefenderSetting = new azure_nextgen.security.v20200806preview.IotDefenderSetting("iotDefenderSetting", {});
 

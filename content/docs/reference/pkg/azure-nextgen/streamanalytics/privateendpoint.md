@@ -63,7 +63,7 @@ private_endpoint = azure_nextgen.streamanalytics.v20200301preview.PrivateEndpoin
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const privateEndpoint = new azure_nextgen.streamanalytics.v20200301preview.PrivateEndpoint("privateEndpoint", {
     clusterName: "testcluster",

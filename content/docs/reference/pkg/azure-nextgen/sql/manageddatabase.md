@@ -77,7 +77,7 @@ managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDa
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedDatabase = new azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase", {
     autoCompleteRestore: true,
@@ -149,7 +149,7 @@ managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDa
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedDatabase = new azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase", {
     createMode: "Recovery",
@@ -221,7 +221,7 @@ managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDa
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedDatabase = new azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase", {
     collation: "SQL_Latin1_General_CP1_CI_AS",
@@ -293,7 +293,7 @@ managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDa
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedDatabase = new azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase", {
     createMode: "PointInTimeRestore",
@@ -365,7 +365,7 @@ managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDa
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedDatabase = new azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase", {
     databaseName: "managedDatabase",
@@ -430,7 +430,7 @@ managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDa
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedDatabase = new azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase", {
     databaseName: "managedDatabase",

@@ -84,7 +84,7 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
     aRecords: [{
@@ -172,7 +172,7 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
     aaaaRecords: [{
@@ -257,7 +257,7 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
     cnameRecord: {
@@ -347,7 +347,7 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
     metadata: {
@@ -436,7 +436,7 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
     metadata: {
@@ -533,7 +533,7 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
     metadata: {
@@ -633,7 +633,7 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
     metadata: {
@@ -731,7 +731,7 @@ record_set = azure_nextgen.network.latest.RecordSet("recordSet",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
     metadata: {

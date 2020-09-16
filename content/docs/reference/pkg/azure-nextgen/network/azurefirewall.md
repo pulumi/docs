@@ -123,7 +123,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
     applicationRuleCollections: [{
@@ -272,7 +272,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
     additionalProperties: {
@@ -416,7 +416,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
     applicationRuleCollections: [{
@@ -565,7 +565,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
     applicationRuleCollections: [{
@@ -716,7 +716,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
     applicationRuleCollections: [{
@@ -847,7 +847,7 @@ azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
     azureFirewallName: "azurefirewall",

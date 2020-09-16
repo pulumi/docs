@@ -108,7 +108,7 @@ health_alert = azure_nextgen.alertsmanagement.v20200804preview.HealthAlert("heal
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const healthAlert = new azure_nextgen.alertsmanagement.v20200804preview.HealthAlert("healthAlert", {
     actions: [{

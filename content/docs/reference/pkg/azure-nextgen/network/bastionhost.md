@@ -71,7 +71,7 @@ bastion_host = azure_nextgen.network.latest.BastionHost("bastionHost",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const bastionHost = new azure_nextgen.network.latest.BastionHost("bastionHost", {
     bastionHostName: "bastionhosttenant'",

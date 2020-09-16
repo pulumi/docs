@@ -63,7 +63,7 @@ private_link_scope = azure_nextgen.hybridcompute.v20200815preview.PrivateLinkSco
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const privateLinkScope = new azure_nextgen.hybridcompute.v20200815preview.PrivateLinkScope("privateLinkScope", {
     location: "westus",
@@ -129,7 +129,7 @@ private_link_scope = azure_nextgen.hybridcompute.v20200815preview.PrivateLinkSco
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const privateLinkScope = new azure_nextgen.hybridcompute.v20200815preview.PrivateLinkScope("privateLinkScope", {
     location: "westus",

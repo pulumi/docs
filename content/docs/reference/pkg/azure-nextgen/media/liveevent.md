@@ -114,7 +114,7 @@ live_event = azure_nextgen.media.latest.LiveEvent("liveEvent",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const liveEvent = new azure_nextgen.media.latest.LiveEvent("liveEvent", {
     accountName: "slitestmedia10",

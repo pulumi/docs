@@ -67,7 +67,7 @@ virtual_hub_bgp_connection = azure_nextgen.network.latest.VirtualHubBgpConnectio
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualHubBgpConnection = new azure_nextgen.network.latest.VirtualHubBgpConnection("virtualHubBgpConnection", {
     connectionName: "conn1",

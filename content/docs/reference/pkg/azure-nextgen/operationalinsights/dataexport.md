@@ -68,7 +68,7 @@ data_export = azure_nextgen.operationalinsights.latest.DataExport("dataExport",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dataExport = new azure_nextgen.operationalinsights.latest.DataExport("dataExport", {
     dataExportName: "export1",

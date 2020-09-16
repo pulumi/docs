@@ -61,7 +61,7 @@ resource_group = azure_nextgen.resources.latest.ResourceGroup("resourceGroup",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const resourceGroup = new azure_nextgen.resources.latest.ResourceGroup("resourceGroup", {
     location: "eastus",

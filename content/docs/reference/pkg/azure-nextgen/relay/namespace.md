@@ -81,7 +81,7 @@ namespace = azure_nextgen.relay.latest.Namespace("namespace",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const namespace = new azure_nextgen.relay.latest.Namespace("namespace", {
     location: "West US",

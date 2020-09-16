@@ -93,7 +93,7 @@ alerts_suppression_rule = azure_nextgen.security.v20190101preview.AlertsSuppress
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const alertsSuppressionRule = new azure_nextgen.security.v20190101preview.AlertsSuppressionRule("alertsSuppressionRule", {
     alertType: "IpAnomaly",

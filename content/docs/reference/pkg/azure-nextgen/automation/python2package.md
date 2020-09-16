@@ -83,7 +83,7 @@ python2_package = azure_nextgen.automation.latest.Python2Package("python2Package
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const python2Package = new azure_nextgen.automation.latest.Python2Package("python2Package", {
     automationAccountName: "myAutomationAccount33",

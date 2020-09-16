@@ -65,7 +65,7 @@ registration = azure_nextgen.azurestack.latest.Registration("registration",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const registration = new azure_nextgen.azurestack.latest.Registration("registration", {
     location: "global",

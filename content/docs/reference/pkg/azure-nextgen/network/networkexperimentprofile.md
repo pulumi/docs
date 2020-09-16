@@ -65,7 +65,7 @@ network_experiment_profile = azure_nextgen.network.latest.NetworkExperimentProfi
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const networkExperimentProfile = new azure_nextgen.network.latest.NetworkExperimentProfile("networkExperimentProfile", {
     enabledState: "Enabled",

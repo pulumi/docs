@@ -95,7 +95,7 @@ server_details = azure_nextgen.analysisservices.latest.ServerDetails("serverDeta
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const serverDetails = new azure_nextgen.analysisservices.latest.ServerDetails("serverDetails", {
     asAdministrators: {

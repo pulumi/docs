@@ -118,7 +118,7 @@ exceptions
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const query = new azure_nextgen.insights.v20190901preview.Query("query", {
     body: `let newExceptionsTimeRange = 1d;

@@ -80,7 +80,7 @@ template_spec_version = azure_nextgen.resources.v20190601preview.TemplateSpecVer
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const templateSpecVersion = new azure_nextgen.resources.v20190601preview.TemplateSpecVersion("templateSpecVersion", {
     description: "This is version v1.0 of our template content",

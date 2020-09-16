@@ -163,7 +163,7 @@ database_account = azure_nextgen.documentdb.latest.DatabaseAccount("databaseAcco
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const databaseAccount = new azure_nextgen.documentdb.latest.DatabaseAccount("databaseAccount", {
     accountName: "ddb1",
@@ -280,7 +280,7 @@ database_account = azure_nextgen.documentdb.latest.DatabaseAccount("databaseAcco
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const databaseAccount = new azure_nextgen.documentdb.latest.DatabaseAccount("databaseAccount", {
     accountName: "ddb1",

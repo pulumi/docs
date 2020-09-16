@@ -69,7 +69,7 @@ data_connection = azure_nextgen.kusto.latest.DataConnection("dataConnection",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dataConnection = new azure_nextgen.kusto.latest.DataConnection("dataConnection", {
     clusterName: "kustoclusterrptest4",

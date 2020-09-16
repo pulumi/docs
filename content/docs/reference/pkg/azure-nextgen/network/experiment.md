@@ -81,7 +81,7 @@ experiment = azure_nextgen.network.latest.Experiment("experiment",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const experiment = new azure_nextgen.network.latest.Experiment("experiment", {
     description: "this is my first experiment!",

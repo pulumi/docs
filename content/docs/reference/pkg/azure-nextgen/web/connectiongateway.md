@@ -61,7 +61,7 @@ connection_gateway = azure_nextgen.web.latest.ConnectionGateway("connectionGatew
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const connectionGateway = new azure_nextgen.web.latest.ConnectionGateway("connectionGateway", {
     connectionGatewayName: "test123",

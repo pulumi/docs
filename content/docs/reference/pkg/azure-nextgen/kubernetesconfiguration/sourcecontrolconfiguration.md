@@ -90,7 +90,7 @@ source_control_configuration = azure_nextgen.kubernetesconfiguration.v20191101pr
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const sourceControlConfiguration = new azure_nextgen.kubernetesconfiguration.v20191101preview.SourceControlConfiguration("sourceControlConfiguration", {
     clusterName: "clusterName1",

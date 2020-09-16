@@ -65,7 +65,7 @@ replication_recovery_services_provider = azure_nextgen.recoveryservices.latest.R
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const replicationRecoveryServicesProvider = new azure_nextgen.recoveryservices.latest.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider", {
     fabricName: "vmwarefabric1",
@@ -746,6 +746,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The identity provider input for resource access.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataplaneauthenticationidentityinput_csharp">
+<a href="#dataplaneauthenticationidentityinput_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Plane<wbr>Authentication<wbr>Identity<wbr>Input</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityproviderinput">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The identity provider input for data plane authentication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="machineid_csharp">
+<a href="#machineid_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Id of the machine where the provider is getting added.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -782,6 +802,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for resource access.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataplaneauthenticationidentityinput_go">
+<a href="#dataplaneauthenticationidentityinput_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Plane<wbr>Authentication<wbr>Identity<wbr>Input</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input</a></span>
+    </dt>
+    <dd>{{% md %}}The identity provider input for data plane authentication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="machineid_go">
+<a href="#machineid_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Id of the machine where the provider is getting added.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -820,6 +860,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The identity provider input for resource access.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataplaneauthenticationidentityinput_nodejs">
+<a href="#dataplaneauthenticationidentityinput_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Plane<wbr>Authentication<wbr>Identity<wbr>Input</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input</a></span>
+    </dt>
+    <dd>{{% md %}}The identity provider input for data plane authentication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="machineid_nodejs">
+<a href="#machineid_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Id of the machine where the provider is getting added.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -856,6 +916,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#identityproviderinput">Dict[Identity<wbr>Provider<wbr>Input]</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for resource access.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="data_plane_authentication_identity_input_python">
+<a href="#data_plane_authentication_identity_input_python" style="color: inherit; text-decoration: inherit;">data_<wbr>plane_<wbr>authentication_<wbr>identity_<wbr>input</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identityproviderinput">Dict[Identity<wbr>Provider<wbr>Input]</a></span>
+    </dt>
+    <dd>{{% md %}}The identity provider input for data plane authentication.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="machine_id_python">
+<a href="#machine_id_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Id of the machine where the provider is getting added.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

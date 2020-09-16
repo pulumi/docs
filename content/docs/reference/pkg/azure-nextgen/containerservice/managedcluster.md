@@ -187,7 +187,7 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedCluster = new azure_nextgen.containerservice.latest.ManagedCluster("managedCluster", {
     addonProfiles: {},
@@ -441,7 +441,7 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedCluster = new azure_nextgen.containerservice.latest.ManagedCluster("managedCluster", {
     aadProfile: {
@@ -709,7 +709,7 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedCluster = new azure_nextgen.containerservice.latest.ManagedCluster("managedCluster", {
     addonProfiles: {},
@@ -974,7 +974,7 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedCluster = new azure_nextgen.containerservice.latest.ManagedCluster("managedCluster", {
     addonProfiles: {},

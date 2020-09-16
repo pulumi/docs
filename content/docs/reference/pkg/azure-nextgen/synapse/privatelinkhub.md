@@ -70,7 +70,7 @@ private_link_hub = azure_nextgen.synapse.v20190601preview.PrivateLinkHub("privat
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const privateLinkHub = new azure_nextgen.synapse.v20190601preview.PrivateLinkHub("privateLinkHub", {
     location: "East US",

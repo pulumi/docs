@@ -74,7 +74,7 @@ web_app_private_endpoint_connection = azure_nextgen.web.latest.WebAppPrivateEndp
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const webAppPrivateEndpointConnection = new azure_nextgen.web.latest.WebAppPrivateEndpointConnection("webAppPrivateEndpointConnection", {
     name: "testSite",

@@ -67,7 +67,7 @@ virtual_router_peering = azure_nextgen.network.latest.VirtualRouterPeering("virt
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualRouterPeering = new azure_nextgen.network.latest.VirtualRouterPeering("virtualRouterPeering", {
     peerAsn: 20000,

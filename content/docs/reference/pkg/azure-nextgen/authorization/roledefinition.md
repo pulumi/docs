@@ -61,7 +61,7 @@ role_definition = azure_nextgen.authorization.latest.RoleDefinition("roleDefinit
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const roleDefinition = new azure_nextgen.authorization.latest.RoleDefinition("roleDefinition", {
     roleDefinitionId: "roleDefinitionId",

@@ -58,7 +58,7 @@ alias = azure_nextgen.subscription.latest.Alias("alias", alias_name="aliasForNew
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const alias = new azure_nextgen.subscription.latest.Alias("alias", {aliasName: "aliasForNewSub"});
 

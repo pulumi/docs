@@ -163,7 +163,7 @@ database_account_gremlin_graph = azure_nextgen.documentdb.latest.DatabaseAccount
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const databaseAccountGremlinGraph = new azure_nextgen.documentdb.latest.DatabaseAccountGremlinGraph("databaseAccountGremlinGraph", {
     accountName: "ddb1",

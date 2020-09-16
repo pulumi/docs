@@ -65,7 +65,7 @@ proximity_placement_group = azure_nextgen.compute.latest.ProximityPlacementGroup
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const proximityPlacementGroup = new azure_nextgen.compute.latest.ProximityPlacementGroup("proximityPlacementGroup", {
     location: "westus",

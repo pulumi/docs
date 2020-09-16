@@ -76,7 +76,7 @@ workspace = azure_nextgen.desktopvirtualization.v20191210preview.Workspace("work
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const workspace = new azure_nextgen.desktopvirtualization.v20191210preview.Workspace("workspace", {
     description: "des1",

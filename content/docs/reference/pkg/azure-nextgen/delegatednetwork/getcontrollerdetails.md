@@ -205,12 +205,12 @@ The following output properties are available:
     <dt class="property-"
             title="">
         <span id="dncappid_csharp">
-<a href="#dncappid_csharp" style="color: inherit; text-decoration: inherit;">Dnc<wbr>App<wbr>ID</a>
+<a href="#dncappid_csharp" style="color: inherit; text-decoration: inherit;">Dnc<wbr>App<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Get controller AAD ID.{{% /md %}}</dd>
+    <dd>{{% md %}}The current state of dnc controller resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -220,7 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Dnc Endpoint url.{{% /md %}}</dd>
+    <dd>{{% md %}}dnc endpoint url that customers can use to connect to{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -231,16 +231,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Location of the DNC controller resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="resourceguid_csharp">
-<a href="#resourceguid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets resource GUID property of the controller resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -282,12 +272,12 @@ The following output properties are available:
     <dt class="property-"
             title="">
         <span id="dncappid_go">
-<a href="#dncappid_go" style="color: inherit; text-decoration: inherit;">Dnc<wbr>App<wbr>ID</a>
+<a href="#dncappid_go" style="color: inherit; text-decoration: inherit;">Dnc<wbr>App<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Get controller AAD ID.{{% /md %}}</dd>
+    <dd>{{% md %}}The current state of dnc controller resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -297,7 +287,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Dnc Endpoint url.{{% /md %}}</dd>
+    <dd>{{% md %}}dnc endpoint url that customers can use to connect to{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -308,16 +298,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Location of the DNC controller resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="resourceguid_go">
-<a href="#resourceguid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets resource GUID property of the controller resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -359,12 +339,12 @@ The following output properties are available:
     <dt class="property-"
             title="">
         <span id="dncappid_nodejs">
-<a href="#dncappid_nodejs" style="color: inherit; text-decoration: inherit;">dnc<wbr>App<wbr>ID</a>
+<a href="#dncappid_nodejs" style="color: inherit; text-decoration: inherit;">dnc<wbr>App<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Get controller AAD ID.{{% /md %}}</dd>
+    <dd>{{% md %}}The current state of dnc controller resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -374,7 +354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Dnc Endpoint url.{{% /md %}}</dd>
+    <dd>{{% md %}}dnc endpoint url that customers can use to connect to{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -385,16 +365,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Location of the DNC controller resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="resourceguid_nodejs">
-<a href="#resourceguid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Guid</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets resource GUID property of the controller resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -441,7 +411,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Get controller AAD ID.{{% /md %}}</dd>
+    <dd>{{% md %}}The current state of dnc controller resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -451,7 +421,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Dnc Endpoint url.{{% /md %}}</dd>
+    <dd>{{% md %}}dnc endpoint url that customers can use to connect to{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -462,16 +432,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Location of the DNC controller resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="resource_guid_python">
-<a href="#resource_guid_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>guid</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets resource GUID property of the controller resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -67,7 +67,7 @@ project = azure_nextgen.migrate.latest.Project("project",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const project = new azure_nextgen.migrate.latest.Project("project", {
     eTag: "",

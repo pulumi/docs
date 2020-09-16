@@ -75,7 +75,7 @@ sync_group = azure_nextgen.sql.v20190601preview.SyncGroup("syncGroup",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const syncGroup = new azure_nextgen.sql.v20190601preview.SyncGroup("syncGroup", {
     conflictResolutionPolicy: "HubWin",
@@ -152,7 +152,7 @@ sync_group = azure_nextgen.sql.v20190601preview.SyncGroup("syncGroup",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const syncGroup = new azure_nextgen.sql.v20190601preview.SyncGroup("syncGroup", {
     conflictResolutionPolicy: "HubWin",

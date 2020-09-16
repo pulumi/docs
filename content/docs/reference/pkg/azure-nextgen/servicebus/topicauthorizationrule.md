@@ -74,7 +74,7 @@ topic_authorization_rule = azure_nextgen.servicebus.latest.TopicAuthorizationRul
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const topicAuthorizationRule = new azure_nextgen.servicebus.latest.TopicAuthorizationRule("topicAuthorizationRule", {
     authorizationRuleName: "sdk-AuthRules-4310",

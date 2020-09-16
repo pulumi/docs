@@ -63,7 +63,7 @@ iot_dps_resource_private_endpoint_connection = azure_nextgen.devices.latest.IotD
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const iotDpsResourcePrivateEndpointConnection = new azure_nextgen.devices.latest.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection", {
     privateEndpointConnectionName: "myPrivateEndpointConnection",

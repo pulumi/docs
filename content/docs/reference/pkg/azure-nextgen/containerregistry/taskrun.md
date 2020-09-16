@@ -90,7 +90,7 @@ task_run = azure_nextgen.containerregistry.v20190601preview.TaskRun("taskRun",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const taskRun = new azure_nextgen.containerregistry.v20190601preview.TaskRun("taskRun", {
     forceUpdateTag: "test",

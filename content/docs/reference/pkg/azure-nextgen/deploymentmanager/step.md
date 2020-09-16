@@ -65,7 +65,7 @@ step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const step = new azure_nextgen.deploymentmanager.v20191101preview.Step("step", {
     location: "centralus",
@@ -127,7 +127,7 @@ step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const step = new azure_nextgen.deploymentmanager.v20191101preview.Step("step", {
     location: "centralus",

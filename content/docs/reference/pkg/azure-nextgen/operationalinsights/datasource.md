@@ -65,7 +65,7 @@ data_source = azure_nextgen.operationalinsights.latest.DataSource("dataSource",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dataSource = new azure_nextgen.operationalinsights.latest.DataSource("dataSource", {
     dataSourceName: "AzTestDS774",

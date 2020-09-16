@@ -79,7 +79,7 @@ security_partner_provider = azure_nextgen.network.latest.SecurityPartnerProvider
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const securityPartnerProvider = new azure_nextgen.network.latest.SecurityPartnerProvider("securityPartnerProvider", {
     location: "West US",

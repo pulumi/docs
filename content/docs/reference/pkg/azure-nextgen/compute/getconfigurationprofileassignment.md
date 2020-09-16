@@ -472,8 +472,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningstatus_csharp">
-<a href="#provisioningstatus_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Status</a>
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -539,8 +539,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningstatus_go">
-<a href="#provisioningstatus_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Status</a>
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -606,8 +606,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningstatus_nodejs">
-<a href="#provisioningstatus_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Status</a>
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -673,8 +673,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioning_status_python">
-<a href="#provisioning_status_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>status</a>
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

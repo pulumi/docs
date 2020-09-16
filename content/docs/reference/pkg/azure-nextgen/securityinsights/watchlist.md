@@ -108,7 +108,7 @@ watchlist = azure_nextgen.securityinsights.v20190101preview.Watchlist("watchlist
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const watchlist = new azure_nextgen.securityinsights.v20190101preview.Watchlist("watchlist", {
     createdBy: {

@@ -65,7 +65,7 @@ namespace_virtual_network_rule = azure_nextgen.servicebus.v20180101preview.Names
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const namespaceVirtualNetworkRule = new azure_nextgen.servicebus.v20180101preview.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", {
     namespaceName: "sdk-Namespace-6019",

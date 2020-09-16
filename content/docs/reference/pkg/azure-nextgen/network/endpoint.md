@@ -98,7 +98,7 @@ endpoint = azure_nextgen.network.latest.Endpoint("endpoint",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
     customHeaders: [
@@ -192,7 +192,7 @@ endpoint = azure_nextgen.network.latest.Endpoint("endpoint",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
     endpointName: `My%20external%20endpoint`,
@@ -272,7 +272,7 @@ endpoint = azure_nextgen.network.latest.Endpoint("endpoint",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
     endpointLocation: "North Europe",
@@ -370,7 +370,7 @@ endpoint = azure_nextgen.network.latest.Endpoint("endpoint",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
     endpointName: `My%20external%20endpoint`,

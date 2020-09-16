@@ -152,7 +152,7 @@ dashboard = azure_nextgen.portal.v20200901preview.Dashboard("dashboard",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dashboard = new azure_nextgen.portal.v20200901preview.Dashboard("dashboard", {
     dashboardName: "testDashboard",

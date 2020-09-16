@@ -67,7 +67,7 @@ synchronization_setting = azure_nextgen.datashare.latest.SynchronizationSetting(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const synchronizationSetting = new azure_nextgen.datashare.latest.SynchronizationSetting("synchronizationSetting", {
     accountName: "Account1",

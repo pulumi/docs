@@ -79,7 +79,7 @@ cluster = azure_nextgen.streamanalytics.v20200301preview.Cluster("cluster",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.streamanalytics.v20200301preview.Cluster("cluster", {
     clusterName: "An Example Cluster",

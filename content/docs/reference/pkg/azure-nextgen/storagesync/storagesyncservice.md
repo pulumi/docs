@@ -67,7 +67,7 @@ storage_sync_service = azure_nextgen.storagesync.latest.StorageSyncService("stor
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const storageSyncService = new azure_nextgen.storagesync.latest.StorageSyncService("storageSyncService", {
     incomingTrafficPolicy: "AllowAllTraffic",

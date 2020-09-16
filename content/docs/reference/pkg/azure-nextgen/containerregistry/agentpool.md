@@ -79,7 +79,7 @@ agent_pool = azure_nextgen.containerregistry.v20190601preview.AgentPool("agentPo
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const agentPool = new azure_nextgen.containerregistry.v20190601preview.AgentPool("agentPool", {
     agentPoolName: "myAgentPool",

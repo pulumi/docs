@@ -65,7 +65,7 @@ file = azure_nextgen.datamigration.v20180715preview.File("file",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const file = new azure_nextgen.datamigration.v20180715preview.File("file", {
     fileName: "x114d023d8",

@@ -81,7 +81,7 @@ sql_pools_v3 = azure_nextgen.synapse.v20200401preview.SqlPoolsV3("sqlPoolsV3",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const sqlPoolsV3 = new azure_nextgen.synapse.v20200401preview.SqlPoolsV3("sqlPoolsV3", {
     location: "westus",

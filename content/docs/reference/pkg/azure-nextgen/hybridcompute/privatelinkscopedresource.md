@@ -65,7 +65,7 @@ private_link_scoped_resource = azure_nextgen.hybridcompute.v20200815preview.Priv
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const privateLinkScopedResource = new azure_nextgen.hybridcompute.v20200815preview.PrivateLinkScopedResource("privateLinkScopedResource", {
     linkedResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/machineName1",

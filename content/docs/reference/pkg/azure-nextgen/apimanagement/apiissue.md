@@ -75,7 +75,7 @@ api_issue = azure_nextgen.apimanagement.latest.ApiIssue("apiIssue",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const apiIssue = new azure_nextgen.apimanagement.latest.ApiIssue("apiIssue", {
     apiId: "57d1f7558aa04f15146d9d8a",

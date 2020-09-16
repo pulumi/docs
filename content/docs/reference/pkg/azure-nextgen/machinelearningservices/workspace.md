@@ -114,7 +114,7 @@ workspace = azure_nextgen.machinelearningservices.latest.Workspace("workspace",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const workspace = new azure_nextgen.machinelearningservices.latest.Workspace("workspace", {
     applicationInsights: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",

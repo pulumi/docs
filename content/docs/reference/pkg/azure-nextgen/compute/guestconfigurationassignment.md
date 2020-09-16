@@ -67,7 +67,7 @@ guest_configuration_assignment = azure_nextgen.compute.latest.GuestConfiguration
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const guestConfigurationAssignment = new azure_nextgen.compute.latest.GuestConfigurationAssignment("guestConfigurationAssignment", {
     guestConfigurationAssignmentName: "WhitelistedApplication",

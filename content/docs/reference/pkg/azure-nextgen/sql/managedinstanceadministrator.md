@@ -71,7 +71,7 @@ managed_instance_administrator = azure_nextgen.sql.v20170301preview.ManagedInsta
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedInstanceAdministrator = new azure_nextgen.sql.v20170301preview.ManagedInstanceAdministrator("managedInstanceAdministrator", {
     administratorName: "ActiveDirectory",
@@ -142,7 +142,7 @@ managed_instance_administrator = azure_nextgen.sql.v20170301preview.ManagedInsta
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedInstanceAdministrator = new azure_nextgen.sql.v20170301preview.ManagedInstanceAdministrator("managedInstanceAdministrator", {
     administratorName: "ActiveDirectory",

@@ -70,7 +70,7 @@ configuration_profile_preference = azure_nextgen.automanage.v20200630preview.Con
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const configurationProfilePreference = new azure_nextgen.automanage.v20200630preview.ConfigurationProfilePreference("configurationProfilePreference", {
     configurationProfilePreferenceName: "defaultProfilePreference",

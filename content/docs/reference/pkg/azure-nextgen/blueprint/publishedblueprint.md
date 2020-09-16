@@ -63,7 +63,7 @@ published_blueprint = azure_nextgen.blueprint.v20181101preview.PublishedBlueprin
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const publishedBlueprint = new azure_nextgen.blueprint.v20181101preview.PublishedBlueprint("publishedBlueprint", {
     blueprintName: "simpleBlueprint",
@@ -122,7 +122,7 @@ published_blueprint = azure_nextgen.blueprint.v20181101preview.PublishedBlueprin
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const publishedBlueprint = new azure_nextgen.blueprint.v20181101preview.PublishedBlueprint("publishedBlueprint", {
     blueprintName: "simpleBlueprint",

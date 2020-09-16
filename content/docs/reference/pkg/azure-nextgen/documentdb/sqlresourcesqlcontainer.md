@@ -167,7 +167,7 @@ sql_resource_sql_container = azure_nextgen.documentdb.latest.SqlResourceSqlConta
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const sqlResourceSqlContainer = new azure_nextgen.documentdb.latest.SqlResourceSqlContainer("sqlResourceSqlContainer", {
     accountName: "ddb1",

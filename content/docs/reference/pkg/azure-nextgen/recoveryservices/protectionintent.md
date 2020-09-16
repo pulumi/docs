@@ -65,7 +65,7 @@ protection_intent = azure_nextgen.recoveryservices.latest.ProtectionIntent("prot
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const protectionIntent = new azure_nextgen.recoveryservices.latest.ProtectionIntent("protectionIntent", {
     fabricName: "Azure",

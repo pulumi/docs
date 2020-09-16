@@ -78,7 +78,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
     location: "northeurope",
@@ -163,7 +163,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
     location: "northeurope",
@@ -271,7 +271,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
     location: "northeurope",
@@ -446,7 +446,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
     autoBackupSettings: {
@@ -553,7 +553,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtua
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
     location: "northeurope",

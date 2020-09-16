@@ -2974,6 +2974,212 @@ The following output properties are available:
 
 
 
+<h4 id="inmagercmpolicydetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#InMageRcmPolicyDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices?tab=doc#InMageRcmPolicyDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Recoveryservices.Outputs.InMageRcmPolicyDetailsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="appconsistentfrequencyinminutes_csharp">
+<a href="#appconsistentfrequencyinminutes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="crashconsistentfrequencyinminutes_csharp">
+<a href="#crashconsistentfrequencyinminutes_csharp" style="color: inherit; text-decoration: inherit;">Crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enablemultivmsync_csharp">
+<a href="#enablemultivmsync_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Multi<wbr>Vm<wbr>Sync</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recoverypointhistoryinminutes_csharp">
+<a href="#recoverypointhistoryinminutes_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="appconsistentfrequencyinminutes_go">
+<a href="#appconsistentfrequencyinminutes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="crashconsistentfrequencyinminutes_go">
+<a href="#crashconsistentfrequencyinminutes_go" style="color: inherit; text-decoration: inherit;">Crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enablemultivmsync_go">
+<a href="#enablemultivmsync_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Multi<wbr>Vm<wbr>Sync</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recoverypointhistoryinminutes_go">
+<a href="#recoverypointhistoryinminutes_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="appconsistentfrequencyinminutes_nodejs">
+<a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="crashconsistentfrequencyinminutes_nodejs">
+<a href="#crashconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enablemultivmsync_nodejs">
+<a href="#enablemultivmsync_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Multi<wbr>Vm<wbr>Sync</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recoverypointhistoryinminutes_nodejs">
+<a href="#recoverypointhistoryinminutes_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="appconsistentfrequencyinminutes_python">
+<a href="#appconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="crashconsistentfrequencyinminutes_python">
+<a href="#crashconsistentfrequencyinminutes_python" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enablemultivmsync_python">
+<a href="#enablemultivmsync_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Multi<wbr>Vm<wbr>Sync</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recoverypointhistoryinminutes_python">
+<a href="#recoverypointhistoryinminutes_python" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="policypropertiesresponse">Policy<wbr>Properties<wbr>Response</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#PolicyPropertiesResponse">output</a> API doc for this type.
@@ -3008,7 +3214,7 @@ The following output properties are available:
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>A2APolicy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>A2APolicy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd>
 
@@ -3062,7 +3268,7 @@ The following output properties are available:
 <a href="#providerspecificdetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">A2APolicy<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response | Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response | Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response</span>
+        <span class="property-type">A2APolicy<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response | Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response | Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response</span>
     </dt>
     <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd>
 
@@ -3089,7 +3295,7 @@ The following output properties are available:
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[A2APolicy<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response] | Dict[In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response] | Dict[In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response] | Dict[In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response] | Dict[Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response] | Dict[Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response]</span>
+        <span class="property-type">Dict[A2APolicy<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response] | Dict[In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response] | Dict[In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response] | Dict[In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response] | Dict[In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response] | Dict[Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response] | Dict[Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd>
 

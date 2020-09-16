@@ -79,7 +79,7 @@ managed_database_sensitivity_label = azure_nextgen.sql.v20180601preview.ManagedD
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedDatabaseSensitivityLabel = new azure_nextgen.sql.v20180601preview.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel", {
     columnName: "myColumn",

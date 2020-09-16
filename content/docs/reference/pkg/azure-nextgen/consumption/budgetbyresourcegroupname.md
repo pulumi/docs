@@ -164,7 +164,7 @@ budget_by_resource_group_name = azure_nextgen.consumption.latest.BudgetByResourc
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const budgetByResourceGroupName = new azure_nextgen.consumption.latest.BudgetByResourceGroupName("budgetByResourceGroupName", {
     amount: 100.65,

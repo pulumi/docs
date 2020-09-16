@@ -63,7 +63,7 @@ query_pack = azure_nextgen.insights.v20190901preview.QueryPack("queryPack",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const queryPack = new azure_nextgen.insights.v20190901preview.QueryPack("queryPack", {
     location: "South Central US",
@@ -129,7 +129,7 @@ query_pack = azure_nextgen.insights.v20190901preview.QueryPack("queryPack",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const queryPack = new azure_nextgen.insights.v20190901preview.QueryPack("queryPack", {
     location: "South Central US",

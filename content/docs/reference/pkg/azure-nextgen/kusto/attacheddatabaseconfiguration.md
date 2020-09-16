@@ -71,7 +71,7 @@ attached_database_configuration = azure_nextgen.kusto.latest.AttachedDatabaseCon
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const attachedDatabaseConfiguration = new azure_nextgen.kusto.latest.AttachedDatabaseConfiguration("attachedDatabaseConfiguration", {
     attachedDatabaseConfigurationName: "attachedDatabaseConfigurations1",

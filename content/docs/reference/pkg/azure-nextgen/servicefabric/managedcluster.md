@@ -249,7 +249,7 @@ managed_cluster = azure_nextgen.servicefabric.v20200101preview.ManagedCluster("m
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedCluster = new azure_nextgen.servicefabric.v20200101preview.ManagedCluster("managedCluster", {
     adminPassword: "{vm-password}",
@@ -418,7 +418,7 @@ managed_cluster = azure_nextgen.servicefabric.v20200101preview.ManagedCluster("m
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedCluster = new azure_nextgen.servicefabric.v20200101preview.ManagedCluster("managedCluster", {
     adminPassword: "{vm-password}",

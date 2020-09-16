@@ -75,7 +75,7 @@ assessment = azure_nextgen.security.latest.Assessment("assessment",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const assessment = new azure_nextgen.security.latest.Assessment("assessment", {
     assessmentName: "8bb8be0a-6010-4789-812f-e4d661c4ed0e",

@@ -16,7 +16,7 @@ A Postgres Instance.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Creates or updates a postgres Instance.
+### Create or update a Postgres Instance.
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -26,8 +26,106 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var postgresInstance = new AzureNextGen.AzureData.V20190724Preview.PostgresInstance("postgresInstance", new AzureNextGen.AzureData.V20190724Preview.PostgresInstanceArgs
+        var postgresInstance = new AzureNextGen.AzureData.V20200908Preview.PostgresInstance("postgresInstance", new AzureNextGen.AzureData.V20200908Preview.PostgresInstanceArgs
         {
+            Admin = "admin",
+            DataControllerId = "dataControllerId",
+            K8sRaw = 
+            {
+                { "apiVersion", "apiVersion" },
+                { "kind", "postgresql-12" },
+                { "metadata", 
+                {
+                    { "creationTimestamp", "2020-08-25T14:55:10Z" },
+                    { "generation", 1 },
+                    { "name", "pg1" },
+                    { "namespace", "test" },
+                    { "resourceVersion", "527780" },
+                    { "selfLink", "/apis/arcdata.microsoft.com/v1alpha1/namespaces/test/postgresql-12s/pg1" },
+                    { "uid", "1111aaaa-ffff-ffff-ffff-99999aaaaaaa" },
+                } },
+                { "spec", 
+                {
+                    { "backups", 
+                    {
+                        { "deltaMinutes", 3 },
+                        { "fullMinutes", 10 },
+                        { "tiers", 
+                        {
+                            
+                            {
+                                { "retention", 
+                                {
+                                    { "maximums", 
+                                    {
+                                        "6",
+                                        "512MB",
+                                    } },
+                                    { "minimums", 
+                                    {
+                                        "3",
+                                    } },
+                                } },
+                                { "storage", 
+                                {
+                                    { "volumeSize", "1Gi" },
+                                } },
+                            },
+                        } },
+                    } },
+                    { "engine", 
+                    {
+                        { "extensions", 
+                        {
+                            
+                            {
+                                { "name", "citus" },
+                            },
+                        } },
+                    } },
+                    { "scale", 
+                    {
+                        { "shards", 3 },
+                    } },
+                    { "scheduling", 
+                    {
+                        { "default", 
+                        {
+                            { "resources", 
+                            {
+                                { "requests", 
+                                {
+                                    { "memory", "256Mi" },
+                                } },
+                            } },
+                        } },
+                    } },
+                    { "service", 
+                    {
+                        { "type", "NodePort" },
+                    } },
+                    { "storage", 
+                    {
+                        { "data", 
+                        {
+                            { "className", "local-storage" },
+                            { "size", "5Gi" },
+                        } },
+                        { "logs", 
+                        {
+                            { "className", "local-storage" },
+                            { "size", "5Gi" },
+                        } },
+                    } },
+                } },
+                { "status", 
+                {
+                    { "externalEndpoint", null },
+                    { "readyPods", "4/4" },
+                    { "state", "Ready" },
+                } },
+            },
+            Location = "eastus",
             PostgresInstanceName = "testpostgresInstance",
             ResourceGroupName = "testrg",
         });
@@ -49,7 +147,76 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-postgres_instance = azure_nextgen.azuredata.v20190724preview.PostgresInstance("postgresInstance",
+postgres_instance = azure_nextgen.azuredata.v20200908preview.PostgresInstance("postgresInstance",
+    admin="admin",
+    data_controller_id="dataControllerId",
+    k8s_raw={
+        "api_version": "apiVersion",
+        "kind": "postgresql-12",
+        "metadata": {
+            "creationTimestamp": "2020-08-25T14:55:10Z",
+            "generation": 1,
+            "name": "pg1",
+            "namespace": "test",
+            "resourceVersion": "527780",
+            "self_link": "/apis/arcdata.microsoft.com/v1alpha1/namespaces/test/postgresql-12s/pg1",
+            "uid": "1111aaaa-ffff-ffff-ffff-99999aaaaaaa",
+        },
+        "spec": {
+            "backups": {
+                "deltaMinutes": 3,
+                "fullMinutes": 10,
+                "tiers": [{
+                    "retention": {
+                        "maximums": [
+                            "6",
+                            "512MB",
+                        ],
+                        "minimums": ["3"],
+                    },
+                    "storage": {
+                        "volumeSize": "1Gi",
+                    },
+                }],
+            },
+            "engine": {
+                "extensions": [{
+                    "name": "citus",
+                }],
+            },
+            "scale": {
+                "shards": 3,
+            },
+            "scheduling": {
+                "default": {
+                    "resources": {
+                        "requests": {
+                            "memory": "256Mi",
+                        },
+                    },
+                },
+            },
+            "service": {
+                "type": "NodePort",
+            },
+            "storage": {
+                "data": {
+                    "className": "local-storage",
+                    "size": "5Gi",
+                },
+                "logs": {
+                    "className": "local-storage",
+                    "size": "5Gi",
+                },
+            },
+        },
+        "status": {
+            "externalEndpoint": None,
+            "readyPods": "4/4",
+            "state": "Ready",
+        },
+    },
+    location="eastus",
     postgres_instance_name="testpostgresInstance",
     resource_group_name="testrg")
 
@@ -61,9 +228,78 @@ postgres_instance = azure_nextgen.azuredata.v20190724preview.PostgresInstance("p
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const postgresInstance = new azure_nextgen.azuredata.v20190724preview.PostgresInstance("postgresInstance", {
+const postgresInstance = new azure_nextgen.azuredata.v20200908preview.PostgresInstance("postgresInstance", {
+    admin: "admin",
+    dataControllerId: "dataControllerId",
+    k8sRaw: {
+        apiVersion: "apiVersion",
+        kind: "postgresql-12",
+        metadata: {
+            creationTimestamp: "2020-08-25T14:55:10Z",
+            generation: 1,
+            name: "pg1",
+            namespace: "test",
+            resourceVersion: "527780",
+            selfLink: "/apis/arcdata.microsoft.com/v1alpha1/namespaces/test/postgresql-12s/pg1",
+            uid: "1111aaaa-ffff-ffff-ffff-99999aaaaaaa",
+        },
+        spec: {
+            backups: {
+                deltaMinutes: 3,
+                fullMinutes: 10,
+                tiers: [{
+                    retention: {
+                        maximums: [
+                            "6",
+                            "512MB",
+                        ],
+                        minimums: ["3"],
+                    },
+                    storage: {
+                        volumeSize: "1Gi",
+                    },
+                }],
+            },
+            engine: {
+                extensions: [{
+                    name: "citus",
+                }],
+            },
+            scale: {
+                shards: 3,
+            },
+            scheduling: {
+                "default": {
+                    resources: {
+                        requests: {
+                            memory: "256Mi",
+                        },
+                    },
+                },
+            },
+            service: {
+                type: "NodePort",
+            },
+            storage: {
+                data: {
+                    className: "local-storage",
+                    size: "5Gi",
+                },
+                logs: {
+                    className: "local-storage",
+                    size: "5Gi",
+                },
+            },
+        },
+        status: {
+            externalEndpoint: undefined,
+            readyPods: "4/4",
+            state: "Ready",
+        },
+    },
+    location: "eastus",
     postgresInstanceName: "testpostgresInstance",
     resourceGroupName: "testrg",
 });
@@ -84,7 +320,7 @@ const postgresInstance = new azure_nextgen.azuredata.v20190724preview.PostgresIn
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/azuredata/#pulumi_azure-nextgen.azuredata.PostgresInstance">PostgresInstance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">postgres_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/azuredata/#pulumi_azure-nextgen.azuredata.PostgresInstance">PostgresInstance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_controller_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">k8s_raw</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">last_uploaded_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">postgres_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -258,6 +494,16 @@ The PostgresInstance resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="postgresinstancename_csharp">
 <a href="#postgresinstancename_csharp" style="color: inherit; text-decoration: inherit;">Postgres<wbr>Instance<wbr>Name</a>
 </span> 
@@ -276,12 +522,72 @@ The PostgresInstance resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}The name of the Azure resource group{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="admin_csharp">
+<a href="#admin_csharp" style="color: inherit; text-decoration: inherit;">Admin</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The instance admin{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datacontrollerid_csharp">
+<a href="#datacontrollerid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Controller<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data controller id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="k8sraw_csharp">
+<a href="#k8sraw_csharp" style="color: inherit; text-decoration: inherit;">K8s<wbr>Raw</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The raw kubernetes information{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastuploadeddate_csharp">
+<a href="#lastuploadeddate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Uploaded<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last uploaded date from on premise cluster. Defaults to current date time{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -303,12 +609,72 @@ The PostgresInstance resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}The name of the Azure resource group{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="admin_go">
+<a href="#admin_go" style="color: inherit; text-decoration: inherit;">Admin</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The instance admin{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datacontrollerid_go">
+<a href="#datacontrollerid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Controller<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data controller id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="k8sraw_go">
+<a href="#k8sraw_go" style="color: inherit; text-decoration: inherit;">K8s<wbr>Raw</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The raw kubernetes information{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastuploadeddate_go">
+<a href="#lastuploadeddate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Uploaded<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last uploaded date from on premise cluster. Defaults to current date time{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -330,12 +696,72 @@ The PostgresInstance resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}The name of the Azure resource group{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="admin_nodejs">
+<a href="#admin_nodejs" style="color: inherit; text-decoration: inherit;">admin</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The instance admin{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datacontrollerid_nodejs">
+<a href="#datacontrollerid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Controller<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data controller id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="k8sraw_nodejs">
+<a href="#k8sraw_nodejs" style="color: inherit; text-decoration: inherit;">k8s<wbr>Raw</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The raw kubernetes information{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastuploadeddate_nodejs">
+<a href="#lastuploadeddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Uploaded<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last uploaded date from on premise cluster. Defaults to current date time{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -356,6 +782,56 @@ The PostgresInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure resource group{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="admin_python">
+<a href="#admin_python" style="color: inherit; text-decoration: inherit;">admin</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The instance admin{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="data_controller_id_python">
+<a href="#data_controller_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>controller_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The data controller id{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="k8s_raw_python">
+<a href="#k8s_raw_python" style="color: inherit; text-decoration: inherit;">k8s_<wbr>raw</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The raw kubernetes information{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_uploaded_date_python">
+<a href="#last_uploaded_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>uploaded_<wbr>date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Last uploaded date from on premise cluster. Defaults to current date time{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -387,16 +863,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -425,26 +891,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="hybriddatamanagerid_csharp">
-<a href="#hybriddatamanagerid_csharp" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Data<wbr>Manager<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}null{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="tags_csharp">
-<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -461,16 +907,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -502,26 +938,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="hybriddatamanagerid_go">
-<a href="#hybriddatamanagerid_go" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Data<wbr>Manager<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}null{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="tags_go">
-<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -538,16 +954,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -579,26 +985,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="hybriddatamanagerid_nodejs">
-<a href="#hybriddatamanagerid_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Data<wbr>Manager<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}null{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="tags_nodejs">
-<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -615,16 +1001,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -655,26 +1031,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="hybrid_data_manager_id_python">
-<a href="#hybrid_data_manager_id_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>data_<wbr>manager_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}null{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="tags_python">
-<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

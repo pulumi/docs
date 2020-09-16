@@ -124,7 +124,7 @@ activity_log_alert = azure_nextgen.insights.latest.ActivityLogAlert("activityLog
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const activityLogAlert = new azure_nextgen.insights.latest.ActivityLogAlert("activityLogAlert", {
     actions: {

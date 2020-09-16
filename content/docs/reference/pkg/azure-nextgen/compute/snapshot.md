@@ -74,7 +74,7 @@ snapshot = azure_nextgen.compute.latest.Snapshot("snapshot",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const snapshot = new azure_nextgen.compute.latest.Snapshot("snapshot", {
     creationData: {
@@ -147,7 +147,7 @@ snapshot = azure_nextgen.compute.latest.Snapshot("snapshot",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const snapshot = new azure_nextgen.compute.latest.Snapshot("snapshot", {
     creationData: {
@@ -219,7 +219,7 @@ snapshot = azure_nextgen.compute.latest.Snapshot("snapshot",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const snapshot = new azure_nextgen.compute.latest.Snapshot("snapshot", {
     creationData: {

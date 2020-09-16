@@ -214,13 +214,43 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="hybriddatamanagerid_csharp">
-<a href="#hybriddatamanagerid_csharp" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Data<wbr>Manager<wbr>Id</a>
+        <span id="admin_csharp">
+<a href="#admin_csharp" style="color: inherit; text-decoration: inherit;">Admin</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}null{{% /md %}}</dd>
+    <dd>{{% md %}}The instance admin{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="datacontrollerid_csharp">
+<a href="#datacontrollerid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Controller<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data controller id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="k8sraw_csharp">
+<a href="#k8sraw_csharp" style="color: inherit; text-decoration: inherit;">K8s<wbr>Raw</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The raw kubernetes information{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="lastuploadeddate_csharp">
+<a href="#lastuploadeddate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Uploaded<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last uploaded date from on premise cluster. Defaults to current date time{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -281,13 +311,43 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="hybriddatamanagerid_go">
-<a href="#hybriddatamanagerid_go" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Data<wbr>Manager<wbr>Id</a>
+        <span id="admin_go">
+<a href="#admin_go" style="color: inherit; text-decoration: inherit;">Admin</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}null{{% /md %}}</dd>
+    <dd>{{% md %}}The instance admin{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="datacontrollerid_go">
+<a href="#datacontrollerid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Controller<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data controller id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="k8sraw_go">
+<a href="#k8sraw_go" style="color: inherit; text-decoration: inherit;">K8s<wbr>Raw</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The raw kubernetes information{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="lastuploadeddate_go">
+<a href="#lastuploadeddate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Uploaded<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last uploaded date from on premise cluster. Defaults to current date time{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -348,13 +408,43 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="hybriddatamanagerid_nodejs">
-<a href="#hybriddatamanagerid_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Data<wbr>Manager<wbr>Id</a>
+        <span id="admin_nodejs">
+<a href="#admin_nodejs" style="color: inherit; text-decoration: inherit;">admin</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}null{{% /md %}}</dd>
+    <dd>{{% md %}}The instance admin{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="datacontrollerid_nodejs">
+<a href="#datacontrollerid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Controller<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The data controller id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="k8sraw_nodejs">
+<a href="#k8sraw_nodejs" style="color: inherit; text-decoration: inherit;">k8s<wbr>Raw</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The raw kubernetes information{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="lastuploadeddate_nodejs">
+<a href="#lastuploadeddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Uploaded<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last uploaded date from on premise cluster. Defaults to current date time{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -415,13 +505,43 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="hybrid_data_manager_id_python">
-<a href="#hybrid_data_manager_id_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>data_<wbr>manager_<wbr>id</a>
+        <span id="admin_python">
+<a href="#admin_python" style="color: inherit; text-decoration: inherit;">admin</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}null{{% /md %}}</dd>
+    <dd>{{% md %}}The instance admin{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="data_controller_id_python">
+<a href="#data_controller_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>controller_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The data controller id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="k8s_raw_python">
+<a href="#k8s_raw_python" style="color: inherit; text-decoration: inherit;">k8s_<wbr>raw</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The raw kubernetes information{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="last_uploaded_date_python">
+<a href="#last_uploaded_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>uploaded_<wbr>date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Last uploaded date from on premise cluster. Defaults to current date time{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

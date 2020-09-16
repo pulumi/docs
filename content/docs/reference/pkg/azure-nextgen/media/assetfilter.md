@@ -169,7 +169,7 @@ asset_filter = azure_nextgen.media.latest.AssetFilter("assetFilter",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const assetFilter = new azure_nextgen.media.latest.AssetFilter("assetFilter", {
     accountName: "contosomedia",

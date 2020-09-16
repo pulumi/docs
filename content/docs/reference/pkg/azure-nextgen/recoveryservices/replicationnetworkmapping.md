@@ -67,7 +67,7 @@ replication_network_mapping = azure_nextgen.recoveryservices.latest.ReplicationN
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const replicationNetworkMapping = new azure_nextgen.recoveryservices.latest.ReplicationNetworkMapping("replicationNetworkMapping", {
     fabricName: "b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac",

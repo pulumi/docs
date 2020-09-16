@@ -84,7 +84,7 @@ media_service = azure_nextgen.media.latest.MediaService("mediaService",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const mediaService = new azure_nextgen.media.latest.MediaService("mediaService", {
     accountName: "contososports",

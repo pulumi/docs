@@ -83,7 +83,7 @@ integration_account_certificate = azure_nextgen.logic.latest.IntegrationAccountC
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const integrationAccountCertificate = new azure_nextgen.logic.latest.IntegrationAccountCertificate("integrationAccountCertificate", {
     certificateName: "testCertificate",

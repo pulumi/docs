@@ -128,7 +128,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     hardwareProfile: {
@@ -324,7 +324,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     hardwareProfile: {
@@ -493,7 +493,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     hardwareProfile: {
@@ -654,7 +654,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     availabilitySet: {
@@ -876,7 +876,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     hardwareProfile: {
@@ -1078,7 +1078,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     hardwareProfile: {
@@ -1254,7 +1254,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     hardwareProfile: {
@@ -1432,7 +1432,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     hardwareProfile: {
@@ -1612,7 +1612,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     hardwareProfile: {
@@ -1792,7 +1792,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     hardwareProfile: {
@@ -1972,7 +1972,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     diagnosticsProfile: {
@@ -2150,7 +2150,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     diagnosticsProfile: {
@@ -2340,7 +2340,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     hardwareProfile: {
@@ -2529,7 +2529,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     hardwareProfile: {
@@ -2715,7 +2715,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     hardwareProfile: {
@@ -2899,7 +2899,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     hardwareProfile: {
@@ -3076,7 +3076,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     diagnosticsProfile: {
@@ -3238,7 +3238,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     hardwareProfile: {
@@ -3395,7 +3395,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     hardwareProfile: {
@@ -3574,7 +3574,7 @@ virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
     hardwareProfile: {

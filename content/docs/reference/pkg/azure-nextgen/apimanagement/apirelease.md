@@ -67,7 +67,7 @@ api_release = azure_nextgen.apimanagement.latest.ApiRelease("apiRelease",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const apiRelease = new azure_nextgen.apimanagement.latest.ApiRelease("apiRelease", {
     apiId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1",

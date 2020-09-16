@@ -67,7 +67,7 @@ cloud_connector = azure_nextgen.costmanagement.v20190301preview.CloudConnector("
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cloudConnector = new azure_nextgen.costmanagement.v20190301preview.CloudConnector("cloudConnector", {
     connectorName: "aws-123456789012",

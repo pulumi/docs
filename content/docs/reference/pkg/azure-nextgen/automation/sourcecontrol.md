@@ -86,7 +86,7 @@ source_control = azure_nextgen.automation.v20170515preview.SourceControl("source
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const sourceControl = new azure_nextgen.automation.v20170515preview.SourceControl("sourceControl", {
     autoSync: true,

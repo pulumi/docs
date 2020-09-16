@@ -115,7 +115,7 @@ database_account_cassandra_table = azure_nextgen.documentdb.latest.DatabaseAccou
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const databaseAccountCassandraTable = new azure_nextgen.documentdb.latest.DatabaseAccountCassandraTable("databaseAccountCassandraTable", {
     accountName: "ddb1",

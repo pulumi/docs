@@ -81,7 +81,7 @@ enterprise_channel = azure_nextgen.botservice.latest.EnterpriseChannel("enterpri
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const enterpriseChannel = new azure_nextgen.botservice.latest.EnterpriseChannel("enterpriseChannel", {
     etag: "etag1",

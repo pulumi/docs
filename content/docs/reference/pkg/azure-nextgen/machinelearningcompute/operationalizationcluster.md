@@ -115,7 +115,7 @@ operationalization_cluster = azure_nextgen.machinelearningcompute.v20170801previ
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const operationalizationCluster = new azure_nextgen.machinelearningcompute.v20170801preview.OperationalizationCluster("operationalizationCluster", {
     clusterName: "myCluster",

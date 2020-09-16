@@ -78,7 +78,7 @@ webhook = azure_nextgen.automation.latest.Webhook("webhook",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const webhook = new azure_nextgen.automation.latest.Webhook("webhook", {
     automationAccountName: "myAutomationAccount33",

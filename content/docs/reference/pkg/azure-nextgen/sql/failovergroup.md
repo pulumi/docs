@@ -98,7 +98,7 @@ failover_group = azure_nextgen.sql.v20150501preview.FailoverGroup("failoverGroup
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const failoverGroup = new azure_nextgen.sql.v20150501preview.FailoverGroup("failoverGroup", {
     databases: [

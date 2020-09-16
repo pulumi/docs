@@ -67,7 +67,7 @@ protected_item = azure_nextgen.recoveryservices.latest.ProtectedItem("protectedI
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const protectedItem = new azure_nextgen.recoveryservices.latest.ProtectedItem("protectedItem", {
     containerName: "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
@@ -132,7 +132,7 @@ protected_item = azure_nextgen.recoveryservices.latest.ProtectedItem("protectedI
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const protectedItem = new azure_nextgen.recoveryservices.latest.ProtectedItem("protectedItem", {
     containerName: "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",

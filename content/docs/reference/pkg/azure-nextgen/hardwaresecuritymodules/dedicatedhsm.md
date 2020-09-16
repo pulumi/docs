@@ -103,7 +103,7 @@ dedicated_hsm = azure_nextgen.hardwaresecuritymodules.v20181031preview.Dedicated
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dedicatedHsm = new azure_nextgen.hardwaresecuritymodules.v20181031preview.DedicatedHsm("dedicatedHsm", {
     location: "westus",

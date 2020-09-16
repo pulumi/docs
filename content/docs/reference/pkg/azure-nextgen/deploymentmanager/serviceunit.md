@@ -82,7 +82,7 @@ service_unit = azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("ser
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const serviceUnit = new azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("serviceUnit", {
     artifacts: {
@@ -169,7 +169,7 @@ service_unit = azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("ser
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const serviceUnit = new azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("serviceUnit", {
     artifacts: {

@@ -81,7 +81,7 @@ cluster = azure_nextgen.eventhub.v20180101preview.Cluster("cluster",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.eventhub.v20180101preview.Cluster("cluster", {
     clusterName: "testCluster",

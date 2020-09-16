@@ -91,7 +91,7 @@ custom_resource_provider = azure_nextgen.customproviders.v20180901preview.Custom
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const customResourceProvider = new azure_nextgen.customproviders.v20180901preview.CustomResourceProvider("customResourceProvider", {
     actions: [{

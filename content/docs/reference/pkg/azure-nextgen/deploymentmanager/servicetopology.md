@@ -67,7 +67,7 @@ service_topology = azure_nextgen.deploymentmanager.v20191101preview.ServiceTopol
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const serviceTopology = new azure_nextgen.deploymentmanager.v20191101preview.ServiceTopology("serviceTopology", {
     artifactSourceId: "Microsoft.DeploymentManager/artifactSources/myArtifactSource",
@@ -130,7 +130,7 @@ service_topology = azure_nextgen.deploymentmanager.v20191101preview.ServiceTopol
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const serviceTopology = new azure_nextgen.deploymentmanager.v20191101preview.ServiceTopology("serviceTopology", {
     location: "centralus",

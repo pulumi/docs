@@ -88,7 +88,7 @@ diagnostic_setting = azure_nextgen.aadiam.latest.DiagnosticSetting("diagnosticSe
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const diagnosticSetting = new azure_nextgen.aadiam.latest.DiagnosticSetting("diagnosticSetting", {
     eventHubAuthorizationRuleId: "/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",

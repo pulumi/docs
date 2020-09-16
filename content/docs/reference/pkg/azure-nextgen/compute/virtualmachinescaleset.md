@@ -137,7 +137,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
@@ -322,7 +322,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
@@ -501,7 +501,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
@@ -709,7 +709,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
@@ -919,7 +919,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
@@ -1118,7 +1118,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
@@ -1303,7 +1303,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
@@ -1483,7 +1483,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
@@ -1672,7 +1672,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     automaticRepairsPolicy: {
@@ -1870,7 +1870,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
@@ -2085,7 +2085,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
@@ -2298,7 +2298,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
@@ -2505,7 +2505,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
@@ -2724,7 +2724,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
@@ -2928,7 +2928,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
@@ -3113,7 +3113,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
@@ -3293,7 +3293,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
@@ -3495,7 +3495,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
@@ -3697,7 +3697,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
@@ -3921,7 +3921,7 @@ virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "centralus",

@@ -79,7 +79,7 @@ account = azure_nextgen.cognitiveservices.latest.Account("account",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const account = new azure_nextgen.cognitiveservices.latest.Account("account", {
     accountName: "testCreate1",
@@ -161,7 +161,7 @@ account = azure_nextgen.cognitiveservices.latest.Account("account",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const account = new azure_nextgen.cognitiveservices.latest.Account("account", {
     accountName: "testCreate1",
@@ -940,6 +940,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="aadclientid_csharp">
+<a href="#aadclientid_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Client Id (Application Id).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadtenantid_csharp">
+<a href="#aadtenantid_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Tenant Id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="eventhubconnectionstring_csharp">
 <a href="#eventhubconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Connection<wbr>String</a>
 </span> 
@@ -978,12 +998,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}(Personalization Only) The storage account connection string.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="superuser_csharp">
+<a href="#superuser_csharp" style="color: inherit; text-decoration: inherit;">Super<wbr>User</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The super user of Metrics Advisor.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="websitename_csharp">
+<a href="#websitename_csharp" style="color: inherit; text-decoration: inherit;">Website<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The website name of Metrics Advisor.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadclientid_go">
+<a href="#aadclientid_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Client Id (Application Id).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadtenantid_go">
+<a href="#aadtenantid_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Tenant Id.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1025,12 +1085,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}(Personalization Only) The storage account connection string.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="superuser_go">
+<a href="#superuser_go" style="color: inherit; text-decoration: inherit;">Super<wbr>User</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The super user of Metrics Advisor.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="websitename_go">
+<a href="#websitename_go" style="color: inherit; text-decoration: inherit;">Website<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The website name of Metrics Advisor.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadclientid_nodejs">
+<a href="#aadclientid_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Client Id (Application Id).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadtenantid_nodejs">
+<a href="#aadtenantid_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Tenant Id.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1072,12 +1172,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}(Personalization Only) The storage account connection string.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="superuser_nodejs">
+<a href="#superuser_nodejs" style="color: inherit; text-decoration: inherit;">super<wbr>User</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The super user of Metrics Advisor.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="websitename_nodejs">
+<a href="#websitename_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The website name of Metrics Advisor.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aad_client_id_python">
+<a href="#aad_client_id_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>client_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Client Id (Application Id).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aad_tenant_id_python">
+<a href="#aad_tenant_id_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>tenant_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Tenant Id.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1118,6 +1258,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}(Personalization Only) The storage account connection string.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="super_user_python">
+<a href="#super_user_python" style="color: inherit; text-decoration: inherit;">super_<wbr>user</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The super user of Metrics Advisor.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="website_name_python">
+<a href="#website_name_python" style="color: inherit; text-decoration: inherit;">website_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The website name of Metrics Advisor.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1146,6 +1306,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="aadclientid_csharp">
+<a href="#aadclientid_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Client Id (Application Id).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadtenantid_csharp">
+<a href="#aadtenantid_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Tenant Id.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="eventhubconnectionstring_csharp">
 <a href="#eventhubconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Connection<wbr>String</a>
 </span> 
@@ -1184,12 +1364,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}(Personalization Only) The storage account connection string.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="superuser_csharp">
+<a href="#superuser_csharp" style="color: inherit; text-decoration: inherit;">Super<wbr>User</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The super user of Metrics Advisor.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="websitename_csharp">
+<a href="#websitename_csharp" style="color: inherit; text-decoration: inherit;">Website<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The website name of Metrics Advisor.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadclientid_go">
+<a href="#aadclientid_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Client Id (Application Id).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadtenantid_go">
+<a href="#aadtenantid_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Tenant Id.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1231,12 +1451,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}(Personalization Only) The storage account connection string.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="superuser_go">
+<a href="#superuser_go" style="color: inherit; text-decoration: inherit;">Super<wbr>User</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The super user of Metrics Advisor.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="websitename_go">
+<a href="#websitename_go" style="color: inherit; text-decoration: inherit;">Website<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The website name of Metrics Advisor.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadclientid_nodejs">
+<a href="#aadclientid_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Client Id (Application Id).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadtenantid_nodejs">
+<a href="#aadtenantid_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Tenant Id.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1278,12 +1538,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}(Personalization Only) The storage account connection string.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="superuser_nodejs">
+<a href="#superuser_nodejs" style="color: inherit; text-decoration: inherit;">super<wbr>User</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The super user of Metrics Advisor.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="websitename_nodejs">
+<a href="#websitename_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The website name of Metrics Advisor.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aad_client_id_python">
+<a href="#aad_client_id_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>client_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Client Id (Application Id).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aad_tenant_id_python">
+<a href="#aad_tenant_id_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>tenant_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Tenant Id.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1324,6 +1624,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}(Personalization Only) The storage account connection string.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="super_user_python">
+<a href="#super_user_python" style="color: inherit; text-decoration: inherit;">super_<wbr>user</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The super user of Metrics Advisor.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="website_name_python">
+<a href="#website_name_python" style="color: inherit; text-decoration: inherit;">website_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Metrics Advisor Only) The website name of Metrics Advisor.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

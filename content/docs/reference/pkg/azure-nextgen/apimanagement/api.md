@@ -103,7 +103,7 @@ api = azure_nextgen.apimanagement.latest.Api("api",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "tempgroup",
@@ -203,7 +203,7 @@ api = azure_nextgen.apimanagement.latest.Api("api",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "echo-api2",
@@ -300,7 +300,7 @@ api = azure_nextgen.apimanagement.latest.Api("api",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "echoapiv3",
@@ -380,7 +380,7 @@ api = azure_nextgen.apimanagement.latest.Api("api",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "echo-api;rev=3",
@@ -451,7 +451,7 @@ api = azure_nextgen.apimanagement.latest.Api("api",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "apidocs",
@@ -520,7 +520,7 @@ api = azure_nextgen.apimanagement.latest.Api("api",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "petstore",
@@ -588,7 +588,7 @@ api = azure_nextgen.apimanagement.latest.Api("api",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "petstore",
@@ -656,7 +656,7 @@ api = azure_nextgen.apimanagement.latest.Api("api",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "petstore",
@@ -757,7 +757,7 @@ api = azure_nextgen.apimanagement.latest.Api("api",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "tempgroup",
@@ -848,7 +848,7 @@ api = azure_nextgen.apimanagement.latest.Api("api",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "soapApi",
@@ -930,7 +930,7 @@ api = azure_nextgen.apimanagement.latest.Api("api",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "soapApi",

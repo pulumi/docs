@@ -78,7 +78,7 @@ property = azure_nextgen.apimanagement.latest.Property("property",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const property = new azure_nextgen.apimanagement.latest.Property("property", {
     displayName: "prop3name",

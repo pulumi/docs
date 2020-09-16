@@ -67,7 +67,7 @@ data_connector = azure_nextgen.operationalinsights.latest.DataConnector("dataCon
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dataConnector = new azure_nextgen.operationalinsights.latest.DataConnector("dataConnector", {
     dataConnectorId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",

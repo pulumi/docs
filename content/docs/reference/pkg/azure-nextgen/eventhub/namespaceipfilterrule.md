@@ -69,7 +69,7 @@ namespace_ip_filter_rule = azure_nextgen.eventhub.v20180101preview.NamespaceIpFi
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const namespaceIpFilterRule = new azure_nextgen.eventhub.v20180101preview.NamespaceIpFilterRule("namespaceIpFilterRule", {
     action: "Accept",

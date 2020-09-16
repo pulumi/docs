@@ -63,7 +63,7 @@ notebook_proxy = azure_nextgen.notebooks.v20191011preview.NotebookProxy("noteboo
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const notebookProxy = new azure_nextgen.notebooks.v20191011preview.NotebookProxy("notebookProxy", {
     hostname: "Azure Notebooks",

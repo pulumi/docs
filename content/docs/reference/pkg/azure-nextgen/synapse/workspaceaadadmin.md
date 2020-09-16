@@ -69,7 +69,7 @@ workspace_aad_admin = azure_nextgen.synapse.v20190601preview.WorkspaceAadAdmin("
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const workspaceAadAdmin = new azure_nextgen.synapse.v20190601preview.WorkspaceAadAdmin("workspaceAadAdmin", {
     administratorType: "ActiveDirectory",

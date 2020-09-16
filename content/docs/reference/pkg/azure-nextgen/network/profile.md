@@ -87,7 +87,7 @@ profile = azure_nextgen.network.latest.Profile("profile",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const profile = new azure_nextgen.network.latest.Profile("profile", {
     dnsConfig: {
@@ -247,7 +247,7 @@ profile = azure_nextgen.network.latest.Profile("profile",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const profile = new azure_nextgen.network.latest.Profile("profile", {
     dnsConfig: {
@@ -387,7 +387,7 @@ profile = azure_nextgen.network.latest.Profile("profile",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const profile = new azure_nextgen.network.latest.Profile("profile", {
     dnsConfig: {

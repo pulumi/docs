@@ -131,7 +131,7 @@ scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("schedul
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule", {
     action: {
@@ -286,7 +286,7 @@ scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("schedul
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule", {
     action: {
@@ -405,7 +405,7 @@ scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("schedul
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule", {
     action: {

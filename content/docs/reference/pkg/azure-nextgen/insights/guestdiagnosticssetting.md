@@ -203,7 +203,7 @@ guest_diagnostics_setting = azure_nextgen.insights.v20180601preview.GuestDiagnos
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const guestDiagnosticsSetting = new azure_nextgen.insights.v20180601preview.GuestDiagnosticsSetting("guestDiagnosticsSetting", {
     dataSources: [

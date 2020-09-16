@@ -69,7 +69,7 @@ server_administrator = azure_nextgen.dbforpostgresql.latest.ServerAdministrator(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const serverAdministrator = new azure_nextgen.dbforpostgresql.latest.ServerAdministrator("serverAdministrator", {
     administratorType: "ActiveDirectory",

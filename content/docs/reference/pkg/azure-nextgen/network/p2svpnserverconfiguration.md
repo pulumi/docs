@@ -136,7 +136,7 @@ p2s_vpn_server_configuration = azure_nextgen.network.latest.P2sVpnServerConfigur
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const p2sVpnServerConfiguration = new azure_nextgen.network.latest.P2sVpnServerConfiguration("p2sVpnServerConfiguration", {
     p2SVpnServerConfigRadiusClientRootCertificates: [{

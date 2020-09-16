@@ -145,7 +145,7 @@ jit_network_access_policy = azure_nextgen.security.latest.JitNetworkAccessPolicy
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const jitNetworkAccessPolicy = new azure_nextgen.security.latest.JitNetworkAccessPolicy("jitNetworkAccessPolicy", {
     ascLocation: "westeurope",

@@ -65,7 +65,7 @@ customer_subscription = azure_nextgen.azurestack.latest.CustomerSubscription("cu
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const customerSubscription = new azure_nextgen.azurestack.latest.CustomerSubscription("customerSubscription", {
     customerSubscriptionName: "E09A4E93-29A7-4EBA-A6D4-76202383F07F",

@@ -131,7 +131,7 @@ blueprint = azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const blueprint = new azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint", {
     blueprintName: "simpleBlueprint",
@@ -251,7 +251,7 @@ blueprint = azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const blueprint = new azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint", {
     blueprintName: "simpleBlueprint",
@@ -392,7 +392,7 @@ blueprint = azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const blueprint = new azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint", {
     blueprintName: "simpleBlueprint",

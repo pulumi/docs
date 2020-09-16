@@ -67,7 +67,7 @@ virtual_network_rule = azure_nextgen.dbformariadb.latest.VirtualNetworkRule("vir
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualNetworkRule = new azure_nextgen.dbformariadb.latest.VirtualNetworkRule("virtualNetworkRule", {
     ignoreMissingVnetServiceEndpoint: false,

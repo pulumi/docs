@@ -73,7 +73,7 @@ multiple_activation_key = azure_nextgen.windowsesu.v20190916preview.MultipleActi
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const multipleActivationKey = new azure_nextgen.windowsesu.v20190916preview.MultipleActivationKey("multipleActivationKey", {
     agreementNumber: "1a2b45ag",

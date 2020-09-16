@@ -71,7 +71,7 @@ api_operation_policy = azure_nextgen.apimanagement.latest.ApiOperationPolicy("ap
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const apiOperationPolicy = new azure_nextgen.apimanagement.latest.ApiOperationPolicy("apiOperationPolicy", {
     apiId: "5600b57e7e8880006a040001",

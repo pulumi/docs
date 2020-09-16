@@ -67,7 +67,7 @@ managed_instance_key = azure_nextgen.sql.v20171001preview.ManagedInstanceKey("ma
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedInstanceKey = new azure_nextgen.sql.v20171001preview.ManagedInstanceKey("managedInstanceKey", {
     keyName: "someVault_someKey_01234567890123456789012345678901",

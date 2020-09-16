@@ -79,7 +79,7 @@ device_security_group = azure_nextgen.security.latest.DeviceSecurityGroup("devic
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const deviceSecurityGroup = new azure_nextgen.security.latest.DeviceSecurityGroup("deviceSecurityGroup", {
     deviceSecurityGroupName: "samplesecuritygroup",

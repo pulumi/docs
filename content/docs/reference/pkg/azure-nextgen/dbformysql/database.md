@@ -67,7 +67,7 @@ database = azure_nextgen.dbformysql.latest.Database("database",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const database = new azure_nextgen.dbformysql.latest.Database("database", {
     charset: "utf8",

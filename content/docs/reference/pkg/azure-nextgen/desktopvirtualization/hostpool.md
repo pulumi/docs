@@ -97,7 +97,7 @@ host_pool = azure_nextgen.desktopvirtualization.v20191210preview.HostPool("hostP
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const hostPool = new azure_nextgen.desktopvirtualization.v20191210preview.HostPool("hostPool", {
     description: "des1",

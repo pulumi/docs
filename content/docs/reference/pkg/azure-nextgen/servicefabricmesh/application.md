@@ -77,7 +77,7 @@ application = azure_nextgen.servicefabricmesh.v20180901preview.Application("appl
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const application = new azure_nextgen.servicefabricmesh.v20180901preview.Application("application", {
     applicationResourceName: "sampleApplication",

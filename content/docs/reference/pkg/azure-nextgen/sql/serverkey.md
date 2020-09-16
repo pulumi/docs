@@ -67,7 +67,7 @@ server_key = azure_nextgen.sql.v20150501preview.ServerKey("serverKey",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const serverKey = new azure_nextgen.sql.v20150501preview.ServerKey("serverKey", {
     keyName: "someVault_someKey_01234567890123456789012345678901",

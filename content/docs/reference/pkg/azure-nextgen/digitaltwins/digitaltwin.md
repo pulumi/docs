@@ -63,7 +63,7 @@ digital_twin = azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const digitalTwin = new azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin", {
     location: "WestUS",

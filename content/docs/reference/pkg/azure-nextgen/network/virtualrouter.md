@@ -77,7 +77,7 @@ virtual_router = azure_nextgen.network.latest.VirtualRouter("virtualRouter",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualRouter = new azure_nextgen.network.latest.VirtualRouter("virtualRouter", {
     hostedGateway: {

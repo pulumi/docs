@@ -107,7 +107,7 @@ p2s_vpn_gateway = azure_nextgen.network.latest.P2sVpnGateway("p2sVpnGateway",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const p2sVpnGateway = new azure_nextgen.network.latest.P2sVpnGateway("p2sVpnGateway", {
     customDnsServers: [

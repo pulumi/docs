@@ -163,7 +163,7 @@ database_account_sql_container = azure_nextgen.documentdb.latest.DatabaseAccount
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const databaseAccountSqlContainer = new azure_nextgen.documentdb.latest.DatabaseAccountSqlContainer("databaseAccountSqlContainer", {
     accountName: "ddb1",

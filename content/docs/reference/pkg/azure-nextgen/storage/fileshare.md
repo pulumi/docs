@@ -65,7 +65,7 @@ file_share = azure_nextgen.storage.latest.FileShare("fileShare",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const fileShare = new azure_nextgen.storage.latest.FileShare("fileShare", {
     accountName: "sto666",
@@ -125,7 +125,7 @@ file_share = azure_nextgen.storage.latest.FileShare("fileShare",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const fileShare = new azure_nextgen.storage.latest.FileShare("fileShare", {
     accountName: "sto328",
@@ -186,7 +186,7 @@ file_share = azure_nextgen.storage.latest.FileShare("fileShare",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const fileShare = new azure_nextgen.storage.latest.FileShare("fileShare", {
     accessTier: "Hot",

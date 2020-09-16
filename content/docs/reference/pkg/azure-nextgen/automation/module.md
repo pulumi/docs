@@ -81,7 +81,7 @@ module = azure_nextgen.automation.latest.Module("module",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const module = new azure_nextgen.automation.latest.Module("module", {
     automationAccountName: "myAutomationAccount33",

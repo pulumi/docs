@@ -65,7 +65,7 @@ private_link_scoped_resource = azure_nextgen.insights.v20191017preview.PrivateLi
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const privateLinkScopedResource = new azure_nextgen.insights.v20191017preview.PrivateLinkScopedResource("privateLinkScopedResource", {
     linkedResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/components/my-component",

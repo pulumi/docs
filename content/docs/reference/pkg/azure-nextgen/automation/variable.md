@@ -71,7 +71,7 @@ variable = azure_nextgen.automation.latest.Variable("variable",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const variable = new azure_nextgen.automation.latest.Variable("variable", {
     automationAccountName: "sampleAccount9",

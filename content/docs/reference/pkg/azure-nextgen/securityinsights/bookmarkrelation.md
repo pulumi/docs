@@ -69,7 +69,7 @@ bookmark_relation = azure_nextgen.securityinsights.v20190101preview.BookmarkRela
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const bookmarkRelation = new azure_nextgen.securityinsights.v20190101preview.BookmarkRelation("bookmarkRelation", {
     bookmarkId: "2216d0e1-91e3-4902-89fd-d2df8c535096",

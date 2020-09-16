@@ -73,7 +73,7 @@ database_principal_assignment = azure_nextgen.kusto.latest.DatabasePrincipalAssi
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const databasePrincipalAssignment = new azure_nextgen.kusto.latest.DatabasePrincipalAssignment("databasePrincipalAssignment", {
     clusterName: "kustoclusterrptest4",

@@ -72,7 +72,7 @@ gateway = azure_nextgen.apimanagement.latest.Gateway("gateway",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const gateway = new azure_nextgen.apimanagement.latest.Gateway("gateway", {
     description: "my gateway 1",

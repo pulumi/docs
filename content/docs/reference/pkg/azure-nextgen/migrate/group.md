@@ -65,7 +65,7 @@ group = azure_nextgen.migrate.latest.Group("group",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const group = new azure_nextgen.migrate.latest.Group("group", {
     eTag: "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",

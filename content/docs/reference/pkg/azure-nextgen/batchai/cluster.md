@@ -146,7 +146,7 @@ cluster = azure_nextgen.batchai.latest.Cluster("cluster",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.batchai.latest.Cluster("cluster", {
     clusterName: "demo_cluster",

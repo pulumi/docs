@@ -74,7 +74,7 @@ queue_authorization_rule = azure_nextgen.servicebus.latest.QueueAuthorizationRul
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const queueAuthorizationRule = new azure_nextgen.servicebus.latest.QueueAuthorizationRule("queueAuthorizationRule", {
     authorizationRuleName: "sdk-AuthRules-5800",

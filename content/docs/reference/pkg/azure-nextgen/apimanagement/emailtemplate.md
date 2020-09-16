@@ -65,7 +65,7 @@ email_template = azure_nextgen.apimanagement.latest.EmailTemplate("emailTemplate
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const emailTemplate = new azure_nextgen.apimanagement.latest.EmailTemplate("emailTemplate", {
     resourceGroupName: "rg1",

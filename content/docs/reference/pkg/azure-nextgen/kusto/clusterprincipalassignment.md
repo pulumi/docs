@@ -71,7 +71,7 @@ cluster_principal_assignment = azure_nextgen.kusto.latest.ClusterPrincipalAssign
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const clusterPrincipalAssignment = new azure_nextgen.kusto.latest.ClusterPrincipalAssignment("clusterPrincipalAssignment", {
     clusterName: "kustoclusterrptest4",

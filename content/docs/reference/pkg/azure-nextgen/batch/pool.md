@@ -23,7 +23,7 @@ Contains information about a pool.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/batch/#pulumi_azure-nextgen.batch.Pool">Pool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_licenses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">application_packages</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationPackageReference]]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[List[CertificateReference]]</span> = None<span class="p">, </span><span class="nx">deployment_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[DeploymentConfiguration]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inter_node_communication</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_tasks_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[List[MetadataItem]]</span> = None<span class="p">, </span><span class="nx">mount_configuration</span><span class="p">:</span> <span class="nx">Optional[List[MountConfiguration]]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[NetworkConfiguration]]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSettings]]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[Dict[StartTask]]</span> = None<span class="p">, </span><span class="nx">task_scheduling_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[TaskSchedulingPolicy]]</span> = None<span class="p">, </span><span class="nx">user_accounts</span><span class="p">:</span> <span class="nx">Optional[List[UserAccount]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/batch/#pulumi_azure-nextgen.batch.Pool">Pool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_licenses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">application_packages</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationPackageReference]]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[List[CertificateReference]]</span> = None<span class="p">, </span><span class="nx">deployment_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[DeploymentConfiguration]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inter_node_communication</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[List[MetadataItem]]</span> = None<span class="p">, </span><span class="nx">mount_configuration</span><span class="p">:</span> <span class="nx">Optional[List[MountConfiguration]]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[NetworkConfiguration]]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSettings]]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[Dict[StartTask]]</span> = None<span class="p">, </span><span class="nx">task_scheduling_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[TaskSchedulingPolicy]]</span> = None<span class="p">, </span><span class="nx">task_slots_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">user_accounts</span><span class="p">:</span> <span class="nx">Optional[List[UserAccount]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -287,16 +287,6 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxtaskspernode_csharp">
-<a href="#maxtaskspernode_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Tasks<wbr>Per<wbr>Node</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
@@ -354,6 +344,16 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#taskschedulingpolicy">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Task<wbr>Scheduling<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If not specified, the default is spread.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="taskslotspernode_csharp">
+<a href="#taskslotspernode_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Slots<wbr>Per<wbr>Node</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -474,16 +474,6 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxtaskspernode_go">
-<a href="#maxtaskspernode_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Tasks<wbr>Per<wbr>Node</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
@@ -541,6 +531,16 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#taskschedulingpolicy">Task<wbr>Scheduling<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}If not specified, the default is spread.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="taskslotspernode_go">
+<a href="#taskslotspernode_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Slots<wbr>Per<wbr>Node</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -661,16 +661,6 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxtaskspernode_nodejs">
-<a href="#maxtaskspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Tasks<wbr>Per<wbr>Node</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
@@ -728,6 +718,16 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#taskschedulingpolicy">Task<wbr>Scheduling<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}If not specified, the default is spread.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="taskslotspernode_nodejs">
+<a href="#taskslotspernode_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Slots<wbr>Per<wbr>Node</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -848,16 +848,6 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span id="max_tasks_per_node_python">
-<a href="#max_tasks_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>tasks_<wbr>per_<wbr>node</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
@@ -915,6 +905,16 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#taskschedulingpolicy">Dict[Task<wbr>Scheduling<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}If not specified, the default is spread.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="task_slots_per_node_python">
+<a href="#task_slots_per_node_python" style="color: inherit; text-decoration: inherit;">task_<wbr>slots_<wbr>per_<wbr>node</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5559,7 +5559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun.{{% /md %}}</dd>
+    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5615,7 +5615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun.{{% /md %}}</dd>
+    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5671,7 +5671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun.{{% /md %}}</dd>
+    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5727,7 +5727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun.{{% /md %}}</dd>
+    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5801,7 +5801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun.{{% /md %}}</dd>
+    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5857,7 +5857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun.{{% /md %}}</dd>
+    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5913,7 +5913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun.{{% /md %}}</dd>
+    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5969,7 +5969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun.{{% /md %}}</dd>
+    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -10257,7 +10257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatpool">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Pool<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -10274,7 +10274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatpool">[]Inbound<wbr>Nat<wbr>Pool</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -10291,7 +10291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatpool">Inbound<wbr>Nat<wbr>Pool[]</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -10308,7 +10308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatpool">List[Inbound<wbr>Nat<wbr>Pool]</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -10343,7 +10343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatpoolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Pool<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -10360,7 +10360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatpoolresponse">[]Inbound<wbr>Nat<wbr>Pool<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -10377,7 +10377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatpoolresponse">Inbound<wbr>Nat<wbr>Pool<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -10394,7 +10394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatpoolresponse">List[Inbound<wbr>Nat<wbr>Pool<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -10429,7 +10429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 50 dedicated nodes or 20 low-priority nodes can be allocated for each public IP. For example, a pool needing 150 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -10456,7 +10456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 50 dedicated nodes or 20 low-priority nodes can be allocated for each public IP. For example, a pool needing 150 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -10483,7 +10483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 50 dedicated nodes or 20 low-priority nodes can be allocated for each public IP. For example, a pool needing 150 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -10510,7 +10510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 50 dedicated nodes or 20 low-priority nodes can be allocated for each public IP. For example, a pool needing 150 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -10555,7 +10555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 50 dedicated nodes or 20 low-priority nodes can be allocated for each public IP. For example, a pool needing 150 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -10582,7 +10582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 50 dedicated nodes or 20 low-priority nodes can be allocated for each public IP. For example, a pool needing 150 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -10609,7 +10609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 50 dedicated nodes or 20 low-priority nodes can be allocated for each public IP. For example, a pool needing 150 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -10636,7 +10636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 50 dedicated nodes or 20 low-priority nodes can be allocated for each public IP. For example, a pool needing 150 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

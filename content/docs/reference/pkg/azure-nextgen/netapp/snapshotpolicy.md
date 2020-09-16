@@ -111,7 +111,7 @@ snapshot_policy = azure_nextgen.netapp.latest.SnapshotPolicy("snapshotPolicy",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const snapshotPolicy = new azure_nextgen.netapp.latest.SnapshotPolicy("snapshotPolicy", {
     accountName: "account1",

@@ -69,7 +69,7 @@ management_association = azure_nextgen.operationsmanagement.v20151101preview.Man
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managementAssociation = new azure_nextgen.operationsmanagement.v20151101preview.ManagementAssociation("managementAssociation", {
     location: "East US",

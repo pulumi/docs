@@ -63,7 +63,7 @@ input = azure_nextgen.streamanalytics.latest.Input("input",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const input = new azure_nextgen.streamanalytics.latest.Input("input", {
     inputName: "input7225",
@@ -122,7 +122,7 @@ input = azure_nextgen.streamanalytics.latest.Input("input",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const input = new azure_nextgen.streamanalytics.latest.Input("input", {
     inputName: "input7425",
@@ -181,7 +181,7 @@ input = azure_nextgen.streamanalytics.latest.Input("input",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const input = new azure_nextgen.streamanalytics.latest.Input("input", {
     inputName: "input7970",
@@ -240,7 +240,7 @@ input = azure_nextgen.streamanalytics.latest.Input("input",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const input = new azure_nextgen.streamanalytics.latest.Input("input", {
     inputName: "input8899",

@@ -77,7 +77,7 @@ configuration_store = azure_nextgen.appconfiguration.latest.ConfigurationStore("
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const configurationStore = new azure_nextgen.appconfiguration.latest.ConfigurationStore("configurationStore", {
     configStoreName: "contoso",
@@ -163,7 +163,7 @@ configuration_store = azure_nextgen.appconfiguration.latest.ConfigurationStore("
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const configurationStore = new azure_nextgen.appconfiguration.latest.ConfigurationStore("configurationStore", {
     configStoreName: "contoso",

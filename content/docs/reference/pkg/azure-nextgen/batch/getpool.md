@@ -404,16 +404,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="maxtaskspernode_csharp">
-<a href="#maxtaskspernode_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Tasks<wbr>Per<wbr>Node</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
@@ -471,6 +461,16 @@ The following output properties are available:
         <span class="property-type"><a href="#taskschedulingpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Outputs.<wbr>Task<wbr>Scheduling<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If not specified, the default is spread.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="taskslotspernode_csharp">
+<a href="#taskslotspernode_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Slots<wbr>Per<wbr>Node</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -691,16 +691,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="maxtaskspernode_go">
-<a href="#maxtaskspernode_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Tasks<wbr>Per<wbr>Node</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span> 
@@ -758,6 +748,16 @@ The following output properties are available:
         <span class="property-type"><a href="#taskschedulingpolicyresponse">Task<wbr>Scheduling<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If not specified, the default is spread.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="taskslotspernode_go">
+<a href="#taskslotspernode_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Slots<wbr>Per<wbr>Node</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -978,16 +978,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="maxtaskspernode_nodejs">
-<a href="#maxtaskspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Tasks<wbr>Per<wbr>Node</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
@@ -1045,6 +1035,16 @@ The following output properties are available:
         <span class="property-type"><a href="#taskschedulingpolicyresponse">Task<wbr>Scheduling<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If not specified, the default is spread.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="taskslotspernode_nodejs">
+<a href="#taskslotspernode_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Slots<wbr>Per<wbr>Node</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1265,16 +1265,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="max_tasks_per_node_python">
-<a href="#max_tasks_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>tasks_<wbr>per_<wbr>node</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
@@ -1332,6 +1322,16 @@ The following output properties are available:
         <span class="property-type"><a href="#taskschedulingpolicyresponse">Dict[Task<wbr>Scheduling<wbr>Policy<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}If not specified, the default is spread.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="task_slots_per_node_python">
+<a href="#task_slots_per_node_python" style="color: inherit; text-decoration: inherit;">task_<wbr>slots_<wbr>per_<wbr>node</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -3554,7 +3554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun.{{% /md %}}</dd>
+    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3610,7 +3610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun.{{% /md %}}</dd>
+    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3666,7 +3666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun.{{% /md %}}</dd>
+    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3722,7 +3722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun.{{% /md %}}</dd>
+    <dd>{{% md %}}The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5898,7 +5898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatpoolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Pool<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5915,7 +5915,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatpoolresponse">[]Inbound<wbr>Nat<wbr>Pool<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5932,7 +5932,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatpoolresponse">Inbound<wbr>Nat<wbr>Pool<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5949,7 +5949,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatpoolresponse">List[Inbound<wbr>Nat<wbr>Pool<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400.{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5984,7 +5984,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 50 dedicated nodes or 20 low-priority nodes can be allocated for each public IP. For example, a pool needing 150 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6011,7 +6011,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 50 dedicated nodes or 20 low-priority nodes can be allocated for each public IP. For example, a pool needing 150 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6038,7 +6038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 50 dedicated nodes or 20 low-priority nodes can be allocated for each public IP. For example, a pool needing 150 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6065,7 +6065,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 50 dedicated nodes or 20 low-priority nodes can be allocated for each public IP. For example, a pool needing 150 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
+    <dd>{{% md %}}The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

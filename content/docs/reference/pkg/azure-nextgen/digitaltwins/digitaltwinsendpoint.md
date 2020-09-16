@@ -63,7 +63,7 @@ digital_twins_endpoint = azure_nextgen.digitaltwins.latest.DigitalTwinsEndpoint(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.latest.DigitalTwinsEndpoint("digitalTwinsEndpoint", {
     endpointName: "myServiceBus",

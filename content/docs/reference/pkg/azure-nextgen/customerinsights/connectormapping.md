@@ -147,7 +147,7 @@ connector_mapping = azure_nextgen.customerinsights.latest.ConnectorMapping("conn
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const connectorMapping = new azure_nextgen.customerinsights.latest.ConnectorMapping("connectorMapping", {
     connectorName: "testConnector8858",

@@ -86,7 +86,7 @@ disk_encryption_set = azure_nextgen.compute.latest.DiskEncryptionSet("diskEncryp
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const diskEncryptionSet = new azure_nextgen.compute.latest.DiskEncryptionSet("diskEncryptionSet", {
     activeKey: {

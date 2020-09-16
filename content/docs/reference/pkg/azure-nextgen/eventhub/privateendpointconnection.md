@@ -81,7 +81,7 @@ private_endpoint_connection = azure_nextgen.eventhub.v20180101preview.PrivateEnd
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const privateEndpointConnection = new azure_nextgen.eventhub.v20180101preview.PrivateEndpointConnection("privateEndpointConnection", {
     namespaceName: "sdk-Namespace-2924",

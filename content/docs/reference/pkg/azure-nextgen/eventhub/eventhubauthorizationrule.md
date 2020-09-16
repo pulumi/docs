@@ -74,7 +74,7 @@ event_hub_authorization_rule = azure_nextgen.eventhub.latest.EventHubAuthorizati
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const eventHubAuthorizationRule = new azure_nextgen.eventhub.latest.EventHubAuthorizationRule("eventHubAuthorizationRule", {
     authorizationRuleName: "sdk-Authrules-2513",

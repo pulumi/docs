@@ -74,7 +74,7 @@ hybrid_connection_authorization_rule = azure_nextgen.relay.latest.HybridConnecti
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const hybridConnectionAuthorizationRule = new azure_nextgen.relay.latest.HybridConnectionAuthorizationRule("hybridConnectionAuthorizationRule", {
     authorizationRuleName: "sdk-RelayAuthRules-01",

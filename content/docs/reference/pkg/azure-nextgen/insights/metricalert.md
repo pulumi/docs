@@ -149,7 +149,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [{
@@ -329,7 +329,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [{
@@ -466,7 +466,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [],
@@ -622,7 +622,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [{
@@ -781,7 +781,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [{
@@ -944,7 +944,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [{
@@ -1109,7 +1109,7 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [{

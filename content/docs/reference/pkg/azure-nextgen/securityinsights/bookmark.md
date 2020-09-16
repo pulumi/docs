@@ -102,7 +102,7 @@ bookmark = azure_nextgen.securityinsights.v20190101preview.Bookmark("bookmark",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const bookmark = new azure_nextgen.securityinsights.v20190101preview.Bookmark("bookmark", {
     bookmarkId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",

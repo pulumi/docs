@@ -101,7 +101,7 @@ peer_asn = azure_nextgen.peering.latest.PeerAsn("peerAsn",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const peerAsn = new azure_nextgen.peering.latest.PeerAsn("peerAsn", {
     peerAsn: 65000,

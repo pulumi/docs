@@ -65,7 +65,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
@@ -156,7 +156,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
@@ -249,7 +249,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
@@ -326,7 +326,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
@@ -391,7 +391,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
@@ -460,7 +460,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
@@ -548,7 +548,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineL
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",

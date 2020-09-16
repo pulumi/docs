@@ -101,7 +101,7 @@ import_pipeline = azure_nextgen.containerregistry.v20191201preview.ImportPipelin
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const importPipeline = new azure_nextgen.containerregistry.v20191201preview.ImportPipeline("importPipeline", {
     identity: {

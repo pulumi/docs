@@ -69,7 +69,7 @@ appliance = azure_nextgen.solutions.v20160901preview.Appliance("appliance",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const appliance = new azure_nextgen.solutions.v20160901preview.Appliance("appliance", {
     applianceDefinitionId: "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applianceDefinitions/myAppDef",

@@ -67,7 +67,7 @@ ip_firewall_rule = azure_nextgen.synapse.v20190601preview.IpFirewallRule("ipFire
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const ipFirewallRule = new azure_nextgen.synapse.v20190601preview.IpFirewallRule("ipFirewallRule", {
     endIpAddress: "10.0.0.254",

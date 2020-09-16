@@ -65,7 +65,7 @@ protection_container = azure_nextgen.recoveryservices.latest.ProtectionContainer
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const protectionContainer = new azure_nextgen.recoveryservices.latest.ProtectionContainer("protectionContainer", {
     containerName: "VMAppContainer;Compute;testRG;testSQL",

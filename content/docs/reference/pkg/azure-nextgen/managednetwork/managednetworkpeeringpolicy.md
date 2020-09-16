@@ -63,7 +63,7 @@ managed_network_peering_policy = azure_nextgen.managednetwork.v20190601preview.M
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedNetworkPeeringPolicy = new azure_nextgen.managednetwork.v20190601preview.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy", {
     managedNetworkName: "myManagedNetwork",

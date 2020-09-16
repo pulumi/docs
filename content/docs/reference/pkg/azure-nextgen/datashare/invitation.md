@@ -67,7 +67,7 @@ invitation = azure_nextgen.datashare.latest.Invitation("invitation",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const invitation = new azure_nextgen.datashare.latest.Invitation("invitation", {
     accountName: "Account1",

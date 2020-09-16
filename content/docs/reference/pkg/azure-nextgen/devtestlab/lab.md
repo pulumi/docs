@@ -72,7 +72,7 @@ lab = azure_nextgen.devtestlab.latest.Lab("lab",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const lab = new azure_nextgen.devtestlab.latest.Lab("lab", {
     labStorageType: "{Standard|Premium}",

@@ -65,7 +65,7 @@ azure_ad_metric = azure_nextgen.aadiam.v20200701preview.AzureADMetric("azureADMe
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const azureADMetric = new azure_nextgen.aadiam.v20200701preview.AzureADMetric("azureADMetric", {
     azureADMetricsName: "ddb1",

@@ -154,7 +154,7 @@ hub_virtual_network_connection = azure_nextgen.network.latest.HubVirtualNetworkC
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const hubVirtualNetworkConnection = new azure_nextgen.network.latest.HubVirtualNetworkConnection("hubVirtualNetworkConnection", {
     connectionName: "connection1",

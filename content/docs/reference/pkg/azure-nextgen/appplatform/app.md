@@ -65,7 +65,7 @@ app = azure_nextgen.appplatform.latest.App("app",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const app = new azure_nextgen.appplatform.latest.App("app", {
     appName: "myapp",

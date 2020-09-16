@@ -63,7 +63,7 @@ shared_private_link_resource = azure_nextgen.search.latest.SharedPrivateLinkReso
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const sharedPrivateLinkResource = new azure_nextgen.search.latest.SharedPrivateLinkResource("sharedPrivateLinkResource", {
     resourceGroupName: "rg1",

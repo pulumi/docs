@@ -65,7 +65,7 @@ integration_account_batch_configuration = azure_nextgen.logic.latest.Integration
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const integrationAccountBatchConfiguration = new azure_nextgen.logic.latest.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration", {
     batchConfigurationName: "testBatchConfiguration",

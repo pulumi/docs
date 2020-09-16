@@ -91,7 +91,7 @@ hana_instance = azure_nextgen.hanaonazure.v20171103preview.HanaInstance("hanaIns
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const hanaInstance = new azure_nextgen.hanaonazure.v20171103preview.HanaInstance("hanaInstance", {
     hanaInstanceName: "myHanaInstance",

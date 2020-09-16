@@ -71,7 +71,7 @@ service = azure_nextgen.deploymentmanager.v20191101preview.Service("service",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const service = new azure_nextgen.deploymentmanager.v20191101preview.Service("service", {
     location: "centralus",

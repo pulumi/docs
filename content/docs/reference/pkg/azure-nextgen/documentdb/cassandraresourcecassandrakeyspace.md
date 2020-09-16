@@ -76,7 +76,7 @@ cassandra_resource_cassandra_keyspace = azure_nextgen.documentdb.latest.Cassandr
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cassandraResourceCassandraKeyspace = new azure_nextgen.documentdb.latest.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace", {
     accountName: "ddb1",

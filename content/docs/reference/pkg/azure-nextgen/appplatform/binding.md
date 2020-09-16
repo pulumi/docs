@@ -65,7 +65,7 @@ binding = azure_nextgen.appplatform.latest.Binding("binding",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const binding = new azure_nextgen.appplatform.latest.Binding("binding", {
     appName: "myapp",

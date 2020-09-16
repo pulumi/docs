@@ -69,7 +69,7 @@ database = azure_nextgen.sql.latest.Database("database",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const database = new azure_nextgen.sql.latest.Database("database", {
     createMode: "Copy",
@@ -139,7 +139,7 @@ database = azure_nextgen.sql.latest.Database("database",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const database = new azure_nextgen.sql.latest.Database("database", {
     createMode: "Restore",
@@ -210,7 +210,7 @@ database = azure_nextgen.sql.latest.Database("database",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const database = new azure_nextgen.sql.latest.Database("database", {
     createMode: "Restore",
@@ -279,7 +279,7 @@ database = azure_nextgen.sql.latest.Database("database",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const database = new azure_nextgen.sql.latest.Database("database", {
     createMode: "Recovery",
@@ -347,7 +347,7 @@ database = azure_nextgen.sql.latest.Database("database",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const database = new azure_nextgen.sql.latest.Database("database", {
     createMode: "NonReadableSecondary",
@@ -417,7 +417,7 @@ database = azure_nextgen.sql.latest.Database("database",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const database = new azure_nextgen.sql.latest.Database("database", {
     createMode: "PointInTimeRestore",
@@ -486,7 +486,7 @@ database = azure_nextgen.sql.latest.Database("database",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const database = new azure_nextgen.sql.latest.Database("database", {
     createMode: "OnlineSecondary",
@@ -554,7 +554,7 @@ database = azure_nextgen.sql.latest.Database("database",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const database = new azure_nextgen.sql.latest.Database("database", {
     createMode: "RestoreLongTermRetentionBackup",
@@ -634,7 +634,7 @@ database = azure_nextgen.sql.latest.Database("database",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const database = new azure_nextgen.sql.latest.Database("database", {
     collation: "SQL_Latin1_General_CP1_CI_AS",
@@ -704,7 +704,7 @@ database = azure_nextgen.sql.latest.Database("database",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const database = new azure_nextgen.sql.latest.Database("database", {
     databaseName: "testdb",
@@ -780,7 +780,7 @@ database = azure_nextgen.sql.latest.Database("database",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const database = new azure_nextgen.sql.latest.Database("database", {
     collation: "SQL_Latin1_General_CP1_CI_AS",
@@ -851,7 +851,7 @@ database = azure_nextgen.sql.latest.Database("database",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const database = new azure_nextgen.sql.latest.Database("database", {
     databaseName: "testdb",

@@ -28,19 +28,13 @@ class MyStack : Stack
     {
         var controllerDetails = new AzureNextGen.DelegatedNetwork.V20200808Preview.ControllerDetails("controllerDetails", new AzureNextGen.DelegatedNetwork.V20200808Preview.ControllerDetailsArgs
         {
+            ApiServerEndpoint = "https://testk8s.cloudapp.net",
+            ClusterRootCA = "ddsadsad344mfdsfdl",
             ControllerType = "Kubernetes",
-            KubernetesProperties = 
-            {
-                new AzureNextGen.DelegatedNetwork.V20200808Preview.Inputs.KubernetesPropertiesArgs
-                {
-                    ApiServerEndpoint = "https://testk8s.cloudapp.net",
-                    ClusterRootCA = "ddsadsad344mfdsfdl",
-                    ServerAppID = "546192d7-503f-477a-9cfe-4efc3ee2b6e1",
-                    ServerTenantID = "da6192d7-503f-477a-9cfe-4efc3ee2b6c3",
-                },
-            },
             ResourceGroupName = "TestRG",
             ResourceName = "dnctestcontroller",
+            ServerAppID = "546192d7-503f-477a-9cfe-4efc3ee2b6e1",
+            ServerTenantID = "da6192d7-503f-477a-9cfe-4efc3ee2b6c3",
         });
     }
 
@@ -61,15 +55,13 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 controller_details = azure_nextgen.delegatednetwork.v20200808preview.ControllerDetails("controllerDetails",
+    api_server_endpoint="https://testk8s.cloudapp.net",
+    cluster_root_ca="ddsadsad344mfdsfdl",
     controller_type="Kubernetes",
-    kubernetes_properties=[{
-        "apiServerEndpoint": "https://testk8s.cloudapp.net",
-        "clusterRootCA": "ddsadsad344mfdsfdl",
-        "serverAppID": "546192d7-503f-477a-9cfe-4efc3ee2b6e1",
-        "serverTenantID": "da6192d7-503f-477a-9cfe-4efc3ee2b6c3",
-    }],
     resource_group_name="TestRG",
-    resource_name="dnctestcontroller")
+    resource_name="dnctestcontroller",
+    server_app_id="546192d7-503f-477a-9cfe-4efc3ee2b6e1",
+    server_tenant_id="da6192d7-503f-477a-9cfe-4efc3ee2b6c3")
 
 ```
 
@@ -79,18 +71,16 @@ controller_details = azure_nextgen.delegatednetwork.v20200808preview.ControllerD
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const controllerDetails = new azure_nextgen.delegatednetwork.v20200808preview.ControllerDetails("controllerDetails", {
+    apiServerEndpoint: "https://testk8s.cloudapp.net",
+    clusterRootCA: "ddsadsad344mfdsfdl",
     controllerType: "Kubernetes",
-    kubernetesProperties: [{
-        apiServerEndpoint: "https://testk8s.cloudapp.net",
-        clusterRootCA: "ddsadsad344mfdsfdl",
-        serverAppID: "546192d7-503f-477a-9cfe-4efc3ee2b6e1",
-        serverTenantID: "da6192d7-503f-477a-9cfe-4efc3ee2b6c3",
-    }],
     resourceGroupName: "TestRG",
     resourceName: "dnctestcontroller",
+    serverAppID: "546192d7-503f-477a-9cfe-4efc3ee2b6e1",
+    serverTenantID: "da6192d7-503f-477a-9cfe-4efc3ee2b6c3",
 });
 
 ```
@@ -109,7 +99,7 @@ const controllerDetails = new azure_nextgen.delegatednetwork.v20200808preview.Co
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/delegatednetwork/#pulumi_azure-nextgen.delegatednetwork.ControllerDetails">ControllerDetails</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">controller_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kubernetes_properties</span><span class="p">:</span> <span class="nx">Optional[List[KubernetesProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/delegatednetwork/#pulumi_azure-nextgen.delegatednetwork.ControllerDetails">ControllerDetails</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_server_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_root_ca</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">controller_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -303,23 +293,53 @@ The ControllerDetails resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="apiserverendpoint_csharp">
+<a href="#apiserverendpoint_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Server<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}APIServer url{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterrootca_csharp">
+<a href="#clusterrootca_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Root<wbr>CA</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}RootCA certificate of kubernetes cluster{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="controllertype_csharp">
 <a href="#controllertype_csharp" style="color: inherit; text-decoration: inherit;">Controller<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of Delegated controller.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of controller{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kubernetesproperties_csharp">
-<a href="#kubernetesproperties_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Properties</a>
+        <span id="serverappid_csharp">
+<a href="#serverappid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>ID</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Delegatednetwork.<wbr>Inputs.<wbr>Kubernetes<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}properties of kubernetes clusters{{% /md %}}</dd>
+    <dd>{{% md %}}AAD ID used with apiserver{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servertenantid_csharp">
+<a href="#servertenantid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Tenant<wbr>ID</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}TenantID of server App ID{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -350,23 +370,53 @@ The ControllerDetails resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="apiserverendpoint_go">
+<a href="#apiserverendpoint_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Server<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}APIServer url{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterrootca_go">
+<a href="#clusterrootca_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Root<wbr>CA</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}RootCA certificate of kubernetes cluster{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="controllertype_go">
 <a href="#controllertype_go" style="color: inherit; text-decoration: inherit;">Controller<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of Delegated controller.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of controller{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kubernetesproperties_go">
-<a href="#kubernetesproperties_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Properties</a>
+        <span id="serverappid_go">
+<a href="#serverappid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>ID</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesproperties">[]Kubernetes<wbr>Properties</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}properties of kubernetes clusters{{% /md %}}</dd>
+    <dd>{{% md %}}AAD ID used with apiserver{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servertenantid_go">
+<a href="#servertenantid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Tenant<wbr>ID</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}TenantID of server App ID{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -397,23 +447,53 @@ The ControllerDetails resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="apiserverendpoint_nodejs">
+<a href="#apiserverendpoint_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Server<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}APIServer url{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterrootca_nodejs">
+<a href="#clusterrootca_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Root<wbr>CA</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}RootCA certificate of kubernetes cluster{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="controllertype_nodejs">
 <a href="#controllertype_nodejs" style="color: inherit; text-decoration: inherit;">controller<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of Delegated controller.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of controller{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kubernetesproperties_nodejs">
-<a href="#kubernetesproperties_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Properties</a>
+        <span id="serverappid_nodejs">
+<a href="#serverappid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>App<wbr>ID</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesproperties">Kubernetes<wbr>Properties[]</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}properties of kubernetes clusters{{% /md %}}</dd>
+    <dd>{{% md %}}AAD ID used with apiserver{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servertenantid_nodejs">
+<a href="#servertenantid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Tenant<wbr>ID</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}TenantID of server App ID{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -444,23 +524,53 @@ The ControllerDetails resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
+        <span id="api_server_endpoint_python">
+<a href="#api_server_endpoint_python" style="color: inherit; text-decoration: inherit;">api_<wbr>server_<wbr>endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}APIServer url{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cluster_root_ca_python">
+<a href="#cluster_root_ca_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>root_<wbr>ca</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}RootCA certificate of kubernetes cluster{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="controller_type_python">
 <a href="#controller_type_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of Delegated controller.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of controller{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kubernetes_properties_python">
-<a href="#kubernetes_properties_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>properties</a>
+        <span id="server_app_id_python">
+<a href="#server_app_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>app_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesproperties">List[Kubernetes<wbr>Properties]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}properties of kubernetes clusters{{% /md %}}</dd>
+    <dd>{{% md %}}AAD ID used with apiserver{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="server_tenant_id_python">
+<a href="#server_tenant_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>tenant_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}TenantID of server App ID{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -523,12 +633,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-"
             title="">
         <span id="dncappid_csharp">
-<a href="#dncappid_csharp" style="color: inherit; text-decoration: inherit;">Dnc<wbr>App<wbr>ID</a>
+<a href="#dncappid_csharp" style="color: inherit; text-decoration: inherit;">Dnc<wbr>App<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Get controller AAD ID.{{% /md %}}</dd>
+    <dd>{{% md %}}The current state of dnc controller resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -538,7 +648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Dnc Endpoint url.{{% /md %}}</dd>
+    <dd>{{% md %}}dnc endpoint url that customers can use to connect to{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -549,16 +659,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Location of the DNC controller resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="resourceguid_csharp">
-<a href="#resourceguid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets resource GUID property of the controller resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -610,12 +710,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-"
             title="">
         <span id="dncappid_go">
-<a href="#dncappid_go" style="color: inherit; text-decoration: inherit;">Dnc<wbr>App<wbr>ID</a>
+<a href="#dncappid_go" style="color: inherit; text-decoration: inherit;">Dnc<wbr>App<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Get controller AAD ID.{{% /md %}}</dd>
+    <dd>{{% md %}}The current state of dnc controller resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -625,7 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Dnc Endpoint url.{{% /md %}}</dd>
+    <dd>{{% md %}}dnc endpoint url that customers can use to connect to{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -636,16 +736,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Location of the DNC controller resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="resourceguid_go">
-<a href="#resourceguid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets resource GUID property of the controller resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -697,12 +787,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-"
             title="">
         <span id="dncappid_nodejs">
-<a href="#dncappid_nodejs" style="color: inherit; text-decoration: inherit;">dnc<wbr>App<wbr>ID</a>
+<a href="#dncappid_nodejs" style="color: inherit; text-decoration: inherit;">dnc<wbr>App<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Get controller AAD ID.{{% /md %}}</dd>
+    <dd>{{% md %}}The current state of dnc controller resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -712,7 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Dnc Endpoint url.{{% /md %}}</dd>
+    <dd>{{% md %}}dnc endpoint url that customers can use to connect to{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -723,16 +813,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Location of the DNC controller resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="resourceguid_nodejs">
-<a href="#resourceguid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Guid</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets resource GUID property of the controller resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -789,7 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Get controller AAD ID.{{% /md %}}</dd>
+    <dd>{{% md %}}The current state of dnc controller resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -799,7 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Dnc Endpoint url.{{% /md %}}</dd>
+    <dd>{{% md %}}dnc endpoint url that customers can use to connect to{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -811,233 +891,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Location of the DNC controller resource.{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="resource_guid_python">
-<a href="#resource_guid_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>guid</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets resource GUID property of the controller resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 
-
-
-
-
-
-
-
-
-## Supporting Types
-
-
-<h4 id="kubernetesproperties">Kubernetes<wbr>Properties</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#KubernetesProperties">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/delegatednetwork?tab=doc#KubernetesPropertiesArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Delegatednetwork.Inputs.KubernetesPropertiesArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="apiserverendpoint_csharp">
-<a href="#apiserverendpoint_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Server<wbr>Endpoint</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}APIServer url{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clusterrootca_csharp">
-<a href="#clusterrootca_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Root<wbr>CA</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}RootCA certificate of kubernetes cluster{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="serverappid_csharp">
-<a href="#serverappid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>ID</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}AAD ID used with apiserver{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="servertenantid_csharp">
-<a href="#servertenantid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Tenant<wbr>ID</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}TenantID of server App ID{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="apiserverendpoint_go">
-<a href="#apiserverendpoint_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Server<wbr>Endpoint</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}APIServer url{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clusterrootca_go">
-<a href="#clusterrootca_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Root<wbr>CA</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}RootCA certificate of kubernetes cluster{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="serverappid_go">
-<a href="#serverappid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>ID</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}AAD ID used with apiserver{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="servertenantid_go">
-<a href="#servertenantid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Tenant<wbr>ID</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}TenantID of server App ID{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="apiserverendpoint_nodejs">
-<a href="#apiserverendpoint_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Server<wbr>Endpoint</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}APIServer url{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clusterrootca_nodejs">
-<a href="#clusterrootca_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Root<wbr>CA</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}RootCA certificate of kubernetes cluster{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="serverappid_nodejs">
-<a href="#serverappid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>App<wbr>ID</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}AAD ID used with apiserver{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="servertenantid_nodejs">
-<a href="#servertenantid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Tenant<wbr>ID</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}TenantID of server App ID{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="apiserverendpoint_python">
-<a href="#apiserverendpoint_python" style="color: inherit; text-decoration: inherit;">api<wbr>Server<wbr>Endpoint</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}APIServer url{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clusterrootca_python">
-<a href="#clusterrootca_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Root<wbr>CA</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}RootCA certificate of kubernetes cluster{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="servertenantid_python">
-<a href="#servertenantid_python" style="color: inherit; text-decoration: inherit;">server<wbr>Tenant<wbr>ID</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}TenantID of server App ID{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="server_app_id_python">
-<a href="#server_app_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>app_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}AAD ID used with apiserver{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 

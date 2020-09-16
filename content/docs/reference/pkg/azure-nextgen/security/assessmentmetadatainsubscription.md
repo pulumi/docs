@@ -89,7 +89,7 @@ assessment_metadata_in_subscription = azure_nextgen.security.latest.AssessmentMe
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const assessmentMetadataInSubscription = new azure_nextgen.security.latest.AssessmentMetadataInSubscription("assessmentMetadataInSubscription", {
     assessmentMetadataName: "ca039e75-a276-4175-aebc-bcd41e4b14b7",

@@ -67,7 +67,7 @@ identity_provider = azure_nextgen.apimanagement.latest.IdentityProvider("identit
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const identityProvider = new azure_nextgen.apimanagement.latest.IdentityProvider("identityProvider", {
     clientId: "facebookid",

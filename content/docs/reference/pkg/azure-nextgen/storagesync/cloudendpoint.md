@@ -73,7 +73,7 @@ cloud_endpoint = azure_nextgen.storagesync.latest.CloudEndpoint("cloudEndpoint",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cloudEndpoint = new azure_nextgen.storagesync.latest.CloudEndpoint("cloudEndpoint", {
     azureFileShareName: "cvcloud-afscv-0719-058-a94a1354-a1fd-4e9a-9a50-919fad8c4ba4",

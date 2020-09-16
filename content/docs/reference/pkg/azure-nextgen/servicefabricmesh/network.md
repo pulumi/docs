@@ -65,7 +65,7 @@ network = azure_nextgen.servicefabricmesh.v20180901preview.Network("network",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const network = new azure_nextgen.servicefabricmesh.v20180901preview.Network("network", {
     location: "EastUS",

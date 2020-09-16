@@ -133,7 +133,7 @@ api_operation = azure_nextgen.apimanagement.latest.ApiOperation("apiOperation",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const apiOperation = new azure_nextgen.apimanagement.latest.ApiOperation("apiOperation", {
     apiId: "PetStoreTemplate2",

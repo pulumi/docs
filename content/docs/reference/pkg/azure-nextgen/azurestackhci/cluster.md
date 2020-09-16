@@ -67,7 +67,7 @@ cluster = azure_nextgen.azurestackhci.v20200301preview.Cluster("cluster",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const cluster = new azure_nextgen.azurestackhci.v20200301preview.Cluster("cluster", {
     aadClientId: "24a6e53d-04e5-44d2-b7cc-1b732a847dfc",

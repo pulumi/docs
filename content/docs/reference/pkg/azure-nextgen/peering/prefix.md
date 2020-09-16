@@ -67,7 +67,7 @@ prefix = azure_nextgen.peering.latest.Prefix("prefix",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const prefix = new azure_nextgen.peering.latest.Prefix("prefix", {
     peeringServiceName: "peeringServiceName",

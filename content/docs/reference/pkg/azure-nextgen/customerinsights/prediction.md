@@ -108,7 +108,7 @@ prediction = azure_nextgen.customerinsights.latest.Prediction("prediction",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const prediction = new azure_nextgen.customerinsights.latest.Prediction("prediction", {
     autoAnalyze: true,

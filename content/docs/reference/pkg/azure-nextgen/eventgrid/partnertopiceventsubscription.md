@@ -88,7 +88,7 @@ partner_topic_event_subscription = azure_nextgen.eventgrid.v20200401preview.Part
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const partnerTopicEventSubscription = new azure_nextgen.eventgrid.v20200401preview.PartnerTopicEventSubscription("partnerTopicEventSubscription", {
     destination: {

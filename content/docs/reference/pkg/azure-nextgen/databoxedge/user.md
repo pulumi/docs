@@ -78,7 +78,7 @@ user = azure_nextgen.databoxedge.latest.User("user",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const user = new azure_nextgen.databoxedge.latest.User("user", {
     deviceName: "testedgedevice",

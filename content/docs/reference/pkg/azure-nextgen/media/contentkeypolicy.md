@@ -104,7 +104,7 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy", {
     accountName: "contosomedia",
@@ -244,7 +244,7 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy", {
     accountName: "contosomedia",
@@ -386,7 +386,7 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy", {
     accountName: "contosomedia",
@@ -534,7 +534,7 @@ content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPoli
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy", {
     accountName: "contosomedia",

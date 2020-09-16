@@ -135,7 +135,7 @@ policy_definition = azure_nextgen.authorization.latest.PolicyDefinition("policyD
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const policyDefinition = new azure_nextgen.authorization.latest.PolicyDefinition("policyDefinition", {
     description: "Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
@@ -328,7 +328,7 @@ policy_definition = azure_nextgen.authorization.latest.PolicyDefinition("policyD
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const policyDefinition = new azure_nextgen.authorization.latest.PolicyDefinition("policyDefinition", {
     description: "Audit enabling of logs and retain them up to a year. This enables recreation of activity trails for investigation purposes when a security incident occurs or your network is compromised",

@@ -71,7 +71,7 @@ credential = azure_nextgen.automation.latest.Credential("credential",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const credential = new azure_nextgen.automation.latest.Credential("credential", {
     automationAccountName: "myAutomationAccount18",

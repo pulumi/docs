@@ -88,7 +88,7 @@ pipeline_run = azure_nextgen.containerregistry.v20191201preview.PipelineRun("pip
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const pipelineRun = new azure_nextgen.containerregistry.v20191201preview.PipelineRun("pipelineRun", {
     pipelineRunName: "myPipelineRun",
@@ -178,7 +178,7 @@ pipeline_run = azure_nextgen.containerregistry.v20191201preview.PipelineRun("pip
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const pipelineRun = new azure_nextgen.containerregistry.v20191201preview.PipelineRun("pipelineRun", {
     forceUpdateTag: "2020-03-04T17:23:21.9261521+00:00",

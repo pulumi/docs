@@ -171,7 +171,7 @@ streaming_job = azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob"
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob", {
     compatibilityLevel: "1.0",
@@ -310,7 +310,7 @@ streaming_job = azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob"
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob", {
     compatibilityLevel: "1.0",

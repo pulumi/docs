@@ -78,7 +78,7 @@ blockchain_member = azure_nextgen.blockchain.v20180601preview.BlockchainMember("
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const blockchainMember = new azure_nextgen.blockchain.v20180601preview.BlockchainMember("blockchainMember", {
     blockchainMemberName: "contosemember1",

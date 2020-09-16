@@ -67,7 +67,7 @@ data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
     accountName: "Account1",
@@ -132,7 +132,7 @@ data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
     accountName: "Account1",
@@ -197,7 +197,7 @@ data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
     accountName: "Account1",
@@ -262,7 +262,7 @@ data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
     accountName: "Account1",
@@ -327,7 +327,7 @@ data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
     accountName: "Account1",

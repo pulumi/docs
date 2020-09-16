@@ -98,7 +98,7 @@ redis = azure_nextgen.cache.latest.Redis("redis",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const redis = new azure_nextgen.cache.latest.Redis("redis", {
     enableNonSslPort: true,

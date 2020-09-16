@@ -80,7 +80,7 @@ live_output = azure_nextgen.media.latest.LiveOutput("liveOutput",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const liveOutput = new azure_nextgen.media.latest.LiveOutput("liveOutput", {
     accountName: "slitestmedia10",

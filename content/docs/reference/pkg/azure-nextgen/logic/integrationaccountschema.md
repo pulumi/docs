@@ -392,7 +392,7 @@ integration_account_schema = azure_nextgen.logic.latest.IntegrationAccountSchema
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const integrationAccountSchema = new azure_nextgen.logic.latest.IntegrationAccountSchema("integrationAccountSchema", {
     content: `<?xml version="1.0" encoding="utf-16"?>

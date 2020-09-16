@@ -63,7 +63,7 @@ spatial_anchors_account = azure_nextgen.mixedreality.latest.SpatialAnchorsAccoun
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const spatialAnchorsAccount = new azure_nextgen.mixedreality.latest.SpatialAnchorsAccount("spatialAnchorsAccount", {
     accountName: "MyAccount",

@@ -65,7 +65,7 @@ application_package = azure_nextgen.batch.latest.ApplicationPackage("application
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const applicationPackage = new azure_nextgen.batch.latest.ApplicationPackage("applicationPackage", {
     accountName: "sampleacct",

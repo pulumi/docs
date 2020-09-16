@@ -67,7 +67,7 @@ firewall_rule = azure_nextgen.dbforpostgresql.latest.FirewallRule("firewallRule"
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const firewallRule = new azure_nextgen.dbforpostgresql.latest.FirewallRule("firewallRule", {
     endIpAddress: "255.255.255.255",

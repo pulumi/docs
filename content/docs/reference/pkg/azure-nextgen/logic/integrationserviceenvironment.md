@@ -72,7 +72,7 @@ integration_service_environment = azure_nextgen.logic.latest.IntegrationServiceE
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const integrationServiceEnvironment = new azure_nextgen.logic.latest.IntegrationServiceEnvironment("integrationServiceEnvironment", {
     integrationServiceEnvironmentName: "testIntegrationServiceEnvironment",

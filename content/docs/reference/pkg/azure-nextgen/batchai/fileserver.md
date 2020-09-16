@@ -90,7 +90,7 @@ file_server = azure_nextgen.batchai.latest.FileServer("fileServer",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const fileServer = new azure_nextgen.batchai.latest.FileServer("fileServer", {
     dataDisks: {

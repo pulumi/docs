@@ -74,7 +74,7 @@ scope_map = azure_nextgen.containerregistry.v20190501preview.ScopeMap("scopeMap"
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const scopeMap = new azure_nextgen.containerregistry.v20190501preview.ScopeMap("scopeMap", {
     actions: [

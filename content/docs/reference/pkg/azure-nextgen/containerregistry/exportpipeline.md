@@ -88,7 +88,7 @@ export_pipeline = azure_nextgen.containerregistry.v20191201preview.ExportPipelin
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const exportPipeline = new azure_nextgen.containerregistry.v20191201preview.ExportPipeline("exportPipeline", {
     exportPipelineName: "myExportPipeline",

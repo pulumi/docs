@@ -72,7 +72,7 @@ private_endpoint_connection = azure_nextgen.hybridcompute.v20200815preview.Priva
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const privateEndpointConnection = new azure_nextgen.hybridcompute.v20200815preview.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "private-endpoint-connection-name",

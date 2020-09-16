@@ -63,7 +63,7 @@ domain_topic = azure_nextgen.eventgrid.latest.DomainTopic("domainTopic",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const domainTopic = new azure_nextgen.eventgrid.latest.DomainTopic("domainTopic", {
     domainName: "exampledomain1",

@@ -93,7 +93,7 @@ event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubs
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     deadLetterDestination: {
@@ -195,7 +195,7 @@ event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubs
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     deadLetterDestination: {
@@ -299,7 +299,7 @@ event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubs
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     deadLetterDestination: {
@@ -395,7 +395,7 @@ event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubs
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     destination: {
@@ -487,7 +487,7 @@ event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubs
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     destination: {
@@ -579,7 +579,7 @@ event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubs
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     destination: {
@@ -667,7 +667,7 @@ event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubs
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     destination: {

@@ -71,7 +71,7 @@ event_hub_connection = azure_nextgen.kusto.v20180907preview.EventHubConnection("
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const eventHubConnection = new azure_nextgen.kusto.v20180907preview.EventHubConnection("eventHubConnection", {
     clusterName: "KustoClusterRPTest4",

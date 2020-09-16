@@ -87,7 +87,7 @@ workbook_template = azure_nextgen.insights.v20191017preview.WorkbookTemplate("wo
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const workbookTemplate = new azure_nextgen.insights.v20191017preview.WorkbookTemplate("workbookTemplate", {
     author: "Contoso",

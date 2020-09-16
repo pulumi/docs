@@ -81,7 +81,7 @@ export_configuration = azure_nextgen.insights.latest.ExportConfiguration("export
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const exportConfiguration = new azure_nextgen.insights.latest.ExportConfiguration("exportConfiguration", {
     destinationAccountId: "/subscriptions/subid/resourceGroups/my-resource-group/providers/Microsoft.ClassicStorage/storageAccounts/mystorageblob",

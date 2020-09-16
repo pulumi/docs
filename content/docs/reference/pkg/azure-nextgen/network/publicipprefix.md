@@ -74,7 +74,7 @@ public_ip_prefix = azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const publicIPPrefix = new azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix", {
     location: "westus",
@@ -147,7 +147,7 @@ public_ip_prefix = azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const publicIPPrefix = new azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix", {
     location: "westus",

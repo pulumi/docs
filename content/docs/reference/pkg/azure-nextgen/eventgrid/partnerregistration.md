@@ -91,7 +91,7 @@ partner_registration = azure_nextgen.eventgrid.v20200401preview.PartnerRegistrat
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const partnerRegistration = new azure_nextgen.eventgrid.v20200401preview.PartnerRegistration("partnerRegistration", {
     authorizedAzureSubscriptionIds: ["d48566a8-2428-4a6c-8347-9675d09fb851"],

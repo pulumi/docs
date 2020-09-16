@@ -133,7 +133,7 @@ backend = azure_nextgen.apimanagement.latest.Backend("backend",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const backend = new azure_nextgen.apimanagement.latest.Backend("backend", {
     backendId: "proxybackend",
@@ -260,7 +260,7 @@ backend = azure_nextgen.apimanagement.latest.Backend("backend",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const backend = new azure_nextgen.apimanagement.latest.Backend("backend", {
     backendId: "sfbackend",

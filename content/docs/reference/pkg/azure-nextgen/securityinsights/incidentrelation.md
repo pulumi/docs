@@ -69,7 +69,7 @@ incident_relation = azure_nextgen.securityinsights.v20190101preview.IncidentRela
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const incidentRelation = new azure_nextgen.securityinsights.v20190101preview.IncidentRelation("incidentRelation", {
     incidentId: "afbd324f-6c48-459c-8710-8d1e1cd03812",

@@ -94,7 +94,7 @@ workspace = azure_nextgen.synapse.v20190601preview.Workspace("workspace",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const workspace = new azure_nextgen.synapse.v20190601preview.Workspace("workspace", {
     defaultDataLakeStorage: {

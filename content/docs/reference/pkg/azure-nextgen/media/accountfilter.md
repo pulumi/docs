@@ -167,7 +167,7 @@ account_filter = azure_nextgen.media.latest.AccountFilter("accountFilter",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const accountFilter = new azure_nextgen.media.latest.AccountFilter("accountFilter", {
     accountName: "contosomedia",

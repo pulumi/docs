@@ -169,7 +169,7 @@ rollout = azure_nextgen.deploymentmanager.v20191101preview.Rollout("rollout",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const rollout = new azure_nextgen.deploymentmanager.v20191101preview.Rollout("rollout", {
     artifactSourceId: "/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/Microsoft.DeploymentManager/artifactSources/myArtifactSource",

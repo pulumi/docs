@@ -79,7 +79,7 @@ subscription_diagnostic_setting = azure_nextgen.insights.v20170501preview.Subscr
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const subscriptionDiagnosticSetting = new azure_nextgen.insights.v20170501preview.SubscriptionDiagnosticSetting("subscriptionDiagnosticSetting", {
     eventHubAuthorizationRuleId: "/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",

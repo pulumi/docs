@@ -102,7 +102,7 @@ smart_detector_alert_rule = azure_nextgen.alertsmanagement.latest.SmartDetectorA
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const smartDetectorAlertRule = new azure_nextgen.alertsmanagement.latest.SmartDetectorAlertRule("smartDetectorAlertRule", {
     actionGroups: {

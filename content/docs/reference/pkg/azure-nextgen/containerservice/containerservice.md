@@ -63,7 +63,7 @@ container_service = azure_nextgen.containerservice.latest.ContainerService("cont
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const containerService = new azure_nextgen.containerservice.latest.ContainerService("containerService", {
     containerServiceName: "acs1",

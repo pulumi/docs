@@ -69,7 +69,7 @@ linked_server = azure_nextgen.cache.latest.LinkedServer("linkedServer",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const linkedServer = new azure_nextgen.cache.latest.LinkedServer("linkedServer", {
     linkedRedisCacheId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2",

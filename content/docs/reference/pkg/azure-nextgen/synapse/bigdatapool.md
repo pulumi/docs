@@ -113,7 +113,7 @@ big_data_pool = azure_nextgen.synapse.v20190601preview.BigDataPool("bigDataPool"
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const bigDataPool = new azure_nextgen.synapse.v20190601preview.BigDataPool("bigDataPool", {
     autoPause: {

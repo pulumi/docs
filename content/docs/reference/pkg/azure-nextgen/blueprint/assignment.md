@@ -123,7 +123,7 @@ assignment = azure_nextgen.blueprint.v20181101preview.Assignment("assignment",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const assignment = new azure_nextgen.blueprint.v20181101preview.Assignment("assignment", {
     assignmentName: "assignSimpleBlueprint",
@@ -266,7 +266,7 @@ assignment = azure_nextgen.blueprint.v20181101preview.Assignment("assignment",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const assignment = new azure_nextgen.blueprint.v20181101preview.Assignment("assignment", {
     assignmentName: "assignSimpleBlueprint",
@@ -417,7 +417,7 @@ assignment = azure_nextgen.blueprint.v20181101preview.Assignment("assignment",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const assignment = new azure_nextgen.blueprint.v20181101preview.Assignment("assignment", {
     assignmentName: "assignSimpleBlueprint",
@@ -570,7 +570,7 @@ assignment = azure_nextgen.blueprint.v20181101preview.Assignment("assignment",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const assignment = new azure_nextgen.blueprint.v20181101preview.Assignment("assignment", {
     assignmentName: "assignSimpleBlueprint",

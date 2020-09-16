@@ -74,7 +74,7 @@ ip_allocation = azure_nextgen.network.latest.IpAllocation("ipAllocation",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const ipAllocation = new azure_nextgen.network.latest.IpAllocation("ipAllocation", {
     allocationTags: {

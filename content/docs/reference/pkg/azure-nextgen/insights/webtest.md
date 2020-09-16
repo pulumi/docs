@@ -96,7 +96,7 @@ web_test = azure_nextgen.insights.latest.WebTest("webTest",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const webTest = new azure_nextgen.insights.latest.WebTest("webTest", {
     configuration: {
@@ -205,7 +205,7 @@ web_test = azure_nextgen.insights.latest.WebTest("webTest",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const webTest = new azure_nextgen.insights.latest.WebTest("webTest", {
     configuration: {

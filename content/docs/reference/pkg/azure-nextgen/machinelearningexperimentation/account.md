@@ -83,7 +83,7 @@ account = azure_nextgen.machinelearningexperimentation.v20170501preview.Account(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const account = new azure_nextgen.machinelearningexperimentation.v20170501preview.Account("account", {
     accountName: "accountcrud5678",

@@ -65,7 +65,7 @@ sync_agent = azure_nextgen.sql.v20150501preview.SyncAgent("syncAgent",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const syncAgent = new azure_nextgen.sql.v20150501preview.SyncAgent("syncAgent", {
     resourceGroupName: "syncagentcrud-65440",
@@ -127,7 +127,7 @@ sync_agent = azure_nextgen.sql.v20150501preview.SyncAgent("syncAgent",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const syncAgent = new azure_nextgen.sql.v20150501preview.SyncAgent("syncAgent", {
     resourceGroupName: "syncagentcrud-65440",

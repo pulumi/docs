@@ -93,7 +93,7 @@ object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const objectReplicationPolicy = new azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy", {
     accountName: "dst112",
@@ -198,7 +198,7 @@ object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const objectReplicationPolicy = new azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy", {
     accountName: "src1122",
@@ -314,7 +314,7 @@ object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const objectReplicationPolicy = new azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy", {
     accountName: "dst112",
@@ -437,7 +437,7 @@ object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const objectReplicationPolicy = new azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy", {
     accountName: "src1122",

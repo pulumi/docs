@@ -99,7 +99,7 @@ product_policy = azure_nextgen.apimanagement.latest.ProductPolicy("productPolicy
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const productPolicy = new azure_nextgen.apimanagement.latest.ProductPolicy("productPolicy", {
     format: "xml",

@@ -82,7 +82,7 @@ job = azure_nextgen.sql.v20170301preview.Job("job",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const job = new azure_nextgen.sql.v20170301preview.Job("job", {
     description: "my favourite job",
@@ -152,7 +152,7 @@ job = azure_nextgen.sql.v20170301preview.Job("job",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const job = new azure_nextgen.sql.v20170301preview.Job("job", {
     jobAgentName: "agent1",

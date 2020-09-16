@@ -58,7 +58,7 @@ tag_at_scope = azure_nextgen.resources.latest.TagAtScope("tagAtScope", scope="su
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const tagAtScope = new azure_nextgen.resources.latest.TagAtScope("tagAtScope", {scope: "subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/my-resource-group/providers/myPRNameSpace/VM/myVm"});
 
@@ -108,7 +108,7 @@ tag_at_scope = azure_nextgen.resources.latest.TagAtScope("tagAtScope", scope="su
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const tagAtScope = new azure_nextgen.resources.latest.TagAtScope("tagAtScope", {scope: "subscriptions/00000000-0000-0000-0000-000000000000"});
 

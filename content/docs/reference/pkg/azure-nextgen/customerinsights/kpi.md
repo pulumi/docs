@@ -117,7 +117,7 @@ kpi = azure_nextgen.customerinsights.latest.Kpi("kpi",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const kpi = new azure_nextgen.customerinsights.latest.Kpi("kpi", {
     aliases: [{

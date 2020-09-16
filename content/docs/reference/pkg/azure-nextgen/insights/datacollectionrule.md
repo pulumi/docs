@@ -272,7 +272,7 @@ data_collection_rule = azure_nextgen.insights.v20191101preview.DataCollectionRul
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const dataCollectionRule = new azure_nextgen.insights.v20191101preview.DataCollectionRule("dataCollectionRule", {
     dataCollectionRuleName: "myCollectionRule",

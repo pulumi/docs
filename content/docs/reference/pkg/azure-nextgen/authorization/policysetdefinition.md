@@ -152,7 +152,7 @@ policy_set_definition = azure_nextgen.authorization.latest.PolicySetDefinition("
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const policySetDefinition = new azure_nextgen.authorization.latest.PolicySetDefinition("policySetDefinition", {
     description: "Policies to enforce low cost storage SKUs",
@@ -354,7 +354,7 @@ policy_set_definition = azure_nextgen.authorization.latest.PolicySetDefinition("
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const policySetDefinition = new azure_nextgen.authorization.latest.PolicySetDefinition("policySetDefinition", {
     description: "Policies to enforce low cost storage SKUs",

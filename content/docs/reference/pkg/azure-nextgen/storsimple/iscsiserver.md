@@ -73,7 +73,7 @@ iscsi_server = azure_nextgen.storsimple.latest.IscsiServer("iscsiServer",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const iscsiServer = new azure_nextgen.storsimple.latest.IscsiServer("iscsiServer", {
     backupScheduleGroupId: "/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/HSDK-WSJQERQW3F/backupScheduleGroups/Default-HSDK-WSJQERQW3F-BackupScheduleGroup",

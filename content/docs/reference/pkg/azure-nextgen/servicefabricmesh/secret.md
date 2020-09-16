@@ -65,7 +65,7 @@ secret = azure_nextgen.servicefabricmesh.v20180901preview.Secret("secret",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const secret = new azure_nextgen.servicefabricmesh.v20180901preview.Secret("secret", {
     location: "EastUS",

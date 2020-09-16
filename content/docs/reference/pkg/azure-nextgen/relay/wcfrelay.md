@@ -69,7 +69,7 @@ wcf_relay = azure_nextgen.relay.latest.WCFRelay("wcfRelay",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const wcfRelay = new azure_nextgen.relay.latest.WCFRelay("wcfRelay", {
     namespaceName: "sdk-RelayNamespace-9953",

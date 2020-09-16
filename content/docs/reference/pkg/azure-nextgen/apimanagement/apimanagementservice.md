@@ -163,7 +163,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
     additionalLocations: [{
@@ -288,7 +288,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
     location: "South Central US",
@@ -388,7 +388,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
     identity: {
@@ -499,7 +499,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
     certificates: [{
@@ -612,7 +612,7 @@ api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
     identity: {

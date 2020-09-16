@@ -65,7 +65,7 @@ trigger = azure_nextgen.databoxedge.latest.Trigger("trigger",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const trigger = new azure_nextgen.databoxedge.latest.Trigger("trigger", {
     deviceName: "testedgedevice",

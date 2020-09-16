@@ -83,7 +83,7 @@ bot = azure_nextgen.botservice.latest.Bot("bot",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const bot = new azure_nextgen.botservice.latest.Bot("bot", {
     etag: "etag1",

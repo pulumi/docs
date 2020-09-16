@@ -65,7 +65,7 @@ action_rule_by_name = azure_nextgen.alertsmanagement.v20190505preview.ActionRule
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const actionRuleByName = new azure_nextgen.alertsmanagement.v20190505preview.ActionRuleByName("actionRuleByName", {
     actionRuleName: "DailySuppression",

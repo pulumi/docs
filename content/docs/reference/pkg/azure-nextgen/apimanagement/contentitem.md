@@ -65,7 +65,7 @@ content_item = azure_nextgen.apimanagement.latest.ContentItem("contentItem",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const contentItem = new azure_nextgen.apimanagement.latest.ContentItem("contentItem", {
     contentItemId: "4e3cf6a5-574a-ba08-1f23-2e7a38faa6d8",

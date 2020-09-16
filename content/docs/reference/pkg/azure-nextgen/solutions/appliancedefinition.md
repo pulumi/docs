@@ -83,7 +83,7 @@ appliance_definition = azure_nextgen.solutions.v20160901preview.ApplianceDefinit
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const applianceDefinition = new azure_nextgen.solutions.v20160901preview.ApplianceDefinition("applianceDefinition", {
     applianceDefinitionName: "myApplianceDef",

@@ -72,7 +72,7 @@ creator = azure_nextgen.maps.v20200201preview.Creator("creator",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const creator = new azure_nextgen.maps.v20200201preview.Creator("creator", {
     accountName: "myMapsAccount",

@@ -142,7 +142,7 @@ front_door = azure_nextgen.network.latest.FrontDoor("frontDoor",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const frontDoor = new azure_nextgen.network.latest.FrontDoor("frontDoor", {
     backendPools: [{

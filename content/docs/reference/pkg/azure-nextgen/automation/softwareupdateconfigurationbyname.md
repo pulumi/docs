@@ -228,7 +228,7 @@ software_update_configuration_by_name = azure_nextgen.automation.v20170515previe
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const softwareUpdateConfigurationByName = new azure_nextgen.automation.v20170515preview.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", {
     automationAccountName: "myaccount",

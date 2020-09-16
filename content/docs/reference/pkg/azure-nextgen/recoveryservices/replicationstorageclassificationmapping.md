@@ -67,7 +67,7 @@ replication_storage_classification_mapping = azure_nextgen.recoveryservices.late
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const replicationStorageClassificationMapping = new azure_nextgen.recoveryservices.latest.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping", {
     fabricName: "2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0",

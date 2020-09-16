@@ -74,7 +74,7 @@ wcf_relay_authorization_rule = azure_nextgen.relay.latest.WCFRelayAuthorizationR
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const wcfRelayAuthorizationRule = new azure_nextgen.relay.latest.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule", {
     authorizationRuleName: "sdk-RelayAuthRules-01",

@@ -83,7 +83,7 @@ job_agent = azure_nextgen.sql.v20170301preview.JobAgent("jobAgent",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const jobAgent = new azure_nextgen.sql.v20170301preview.JobAgent("jobAgent", {
     databaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
@@ -155,7 +155,7 @@ job_agent = azure_nextgen.sql.v20170301preview.JobAgent("jobAgent",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const jobAgent = new azure_nextgen.sql.v20170301preview.JobAgent("jobAgent", {
     databaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",

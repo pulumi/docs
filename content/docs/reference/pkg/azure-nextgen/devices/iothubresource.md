@@ -76,7 +76,7 @@ iot_hub_resource = azure_nextgen.devices.latest.IotHubResource("iotHubResource",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const iotHubResource = new azure_nextgen.devices.latest.IotHubResource("iotHubResource", {
     etag: "AAAAAAFD6M4=",

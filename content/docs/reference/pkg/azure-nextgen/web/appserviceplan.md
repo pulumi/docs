@@ -80,7 +80,7 @@ app_service_plan = azure_nextgen.web.latest.AppServicePlan("appServicePlan",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const appServicePlan = new azure_nextgen.web.latest.AppServicePlan("appServicePlan", {
     kind: "app",

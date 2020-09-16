@@ -65,7 +65,7 @@ notification_hub_authorization_rule = azure_nextgen.notificationhubs.latest.Noti
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const notificationHubAuthorizationRule = new azure_nextgen.notificationhubs.latest.NotificationHubAuthorizationRule("notificationHubAuthorizationRule", {
     authorizationRuleName: "DefaultListenSharedAccessSignature",

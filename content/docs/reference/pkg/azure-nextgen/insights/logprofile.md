@@ -92,7 +92,7 @@ log_profile = azure_nextgen.insights.latest.LogProfile("logProfile",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const logProfile = new azure_nextgen.insights.latest.LogProfile("logProfile", {
     categories: [

@@ -76,7 +76,7 @@ server = azure_nextgen.sql.latest.Server("server",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const server = new azure_nextgen.sql.latest.Server("server", {
     administratorLogin: "dummylogin",
@@ -145,7 +145,7 @@ server = azure_nextgen.sql.latest.Server("server",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const server = new azure_nextgen.sql.latest.Server("server", {
     administratorLogin: "dummylogin",

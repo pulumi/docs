@@ -121,7 +121,7 @@ domain_service = azure_nextgen.aad.latest.DomainService("domainService",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const domainService = new azure_nextgen.aad.latest.DomainService("domainService", {
     domainName: "TestDomainService.com",

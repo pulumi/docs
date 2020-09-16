@@ -177,7 +177,7 @@ gateway = azure_nextgen.servicefabricmesh.v20180901preview.Gateway("gateway",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const gateway = new azure_nextgen.servicefabricmesh.v20180901preview.Gateway("gateway", {
     description: "Service Fabric Mesh sample gateway.",

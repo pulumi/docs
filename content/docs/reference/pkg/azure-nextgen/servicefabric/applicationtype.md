@@ -63,7 +63,7 @@ application_type = azure_nextgen.servicefabric.latest.ApplicationType("applicati
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const applicationType = new azure_nextgen.servicefabric.latest.ApplicationType("applicationType", {
     applicationTypeName: "myAppType",

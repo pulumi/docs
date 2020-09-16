@@ -81,7 +81,7 @@ virtual_hub = azure_nextgen.network.latest.VirtualHub("virtualHub",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualHub = new azure_nextgen.network.latest.VirtualHub("virtualHub", {
     addressPrefix: "10.168.0.0/24",

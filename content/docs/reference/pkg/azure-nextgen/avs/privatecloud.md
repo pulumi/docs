@@ -81,7 +81,7 @@ private_cloud = azure_nextgen.avs.latest.PrivateCloud("privateCloud",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const privateCloud = new azure_nextgen.avs.latest.PrivateCloud("privateCloud", {
     location: "eastus2",

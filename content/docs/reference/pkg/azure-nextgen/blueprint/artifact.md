@@ -65,7 +65,7 @@ artifact = azure_nextgen.blueprint.v20181101preview.Artifact("artifact",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const artifact = new azure_nextgen.blueprint.v20181101preview.Artifact("artifact", {
     artifactName: "storageTemplate",
@@ -127,7 +127,7 @@ artifact = azure_nextgen.blueprint.v20181101preview.Artifact("artifact",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const artifact = new azure_nextgen.blueprint.v20181101preview.Artifact("artifact", {
     artifactName: "costCenterPolicy",
@@ -189,7 +189,7 @@ artifact = azure_nextgen.blueprint.v20181101preview.Artifact("artifact",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const artifact = new azure_nextgen.blueprint.v20181101preview.Artifact("artifact", {
     artifactName: "ownerAssignment",
@@ -251,7 +251,7 @@ artifact = azure_nextgen.blueprint.v20181101preview.Artifact("artifact",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const artifact = new azure_nextgen.blueprint.v20181101preview.Artifact("artifact", {
     artifactName: "storageTemplate",
@@ -313,7 +313,7 @@ artifact = azure_nextgen.blueprint.v20181101preview.Artifact("artifact",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const artifact = new azure_nextgen.blueprint.v20181101preview.Artifact("artifact", {
     artifactName: "costCenterPolicy",
@@ -375,7 +375,7 @@ artifact = azure_nextgen.blueprint.v20181101preview.Artifact("artifact",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const artifact = new azure_nextgen.blueprint.v20181101preview.Artifact("artifact", {
     artifactName: "ownerAssignment",

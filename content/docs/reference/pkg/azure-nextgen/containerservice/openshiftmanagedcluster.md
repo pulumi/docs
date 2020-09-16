@@ -175,7 +175,7 @@ open_shift_managed_cluster = azure_nextgen.containerservice.latest.OpenShiftMana
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const openShiftManagedCluster = new azure_nextgen.containerservice.latest.OpenShiftManagedCluster("openShiftManagedCluster", {
     agentPoolProfiles: [

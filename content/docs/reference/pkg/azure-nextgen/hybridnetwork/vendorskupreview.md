@@ -63,7 +63,7 @@ vendor_sku_preview = azure_nextgen.hybridnetwork.v20200101preview.VendorSkuPrevi
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const vendorSkuPreview = new azure_nextgen.hybridnetwork.v20200101preview.VendorSkuPreview("vendorSkuPreview", {
     previewSubscription: "previewSub",

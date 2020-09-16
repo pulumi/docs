@@ -65,7 +65,7 @@ build_step = azure_nextgen.containerregistry.v20180201preview.BuildStep("buildSt
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const buildStep = new azure_nextgen.containerregistry.v20180201preview.BuildStep("buildStep", {
     buildTaskName: "myBuildTask",

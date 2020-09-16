@@ -71,7 +71,7 @@ compute_policy = azure_nextgen.datalakeanalytics.latest.ComputePolicy("computePo
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const computePolicy = new azure_nextgen.datalakeanalytics.latest.ComputePolicy("computePolicy", {
     accountName: "contosoadla",

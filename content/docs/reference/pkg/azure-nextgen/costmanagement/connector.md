@@ -73,7 +73,7 @@ connector = azure_nextgen.costmanagement.v20180801preview.Connector("connector",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const connector = new azure_nextgen.costmanagement.v20180801preview.Connector("connector", {
     connectorName: "AWSBillingAccount",

@@ -141,7 +141,7 @@ virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.Virtu
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.latest.VirtualMachineImageTemplate("virtualMachineImageTemplate", {
     customize: [{
@@ -374,7 +374,7 @@ virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.Virtu
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.latest.VirtualMachineImageTemplate("virtualMachineImageTemplate", {
     customize: [

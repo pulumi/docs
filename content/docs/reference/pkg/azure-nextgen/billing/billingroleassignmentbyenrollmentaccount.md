@@ -69,7 +69,7 @@ billing_role_assignment_by_enrollment_account = azure_nextgen.billing.v20191001p
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const billingRoleAssignmentByEnrollmentAccount = new azure_nextgen.billing.v20191001preview.BillingRoleAssignmentByEnrollmentAccount("billingRoleAssignmentByEnrollmentAccount", {
     billingAccountName: "{billingAccountName}",

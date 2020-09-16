@@ -28,6 +28,11 @@ class MyStack : Stack
     {
         var moveCollection = new AzureNextGen.Migrate.V20191001Preview.MoveCollection("moveCollection", new AzureNextGen.Migrate.V20191001Preview.MoveCollectionArgs
         {
+            Identity = new AzureNextGen.Migrate.V20191001Preview.Inputs.IdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Location = "eastus2",
             MoveCollectionName = "movecollection1",
             ResourceGroupName = "rg1",
         });
@@ -50,6 +55,10 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 move_collection = azure_nextgen.migrate.v20191001preview.MoveCollection("moveCollection",
+    identity={
+        "type": "SystemAssigned",
+    },
+    location="eastus2",
     move_collection_name="movecollection1",
     resource_group_name="rg1")
 
@@ -61,9 +70,13 @@ move_collection = azure_nextgen.migrate.v20191001preview.MoveCollection("moveCol
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const moveCollection = new azure_nextgen.migrate.v20191001preview.MoveCollection("moveCollection", {
+    identity: {
+        type: "SystemAssigned",
+    },
+    location: "eastus2",
     moveCollectionName: "movecollection1",
     resourceGroupName: "rg1",
 });

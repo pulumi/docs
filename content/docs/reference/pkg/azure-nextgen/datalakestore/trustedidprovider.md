@@ -65,7 +65,7 @@ trusted_id_provider = azure_nextgen.datalakestore.latest.TrustedIdProvider("trus
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const trustedIdProvider = new azure_nextgen.datalakestore.latest.TrustedIdProvider("trustedIdProvider", {
     accountName: "contosoadla",

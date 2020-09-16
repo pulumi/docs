@@ -65,7 +65,7 @@ group = azure_nextgen.apimanagement.latest.Group("group",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const group = new azure_nextgen.apimanagement.latest.Group("group", {
     displayName: "temp group",
@@ -133,7 +133,7 @@ group = azure_nextgen.apimanagement.latest.Group("group",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const group = new azure_nextgen.apimanagement.latest.Group("group", {
     description: "new group to test",

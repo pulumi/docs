@@ -79,7 +79,7 @@ iscsi_disk = azure_nextgen.storsimple.latest.IscsiDisk("iscsiDisk",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const iscsiDisk = new azure_nextgen.storsimple.latest.IscsiDisk("iscsiDisk", {
     accessControlRecords: [],

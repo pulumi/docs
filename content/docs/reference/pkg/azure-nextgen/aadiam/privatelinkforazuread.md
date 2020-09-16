@@ -82,7 +82,7 @@ private_link_for_azure_ad = azure_nextgen.aadiam.v20200301preview.PrivateLinkFor
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const privateLinkForAzureAd = new azure_nextgen.aadiam.v20200301preview.PrivateLinkForAzureAd("privateLinkForAzureAd", {
     allTenants: false,
@@ -169,7 +169,7 @@ private_link_for_azure_ad = azure_nextgen.aadiam.v20200301preview.PrivateLinkFor
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const privateLinkForAzureAd = new azure_nextgen.aadiam.v20200301preview.PrivateLinkForAzureAd("privateLinkForAzureAd", {
     allTenants: false,

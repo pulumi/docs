@@ -72,7 +72,7 @@ user_assigned_identity = azure_nextgen.managedidentity.latest.UserAssignedIdenti
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const userAssignedIdentity = new azure_nextgen.managedidentity.latest.UserAssignedIdentity("userAssignedIdentity", {
     location: "eastus",

@@ -72,7 +72,7 @@ private_endpoint_connection = azure_nextgen.storage.latest.PrivateEndpointConnec
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const privateEndpointConnection = new azure_nextgen.storage.latest.PrivateEndpointConnection("privateEndpointConnection", {
     accountName: "sto9699",

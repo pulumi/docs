@@ -11880,6 +11880,3762 @@ The following output properties are available:
 
 
 
+<h4 id="inmagercmagentupgradeblockingerrordetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#InMageRcmAgentUpgradeBlockingErrorDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices?tab=doc#InMageRcmAgentUpgradeBlockingErrorDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Recoveryservices.Outputs.InMageRcmAgentUpgradeBlockingErrorDetailsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorcode_csharp">
+<a href="#errorcode_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errormessage_csharp">
+<a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The error message.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errormessageparameters_csharp">
+<a href="#errormessageparameters_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The error message parameters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errortags_csharp">
+<a href="#errortags_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The error tags.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="possiblecauses_csharp">
+<a href="#possiblecauses_csharp" style="color: inherit; text-decoration: inherit;">Possible<wbr>Causes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The possible causes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recommendedaction_csharp">
+<a href="#recommendedaction_csharp" style="color: inherit; text-decoration: inherit;">Recommended<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recommended action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorcode_go">
+<a href="#errorcode_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errormessage_go">
+<a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The error message.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errormessageparameters_go">
+<a href="#errormessageparameters_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The error message parameters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errortags_go">
+<a href="#errortags_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The error tags.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="possiblecauses_go">
+<a href="#possiblecauses_go" style="color: inherit; text-decoration: inherit;">Possible<wbr>Causes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The possible causes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recommendedaction_go">
+<a href="#recommendedaction_go" style="color: inherit; text-decoration: inherit;">Recommended<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recommended action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorcode_nodejs">
+<a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errormessage_nodejs">
+<a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The error message.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errormessageparameters_nodejs">
+<a href="#errormessageparameters_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The error message parameters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errortags_nodejs">
+<a href="#errortags_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The error tags.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="possiblecauses_nodejs">
+<a href="#possiblecauses_nodejs" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The possible causes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recommendedaction_nodejs">
+<a href="#recommendedaction_nodejs" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recommended action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errormessageparameters_python">
+<a href="#errormessageparameters_python" style="color: inherit; text-decoration: inherit;">error<wbr>Message<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The error message parameters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errortags_python">
+<a href="#errortags_python" style="color: inherit; text-decoration: inherit;">error<wbr>Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The error tags.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="error_code_python">
+<a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="error_message_python">
+<a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The error message.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="possiblecauses_python">
+<a href="#possiblecauses_python" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The possible causes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recommendedaction_python">
+<a href="#recommendedaction_python" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The recommended action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="inmagercmlastagentupgradeerrordetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#InMageRcmLastAgentUpgradeErrorDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices?tab=doc#InMageRcmLastAgentUpgradeErrorDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Recoveryservices.Outputs.InMageRcmLastAgentUpgradeErrorDetailsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorcode_csharp">
+<a href="#errorcode_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errormessage_csharp">
+<a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The error message.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errormessageparameters_csharp">
+<a href="#errormessageparameters_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The error message parameters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errortags_csharp">
+<a href="#errortags_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The error tags.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="possiblecauses_csharp">
+<a href="#possiblecauses_csharp" style="color: inherit; text-decoration: inherit;">Possible<wbr>Causes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The possible causes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recommendedaction_csharp">
+<a href="#recommendedaction_csharp" style="color: inherit; text-decoration: inherit;">Recommended<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recommended action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorcode_go">
+<a href="#errorcode_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errormessage_go">
+<a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The error message.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errormessageparameters_go">
+<a href="#errormessageparameters_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The error message parameters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errortags_go">
+<a href="#errortags_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The error tags.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="possiblecauses_go">
+<a href="#possiblecauses_go" style="color: inherit; text-decoration: inherit;">Possible<wbr>Causes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The possible causes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recommendedaction_go">
+<a href="#recommendedaction_go" style="color: inherit; text-decoration: inherit;">Recommended<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recommended action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errorcode_nodejs">
+<a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errormessage_nodejs">
+<a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The error message.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errormessageparameters_nodejs">
+<a href="#errormessageparameters_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The error message parameters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errortags_nodejs">
+<a href="#errortags_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The error tags.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="possiblecauses_nodejs">
+<a href="#possiblecauses_nodejs" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The possible causes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recommendedaction_nodejs">
+<a href="#recommendedaction_nodejs" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recommended action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errormessageparameters_python">
+<a href="#errormessageparameters_python" style="color: inherit; text-decoration: inherit;">error<wbr>Message<wbr>Parameters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The error message parameters.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="errortags_python">
+<a href="#errortags_python" style="color: inherit; text-decoration: inherit;">error<wbr>Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The error tags.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="error_code_python">
+<a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The error code.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="error_message_python">
+<a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The error message.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="possiblecauses_python">
+<a href="#possiblecauses_python" style="color: inherit; text-decoration: inherit;">possible<wbr>Causes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The possible causes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recommendedaction_python">
+<a href="#recommendedaction_python" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The recommended action.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="inmagercmmobilityagentdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Mobility<wbr>Agent<wbr>Details<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#InMageRcmMobilityAgentDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices?tab=doc#InMageRcmMobilityAgentDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Recoveryservices.Outputs.InMageRcmMobilityAgentDetailsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="agentversionexpirydate_csharp">
+<a href="#agentversionexpirydate_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version<wbr>Expiry<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The agent version expiry date.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="driverversion_csharp">
+<a href="#driverversion_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The driver version.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="driverversionexpirydate_csharp">
+<a href="#driverversionexpirydate_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Version<wbr>Expiry<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The driver version expiry date.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isupgradeable_csharp">
+<a href="#isupgradeable_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Upgradeable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether agent is upgradeable or not.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastheartbeatutc_csharp">
+<a href="#lastheartbeatutc_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Heartbeat<wbr>Utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time of the last heartbeat received from the agent.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="latestupgradableversionwithoutreboot_csharp">
+<a href="#latestupgradableversionwithoutreboot_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Upgradable<wbr>Version<wbr>Without<wbr>Reboot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The latest upgradeable version available without reboot.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="latestversion_csharp">
+<a href="#latestversion_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The latest agent version available.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reasonsblockingupgrade_csharp">
+<a href="#reasonsblockingupgrade_csharp" style="color: inherit; text-decoration: inherit;">Reasons<wbr>Blocking<wbr>Upgrade</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The whether update is possible or not.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The agent version.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="agentversionexpirydate_go">
+<a href="#agentversionexpirydate_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version<wbr>Expiry<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The agent version expiry date.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="driverversion_go">
+<a href="#driverversion_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The driver version.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="driverversionexpirydate_go">
+<a href="#driverversionexpirydate_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Version<wbr>Expiry<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The driver version expiry date.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isupgradeable_go">
+<a href="#isupgradeable_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Upgradeable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether agent is upgradeable or not.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastheartbeatutc_go">
+<a href="#lastheartbeatutc_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Heartbeat<wbr>Utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time of the last heartbeat received from the agent.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="latestupgradableversionwithoutreboot_go">
+<a href="#latestupgradableversionwithoutreboot_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Upgradable<wbr>Version<wbr>Without<wbr>Reboot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The latest upgradeable version available without reboot.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="latestversion_go">
+<a href="#latestversion_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The latest agent version available.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reasonsblockingupgrade_go">
+<a href="#reasonsblockingupgrade_go" style="color: inherit; text-decoration: inherit;">Reasons<wbr>Blocking<wbr>Upgrade</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The whether update is possible or not.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The agent version.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="agentversionexpirydate_nodejs">
+<a href="#agentversionexpirydate_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version<wbr>Expiry<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The agent version expiry date.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="driverversion_nodejs">
+<a href="#driverversion_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The driver version.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="driverversionexpirydate_nodejs">
+<a href="#driverversionexpirydate_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Version<wbr>Expiry<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The driver version expiry date.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isupgradeable_nodejs">
+<a href="#isupgradeable_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Upgradeable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether agent is upgradeable or not.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastheartbeatutc_nodejs">
+<a href="#lastheartbeatutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Heartbeat<wbr>Utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The time of the last heartbeat received from the agent.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="latestupgradableversionwithoutreboot_nodejs">
+<a href="#latestupgradableversionwithoutreboot_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Upgradable<wbr>Version<wbr>Without<wbr>Reboot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The latest upgradeable version available without reboot.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="latestversion_nodejs">
+<a href="#latestversion_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The latest agent version available.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reasonsblockingupgrade_nodejs">
+<a href="#reasonsblockingupgrade_nodejs" style="color: inherit; text-decoration: inherit;">reasons<wbr>Blocking<wbr>Upgrade</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The whether update is possible or not.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The agent version.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="agentversionexpirydate_python">
+<a href="#agentversionexpirydate_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Version<wbr>Expiry<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The agent version expiry date.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="driverversion_python">
+<a href="#driverversion_python" style="color: inherit; text-decoration: inherit;">driver<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The driver version.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="driverversionexpirydate_python">
+<a href="#driverversionexpirydate_python" style="color: inherit; text-decoration: inherit;">driver<wbr>Version<wbr>Expiry<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The driver version expiry date.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isupgradeable_python">
+<a href="#isupgradeable_python" style="color: inherit; text-decoration: inherit;">is<wbr>Upgradeable</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether agent is upgradeable or not.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="last_heartbeat_utc_python">
+<a href="#last_heartbeat_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>heartbeat_<wbr>utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The time of the last heartbeat received from the agent.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="latestupgradableversionwithoutreboot_python">
+<a href="#latestupgradableversionwithoutreboot_python" style="color: inherit; text-decoration: inherit;">latest<wbr>Upgradable<wbr>Version<wbr>Without<wbr>Reboot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The latest upgradeable version available without reboot.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="latestversion_python">
+<a href="#latestversion_python" style="color: inherit; text-decoration: inherit;">latest<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The latest agent version available.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reasonsblockingupgrade_python">
+<a href="#reasonsblockingupgrade_python" style="color: inherit; text-decoration: inherit;">reasons<wbr>Blocking<wbr>Upgrade</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The whether update is possible or not.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The agent version.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="inmagercmnicdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Nic<wbr>Details<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#InMageRcmNicDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices?tab=doc#InMageRcmNicDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Recoveryservices.Outputs.InMageRcmNicDetailsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isprimarynic_csharp">
+<a href="#isprimarynic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Primary<wbr>Nic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether this is the primary NIC.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isselectedforfailover_csharp">
+<a href="#isselectedforfailover_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Selected<wbr>For<wbr>Failover</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether this NIC is selected for failover.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="nicid_csharp">
+<a href="#nicid_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The NIC Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourceipaddress_csharp">
+<a href="#sourceipaddress_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>IPAddress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source IP address.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourceipaddresstype_csharp">
+<a href="#sourceipaddresstype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>IPAddress<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source IP address type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcenetworkid_csharp">
+<a href="#sourcenetworkid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Source network Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcesubnetname_csharp">
+<a href="#sourcesubnetname_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Subnet<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Source subnet name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetipaddress_csharp">
+<a href="#targetipaddress_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>IPAddress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target IP address.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetipaddresstype_csharp">
+<a href="#targetipaddresstype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>IPAddress<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target IP address type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetsubnetname_csharp">
+<a href="#targetsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Subnet<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Target subnet name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="testipaddress_csharp">
+<a href="#testipaddress_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>IPAddress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The test IP address.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="testipaddresstype_csharp">
+<a href="#testipaddresstype_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>IPAddress<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The test IP address type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="testsubnetname_csharp">
+<a href="#testsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Subnet<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Test subnet name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isprimarynic_go">
+<a href="#isprimarynic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Primary<wbr>Nic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether this is the primary NIC.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isselectedforfailover_go">
+<a href="#isselectedforfailover_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Selected<wbr>For<wbr>Failover</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether this NIC is selected for failover.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="nicid_go">
+<a href="#nicid_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The NIC Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourceipaddress_go">
+<a href="#sourceipaddress_go" style="color: inherit; text-decoration: inherit;">Source<wbr>IPAddress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source IP address.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourceipaddresstype_go">
+<a href="#sourceipaddresstype_go" style="color: inherit; text-decoration: inherit;">Source<wbr>IPAddress<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source IP address type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcenetworkid_go">
+<a href="#sourcenetworkid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Source network Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcesubnetname_go">
+<a href="#sourcesubnetname_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Subnet<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Source subnet name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetipaddress_go">
+<a href="#targetipaddress_go" style="color: inherit; text-decoration: inherit;">Target<wbr>IPAddress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target IP address.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetipaddresstype_go">
+<a href="#targetipaddresstype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>IPAddress<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target IP address type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetsubnetname_go">
+<a href="#targetsubnetname_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Subnet<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Target subnet name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="testipaddress_go">
+<a href="#testipaddress_go" style="color: inherit; text-decoration: inherit;">Test<wbr>IPAddress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The test IP address.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="testipaddresstype_go">
+<a href="#testipaddresstype_go" style="color: inherit; text-decoration: inherit;">Test<wbr>IPAddress<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The test IP address type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="testsubnetname_go">
+<a href="#testsubnetname_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Subnet<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Test subnet name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isprimarynic_nodejs">
+<a href="#isprimarynic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Primary<wbr>Nic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether this is the primary NIC.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isselectedforfailover_nodejs">
+<a href="#isselectedforfailover_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Selected<wbr>For<wbr>Failover</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether this NIC is selected for failover.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="nicid_nodejs">
+<a href="#nicid_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The NIC Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourceipaddress_nodejs">
+<a href="#sourceipaddress_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>IPAddress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source IP address.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourceipaddresstype_nodejs">
+<a href="#sourceipaddresstype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>IPAddress<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The source IP address type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcenetworkid_nodejs">
+<a href="#sourcenetworkid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Source network Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcesubnetname_nodejs">
+<a href="#sourcesubnetname_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Subnet<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Source subnet name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetipaddress_nodejs">
+<a href="#targetipaddress_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>IPAddress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target IP address.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetipaddresstype_nodejs">
+<a href="#targetipaddresstype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>IPAddress<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target IP address type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetsubnetname_nodejs">
+<a href="#targetsubnetname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Subnet<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Target subnet name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="testipaddress_nodejs">
+<a href="#testipaddress_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>IPAddress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The test IP address.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="testipaddresstype_nodejs">
+<a href="#testipaddresstype_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>IPAddress<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The test IP address type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="testsubnetname_nodejs">
+<a href="#testsubnetname_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Subnet<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Test subnet name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isprimarynic_python">
+<a href="#isprimarynic_python" style="color: inherit; text-decoration: inherit;">is<wbr>Primary<wbr>Nic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether this is the primary NIC.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isselectedforfailover_python">
+<a href="#isselectedforfailover_python" style="color: inherit; text-decoration: inherit;">is<wbr>Selected<wbr>For<wbr>Failover</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether this NIC is selected for failover.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="nicid_python">
+<a href="#nicid_python" style="color: inherit; text-decoration: inherit;">nic<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The NIC Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourceipaddress_python">
+<a href="#sourceipaddress_python" style="color: inherit; text-decoration: inherit;">source<wbr>IPAddress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The source IP address.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourceipaddresstype_python">
+<a href="#sourceipaddresstype_python" style="color: inherit; text-decoration: inherit;">source<wbr>IPAddress<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The source IP address type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcenetworkid_python">
+<a href="#sourcenetworkid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Source network Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcesubnetname_python">
+<a href="#sourcesubnetname_python" style="color: inherit; text-decoration: inherit;">source<wbr>Subnet<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Source subnet name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetipaddress_python">
+<a href="#targetipaddress_python" style="color: inherit; text-decoration: inherit;">target<wbr>IPAddress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The target IP address.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetipaddresstype_python">
+<a href="#targetipaddresstype_python" style="color: inherit; text-decoration: inherit;">target<wbr>IPAddress<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The target IP address type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_subnet_name_python">
+<a href="#target_subnet_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>subnet_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Target subnet name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="testipaddress_python">
+<a href="#testipaddress_python" style="color: inherit; text-decoration: inherit;">test<wbr>IPAddress</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The test IP address.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="testipaddresstype_python">
+<a href="#testipaddresstype_python" style="color: inherit; text-decoration: inherit;">test<wbr>IPAddress<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The test IP address type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="testsubnetname_python">
+<a href="#testsubnetname_python" style="color: inherit; text-decoration: inherit;">test<wbr>Subnet<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Test subnet name.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="inmagercmprotecteddiskdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#InMageRcmProtectedDiskDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices?tab=doc#InMageRcmProtectedDiskDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Recoveryservices.Outputs.InMageRcmProtectedDiskDetailsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="capacityinbytes_csharp">
+<a href="#capacityinbytes_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>In<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="diskencryptionsetid_csharp">
+<a href="#diskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The disk encryption set ARM Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="diskid_csharp">
+<a href="#diskid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The disk Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="diskname_csharp">
+<a href="#diskname_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The disk name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disktype_csharp">
+<a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The disk type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isosdisk_csharp">
+<a href="#isosdisk_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>OSDisk</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether the disk is the OS disk.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="logstorageaccountid_csharp">
+<a href="#logstorageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Storage<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The log storage account ARM Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="seedmanageddiskid_csharp">
+<a href="#seedmanageddiskid_csharp" style="color: inherit; text-decoration: inherit;">Seed<wbr>Managed<wbr>Disk<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM Id of the seed managed disk.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetmanageddiskid_csharp">
+<a href="#targetmanageddiskid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Managed<wbr>Disk<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM Id of the target managed disk.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="capacityinbytes_go">
+<a href="#capacityinbytes_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>In<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="diskencryptionsetid_go">
+<a href="#diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The disk encryption set ARM Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="diskid_go">
+<a href="#diskid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The disk Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="diskname_go">
+<a href="#diskname_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The disk name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disktype_go">
+<a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The disk type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isosdisk_go">
+<a href="#isosdisk_go" style="color: inherit; text-decoration: inherit;">Is<wbr>OSDisk</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether the disk is the OS disk.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="logstorageaccountid_go">
+<a href="#logstorageaccountid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Storage<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The log storage account ARM Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="seedmanageddiskid_go">
+<a href="#seedmanageddiskid_go" style="color: inherit; text-decoration: inherit;">Seed<wbr>Managed<wbr>Disk<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM Id of the seed managed disk.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetmanageddiskid_go">
+<a href="#targetmanageddiskid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Managed<wbr>Disk<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM Id of the target managed disk.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="capacityinbytes_nodejs">
+<a href="#capacityinbytes_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>In<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="diskencryptionsetid_nodejs">
+<a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The disk encryption set ARM Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="diskid_nodejs">
+<a href="#diskid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The disk Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="diskname_nodejs">
+<a href="#diskname_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The disk name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disktype_nodejs">
+<a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The disk type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isosdisk_nodejs">
+<a href="#isosdisk_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>OSDisk</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether the disk is the OS disk.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="logstorageaccountid_nodejs">
+<a href="#logstorageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Storage<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The log storage account ARM Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="seedmanageddiskid_nodejs">
+<a href="#seedmanageddiskid_nodejs" style="color: inherit; text-decoration: inherit;">seed<wbr>Managed<wbr>Disk<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM Id of the seed managed disk.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetmanageddiskid_nodejs">
+<a href="#targetmanageddiskid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Managed<wbr>Disk<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM Id of the target managed disk.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="capacityinbytes_python">
+<a href="#capacityinbytes_python" style="color: inherit; text-decoration: inherit;">capacity<wbr>In<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="diskid_python">
+<a href="#diskid_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The disk Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disk_encryption_set_id_python">
+<a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The disk encryption set ARM Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disk_name_python">
+<a href="#disk_name_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The disk name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="disk_type_python">
+<a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The disk type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="isosdisk_python">
+<a href="#isosdisk_python" style="color: inherit; text-decoration: inherit;">is<wbr>OSDisk</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether the disk is the OS disk.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="logstorageaccountid_python">
+<a href="#logstorageaccountid_python" style="color: inherit; text-decoration: inherit;">log<wbr>Storage<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The log storage account ARM Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="seedmanageddiskid_python">
+<a href="#seedmanageddiskid_python" style="color: inherit; text-decoration: inherit;">seed<wbr>Managed<wbr>Disk<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM Id of the seed managed disk.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetmanageddiskid_python">
+<a href="#targetmanageddiskid_python" style="color: inherit; text-decoration: inherit;">target<wbr>Managed<wbr>Disk<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM Id of the target managed disk.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="inmagercmreplicationdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#InMageRcmReplicationDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices?tab=doc#InMageRcmReplicationDetailsResponse">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Recoveryservices.Outputs.InMageRcmReplicationDetailsResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="agentupgradeblockingerrordetails_csharp">
+<a href="#agentupgradeblockingerrordetails_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmagentupgradeblockingerrordetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The agent upgrade blocking error information.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="agentupgradestate_csharp">
+<a href="#agentupgradestate_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Upgrade<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The agent auto upgrade state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocatedmemoryinmb_csharp">
+<a href="#allocatedmemoryinmb_csharp" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Memory<wbr>In<wbr>MB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The allocated memory in MB.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="discoverytype_csharp">
+<a href="#discoverytype_csharp" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the discovered VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fabricdiscoverymachineid_csharp">
+<a href="#fabricdiscoverymachineid_csharp" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Discovery<wbr>Machine<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM Id of the discovered VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="failoverrecoverypointid_csharp">
+<a href="#failoverrecoverypointid_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Recovery<wbr>Point<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery point Id to which the VM was failed over.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="firmwaretype_csharp">
+<a href="#firmwaretype_csharp" style="color: inherit; text-decoration: inherit;">Firmware<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The firmware type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initialreplicationprocessedbytes_csharp">
+<a href="#initialreplicationprocessedbytes_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Processed<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The initial replication processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initialreplicationprogresspercentage_csharp">
+<a href="#initialreplicationprogresspercentage_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Progress<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The initial replication progress percentage. This is calculated based on total bytes processed for all disks in the source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initialreplicationtransferredbytes_csharp">
+<a href="#initialreplicationtransferredbytes_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Transferred<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The initial replication transferred bytes from source VM to azure for all selected disks on source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="internalidentifier_csharp">
+<a href="#internalidentifier_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual machine internal identifier.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="islastupgradesuccessful_csharp">
+<a href="#islastupgradesuccessful_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Last<wbr>Upgrade<wbr>Successful</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether last agent upgrade was successful or not.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastagentupgradeerrordetails_csharp">
+<a href="#lastagentupgradeerrordetails_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmlastagentupgradeerrordetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The last agent upgrade error information.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastagentupgradefailedjobid_csharp">
+<a href="#lastagentupgradefailedjobid_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Agent<wbr>Upgrade<wbr>Failed<wbr>Job<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last agent upgrade failed or cancelled job Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastagentupgradetype_csharp">
+<a href="#lastagentupgradetype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Agent<wbr>Upgrade<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last agent upgrade type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastrecoverypointid_csharp">
+<a href="#lastrecoverypointid_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last recovery point Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastrecoverypointreceived_csharp">
+<a href="#lastrecoverypointreceived_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point<wbr>Received</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last recovery point received time.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastrpocalculatedtime_csharp">
+<a href="#lastrpocalculatedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Rpo<wbr>Calculated<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last recovery point objective calculated time.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastrpoinseconds_csharp">
+<a href="#lastrpoinseconds_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Rpo<wbr>In<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The last recovery point objective value.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="licensetype_csharp">
+<a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}License Type of the VM to be used.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mobilityagentdetails_csharp">
+<a href="#mobilityagentdetails_csharp" style="color: inherit; text-decoration: inherit;">Mobility<wbr>Agent<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmmobilityagentdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Mobility<wbr>Agent<wbr>Details<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The mobility agent information.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="multivmgroupname_csharp">
+<a href="#multivmgroupname_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The multi VM group name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ostype_csharp">
+<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the OS on the VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="processserverid_csharp">
+<a href="#processserverid_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Server<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The process server Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="processservername_csharp">
+<a href="#processservername_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Server<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The process server name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="processorcorecount_csharp">
+<a href="#processorcorecount_csharp" style="color: inherit; text-decoration: inherit;">Processor<wbr>Core<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The processor core count.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="protecteddisks_csharp">
+<a href="#protecteddisks_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resyncprocessedbytes_csharp">
+<a href="#resyncprocessedbytes_csharp" style="color: inherit; text-decoration: inherit;">Resync<wbr>Processed<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The resync processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resyncprogresspercentage_csharp">
+<a href="#resyncprogresspercentage_csharp" style="color: inherit; text-decoration: inherit;">Resync<wbr>Progress<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The resync progress percentage. This is calculated based on total bytes processed for all disks in the source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resyncrequired_csharp">
+<a href="#resyncrequired_csharp" style="color: inherit; text-decoration: inherit;">Resync<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether resync is required.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resyncstate_csharp">
+<a href="#resyncstate_csharp" style="color: inherit; text-decoration: inherit;">Resync<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resync state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resynctransferredbytes_csharp">
+<a href="#resynctransferredbytes_csharp" style="color: inherit; text-decoration: inherit;">Resync<wbr>Transferred<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The resync transferred bytes from source VM to azure for all selected disks on source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="runasaccountid_csharp">
+<a href="#runasaccountid_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The run-as account Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetavailabilitysetid_csharp">
+<a href="#targetavailabilitysetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target availability set Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetavailabilityzone_csharp">
+<a href="#targetavailabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target availability zone.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetbootdiagnosticsstorageaccountid_csharp">
+<a href="#targetbootdiagnosticsstorageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Boot<wbr>Diagnostics<wbr>Storage<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target boot diagnostics storage account ARM Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetgeneration_csharp">
+<a href="#targetgeneration_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Generation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target generation.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetnetworkid_csharp">
+<a href="#targetnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target network Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetproximityplacementgroupid_csharp">
+<a href="#targetproximityplacementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target proximity placement group Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcegroupid_csharp">
+<a href="#targetresourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target resource group Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetvmname_csharp">
+<a href="#targetvmname_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Vm<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Target VM name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetvmsize_csharp">
+<a href="#targetvmsize_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Vm<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="testnetworkid_csharp">
+<a href="#testnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The test network Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vmnics_csharp">
+<a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Nic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The network details.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="agentupgradeblockingerrordetails_go">
+<a href="#agentupgradeblockingerrordetails_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmagentupgradeblockingerrordetailsresponse">[]In<wbr>Mage<wbr>Rcm<wbr>Agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The agent upgrade blocking error information.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="agentupgradestate_go">
+<a href="#agentupgradestate_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Upgrade<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The agent auto upgrade state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocatedmemoryinmb_go">
+<a href="#allocatedmemoryinmb_go" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Memory<wbr>In<wbr>MB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The allocated memory in MB.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="discoverytype_go">
+<a href="#discoverytype_go" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the discovered VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fabricdiscoverymachineid_go">
+<a href="#fabricdiscoverymachineid_go" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Discovery<wbr>Machine<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM Id of the discovered VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="failoverrecoverypointid_go">
+<a href="#failoverrecoverypointid_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Recovery<wbr>Point<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery point Id to which the VM was failed over.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="firmwaretype_go">
+<a href="#firmwaretype_go" style="color: inherit; text-decoration: inherit;">Firmware<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The firmware type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initialreplicationprocessedbytes_go">
+<a href="#initialreplicationprocessedbytes_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Processed<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The initial replication processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initialreplicationprogresspercentage_go">
+<a href="#initialreplicationprogresspercentage_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Progress<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The initial replication progress percentage. This is calculated based on total bytes processed for all disks in the source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initialreplicationtransferredbytes_go">
+<a href="#initialreplicationtransferredbytes_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Transferred<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The initial replication transferred bytes from source VM to azure for all selected disks on source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="internalidentifier_go">
+<a href="#internalidentifier_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual machine internal identifier.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="islastupgradesuccessful_go">
+<a href="#islastupgradesuccessful_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Last<wbr>Upgrade<wbr>Successful</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether last agent upgrade was successful or not.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastagentupgradeerrordetails_go">
+<a href="#lastagentupgradeerrordetails_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmlastagentupgradeerrordetailsresponse">[]In<wbr>Mage<wbr>Rcm<wbr>Last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The last agent upgrade error information.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastagentupgradefailedjobid_go">
+<a href="#lastagentupgradefailedjobid_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Agent<wbr>Upgrade<wbr>Failed<wbr>Job<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last agent upgrade failed or cancelled job Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastagentupgradetype_go">
+<a href="#lastagentupgradetype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Agent<wbr>Upgrade<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last agent upgrade type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastrecoverypointid_go">
+<a href="#lastrecoverypointid_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last recovery point Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastrecoverypointreceived_go">
+<a href="#lastrecoverypointreceived_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point<wbr>Received</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last recovery point received time.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastrpocalculatedtime_go">
+<a href="#lastrpocalculatedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Rpo<wbr>Calculated<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last recovery point objective calculated time.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastrpoinseconds_go">
+<a href="#lastrpoinseconds_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Rpo<wbr>In<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The last recovery point objective value.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="licensetype_go">
+<a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}License Type of the VM to be used.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mobilityagentdetails_go">
+<a href="#mobilityagentdetails_go" style="color: inherit; text-decoration: inherit;">Mobility<wbr>Agent<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmmobilityagentdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Mobility<wbr>Agent<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The mobility agent information.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="multivmgroupname_go">
+<a href="#multivmgroupname_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Vm<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The multi VM group name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ostype_go">
+<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the OS on the VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="processserverid_go">
+<a href="#processserverid_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Server<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The process server Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="processservername_go">
+<a href="#processservername_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Server<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The process server name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="processorcorecount_go">
+<a href="#processorcorecount_go" style="color: inherit; text-decoration: inherit;">Processor<wbr>Core<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The processor core count.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="protecteddisks_go">
+<a href="#protecteddisks_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmprotecteddiskdetailsresponse">[]In<wbr>Mage<wbr>Rcm<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resyncprocessedbytes_go">
+<a href="#resyncprocessedbytes_go" style="color: inherit; text-decoration: inherit;">Resync<wbr>Processed<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The resync processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resyncprogresspercentage_go">
+<a href="#resyncprogresspercentage_go" style="color: inherit; text-decoration: inherit;">Resync<wbr>Progress<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The resync progress percentage. This is calculated based on total bytes processed for all disks in the source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resyncrequired_go">
+<a href="#resyncrequired_go" style="color: inherit; text-decoration: inherit;">Resync<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether resync is required.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resyncstate_go">
+<a href="#resyncstate_go" style="color: inherit; text-decoration: inherit;">Resync<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resync state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resynctransferredbytes_go">
+<a href="#resynctransferredbytes_go" style="color: inherit; text-decoration: inherit;">Resync<wbr>Transferred<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The resync transferred bytes from source VM to azure for all selected disks on source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="runasaccountid_go">
+<a href="#runasaccountid_go" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The run-as account Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetavailabilitysetid_go">
+<a href="#targetavailabilitysetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target availability set Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetavailabilityzone_go">
+<a href="#targetavailabilityzone_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target availability zone.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetbootdiagnosticsstorageaccountid_go">
+<a href="#targetbootdiagnosticsstorageaccountid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Boot<wbr>Diagnostics<wbr>Storage<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target boot diagnostics storage account ARM Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetgeneration_go">
+<a href="#targetgeneration_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Generation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target generation.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetnetworkid_go">
+<a href="#targetnetworkid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target network Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetproximityplacementgroupid_go">
+<a href="#targetproximityplacementgroupid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target proximity placement group Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcegroupid_go">
+<a href="#targetresourcegroupid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target resource group Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetvmname_go">
+<a href="#targetvmname_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Vm<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Target VM name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetvmsize_go">
+<a href="#targetvmsize_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Vm<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="testnetworkid_go">
+<a href="#testnetworkid_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The test network Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vmnics_go">
+<a href="#vmnics_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmnicdetailsresponse">[]In<wbr>Mage<wbr>Rcm<wbr>Nic<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The network details.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="agentupgradeblockingerrordetails_nodejs">
+<a href="#agentupgradeblockingerrordetails_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmagentupgradeblockingerrordetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The agent upgrade blocking error information.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="agentupgradestate_nodejs">
+<a href="#agentupgradestate_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Upgrade<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The agent auto upgrade state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocatedmemoryinmb_nodejs">
+<a href="#allocatedmemoryinmb_nodejs" style="color: inherit; text-decoration: inherit;">allocated<wbr>Memory<wbr>In<wbr>MB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The allocated memory in MB.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="discoverytype_nodejs">
+<a href="#discoverytype_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the discovered VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fabricdiscoverymachineid_nodejs">
+<a href="#fabricdiscoverymachineid_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Discovery<wbr>Machine<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM Id of the discovered VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="failoverrecoverypointid_nodejs">
+<a href="#failoverrecoverypointid_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Recovery<wbr>Point<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery point Id to which the VM was failed over.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="firmwaretype_nodejs">
+<a href="#firmwaretype_nodejs" style="color: inherit; text-decoration: inherit;">firmware<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The firmware type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initialreplicationprocessedbytes_nodejs">
+<a href="#initialreplicationprocessedbytes_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Processed<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The initial replication processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initialreplicationprogresspercentage_nodejs">
+<a href="#initialreplicationprogresspercentage_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Progress<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The initial replication progress percentage. This is calculated based on total bytes processed for all disks in the source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initialreplicationtransferredbytes_nodejs">
+<a href="#initialreplicationtransferredbytes_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Transferred<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The initial replication transferred bytes from source VM to azure for all selected disks on source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="internalidentifier_nodejs">
+<a href="#internalidentifier_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual machine internal identifier.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="islastupgradesuccessful_nodejs">
+<a href="#islastupgradesuccessful_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Last<wbr>Upgrade<wbr>Successful</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether last agent upgrade was successful or not.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastagentupgradeerrordetails_nodejs">
+<a href="#lastagentupgradeerrordetails_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmlastagentupgradeerrordetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The last agent upgrade error information.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastagentupgradefailedjobid_nodejs">
+<a href="#lastagentupgradefailedjobid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Agent<wbr>Upgrade<wbr>Failed<wbr>Job<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last agent upgrade failed or cancelled job Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastagentupgradetype_nodejs">
+<a href="#lastagentupgradetype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Agent<wbr>Upgrade<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last agent upgrade type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastrecoverypointid_nodejs">
+<a href="#lastrecoverypointid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last recovery point Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastrecoverypointreceived_nodejs">
+<a href="#lastrecoverypointreceived_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point<wbr>Received</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last recovery point received time.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastrpocalculatedtime_nodejs">
+<a href="#lastrpocalculatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Rpo<wbr>Calculated<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The last recovery point objective calculated time.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastrpoinseconds_nodejs">
+<a href="#lastrpoinseconds_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Rpo<wbr>In<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The last recovery point objective value.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="licensetype_nodejs">
+<a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}License Type of the VM to be used.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mobilityagentdetails_nodejs">
+<a href="#mobilityagentdetails_nodejs" style="color: inherit; text-decoration: inherit;">mobility<wbr>Agent<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmmobilityagentdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Mobility<wbr>Agent<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The mobility agent information.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="multivmgroupname_nodejs">
+<a href="#multivmgroupname_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The multi VM group name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ostype_nodejs">
+<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the OS on the VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="processserverid_nodejs">
+<a href="#processserverid_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Server<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The process server Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="processservername_nodejs">
+<a href="#processservername_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Server<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The process server name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="processorcorecount_nodejs">
+<a href="#processorcorecount_nodejs" style="color: inherit; text-decoration: inherit;">processor<wbr>Core<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The processor core count.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="protecteddisks_nodejs">
+<a href="#protecteddisks_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmprotecteddiskdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resyncprocessedbytes_nodejs">
+<a href="#resyncprocessedbytes_nodejs" style="color: inherit; text-decoration: inherit;">resync<wbr>Processed<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The resync processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resyncprogresspercentage_nodejs">
+<a href="#resyncprogresspercentage_nodejs" style="color: inherit; text-decoration: inherit;">resync<wbr>Progress<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The resync progress percentage. This is calculated based on total bytes processed for all disks in the source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resyncrequired_nodejs">
+<a href="#resyncrequired_nodejs" style="color: inherit; text-decoration: inherit;">resync<wbr>Required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether resync is required.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resyncstate_nodejs">
+<a href="#resyncstate_nodejs" style="color: inherit; text-decoration: inherit;">resync<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resync state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resynctransferredbytes_nodejs">
+<a href="#resynctransferredbytes_nodejs" style="color: inherit; text-decoration: inherit;">resync<wbr>Transferred<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The resync transferred bytes from source VM to azure for all selected disks on source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="runasaccountid_nodejs">
+<a href="#runasaccountid_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The run-as account Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetavailabilitysetid_nodejs">
+<a href="#targetavailabilitysetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Set<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target availability set Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetavailabilityzone_nodejs">
+<a href="#targetavailabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target availability zone.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetbootdiagnosticsstorageaccountid_nodejs">
+<a href="#targetbootdiagnosticsstorageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Boot<wbr>Diagnostics<wbr>Storage<wbr>Account<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target boot diagnostics storage account ARM Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetgeneration_nodejs">
+<a href="#targetgeneration_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Generation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target generation.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetnetworkid_nodejs">
+<a href="#targetnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target network Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetproximityplacementgroupid_nodejs">
+<a href="#targetproximityplacementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target proximity placement group Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcegroupid_nodejs">
+<a href="#targetresourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target resource group Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetvmname_nodejs">
+<a href="#targetvmname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Vm<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Target VM name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetvmsize_nodejs">
+<a href="#targetvmsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Vm<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="testnetworkid_nodejs">
+<a href="#testnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The test network Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vmnics_nodejs">
+<a href="#vmnics_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Nics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmnicdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Nic<wbr>Details<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The network details.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="agentupgradeblockingerrordetails_python">
+<a href="#agentupgradeblockingerrordetails_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmagentupgradeblockingerrordetailsresponse">List[In<wbr>Mage<wbr>Rcm<wbr>Agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The agent upgrade blocking error information.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="agentupgradestate_python">
+<a href="#agentupgradestate_python" style="color: inherit; text-decoration: inherit;">agent<wbr>Upgrade<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The agent auto upgrade state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocatedmemoryinmb_python">
+<a href="#allocatedmemoryinmb_python" style="color: inherit; text-decoration: inherit;">allocated<wbr>Memory<wbr>In<wbr>MB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The allocated memory in MB.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="discoverytype_python">
+<a href="#discoverytype_python" style="color: inherit; text-decoration: inherit;">discovery<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the discovered VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fabricdiscoverymachineid_python">
+<a href="#fabricdiscoverymachineid_python" style="color: inherit; text-decoration: inherit;">fabric<wbr>Discovery<wbr>Machine<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARM Id of the discovered VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="failover_recovery_point_id_python">
+<a href="#failover_recovery_point_id_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>recovery_<wbr>point_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The recovery point Id to which the VM was failed over.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="firmwaretype_python">
+<a href="#firmwaretype_python" style="color: inherit; text-decoration: inherit;">firmware<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The firmware type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initialreplicationprocessedbytes_python">
+<a href="#initialreplicationprocessedbytes_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Processed<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The initial replication processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initialreplicationprogresspercentage_python">
+<a href="#initialreplicationprogresspercentage_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Progress<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The initial replication progress percentage. This is calculated based on total bytes processed for all disks in the source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="initialreplicationtransferredbytes_python">
+<a href="#initialreplicationtransferredbytes_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Transferred<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The initial replication transferred bytes from source VM to azure for all selected disks on source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="internal_identifier_python">
+<a href="#internal_identifier_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The virtual machine internal identifier.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="islastupgradesuccessful_python">
+<a href="#islastupgradesuccessful_python" style="color: inherit; text-decoration: inherit;">is<wbr>Last<wbr>Upgrade<wbr>Successful</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether last agent upgrade was successful or not.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastagentupgradeerrordetails_python">
+<a href="#lastagentupgradeerrordetails_python" style="color: inherit; text-decoration: inherit;">last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmlastagentupgradeerrordetailsresponse">List[In<wbr>Mage<wbr>Rcm<wbr>Last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The last agent upgrade error information.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastagentupgradefailedjobid_python">
+<a href="#lastagentupgradefailedjobid_python" style="color: inherit; text-decoration: inherit;">last<wbr>Agent<wbr>Upgrade<wbr>Failed<wbr>Job<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The last agent upgrade failed or cancelled job Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastagentupgradetype_python">
+<a href="#lastagentupgradetype_python" style="color: inherit; text-decoration: inherit;">last<wbr>Agent<wbr>Upgrade<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The last agent upgrade type.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastrecoverypointid_python">
+<a href="#lastrecoverypointid_python" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The last recovery point Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastrpocalculatedtime_python">
+<a href="#lastrpocalculatedtime_python" style="color: inherit; text-decoration: inherit;">last<wbr>Rpo<wbr>Calculated<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The last recovery point objective calculated time.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="lastrpoinseconds_python">
+<a href="#lastrpoinseconds_python" style="color: inherit; text-decoration: inherit;">last<wbr>Rpo<wbr>In<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The last recovery point objective value.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="last_recovery_point_received_python">
+<a href="#last_recovery_point_received_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point_<wbr>received</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The last recovery point received time.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="license_type_python">
+<a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}License Type of the VM to be used.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mobilityagentdetails_python">
+<a href="#mobilityagentdetails_python" style="color: inherit; text-decoration: inherit;">mobility<wbr>Agent<wbr>Details</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmmobilityagentdetailsresponse">Dict[In<wbr>Mage<wbr>Rcm<wbr>Mobility<wbr>Agent<wbr>Details<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The mobility agent information.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="multivmgroupname_python">
+<a href="#multivmgroupname_python" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The multi VM group name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="os_type_python">
+<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the OS on the VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="processservername_python">
+<a href="#processservername_python" style="color: inherit; text-decoration: inherit;">process<wbr>Server<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The process server name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="process_server_id_python">
+<a href="#process_server_id_python" style="color: inherit; text-decoration: inherit;">process_<wbr>server_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The process server Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="processorcorecount_python">
+<a href="#processorcorecount_python" style="color: inherit; text-decoration: inherit;">processor<wbr>Core<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The processor core count.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="protected_disks_python">
+<a href="#protected_disks_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>disks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmprotecteddiskdetailsresponse">List[In<wbr>Mage<wbr>Rcm<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resyncprocessedbytes_python">
+<a href="#resyncprocessedbytes_python" style="color: inherit; text-decoration: inherit;">resync<wbr>Processed<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The resync processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resyncprogresspercentage_python">
+<a href="#resyncprogresspercentage_python" style="color: inherit; text-decoration: inherit;">resync<wbr>Progress<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The resync progress percentage. This is calculated based on total bytes processed for all disks in the source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resyncstate_python">
+<a href="#resyncstate_python" style="color: inherit; text-decoration: inherit;">resync<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The resync state.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resynctransferredbytes_python">
+<a href="#resynctransferredbytes_python" style="color: inherit; text-decoration: inherit;">resync<wbr>Transferred<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The resync transferred bytes from source VM to azure for all selected disks on source VM.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resync_required_python">
+<a href="#resync_required_python" style="color: inherit; text-decoration: inherit;">resync_<wbr>required</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether resync is required.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="run_as_account_id_python">
+<a href="#run_as_account_id_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>account_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The run-as account Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetavailabilityzone_python">
+<a href="#targetavailabilityzone_python" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The target availability zone.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetgeneration_python">
+<a href="#targetgeneration_python" style="color: inherit; text-decoration: inherit;">target<wbr>Generation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The target generation.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetproximityplacementgroupid_python">
+<a href="#targetproximityplacementgroupid_python" style="color: inherit; text-decoration: inherit;">target<wbr>Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The target proximity placement group Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_availability_set_id_python">
+<a href="#target_availability_set_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>availability_<wbr>set_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The target availability set Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_boot_diagnostics_storage_account_id_python">
+<a href="#target_boot_diagnostics_storage_account_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>boot_<wbr>diagnostics_<wbr>storage_<wbr>account_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The target boot diagnostics storage account ARM Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_network_id_python">
+<a href="#target_network_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>network_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The target network Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_resource_group_id_python">
+<a href="#target_resource_group_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>group_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The target resource group Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_vm_name_python">
+<a href="#target_vm_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>vm_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Target VM name.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_vm_size_python">
+<a href="#target_vm_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>vm_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="testnetworkid_python">
+<a href="#testnetworkid_python" style="color: inherit; text-decoration: inherit;">test<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The test network Id.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="vm_nics_python">
+<a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inmagercmnicdetailsresponse">List[In<wbr>Mage<wbr>Rcm<wbr>Nic<wbr>Details<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The network details.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="inmagereplicationdetailsresponse">In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#InMageReplicationDetailsResponse">output</a> API doc for this type.
@@ -14920,7 +18676,7 @@ The following output properties are available:
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>A2AReplication<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type">Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>A2AReplication<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recoveryservices.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The Replication provider custom settings.{{% /md %}}</dd>
 
@@ -15474,7 +19230,7 @@ The following output properties are available:
 <a href="#providerspecificdetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">A2AReplication<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response</span>
+        <span class="property-type">A2AReplication<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response | Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response | In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response</span>
     </dt>
     <dd>{{% md %}}The Replication provider custom settings.{{% /md %}}</dd>
 
@@ -15751,7 +19507,7 @@ The following output properties are available:
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[A2AReplication<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response] | Dict[In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response] | Dict[In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response]</span>
+        <span class="property-type">Dict[A2AReplication<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response] | Dict[Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response] | Dict[In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response] | Dict[In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response] | Dict[In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The Replication provider custom settings.{{% /md %}}</dd>
 

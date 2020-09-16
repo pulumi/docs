@@ -67,7 +67,7 @@ transaction_node = azure_nextgen.blockchain.v20180601preview.TransactionNode("tr
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const transactionNode = new azure_nextgen.blockchain.v20180601preview.TransactionNode("transactionNode", {
     blockchainMemberName: "contosemember1",

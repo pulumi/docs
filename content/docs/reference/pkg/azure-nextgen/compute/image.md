@@ -86,7 +86,7 @@ image = azure_nextgen.compute.latest.Image("image",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",
@@ -173,7 +173,7 @@ image = azure_nextgen.compute.latest.Image("image",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",
@@ -268,7 +268,7 @@ image = azure_nextgen.compute.latest.Image("image",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",
@@ -362,7 +362,7 @@ image = azure_nextgen.compute.latest.Image("image",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",
@@ -459,7 +459,7 @@ image = azure_nextgen.compute.latest.Image("image",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",
@@ -553,7 +553,7 @@ image = azure_nextgen.compute.latest.Image("image",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",
@@ -629,7 +629,7 @@ image = azure_nextgen.compute.latest.Image("image",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",
@@ -721,7 +721,7 @@ image = azure_nextgen.compute.latest.Image("image",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",
@@ -832,7 +832,7 @@ image = azure_nextgen.compute.latest.Image("image",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",
@@ -947,7 +947,7 @@ image = azure_nextgen.compute.latest.Image("image",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",

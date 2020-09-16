@@ -69,7 +69,7 @@ product_setting = azure_nextgen.securityinsights.v20190101preview.ProductSetting
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const productSetting = new azure_nextgen.securityinsights.v20190101preview.ProductSetting("productSetting", {
     etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",

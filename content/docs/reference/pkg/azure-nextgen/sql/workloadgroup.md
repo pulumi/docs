@@ -77,7 +77,7 @@ workload_group = azure_nextgen.sql.v20190601preview.WorkloadGroup("workloadGroup
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const workloadGroup = new azure_nextgen.sql.v20190601preview.WorkloadGroup("workloadGroup", {
     databaseName: "testdb",
@@ -151,7 +151,7 @@ workload_group = azure_nextgen.sql.v20190601preview.WorkloadGroup("workloadGroup
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const workloadGroup = new azure_nextgen.sql.v20190601preview.WorkloadGroup("workloadGroup", {
     databaseName: "testdb",

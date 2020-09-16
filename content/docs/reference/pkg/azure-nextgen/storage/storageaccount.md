@@ -130,7 +130,7 @@ storage_account = azure_nextgen.storage.latest.StorageAccount("storageAccount",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageAccount", {
     accountName: "sto4445",

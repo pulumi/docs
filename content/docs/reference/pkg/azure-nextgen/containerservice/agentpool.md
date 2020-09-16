@@ -75,7 +75,7 @@ agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool", {
     agentPoolName: "agentpool1",
@@ -150,7 +150,7 @@ agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool", {
     agentPoolName: "agentpool1",
@@ -245,7 +245,7 @@ agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool", {
     agentPoolName: "agentpool1",
@@ -350,7 +350,7 @@ agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool", {
     agentPoolName: "agentpool1",
@@ -446,7 +446,7 @@ agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool", {
     agentPoolName: "agentpool1",

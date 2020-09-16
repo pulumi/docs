@@ -58,7 +58,7 @@ security_contact = azure_nextgen.security.v20200101preview.SecurityContact("secu
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const securityContact = new azure_nextgen.security.v20200101preview.SecurityContact("securityContact", {securityContactName: "default"});
 

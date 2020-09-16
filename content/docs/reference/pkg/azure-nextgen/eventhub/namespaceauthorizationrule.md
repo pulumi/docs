@@ -72,7 +72,7 @@ namespace_authorization_rule = azure_nextgen.eventhub.latest.NamespaceAuthorizat
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const namespaceAuthorizationRule = new azure_nextgen.eventhub.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
     authorizationRuleName: "sdk-Authrules-1746",

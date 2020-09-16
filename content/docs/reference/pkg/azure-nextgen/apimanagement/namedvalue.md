@@ -78,7 +78,7 @@ named_value = azure_nextgen.apimanagement.latest.NamedValue("namedValue",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const namedValue = new azure_nextgen.apimanagement.latest.NamedValue("namedValue", {
     displayName: "prop3name",

@@ -16,7 +16,7 @@ A SqlManagedInstance.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Updates a SQL Managed Instance tags.
+### Create or update a SQL Managed Instance
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlManagedInstance = new AzureNextGen.AzureData.V20190724Preview.SqlManagedInstance("sqlManagedInstance", new AzureNextGen.AzureData.V20190724Preview.SqlManagedInstanceArgs
+        var sqlManagedInstance = new AzureNextGen.AzureData.V20200908Preview.SqlManagedInstance("sqlManagedInstance", new AzureNextGen.AzureData.V20200908Preview.SqlManagedInstanceArgs
         {
             Admin = "Admin user",
             EndTime = "Instance end time",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_managed_instance = azure_nextgen.azuredata.v20190724preview.SqlManagedInstance("sqlManagedInstance",
+sql_managed_instance = azure_nextgen.azuredata.v20200908preview.SqlManagedInstance("sqlManagedInstance",
     admin="Admin user",
     end_time="Instance end time",
     instance_endpoint="The on premise instance endpoint",
@@ -78,9 +78,9 @@ sql_managed_instance = azure_nextgen.azuredata.v20190724preview.SqlManagedInstan
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlManagedInstance = new azure_nextgen.azuredata.v20190724preview.SqlManagedInstance("sqlManagedInstance", {
+const sqlManagedInstance = new azure_nextgen.azuredata.v20200908preview.SqlManagedInstance("sqlManagedInstance", {
     admin: "Admin user",
     endTime: "Instance end time",
     instanceEndpoint: "The on premise instance endpoint",
@@ -109,7 +109,7 @@ const sqlManagedInstance = new azure_nextgen.azuredata.v20190724preview.SqlManag
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/azuredata/#pulumi_azure-nextgen.azuredata.SqlManagedInstance">SqlManagedInstance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_controller_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_managed_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">v_core</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/azuredata/#pulumi_azure-nextgen.azuredata.SqlManagedInstance">SqlManagedInstance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_controller_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">k8s_raw</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">last_uploaded_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_managed_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">v_core</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -353,6 +353,26 @@ The SqlManagedInstance resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="k8sraw_csharp">
+<a href="#k8sraw_csharp" style="color: inherit; text-decoration: inherit;">K8s<wbr>Raw</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The raw kubernetes information{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastuploadeddate_csharp">
+<a href="#lastuploadeddate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Uploaded<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last uploaded date from on premise cluster. Defaults to current date time{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
 </span> 
@@ -457,6 +477,26 @@ The SqlManagedInstance resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The on premise instance endpoint{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="k8sraw_go">
+<a href="#k8sraw_go" style="color: inherit; text-decoration: inherit;">K8s<wbr>Raw</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The raw kubernetes information{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastuploadeddate_go">
+<a href="#lastuploadeddate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Uploaded<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last uploaded date from on premise cluster. Defaults to current date time{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -567,6 +607,26 @@ The SqlManagedInstance resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="k8sraw_nodejs">
+<a href="#k8sraw_nodejs" style="color: inherit; text-decoration: inherit;">k8s<wbr>Raw</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The raw kubernetes information{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastuploadeddate_nodejs">
+<a href="#lastuploadeddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Uploaded<wbr>Date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Last uploaded date from on premise cluster. Defaults to current date time{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span> 
@@ -671,6 +731,26 @@ The SqlManagedInstance resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The on premise instance endpoint{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="k8s_raw_python">
+<a href="#k8s_raw_python" style="color: inherit; text-decoration: inherit;">k8s_<wbr>raw</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The raw kubernetes information{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_uploaded_date_python">
+<a href="#last_uploaded_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>uploaded_<wbr>date</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Last uploaded date from on premise cluster. Defaults to current date time{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

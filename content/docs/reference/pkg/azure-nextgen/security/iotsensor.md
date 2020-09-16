@@ -61,7 +61,7 @@ iot_sensor = azure_nextgen.security.v20200806preview.IotSensor("iotSensor",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const iotSensor = new azure_nextgen.security.v20200806preview.IotSensor("iotSensor", {
     iotSensorName: "mySensor",

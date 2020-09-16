@@ -83,7 +83,7 @@ machine_group = azure_nextgen.operationalinsights.v20151101preview.MachineGroup(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const machineGroup = new azure_nextgen.operationalinsights.v20151101preview.MachineGroup("machineGroup", {
     count: 1,

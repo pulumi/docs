@@ -99,7 +99,7 @@ function = azure_nextgen.streamanalytics.latest.Function("function",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const _function = new azure_nextgen.streamanalytics.latest.Function("function", {
     functionName: "function8197",
@@ -245,7 +245,7 @@ function = azure_nextgen.streamanalytics.latest.Function("function",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const _function = new azure_nextgen.streamanalytics.latest.Function("function", {
     functionName: "function588",

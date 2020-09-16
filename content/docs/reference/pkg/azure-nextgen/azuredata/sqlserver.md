@@ -73,7 +73,7 @@ sql_server = azure_nextgen.azuredata.v20190724preview.SqlServer("sqlServer",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const sqlServer = new azure_nextgen.azuredata.v20190724preview.SqlServer("sqlServer", {
     cores: 8,

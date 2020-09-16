@@ -116,7 +116,7 @@ firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPol
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
     firewallPolicyName: "firewallPolicy",
@@ -244,7 +244,7 @@ firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPol
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
     firewallPolicyName: "firewallPolicy",

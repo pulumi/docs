@@ -76,7 +76,7 @@ solution = azure_nextgen.operationsmanagement.v20151101preview.Solution("solutio
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const solution = new azure_nextgen.operationsmanagement.v20151101preview.Solution("solution", {
     location: "East US",

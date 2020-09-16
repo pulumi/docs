@@ -90,7 +90,7 @@ incident = azure_nextgen.operationalinsights.latest.Incident("incident",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const incident = new azure_nextgen.operationalinsights.latest.Incident("incident", {
     classification: "FalsePositive",

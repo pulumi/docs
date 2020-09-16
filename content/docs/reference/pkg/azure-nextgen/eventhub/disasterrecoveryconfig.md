@@ -65,7 +65,7 @@ disaster_recovery_config = azure_nextgen.eventhub.latest.DisasterRecoveryConfig(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const disasterRecoveryConfig = new azure_nextgen.eventhub.latest.DisasterRecoveryConfig("disasterRecoveryConfig", {
     alias: "sdk-DisasterRecovery-3814",

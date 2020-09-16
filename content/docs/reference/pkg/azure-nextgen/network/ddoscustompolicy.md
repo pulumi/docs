@@ -73,7 +73,7 @@ ddos_custom_policy = azure_nextgen.network.latest.DdosCustomPolicy("ddosCustomPo
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const ddosCustomPolicy = new azure_nextgen.network.latest.DdosCustomPolicy("ddosCustomPolicy", {
     ddosCustomPolicyName: "test-ddos-custom-policy",

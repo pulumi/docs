@@ -104,7 +104,7 @@ authorization_server = azure_nextgen.apimanagement.latest.AuthorizationServer("a
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const authorizationServer = new azure_nextgen.apimanagement.latest.AuthorizationServer("authorizationServer", {
     authorizationEndpoint: "https://www.contoso.com/oauth2/auth",

@@ -58,7 +58,7 @@ partner = azure_nextgen.managementpartner.latest.Partner("partner", partner_id="
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const partner = new azure_nextgen.managementpartner.latest.Partner("partner", {partnerId: "123456"});
 

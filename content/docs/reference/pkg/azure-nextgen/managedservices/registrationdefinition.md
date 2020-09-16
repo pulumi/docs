@@ -74,7 +74,7 @@ registration_definition = azure_nextgen.managedservices.latest.RegistrationDefin
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const registrationDefinition = new azure_nextgen.managedservices.latest.RegistrationDefinition("registrationDefinition", {
     plan: {

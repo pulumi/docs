@@ -69,7 +69,7 @@ blob_container_immutability_policy = azure_nextgen.storage.latest.BlobContainerI
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const blobContainerImmutabilityPolicy = new azure_nextgen.storage.latest.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy", {
     accountName: "sto7069",

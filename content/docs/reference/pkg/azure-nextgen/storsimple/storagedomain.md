@@ -70,7 +70,7 @@ storage_domain = azure_nextgen.storsimple.latest.StorageDomain("storageDomain",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const storageDomain = new azure_nextgen.storsimple.latest.StorageDomain("storageDomain", {
     encryptionStatus: "Disabled",

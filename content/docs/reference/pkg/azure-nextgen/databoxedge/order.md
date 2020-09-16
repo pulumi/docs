@@ -96,7 +96,7 @@ order = azure_nextgen.databoxedge.latest.Order("order",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const order = new azure_nextgen.databoxedge.latest.Order("order", {
     contactInformation: {

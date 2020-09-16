@@ -72,7 +72,7 @@ enterprise_knowledge_graph = azure_nextgen.enterpriseknowledgegraph.latest.Enter
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const enterpriseKnowledgeGraph = new azure_nextgen.enterpriseknowledgegraph.latest.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph", {
     location: "West US",

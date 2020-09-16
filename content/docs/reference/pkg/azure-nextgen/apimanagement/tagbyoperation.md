@@ -67,7 +67,7 @@ tag_by_operation = azure_nextgen.apimanagement.latest.TagByOperation("tagByOpera
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const tagByOperation = new azure_nextgen.apimanagement.latest.TagByOperation("tagByOperation", {
     apiId: "5931a75ae4bbd512a88c680b",

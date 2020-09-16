@@ -63,7 +63,7 @@ experiment = azure_nextgen.batchai.latest.Experiment("experiment",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const experiment = new azure_nextgen.batchai.latest.Experiment("experiment", {
     experimentName: "demo_experiment",

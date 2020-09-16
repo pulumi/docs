@@ -137,7 +137,7 @@ policy_definition_at_management_group = azure_nextgen.management.latest.PolicyDe
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const policyDefinitionAtManagementGroup = new azure_nextgen.management.latest.PolicyDefinitionAtManagementGroup("policyDefinitionAtManagementGroup", {
     description: "Force resource names to begin with given 'prefix' and/or end with given 'suffix'",

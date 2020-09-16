@@ -63,7 +63,7 @@ site = azure_nextgen.offazure.latest.Site("site",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const site = new azure_nextgen.offazure.latest.Site("site", {
     location: "eastus",

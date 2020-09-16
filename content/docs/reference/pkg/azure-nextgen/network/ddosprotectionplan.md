@@ -63,7 +63,7 @@ ddos_protection_plan = azure_nextgen.network.latest.DdosProtectionPlan("ddosProt
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const ddosProtectionPlan = new azure_nextgen.network.latest.DdosProtectionPlan("ddosProtectionPlan", {
     ddosProtectionPlanName: "test-plan",

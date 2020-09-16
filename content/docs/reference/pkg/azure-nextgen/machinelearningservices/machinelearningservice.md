@@ -194,7 +194,7 @@ machine_learning_service = azure_nextgen.machinelearningservices.v20200901previe
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const machineLearningService = new azure_nextgen.machinelearningservices.v20200901preview.MachineLearningService("machineLearningService", {
     computeType: "ACI",

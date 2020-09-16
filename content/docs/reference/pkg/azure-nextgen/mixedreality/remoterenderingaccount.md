@@ -70,7 +70,7 @@ remote_rendering_account = azure_nextgen.mixedreality.v20200406preview.RemoteRen
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const remoteRenderingAccount = new azure_nextgen.mixedreality.v20200406preview.RemoteRenderingAccount("remoteRenderingAccount", {
     accountName: "MyAccount",

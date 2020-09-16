@@ -64,7 +64,7 @@ v_mware_collector = azure_nextgen.migrate.latest.VMwareCollector("vMwareCollecto
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const vMwareCollector = new azure_nextgen.migrate.latest.VMwareCollector("vMwareCollector", {
     eTag: "\"01003d32-0000-0d00-0000-5d74d2e50000\"",

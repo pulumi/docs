@@ -96,7 +96,7 @@ packet_capture = azure_nextgen.network.latest.PacketCapture("packetCapture",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const packetCapture = new azure_nextgen.network.latest.PacketCapture("packetCapture", {
     bytesToCapturePerPacket: 10000,

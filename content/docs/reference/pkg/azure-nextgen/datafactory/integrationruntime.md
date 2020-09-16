@@ -63,7 +63,7 @@ integration_runtime = azure_nextgen.datafactory.latest.IntegrationRuntime("integ
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const integrationRuntime = new azure_nextgen.datafactory.latest.IntegrationRuntime("integrationRuntime", {
     factoryName: "exampleFactoryName",

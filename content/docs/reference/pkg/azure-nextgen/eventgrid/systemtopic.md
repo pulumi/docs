@@ -72,7 +72,7 @@ system_topic = azure_nextgen.eventgrid.v20200401preview.SystemTopic("systemTopic
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const systemTopic = new azure_nextgen.eventgrid.v20200401preview.SystemTopic("systemTopic", {
     location: "westus2",

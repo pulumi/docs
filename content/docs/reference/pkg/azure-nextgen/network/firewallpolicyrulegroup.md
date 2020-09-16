@@ -116,7 +116,7 @@ firewall_policy_rule_group = azure_nextgen.network.latest.FirewallPolicyRuleGrou
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const firewallPolicyRuleGroup = new azure_nextgen.network.latest.FirewallPolicyRuleGroup("firewallPolicyRuleGroup", {
     firewallPolicyName: "firewallPolicy",
@@ -164,9 +164,9 @@ class MyStack : Stack
             {
                 
                 {
-                    { "action", 
+                    { "action", new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleActionArgs
                     {
-                        { "type", "Deny" },
+                        Type = "Deny",
                     } },
                     { "name", "Example-Filter-Rule" },
                     { "ruleConditions", 
@@ -244,7 +244,7 @@ firewall_policy_rule_group = azure_nextgen.network.latest.FirewallPolicyRuleGrou
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const firewallPolicyRuleGroup = new azure_nextgen.network.latest.FirewallPolicyRuleGroup("firewallPolicyRuleGroup", {
     firewallPolicyName: "firewallPolicy",

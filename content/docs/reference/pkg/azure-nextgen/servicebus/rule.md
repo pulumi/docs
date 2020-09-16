@@ -81,7 +81,7 @@ rule = azure_nextgen.servicebus.latest.Rule("rule",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
     correlationFilter: {
@@ -152,7 +152,7 @@ rule = azure_nextgen.servicebus.latest.Rule("rule",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
     namespaceName: "sdk-Namespace-1319",
@@ -226,7 +226,7 @@ rule = azure_nextgen.servicebus.latest.Rule("rule",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
     filterType: "SqlFilter",

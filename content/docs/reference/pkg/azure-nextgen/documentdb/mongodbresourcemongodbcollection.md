@@ -114,7 +114,7 @@ mongo_db_resource_mongo_db_collection = azure_nextgen.documentdb.latest.MongoDBR
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const mongoDBResourceMongoDBCollection = new azure_nextgen.documentdb.latest.MongoDBResourceMongoDBCollection("mongoDBResourceMongoDBCollection", {
     accountName: "ddb1",

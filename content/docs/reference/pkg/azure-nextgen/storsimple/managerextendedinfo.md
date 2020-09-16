@@ -65,7 +65,7 @@ manager_extended_info = azure_nextgen.storsimple.latest.ManagerExtendedInfo("man
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managerExtendedInfo = new azure_nextgen.storsimple.latest.ManagerExtendedInfo("managerExtendedInfo", {
     algorithm: "None",

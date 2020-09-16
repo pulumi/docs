@@ -65,7 +65,7 @@ template_spec = azure_nextgen.resources.v20190601preview.TemplateSpec("templateS
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const templateSpec = new azure_nextgen.resources.v20190601preview.TemplateSpec("templateSpec", {
     description: "A very simple Template Spec",

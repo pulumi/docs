@@ -79,7 +79,7 @@ file_share = azure_nextgen.storsimple.latest.FileShare("fileShare",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const fileShare = new azure_nextgen.storsimple.latest.FileShare("fileShare", {
     adminUser: "fareast\\idcdlslb",

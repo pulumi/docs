@@ -63,7 +63,7 @@ integration_service_environment_managed_api = azure_nextgen.logic.latest.Integra
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const integrationServiceEnvironmentManagedApi = new azure_nextgen.logic.latest.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi", {
     apiName: "servicebus",

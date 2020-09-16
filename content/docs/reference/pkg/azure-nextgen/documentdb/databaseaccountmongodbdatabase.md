@@ -72,7 +72,7 @@ database_account_mongo_db_database = azure_nextgen.documentdb.latest.DatabaseAcc
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const databaseAccountMongoDBDatabase = new azure_nextgen.documentdb.latest.DatabaseAccountMongoDBDatabase("databaseAccountMongoDBDatabase", {
     accountName: "ddb1",

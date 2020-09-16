@@ -69,7 +69,7 @@ share = azure_nextgen.datashare.latest.Share("share",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const share = new azure_nextgen.datashare.latest.Share("share", {
     accountName: "Account1",

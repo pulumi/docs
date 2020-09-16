@@ -67,7 +67,7 @@ backup_schedule_group = azure_nextgen.storsimple.latest.BackupScheduleGroup("bac
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const backupScheduleGroup = new azure_nextgen.storsimple.latest.BackupScheduleGroup("backupScheduleGroup", {
     deviceName: "HSDK-4XY4FI2IVG",

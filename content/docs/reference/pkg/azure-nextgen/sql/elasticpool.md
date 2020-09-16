@@ -75,7 +75,7 @@ elastic_pool = azure_nextgen.sql.latest.ElasticPool("elasticPool",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const elasticPool = new azure_nextgen.sql.latest.ElasticPool("elasticPool", {
     databaseDtuMax: 5,
@@ -142,7 +142,7 @@ elastic_pool = azure_nextgen.sql.latest.ElasticPool("elasticPool",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const elasticPool = new azure_nextgen.sql.latest.ElasticPool("elasticPool", {
     elasticPoolName: "sqlcrudtest-8102",

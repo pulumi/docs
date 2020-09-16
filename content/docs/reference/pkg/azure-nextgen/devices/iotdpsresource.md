@@ -74,7 +74,7 @@ iot_dps_resource = azure_nextgen.devices.latest.IotDpsResource("iotDpsResource",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const iotDpsResource = new azure_nextgen.devices.latest.IotDpsResource("iotDpsResource", {
     location: "East US",

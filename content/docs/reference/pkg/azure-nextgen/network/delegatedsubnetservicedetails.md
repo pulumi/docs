@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var delegatedSubnetServiceDetails = new AzureNextGen.Network.V20200808Preview.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails", new AzureNextGen.Network.V20200808Preview.DelegatedSubnetServiceDetailsArgs
         {
-            ControllerID = "a182cbcf-e8ea-4175-ac2b-ad36a73f9801",
+            ControllerID = "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/dnctestcontroller",
             ResourceGroupName = "TestRG",
             ResourceName = "delegated1",
             SubnetName = "testsubnet",
@@ -53,7 +53,7 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 delegated_subnet_service_details = azure_nextgen.network.v20200808preview.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails",
-    controller_id="a182cbcf-e8ea-4175-ac2b-ad36a73f9801",
+    controller_id="/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/dnctestcontroller",
     resource_group_name="TestRG",
     resource_name="delegated1",
     subnet_name="testsubnet",
@@ -67,10 +67,10 @@ delegated_subnet_service_details = azure_nextgen.network.v20200808preview.Delega
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const delegatedSubnetServiceDetails = new azure_nextgen.network.v20200808preview.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails", {
-    controllerID: "a182cbcf-e8ea-4175-ac2b-ad36a73f9801",
+    controllerID: "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/dnctestcontroller",
     resourceGroupName: "TestRG",
     resourceName: "delegated1",
     subnetName: "testsubnet",
@@ -313,7 +313,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Delegated Network Controller ID{{% /md %}}</dd>
+    <dd>{{% md %}}Delegated Network Controller ARM resource ID{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -370,7 +370,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Delegated Network Controller ID{{% /md %}}</dd>
+    <dd>{{% md %}}Delegated Network Controller ARM resource ID{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -427,7 +427,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Delegated Network Controller ID{{% /md %}}</dd>
+    <dd>{{% md %}}Delegated Network Controller ARM resource ID{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -484,7 +484,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Delegated Network Controller ID{{% /md %}}</dd>
+    <dd>{{% md %}}Delegated Network Controller ARM resource ID{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -554,6 +554,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Location of the DelegatedSubnet resource.{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="resourceguid_csharp">
+<a href="#resourceguid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Guid for the resource(delegatedSubnet) created{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -610,6 +620,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Location of the DelegatedSubnet resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="resourceguid_go">
+<a href="#resourceguid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Guid for the resource(delegatedSubnet) created{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -668,6 +688,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Location of the DelegatedSubnet resource.{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="resourceguid_nodejs">
+<a href="#resourceguid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Guid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Guid for the resource(delegatedSubnet) created{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -724,6 +754,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Location of the DelegatedSubnet resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="resource_guid_python">
+<a href="#resource_guid_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>guid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Guid for the resource(delegatedSubnet) created{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

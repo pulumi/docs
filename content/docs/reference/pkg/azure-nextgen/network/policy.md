@@ -181,7 +181,7 @@ policy = azure_nextgen.network.latest.Policy("policy",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const policy = new azure_nextgen.network.latest.Policy("policy", {
     customRules: {

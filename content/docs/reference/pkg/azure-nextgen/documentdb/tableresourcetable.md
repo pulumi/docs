@@ -76,7 +76,7 @@ table_resource_table = azure_nextgen.documentdb.latest.TableResourceTable("table
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const tableResourceTable = new azure_nextgen.documentdb.latest.TableResourceTable("tableResourceTable", {
     accountName: "ddb1",

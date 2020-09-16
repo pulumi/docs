@@ -63,7 +63,7 @@ management_configuration = azure_nextgen.operationsmanagement.v20151101preview.M
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managementConfiguration = new azure_nextgen.operationsmanagement.v20151101preview.ManagementConfiguration("managementConfiguration", {
     location: "East US",

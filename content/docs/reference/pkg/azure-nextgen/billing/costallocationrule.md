@@ -61,7 +61,7 @@ cost_allocation_rule = azure_nextgen.billing.v20200301preview.CostAllocationRule
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const costAllocationRule = new azure_nextgen.billing.v20200301preview.CostAllocationRule("costAllocationRule", {
     billingAccountId: "100",
@@ -117,7 +117,7 @@ cost_allocation_rule = azure_nextgen.billing.v20200301preview.CostAllocationRule
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const costAllocationRule = new azure_nextgen.billing.v20200301preview.CostAllocationRule("costAllocationRule", {
     billingAccountId: "100",

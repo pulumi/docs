@@ -120,7 +120,7 @@ job_step = azure_nextgen.sql.v20170301preview.JobStep("jobStep",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const jobStep = new azure_nextgen.sql.v20170301preview.JobStep("jobStep", {
     action: {
@@ -221,7 +221,7 @@ job_step = azure_nextgen.sql.v20170301preview.JobStep("jobStep",
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const jobStep = new azure_nextgen.sql.v20170301preview.JobStep("jobStep", {
     action: {

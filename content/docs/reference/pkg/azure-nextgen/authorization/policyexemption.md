@@ -81,7 +81,7 @@ policy_exemption = azure_nextgen.authorization.v20200701preview.PolicyExemption(
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const policyExemption = new azure_nextgen.authorization.v20200701preview.PolicyExemption("policyExemption", {
     description: "Exempt demo cluster from limit sku",

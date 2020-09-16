@@ -144,7 +144,7 @@ gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galler
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const galleryImageVersion = new azure_nextgen.compute.latest.GalleryImageVersion("galleryImageVersion", {
     galleryImageName: "myGalleryImageName",
@@ -334,7 +334,7 @@ gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galler
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const galleryImageVersion = new azure_nextgen.compute.latest.GalleryImageVersion("galleryImageVersion", {
     galleryImageName: "myGalleryImageName",
@@ -504,7 +504,7 @@ gallery_image_version = azure_nextgen.compute.latest.GalleryImageVersion("galler
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const galleryImageVersion = new azure_nextgen.compute.latest.GalleryImageVersion("galleryImageVersion", {
     galleryImageName: "myGalleryImageName",

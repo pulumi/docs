@@ -96,7 +96,7 @@ managed_network_group = azure_nextgen.managednetwork.v20190601preview.ManagedNet
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure_nextgen";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const managedNetworkGroup = new azure_nextgen.managednetwork.v20190601preview.ManagedNetworkGroup("managedNetworkGroup", {
     managedNetworkGroupName: "myManagedNetworkGroup1",
