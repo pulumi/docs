@@ -52,7 +52,7 @@ Thank you [Albert]({{< relref "/docs/content/blog/author/albert-zhong" >}}), [Ze
 
 Thank you [Evan]({{< relref "/docs/content/blog/author/evan-boyle" >}}) for being an amazing mentor by being so approachable, and always being there everyday. You were always so patient with me and answered virtually any question I threw at you :)
 
-Thank you [Lee]({{< relref "/blog/author/lee-zen" >}}) and and [Luke]({{< relref "/blog/author/luke-hoban" >}}) for being such organized, motivating, and empathetic managers!
+Thank you [Lee]({{< relref "/docs/content/blog/author/lee-zen" >}}) and and [Luke]({{< relref "/docs/content/blog/author/luke-hoban" >}}) for being such organized, motivating, and empathetic managers!
 
 Thank you to [Levi]({{< relref "/docs/content/blog/author/levi-blackstone" >}}), [Lee Briggs]({{< relref "/docs/content/blog/author/lee-briggs" >}}), Komal, [Pat]({{< relref "/docs/content/blog/author/pat-gavlin" >}}), and [Mikhail]({{< relref "/docs/content/blog/author/mikhail-shilkov" >}}) for being so open and friendly and always being available and sharing your experience when I needed anything at all!
 
