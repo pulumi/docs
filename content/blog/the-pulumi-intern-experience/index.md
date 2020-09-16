@@ -23,7 +23,7 @@ Let’s be real, onboarding with a new team in a remote situation was tough; the
 
 ### Remote Lifestyle
 
-I’m definitely not a fan of the [remote environment](https://pulumi.com/blog/coronavirus-plan), however, I’m the kind of person that is more productive at night, so it allowed me to shift my work to times when I knew I would get things done. That said, face to face interaction was something I missed a lot, as it’s understandably harder to get to know people over a computer. However, since Pulumi already has many remote engineers, it was a very smooth process to get set up and start working right away.
+I’m definitely not a fan of the [remote environment]({{< relref "/blog/coronavirus-plan" >}}), however, I’m the kind of person that is more productive at night, so it allowed me to shift my work to times when I knew I would get things done. That said, face to face interaction was something I missed a lot, as it’s understandably harder to get to know people over a computer. However, since Pulumi already has many remote engineers, it was a very smooth process to get set up and start working right away.
 
 ## The Project Experience
 
@@ -33,7 +33,7 @@ I worked on the Platform team for the last 3 months, and they focused their work
 
 ### kube2pulumi Tooling
 
-I built a CLI tool, and an open-source library to convert Kubernetes YAML manifests to Pulumi in a user-defined language [check out kube2pulumi!](https://pulumi.com/blog/introducing-kube2pulumi). This was done so that Kubernetes users could easily migrate to Pulumi, and use familiar programming languages to tame YAML's complexity. I truly learned a lot from this experience as it was my first time designing and implementing a project end to end in a set time frame. Utilizing existing open-source libraries, code generation techniques, and compilers theory were just some of the many things I got to delve into.
+I built a CLI tool, and an open-source library to convert Kubernetes YAML manifests to Pulumi in a user-defined language [check out kube2pulumi!]({{< relref "/blog/introducing-kube2pulumi/" >}}). This was done so that Kubernetes users could easily migrate to Pulumi, and use familiar programming languages to tame YAML's complexity. I truly learned a lot from this experience as it was my first time designing and implementing a project end to end in a set time frame. Utilizing existing open-source libraries, code generation techniques, and compilers theory were just some of the many things I got to delve into.
 
 ### UI Interface
 
