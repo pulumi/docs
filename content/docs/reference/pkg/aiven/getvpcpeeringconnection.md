@@ -2,7 +2,7 @@
 ---
 title: "GetVpcPeeringConnection"
 title_tag: "Function GetVpcPeeringConnection | Package Aiven"
-meta_desc: "Explore the GetVpcPeeringConnection function of the Aiven package, including examples, input properties, output properties, and supporting types. {{% examples %}}"
+meta_desc: "Explore the GetVpcPeeringConnection function of the Aiven package, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -11,87 +11,6 @@ meta_desc: "Explore the GetVpcPeeringConnection function of the Aiven package, i
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var mypeeringconnection = Output.Create(Aiven.GetVpcPeeringConnection.InvokeAsync(new Aiven.GetVpcPeeringConnectionArgs
-        {
-            VpcId = data.Aiven_project_vpc.Vpc_id,
-            PeerCloudAccount = "<PEER_ACCOUNT_ID>",
-            PeerVpc = "<PEER_VPC_ID/NAME>",
-        }));
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.LookupVpcPeeringConnection(ctx, &aiven.LookupVpcPeeringConnectionArgs{
-			VpcId:            data.Aiven_project_vpc.Vpc_id,
-			PeerCloudAccount: "<PEER_ACCOUNT_ID>",
-			PeerVpc:          "<PEER_VPC_ID/NAME>",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-mypeeringconnection = aiven.get_vpc_peering_connection(vpc_id=data["aiven_project_vpc"]["vpc_id"],
-    peer_cloud_account="<PEER_ACCOUNT_ID>",
-    peer_vpc="<PEER_VPC_ID/NAME>")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const mypeeringconnection = aiven.getVpcPeeringConnection({
-    vpcId: data.aiven_project_vpc.vpc_id,
-    peerCloudAccount: "<PEER_ACCOUNT_ID>",
-    peerVpc: "<PEER_VPC_ID/NAME>",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetVpcPeeringConnection {#using}

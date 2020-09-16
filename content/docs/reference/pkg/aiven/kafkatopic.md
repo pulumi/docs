@@ -2,7 +2,7 @@
 ---
 title: "KafkaTopic"
 title_tag: "Resource KafkaTopic | Package Aiven"
-meta_desc: "Explore the KafkaTopic resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
+meta_desc: "Explore the KafkaTopic resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -11,112 +11,6 @@ meta_desc: "Explore the KafkaTopic resource of the Aiven package, including exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var mytesttopic = new Aiven.KafkaTopic("mytesttopic", new Aiven.KafkaTopicArgs
-        {
-            CleanupPolicy = "delete",
-            MinimumInSyncReplicas = 2,
-            Partitions = 5,
-            Project = aiven_project.Myproject.Project,
-            Replication = 3,
-            RetentionBytes = -1,
-            RetentionHours = 72,
-            ServiceName = aiven_service.Myservice.Service_name,
-            TopicName = "<TOPIC_NAME>",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.NewKafkaTopic(ctx, "mytesttopic", &aiven.KafkaTopicArgs{
-			CleanupPolicy:         pulumi.String("delete"),
-			MinimumInSyncReplicas: pulumi.Int(2),
-			Partitions:            pulumi.Int(5),
-			Project:               pulumi.Any(aiven_project.Myproject.Project),
-			Replication:           pulumi.Int(3),
-			RetentionBytes:        pulumi.Int(-1),
-			RetentionHours:        pulumi.Int(72),
-			ServiceName:           pulumi.Any(aiven_service.Myservice.Service_name),
-			TopicName:             pulumi.String("<TOPIC_NAME>"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-mytesttopic = aiven.KafkaTopic("mytesttopic",
-    cleanup_policy="delete",
-    minimum_in_sync_replicas=2,
-    partitions=5,
-    project=aiven_project["myproject"]["project"],
-    replication=3,
-    retention_bytes=-1,
-    retention_hours=72,
-    service_name=aiven_service["myservice"]["service_name"],
-    topic_name="<TOPIC_NAME>")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const mytesttopic = new aiven.KafkaTopic("mytesttopic", {
-    cleanupPolicy: "delete",
-    minimumInSyncReplicas: 2,
-    partitions: 5,
-    project: aiven_project_myproject.project,
-    replication: 3,
-    retentionBytes: -1,
-    retentionHours: 72,
-    serviceName: aiven_service_myservice.serviceName,
-    topicName: "<TOPIC_NAME>",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a KafkaTopic Resource {#create}
@@ -128,7 +22,7 @@ const mytesttopic = new aiven.KafkaTopic("mytesttopic", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.KafkaTopic">KafkaTopic</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cleanup_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_in_sync_replicas</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">partitions</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">retention_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">retention_hours</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.KafkaTopic">KafkaTopic</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cleanup_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_in_sync_replicas</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">partitions</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retention_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retention_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -660,7 +554,7 @@ enable this for any production Kafka topic containing critical data.
 <a href="#partitions_python" style="color: inherit; text-decoration: inherit;">partitions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of partitions to create in the topic
 {{% /md %}}</dd>
@@ -682,7 +576,7 @@ enable this for any production Kafka topic containing critical data.
 <a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Replication factor for the topic
 {{% /md %}}</dd>
@@ -726,7 +620,7 @@ enable this for any production Kafka topic containing critical data.
 <a href="#minimum_in_sync_replicas_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>in_<wbr>sync_<wbr>replicas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum required nodes in-sync replicas (ISR) to produce to a partition
 {{% /md %}}</dd>
@@ -737,7 +631,7 @@ enable this for any production Kafka topic containing critical data.
 <a href="#retention_bytes_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Retention bytes
 {{% /md %}}</dd>
@@ -748,7 +642,7 @@ enable this for any production Kafka topic containing critical data.
 <a href="#retention_hours_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Retention period (hours)
 {{% /md %}}</dd>
@@ -864,7 +758,7 @@ Get an existing KafkaTopic resource's state with the given name, ID, and optiona
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cleanup_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_in_sync_replicas</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">partitions</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">retention_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">retention_hours</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KafkaTopic</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cleanup_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_in_sync_replicas</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">partitions</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retention_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retention_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KafkaTopic</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1349,7 +1243,7 @@ enable this for any production Kafka topic containing critical data.
 <a href="#state_minimum_in_sync_replicas_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>in_<wbr>sync_<wbr>replicas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum required nodes in-sync replicas (ISR) to produce to a partition
 {{% /md %}}</dd>
@@ -1360,7 +1254,7 @@ enable this for any production Kafka topic containing critical data.
 <a href="#state_partitions_python" style="color: inherit; text-decoration: inherit;">partitions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of partitions to create in the topic
 {{% /md %}}</dd>
@@ -1382,7 +1276,7 @@ enable this for any production Kafka topic containing critical data.
 <a href="#state_replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Replication factor for the topic
 {{% /md %}}</dd>
@@ -1393,7 +1287,7 @@ enable this for any production Kafka topic containing critical data.
 <a href="#state_retention_bytes_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Retention bytes
 {{% /md %}}</dd>
@@ -1404,7 +1298,7 @@ enable this for any production Kafka topic containing critical data.
 <a href="#state_retention_hours_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Retention period (hours)
 {{% /md %}}</dd>

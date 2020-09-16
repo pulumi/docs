@@ -2,7 +2,7 @@
 ---
 title: "AccountTeam"
 title_tag: "Resource AccountTeam | Package Aiven"
-meta_desc: "Explore the AccountTeam resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
+meta_desc: "Explore the AccountTeam resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -11,79 +11,6 @@ meta_desc: "Explore the AccountTeam resource of the Aiven package, including exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var accountTeam1 = new Aiven.AccountTeam("accountTeam1", new Aiven.AccountTeamArgs
-        {
-            AccountId = aiven_account.Team.Account_id,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.NewAccountTeam(ctx, "accountTeam1", &aiven.AccountTeamArgs{
-			AccountId: pulumi.Any(aiven_account.Team.Account_id),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-account_team1 = aiven.AccountTeam("accountTeam1", account_id=aiven_account["team"]["account_id"])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const accountTeam1 = new aiven.AccountTeam("account_team1", {
-    accountId: aiven_account_team.accountId,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a AccountTeam Resource {#create}

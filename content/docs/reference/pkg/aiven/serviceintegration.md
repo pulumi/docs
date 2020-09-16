@@ -2,7 +2,7 @@
 ---
 title: "ServiceIntegration"
 title_tag: "Resource ServiceIntegration | Package Aiven"
-meta_desc: "Explore the ServiceIntegration resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
+meta_desc: "Explore the ServiceIntegration resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -11,100 +11,6 @@ meta_desc: "Explore the ServiceIntegration resource of the Aiven package, includ
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myintegration = new Aiven.ServiceIntegration("myintegration", new Aiven.ServiceIntegrationArgs
-        {
-            DestinationEndpointId = aiven_service_integration_endpoint.Myendpoint.Id,
-            DestinationServiceName = "",
-            IntegrationType = "datadog",
-            Project = aiven_project.Myproject.Project,
-            SourceEndpointId = "",
-            SourceServiceName = aiven_service.Testkafka.Service_name,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.NewServiceIntegration(ctx, "myintegration", &aiven.ServiceIntegrationArgs{
-			DestinationEndpointId:  pulumi.Any(aiven_service_integration_endpoint.Myendpoint.Id),
-			DestinationServiceName: pulumi.String(""),
-			IntegrationType:        pulumi.String("datadog"),
-			Project:                pulumi.Any(aiven_project.Myproject.Project),
-			SourceEndpointId:       pulumi.String(""),
-			SourceServiceName:      pulumi.Any(aiven_service.Testkafka.Service_name),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-myintegration = aiven.ServiceIntegration("myintegration",
-    destination_endpoint_id=aiven_service_integration_endpoint["myendpoint"]["id"],
-    destination_service_name="",
-    integration_type="datadog",
-    project=aiven_project["myproject"]["project"],
-    source_endpoint_id="",
-    source_service_name=aiven_service["testkafka"]["service_name"])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const myintegration = new aiven.ServiceIntegration("myintegration", {
-    destinationEndpointId: aiven_service_integration_endpoint_myendpoint.id,
-    destinationServiceName: "",
-    integrationType: "datadog",
-    project: aiven_project_myproject.project,
-    sourceEndpointId: "",
-    sourceServiceName: aiven_service_testkafka.serviceName,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ServiceIntegration Resource {#create}

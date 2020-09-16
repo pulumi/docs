@@ -2,7 +2,7 @@
 ---
 title: "Service"
 title_tag: "Resource Service | Package Aiven"
-meta_desc: "Explore the Service resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
+meta_desc: "Explore the Service resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -11,126 +11,6 @@ meta_desc: "Explore the Service resource of the Aiven package, including example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myservice = new Aiven.Service("myservice", new Aiven.ServiceArgs
-        {
-            CloudName = "google-europe-west1",
-            PgUserConfig = new Aiven.Inputs.ServicePgUserConfigArgs
-            {
-                IpFilters = 
-                {
-                    "0.0.0.0/0",
-                },
-                PgVersion = "10",
-            },
-            Plan = "business-8",
-            Project = aiven_project.Myproject.Project,
-            ProjectVpcId = aiven_project_vpc.Vpc_gcp_europe_west1.Id,
-            ServiceName = "<SERVICE_NAME>",
-            ServiceType = "pg",
-            TerminationProtection = true,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.NewService(ctx, "myservice", &aiven.ServiceArgs{
-			CloudName: pulumi.String("google-europe-west1"),
-			PgUserConfig: &aiven.ServicePgUserConfigArgs{
-				IpFilters: pulumi.StringArray{
-					pulumi.String("0.0.0.0/0"),
-				},
-				PgVersion: pulumi.String("10"),
-			},
-			Plan:                  pulumi.String("business-8"),
-			Project:               pulumi.Any(aiven_project.Myproject.Project),
-			ProjectVpcId:          pulumi.Any(aiven_project_vpc.Vpc_gcp_europe_west1.Id),
-			ServiceName:           pulumi.String("<SERVICE_NAME>"),
-			ServiceType:           pulumi.String("pg"),
-			TerminationProtection: pulumi.Bool(true),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-myservice = aiven.Service("myservice",
-    cloud_name="google-europe-west1",
-    pg_user_config=aiven.ServicePgUserConfigArgs(
-        ip_filters=["0.0.0.0/0"],
-        pg_version="10",
-    ),
-    plan="business-8",
-    project=aiven_project["myproject"]["project"],
-    project_vpc_id=aiven_project_vpc["vpc_gcp_europe_west1"]["id"],
-    service_name="<SERVICE_NAME>",
-    service_type="pg",
-    termination_protection=True)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const myservice = new aiven.Service("myservice", {
-    cloudName: "google-europe-west1",
-    pgUserConfig: {
-        ipFilters: ["0.0.0.0/0"],
-        pgVersion: "10",
-    },
-    plan: "business-8",
-    project: aiven_project_myproject.project,
-    projectVpcId: aiven_project_vpc_vpc_gcp_europe_west1.id,
-    serviceName: "<SERVICE_NAME>",
-    serviceType: "pg",
-    terminationProtection: true,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Service Resource {#create}
@@ -142,7 +22,7 @@ const myservice = new aiven.Service("myservice", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.Service">Service</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[ServiceCassandraArgs]</span> = None<span class="p">, </span><span class="nx">cassandra_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceCassandraUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[ServiceElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceElasticsearchUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">grafana</span><span class="p">:</span> <span class="nx">Optional[ServiceGrafanaArgs]</span> = None<span class="p">, </span><span class="nx">grafana_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceGrafanaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">influxdb</span><span class="p">:</span> <span class="nx">Optional[ServiceInfluxdbArgs]</span> = None<span class="p">, </span><span class="nx">influxdb_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceInfluxdbUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaArgs]</span> = None<span class="p">, </span><span class="nx">kafka_connect</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaConnectArgs]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaMirrormakerArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[ServiceMysqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceMysqlUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">pg</span><span class="p">:</span> <span class="nx">Optional[ServicePgArgs]</span> = None<span class="p">, </span><span class="nx">pg_user_config</span><span class="p">:</span> <span class="nx">Optional[ServicePgUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redis</span><span class="p">:</span> <span class="nx">Optional[ServiceRedisArgs]</span> = None<span class="p">, </span><span class="nx">redis_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceRedisUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[List[ServiceServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.Service">Service</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[ServiceCassandraArgs]</span> = None<span class="p">, </span><span class="nx">cassandra_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceCassandraUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[ServiceElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceElasticsearchUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">grafana</span><span class="p">:</span> <span class="nx">Optional[ServiceGrafanaArgs]</span> = None<span class="p">, </span><span class="nx">grafana_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceGrafanaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">influxdb</span><span class="p">:</span> <span class="nx">Optional[ServiceInfluxdbArgs]</span> = None<span class="p">, </span><span class="nx">influxdb_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceInfluxdbUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaArgs]</span> = None<span class="p">, </span><span class="nx">kafka_connect</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaConnectArgs]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaMirrormakerArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[ServiceMysqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceMysqlUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">pg</span><span class="p">:</span> <span class="nx">Optional[ServicePgArgs]</span> = None<span class="p">, </span><span class="nx">pg_user_config</span><span class="p">:</span> <span class="nx">Optional[ServicePgUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redis</span><span class="p">:</span> <span class="nx">Optional[ServiceRedisArgs]</span> = None<span class="p">, </span><span class="nx">redis_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceRedisUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1639,7 +1519,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceintegration">List[Service<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceserviceintegration">Sequence[Service<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd>
@@ -1961,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomponent">List[Service<wbr>Component]</a></span>
+        <span class="property-type"><a href="#servicecomponent">Sequence[Service<wbr>Component]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd>
@@ -2004,7 +1884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Service port
 {{% /md %}}</dd>
@@ -2062,7 +1942,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[ServiceCassandraArgs]</span> = None<span class="p">, </span><span class="nx">cassandra_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceCassandraUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComponentArgs]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[ServiceElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceElasticsearchUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">grafana</span><span class="p">:</span> <span class="nx">Optional[ServiceGrafanaArgs]</span> = None<span class="p">, </span><span class="nx">grafana_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceGrafanaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">influxdb</span><span class="p">:</span> <span class="nx">Optional[ServiceInfluxdbArgs]</span> = None<span class="p">, </span><span class="nx">influxdb_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceInfluxdbUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaArgs]</span> = None<span class="p">, </span><span class="nx">kafka_connect</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaConnectArgs]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaMirrormakerArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[ServiceMysqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceMysqlUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">pg</span><span class="p">:</span> <span class="nx">Optional[ServicePgArgs]</span> = None<span class="p">, </span><span class="nx">pg_user_config</span><span class="p">:</span> <span class="nx">Optional[ServicePgUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redis</span><span class="p">:</span> <span class="nx">Optional[ServiceRedisArgs]</span> = None<span class="p">, </span><span class="nx">redis_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceRedisUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[List[ServiceServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[ServiceCassandraArgs]</span> = None<span class="p">, </span><span class="nx">cassandra_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceCassandraUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComponentArgs]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[ServiceElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceElasticsearchUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">grafana</span><span class="p">:</span> <span class="nx">Optional[ServiceGrafanaArgs]</span> = None<span class="p">, </span><span class="nx">grafana_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceGrafanaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">influxdb</span><span class="p">:</span> <span class="nx">Optional[ServiceInfluxdbArgs]</span> = None<span class="p">, </span><span class="nx">influxdb_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceInfluxdbUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaArgs]</span> = None<span class="p">, </span><span class="nx">kafka_connect</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaConnectArgs]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaMirrormakerArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[ServiceMysqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceMysqlUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">pg</span><span class="p">:</span> <span class="nx">Optional[ServicePgArgs]</span> = None<span class="p">, </span><span class="nx">pg_user_config</span><span class="p">:</span> <span class="nx">Optional[ServicePgUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redis</span><span class="p">:</span> <span class="nx">Optional[ServiceRedisArgs]</span> = None<span class="p">, </span><span class="nx">redis_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceRedisUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3457,7 +3337,7 @@ The following state arguments are supported:
 <a href="#state_components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomponent">List[Service<wbr>Component<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomponent">Sequence[Service<wbr>Component<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd>
@@ -3732,7 +3612,7 @@ The following state arguments are supported:
 <a href="#state_service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceintegration">List[Service<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceserviceintegration">Sequence[Service<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd>
@@ -3765,7 +3645,7 @@ The following state arguments are supported:
 <a href="#state_service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Service port
 {{% /md %}}</dd>
@@ -4035,7 +3915,7 @@ The following state arguments are supported:
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4543,7 +4423,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5115,7 +4995,7 @@ The following state arguments are supported:
 <a href="#index_patterns_python" style="color: inherit; text-decoration: inherit;">index_<wbr>patterns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceelasticsearchuserconfigindexpattern">List[Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigindexpattern">Sequence[Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5125,7 +5005,7 @@ The following state arguments are supported:
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6051,7 +5931,7 @@ The following state arguments are supported:
 <a href="#reindex_remote_whitelists_python" style="color: inherit; text-decoration: inherit;">reindex_<wbr>remote_<wbr>whitelists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7831,7 +7711,7 @@ The following state arguments are supported:
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8267,7 +8147,7 @@ The following state arguments are supported:
 <a href="#allowed_domains_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>domains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8277,7 +8157,7 @@ The following state arguments are supported:
 <a href="#allowed_organizations_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>organizations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8337,7 +8217,7 @@ The following state arguments are supported:
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8563,7 +8443,7 @@ The following state arguments are supported:
 <a href="#allowed_organizations_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>organizations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8593,7 +8473,7 @@ The following state arguments are supported:
 <a href="#team_ids_python" style="color: inherit; text-decoration: inherit;">team_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8869,7 +8749,7 @@ The following state arguments are supported:
 <a href="#allowed_groups_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9105,7 +8985,7 @@ The following state arguments are supported:
 <a href="#allowed_domains_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>domains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10131,7 +10011,7 @@ The following state arguments are supported:
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10755,7 +10635,7 @@ The following state arguments are supported:
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11519,7 +11399,7 @@ The following state arguments are supported:
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12161,7 +12041,7 @@ The following state arguments are supported:
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -14803,7 +14683,7 @@ The following state arguments are supported:
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -16327,7 +16207,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -17093,7 +16973,7 @@ The following state arguments are supported:
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -19061,7 +18941,7 @@ The following state arguments are supported:
 <a href="#ignore_startup_parameters_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>startup_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -19961,7 +19841,7 @@ The following state arguments are supported:
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

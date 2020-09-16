@@ -2,7 +2,7 @@
 ---
 title: "ProjectUser"
 title_tag: "Resource ProjectUser | Package Aiven"
-meta_desc: "Explore the ProjectUser resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
+meta_desc: "Explore the ProjectUser resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -11,88 +11,6 @@ meta_desc: "Explore the ProjectUser resource of the Aiven package, including exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var mytestuser = new Aiven.ProjectUser("mytestuser", new Aiven.ProjectUserArgs
-        {
-            Email = "john.doe@example.com",
-            MemberType = "admin",
-            Project = aiven_project.Myproject.Project,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.NewProjectUser(ctx, "mytestuser", &aiven.ProjectUserArgs{
-			Email:      pulumi.String("john.doe@example.com"),
-			MemberType: pulumi.String("admin"),
-			Project:    pulumi.Any(aiven_project.Myproject.Project),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-mytestuser = aiven.ProjectUser("mytestuser",
-    email="john.doe@example.com",
-    member_type="admin",
-    project=aiven_project["myproject"]["project"])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const mytestuser = new aiven.ProjectUser("mytestuser", {
-    email: "john.doe@example.com",
-    memberType: "admin",
-    project: aiven_project_myproject.project,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ProjectUser Resource {#create}
